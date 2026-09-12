@@ -20,7 +20,7 @@
     }
 
     body {
-      background-color: #000000;
+      background-color: #060709;
       color: #FFFFFF;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       height: 100vh;
@@ -34,25 +34,27 @@
       position: fixed;
       top: 28px;
       left: 28px;
-      background: transparent;
-      border: none;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
       color: #71717A;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
-      transition: color 0.2s, transform 0.2s;
+      width: 34px;
+      height: 34px;
+      transition: all 0.2s;
       z-index: 100;
     }
     .sound-toggle:hover {
       color: #FFFFFF;
-      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.12);
+      transform: scale(1.06);
     }
     .sound-toggle svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
     }
 
@@ -79,17 +81,18 @@
     /* Floating Tooltip Capsule */
     .floating-tooltip {
       position: absolute;
-      top: -46px;
+      top: -38px;
       background: #18181B;
       border: 1px solid rgba(255, 255, 255, 0.16);
       color: #FFFFFF;
-      font-size: 13px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
       font-weight: 500;
-      padding: 6px 16px;
+      padding: 4px 12px;
       border-radius: 9999px;
       pointer-events: none;
       opacity: 0;
-      transform: translateY(6px);
+      transform: translateY(4px);
       transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 120;
       white-space: nowrap;
@@ -100,29 +103,29 @@
       transform: translateY(0);
     }
 
-    /* Asynchronous Floating Physics */
+    /* Asynchronous Floating Physics for inside badge */
     @keyframes floatAtom {
-      0% { transform: translateY(-4px) rotate(-1.5deg); }
-      50% { transform: translateY(-14px) rotate(-0.5deg); }
-      100% { transform: translateY(-4px) rotate(-1.5deg); }
+      0% { transform: translateY(-3px) rotate(-1deg); }
+      50% { transform: translateY(-10px) rotate(-0.5deg); }
+      100% { transform: translateY(-3px) rotate(-1deg); }
     }
 
     @keyframes floatChain {
-      0% { transform: translateY(2px) rotate(1deg); }
-      50% { transform: translateY(12px) rotate(2deg); }
-      100% { transform: translateY(2px) rotate(1deg); }
+      0% { transform: translateY(2px) rotate(0.8deg); }
+      50% { transform: translateY(8px) rotate(1.8deg); }
+      100% { transform: translateY(2px) rotate(0.8deg); }
     }
 
     @keyframes floatHourglass {
-      0% { transform: translateY(10px) rotate(-1deg); }
+      0% { transform: translateY(8px) rotate(-0.8deg); }
       50% { transform: translateY(-2px) rotate(0.5deg); }
-      100% { transform: translateY(10px) rotate(-1deg); }
+      100% { transform: translateY(8px) rotate(-0.8deg); }
     }
 
     @keyframes floatPeople {
-      0% { transform: translateY(4px) rotate(1deg); }
-      50% { transform: translateY(-10px) rotate(2deg); }
-      100% { transform: translateY(4px) rotate(1deg); }
+      0% { transform: translateY(3px) rotate(0.8deg); }
+      50% { transform: translateY(-8px) rotate(1.8deg); }
+      100% { transform: translateY(3px) rotate(0.8deg); }
     }
 
     /* Graph Container & Connecting Layer */
@@ -132,10 +135,10 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 540px;
+      height: 560px;
     }
 
-    /* SVG Link Chain & Schema Layer */
+    /* SVG LangGraph Edges Layer */
     .graph-svg-layer {
       position: absolute;
       top: 0;
@@ -148,42 +151,47 @@
       transition: opacity 0.4s ease;
     }
 
-    .chain-wire {
-      stroke: rgba(255, 255, 255, 0.25);
-      stroke-width: 2;
+    /* LangGraph Wire Styling */
+    .langgraph-edge-path {
       fill: none;
-      stroke-dasharray: 6 4;
-      animation: wireStream 1.6s linear infinite;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-dasharray: 8 5;
+      animation: dashStream 1.8s linear infinite;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25));
     }
 
-    @keyframes wireStream {
-      from { stroke-dashoffset: 20; }
+    @keyframes dashStream {
+      from { stroke-dashoffset: 26; }
       to { stroke-dashoffset: 0; }
     }
 
-    .chain-packet {
-      filter: drop-shadow(0 0 6px currentColor);
-      animation: packetPulse 1.8s ease-in-out infinite alternate;
+    .langgraph-edge-glow {
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      opacity: 0.15;
     }
 
-    @keyframes packetPulse {
-      from { r: 3; opacity: 0.7; }
-      to { r: 4.5; opacity: 1; }
+    .langgraph-packet {
+      filter: drop-shadow(0 0 8px currentColor);
     }
 
-    .schema-pill-box {
-      fill: #0F0F12;
-      stroke-width: 1;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
+    /* LangGraph Condition Pill Badge */
+    .langgraph-pill-box {
+      fill: #0B0C10;
+      stroke-width: 1.2;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.85));
     }
 
-    .schema-pill-text {
+    .langgraph-pill-text {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
+      font-size: 10px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
     }
 
+    /* Characters Track */
     .characters-track {
       display: flex;
       align-items: center;
@@ -193,50 +201,92 @@
       transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .char-node {
+    /* =========================================================
+       LANGGRAPH NODE CARD (Clean high-tech frame inspired by LangGraph)
+       ========================================================= */
+    .langgraph-node {
       position: relative;
+      background: #0B0C10;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 16px 14px 18px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       cursor: pointer;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease,
+                  opacity 0.5s ease;
+    }
+
+    .langgraph-node:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.28);
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    /* LangGraph Top Meta Header */
+    .node-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .node-status-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .node-status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+    }
+
+    .node-type-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #71717A;
+    }
+
+    .node-idx-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #52525B;
+    }
+
+    /* Node Badge Body */
+    .node-badge-body {
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 4px 8px;
     }
 
-    /* Schema Port Pins on Node Edges */
-    .node-port {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #000000;
-      border: 2px solid #FFFFFF;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 0;
-      transition: opacity 0.3s ease, transform 0.2s ease;
-      z-index: 30;
-      pointer-events: none;
-    }
-    .node-port.port-left { left: -5px; }
-    .node-port.port-right { right: -5px; }
-
-    .state-expanded .node-port {
-      opacity: 1;
-    }
-
-    /* Badge SVG Sizing */
     .badge-svg {
-      width: 200px;
-      height: 200px;
+      width: 165px;
+      height: 165px;
       display: block;
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.8));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .char-node:hover .badge-svg {
-      transform: scale(1.08) translateY(-4px);
-      filter: drop-shadow(0 26px 50px rgba(0, 0, 0, 0.95));
+    .langgraph-node:hover .badge-svg {
+      transform: scale(1.05);
     }
 
     #char-0 .badge-svg { animation: floatAtom 6s ease-in-out infinite; }
@@ -244,18 +294,70 @@
     #char-2 .badge-svg { animation: floatHourglass 7s ease-in-out infinite; }
     #char-3 .badge-svg { animation: floatChain 6.2s ease-in-out infinite; }
 
+    /* Node Footer Label */
+    .node-footer {
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+      margin-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .node-title-text {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      margin-bottom: 2px;
+    }
+
+    .node-sub-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: #A1A1AA;
+    }
+
+    /* LangGraph Input / Output Terminal Ports */
+    .node-port {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #0B0C10;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+      z-index: 35;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+    .node-port.port-left {
+      left: -6px;
+    }
+
+    .node-port.port-right {
+      right: -6px;
+    }
+
+    .langgraph-node:hover .node-port {
+      box-shadow: 0 0 12px #FFFFFF;
+    }
+
     /* Bubble Pop scale-up animation */
     @keyframes bubblePopIn {
       0% {
         opacity: 0;
-        transform: scale(0.2) rotate(-8deg);
+        transform: scale(0.15) rotate(-6deg);
       }
       65% {
         opacity: 1;
-        transform: scale(1.16) rotate(2deg);
+        transform: scale(1.12) rotate(1.5deg);
       }
       85% {
-        transform: scale(0.96) rotate(-1deg);
+        transform: scale(0.97) rotate(-0.5deg);
       }
       100% {
         opacity: 1;
@@ -263,12 +365,16 @@
       }
     }
 
-    /* COLLAPSED STATE: Only HSN Labs in center */
-    .state-collapsed .char-node.child-node {
+    /* =========================================================
+       COLLAPSED VS EXPANDED STATES
+       ========================================================= */
+    .state-collapsed .langgraph-node.child-node {
       opacity: 0;
       pointer-events: none;
       width: 0;
+      padding: 0;
       margin: 0;
+      border: none;
       transform: scale(0);
       overflow: hidden;
     }
@@ -278,17 +384,17 @@
     }
 
     .state-collapsed #char-0 {
-      transform: scale(1.15);
+      transform: scale(1.1);
     }
 
     .state-collapsed #char-0 .node-port {
       display: none;
     }
 
-    /* Discovery Cue around HSN Labs */
+    /* Expand Discovery Cue */
     .expand-cue {
       position: absolute;
-      bottom: -64px;
+      bottom: -62px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -301,16 +407,17 @@
     .expand-cue-pill {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 7px 16px;
+      gap: 8px;
+      padding: 8px 18px;
       border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(167, 139, 250, 0.08);
+      border: 1px solid rgba(167, 139, 250, 0.24);
       font-size: 11px;
       font-family: 'JetBrains Mono', monospace;
-      color: #D4D4D8;
+      color: #E4E4E7;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      box-shadow: 0 4px 16px rgba(167, 139, 250, 0.15);
       animation: pulseGlow 2.5s ease-in-out infinite;
     }
 
@@ -323,7 +430,7 @@
     }
 
     @keyframes pulseGlow {
-      0%, 100% { opacity: 0.6; transform: scale(0.98); }
+      0%, 100% { opacity: 0.7; transform: scale(0.98); }
       50% { opacity: 1; transform: scale(1.03); }
     }
 
@@ -333,16 +440,15 @@
       pointer-events: none;
     }
 
-    /* EXPANDED STATE (LINK CHAIN GRAPH): Connected in chain */
+    /* EXPANDED STATE: All 4 LangGraph nodes arranged in chain */
     .state-expanded .characters-track {
-      gap: 54px;
+      gap: 64px;
     }
 
-    .state-expanded .char-node.child-node {
+    .state-expanded .langgraph-node.child-node {
       opacity: 1;
       pointer-events: auto;
       width: 200px;
-      margin: 0;
       animation: bubblePopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     }
 
@@ -355,6 +461,7 @@
     }
 
     .state-expanded #char-0 {
+      width: 200px;
       transform: scale(1);
     }
 
@@ -365,24 +472,25 @@
     }
 
     .viewport.mode-detail .characters-track {
-      transform: scale(0.82);
-      gap: 32px;
+      transform: scale(0.78);
+      gap: 36px;
     }
 
-    .viewport.mode-detail .char-node {
-      opacity: 0.32;
-      filter: grayscale(0.6);
+    .viewport.mode-detail .langgraph-node {
+      opacity: 0.3;
+      filter: grayscale(0.5);
     }
 
-    .viewport.mode-detail .char-node.is-active {
+    .viewport.mode-detail .langgraph-node.is-active {
       opacity: 1;
       filter: none;
-      transform: scale(1.08);
+      border-color: #A78BFA;
+      box-shadow: 0 0 35px rgba(167, 139, 250, 0.35);
+      transform: scale(1.06);
     }
 
-    .viewport.mode-detail .graph-edge,
-    .viewport.mode-detail .chain-wire {
-      opacity: 0.35;
+    .viewport.mode-detail .langgraph-edge-path {
+      opacity: 0.3;
     }
 
     /* Detail Drawer Styles */
@@ -636,138 +744,206 @@
       
       <div class="graph-container" id="graphContainer">
         
-        <!-- SVG Schema Link Chain Layer -->
+        <!-- SVG LangGraph Edges & Chain Layer -->
         <svg class="graph-svg-layer" id="graphSvg">
           <defs>
-            <linearGradient id="chainGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id="edgeGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="#A78BFA"/>
               <stop offset="100%" stop-color="#10B981"/>
             </linearGradient>
-            <linearGradient id="chainGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id="edgeGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="#10B981"/>
               <stop offset="100%" stop-color="#38BDF8"/>
             </linearGradient>
-            <linearGradient id="chainGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id="edgeGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="#38BDF8"/>
               <stop offset="100%" stop-color="#FB923C"/>
             </linearGradient>
 
-            <marker id="chainArrow01" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 8 5 L 0 9 z" fill="#10B981"/>
+            <marker id="arrow01" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#10B981"/>
             </marker>
-            <marker id="chainArrow12" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 8 5 L 0 9 z" fill="#38BDF8"/>
+            <marker id="arrow12" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8"/>
             </marker>
-            <marker id="chainArrow23" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 8 5 L 0 9 z" fill="#FB923C"/>
+            <marker id="arrow23" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#FB923C"/>
             </marker>
           </defs>
 
-          <!-- Link 0 -> 1 (HSN Labs to About Us) -->
-          <g id="link-group-0-1">
-            <line id="wire-0-1" class="chain-wire" stroke="url(#chainGrad01)" marker-end="url(#chainArrow01)"/>
-            <circle id="packet-0-1" class="chain-packet" fill="#A78BFA" r="3.5"/>
-            <g id="pill-0-1" class="schema-pill">
-              <rect id="pill-bg-0-1" class="schema-pill-box" stroke="#A78BFA" rx="10" height="20"/>
-              <text id="pill-txt-0-1" class="schema-pill-text" fill="#D8B4FE" text-anchor="middle" dominant-baseline="central">[:OPERATED_BY]</text>
+          <!-- Edge 0 -> 1 (HSN Labs to About Us) -->
+          <g id="edge-group-0-1">
+            <path id="glow-0-1" class="langgraph-edge-glow" stroke="#A78BFA"/>
+            <path id="path-0-1" class="langgraph-edge-path" stroke="url(#edgeGrad01)" marker-end="url(#arrow01)"/>
+            <circle id="packet-0-1" class="langgraph-packet" fill="#A78BFA" r="4"/>
+            <g id="pill-0-1">
+              <rect id="pill-bg-0-1" class="langgraph-pill-box" stroke="#A78BFA" rx="9" height="18"/>
+              <text id="pill-txt-0-1" class="langgraph-pill-text" fill="#D8B4FE" text-anchor="middle" dominant-baseline="central">[:OPERATED_BY]</text>
             </g>
           </g>
 
-          <!-- Link 1 -> 2 (About Us to AI Bootcamp) -->
-          <g id="link-group-1-2">
-            <line id="wire-1-2" class="chain-wire" stroke="url(#chainGrad12)" marker-end="url(#chainArrow12)"/>
-            <circle id="packet-1-2" class="chain-packet" fill="#10B981" r="3.5"/>
-            <g id="pill-1-2" class="schema-pill">
-              <rect id="pill-bg-1-2" class="schema-pill-box" stroke="#10B981" rx="10" height="20"/>
-              <text id="pill-txt-1-2" class="schema-pill-text" fill="#A7F3D0" text-anchor="middle" dominant-baseline="central">[:DEPLOYS]</text>
+          <!-- Edge 1 -> 2 (About Us to AI Bootcamp) -->
+          <g id="edge-group-1-2">
+            <path id="glow-1-2" class="langgraph-edge-glow" stroke="#10B981"/>
+            <path id="path-1-2" class="langgraph-edge-path" stroke="url(#edgeGrad12)" marker-end="url(#arrow12)"/>
+            <circle id="packet-1-2" class="langgraph-packet" fill="#10B981" r="4"/>
+            <g id="pill-1-2">
+              <rect id="pill-bg-1-2" class="langgraph-pill-box" stroke="#10B981" rx="9" height="18"/>
+              <text id="pill-txt-1-2" class="langgraph-pill-text" fill="#A7F3D0" text-anchor="middle" dominant-baseline="central">[:DEPLOYS]</text>
             </g>
           </g>
 
-          <!-- Link 2 -> 3 (AI Bootcamp to Proto-Ontologies) -->
-          <g id="link-group-2-3">
-            <line id="wire-2-3" class="chain-wire" stroke="url(#chainGrad23)" marker-end="url(#chainArrow23)"/>
-            <circle id="packet-2-3" class="chain-packet" fill="#38BDF8" r="3.5"/>
-            <g id="pill-2-3" class="schema-pill">
-              <rect id="pill-bg-2-3" class="schema-pill-box" stroke="#38BDF8" rx="10" height="20"/>
-              <text id="pill-txt-2-3" class="schema-pill-text" fill="#BAE6FD" text-anchor="middle" dominant-baseline="central">[:GROUNDED_ON]</text>
+          <!-- Edge 2 -> 3 (AI Bootcamp to Proto-Ontologies) -->
+          <g id="edge-group-2-3">
+            <path id="glow-2-3" class="langgraph-edge-glow" stroke="#38BDF8"/>
+            <path id="path-2-3" class="langgraph-edge-path" stroke="url(#edgeGrad23)" marker-end="url(#arrow23)"/>
+            <circle id="packet-2-3" class="langgraph-packet" fill="#38BDF8" r="4"/>
+            <g id="pill-2-3">
+              <rect id="pill-bg-2-3" class="langgraph-pill-box" stroke="#38BDF8" rx="9" height="18"/>
+              <text id="pill-txt-2-3" class="langgraph-pill-text" fill="#BAE6FD" text-anchor="middle" dominant-baseline="central">[:GROUNDED_ON]</text>
             </g>
           </g>
         </svg>
 
         <div class="characters-track" id="charactersTrack">
 
-          <!-- 0. HSN LABS (Root Node: Atomic Orbital - Purple / Lavender) -->
-          <div class="char-node root-node" id="char-0" onclick="handleNodeClick(0)">
+          <!-- 0. HSN LABS (LangGraph Root Node: Orchestrator) -->
+          <div class="langgraph-node root-node" id="char-0" onclick="handleNodeClick(0)">
             <div class="floating-tooltip">HSN Labs</div>
-            <div class="node-port port-right" style="border-color: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></div>
-            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
-              <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
-              <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
-              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
-              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
-              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
-              <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
-              <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
-              <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
-            </svg>
+            <div class="node-port port-right" id="port-out-0" style="border-color: #A78BFA; box-shadow: 0 0 10px #A78BFA;"></div>
+            
+            <div class="node-header">
+              <div class="node-status-wrap">
+                <span class="node-status-dot" style="background: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></span>
+                <span class="node-type-tag">ORCHESTRATOR</span>
+              </div>
+              <span class="node-idx-badge">00</span>
+            </div>
+
+            <div class="node-badge-body">
+              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
+                <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
+                <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
+                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
+                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
+                <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
+                <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
+                <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
+              </svg>
+            </div>
+
+            <div class="node-footer">
+              <div class="node-title-text">HSN Labs</div>
+              <div class="node-sub-text">Boutique FDE</div>
+            </div>
+
             <div class="expand-cue">
               <div class="expand-cue-pill">
                 <span class="expand-cue-dot"></span>
-                <span>Click to expand link chain</span>
+                <span>Click node to run graph</span>
               </div>
             </div>
           </div>
 
-          <!-- 1. ABOUT US (Child Node 1: Connected Squad - Emerald Green) -->
-          <div class="char-node child-node" id="char-1" onclick="handleNodeClick(1)">
+          <!-- 1. ABOUT US (LangGraph Node 1: Senior Squad) -->
+          <div class="langgraph-node child-node" id="char-1" onclick="handleNodeClick(1)">
             <div class="floating-tooltip">About Us</div>
-            <div class="node-port port-left" style="border-color: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></div>
-            <div class="node-port port-right" style="border-color: #10B981; box-shadow: 0 0 8px #10B981;"></div>
-            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
-              <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
-              <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
-              <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-              <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
-              <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-              <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
-              <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
-              <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
-            </svg>
+            <div class="node-port port-left" id="port-in-1" style="border-color: #A78BFA; box-shadow: 0 0 10px #A78BFA;"></div>
+            <div class="node-port port-right" id="port-out-1" style="border-color: #10B981; box-shadow: 0 0 10px #10B981;"></div>
+
+            <div class="node-header">
+              <div class="node-status-wrap">
+                <span class="node-status-dot" style="background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
+                <span class="node-type-tag">LEADERSHIP</span>
+              </div>
+              <span class="node-idx-badge">01</span>
+            </div>
+
+            <div class="node-badge-body">
+              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
+                <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
+                <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
+                <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+                <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
+                <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+                <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
+                <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
+                <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
+              </svg>
+            </div>
+
+            <div class="node-footer">
+              <div class="node-title-text">About Us</div>
+              <div class="node-sub-text">Senior FDE Squad</div>
+            </div>
           </div>
 
-          <!-- 2. AI BOOTCAMP (Child Node 2: Precision Hourglass - Sky Blue) -->
-          <div class="char-node child-node" id="char-2" onclick="handleNodeClick(2)">
+          <!-- 2. AI BOOTCAMP (LangGraph Node 2: 5-Day Deployment) -->
+          <div class="langgraph-node child-node" id="char-2" onclick="handleNodeClick(2)">
             <div class="floating-tooltip">AI Bootcamp</div>
-            <div class="node-port port-left" style="border-color: #10B981; box-shadow: 0 0 8px #10B981;"></div>
-            <div class="node-port port-right" style="border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></div>
-            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
-              <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
-              <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
-              <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
-              <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
-                    stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
-              <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
-              <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-              <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
-            </svg>
+            <div class="node-port port-left" id="port-in-2" style="border-color: #10B981; box-shadow: 0 0 10px #10B981;"></div>
+            <div class="node-port port-right" id="port-out-2" style="border-color: #38BDF8; box-shadow: 0 0 10px #38BDF8;"></div>
+
+            <div class="node-header">
+              <div class="node-status-wrap">
+                <span class="node-status-dot" style="background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
+                <span class="node-type-tag">DEPLOYMENT</span>
+              </div>
+              <span class="node-idx-badge">02</span>
+            </div>
+
+            <div class="node-badge-body">
+              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
+                <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
+                <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
+                <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
+                <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
+                      stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
+                <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
+                <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+                <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+
+            <div class="node-footer">
+              <div class="node-title-text">AI Bootcamp</div>
+              <div class="node-sub-text">5-Day Validation</div>
+            </div>
           </div>
 
-          <!-- 3. PROTO-ONTOLOGIES (Child Node 3: Interlocked Chain - Orange / Amber) -->
-          <div class="char-node child-node" id="char-3" onclick="handleNodeClick(3)">
+          <!-- 3. PROTO-ONTOLOGIES (LangGraph Node 3: Open Schemas) -->
+          <div class="langgraph-node child-node" id="char-3" onclick="handleNodeClick(3)">
             <div class="floating-tooltip">Proto-Ontologies</div>
-            <div class="node-port port-left" style="border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></div>
-            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
-              <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
-              <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
-                <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
-                <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
-              </g>
-            </svg>
+            <div class="node-port port-left" id="port-in-3" style="border-color: #38BDF8; box-shadow: 0 0 10px #38BDF8;"></div>
+
+            <div class="node-header">
+              <div class="node-status-wrap">
+                <span class="node-status-dot" style="background: #FB923C; box-shadow: 0 0 8px #FB923C;"></span>
+                <span class="node-type-tag">SCHEMAS</span>
+              </div>
+              <span class="node-idx-badge">03</span>
+            </div>
+
+            <div class="node-badge-body">
+              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
+                <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
+                <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
+                  <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
+                  <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="node-footer">
+              <div class="node-title-text">Proto-Ontologies</div>
+              <div class="node-sub-text">Open Knowledge Hub</div>
+            </div>
           </div>
 
         </div>
@@ -929,8 +1105,10 @@
       }
     ];
 
-    /* --- JUICY BUBBLE POP / BLOOP SOUND SYNTHESIS --- */
-    function playBubblePop(freqStart = 360, freqEnd = 1450, duration = 0.075) {
+    /* =========================================================
+       JUICY WATER DROP / BUBBLE POP SOUND (Web Audio API)
+       ========================================================= */
+    function playBubblePop(freqStart = 380, freqEnd = 1480, duration = 0.075) {
       if (!soundActive) return;
       try {
         if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -938,17 +1116,17 @@
 
         const t = audioContext.currentTime;
 
-        // Primary bubble sine with fast upward pitch sweep
+        // Main bubble sine wave with rapid ascending frequency glide
         const osc = audioContext.createOscillator();
         const gain = audioContext.createGain();
 
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freqStart, t);
-        osc.frequency.exponentialRampToValueAtTime(freqEnd, t + duration * 0.72);
-        osc.frequency.exponentialRampToValueAtTime(freqEnd * 0.88, t + duration);
+        osc.frequency.exponentialRampToValueAtTime(freqEnd, t + duration * 0.7);
+        osc.frequency.exponentialRampToValueAtTime(freqEnd * 0.85, t + duration);
 
         gain.gain.setValueAtTime(0.001, t);
-        gain.gain.linearRampToValueAtTime(0.38, t + 0.005);
+        gain.gain.linearRampToValueAtTime(0.35, t + 0.005);
         gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
 
         osc.connect(gain);
@@ -957,76 +1135,81 @@
         osc.start(t);
         osc.stop(t + duration + 0.01);
 
-        // Water droplet plop body resonance
+        // Sub plop resonance
         const sub = audioContext.createOscillator();
         const subGain = audioContext.createGain();
         sub.type = 'triangle';
-        sub.frequency.setValueAtTime(freqStart * 0.7, t);
-        sub.frequency.exponentialRampToValueAtTime(freqStart * 1.8, t + duration * 0.55);
+        sub.frequency.setValueAtTime(freqStart * 0.75, t);
+        sub.frequency.exponentialRampToValueAtTime(freqStart * 1.7, t + duration * 0.5);
 
-        subGain.gain.setValueAtTime(0.2, t);
-        subGain.gain.exponentialRampToValueAtTime(0.0001, t + duration * 0.65);
+        subGain.gain.setValueAtTime(0.18, t);
+        subGain.gain.exponentialRampToValueAtTime(0.0001, t + duration * 0.6);
 
         sub.connect(subGain);
         subGain.connect(audioContext.destination);
 
         sub.start(t);
-        sub.stop(t + duration * 0.68);
+        sub.stop(t + duration * 0.62);
       } catch (e) {}
     }
 
     document.getElementById('soundToggle').addEventListener('click', () => {
       soundActive = !soundActive;
       document.getElementById('soundToggle').style.opacity = soundActive ? '1' : '0.25';
-      if (soundActive) playBubblePop(450, 1600, 0.08);
+      if (soundActive) playBubblePop(480, 1600, 0.08);
     });
 
-    /* --- SCHEMA GRAPH EDGE CONNECTORS UPDATE --- */
+    /* =========================================================
+       LANGGRAPH CURVED EDGES & PACKET DATAFLOW
+       ========================================================= */
     function updateGraphEdges() {
       if (!isGraphExpanded) return;
+      const svg = document.getElementById('graphSvg');
       const containerRect = document.getElementById('graphContainer').getBoundingClientRect();
       
-      const getNodePorts = (id) => {
-        const el = document.getElementById(`char-${id}`);
-        if (!el) return { x: 0, y: 0, leftX: 0, rightX: 0 };
+      const getPortCoords = (portId) => {
+        const el = document.getElementById(portId);
+        if (!el) return { x: 0, y: 0 };
         const r = el.getBoundingClientRect();
         return {
-          y: (r.top + r.height / 2) - containerRect.top,
-          leftX: r.left - containerRect.left + 8,
-          rightX: r.right - containerRect.left - 8
+          x: (r.left + r.width / 2) - containerRect.left,
+          y: (r.top + r.height / 2) - containerRect.top
         };
       };
 
-      const p0 = getNodePorts(0);
-      const p1 = getNodePorts(1);
-      const p2 = getNodePorts(2);
-      const p3 = getNodePorts(3);
+      const pOut0 = getPortCoords('port-out-0');
+      const pIn1  = getPortCoords('port-in-1');
+      const pOut1 = getPortCoords('port-out-1');
+      const pIn2  = getPortCoords('port-in-2');
+      const pOut2 = getPortCoords('port-out-2');
+      const pIn3  = getPortCoords('port-in-3');
 
-      const renderChainLink = (edgeId, packetId, pillId, pillBgId, pillTxtId, start, end) => {
-        const wire = document.getElementById(edgeId);
+      const renderLangGraphLink = (pathId, glowId, packetId, pillId, pillBgId, pillTxtId, start, end) => {
+        const pathEl = document.getElementById(pathId);
+        const glowEl = document.getElementById(glowId);
         const packet = document.getElementById(packetId);
         const pillGroup = document.getElementById(pillId);
         const pillBg = document.getElementById(pillBgId);
         const pillTxt = document.getElementById(pillTxtId);
 
-        if (!wire || !start || !end) return;
+        if (!pathEl || start.x === 0 || end.x === 0) return;
 
-        // Draw straight/clean schema bus connector
-        wire.setAttribute('x1', start.rightX);
-        wire.setAttribute('y1', start.y);
-        wire.setAttribute('x2', end.leftX - 6);
-        wire.setAttribute('y2', end.y);
+        // LangGraph Smooth Cubic Bezier Curve: horizontal flow
+        const dx = Math.max((end.x - start.x) * 0.45, 20);
+        const d = `M ${start.x} ${start.y} C ${start.x + dx} ${start.y}, ${end.x - dx} ${end.y}, ${end.x} ${end.y}`;
 
-        // Position animated data packet along line
-        const midX = (start.rightX + end.leftX) / 2;
+        pathEl.setAttribute('d', d);
+        if (glowEl) glowEl.setAttribute('d', d);
+
+        // Center pill on bezier curve midpoint
+        const midX = (start.x + end.x) / 2;
         const midY = (start.y + end.y) / 2;
-        
+
         if (packet) {
           packet.setAttribute('cx', midX);
           packet.setAttribute('cy', midY);
         }
 
-        // Position relationship badge pill exactly on line midpoint
         if (pillGroup && pillBg && pillTxt) {
           pillTxt.setAttribute('x', midX);
           pillTxt.setAttribute('y', midY);
@@ -1034,31 +1217,31 @@
           const bbox = pillTxt.getBBox();
           const padX = 14;
           pillBg.setAttribute('x', bbox.x - padX / 2);
-          pillBg.setAttribute('y', bbox.y - 3);
+          pillBg.setAttribute('y', bbox.y - 2);
           pillBg.setAttribute('width', bbox.width + padX);
-          pillBg.setAttribute('height', bbox.height + 6);
+          pillBg.setAttribute('height', bbox.height + 4);
         }
       };
 
-      renderChainLink('wire-0-1', 'packet-0-1', 'pill-0-1', 'pill-bg-0-1', 'pill-txt-0-1', p0, p1);
-      renderChainLink('wire-1-2', 'packet-1-2', 'pill-1-2', 'pill-bg-1-2', 'pill-txt-1-2', p1, p2);
-      renderChainLink('wire-2-3', 'packet-2-3', 'pill-2-3', 'pill-bg-2-3', 'pill-txt-2-3', p2, p3);
+      renderLangGraphLink('path-0-1', 'glow-0-1', 'packet-0-1', 'pill-0-1', 'pill-bg-0-1', 'pill-txt-0-1', pOut0, pIn1);
+      renderLangGraphLink('path-1-2', 'glow-1-2', 'packet-1-2', 'pill-1-2', 'pill-bg-1-2', 'pill-txt-1-2', pOut1, pIn2);
+      renderLangGraphLink('path-2-3', 'glow-2-3', 'packet-2-3', 'pill-2-3', 'pill-bg-2-3', 'pill-txt-2-3', pOut2, pIn3);
     }
 
     window.addEventListener('resize', () => {
       requestAnimationFrame(updateGraphEdges);
     });
 
-    /* --- NODE CLICK & GRAPH REVEAL DISPATCHER --- */
+    /* =========================================================
+       NODE CLICK & GRAPH REVEAL
+       ========================================================= */
     function handleNodeClick(index) {
-      // First click on HSN Labs triggers the link chain bubble expansion!
       if (index === 0 && !isGraphExpanded) {
         expandGraphChain();
         return;
       }
 
-      // If already expanded, click triggers bubble pop & opens detail drawer
-      playBubblePop(400 + (index * 90), 1400 + (index * 120), 0.08);
+      playBubblePop(420 + (index * 90), 1450 + (index * 120), 0.08);
 
       if (!isGraphExpanded) {
         expandGraphChain();
@@ -1072,13 +1255,13 @@
       viewport.classList.remove('state-collapsed');
       viewport.classList.add('state-expanded');
 
-      // Sequential bubble pop chain reaction!
+      // Sequential bubble pop chain reaction
       playBubblePop(360, 1350, 0.075);
-      setTimeout(() => playBubblePop(440, 1500, 0.075), 90);
+      setTimeout(() => playBubblePop(440, 1520, 0.075), 90);
       setTimeout(() => playBubblePop(520, 1680, 0.075), 180);
       setTimeout(() => playBubblePop(620, 1850, 0.08), 270);
 
-      // Re-calculate edge coordinates as nodes cascade in
+      // Re-calculate LangGraph edge paths as nodes animate in
       const steps = [80, 180, 300, 480, 680];
       steps.forEach(delay => setTimeout(updateGraphEdges, delay));
     }
@@ -1091,7 +1274,7 @@
       viewport.classList.remove('state-expanded');
       viewport.classList.add('state-collapsed');
 
-      playBubblePop(300, 750, 0.09);
+      playBubblePop(320, 750, 0.09);
     }
 
     function openDrawer(index) {
@@ -1165,7 +1348,7 @@
 
     function closeDrawer() {
       currentIdx = null;
-      playBubblePop(320, 800, 0.08);
+      playBubblePop(340, 820, 0.08);
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('mode-detail');
