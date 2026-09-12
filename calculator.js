@@ -1,5 +1,5 @@
 /**
- * sflabs (The Steadfast Labs) - Enterprise AI PoC Feasibility & ROI Engine + Lead Routing
+ * HSN Labs (HSN Labs) - Enterprise AI PoC Feasibility & ROI Engine + Lead Routing
  * 
  * Implements:
  * 1. Technical Feasibility Score (0-100%) based on data readiness, stack maturity, compliance and complexity
@@ -24,7 +24,7 @@ class LabsROIEngine {
       big4TraditionalCostBrl: 320000,
       // Standard AI automation efficiency gain range (60% - 85%)
       efficiencyFactor: 0.72,
-      // Error reduction factor with SMT Guardrails & Deterministic FDE (80% - 95%)
+      // Error reduction factor with Deterministic Guardrails & Deterministic FDE (80% - 95%)
       errorReductionFactor: 0.88
     };
   }
@@ -105,7 +105,7 @@ class LabsROIEngine {
 
     let feasibilityStatus = 'Alta Viabilidade';
     let feasibilityColor = '#10B981'; // green
-    let feasibilitySummary = 'Caso de uso ideal para PoC em Sandbox de 30 dias com alto ROI e rápida implantação.';
+    let feasibilitySummary = 'Caso de uso ideal para AI Bootcamp de 5 Dias com alto ROI e rápida implantação.';
 
     if (feasibilityScore < 50) {
       feasibilityStatus = 'Alta Complexidade / Requer Sanity Sprint';

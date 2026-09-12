@@ -1,16 +1,16 @@
-# sflabs | Design System & Brand Identity Specification
+# HSN Labs | Design System & Brand Identity Specification
 
 > **Deterministic Control for Stochastic Systems**  
-> Canonical Design Guide & Architectural Frontend Standard for all `sflabs` interfaces, portals, and products.
+> Canonical Design Guide & Architectural Frontend Standard for all `HSN Labs` interfaces, portals, and products.
 
 ---
 
 ## 1. Brand Philosophy & Aesthetic Foundations
 
-`sflabs` engineers mission-critical infrastructure for **Agentic Reliability Engineering (ARE)**, formal SMT invariant verification, and deterministic error containment in multi-agent networks. The brand identity reflects this mathematical rigor, sovereign resilience, and high-precision engineering through:
+`HSN Labs` engineers mission-critical infrastructure for **Forward Deployed Engineering**, formal SMT invariant verification, and deterministic error containment in multi-agent networks. The brand identity reflects this mathematical rigor, sovereign resilience, and high-precision engineering through:
 
-* **Brand Name & Wordmark Rule:** The brand is strictly named **`sflabs`** (all-lowercase). Never write `SFlabs`, `SF Labs`, or `SFLABS` in logo, navigation, or visual wordmark contexts.
-* **Logo Typography:** Rendered in **Satoshi Semi-Bold Italic** (`font-style: italic`, `font-weight: 600`, `letter-spacing: -0.03em`, lowercase `sflabs`).
+* **Brand Name & Wordmark Rule:** The brand is strictly named **`HSN Labs`** (all-lowercase). Never write `SFlabs`, `SF Labs`, or `SFLABS` in logo, navigation, or visual wordmark contexts.
+* **Logo Typography:** Rendered in **Satoshi Semi-Bold Italic** (`font-style: italic`, `font-weight: 600`, `letter-spacing: -0.03em`, lowercase `HSN Labs`).
 * **High-Precision Engineering Palette:** Clean white and light slate surfaces anchored by Midnight Navy (`#0F172A`), electric Primary Blue (`#2D74DE`), and Signal Green (`#10B981`) status validation chips.
 * **Strict Geometric Intent:** Precise corner radii (8px for interactive controls, 12px for content cards), reserving full pill radii (`rounded-full`) exclusively for metadata badges and status chips.
 * **Signature Stripe Band:** An 8px multi-stop gradient band (`.sunset-stripe-band`) anchoring the transition to the footer on every page.
@@ -68,7 +68,7 @@ The legacy orange/cream palette has been permanently deprecated. All future modi
 
 ## 4. Typography System
 
-The `sflabs` typography uses a three-tier hierarchy combining modern geometry, legibility, and technical precision:
+The `HSN Labs` typography uses a three-tier hierarchy combining modern geometry, legibility, and technical precision:
 
 ```html
 <!-- Fontshare CDN for Satoshi -->
@@ -87,9 +87,9 @@ The `sflabs` typography uses a three-tier hierarchy combining modern geometry, l
    * **Styling:** Semi-Bold (`font-weight: 600`), Italic (`font-style: italic`), Letter Spacing `-0.03em`, Lowercase (`lowercase`).
    * **Markup:**
      ```html
-     <a href="/" aria-label="sflabs home" class="inline-flex items-center">
+     <a href="/" aria-label="HSN Labs home" class="inline-flex items-center">
        <span class="font-display text-[26px] font-semibold italic tracking-tight text-primary lowercase">
-         sflabs
+         HSN Labs
        </span>
      </a>
      ```
@@ -222,7 +222,7 @@ Mega-menus provide structured, high-density discovery for Platform capabilities 
 
 Before committing any modifications to `index.html`, `404.html`, or other interfaces:
 
-- [ ] **Brand Name:** Is the brand name strictly `sflabs` (all-lowercase) in logo contexts?
+- [ ] **Brand Name:** Is the brand name strictly `HSN Labs` (all-lowercase) in logo contexts?
 - [ ] **Logo Font:** Is the logo rendered in Satoshi Semi-Bold Italic?
 - [ ] **No Legacy Orange/Cream:** Are all occurrences of `#fa520f`, `#fff8e0`, `#fffaeb`, `#e6d5a8`, and `#1f1f1f` completely absent?
 - [ ] **Color Tokens:** Are all buttons, active borders, and highlights using `#2D74DE` (Primary Blue) and `#1E58B0` (Primary Deep)?
@@ -234,4 +234,4 @@ Before committing any modifications to `index.html`, `404.html`, or other interf
 
 ---
 
-© 2026 sflabs. All rights reserved.
+© 2026 HSN Labs. All rights reserved.

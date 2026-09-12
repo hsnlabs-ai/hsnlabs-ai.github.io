@@ -1,5 +1,5 @@
 # ==============================================================================
-# robots.txt for The Steadfast Labs (https://thesteadfastlabs.com)
+# robots.txt for HSN Labs (https://hsnlabs.ai)
 # Configured for Standard Search Engines & Generative AI / GEO / AEO Crawlers
 # ==============================================================================
 
@@ -124,7 +124,7 @@ Disallow: /admin/
 Allow: /
 
 # Sitemaps & AI Context Endpoints
-Sitemap: https://thesteadfastlabs.com/sitemap.xml
-# LLM Context: https://thesteadfastlabs.com/llms.txt
-# Full LLM Context: https://thesteadfastlabs.com/llms-full.txt
-# AI Agent Policy: https://thesteadfastlabs.com/ai.txt
+Sitemap: https://hsnlabs.ai/sitemap.xml
+# LLM Context: https://hsnlabs.ai/llms.txt
+# Full LLM Context: https://hsnlabs.ai/llms-full.txt
+# AI Agent Policy: https://hsnlabs.ai/ai.txt

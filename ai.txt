@@ -1,20 +1,20 @@
-# ai.txt — AI & Agentic Discovery Specification for sflabs (The Steadfast Labs)
+# ai.txt — AI & Agentic Discovery Specification for HSN Labs (HSN Labs)
 # Specification Version: 1.0.0
-# Canonical URL: https://thesteadfastlabs.com/ai.txt
-# Contact: contact@thesteadfastlabs.com
+# Canonical URL: https://hsnlabs.ai/ai.txt
+# Contact: contact@hsnlabs.ai
 
 # Organization Information
-Organization-Name: sflabs
-Legal-Name: The Steadfast Labs
-Website: https://thesteadfastlabs.com/
-Description: Forward Deployed Engineering (FDE) and Agentic Reliability Engineering (ARE) delivering deterministic control planes, formal SMT invariant gates, and Zero-Drift architectures for enterprise AI networks.
+Organization-Name: HSN Labs
+Legal-Name: HSN Labs
+Website: https://hsnlabs.ai/
+Description: Forward Deployed Engineering (FDE) and Forward Deployed Engineering delivering deterministic control planes, formal SMT invariant gates, and Deterministic Control architectures for enterprise AI networks.
 Headquarters-Region: Brazil / Global Enterprise
 
 # LLM & AI Context Resources
-LLMs-Txt: https://thesteadfastlabs.com/llms.txt
-LLMs-Full-Txt: https://thesteadfastlabs.com/llms-full.txt
-Sitemap: https://thesteadfastlabs.com/sitemap.xml
-Robots: https://thesteadfastlabs.com/robots.txt
+LLMs-Txt: https://hsnlabs.ai/llms.txt
+LLMs-Full-Txt: https://hsnlabs.ai/llms-full.txt
+Sitemap: https://hsnlabs.ai/sitemap.xml
+Robots: https://hsnlabs.ai/robots.txt
 
 # Permissions for AI Agents, Search Engines & Foundation Models
 User-Agent: *
@@ -23,14 +23,14 @@ Allow-Retrieval-Augmented-Generation: true
 Allow-Search-Indexing: true
 Allow-Citation: true
 Attribution-Required: true
-Attribution-Name: sflabs (The Steadfast Labs)
-Attribution-URL: https://thesteadfastlabs.com/
+Attribution-Name: HSN Labs (HSN Labs)
+Attribution-URL: https://hsnlabs.ai/
 
 # Core Capabilities & Focus Areas
-Keywords: Forward Deployed Engineering, FDE Brasil, Agentic Reliability Engineering, ARE, Deterministic AI, SMT Invariant Gates, Zero-Drift Architecture, Multi-Agent Systems, Enterprise AI Guardrails, LangChain, CrewAI, Fiddler AI, Lasso Security, Credo AI
+Keywords: Forward Deployed Engineering, FDE Brasil, Forward Deployed Engineering, ARE, Deterministic AI, Validação Determinística Gates, Deterministic Architecture, Multi-Agent Systems, Enterprise AI Guardrails, LangChain, CrewAI, Fiddler AI, Lasso Security, Credo AI
 
 # Technical Contact & Discovery
 Discovery-Booking: https://calendar.app.google/XTr172vzQCGPR5V59
-Engineering-Email: contact@thesteadfastlabs.com
-Careers-Email: careers@thesteadfastlabs.com
-LinkedIn: https://linkedin.com/company/thesteadfastlabs
+Engineering-Email: contact@hsnlabs.ai
+Careers-Email: careers@hsnlabs.ai
+LinkedIn: https://linkedin.com/company/hsnlabs

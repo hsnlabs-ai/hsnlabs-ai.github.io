@@ -3,7 +3,7 @@
 > [!WARNING]
 > **ARCHIVE REFERENCE ONLY:** This document contains historical reverse-engineering notes from the deprecated Mistral AI orange/cream aesthetic.
 > **DO NOT USE THIS SPECIFICATION FOR NEW IMPLEMENTATIONS.**
-> The active and canonical brand specification is defined exclusively in [**`DESIGN.md`**](DESIGN.md) under the **`sflabs`** brand identity (`#2D74DE` Primary Blue, `#0F172A` Midnight Navy, Satoshi / Inter fonts).
+> The active and canonical brand specification is defined exclusively in [**`DESIGN.md`**](DESIGN.md) under the **`HSN Labs`** brand identity (`#2D74DE` Primary Blue, `#0F172A` Midnight Navy, Satoshi / Inter fonts).
 
 ---
 

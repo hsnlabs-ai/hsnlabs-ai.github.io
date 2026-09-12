@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sflabs | Calculadora de Viabilidade & ROI de IA Enterprise</title>
-  <meta name="description" content="Calcule a viabilidade técnica, economia de OPEX e ROI de projetos de IA Enterprise com o modelo Forward Deployed Engineering (FDE) e PoC de 30 dias em Sandbox da sflabs.">
+  <title>HSN Labs | Calculadora de Viabilidade & ROI de IA Enterprise</title>
+  <meta name="description" content="Calcule a viabilidade técnica, economia de OPEX e ROI de projetos de IA Enterprise com o modelo Forward Deployed Engineering (FDE) e AI Bootcamp de 5 Dias da HSN Labs.">
 
   <!-- Canonical & OpenGraph -->
-  <link rel="canonical" href="https://thesteadfastlabs.com/roi-calculator.html">
+  <link rel="canonical" href="https://hsnlabs.ai/roi-calculator.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thesteadfastlabs.com/roi-calculator.html">
-  <meta property="og:site_name" content="sflabs">
-  <meta property="og:title" content="sflabs | Calculadora de Viabilidade & ROI de IA Enterprise">
+  <meta property="og:url" content="https://hsnlabs.ai/roi-calculator.html">
+  <meta property="og:site_name" content="HSN Labs">
+  <meta property="og:title" content="HSN Labs | Calculadora de Viabilidade & ROI de IA Enterprise">
   <meta property="og:description" content="Dimensione o ganho financeiro de automação, redução de taxa de erro do RAG e obtenha diagnóstico de viabilidade técnica imediato para seu ambiente enterprise.">
   <meta property="og:locale" content="pt_BR">
 
@@ -70,9 +70,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "@id": "https://thesteadfastlabs.com/roi-calculator.html#app",
-    "name": "sflabs Calculadora de Viabilidade & ROI de IA Enterprise",
-    "url": "https://thesteadfastlabs.com/roi-calculator.html",
+    "@id": "https://hsnlabs.ai/roi-calculator.html#app",
+    "name": "HSN Labs Calculadora de Viabilidade & ROI de IA Enterprise",
+    "url": "https://hsnlabs.ai/roi-calculator.html",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "All",
     "offers": {
@@ -82,9 +82,9 @@
     },
     "provider": {
       "@type": "Organization",
-      "name": "sflabs",
-      "legalName": "The Steadfast Labs",
-      "url": "https://thesteadfastlabs.com"
+      "name": "HSN Labs",
+      "legalName": "HSN Labs",
+      "url": "https://hsnlabs.ai"
     },
     "description": "Calculadora preditiva para dimensionamento de ROI, payback e viabilidade técnica de projetos corporativos de IA, GraphRAG e agentes determinísticos."
   }
@@ -108,8 +108,8 @@
   <header class="border-b border-slate-800 bg-[#0F172A]/90 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-8">
-        <a href="index.html" class="flex items-center" aria-label="sflabs home">
-          <span class="font-display text-[26px] font-semibold italic tracking-tight text-primary lowercase">sflabs</span>
+        <a href="index.html" class="flex items-center" aria-label="HSN Labs home">
+          <span class="font-display text-[26px] font-semibold italic tracking-tight text-primary lowercase">HSN Labs</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
           <a href="index.html#fde" class="hover:text-white transition-colors">Modelo FDE</a>
@@ -276,7 +276,7 @@
               <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider font-mono">Complexidade do Agente / IA</label>
               <select id="select-complexity" class="w-full bg-[#141E33] border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-primary" onchange="updateCalculator()">
                 <option value="low">RAG Simples / Extração de Documentos</option>
-                <option value="moderate" selected>GraphRAG + Validação SMT Invariant</option>
+                <option value="moderate" selected>GraphRAG + Validação Determinística</option>
                 <option value="high">Multi-Agent Autônomo com Tools/APIs</option>
                 <option value="mission_critical">Decisão Crítica em Tempo Real (Core Banking/UTI)</option>
               </select>
@@ -358,7 +358,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5" id="budget-options">
                 <div class="selectable-card bg-[#141E33] border border-slate-700 rounded-lg p-3 text-left" onclick="selectBudget(this, '50k_150k')">
                   <div class="font-mono text-xs text-primary font-bold">R$ 50k - R$ 150k</div>
-                  <div class="text-[11px] text-slate-400 mt-0.5">PoC Fechada Sandbox 30 dias</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">AI Bootcamp 5 Dias + Rollout</div>
                 </div>
                 <div class="selectable-card active bg-[#141E33] border border-slate-700 rounded-lg p-3 text-left" onclick="selectBudget(this, '150k_400k')">
                   <div class="font-mono text-xs text-primary font-bold">R$ 150k - R$ 400k</div>
@@ -391,7 +391,7 @@
               <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider font-mono">Principal Gargalo Técnico ou Desafio</label>
               <select id="lead-pain" class="w-full bg-[#141E33] border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-primary">
                 <option value="hallucinations">Alucinações e Falha Matemática no RAG Básico em Produção (~59.9%)</option>
-                <option value="governance_compliance">Governança, Guardrails SMT e Compliance Regulatório (Bacen/LGPD/HIPAA)</option>
+                <option value="governance_compliance">Governança, Guardrails Determinísticos e Compliance Regulatório (Bacen/LGPD/HIPAA)</option>
                 <option value="agentic_drift">Agentes Estocásticos quebrando fluxos determinísticos</option>
                 <option value="poc_speed">Necessidade de validar PoC em 30 dias com Engenheiros FDE Dedicados</option>
                 <option value="cost_latency">Custo de inferência e latência proibitiva de LLMs</option>
@@ -455,7 +455,7 @@
           </div>
 
           <p id="text-feasibility-summary" class="text-xs text-slate-300 leading-relaxed border-t border-slate-800 pt-3">
-            Caso de uso ideal para PoC em Sandbox de 30 dias com alto ROI e rápida implantação.
+            Caso de uso ideal para AI Bootcamp de 5 Dias com alto ROI e rápida implantação.
           </p>
         </div>
 
@@ -510,7 +510,7 @@
                 <div id="metric-errors-avoided" class="font-mono text-lg font-bold text-signal-green mt-0.5">
                   5.500 falhas/mês
                 </div>
-                <div class="text-[10px] text-slate-500">Com SMT Guardrails</div>
+                <div class="text-[10px] text-slate-500">Com Deterministic Guardrails</div>
               </div>
             </div>
 
@@ -534,7 +534,7 @@
             <div class="flex items-center justify-between p-2.5 rounded-lg bg-primary/10 border border-primary/30">
               <div>
                 <div class="font-semibold text-white flex items-center gap-1.5">
-                  <span>sflabs FDE Sandbox</span>
+                  <span>HSN Labs FDE Sandbox</span>
                   <span class="text-[10px] font-mono px-1.5 py-0.2 bg-primary text-white rounded">30 Dias</span>
                 </div>
                 <div class="text-[11px] text-slate-300">Escopo fechado + código em produção</div>
@@ -656,10 +656,10 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <div>
           <div class="mb-4">
-            <span class="font-display text-[22px] font-semibold italic tracking-tight text-white lowercase">sflabs</span>
+            <span class="font-display text-[22px] font-semibold italic tracking-tight text-white lowercase">HSN Labs</span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Forward Deployed Engineering e Engenharia de Confiabilidade Agêntica (ARE) para empresas de missão crítica no Brasil.
+            Forward Deployed Engineering e Engenharia de IA Agêntica em Produção para empresas de missão crítica no Brasil.
           </p>
         </div>
 
@@ -677,7 +677,7 @@
           <h4 class="text-xs font-mono uppercase tracking-wider text-slate-300 mb-4 font-semibold">Engenharia &amp; Stack</h4>
           <ul class="space-y-2.5 text-xs text-slate-400">
             <li><a href="roi-calculator.html" class="text-primary font-semibold">Calculadora ROI &amp; Viabilidade</a></li>
-            <li><a href="index.html#architecture" class="hover:text-white transition">Zero-Drift Architecture</a></li>
+            <li><a href="index.html#architecture" class="hover:text-white transition">Deterministic Architecture</a></li>
             <li><a href="careers.html" class="hover:text-white transition">Carreiras (FDE Sênior / Trainee)</a></li>
             <li><a href="/llms.txt" class="hover:text-white font-mono transition">/llms.txt AI Spec</a></li>
           </ul>
@@ -688,14 +688,14 @@
           <ul class="space-y-2.5 text-xs text-slate-400">
             <li><a href="careers.html#senior" class="hover:text-white transition">Vaga FDE Sênior</a></li>
             <li><a href="careers.html#trainee" class="hover:text-white transition">Vaga FDE Trainee</a></li>
-            <li><a href="mailto:careers@thesteadfastlabs.com" class="hover:text-white transition">careers@thesteadfastlabs.com</a></li>
-            <li><a href="mailto:contact@thesteadfastlabs.com" class="hover:text-white transition">contact@thesteadfastlabs.com</a></li>
+            <li><a href="mailto:careers@hsnlabs.ai" class="hover:text-white transition">careers@hsnlabs.ai</a></li>
+            <li><a href="mailto:contact@hsnlabs.ai" class="hover:text-white transition">contact@hsnlabs.ai</a></li>
           </ul>
         </div>
       </div>
 
       <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs font-mono text-slate-500 gap-4">
-        <p>© 2026 sflabs (The Steadfast Labs). Todos os direitos reservados.</p>
+        <p>© 2026 HSN Labs (HSN Labs). Todos os direitos reservados.</p>
         <div class="flex items-center space-x-4">
           <span>Bacen 4.893/4.658</span>
           <span>•</span>
@@ -867,8 +867,8 @@
       // Mailto link
       const subject = encodeURIComponent(`[Dossiê FDE IA] Diagnóstico & Proposta PoC Sandbox - ${leadData.company}`);
       const body = encodeURIComponent(
-        `Olá time sflabs,\n\n` +
-        `Solicito o agendamento do Briefing de Arquitetura e PoC Sandbox de 30 dias.\n\n` +
+        `Olá time HSN Labs,\n\n` +
+        `Solicito o agendamento do Briefing de Arquitetura e AI Bootcamp de 5 Dias.\n\n` +
         `-- DADOS DO SOLICITANTE --\n` +
         `Nome: ${leadData.name}\n` +
         `Cargo: ${leadData.role}\n` +
@@ -885,7 +885,7 @@
         `Principal Gargalo: ${leadData.primaryPain}\n\n` +
         `Atenciosamente,\n${leadData.name}`
       );
-      document.getElementById('modal-btn-email').href = `mailto:contact@thesteadfastlabs.com?subject=${subject}&body=${body}`;
+      document.getElementById('modal-btn-email').href = `mailto:contact@hsnlabs.ai?subject=${subject}&body=${body}`;
 
       // Open Modal
       const modal = document.getElementById('modal-routing-result');
