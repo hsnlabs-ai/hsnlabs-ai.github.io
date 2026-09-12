@@ -102,27 +102,27 @@
 
     /* Asynchronous Floating Physics */
     @keyframes floatAtom {
-      0% { transform: translateY(-6px) rotate(-2deg); }
-      50% { transform: translateY(-16px) rotate(-0.5deg); }
-      100% { transform: translateY(-6px) rotate(-2deg); }
+      0% { transform: translateY(-4px) rotate(-1.5deg); }
+      50% { transform: translateY(-14px) rotate(-0.5deg); }
+      100% { transform: translateY(-4px) rotate(-1.5deg); }
     }
 
     @keyframes floatChain {
       0% { transform: translateY(2px) rotate(1deg); }
-      50% { transform: translateY(12px) rotate(2.5deg); }
+      50% { transform: translateY(12px) rotate(2deg); }
       100% { transform: translateY(2px) rotate(1deg); }
     }
 
     @keyframes floatHourglass {
-      0% { transform: translateY(12px) rotate(-1.5deg); }
+      0% { transform: translateY(10px) rotate(-1deg); }
       50% { transform: translateY(-2px) rotate(0.5deg); }
-      100% { transform: translateY(12px) rotate(-1.5deg); }
+      100% { transform: translateY(10px) rotate(-1deg); }
     }
 
     @keyframes floatPeople {
-      0% { transform: translateY(4px) rotate(1.5deg); }
-      50% { transform: translateY(-10px) rotate(3deg); }
-      100% { transform: translateY(4px) rotate(1.5deg); }
+      0% { transform: translateY(4px) rotate(1deg); }
+      50% { transform: translateY(-10px) rotate(2deg); }
+      100% { transform: translateY(4px) rotate(1deg); }
     }
 
     /* Graph Container & Connecting Layer */
@@ -135,7 +135,7 @@
       height: 540px;
     }
 
-    /* SVG Connecting Lines Canvas */
+    /* SVG Link Chain & Schema Layer */
     .graph-svg-layer {
       position: absolute;
       top: 0;
@@ -145,24 +145,43 @@
       pointer-events: none;
       z-index: 10;
       overflow: visible;
+      transition: opacity 0.4s ease;
     }
 
-    .graph-edge {
-      stroke: rgba(255, 255, 255, 0.2);
-      stroke-width: 2.5;
-      stroke-dasharray: 6 6;
+    .chain-wire {
+      stroke: rgba(255, 255, 255, 0.25);
+      stroke-width: 2;
       fill: none;
-      transition: stroke 0.3s, opacity 0.5s;
+      stroke-dasharray: 6 4;
+      animation: wireStream 1.6s linear infinite;
     }
 
-    .graph-edge.edge-pulse {
-      animation: dashFlow 2s linear infinite;
-      stroke: rgba(167, 139, 250, 0.5);
-    }
-
-    @keyframes dashFlow {
-      from { stroke-dashoffset: 24; }
+    @keyframes wireStream {
+      from { stroke-dashoffset: 20; }
       to { stroke-dashoffset: 0; }
+    }
+
+    .chain-packet {
+      filter: drop-shadow(0 0 6px currentColor);
+      animation: packetPulse 1.8s ease-in-out infinite alternate;
+    }
+
+    @keyframes packetPulse {
+      from { r: 3; opacity: 0.7; }
+      to { r: 4.5; opacity: 1; }
+    }
+
+    .schema-pill-box {
+      fill: #0F0F12;
+      stroke-width: 1;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
+    }
+
+    .schema-pill-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
     }
 
     .characters-track {
@@ -180,16 +199,39 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Schema Port Pins on Node Edges */
+    .node-port {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #000000;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+      z-index: 30;
+      pointer-events: none;
+    }
+    .node-port.port-left { left: -5px; }
+    .node-port.port-right { right: -5px; }
+
+    .state-expanded .node-port {
+      opacity: 1;
     }
 
     /* Badge SVG Sizing */
     .badge-svg {
-      width: 210px;
-      height: 210px;
+      width: 200px;
+      height: 200px;
       display: block;
       filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .char-node:hover .badge-svg {
@@ -202,13 +244,32 @@
     #char-2 .badge-svg { animation: floatHourglass 7s ease-in-out infinite; }
     #char-3 .badge-svg { animation: floatChain 6.2s ease-in-out infinite; }
 
-    /* COLLAPSED STATE (INITIAL): Only HSN Labs visible in center */
+    /* Bubble Pop scale-up animation */
+    @keyframes bubblePopIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.2) rotate(-8deg);
+      }
+      65% {
+        opacity: 1;
+        transform: scale(1.16) rotate(2deg);
+      }
+      85% {
+        transform: scale(0.96) rotate(-1deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    /* COLLAPSED STATE: Only HSN Labs in center */
     .state-collapsed .char-node.child-node {
       opacity: 0;
       pointer-events: none;
       width: 0;
       margin: 0;
-      transform: scale(0.1) translateX(-60px);
+      transform: scale(0);
       overflow: hidden;
     }
 
@@ -220,38 +281,42 @@
       transform: scale(1.15);
     }
 
-    /* Pulsing discovery cue around HSN Labs when collapsed */
+    .state-collapsed #char-0 .node-port {
+      display: none;
+    }
+
+    /* Discovery Cue around HSN Labs */
     .expand-cue {
       position: absolute;
-      bottom: -60px;
+      bottom: -64px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 8px;
       pointer-events: none;
       opacity: 1;
-      transition: opacity 0.4s ease, transform 0.4s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .expand-cue-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      gap: 7px;
+      padding: 7px 16px;
       border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       font-size: 11px;
       font-family: 'JetBrains Mono', monospace;
-      color: #A1A1AA;
+      color: #D4D4D8;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       animation: pulseGlow 2.5s ease-in-out infinite;
     }
 
     .expand-cue-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: #A78BFA;
       box-shadow: 0 0 10px #A78BFA;
@@ -259,7 +324,7 @@
 
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.6; transform: scale(0.98); }
-      50% { opacity: 1; transform: scale(1.02); }
+      50% { opacity: 1; transform: scale(1.03); }
     }
 
     .state-expanded .expand-cue {
@@ -268,18 +333,22 @@
       pointer-events: none;
     }
 
-    /* EXPANDED STATE (CHAIN GRAPH): All 4 nodes displayed in linked sequence */
+    /* EXPANDED STATE (LINK CHAIN GRAPH): Connected in chain */
     .state-expanded .characters-track {
-      gap: 36px;
+      gap: 54px;
     }
 
     .state-expanded .char-node.child-node {
       opacity: 1;
       pointer-events: auto;
-      width: 210px;
+      width: 200px;
       margin: 0;
-      transform: scale(1) translateX(0);
+      animation: bubblePopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     }
+
+    .state-expanded #char-1 { animation-delay: 0.08s; }
+    .state-expanded #char-2 { animation-delay: 0.18s; }
+    .state-expanded #char-3 { animation-delay: 0.28s; }
 
     .state-expanded .graph-svg-layer {
       opacity: 1;
@@ -296,19 +365,24 @@
     }
 
     .viewport.mode-detail .characters-track {
-      transform: scale(0.85);
-      gap: 20px;
+      transform: scale(0.82);
+      gap: 32px;
     }
 
     .viewport.mode-detail .char-node {
-      opacity: 0.35;
-      filter: grayscale(0.5);
+      opacity: 0.32;
+      filter: grayscale(0.6);
     }
 
     .viewport.mode-detail .char-node.is-active {
       opacity: 1;
       filter: none;
-      transform: scale(1.1);
+      transform: scale(1.08);
+    }
+
+    .viewport.mode-detail .graph-edge,
+    .viewport.mode-detail .chain-wire {
+      opacity: 0.35;
     }
 
     /* Detail Drawer Styles */
@@ -519,11 +593,11 @@
     /* Reset Graph Action */
     .reset-graph-btn {
       background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       color: #A1A1AA;
       font-size: 11px;
       font-family: 'JetBrains Mono', monospace;
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 9999px;
       cursor: pointer;
       display: none;
@@ -531,7 +605,8 @@
     }
     .reset-graph-btn:hover {
       color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.05);
     }
     .state-expanded .reset-graph-btn {
       display: inline-block;
@@ -540,8 +615,9 @@
     @media (max-width: 1024px) {
       .spec-drawer { width: 100vw; }
       .viewport.mode-detail .carousel-stage { width: 0; overflow: hidden; }
-      .state-expanded .characters-track { flex-wrap: wrap; height: auto; gap: 16px; }
+      .state-expanded .characters-track { flex-wrap: wrap; height: auto; gap: 20px; }
       .graph-svg-layer { display: none; }
+      .node-port { display: none !important; }
     }
   </style>
 </head>
@@ -560,40 +636,70 @@
       
       <div class="graph-container" id="graphContainer">
         
-        <!-- SVG Link Graph Canvas: connects HSN Labs -> About Us -> AI Bootcamp -> Proto-Ontologies -->
-        <svg class="graph-svg-layer" id="graphSvg" viewBox="0 0 1200 540">
+        <!-- SVG Schema Link Chain Layer -->
+        <svg class="graph-svg-layer" id="graphSvg">
           <defs>
-            <linearGradient id="edgeGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
+            <linearGradient id="chainGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A78BFA"/>
+              <stop offset="100%" stop-color="#10B981"/>
             </linearGradient>
-            <linearGradient id="edgeGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.8"/>
+            <linearGradient id="chainGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#10B981"/>
+              <stop offset="100%" stop-color="#38BDF8"/>
             </linearGradient>
-            <linearGradient id="edgeGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#FB923C" stop-opacity="0.8"/>
+            <linearGradient id="chainGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#38BDF8"/>
+              <stop offset="100%" stop-color="#FB923C"/>
             </linearGradient>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="3" result="blur"/>
-              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-            </filter>
+
+            <marker id="chainArrow01" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 8 5 L 0 9 z" fill="#10B981"/>
+            </marker>
+            <marker id="chainArrow12" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 8 5 L 0 9 z" fill="#38BDF8"/>
+            </marker>
+            <marker id="chainArrow23" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+              <path d="M 0 1 L 8 5 L 0 9 z" fill="#FB923C"/>
+            </marker>
           </defs>
 
-          <!-- Edge 0 -> 1: HSN Labs to About Us -->
-          <line id="edge-0-1" class="graph-edge edge-pulse" stroke="url(#edgeGrad01)" filter="url(#glow)"/>
-          <!-- Edge 1 -> 2: About Us to AI Bootcamp -->
-          <line id="edge-1-2" class="graph-edge edge-pulse" stroke="url(#edgeGrad12)" filter="url(#glow)"/>
-          <!-- Edge 2 -> 3: AI Bootcamp to Proto-Ontologies -->
-          <line id="edge-2-3" class="graph-edge edge-pulse" stroke="url(#edgeGrad23)" filter="url(#glow)"/>
+          <!-- Link 0 -> 1 (HSN Labs to About Us) -->
+          <g id="link-group-0-1">
+            <line id="wire-0-1" class="chain-wire" stroke="url(#chainGrad01)" marker-end="url(#chainArrow01)"/>
+            <circle id="packet-0-1" class="chain-packet" fill="#A78BFA" r="3.5"/>
+            <g id="pill-0-1" class="schema-pill">
+              <rect id="pill-bg-0-1" class="schema-pill-box" stroke="#A78BFA" rx="10" height="20"/>
+              <text id="pill-txt-0-1" class="schema-pill-text" fill="#D8B4FE" text-anchor="middle" dominant-baseline="central">[:OPERATED_BY]</text>
+            </g>
+          </g>
+
+          <!-- Link 1 -> 2 (About Us to AI Bootcamp) -->
+          <g id="link-group-1-2">
+            <line id="wire-1-2" class="chain-wire" stroke="url(#chainGrad12)" marker-end="url(#chainArrow12)"/>
+            <circle id="packet-1-2" class="chain-packet" fill="#10B981" r="3.5"/>
+            <g id="pill-1-2" class="schema-pill">
+              <rect id="pill-bg-1-2" class="schema-pill-box" stroke="#10B981" rx="10" height="20"/>
+              <text id="pill-txt-1-2" class="schema-pill-text" fill="#A7F3D0" text-anchor="middle" dominant-baseline="central">[:DEPLOYS]</text>
+            </g>
+          </g>
+
+          <!-- Link 2 -> 3 (AI Bootcamp to Proto-Ontologies) -->
+          <g id="link-group-2-3">
+            <line id="wire-2-3" class="chain-wire" stroke="url(#chainGrad23)" marker-end="url(#chainArrow23)"/>
+            <circle id="packet-2-3" class="chain-packet" fill="#38BDF8" r="3.5"/>
+            <g id="pill-2-3" class="schema-pill">
+              <rect id="pill-bg-2-3" class="schema-pill-box" stroke="#38BDF8" rx="10" height="20"/>
+              <text id="pill-txt-2-3" class="schema-pill-text" fill="#BAE6FD" text-anchor="middle" dominant-baseline="central">[:GROUNDED_ON]</text>
+            </g>
+          </g>
         </svg>
 
         <div class="characters-track" id="charactersTrack">
 
-          <!-- 0. HSN LABS (Root Node: Atomic Orbital Sticker - Purple / Lavender) -->
+          <!-- 0. HSN LABS (Root Node: Atomic Orbital - Purple / Lavender) -->
           <div class="char-node root-node" id="char-0" onclick="handleNodeClick(0)">
             <div class="floating-tooltip">HSN Labs</div>
+            <div class="node-port port-right" style="border-color: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></div>
             <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
               <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
@@ -608,7 +714,7 @@
             <div class="expand-cue">
               <div class="expand-cue-pill">
                 <span class="expand-cue-dot"></span>
-                <span>Click to expand graph</span>
+                <span>Click to expand link chain</span>
               </div>
             </div>
           </div>
@@ -616,6 +722,8 @@
           <!-- 1. ABOUT US (Child Node 1: Connected Squad - Emerald Green) -->
           <div class="char-node child-node" id="char-1" onclick="handleNodeClick(1)">
             <div class="floating-tooltip">About Us</div>
+            <div class="node-port port-left" style="border-color: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></div>
+            <div class="node-port port-right" style="border-color: #10B981; box-shadow: 0 0 8px #10B981;"></div>
             <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
               <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
@@ -632,6 +740,8 @@
           <!-- 2. AI BOOTCAMP (Child Node 2: Precision Hourglass - Sky Blue) -->
           <div class="char-node child-node" id="char-2" onclick="handleNodeClick(2)">
             <div class="floating-tooltip">AI Bootcamp</div>
+            <div class="node-port port-left" style="border-color: #10B981; box-shadow: 0 0 8px #10B981;"></div>
+            <div class="node-port port-right" style="border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></div>
             <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
               <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
@@ -648,6 +758,7 @@
           <!-- 3. PROTO-ONTOLOGIES (Child Node 3: Interlocked Chain - Orange / Amber) -->
           <div class="char-node child-node" id="char-3" onclick="handleNodeClick(3)">
             <div class="floating-tooltip">Proto-Ontologies</div>
+            <div class="node-port port-left" style="border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></div>
             <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
               <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
@@ -818,100 +929,157 @@
       }
     ];
 
-    function triggerAudio(frequency = 440, type = 'sine', duration = 0.08) {
+    /* --- JUICY BUBBLE POP / BLOOP SOUND SYNTHESIS --- */
+    function playBubblePop(freqStart = 360, freqEnd = 1450, duration = 0.075) {
       if (!soundActive) return;
       try {
         if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
         if (audioContext.state === 'suspended') audioContext.resume();
 
+        const t = audioContext.currentTime;
+
+        // Primary bubble sine with fast upward pitch sweep
         const osc = audioContext.createOscillator();
         const gain = audioContext.createGain();
 
-        osc.type = type;
-        osc.frequency.setValueAtTime(frequency, audioContext.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(frequency * 1.35, audioContext.currentTime + duration);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freqStart, t);
+        osc.frequency.exponentialRampToValueAtTime(freqEnd, t + duration * 0.72);
+        osc.frequency.exponentialRampToValueAtTime(freqEnd * 0.88, t + duration);
 
-        gain.gain.setValueAtTime(0.12, audioContext.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+        gain.gain.setValueAtTime(0.001, t);
+        gain.gain.linearRampToValueAtTime(0.38, t + 0.005);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
 
         osc.connect(gain);
         gain.connect(audioContext.destination);
 
-        osc.start();
-        osc.stop(audioContext.currentTime + duration);
+        osc.start(t);
+        osc.stop(t + duration + 0.01);
+
+        // Water droplet plop body resonance
+        const sub = audioContext.createOscillator();
+        const subGain = audioContext.createGain();
+        sub.type = 'triangle';
+        sub.frequency.setValueAtTime(freqStart * 0.7, t);
+        sub.frequency.exponentialRampToValueAtTime(freqStart * 1.8, t + duration * 0.55);
+
+        subGain.gain.setValueAtTime(0.2, t);
+        subGain.gain.exponentialRampToValueAtTime(0.0001, t + duration * 0.65);
+
+        sub.connect(subGain);
+        subGain.connect(audioContext.destination);
+
+        sub.start(t);
+        sub.stop(t + duration * 0.68);
       } catch (e) {}
     }
 
     document.getElementById('soundToggle').addEventListener('click', () => {
       soundActive = !soundActive;
       document.getElementById('soundToggle').style.opacity = soundActive ? '1' : '0.25';
-      if (soundActive) triggerAudio(520, 'sine', 0.1);
+      if (soundActive) playBubblePop(450, 1600, 0.08);
     });
 
+    /* --- SCHEMA GRAPH EDGE CONNECTORS UPDATE --- */
     function updateGraphEdges() {
       if (!isGraphExpanded) return;
-      const svg = document.getElementById('graphSvg');
       const containerRect = document.getElementById('graphContainer').getBoundingClientRect();
       
-      const getNodeCenter = (id) => {
+      const getNodePorts = (id) => {
         const el = document.getElementById(`char-${id}`);
-        if (!el) return { x: 0, y: 0 };
+        if (!el) return { x: 0, y: 0, leftX: 0, rightX: 0 };
         const r = el.getBoundingClientRect();
         return {
-          x: (r.left + r.width / 2) - containerRect.left,
-          y: (r.top + r.height / 2) - containerRect.top
+          y: (r.top + r.height / 2) - containerRect.top,
+          leftX: r.left - containerRect.left + 8,
+          rightX: r.right - containerRect.left - 8
         };
       };
 
-      const c0 = getNodeCenter(0);
-      const c1 = getNodeCenter(1);
-      const c2 = getNodeCenter(2);
-      const c3 = getNodeCenter(3);
+      const p0 = getNodePorts(0);
+      const p1 = getNodePorts(1);
+      const p2 = getNodePorts(2);
+      const p3 = getNodePorts(3);
 
-      const setLine = (edgeId, p1, p2) => {
-        const line = document.getElementById(edgeId);
-        if (line) {
-          line.setAttribute('x1', p1.x);
-          line.setAttribute('y1', p1.y);
-          line.setAttribute('x2', p2.x);
-          line.setAttribute('y2', p2.y);
+      const renderChainLink = (edgeId, packetId, pillId, pillBgId, pillTxtId, start, end) => {
+        const wire = document.getElementById(edgeId);
+        const packet = document.getElementById(packetId);
+        const pillGroup = document.getElementById(pillId);
+        const pillBg = document.getElementById(pillBgId);
+        const pillTxt = document.getElementById(pillTxtId);
+
+        if (!wire || !start || !end) return;
+
+        // Draw straight/clean schema bus connector
+        wire.setAttribute('x1', start.rightX);
+        wire.setAttribute('y1', start.y);
+        wire.setAttribute('x2', end.leftX - 6);
+        wire.setAttribute('y2', end.y);
+
+        // Position animated data packet along line
+        const midX = (start.rightX + end.leftX) / 2;
+        const midY = (start.y + end.y) / 2;
+        
+        if (packet) {
+          packet.setAttribute('cx', midX);
+          packet.setAttribute('cy', midY);
+        }
+
+        // Position relationship badge pill exactly on line midpoint
+        if (pillGroup && pillBg && pillTxt) {
+          pillTxt.setAttribute('x', midX);
+          pillTxt.setAttribute('y', midY);
+
+          const bbox = pillTxt.getBBox();
+          const padX = 14;
+          pillBg.setAttribute('x', bbox.x - padX / 2);
+          pillBg.setAttribute('y', bbox.y - 3);
+          pillBg.setAttribute('width', bbox.width + padX);
+          pillBg.setAttribute('height', bbox.height + 6);
         }
       };
 
-      setLine('edge-0-1', c0, c1);
-      setLine('edge-1-2', c1, c2);
-      setLine('edge-2-3', c2, c3);
+      renderChainLink('wire-0-1', 'packet-0-1', 'pill-0-1', 'pill-bg-0-1', 'pill-txt-0-1', p0, p1);
+      renderChainLink('wire-1-2', 'packet-1-2', 'pill-1-2', 'pill-bg-1-2', 'pill-txt-1-2', p1, p2);
+      renderChainLink('wire-2-3', 'packet-2-3', 'pill-2-3', 'pill-bg-2-3', 'pill-txt-2-3', p2, p3);
     }
 
     window.addEventListener('resize', () => {
       requestAnimationFrame(updateGraphEdges);
     });
 
+    /* --- NODE CLICK & GRAPH REVEAL DISPATCHER --- */
     function handleNodeClick(index) {
-      // First click on HSN Labs expands the link graph
+      // First click on HSN Labs triggers the link chain bubble expansion!
       if (index === 0 && !isGraphExpanded) {
-        expandGraph();
+        expandGraphChain();
         return;
       }
 
-      // If graph is already expanded (or clicking a child node), open drawer
+      // If already expanded, click triggers bubble pop & opens detail drawer
+      playBubblePop(400 + (index * 90), 1400 + (index * 120), 0.08);
+
       if (!isGraphExpanded) {
-        expandGraph();
+        expandGraphChain();
       }
       openDrawer(index);
     }
 
-    function expandGraph() {
+    function expandGraphChain() {
       isGraphExpanded = true;
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('state-collapsed');
       viewport.classList.add('state-expanded');
 
-      triggerAudio(440, 'sine', 0.12);
-      setTimeout(() => triggerAudio(660, 'triangle', 0.18), 120);
+      // Sequential bubble pop chain reaction!
+      playBubblePop(360, 1350, 0.075);
+      setTimeout(() => playBubblePop(440, 1500, 0.075), 90);
+      setTimeout(() => playBubblePop(520, 1680, 0.075), 180);
+      setTimeout(() => playBubblePop(620, 1850, 0.08), 270);
 
-      // Re-calculate edge coordinates as nodes slide in
-      const steps = [100, 250, 450, 650];
+      // Re-calculate edge coordinates as nodes cascade in
+      const steps = [80, 180, 300, 480, 680];
       steps.forEach(delay => setTimeout(updateGraphEdges, delay));
     }
 
@@ -923,12 +1091,11 @@
       viewport.classList.remove('state-expanded');
       viewport.classList.add('state-collapsed');
 
-      triggerAudio(340, 'sine', 0.1);
+      playBubblePop(300, 750, 0.09);
     }
 
     function openDrawer(index) {
       currentIdx = index;
-      triggerAudio(580 + (index * 40), 'sine', 0.12);
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('mode-overview');
@@ -998,7 +1165,7 @@
 
     function closeDrawer() {
       currentIdx = null;
-      triggerAudio(320, 'sine', 0.08);
+      playBubblePop(320, 800, 0.08);
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('mode-detail');
