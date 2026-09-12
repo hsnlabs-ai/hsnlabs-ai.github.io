@@ -15,7 +15,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      user-select: none;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -23,79 +22,76 @@
       background-color: #07090E;
       color: #FFFFFF;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      height: 100vh;
+      min-height: 100vh;
       width: 100vw;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
 
     /* Sound Control Button */
     .sound-toggle {
       position: fixed;
-      top: 24px;
-      left: 24px;
+      top: 20px;
+      left: 20px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 50%;
-      color: #71717A;
+      color: #A1A1AA;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 34px;
-      height: 34px;
-      transition: all 0.2s;
+      width: 36px;
+      height: 36px;
+      transition: all 0.2s ease;
       z-index: 100;
     }
     .sound-toggle:hover {
       color: #FFFFFF;
       background: rgba(255, 255, 255, 0.12);
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
     .sound-toggle svg {
-      width: 18px;
-      height: 18px;
+      width: 17px;
+      height: 17px;
       fill: currentColor;
     }
 
-    /* Viewport Stage */
+    /* Main Viewport */
     .viewport {
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       position: relative;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: padding-right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .carousel-stage {
+    .main-stage {
       flex: 1;
-      height: 100%;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 28px 20px;
       position: relative;
-      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      padding: 20px;
     }
 
-    /* Diagram Stage Header (Inspired by Google Cloud standard slide header) */
+    /* Header */
     .stage-header {
-      position: absolute;
-      top: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       gap: 6px;
-      z-index: 30;
-      transition: opacity 0.3s;
+      margin-bottom: 12px;
+      padding: 0 10px;
     }
 
     .brand-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       font-weight: 600;
@@ -114,132 +110,71 @@
 
     .stage-title {
       font-family: 'Satoshi', sans-serif;
-      font-size: 26px;
+      font-size: clamp(20px, 3.2vw, 32px);
       font-weight: 900;
       letter-spacing: -0.02em;
       color: #FFFFFF;
+      line-height: 1.2;
     }
 
     .stage-subtitle {
-      font-size: 13px;
-      color: #71717A;
+      font-size: clamp(12px, 1.6vw, 13.5px);
+      color: #A1A1AA;
       font-weight: 400;
+      max-width: 620px;
+      line-height: 1.45;
     }
 
     /* =========================================================
-       PIPELINE & RIBBON FLOW GRAPH (Inspired by Google Cloud Architecture)
+       DIAGRAM WRAPPER
        ========================================================= */
-    .pipeline-container {
-      position: relative;
+    .diagram-wrapper {
       width: 100%;
-      max-width: 1100px;
-      height: 480px;
+      max-width: 1040px;
+      margin: auto 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 20px;
-    }
-
-    /* SVG Ribbon Flow Layer */
-    .pipeline-svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 10;
-      overflow: visible;
-      transition: opacity 0.4s ease;
-    }
-
-    /* Wide Flowing Ribbons */
-    .ribbon-band {
-      fill: none;
-      stroke-linecap: round;
-      opacity: 0.85;
-      transition: stroke-width 0.3s, opacity 0.3s;
-    }
-
-    .ribbon-core-wire {
-      fill: none;
-      stroke-width: 2.5;
-      stroke-dasharray: 8 6;
-      animation: ribbonFlow 1.6s linear infinite;
-    }
-
-    @keyframes ribbonFlow {
-      from { stroke-dashoffset: 28; }
-      to { stroke-dashoffset: 0; }
-    }
-
-    /* Diagram Nodes Positioning */
-    .nodes-layout {
       position: relative;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      z-index: 20;
+      padding: 10px 0;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Central Processing Hub (HSN Labs) */
-    .hub-column {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 40;
-    }
-
-    .state-expanded .hub-column {
-      left: 18%;
-      transform: translate(-50%, -50%);
-    }
-
-    /* Destination Output Column (Right side 3 branches) */
-    .branches-column {
-      position: absolute;
-      right: 4%;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      width: 320px;
-      z-index: 30;
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* =========================================================
-       NODE STYLES (Clean Google Cloud / Enterprise Architecture Style)
-       ========================================================= */
-    /* Hub Card (HSN Labs) */
-    .hub-node-card {
-      position: relative;
-      background: #0E1017;
-      border: 2px solid rgba(167, 139, 250, 0.4);
-      border-radius: 28px;
-      padding: 24px 28px;
+    /* ---------------------------------------------------------
+       1. INITIAL STATE (COLLAPSED): Only HSN Labs Node
+       --------------------------------------------------------- */
+    .initial-view {
       display: flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(167, 139, 250, 0.15);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .hub-node-card:hover {
-      transform: scale(1.05);
+    .state-expanded .initial-view {
+      display: none;
+    }
+
+    .initial-card {
+      position: relative;
+      background: #0E1017;
+      border: 2px solid rgba(167, 139, 250, 0.45);
+      border-radius: 32px;
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(167, 139, 250, 0.2);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .initial-card:hover {
+      transform: scale(1.04);
       border-color: #A78BFA;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(167, 139, 250, 0.3);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), 0 0 50px rgba(167, 139, 250, 0.35);
     }
 
-    .hub-pill-header {
+    .hub-badge-pill {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       font-weight: 700;
@@ -247,109 +182,217 @@
       text-transform: uppercase;
       color: #A78BFA;
       background: rgba(167, 139, 250, 0.12);
-      border: 1px solid rgba(167, 139, 250, 0.25);
-      padding: 4px 12px;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      padding: 5px 14px;
       border-radius: 9999px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
-    .hub-badge-icon {
+    .initial-icon {
       width: 140px;
       height: 140px;
       display: block;
-      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.8));
     }
 
-    .hub-title {
+    .initial-title {
       font-family: 'Satoshi', sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 900;
       color: #FFFFFF;
-      margin-top: 10px;
+      margin-top: 12px;
       letter-spacing: -0.01em;
     }
 
-    .hub-subtitle {
+    .initial-sub {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
+      color: #A1A1AA;
+      margin-top: 3px;
+    }
+
+    .expand-cue-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(167, 139, 250, 0.1);
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #E4E4E7;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      animation: cuePulse 2s infinite ease-in-out;
+    }
+
+    .expand-cue-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #A78BFA;
+      box-shadow: 0 0 10px #A78BFA;
+    }
+
+    @keyframes cuePulse {
+      0%, 100% { opacity: 0.75; transform: scale(0.98); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+
+    /* ---------------------------------------------------------
+       2. EXPANDED STATE (PIPELINE FLOW DIAGRAM)
+       --------------------------------------------------------- */
+    .expanded-diagram {
+      display: none;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .state-expanded .expanded-diagram {
+      display: flex;
+    }
+
+    /* Left Side: Hub (HSN Labs) */
+    .hub-box {
+      width: 220px;
+      min-width: 220px;
+      background: #0E1017;
+      border: 2px solid rgba(167, 139, 250, 0.5);
+      border-radius: 24px;
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(167, 139, 250, 0.15);
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+
+    .hub-box:hover, .hub-box.is-active {
+      border-color: #A78BFA;
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(167, 139, 250, 0.3);
+    }
+
+    .hub-box-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      background: rgba(167, 139, 250, 0.12);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-bottom: 10px;
+    }
+
+    .hub-box-icon {
+      width: 90px;
+      height: 90px;
+      display: block;
+    }
+
+    .hub-box-title {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-top: 8px;
+    }
+
+    .hub-box-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
       color: #A1A1AA;
       margin-top: 2px;
     }
 
-    /* Outbound Anchor Port on Hub */
-    .hub-port-out {
-      position: absolute;
-      right: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #0E1017;
-      border: 2.5px solid #A78BFA;
-      box-shadow: 0 0 12px #A78BFA;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .state-expanded .hub-port-out { opacity: 1; }
-
-    /* =========================================================
-       BRANCH OUTPUT CARDS (About Us, AI Bootcamp, Proto-Ontologies)
-       ========================================================= */
-    .branch-card {
+    /* Middle: Connecting Flow Channels */
+    .ribbon-channels {
+      flex: 1;
+      height: 310px;
+      min-width: 100px;
+      max-width: 200px;
+      display: flex;
+      align-items: center;
       position: relative;
+    }
+
+    .ribbon-channels svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* Right Side: 3 Output Branches */
+    .branches-list {
+      width: 320px;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 10;
+    }
+
+    .branch-item {
       background: #0E1017;
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 18px;
-      padding: 14px 18px;
+      padding: 13px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .branch-card:hover {
-      transform: translateX(6px);
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
+    .branch-item:hover, .branch-item.is-active {
+      transform: translateX(4px);
     }
 
-    .branch-card-info {
+    .branch-item-body {
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 2px;
     }
 
-    .branch-tag {
+    .branch-item-tag {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .branch-title {
+    .branch-item-title {
       font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       color: #FFFFFF;
       letter-spacing: -0.01em;
     }
 
-    .branch-sub {
+    .branch-item-sub {
       font-size: 11px;
-      color: #71717A;
-      font-family: 'Inter', sans-serif;
+      color: #A1A1AA;
+      line-height: 1.35;
     }
 
-    /* Branch Round Icon Badge (Right circle badge like in Google slide) */
-    .branch-circle-icon {
-      width: 44px;
-      height: 44px;
-      min-width: 44px;
+    /* Round Circle Badges */
+    .branch-badge-circle {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -357,146 +400,103 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
     }
 
-    .branch-circle-icon svg {
-      width: 22px;
-      height: 22px;
+    .branch-badge-circle svg {
+      width: 20px;
+      height: 20px;
     }
 
-    /* Input Port on Branch Cards */
-    .branch-port-in {
-      position: absolute;
-      left: -6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #0E1017;
-      border: 2px solid #FFFFFF;
-      z-index: 35;
+    /* Color Themes */
+    .branch-item.item-green .branch-item-tag { color: #10B981; }
+    .branch-item.item-green:hover, .branch-item.item-green.is-active {
+      border-color: #10B981;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+    }
+    .branch-item.item-green .branch-badge-circle {
+      background: linear-gradient(135deg, #10B981, #059669);
     }
 
-    /* Theme colors per branch */
-    /* Branch 1: About Us (Emerald Green) */
-    .branch-1 .branch-tag { color: #10B981; }
-    .branch-1:hover { border-color: #10B981; box-shadow: 0 0 25px rgba(16, 185, 129, 0.25); }
-    .branch-1 .branch-circle-icon { background: linear-gradient(135deg, #10B981, #059669); }
-    .branch-1 .branch-port-in { border-color: #10B981; box-shadow: 0 0 8px #10B981; }
-
-    /* Branch 2: AI Bootcamp (Sky / Electric Blue) */
-    .branch-2 .branch-tag { color: #38BDF8; }
-    .branch-2:hover { border-color: #38BDF8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.25); }
-    .branch-2 .branch-circle-icon { background: linear-gradient(135deg, #38BDF8, #0284C7); }
-    .branch-2 .branch-port-in { border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8; }
-
-    /* Branch 3: Proto-Ontologies (Amber / Gold) */
-    .branch-3 .branch-tag { color: #FB923C; }
-    .branch-3:hover { border-color: #FB923C; box-shadow: 0 0 25px rgba(251, 146, 60, 0.25); }
-    .branch-3 .branch-circle-icon { background: linear-gradient(135deg, #FB923C, #EA580C); }
-    .branch-3 .branch-port-in { border-color: #FB923C; box-shadow: 0 0 8px #FB923C; }
-
-    /* =========================================================
-       COLLAPSED VS EXPANDED VISIBILITY
-       ========================================================= */
-    .state-collapsed .branches-column {
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(-50%) translateX(60px);
+    .branch-item.item-blue .branch-item-tag { color: #38BDF8; }
+    .branch-item.item-blue:hover, .branch-item.item-blue.is-active {
+      border-color: #38BDF8;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    }
+    .branch-item.item-blue .branch-badge-circle {
+      background: linear-gradient(135deg, #38BDF8, #0284C7);
     }
 
-    .state-collapsed .pipeline-svg {
-      opacity: 0;
+    .branch-item.item-amber .branch-item-tag { color: #FB923C; }
+    .branch-item.item-amber:hover, .branch-item.item-amber.is-active {
+      border-color: #FB923C;
+      box-shadow: 0 0 25px rgba(251, 146, 60, 0.25);
+    }
+    .branch-item.item-amber .branch-badge-circle {
+      background: linear-gradient(135deg, #FB923C, #EA580C);
     }
 
-    /* Expand cue below Hub */
-    .hub-cue {
-      position: absolute;
-      bottom: -46px;
-      display: flex;
+    /* Mobile Connector Element */
+    .mobile-flow-indicator {
+      display: none;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 9999px;
-      background: rgba(167, 139, 250, 0.08);
-      border: 1px solid rgba(167, 139, 250, 0.25);
-      font-size: 11px;
-      font-family: 'JetBrains Mono', monospace;
-      color: #D4D4D8;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      animation: pulseCue 2s infinite ease-in-out;
-      pointer-events: none;
-      transition: opacity 0.3s;
+      gap: 6px;
+      margin: 4px 0;
     }
-
-    @keyframes pulseCue {
-      0%, 100% { opacity: 0.7; transform: scale(0.98); }
-      50% { opacity: 1; transform: scale(1.02); }
+    .mobile-flow-line {
+      width: 2px;
+      height: 24px;
+      background: linear-gradient(to bottom, #A78BFA, #38BDF8);
     }
-
-    .state-expanded .hub-cue {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    /* Expanded State Animation */
-    .state-expanded .branches-column {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(-50%) translateX(0);
-    }
-
-    .state-expanded .pipeline-svg {
-      opacity: 1;
+    .mobile-flow-chevron {
+      font-size: 14px;
+      color: #38BDF8;
+      line-height: 1;
     }
 
     /* =========================================================
-       BOTTOM VALUES BAR (3 Pillars from Google Slide)
+       BOTTOM VALUES BAR (Google Slide Style)
        ========================================================= */
     .bottom-pillars {
-      position: absolute;
-      bottom: 24px;
       display: flex;
       align-items: center;
-      gap: 18px;
-      z-index: 30;
+      gap: 14px;
       width: 100%;
       max-width: 960px;
       justify-content: center;
+      margin-top: 16px;
     }
 
-    .pillar-card {
+    .pillar-box {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 14px;
-      padding: 10px 18px;
+      border-radius: 12px;
+      padding: 9px 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       flex: 1;
     }
 
-    .pillar-icon-wrap {
-      width: 32px;
-      height: 32px;
+    .pillar-icon-circle {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.06);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #A78BFA;
     }
 
-    .pillar-icon-wrap svg {
-      width: 16px;
-      height: 16px;
+    .pillar-icon-circle svg {
+      width: 15px;
+      height: 15px;
     }
 
-    .pillar-text {
-      font-size: 12px;
+    .pillar-label {
+      font-size: 11.5px;
       font-weight: 600;
-      color: #D4D4D8;
-      font-family: 'Inter', sans-serif;
+      color: #E4E4E7;
+      white-space: nowrap;
     }
 
     .reset-btn {
@@ -510,6 +510,7 @@
       cursor: pointer;
       display: none;
       transition: all 0.2s;
+      white-space: nowrap;
     }
     .reset-btn:hover {
       color: #FFFFFF;
@@ -521,31 +522,30 @@
     }
 
     /* =========================================================
-       SPEC DRAWER
+       SPEC DRAWER & DESKTOP ADJUSTMENT
        ========================================================= */
-    .viewport.mode-detail .carousel-stage {
-      width: calc(100vw - 480px);
-      flex: none;
+    .viewport.mode-detail {
+      padding-right: 460px;
     }
 
-    .viewport.mode-detail .pipeline-container {
-      transform: scale(0.8);
-      transform-origin: center left;
+    .viewport.mode-detail .diagram-wrapper {
+      transform: scale(0.85);
+      transform-origin: center center;
     }
 
     .spec-drawer {
-      width: 480px;
+      width: 460px;
       height: 100vh;
       background: #09090B;
       border-left: 1px solid rgba(255, 255, 255, 0.1);
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
       transform: translateX(100%);
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
-      padding: 40px;
+      padding: 36px 32px;
       overflow-y: auto;
       z-index: 80;
     }
@@ -556,17 +556,26 @@
 
     .drawer-close {
       position: absolute;
-      top: 24px;
-      right: 24px;
-      background: transparent;
-      border: none;
-      color: #71717A;
-      font-size: 26px;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #A1A1AA;
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       line-height: 1;
-      transition: color 0.15s;
+      transition: all 0.15s;
     }
-    .drawer-close:hover { color: #FFFFFF; }
+    .drawer-close:hover { 
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.14);
+    }
 
     .spec-tag {
       font-family: 'JetBrains Mono', monospace;
@@ -580,7 +589,7 @@
 
     .spec-title {
       font-family: 'Satoshi', sans-serif;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 900;
       letter-spacing: -0.02em;
       color: #FFFFFF;
@@ -588,24 +597,24 @@
     }
 
     .spec-desc {
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.6;
       color: #A1A1AA;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .spec-table {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin-bottom: 32px;
+      margin-bottom: 26px;
     }
 
     .spec-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 13px;
+      font-size: 12.5px;
     }
 
     .spec-label { color: #71717A; }
@@ -622,7 +631,7 @@
       margin-left: 4px;
     }
 
-    .drawer-deep-dive { margin-bottom: 32px; }
+    .drawer-deep-dive { margin-bottom: 28px; }
 
     .deep-title {
       font-family: 'JetBrains Mono', monospace;
@@ -631,15 +640,15 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: #71717A;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
-    .deep-block { margin-bottom: 16px; }
+    .deep-block { margin-bottom: 14px; }
     .deep-block h4 {
       font-size: 13px;
       font-weight: 600;
       color: #FFFFFF;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .deep-block p {
       font-size: 12px;
@@ -648,20 +657,20 @@
     }
 
     .drawer-footer {
-      padding-top: 20px;
+      padding-top: 18px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin-top: auto;
     }
     .drawer-microcopy {
       font-size: 11px;
       line-height: 1.5;
-      color: #52525B;
-      margin-bottom: 16px;
+      color: #71717A;
+      margin-bottom: 14px;
     }
 
     .drawer-action-btn {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       border-radius: 9999px;
       background: #FFFFFF;
       color: #000000;
@@ -678,14 +687,65 @@
       transform: translateY(-1px);
     }
 
-    @media (max-width: 1024px) {
-      .spec-drawer { width: 100vw; }
-      .viewport.mode-detail .carousel-stage { width: 0; overflow: hidden; }
-      .pipeline-svg { display: none; }
-      .pipeline-container { flex-direction: column; height: auto; gap: 30px; }
-      .hub-column { position: relative; left: auto; top: auto; transform: none; }
-      .branches-column { position: relative; right: auto; top: auto; transform: none; }
-      .bottom-pillars { display: none; }
+    /* =========================================================
+       MOBILE RESPONSIVENESS (< 860px)
+       ========================================================= */
+    @media (max-width: 860px) {
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+      .viewport {
+        min-height: auto;
+      }
+      .viewport.mode-detail {
+        padding-right: 0;
+      }
+      .main-stage {
+        padding: 60px 16px 36px 16px;
+        min-height: auto;
+        justify-content: flex-start;
+      }
+      .stage-header {
+        margin-bottom: 20px;
+      }
+      .diagram-wrapper {
+        margin: 10px 0 20px 0;
+      }
+      .expanded-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .ribbon-channels {
+        display: none;
+      }
+      .mobile-flow-indicator {
+        display: flex;
+      }
+      .hub-box {
+        width: 100%;
+        max-width: 320px;
+      }
+      .branches-list {
+        width: 100%;
+        max-width: 320px;
+        gap: 12px;
+      }
+      .bottom-pillars {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 8px;
+        margin-top: 24px;
+      }
+      .pillar-box {
+        width: 100%;
+      }
+      .spec-drawer {
+        width: 100vw;
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
@@ -700,120 +760,136 @@
 
   <div id="viewport" class="viewport mode-overview state-collapsed">
 
-    <div class="carousel-stage">
+    <main class="main-stage">
       
-      <!-- Stage Header (Google Cloud Style) -->
+      <!-- Header -->
       <header class="stage-header">
         <div class="brand-eyebrow">
           <span class="brand-eyebrow-dot"></span>
           <span>Forward Deployed Engineering</span>
         </div>
         <h1 class="stage-title">HSN Labs: The Enterprise AI Execution Hub</h1>
-        <p class="stage-subtitle">Deterministic multi-agent architecture and ontology-grounded deployments</p>
+        <p class="stage-subtitle">Deterministic multi-agent architecture grounded in executable business ontologies</p>
       </header>
 
-      <!-- Pipeline Container -->
-      <div class="pipeline-container" id="pipelineContainer">
-        
-        <!-- SVG Dimensional Ribbon Layer -->
-        <svg class="pipeline-svg" id="pipelineSvg">
-          <defs>
-            <!-- Ribbon Gradients -->
-            <!-- Top Ribbon: Purple to Emerald Green -->
-            <linearGradient id="ribbonGradTop" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
-              <stop offset="60%" stop-color="#34D399" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#10B981" stop-opacity="0.95"/>
-            </linearGradient>
+      <!-- Diagram Wrapper -->
+      <div class="diagram-wrapper">
 
-            <!-- Middle Ribbon: Purple to Sky Blue -->
-            <linearGradient id="ribbonGradMid" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
-              <stop offset="50%" stop-color="#60A5FA" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.95"/>
-            </linearGradient>
+        <!-- 1. INITIAL VIEW (Single HSN Labs Node) -->
+        <div class="initial-view" id="initialView" onclick="expandArchitecture()">
+          <div class="initial-card">
+            <span class="hub-badge-pill">AI Processing Hub</span>
+            
+            <!-- Hexagonal Hub Icon -->
+            <svg class="initial-icon" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="120,20 205,70 205,170 120,220 35,170 35,70" fill="#151722" stroke="#A78BFA" stroke-width="8" stroke-linejoin="round"/>
+              <circle cx="120" cy="120" r="26" fill="#FFFFFF"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(60 120 120)"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(-60 120 120)"/>
+              <circle cx="120" cy="48" r="8" fill="#FFFFFF"/>
+              <circle cx="182" cy="84" r="8" fill="#FFFFFF"/>
+              <circle cx="182" cy="156" r="8" fill="#FFFFFF"/>
+              <circle cx="120" cy="192" r="8" fill="#FFFFFF"/>
+              <circle cx="58" cy="156" r="8" fill="#FFFFFF"/>
+              <circle cx="58" cy="84" r="8" fill="#FFFFFF"/>
+            </svg>
 
-            <!-- Bottom Ribbon: Purple to Warm Amber -->
-            <linearGradient id="ribbonGradBot" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
-              <stop offset="55%" stop-color="#FBBF24" stop-opacity="0.8"/>
-              <stop offset="100%" stop-color="#FB923C" stop-opacity="0.95"/>
-            </linearGradient>
-
-            <!-- Chevron Arrowhead Markers -->
-            <marker id="markerTop" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
-              <path d="M 1 2 L 9 6 L 1 10 z" fill="#10B981"/>
-            </marker>
-            <marker id="markerMid" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
-              <path d="M 1 2 L 9 6 L 1 10 z" fill="#38BDF8"/>
-            </marker>
-            <marker id="markerBot" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
-              <path d="M 1 2 L 9 6 L 1 10 z" fill="#FB923C"/>
-            </marker>
-          </defs>
-
-          <!-- Top Branch: To About Us -->
-          <path id="ribbon-band-1" class="ribbon-band" stroke="url(#ribbonGradTop)" stroke-width="28" stroke-linecap="round"/>
-          <path id="ribbon-wire-1" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerTop)"/>
-
-          <!-- Middle Branch: To AI Bootcamp -->
-          <path id="ribbon-band-2" class="ribbon-band" stroke="url(#ribbonGradMid)" stroke-width="28" stroke-linecap="round"/>
-          <path id="ribbon-wire-2" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerMid)"/>
-
-          <!-- Bottom Branch: To Proto-Ontologies -->
-          <path id="ribbon-band-3" class="ribbon-band" stroke="url(#ribbonGradBot)" stroke-width="28" stroke-linecap="round"/>
-          <path id="ribbon-wire-3" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerBot)"/>
-        </svg>
-
-        <div class="nodes-layout">
-          
-          <!-- CENTRAL HUB: HSN Labs -->
-          <div class="hub-column" id="hubCol">
-            <div class="hub-node-card" id="card-0" onclick="handleNodeClick(0)">
-              <div class="hub-port-out" id="hubPortOut"></div>
-              <span class="hub-pill-header">AI Processing Hub</span>
-              
-              <!-- Clean Atomic Hexagon Badge -->
-              <svg class="hub-badge-icon" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Outer Hexagonal Halo -->
-                <polygon points="120,20 205,70 205,170 120,220 35,170 35,70" fill="#151722" stroke="#A78BFA" stroke-width="8" stroke-linejoin="round"/>
-                <!-- Internal Neural Orbit Circles -->
-                <circle cx="120" cy="120" r="26" fill="#FFFFFF"/>
-                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none"/>
-                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(60 120 120)"/>
-                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(-60 120 120)"/>
-                <!-- Satellite Agent Nodes -->
-                <circle cx="120" cy="48" r="8" fill="#FFFFFF"/>
-                <circle cx="182" cy="84" r="8" fill="#FFFFFF"/>
-                <circle cx="182" cy="156" r="8" fill="#FFFFFF"/>
-                <circle cx="120" cy="192" r="8" fill="#FFFFFF"/>
-                <circle cx="58" cy="156" r="8" fill="#FFFFFF"/>
-                <circle cx="58" cy="84" r="8" fill="#FFFFFF"/>
-              </svg>
-
-              <div class="hub-title">HSN Labs</div>
-              <div class="hub-subtitle">Deterministic Core Engine</div>
-
-              <div class="hub-cue">
-                <span class="brand-eyebrow-dot"></span>
-                <span>Click to expand architecture</span>
-              </div>
-            </div>
+            <div class="initial-title">HSN Labs</div>
+            <div class="initial-sub">Deterministic Core Engine</div>
           </div>
 
-          <!-- BRANCH OUTPUTS (Right side 3 destination streams) -->
-          <div class="branches-column" id="branchesCol">
+          <div class="expand-cue-pill">
+            <span class="expand-cue-dot"></span>
+            <span>Click to explore architecture</span>
+          </div>
+        </div>
+
+        <!-- 2. EXPANDED DIAGRAM (Exact Pipeline Layout from Google Slide) -->
+        <div class="expanded-diagram" id="expandedDiagram">
+          
+          <!-- Hub (HSN Labs) -->
+          <div class="hub-box" id="card-0" onclick="handleCardClick(0)">
+            <span class="hub-box-tag">AI Processing Hub</span>
+            <svg class="hub-box-icon" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="120,20 205,70 205,170 120,220 35,170 35,70" fill="#151722" stroke="#A78BFA" stroke-width="8" stroke-linejoin="round"/>
+              <circle cx="120" cy="120" r="26" fill="#FFFFFF"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(60 120 120)"/>
+              <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(-60 120 120)"/>
+              <circle cx="120" cy="48" r="8" fill="#FFFFFF"/>
+              <circle cx="182" cy="84" r="8" fill="#FFFFFF"/>
+              <circle cx="182" cy="156" r="8" fill="#FFFFFF"/>
+              <circle cx="120" cy="192" r="8" fill="#FFFFFF"/>
+              <circle cx="58" cy="156" r="8" fill="#FFFFFF"/>
+              <circle cx="58" cy="84" r="8" fill="#FFFFFF"/>
+            </svg>
+            <div class="hub-box-title">HSN Labs</div>
+            <div class="hub-box-sub">Deterministic Core Engine</div>
+          </div>
+
+          <!-- Mobile Vertical Flow Indicator -->
+          <div class="mobile-flow-indicator">
+            <div class="mobile-flow-line"></div>
+            <div class="mobile-flow-chevron">↓</div>
+          </div>
+
+          <!-- Connecting Ribbons (Pure Responsive SVG) -->
+          <div class="ribbon-channels">
+            <svg viewBox="0 0 200 310" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="flowGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.85"/>
+                  <stop offset="60%" stop-color="#34D399" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#10B981" stop-opacity="0.95"/>
+                </linearGradient>
+                <linearGradient id="flowBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.85"/>
+                  <stop offset="50%" stop-color="#60A5FA" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.95"/>
+                </linearGradient>
+                <linearGradient id="flowAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.85"/>
+                  <stop offset="60%" stop-color="#FBBF24" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#FB923C" stop-opacity="0.95"/>
+                </linearGradient>
+
+                <marker id="arrowG" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 0 1 L 9 5 L 0 9 z" fill="#10B981"/>
+                </marker>
+                <marker id="arrowB" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8"/>
+                </marker>
+                <marker id="arrowA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                  <path d="M 0 1 L 9 5 L 0 9 z" fill="#FB923C"/>
+                </marker>
+              </defs>
+
+              <!-- Top Path to About Us -->
+              <path d="M 0,155 C 80,155 120,50 194,50" fill="none" stroke="url(#flowGreen)" stroke-width="22" stroke-linecap="round" opacity="0.85"/>
+              <path d="M 0,155 C 80,155 120,50 194,50" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowG)"/>
+
+              <!-- Middle Path to AI Bootcamp -->
+              <path d="M 0,155 C 70,155 120,155 194,155" fill="none" stroke="url(#flowBlue)" stroke-width="22" stroke-linecap="round" opacity="0.85"/>
+              <path d="M 0,155 C 70,155 120,155 194,155" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowB)"/>
+
+              <!-- Bottom Path to Proto-Ontologies -->
+              <path d="M 0,155 C 80,155 120,260 194,260" fill="none" stroke="url(#flowAmber)" stroke-width="22" stroke-linecap="round" opacity="0.85"/>
+              <path d="M 0,155 C 80,155 120,260 194,260" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrowA)"/>
+            </svg>
+          </div>
+
+          <!-- Branches (3 Destinations) -->
+          <div class="branches-list">
             
-            <!-- Branch 1: About Us (Green) -->
-            <div class="branch-card branch-1" id="card-1" onclick="handleNodeClick(1)">
-              <div class="branch-port-in" id="portIn1"></div>
-              <div class="branch-card-info">
-                <span class="branch-tag">Leadership & Squad</span>
-                <div class="branch-title">About Us</div>
-                <div class="branch-sub">Senior FDE Tech Leads (Ex-Deloitte/Meta)</div>
+            <!-- 1. About Us -->
+            <div class="branch-item item-green" id="card-1" onclick="handleCardClick(1)">
+              <div class="branch-item-body">
+                <span class="branch-item-tag">Leadership & Squad</span>
+                <div class="branch-item-title">About Us</div>
+                <div class="branch-item-sub">Senior FDEs (Ex-Deloitte/Meta)</div>
               </div>
-              <div class="branch-circle-icon">
-                <!-- People Squad Icon -->
+              <div class="branch-badge-circle">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                   <circle cx="9" cy="7" r="4"></circle>
@@ -823,32 +899,28 @@
               </div>
             </div>
 
-            <!-- Branch 2: AI Bootcamp (Blue) -->
-            <div class="branch-card branch-2" id="card-2" onclick="handleNodeClick(2)">
-              <div class="branch-port-in" id="portIn2"></div>
-              <div class="branch-card-info">
-                <span class="branch-tag">Rapid Deployment</span>
-                <div class="branch-title">AI Bootcamp</div>
-                <div class="branch-sub">5-Day On-Site Production Sprint</div>
+            <!-- 2. AI Bootcamp -->
+            <div class="branch-item item-blue" id="card-2" onclick="handleCardClick(2)">
+              <div class="branch-item-body">
+                <span class="branch-item-tag">Rapid Deployment</span>
+                <div class="branch-item-title">AI Bootcamp</div>
+                <div class="branch-item-sub">5-Day On-Site Production Sprint</div>
               </div>
-              <div class="branch-circle-icon">
-                <!-- Target / Zap Execution Icon -->
+              <div class="branch-badge-circle">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg>
               </div>
             </div>
 
-            <!-- Branch 3: Proto-Ontologies (Amber) -->
-            <div class="branch-card branch-3" id="card-3" onclick="handleNodeClick(3)">
-              <div class="branch-port-in" id="portIn3"></div>
-              <div class="branch-card-info">
-                <span class="branch-tag">Open Knowledge Hub</span>
-                <div class="branch-title">Proto-Ontologies</div>
-                <div class="branch-sub">Knowledge Graph Seed Schemas (MCP)</div>
+            <!-- 3. Proto-Ontologies -->
+            <div class="branch-item item-amber" id="card-3" onclick="handleCardClick(3)">
+              <div class="branch-item-body">
+                <span class="branch-item-tag">Open Knowledge Hub</span>
+                <div class="branch-item-title">Proto-Ontologies</div>
+                <div class="branch-item-sub">Knowledge Graph Schemas (MCP)</div>
               </div>
-              <div class="branch-circle-icon">
-                <!-- Knowledge Graph Network Icon -->
+              <div class="branch-badge-circle">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="18" cy="5" r="3"></circle>
                   <circle cx="6" cy="12" r="3"></circle>
@@ -865,30 +937,30 @@
 
       </div>
 
-      <!-- Bottom Benefit Pillars (Exact Google Cloud Slide format) -->
+      <!-- Bottom Pillars (Exact Google Slide format) -->
       <footer class="bottom-pillars">
-        <div class="pillar-card">
-          <div class="pillar-icon-wrap">
+        <div class="pillar-box">
+          <div class="pillar-icon-circle" style="color: #A78BFA;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </div>
-          <span class="pillar-text">Deterministic & Invariant</span>
+          <span class="pillar-label">Deterministic & Invariant</span>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon-wrap" style="color: #10B981;">
+        <div class="pillar-box">
+          <div class="pillar-icon-circle" style="color: #10B981;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
-          <span class="pillar-text">5-Day Production Validation</span>
+          <span class="pillar-label">5-Day Production Validation</span>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon-wrap" style="color: #38BDF8;">
+        <div class="pillar-box">
+          <div class="pillar-icon-circle" style="color: #38BDF8;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -896,13 +968,13 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
-          <span class="pillar-text">Senior FDEs Embedded in VPC</span>
+          <span class="pillar-label">Senior FDEs Embedded in VPC</span>
         </div>
 
-        <button class="reset-btn" onclick="resetPipeline()">Reset View</button>
+        <button class="reset-btn" onclick="resetArchitecture()">Reset View</button>
       </footer>
 
-    </div>
+    </main>
 
     <!-- Scrollable Detail Drawer -->
     <aside class="spec-drawer" id="specDrawer">
@@ -919,7 +991,6 @@
     let soundActive = true;
     let audioContext = null;
     let currentIdx = null;
-    let isExpanded = false;
 
     const catalog = [
       {
@@ -927,7 +998,7 @@
         tag: "Core Engine",
         name: "HSN Labs",
         description: "Boutique de Forward Deployed Engineering (FDE). We engineer custom, deterministic AI systems grounded in your real business ontologies for mission-critical operations with massive transaction volumes.",
-        surfaces: ["FDE Boutique", "Client VPC", "Deterministic Systems"],
+        surfaces: ["FDE Boutique", "Client VPC", "Deterministic Core"],
         industry: "Mission-Critical AI",
         since: "2026",
         ecosystem: "Databricks · Neo4j · AWS · Claude",
@@ -949,7 +1020,7 @@
         ],
         microcopy: "Selective entry via our 5-Day AI Bootcamp deployed on your own infrastructure.",
         actionLabel: "Explore AI Bootcamp",
-        actionFn: () => handleNodeClick(2)
+        actionFn: () => handleCardClick(2)
       },
       {
         id: 1,
@@ -1093,86 +1164,22 @@
     });
 
     /* =========================================================
-       DIMENSIONAL FLOW RIBBONS UPDATE
+       EXPAND ARCHITECTURE FLOW
        ========================================================= */
-    function updateRibbons() {
-      if (!isExpanded) return;
-      const containerRect = document.getElementById('pipelineContainer').getBoundingClientRect();
-      
-      const getCenter = (elId) => {
-        const el = document.getElementById(elId);
-        if (!el) return { x: 0, y: 0 };
-        const r = el.getBoundingClientRect();
-        return {
-          x: (r.left + r.width / 2) - containerRect.left,
-          y: (r.top + r.height / 2) - containerRect.top
-        };
-      };
-
-      const hubPort = getCenter('hubPortOut');
-      const p1 = getCenter('portIn1');
-      const p2 = getCenter('portIn2');
-      const p3 = getCenter('portIn3');
-
-      const drawRibbon = (bandId, wireId, start, end) => {
-        const band = document.getElementById(bandId);
-        const wire = document.getElementById(wireId);
-        if (!band || !wire || start.x === 0 || end.x === 0) return;
-
-        const deltaX = Math.max((end.x - start.x) * 0.5, 40);
-        // Fluid S-Curve pipeline path
-        const d = `M ${start.x} ${start.y} C ${start.x + deltaX} ${start.y}, ${end.x - deltaX} ${end.y}, ${end.x - 6} ${end.y}`;
-
-        band.setAttribute('d', d);
-        wire.setAttribute('d', d);
-      };
-
-      drawRibbon('ribbon-band-1', 'ribbon-wire-1', hubPort, p1);
-      drawRibbon('ribbon-band-2', 'ribbon-wire-2', hubPort, p2);
-      drawRibbon('ribbon-band-3', 'ribbon-wire-3', hubPort, p3);
-    }
-
-    window.addEventListener('resize', () => {
-      requestAnimationFrame(updateRibbons);
-    });
-
-    /* =========================================================
-       NODE CLICK & PIPELINE EXPANSION
-       ========================================================= */
-    function handleNodeClick(index) {
-      if (index === 0 && !isExpanded) {
-        expandPipeline();
-        return;
-      }
-
-      playBubblePop(420 + (index * 90), 1450 + (index * 120), 0.08);
-
-      if (!isExpanded) {
-        expandPipeline();
-      }
-      openDrawer(index);
-    }
-
-    function expandPipeline() {
-      isExpanded = true;
+    function expandArchitecture() {
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('state-collapsed');
       viewport.classList.add('state-expanded');
 
-      // Sequential sound pops
+      // Sequential pop sound
       playBubblePop(360, 1350, 0.075);
-      setTimeout(() => playBubblePop(450, 1520, 0.075), 100);
-      setTimeout(() => playBubblePop(540, 1700, 0.075), 200);
-      setTimeout(() => playBubblePop(640, 1880, 0.08), 300);
-
-      const steps = [60, 150, 280, 450, 650];
-      steps.forEach(delay => setTimeout(updateRibbons, delay));
+      setTimeout(() => playBubblePop(450, 1520, 0.075), 90);
+      setTimeout(() => playBubblePop(540, 1700, 0.075), 180);
+      setTimeout(() => playBubblePop(640, 1880, 0.08), 270);
     }
 
-    function resetPipeline() {
-      isExpanded = false;
+    function resetArchitecture() {
       closeDrawer();
-
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('state-expanded');
       viewport.classList.add('state-collapsed');
@@ -1180,18 +1187,22 @@
       playBubblePop(300, 750, 0.09);
     }
 
-    function openDrawer(index) {
+    /* =========================================================
+       HANDLE CARD CLICK & OPEN DRAWER
+       ========================================================= */
+    function handleCardClick(index) {
       currentIdx = index;
+      playBubblePop(420 + (index * 90), 1450 + (index * 120), 0.08);
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('mode-overview');
       viewport.classList.add('mode-detail');
 
       for (let i = 0; i < 4; i++) {
-        const card = document.getElementById(`card-${i}`);
-        if (card) {
-          card.classList.remove('is-active');
-          if (i === index) card.classList.add('is-active');
+        const el = document.getElementById(`card-${i}`);
+        if (el) {
+          el.classList.remove('is-active');
+          if (i === index) el.classList.add('is-active');
         }
       }
 
@@ -1245,8 +1256,6 @@
       `;
 
       document.getElementById('drawerActionBtn').onclick = item.actionFn;
-
-      setTimeout(updateRibbons, 300);
     }
 
     function closeDrawer() {
@@ -1258,19 +1267,17 @@
       viewport.classList.add('mode-overview');
 
       for (let i = 0; i < 4; i++) {
-        const card = document.getElementById(`card-${i}`);
-        if (card) card.classList.remove('is-active');
+        const el = document.getElementById(`card-${i}`);
+        if (el) el.classList.remove('is-active');
       }
-
-      setTimeout(updateRibbons, 300);
     }
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         if (currentIdx !== null) {
           closeDrawer();
-        } else if (isExpanded) {
-          resetPipeline();
+        } else {
+          resetArchitecture();
         }
       }
     });
