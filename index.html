@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HSN Labs</title>
-  <meta name="description" content="HSN Labs — Forward Deployed Engineering, Proto-Ontologies, AI Bootcamp, and Careers in Mission-Critical Systems.">
+  <title>HSN Labs — Forward Deployed Engineering</title>
+  <meta name="description" content="HSN Labs — Forward Deployed Engineering, AI Bootcamp, Proto-Ontologies, and Mission-Critical AI Systems.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'><rect width='32' height='32' rx='8' fill='%23000'/><circle cx='16' cy='16' r='8' fill='%23FFFFFF'/></svg>">
 
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet">
@@ -103,26 +103,66 @@
     /* Asynchronous Floating Physics */
     @keyframes floatAtom {
       0% { transform: translateY(-6px) rotate(-2deg); }
-      50% { transform: translateY(-20px) rotate(-0.5deg); }
+      50% { transform: translateY(-16px) rotate(-0.5deg); }
       100% { transform: translateY(-6px) rotate(-2deg); }
     }
 
     @keyframes floatChain {
       0% { transform: translateY(2px) rotate(1deg); }
-      50% { transform: translateY(14px) rotate(2.5deg); }
+      50% { transform: translateY(12px) rotate(2.5deg); }
       100% { transform: translateY(2px) rotate(1deg); }
     }
 
     @keyframes floatHourglass {
-      0% { transform: translateY(14px) rotate(-1.5deg); }
+      0% { transform: translateY(12px) rotate(-1.5deg); }
       50% { transform: translateY(-2px) rotate(0.5deg); }
-      100% { transform: translateY(14px) rotate(-1.5deg); }
+      100% { transform: translateY(12px) rotate(-1.5deg); }
     }
 
     @keyframes floatPeople {
       0% { transform: translateY(4px) rotate(1.5deg); }
-      50% { transform: translateY(-12px) rotate(3deg); }
+      50% { transform: translateY(-10px) rotate(3deg); }
       100% { transform: translateY(4px) rotate(1.5deg); }
+    }
+
+    /* Graph Container & Connecting Layer */
+    .graph-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 540px;
+    }
+
+    /* SVG Connecting Lines Canvas */
+    .graph-svg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10;
+      overflow: visible;
+    }
+
+    .graph-edge {
+      stroke: rgba(255, 255, 255, 0.2);
+      stroke-width: 2.5;
+      stroke-dasharray: 6 6;
+      fill: none;
+      transition: stroke 0.3s, opacity 0.5s;
+    }
+
+    .graph-edge.edge-pulse {
+      animation: dashFlow 2s linear infinite;
+      stroke: rgba(167, 139, 250, 0.5);
+    }
+
+    @keyframes dashFlow {
+      from { stroke-dashoffset: 24; }
+      to { stroke-dashoffset: 0; }
     }
 
     .characters-track {
@@ -130,8 +170,8 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      height: 520px;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 20;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .char-node {
@@ -140,360 +180,251 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
-                  filter 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Mobile 2x2 Grid Layout */
-    @media (max-width: 768px) {
-      .characters-track {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 300px;
-        height: 300px;
-        gap: 0px;
-        justify-items: center;
-        align-items: center;
-      }
-      .viewport.mode-overview .char-node {
-        margin: 0 !important;
-        transform: scale(0.68) !important;
-      }
-      .badge-svg { width: 145px; height: 145px; }
-
-      .viewport.mode-detail {
-        flex-direction: column;
-      }
-      .viewport.mode-detail .carousel-stage {
-        height: 40%;
-      }
-      .viewport.mode-detail .spec-drawer {
-        width: 100vw !important;
-        height: 60% !important;
-        padding: 32px 24px 24px 24px !important;
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .viewport.mode-detail .char-node.is-active {
-        transform: scale(0.85) translateY(0) !important;
-      }
+    /* Badge SVG Sizing */
+    .badge-svg {
+      width: 210px;
+      height: 210px;
+      display: block;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Desktop Cluster: Cohesive Die-Cut Vinyl Sticker Pillows */
-    @media (min-width: 769px) {
-      .viewport.mode-overview .char-node {
-        opacity: 1;
-      }
-      .viewport.mode-overview #char-0 {
-        z-index: 20;
-        margin-right: -72px;
-        animation: floatAtom 5.2s ease-in-out infinite;
-      }
-      .viewport.mode-overview #char-0:hover {
-        animation-play-state: paused;
-        transform: translateY(-24px) rotate(-1deg) scale(1.06) !important;
-        z-index: 50;
-        filter: drop-shadow(0 22px 35px rgba(167, 139, 250, 0.45));
-      }
-
-      .viewport.mode-overview #char-1 {
-        z-index: 10;
-        margin-right: -68px;
-        animation: floatChain 6.4s ease-in-out infinite 0.8s;
-      }
-      .viewport.mode-overview #char-1:hover {
-        animation-play-state: paused;
-        transform: translateY(-14px) rotate(1deg) scale(1.06) !important;
-        z-index: 50;
-        filter: drop-shadow(0 22px 35px rgba(251, 146, 60, 0.45));
-      }
-
-      .viewport.mode-overview #char-2 {
-        z-index: 15;
-        margin-right: -64px;
-        animation: floatHourglass 5.8s ease-in-out infinite 1.6s;
-      }
-      .viewport.mode-overview #char-2:hover {
-        animation-play-state: paused;
-        transform: translateY(-4px) rotate(-1deg) scale(1.06) !important;
-        z-index: 50;
-        filter: drop-shadow(0 22px 35px rgba(56, 189, 248, 0.45));
-      }
-
-      .viewport.mode-overview #char-3 {
-        z-index: 5;
-        animation: floatPeople 6.8s ease-in-out infinite 2.4s;
-      }
-      .viewport.mode-overview #char-3:hover {
-        animation-play-state: paused;
-        transform: translateY(-12px) rotate(2deg) scale(1.06) !important;
-        z-index: 50;
-        filter: drop-shadow(0 22px 35px rgba(52, 211, 153, 0.45));
-      }
+    .char-node:hover .badge-svg {
+      transform: scale(1.08) translateY(-4px);
+      filter: drop-shadow(0 26px 50px rgba(0, 0, 0, 0.95));
     }
 
-    /* Detail Mode (Drawer Open) */
-    .viewport.mode-detail .char-node {
+    #char-0 .badge-svg { animation: floatAtom 6s ease-in-out infinite; }
+    #char-1 .badge-svg { animation: floatPeople 6.5s ease-in-out infinite; }
+    #char-2 .badge-svg { animation: floatHourglass 7s ease-in-out infinite; }
+    #char-3 .badge-svg { animation: floatChain 6.2s ease-in-out infinite; }
+
+    /* COLLAPSED STATE (INITIAL): Only HSN Labs visible in center */
+    .state-collapsed .char-node.child-node {
+      opacity: 0;
+      pointer-events: none;
+      width: 0;
+      margin: 0;
+      transform: scale(0.1) translateX(-60px);
+      overflow: hidden;
+    }
+
+    .state-collapsed .graph-svg-layer {
+      opacity: 0;
+    }
+
+    .state-collapsed #char-0 {
+      transform: scale(1.15);
+    }
+
+    /* Pulsing discovery cue around HSN Labs when collapsed */
+    .expand-cue {
       position: absolute;
-      transform: scale(0.42) !important;
-      opacity: 0.25;
+      bottom: -60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .expand-cue-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #A1A1AA;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      animation: pulseGlow 2.5s ease-in-out infinite;
+    }
+
+    .expand-cue-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #A78BFA;
+      box-shadow: 0 0 10px #A78BFA;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; transform: scale(0.98); }
+      50% { opacity: 1; transform: scale(1.02); }
+    }
+
+    .state-expanded .expand-cue {
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+    }
+
+    /* EXPANDED STATE (CHAIN GRAPH): All 4 nodes displayed in linked sequence */
+    .state-expanded .characters-track {
+      gap: 36px;
+    }
+
+    .state-expanded .char-node.child-node {
+      opacity: 1;
       pointer-events: auto;
-      filter: blur(1px);
-      margin: 0 !important;
+      width: 210px;
+      margin: 0;
+      transform: scale(1) translateX(0);
     }
-    .viewport.mode-detail .char-node:hover {
-      opacity: 0.6;
-      filter: blur(0px);
+
+    .state-expanded .graph-svg-layer {
+      opacity: 1;
     }
+
+    .state-expanded #char-0 {
+      transform: scale(1);
+    }
+
+    /* Mode Detail (Drawer open on right) */
+    .viewport.mode-detail .carousel-stage {
+      width: calc(100vw - 480px);
+      flex: none;
+    }
+
+    .viewport.mode-detail .characters-track {
+      transform: scale(0.85);
+      gap: 20px;
+    }
+
+    .viewport.mode-detail .char-node {
+      opacity: 0.35;
+      filter: grayscale(0.5);
+    }
+
     .viewport.mode-detail .char-node.is-active {
-      position: relative;
-      transform: scale(1.22) translateY(0) !important;
       opacity: 1;
       filter: none;
-      z-index: 40;
-    }
-    .viewport.mode-detail .char-node.is-prev {
-      left: -180px;
-      opacity: 0.28;
-    }
-    .viewport.mode-detail .char-node.is-next {
-      right: -180px;
-      opacity: 0.28;
+      transform: scale(1.1);
     }
 
-    /* Cohesive Badge Sizing & Shadow */
-    .badge-svg {
-      width: 220px;
-      height: 220px;
-      display: block;
-      filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.9));
-    }
-
-    /* Arrow Pill Navigator */
-    .carousel-arrows {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #141416;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 9999px;
-      padding: 6px 14px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      z-index: 60;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .viewport.mode-detail .carousel-arrows {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateX(-50%) translateY(0);
-    }
-    .arrow-btn {
-      background: transparent;
-      border: none;
-      color: #9CA3AF;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 2px;
-      transition: color 0.15s;
-    }
-    .arrow-btn:hover {
-      color: #FFFFFF;
-    }
-
-    /* Bottom Brand Bar */
-    .bottom-brand {
-      position: absolute;
-      bottom: 34px;
-      left: 0;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      z-index: 30;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .viewport.mode-detail .bottom-brand {
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(15px);
-    }
-
-    .brand-logo-wrap {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #FFFFFF;
-    }
-    .logo-text {
-      font-family: 'Satoshi', 'Inter', sans-serif;
-      font-weight: 900;
-      font-size: 26px;
-      letter-spacing: 0.28em;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      line-height: 1;
-    }
-
-    .sub-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: #71717A;
-      letter-spacing: -0.01em;
-    }
-    .sub-links a {
-      color: #8E8E93;
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.15s;
-    }
-    .sub-links a:hover {
-      color: #FFFFFF;
-    }
-    .dot {
-      color: #52525B;
-      font-size: 12px;
-    }
-
-    /* RIGHT DRAWER */
+    /* Detail Drawer Styles */
     .spec-drawer {
-      width: 0px;
-      height: 100%;
-      background: #08090C;
-      border-left: 1px solid rgba(255, 255, 255, 0.08);
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: 0;
-      opacity: 0;
-      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      width: 480px;
+      height: 100vh;
+      background: #09090B;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(100%);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
-      position: relative;
-    }
-    .viewport.mode-detail .spec-drawer {
-      width: 480px;
-      padding: 56px 44px 44px 44px;
-      opacity: 1;
-    }
-    @media (min-width: 1400px) {
-      .viewport.mode-detail .spec-drawer {
-        width: 540px;
-        padding: 64px 52px 48px 52px;
-      }
+      padding: 40px;
+      overflow-y: auto;
+      z-index: 80;
     }
 
-    .spec-drawer::-webkit-scrollbar {
-      width: 5px;
-    }
-    .spec-drawer::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .spec-drawer::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.12);
-      border-radius: 4px;
+    .viewport.mode-detail .spec-drawer {
+      transform: translateX(0);
     }
 
     .drawer-close {
-      position: sticky;
-      top: 0;
-      align-self: flex-end;
-      background: rgba(8, 9, 12, 0.8);
-      backdrop-filter: blur(8px);
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: transparent;
       border: none;
       color: #71717A;
-      font-size: 24px;
+      font-size: 26px;
       cursor: pointer;
       line-height: 1;
-      padding: 4px 8px;
-      border-radius: 50%;
       transition: color 0.15s;
-      z-index: 20;
-      margin-top: -24px;
-      margin-right: -16px;
     }
     .drawer-close:hover {
       color: #FFFFFF;
     }
 
+    .spec-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      margin-bottom: 8px;
+    }
+
     .spec-title {
-      font-family: 'Inter', sans-serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #FFFFFF;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
       letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 18px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
     }
 
     .spec-desc {
       font-size: 14px;
-      line-height: 1.68;
+      line-height: 1.6;
       color: #A1A1AA;
-      font-weight: 400;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .spec-table {
-      width: 100%;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin-bottom: 32px;
     }
+
     .spec-row {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 13px 0;
+      align-items: center;
+      padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       font-size: 13px;
     }
+
     .spec-label {
       color: #71717A;
     }
+
     .spec-val {
-      color: #F4F4F5;
+      color: #FFFFFF;
       font-weight: 500;
     }
 
     .badge-pill {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 2px 10px;
+      display: inline-block;
+      padding: 2px 8px;
       border-radius: 9999px;
       background: rgba(255, 255, 255, 0.08);
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
       color: #E4E4E7;
+      margin-left: 4px;
     }
 
     .drawer-deep-dive {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 24px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
+
     .deep-title {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-mono: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
       color: #71717A;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
+
     .deep-block {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .deep-block h4 {
       font-size: 13px;
@@ -537,6 +468,81 @@
       background: #E4E4E7;
       transform: translateY(-1px);
     }
+
+    /* Bottom Brand Bar */
+    .bottom-brand {
+      position: absolute;
+      bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 50;
+    }
+
+    .brand-logo-wrap {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .logo-text {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+    .logo-text:hover { opacity: 1; }
+
+    .sub-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: #71717A;
+    }
+    .sub-links a {
+      color: #71717A;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .sub-links a:hover, .sub-links a.active {
+      color: #FFFFFF;
+    }
+    .sub-links .dot {
+      color: #3F3F46;
+      font-size: 8px;
+    }
+
+    /* Reset Graph Action */
+    .reset-graph-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #A1A1AA;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: none;
+      transition: all 0.2s;
+    }
+    .reset-graph-btn:hover {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .state-expanded .reset-graph-btn {
+      display: inline-block;
+    }
+
+    @media (max-width: 1024px) {
+      .spec-drawer { width: 100vw; }
+      .viewport.mode-detail .carousel-stage { width: 0; overflow: hidden; }
+      .state-expanded .characters-track { flex-wrap: wrap; height: auto; gap: 16px; }
+      .graph-svg-layer { display: none; }
+    }
   </style>
 </head>
 
@@ -548,138 +554,129 @@
     </svg>
   </button>
 
-  <div id="viewport" class="viewport mode-overview">
+  <div id="viewport" class="viewport mode-overview state-collapsed">
 
     <div class="carousel-stage">
       
-      <div class="characters-track" id="charactersTrack">
+      <div class="graph-container" id="graphContainer">
+        
+        <!-- SVG Link Graph Canvas: connects HSN Labs -> About Us -> AI Bootcamp -> Proto-Ontologies -->
+        <svg class="graph-svg-layer" id="graphSvg" viewBox="0 0 1200 540">
+          <defs>
+            <linearGradient id="edgeGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#10B981" stop-opacity="0.8"/>
+            </linearGradient>
+            <linearGradient id="edgeGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.8"/>
+            </linearGradient>
+            <linearGradient id="edgeGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#FB923C" stop-opacity="0.8"/>
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+          </defs>
 
-        <!-- 0. HSN LABS: Atomic Orbital Die-Cut Sticker (Purple / Lavender) -->
-        <div class="char-node" id="char-0" onclick="selectCharacter(0)">
-          <div class="floating-tooltip">HSN Labs</div>
-          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Die-Cut Vinyl Contour (Thick White Base + Lavender Outer Rim) -->
-            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
-            <!-- Solid Deep Dark Bed -->
-            <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
+          <!-- Edge 0 -> 1: HSN Labs to About Us -->
+          <line id="edge-0-1" class="graph-edge edge-pulse" stroke="url(#edgeGrad01)" filter="url(#glow)"/>
+          <!-- Edge 1 -> 2: About Us to AI Bootcamp -->
+          <line id="edge-1-2" class="graph-edge edge-pulse" stroke="url(#edgeGrad12)" filter="url(#glow)"/>
+          <!-- Edge 2 -> 3: AI Bootcamp to Proto-Ontologies -->
+          <line id="edge-2-3" class="graph-edge edge-pulse" stroke="url(#edgeGrad23)" filter="url(#glow)"/>
+        </svg>
 
-            <!-- Atomic Orbital Core & Ellipses (Pure Clean Geometry) -->
-            <!-- Nucleus -->
-            <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
-            
-            <!-- Orbital Ring 1 (Horizontal) -->
-            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
-            
-            <!-- Orbital Ring 2 (Tilted +60deg) -->
-            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
-            
-            <!-- Orbital Ring 3 (Tilted -60deg) -->
-            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
+        <div class="characters-track" id="charactersTrack">
 
-            <!-- Satellite Electron Nodes on Orbits -->
-            <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
-            <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
-            <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
-          </svg>
+          <!-- 0. HSN LABS (Root Node: Atomic Orbital Sticker - Purple / Lavender) -->
+          <div class="char-node root-node" id="char-0" onclick="handleNodeClick(0)">
+            <div class="floating-tooltip">HSN Labs</div>
+            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
+              <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
+              <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
+              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
+              <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
+              <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
+              <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
+              <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
+            </svg>
+            <div class="expand-cue">
+              <div class="expand-cue-pill">
+                <span class="expand-cue-dot"></span>
+                <span>Click to expand graph</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1. ABOUT US (Child Node 1: Connected Squad - Emerald Green) -->
+          <div class="char-node child-node" id="char-1" onclick="handleNodeClick(1)">
+            <div class="floating-tooltip">About Us</div>
+            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
+              <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
+              <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
+              <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+              <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
+              <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+              <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
+              <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
+              <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
+            </svg>
+          </div>
+
+          <!-- 2. AI BOOTCAMP (Child Node 2: Precision Hourglass - Sky Blue) -->
+          <div class="char-node child-node" id="char-2" onclick="handleNodeClick(2)">
+            <div class="floating-tooltip">AI Bootcamp</div>
+            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
+              <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
+              <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
+              <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
+              <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
+                    stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
+              <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
+              <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+              <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+
+          <!-- 3. PROTO-ONTOLOGIES (Child Node 3: Interlocked Chain - Orange / Amber) -->
+          <div class="char-node child-node" id="char-3" onclick="handleNodeClick(3)">
+            <div class="floating-tooltip">Proto-Ontologies</div>
+            <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
+              <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
+              <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
+                <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
+                <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
+              </g>
+            </svg>
+          </div>
+
         </div>
 
-        <!-- 1. PROTO-ONTOLOGIES: Interlinked Chain Link Sticker (Orange / Amber) -->
-        <div class="char-node" id="char-1" onclick="selectCharacter(1)">
-          <div class="floating-tooltip">Proto-Ontologies</div>
-          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Die-Cut Vinyl Contour (Thick White Base + Orange Outer Rim) -->
-            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
-            <!-- Solid Deep Dark Bed -->
-            <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
-
-            <!-- Interlocked Chain Links (Exact Reference match, Solid Pure White) -->
-            <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
-              <!-- Top Chain Loop -->
-              <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
-              <!-- Bottom Chain Loop (Interlinked) -->
-              <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
-              <!-- Diagonal Intersecting Lock Bar -->
-              <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
-            </g>
-          </svg>
-        </div>
-
-        <!-- 2. AI BOOTCAMP: Precision Hourglass Sticker (Sky / Electric Blue) -->
-        <div class="char-node" id="char-2" onclick="selectCharacter(2)">
-          <div class="floating-tooltip">AI Bootcamp</div>
-          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Die-Cut Vinyl Contour (Thick White Base + Blue Outer Rim) -->
-            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
-            <!-- Solid Deep Dark Bed -->
-            <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
-
-            <!-- Minimalist Bold Hourglass Silhouette in Pure White -->
-            <!-- Top Cap Bar -->
-            <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
-            <!-- Bottom Cap Bar -->
-            <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
-
-            <!-- Flowing Hourglass Outline -->
-            <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
-                  stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
-
-            <!-- Upper Chamber Level -->
-            <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
-            <!-- Sand Stream -->
-            <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-            <!-- Lower Chamber Level -->
-            <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
-          </svg>
-        </div>
-
-        <!-- 3. CAREERS: Connected Team / People Sticker (Emerald Green) -->
-        <div class="char-node" id="char-3" onclick="selectCharacter(3)">
-          <div class="floating-tooltip">Careers</div>
-          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Die-Cut Vinyl Contour (Thick White Base + Emerald Outer Rim) -->
-            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
-            <!-- Solid Deep Dark Bed -->
-            <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
-
-            <!-- 3 Connected People Squad in Pure White -->
-            <!-- Left Person -->
-            <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
-            <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-
-            <!-- Right Person -->
-            <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
-            <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-
-            <!-- Center Lead FDE (Elevated, Focal Point) -->
-            <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
-            <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
-
-            <!-- Collaborative Bridge Link -->
-            <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
-          </svg>
-        </div>
-
-      </div>
-
-      <!-- Arrow Capsule Navigator -->
-      <div class="carousel-arrows">
-        <button class="arrow-btn" onclick="navigate(-1)" aria-label="Previous">&lt;</button>
-        <button class="arrow-btn" onclick="navigate(1)" aria-label="Next">&gt;</button>
       </div>
 
       <!-- Bottom Brand Bar -->
       <div class="bottom-brand">
-        <a href="javascript:void(0)" onclick="resetToOverview()" class="brand-logo-wrap">
+        <a href="javascript:void(0)" onclick="resetGraph()" class="brand-logo-wrap">
           <span class="logo-text">HSN LABS</span>
         </a>
-        <div class="sub-links">
-          <a href="javascript:void(0)" onclick="selectCharacter(0)">HSN Labs</a>
+        <div class="sub-links" id="subLinks">
+          <a href="javascript:void(0)" onclick="handleNodeClick(0)">HSN Labs</a>
           <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="selectCharacter(1)">Proto-Ontologies</a>
+          <a href="javascript:void(0)" onclick="handleNodeClick(1)">About Us</a>
           <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="selectCharacter(2)">Bootcamp</a>
+          <a href="javascript:void(0)" onclick="handleNodeClick(2)">AI Bootcamp</a>
           <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="selectCharacter(3)">Careers</a>
+          <a href="javascript:void(0)" onclick="handleNodeClick(3)">Proto-Ontologies</a>
+          <button class="reset-graph-btn" onclick="resetGraph()">Reset Graph</button>
         </div>
       </div>
 
@@ -687,7 +684,7 @@
 
     <!-- Scrollable Detail Drawer -->
     <aside class="spec-drawer" id="specDrawer">
-      <button class="drawer-close" onclick="resetToOverview()" aria-label="Close">&times;</button>
+      <button class="drawer-close" onclick="closeDrawer()" aria-label="Close">&times;</button>
       
       <div id="drawerBody"></div>
       <div id="drawerDeepDive" class="drawer-deep-dive"></div>
@@ -700,54 +697,115 @@
     let soundActive = true;
     let audioContext = null;
     let currentIdx = null;
+    let isGraphExpanded = false;
 
     const catalog = [
       {
         id: 0,
+        tag: "Core Engineering",
         name: "HSN Labs",
-        description: "Boutique de Forward Deployed Engineering (FDE). We engineer custom deterministic AI systems grounded in your real business ontology for mission-critical operations with massive data volumes.",
-        surfaces: ["Boutique FDE", "Enterprise VPC"],
-        industry: "Enterprise AI",
+        description: "Boutique de Forward Deployed Engineering (FDE). We build custom deterministic AI agent systems grounded in real business ontologies for mission-critical operations with massive data volumes.",
+        surfaces: ["FDE Boutique", "Client VPC", "Deterministic Core"],
+        industry: "Mission-Critical AI",
         since: "2026",
         ecosystem: "Databricks · Neo4j · AWS · Claude",
         status: "Active",
-        deepDiveTitle: "The FDE Operational Doctrine",
+        deepDiveTitle: "The FDE Operational Model",
         deepDiveBlocks: [
           {
-            title: "The Invariant Law of Compounding Drift",
-            text: "Generalist LLMs decay exponentially across multi-step agent graphs: a 95% single-turn accuracy collapses to 59% after just 10 autonomous tool transitions. Production enterprise agents fail not from model weakness, but because probabilistic models lack an executable ontological boundary."
-          },
-          {
-            title: "Anti-Consultancy Tenancy",
-            text: "Traditional consultancies deploy junior trainees to bill hours while producing slide decks. HSN Labs embeds senior Forward Deployed Engineers inside your private perimeter, operating on fixed 2-week delivery increments with verifiable acceptance criteria."
-          },
-          {
             title: "Deterministic Mission-Critical Core",
-            text: "We specialize where relational SQL and standard RAG fail: Bacen MED 2.0 (Resolução BCB nº 493/2025) 5-layer mule tracing and healthcare TISS/TUSS glosa leakage prevention."
+            text: "We specialize where relational SQL and standard RAG fail: central bank transaction monitoring, multi-tier supply chain dependencies, and healthcare claims leakage prevention."
+          },
+          {
+            title: "Embedded Engineering vs Slide Decks",
+            text: "Traditional consultancies deploy junior teams to bill hours while producing slide decks. HSN Labs embeds senior Forward Deployed Engineers inside your private perimeter, operating on milestone delivery."
+          },
+          {
+            title: "Compounding Error Reduction",
+            text: "Grounding multi-step workflows on business ontologies eliminates hallucinations and keeps autonomous execution within strict regulatory and financial bounds."
           }
         ],
-        microcopy: "Modular scale sprints deployed directly into your enterprise tenancy at $6,000 / R$ 35k per sprint.",
-        actionLabel: "Apply for FDE Deployment",
-        actionFn: () => selectCharacter(2)
+        microcopy: "Selective entry via our 5-Day AI Bootcamp deployed on your own infrastructure.",
+        actionLabel: "Explore AI Bootcamp",
+        actionFn: () => handleNodeClick(2)
       },
       {
         id: 1,
+        tag: "Who We Are",
+        name: "About Us",
+        description: "Founded by senior engineering leaders with enterprise experience at Deloitte, Santander, and Meta. We replace multi-month consulting bloat with embedded Forward Deployed Engineers who write code directly in your infrastructure.",
+        surfaces: ["Senior FDE Squad", "Anti-Consultancy", "Zero Junior Bloat"],
+        industry: "Engineering Leadership",
+        since: "2026",
+        ecosystem: "Enterprise Data · Graph Systems · Python",
+        status: "Elite Squad",
+        deepDiveTitle: "Who We Are & How We Operate",
+        deepDiveBlocks: [
+          {
+            title: "Hands-On Technical Leadership",
+            text: "Discovery, scoping, and production code are led directly by founding partners and senior tech leads who speak both graph mathematics and executive P&L."
+          },
+          {
+            title: "Zero Body-Shop Mentality",
+            text: "We do not sell billable hours or allocate junior trainees to learn on your project. We embed seasoned FDEs with joint accountability for production results."
+          },
+          {
+            title: "100% Client IP Ownership",
+            text: "All custom integration code, schemas, and agent workflows belong entirely to the client, deployed securely inside your existing cloud environment."
+          }
+        ],
+        microcopy: "Direct access to senior engineering leadership without intermediary account managers.",
+        actionLabel: "Get in Touch with Partners",
+        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Executive%20Inquiry%20-%20HSN%20Labs'
+      },
+      {
+        id: 2,
+        tag: "Entry Offer",
+        name: "AI Bootcamp",
+        description: "A selective 5-day on-site deployment on client infrastructure. We ground an autonomous agent on real enterprise data and schemas to prove operational ROI in one week.",
+        surfaces: ["5-Day On-Site", "Client VPC", "Live Data"],
+        industry: "Decision Acceleration",
+        since: "2026",
+        ecosystem: "Application-Only · Selective Entry",
+        status: "Booking Q4",
+        deepDiveTitle: "5-Day Execution Blueprint",
+        deepDiveBlocks: [
+          {
+            title: "Day 01 & 02: Ingestion & Schema Lockdown",
+            text: "Air-gapped deployment inside your private VPC. We ingest sanitized data and formalize your operational entities, edge constraints, and regulatory rules."
+          },
+          {
+            title: "Day 03 & 04: Agentic Assembly & Testing",
+            text: "Our embedded squad builds the deterministic agent runtime and connects legacy APIs, subjected to automated stress testing and error-boundary evaluations."
+          },
+          {
+            title: "Day 05: C-Level ROI Signoff & Rollout Path",
+            text: "Live demonstration for CFO/COO/CTO on real infrastructure, featuring audited savings and a transition plan for modular production rollout."
+          }
+        ],
+        microcopy: "Selective eligibility. We accept 2 to 3 enterprises per cycle based on transaction volume and executive sponsorship.",
+        actionLabel: "Apply for 5-Day Bootcamp",
+        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Bootcamp%20Application%20Request'
+      },
+      {
+        id: 3,
+        tag: "Inbound Asset",
         name: "Proto-Ontologies",
-        description: "The open schema standard for autonomous agents. Minimalist, opinionated seed schemas in Pydantic v2 and Cypher DDL that eliminate token burn and schema hallucinations in GraphRAG pipelines.",
-        surfaces: ["Open Source", "PyPI", "MCP"],
-        industry: "Knowledge Graph",
+        description: "Open-source repository of minimal, opinionated seed schemas in Pydantic v2 and Cypher DDL. Bounding GraphRAG and autonomous agent workflows to eliminate hallucination cascades.",
+        surfaces: ["Open Source", "PyPI", "FastMCP"],
+        industry: "Knowledge Graphs",
         since: "2026",
         ecosystem: "Pydantic v2 · Neo4j · FastMCP",
         status: "Public Good",
         deepDiveTitle: "The Open Architecture",
         deepDiveBlocks: [
           {
-            title: "Bounding Graph Extraction to Eliminate Hallucinations",
-            text: "Schema-free GraphRAG produces combinatorial entity explosions and runaway inference costs. Injecting an immutable seed schema enforces strict semantic boundaries, reducing LLM token burn by up to 90% in high-volume enterprise ingestion."
+            title: "Bounding Graph Extraction",
+            text: "Schema-free GraphRAG produces combinatorial entity explosions and runaway inference costs. Injecting an immutable seed schema reduces token burn by up to 90% in enterprise ingestion."
           },
           {
             title: "Production Canonical Specifications",
-            text: "• br-fintech-pix-med2: 5-layer rapid mule account dispersion.<br>• br-healthcare-tiss-glosas: Clinical protocol & revenue leak mitigation.<br>• enterprise-b2b-mdm: Cross-system entity resolution."
+            text: "• br-fintech-fraud-pix: Central bank regulatory patterns.<br>• br-healthcare-glosas-tiss: Clinical protocol & revenue leak mitigation.<br>• enterprise-b2b-mdm: Cross-system entity resolution."
           },
           {
             title: "Model Context Protocol (MCP) Runtime Engine",
@@ -757,62 +815,6 @@
         microcopy: "Licensed under MIT. Open specifications available on GitHub for the global AI engineering community.",
         actionLabel: "Explore GitHub Repository",
         actionFn: () => window.open('https://github.com/hsnlabs-ai/proto-ontologies', '_blank')
-      },
-      {
-        id: 2,
-        name: "AI Bootcamp",
-        description: "A 5-day on-site production immersion inspired by the Palantir deployment playbook. We compress months of enterprise hesitation into 5 days of intensive engineering on live sanitized data.",
-        surfaces: ["On-Site", "Sandbox VPC"],
-        industry: "Decision Acceleration",
-        since: "2026",
-        ecosystem: "Tier 1: Free · Tier 2: $2.5k",
-        status: "Booking Q4",
-        deepDiveTitle: "5-Day Execution Blueprint",
-        deepDiveBlocks: [
-          {
-            title: "Day 01 & 02: Ingestion & Ontology Lockdown",
-            text: "Air-gapped deployment inside your private VPC. We ingest sanitized schemas and formalize your operational entities, edge constraints, and regulatory invariants."
-          },
-          {
-            title: "Day 03 & 04: Agentic Assembly & Adversarial Evals",
-            text: "Our embedded squad writes the deterministic agent runtime and wires legacy enterprise APIs, subjected to automated stress testing and error-boundary evaluations."
-          },
-          {
-            title: "Day 05: C-Level ROI Signoff & Rollout Path",
-            text: "Live demonstration for CFO/COO/CTO on real infrastructure, featuring audited P&L savings and a clear transition plan for modular scale sprints."
-          }
-        ],
-        microcopy: "Tier 1 is selective for enterprises > $10M / R$ 50M. Tier 2 covers dedicated squad operational costs.",
-        actionLabel: "Submit Immersion Application",
-        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Bootcamp%20Application%20Request'
-      },
-      {
-        id: 3,
-        name: "Careers",
-        description: "We are assembling exceptional Forward Deployed Engineers, distributed systems architects, and knowledge graph researchers who want to build mission-critical systems in production.",
-        surfaces: ["Senior FDE", "Trainee"],
-        industry: "Talent & Engineering",
-        since: "2026",
-        ecosystem: "Python · Cypher · Distributed AI",
-        status: "Open Roles",
-        deepDiveTitle: "The Engineering Culture",
-        deepDiveBlocks: [
-          {
-            title: "Direct Client Ownership & Code Over Slides",
-            text: "You won't write slide decks or calculate billable hours. You write production Python (Pydantic v2), Cypher graph DDLs, and run automated evals inside client infrastructure."
-          },
-          {
-            title: "Senior FDE Track",
-            text: "For engineers experienced with distributed data pipelines, Neo4j/Memgraph, enterprise auth, and low-latency system reliability. Direct client ownership."
-          },
-          {
-            title: "Fast-Track Trainee Academy",
-            text: "Intensive apprenticeship alongside founding partners, mastering formal ontologies, agentic protocols (MCP), and enterprise forward-deployed delivery."
-          }
-        ],
-        microcopy: "Full-remote flexibility, equity participation on venture contracts, and direct exposure to enterprise leadership.",
-        actionLabel: "Send Code & Portfolio",
-        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Engineering%20Career%20Inquiry'
       }
     ];
 
@@ -827,7 +829,7 @@
 
         osc.type = type;
         osc.frequency.setValueAtTime(frequency, audioContext.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(frequency * 1.4, audioContext.currentTime + duration);
+        osc.frequency.exponentialRampToValueAtTime(frequency * 1.35, audioContext.currentTime + duration);
 
         gain.gain.setValueAtTime(0.12, audioContext.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
@@ -846,14 +848,85 @@
       if (soundActive) triggerAudio(520, 'sine', 0.1);
     });
 
-    document.querySelectorAll('.char-node').forEach((node, i) => {
-      const freqs = [340, 440, 540, 640];
-      node.addEventListener('mouseenter', () => {
-        if (currentIdx === null) triggerAudio(freqs[i], 'triangle', 0.08);
-      });
+    function updateGraphEdges() {
+      if (!isGraphExpanded) return;
+      const svg = document.getElementById('graphSvg');
+      const containerRect = document.getElementById('graphContainer').getBoundingClientRect();
+      
+      const getNodeCenter = (id) => {
+        const el = document.getElementById(`char-${id}`);
+        if (!el) return { x: 0, y: 0 };
+        const r = el.getBoundingClientRect();
+        return {
+          x: (r.left + r.width / 2) - containerRect.left,
+          y: (r.top + r.height / 2) - containerRect.top
+        };
+      };
+
+      const c0 = getNodeCenter(0);
+      const c1 = getNodeCenter(1);
+      const c2 = getNodeCenter(2);
+      const c3 = getNodeCenter(3);
+
+      const setLine = (edgeId, p1, p2) => {
+        const line = document.getElementById(edgeId);
+        if (line) {
+          line.setAttribute('x1', p1.x);
+          line.setAttribute('y1', p1.y);
+          line.setAttribute('x2', p2.x);
+          line.setAttribute('y2', p2.y);
+        }
+      };
+
+      setLine('edge-0-1', c0, c1);
+      setLine('edge-1-2', c1, c2);
+      setLine('edge-2-3', c2, c3);
+    }
+
+    window.addEventListener('resize', () => {
+      requestAnimationFrame(updateGraphEdges);
     });
 
-    function selectCharacter(index) {
+    function handleNodeClick(index) {
+      // First click on HSN Labs expands the link graph
+      if (index === 0 && !isGraphExpanded) {
+        expandGraph();
+        return;
+      }
+
+      // If graph is already expanded (or clicking a child node), open drawer
+      if (!isGraphExpanded) {
+        expandGraph();
+      }
+      openDrawer(index);
+    }
+
+    function expandGraph() {
+      isGraphExpanded = true;
+      const viewport = document.getElementById('viewport');
+      viewport.classList.remove('state-collapsed');
+      viewport.classList.add('state-expanded');
+
+      triggerAudio(440, 'sine', 0.12);
+      setTimeout(() => triggerAudio(660, 'triangle', 0.18), 120);
+
+      // Re-calculate edge coordinates as nodes slide in
+      const steps = [100, 250, 450, 650];
+      steps.forEach(delay => setTimeout(updateGraphEdges, delay));
+    }
+
+    function resetGraph() {
+      isGraphExpanded = false;
+      closeDrawer();
+
+      const viewport = document.getElementById('viewport');
+      viewport.classList.remove('state-expanded');
+      viewport.classList.add('state-collapsed');
+
+      triggerAudio(340, 'sine', 0.1);
+    }
+
+    function openDrawer(index) {
       currentIdx = index;
       triggerAudio(580 + (index * 40), 'sine', 0.12);
 
@@ -863,14 +936,9 @@
 
       for (let i = 0; i < 4; i++) {
         const node = document.getElementById(`char-${i}`);
-        node.classList.remove('is-active', 'is-prev', 'is-next');
-        
+        node.classList.remove('is-active');
         if (i === index) {
           node.classList.add('is-active');
-        } else if (i === (index - 1 + 4) % 4) {
-          node.classList.add('is-prev');
-        } else if (i === (index + 1) % 4) {
-          node.classList.add('is-next');
         }
       }
 
@@ -878,6 +946,7 @@
       const badges = item.surfaces.map(s => `<span class="badge-pill">${s}</span>`).join(' ');
 
       document.getElementById('drawerBody').innerHTML = `
+        <div class="spec-tag">${item.tag}</div>
         <h2 class="spec-title">${item.name}</h2>
         <p class="spec-desc">${item.description}</p>
         
@@ -923,9 +992,11 @@
       `;
 
       document.getElementById('drawerActionBtn').onclick = item.actionFn;
+
+      setTimeout(updateGraphEdges, 300);
     }
 
-    function resetToOverview() {
+    function closeDrawer() {
       currentIdx = null;
       triggerAudio(320, 'sine', 0.08);
 
@@ -935,21 +1006,20 @@
 
       for (let i = 0; i < 4; i++) {
         const node = document.getElementById(`char-${i}`);
-        node.classList.remove('is-active', 'is-prev', 'is-next');
+        node.classList.remove('is-active');
       }
+
+      setTimeout(updateGraphEdges, 300);
     }
 
-    function navigate(direction) {
-      if (currentIdx === null) return;
-      let nextIdx = (currentIdx + direction + 4) % 4;
-      selectCharacter(nextIdx);
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') resetToOverview();
-      if (currentIdx !== null) {
-        if (e.key === 'ArrowLeft') navigate(-1);
-        if (e.key === 'ArrowRight') navigate(1);
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (currentIdx !== null) {
+          closeDrawer();
+        } else if (isGraphExpanded) {
+          resetGraph();
+        }
       }
     });
   </script>
