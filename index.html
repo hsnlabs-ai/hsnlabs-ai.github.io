@@ -20,7 +20,7 @@
     }
 
     body {
-      background-color: #060709;
+      background-color: #07090E;
       color: #FFFFFF;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       height: 100vh;
@@ -32,10 +32,10 @@
     /* Sound Control Button */
     .sound-toggle {
       position: fixed;
-      top: 28px;
-      left: 28px;
+      top: 24px;
+      left: 24px;
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 50%;
       color: #71717A;
       cursor: pointer;
@@ -76,70 +76,72 @@
       justify-content: center;
       position: relative;
       transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 20px;
     }
 
-    /* Floating Tooltip Capsule */
-    .floating-tooltip {
+    /* Diagram Stage Header (Inspired by Google Cloud standard slide header) */
+    .stage-header {
       position: absolute;
-      top: -38px;
-      background: #18181B;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: #FFFFFF;
-      font-size: 12px;
+      top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+      z-index: 30;
+      transition: opacity 0.3s;
+    }
+
+    .brand-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-family: 'JetBrains Mono', monospace;
-      font-weight: 500;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      pointer-events: none;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      z-index: 120;
-      white-space: nowrap;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
-    }
-    .char-node:hover .floating-tooltip {
-      opacity: 1;
-      transform: translateY(0);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #A78BFA;
     }
 
-    /* Asynchronous Floating Physics for inside badge */
-    @keyframes floatAtom {
-      0% { transform: translateY(-3px) rotate(-1deg); }
-      50% { transform: translateY(-10px) rotate(-0.5deg); }
-      100% { transform: translateY(-3px) rotate(-1deg); }
+    .brand-eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #A78BFA;
+      box-shadow: 0 0 8px #A78BFA;
     }
 
-    @keyframes floatChain {
-      0% { transform: translateY(2px) rotate(0.8deg); }
-      50% { transform: translateY(8px) rotate(1.8deg); }
-      100% { transform: translateY(2px) rotate(0.8deg); }
+    .stage-title {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
     }
 
-    @keyframes floatHourglass {
-      0% { transform: translateY(8px) rotate(-0.8deg); }
-      50% { transform: translateY(-2px) rotate(0.5deg); }
-      100% { transform: translateY(8px) rotate(-0.8deg); }
+    .stage-subtitle {
+      font-size: 13px;
+      color: #71717A;
+      font-weight: 400;
     }
 
-    @keyframes floatPeople {
-      0% { transform: translateY(3px) rotate(0.8deg); }
-      50% { transform: translateY(-8px) rotate(1.8deg); }
-      100% { transform: translateY(3px) rotate(0.8deg); }
-    }
-
-    /* Graph Container & Connecting Layer */
-    .graph-container {
+    /* =========================================================
+       PIPELINE & RIBBON FLOW GRAPH (Inspired by Google Cloud Architecture)
+       ========================================================= */
+    .pipeline-container {
       position: relative;
+      width: 100%;
+      max-width: 1100px;
+      height: 480px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      height: 560px;
+      margin-top: 20px;
     }
 
-    /* SVG LangGraph Edges Layer */
-    .graph-svg-layer {
+    /* SVG Ribbon Flow Layer */
+    .pipeline-svg {
       position: absolute;
       top: 0;
       left: 0;
@@ -151,349 +153,386 @@
       transition: opacity 0.4s ease;
     }
 
-    /* LangGraph Wire Styling */
-    .langgraph-edge-path {
+    /* Wide Flowing Ribbons */
+    .ribbon-band {
       fill: none;
-      stroke-width: 2.5;
       stroke-linecap: round;
-      stroke-dasharray: 8 5;
-      animation: dashStream 1.8s linear infinite;
-      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25));
+      opacity: 0.85;
+      transition: stroke-width 0.3s, opacity 0.3s;
     }
 
-    @keyframes dashStream {
-      from { stroke-dashoffset: 26; }
+    .ribbon-core-wire {
+      fill: none;
+      stroke-width: 2.5;
+      stroke-dasharray: 8 6;
+      animation: ribbonFlow 1.6s linear infinite;
+    }
+
+    @keyframes ribbonFlow {
+      from { stroke-dashoffset: 28; }
       to { stroke-dashoffset: 0; }
     }
 
-    .langgraph-edge-glow {
-      fill: none;
-      stroke-width: 6;
-      stroke-linecap: round;
-      opacity: 0.15;
-    }
-
-    .langgraph-packet {
-      filter: drop-shadow(0 0 8px currentColor);
-    }
-
-    /* LangGraph Condition Pill Badge */
-    .langgraph-pill-box {
-      fill: #0B0C10;
-      stroke-width: 1.2;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.85));
-    }
-
-    .langgraph-pill-text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-    }
-
-    /* Characters Track */
-    .characters-track {
+    /* Diagram Nodes Positioning */
+    .nodes-layout {
+      position: relative;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      position: relative;
       z-index: 20;
+    }
+
+    /* Central Processing Hub (HSN Labs) */
+    .hub-column {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 40;
+    }
+
+    .state-expanded .hub-column {
+      left: 18%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Destination Output Column (Right side 3 branches) */
+    .branches-column {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 320px;
+      z-index: 30;
       transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     /* =========================================================
-       LANGGRAPH NODE CARD (Clean high-tech frame inspired by LangGraph)
+       NODE STYLES (Clean Google Cloud / Enterprise Architecture Style)
        ========================================================= */
-    .langgraph-node {
+    /* Hub Card (HSN Labs) */
+    .hub-node-card {
       position: relative;
-      background: #0B0C10;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 16px 14px 18px 14px;
+      background: #0E1017;
+      border: 2px solid rgba(167, 139, 250, 0.4);
+      border-radius: 28px;
+      padding: 24px 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
       cursor: pointer;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s ease,
-                  box-shadow 0.3s ease,
-                  opacity 0.5s ease;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(167, 139, 250, 0.15);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .langgraph-node:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255, 255, 255, 0.28);
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.95), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    .hub-node-card:hover {
+      transform: scale(1.05);
+      border-color: #A78BFA;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 45px rgba(167, 139, 250, 0.3);
     }
 
-    /* LangGraph Top Meta Header */
-    .node-header {
-      width: 100%;
+    .hub-pill-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #A78BFA;
+      background: rgba(167, 139, 250, 0.12);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+
+    .hub-badge-icon {
+      width: 140px;
+      height: 140px;
+      display: block;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+    }
+
+    .hub-title {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-top: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .hub-subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #A1A1AA;
+      margin-top: 2px;
+    }
+
+    /* Outbound Anchor Port on Hub */
+    .hub-port-out {
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #0E1017;
+      border: 2.5px solid #A78BFA;
+      box-shadow: 0 0 12px #A78BFA;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .state-expanded .hub-port-out { opacity: 1; }
+
+    /* =========================================================
+       BRANCH OUTPUT CARDS (About Us, AI Bootcamp, Proto-Ontologies)
+       ========================================================= */
+    .branch-card {
+      position: relative;
+      background: #0E1017;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      gap: 16px;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .node-status-wrap {
+    .branch-card:hover {
+      transform: translateX(6px);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
+    }
+
+    .branch-card-info {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: column;
+      gap: 3px;
     }
 
-    .node-status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 8px #10B981;
-    }
-
-    .node-type-tag {
+    .branch-tag {
       font-family: 'JetBrains Mono', monospace;
       font-size: 9.5px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+    }
+
+    .branch-title {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+    }
+
+    .branch-sub {
+      font-size: 11px;
       color: #71717A;
+      font-family: 'Inter', sans-serif;
     }
 
-    .node-idx-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
-      font-weight: 600;
-      color: #52525B;
-    }
-
-    /* Node Badge Body */
-    .node-badge-body {
+    /* Branch Round Icon Badge (Right circle badge like in Google slide) */
+    .branch-circle-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4px 8px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
     }
 
-    .badge-svg {
-      width: 165px;
-      height: 165px;
-      display: block;
-      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.8));
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    .branch-circle-icon svg {
+      width: 22px;
+      height: 22px;
     }
 
-    .langgraph-node:hover .badge-svg {
-      transform: scale(1.05);
-    }
-
-    #char-0 .badge-svg { animation: floatAtom 6s ease-in-out infinite; }
-    #char-1 .badge-svg { animation: floatPeople 6.5s ease-in-out infinite; }
-    #char-2 .badge-svg { animation: floatHourglass 7s ease-in-out infinite; }
-    #char-3 .badge-svg { animation: floatChain 6.2s ease-in-out infinite; }
-
-    /* Node Footer Label */
-    .node-footer {
-      width: 100%;
-      text-align: center;
-      padding-top: 10px;
-      margin-top: 6px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .node-title-text {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      color: #FFFFFF;
-      margin-bottom: 2px;
-    }
-
-    .node-sub-text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      color: #A1A1AA;
-    }
-
-    /* LangGraph Input / Output Terminal Ports */
-    .node-port {
+    /* Input Port on Branch Cards */
+    .branch-port-in {
       position: absolute;
+      left: -6px;
       top: 50%;
       transform: translateY(-50%);
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: #0B0C10;
+      background: #0E1017;
       border: 2px solid #FFFFFF;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
       z-index: 35;
+    }
+
+    /* Theme colors per branch */
+    /* Branch 1: About Us (Emerald Green) */
+    .branch-1 .branch-tag { color: #10B981; }
+    .branch-1:hover { border-color: #10B981; box-shadow: 0 0 25px rgba(16, 185, 129, 0.25); }
+    .branch-1 .branch-circle-icon { background: linear-gradient(135deg, #10B981, #059669); }
+    .branch-1 .branch-port-in { border-color: #10B981; box-shadow: 0 0 8px #10B981; }
+
+    /* Branch 2: AI Bootcamp (Sky / Electric Blue) */
+    .branch-2 .branch-tag { color: #38BDF8; }
+    .branch-2:hover { border-color: #38BDF8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.25); }
+    .branch-2 .branch-circle-icon { background: linear-gradient(135deg, #38BDF8, #0284C7); }
+    .branch-2 .branch-port-in { border-color: #38BDF8; box-shadow: 0 0 8px #38BDF8; }
+
+    /* Branch 3: Proto-Ontologies (Amber / Gold) */
+    .branch-3 .branch-tag { color: #FB923C; }
+    .branch-3:hover { border-color: #FB923C; box-shadow: 0 0 25px rgba(251, 146, 60, 0.25); }
+    .branch-3 .branch-circle-icon { background: linear-gradient(135deg, #FB923C, #EA580C); }
+    .branch-3 .branch-port-in { border-color: #FB923C; box-shadow: 0 0 8px #FB923C; }
+
+    /* =========================================================
+       COLLAPSED VS EXPANDED VISIBILITY
+       ========================================================= */
+    .state-collapsed .branches-column {
+      opacity: 0;
       pointer-events: none;
-      transition: all 0.3s;
+      transform: translateY(-50%) translateX(60px);
     }
 
-    .node-port.port-left {
-      left: -6px;
+    .state-collapsed .pipeline-svg {
+      opacity: 0;
     }
 
-    .node-port.port-right {
-      right: -6px;
+    /* Expand cue below Hub */
+    .hub-cue {
+      position: absolute;
+      bottom: -46px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(167, 139, 250, 0.08);
+      border: 1px solid rgba(167, 139, 250, 0.25);
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #D4D4D8;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      animation: pulseCue 2s infinite ease-in-out;
+      pointer-events: none;
+      transition: opacity 0.3s;
     }
 
-    .langgraph-node:hover .node-port {
-      box-shadow: 0 0 12px #FFFFFF;
+    @keyframes pulseCue {
+      0%, 100% { opacity: 0.7; transform: scale(0.98); }
+      50% { opacity: 1; transform: scale(1.02); }
     }
 
-    /* Bubble Pop scale-up animation */
-    @keyframes bubblePopIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.15) rotate(-6deg);
-      }
-      65% {
-        opacity: 1;
-        transform: scale(1.12) rotate(1.5deg);
-      }
-      85% {
-        transform: scale(0.97) rotate(-0.5deg);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-      }
+    .state-expanded .hub-cue {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Expanded State Animation */
+    .state-expanded .branches-column {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    .state-expanded .pipeline-svg {
+      opacity: 1;
     }
 
     /* =========================================================
-       COLLAPSED VS EXPANDED STATES
+       BOTTOM VALUES BAR (3 Pillars from Google Slide)
        ========================================================= */
-    .state-collapsed .langgraph-node.child-node {
-      opacity: 0;
-      pointer-events: none;
-      width: 0;
-      padding: 0;
-      margin: 0;
-      border: none;
-      transform: scale(0);
-      overflow: hidden;
-    }
-
-    .state-collapsed .graph-svg-layer {
-      opacity: 0;
-    }
-
-    .state-collapsed #char-0 {
-      transform: scale(1.1);
-    }
-
-    .state-collapsed #char-0 .node-port {
-      display: none;
-    }
-
-    /* Expand Discovery Cue */
-    .expand-cue {
+    .bottom-pillars {
       position: absolute;
-      bottom: -62px;
+      bottom: 24px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 8px;
-      pointer-events: none;
-      opacity: 1;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      gap: 18px;
+      z-index: 30;
+      width: 100%;
+      max-width: 960px;
+      justify-content: center;
     }
 
-    .expand-cue-pill {
-      display: inline-flex;
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 10px 18px;
+      display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 18px;
-      border-radius: 9999px;
-      background: rgba(167, 139, 250, 0.08);
-      border: 1px solid rgba(167, 139, 250, 0.24);
-      font-size: 11px;
-      font-family: 'JetBrains Mono', monospace;
-      color: #E4E4E7;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      box-shadow: 0 4px 16px rgba(167, 139, 250, 0.15);
-      animation: pulseGlow 2.5s ease-in-out infinite;
+      gap: 12px;
+      flex: 1;
     }
 
-    .expand-cue-dot {
-      width: 7px;
-      height: 7px;
+    .pillar-icon-wrap {
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      background: #A78BFA;
-      box-shadow: 0 0 10px #A78BFA;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #A78BFA;
     }
 
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 0.7; transform: scale(0.98); }
-      50% { opacity: 1; transform: scale(1.03); }
+    .pillar-icon-wrap svg {
+      width: 16px;
+      height: 16px;
     }
 
-    .state-expanded .expand-cue {
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
+    .pillar-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #D4D4D8;
+      font-family: 'Inter', sans-serif;
     }
 
-    /* EXPANDED STATE: All 4 LangGraph nodes arranged in chain */
-    .state-expanded .characters-track {
-      gap: 64px;
+    .reset-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #A1A1AA;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 8px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: none;
+      transition: all 0.2s;
+    }
+    .reset-btn:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .state-expanded .reset-btn {
+      display: block;
     }
 
-    .state-expanded .langgraph-node.child-node {
-      opacity: 1;
-      pointer-events: auto;
-      width: 200px;
-      animation: bubblePopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    }
-
-    .state-expanded #char-1 { animation-delay: 0.08s; }
-    .state-expanded #char-2 { animation-delay: 0.18s; }
-    .state-expanded #char-3 { animation-delay: 0.28s; }
-
-    .state-expanded .graph-svg-layer {
-      opacity: 1;
-    }
-
-    .state-expanded #char-0 {
-      width: 200px;
-      transform: scale(1);
-    }
-
-    /* Mode Detail (Drawer open on right) */
+    /* =========================================================
+       SPEC DRAWER
+       ========================================================= */
     .viewport.mode-detail .carousel-stage {
       width: calc(100vw - 480px);
       flex: none;
     }
 
-    .viewport.mode-detail .characters-track {
-      transform: scale(0.78);
-      gap: 36px;
+    .viewport.mode-detail .pipeline-container {
+      transform: scale(0.8);
+      transform-origin: center left;
     }
 
-    .viewport.mode-detail .langgraph-node {
-      opacity: 0.3;
-      filter: grayscale(0.5);
-    }
-
-    .viewport.mode-detail .langgraph-node.is-active {
-      opacity: 1;
-      filter: none;
-      border-color: #A78BFA;
-      box-shadow: 0 0 35px rgba(167, 139, 250, 0.35);
-      transform: scale(1.06);
-    }
-
-    .viewport.mode-detail .langgraph-edge-path {
-      opacity: 0.3;
-    }
-
-    /* Detail Drawer Styles */
     .spec-drawer {
       width: 480px;
       height: 100vh;
@@ -527,9 +566,7 @@
       line-height: 1;
       transition: color 0.15s;
     }
-    .drawer-close:hover {
-      color: #FFFFFF;
-    }
+    .drawer-close:hover { color: #FFFFFF; }
 
     .spec-tag {
       font-family: 'JetBrains Mono', monospace;
@@ -571,14 +608,8 @@
       font-size: 13px;
     }
 
-    .spec-label {
-      color: #71717A;
-    }
-
-    .spec-val {
-      color: #FFFFFF;
-      font-weight: 500;
-    }
+    .spec-label { color: #71717A; }
+    .spec-val { color: #FFFFFF; font-weight: 500; }
 
     .badge-pill {
       display: inline-block;
@@ -591,9 +622,7 @@
       margin-left: 4px;
     }
 
-    .drawer-deep-dive {
-      margin-bottom: 32px;
-    }
+    .drawer-deep-dive { margin-bottom: 32px; }
 
     .deep-title {
       font-family: 'JetBrains Mono', monospace;
@@ -605,9 +634,7 @@
       margin-bottom: 16px;
     }
 
-    .deep-block {
-      margin-bottom: 16px;
-    }
+    .deep-block { margin-bottom: 16px; }
     .deep-block h4 {
       font-size: 13px;
       font-weight: 600;
@@ -651,81 +678,14 @@
       transform: translateY(-1px);
     }
 
-    /* Bottom Brand Bar */
-    .bottom-brand {
-      position: absolute;
-      bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      z-index: 50;
-    }
-
-    .brand-logo-wrap {
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .logo-text {
-      font-family: 'Satoshi', sans-serif;
-      font-size: 16px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      color: #FFFFFF;
-      opacity: 0.9;
-      transition: opacity 0.2s;
-    }
-    .logo-text:hover { opacity: 1; }
-
-    .sub-links {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 12px;
-      color: #71717A;
-    }
-    .sub-links a {
-      color: #71717A;
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-    .sub-links a:hover, .sub-links a.active {
-      color: #FFFFFF;
-    }
-    .sub-links .dot {
-      color: #3F3F46;
-      font-size: 8px;
-    }
-
-    /* Reset Graph Action */
-    .reset-graph-btn {
-      background: transparent;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #A1A1AA;
-      font-size: 11px;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      cursor: pointer;
-      display: none;
-      transition: all 0.2s;
-    }
-    .reset-graph-btn:hover {
-      color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.35);
-      background: rgba(255, 255, 255, 0.05);
-    }
-    .state-expanded .reset-graph-btn {
-      display: inline-block;
-    }
-
     @media (max-width: 1024px) {
       .spec-drawer { width: 100vw; }
       .viewport.mode-detail .carousel-stage { width: 0; overflow: hidden; }
-      .state-expanded .characters-track { flex-wrap: wrap; height: auto; gap: 20px; }
-      .graph-svg-layer { display: none; }
-      .node-port { display: none !important; }
+      .pipeline-svg { display: none; }
+      .pipeline-container { flex-direction: column; height: auto; gap: 30px; }
+      .hub-column { position: relative; left: auto; top: auto; transform: none; }
+      .branches-column { position: relative; right: auto; top: auto; transform: none; }
+      .bottom-pillars { display: none; }
     }
   </style>
 </head>
@@ -742,230 +702,205 @@
 
     <div class="carousel-stage">
       
-      <div class="graph-container" id="graphContainer">
+      <!-- Stage Header (Google Cloud Style) -->
+      <header class="stage-header">
+        <div class="brand-eyebrow">
+          <span class="brand-eyebrow-dot"></span>
+          <span>Forward Deployed Engineering</span>
+        </div>
+        <h1 class="stage-title">HSN Labs: The Enterprise AI Execution Hub</h1>
+        <p class="stage-subtitle">Deterministic multi-agent architecture and ontology-grounded deployments</p>
+      </header>
+
+      <!-- Pipeline Container -->
+      <div class="pipeline-container" id="pipelineContainer">
         
-        <!-- SVG LangGraph Edges & Chain Layer -->
-        <svg class="graph-svg-layer" id="graphSvg">
+        <!-- SVG Dimensional Ribbon Layer -->
+        <svg class="pipeline-svg" id="pipelineSvg">
           <defs>
-            <linearGradient id="edgeGrad01" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#A78BFA"/>
-              <stop offset="100%" stop-color="#10B981"/>
-            </linearGradient>
-            <linearGradient id="edgeGrad12" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#10B981"/>
-              <stop offset="100%" stop-color="#38BDF8"/>
-            </linearGradient>
-            <linearGradient id="edgeGrad23" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#38BDF8"/>
-              <stop offset="100%" stop-color="#FB923C"/>
+            <!-- Ribbon Gradients -->
+            <!-- Top Ribbon: Purple to Emerald Green -->
+            <linearGradient id="ribbonGradTop" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
+              <stop offset="60%" stop-color="#34D399" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#10B981" stop-opacity="0.95"/>
             </linearGradient>
 
-            <marker id="arrow01" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 9 5 L 0 9 z" fill="#10B981"/>
+            <!-- Middle Ribbon: Purple to Sky Blue -->
+            <linearGradient id="ribbonGradMid" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
+              <stop offset="50%" stop-color="#60A5FA" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.95"/>
+            </linearGradient>
+
+            <!-- Bottom Ribbon: Purple to Warm Amber -->
+            <linearGradient id="ribbonGradBot" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.9"/>
+              <stop offset="55%" stop-color="#FBBF24" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#FB923C" stop-opacity="0.95"/>
+            </linearGradient>
+
+            <!-- Chevron Arrowhead Markers -->
+            <marker id="markerTop" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+              <path d="M 1 2 L 9 6 L 1 10 z" fill="#10B981"/>
             </marker>
-            <marker id="arrow12" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 9 5 L 0 9 z" fill="#38BDF8"/>
+            <marker id="markerMid" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+              <path d="M 1 2 L 9 6 L 1 10 z" fill="#38BDF8"/>
             </marker>
-            <marker id="arrow23" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-              <path d="M 0 1 L 9 5 L 0 9 z" fill="#FB923C"/>
+            <marker id="markerBot" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="8" markerHeight="8" orient="auto">
+              <path d="M 1 2 L 9 6 L 1 10 z" fill="#FB923C"/>
             </marker>
           </defs>
 
-          <!-- Edge 0 -> 1 (HSN Labs to About Us) -->
-          <g id="edge-group-0-1">
-            <path id="glow-0-1" class="langgraph-edge-glow" stroke="#A78BFA"/>
-            <path id="path-0-1" class="langgraph-edge-path" stroke="url(#edgeGrad01)" marker-end="url(#arrow01)"/>
-            <circle id="packet-0-1" class="langgraph-packet" fill="#A78BFA" r="4"/>
-            <g id="pill-0-1">
-              <rect id="pill-bg-0-1" class="langgraph-pill-box" stroke="#A78BFA" rx="9" height="18"/>
-              <text id="pill-txt-0-1" class="langgraph-pill-text" fill="#D8B4FE" text-anchor="middle" dominant-baseline="central">[:OPERATED_BY]</text>
-            </g>
-          </g>
+          <!-- Top Branch: To About Us -->
+          <path id="ribbon-band-1" class="ribbon-band" stroke="url(#ribbonGradTop)" stroke-width="28" stroke-linecap="round"/>
+          <path id="ribbon-wire-1" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerTop)"/>
 
-          <!-- Edge 1 -> 2 (About Us to AI Bootcamp) -->
-          <g id="edge-group-1-2">
-            <path id="glow-1-2" class="langgraph-edge-glow" stroke="#10B981"/>
-            <path id="path-1-2" class="langgraph-edge-path" stroke="url(#edgeGrad12)" marker-end="url(#arrow12)"/>
-            <circle id="packet-1-2" class="langgraph-packet" fill="#10B981" r="4"/>
-            <g id="pill-1-2">
-              <rect id="pill-bg-1-2" class="langgraph-pill-box" stroke="#10B981" rx="9" height="18"/>
-              <text id="pill-txt-1-2" class="langgraph-pill-text" fill="#A7F3D0" text-anchor="middle" dominant-baseline="central">[:DEPLOYS]</text>
-            </g>
-          </g>
+          <!-- Middle Branch: To AI Bootcamp -->
+          <path id="ribbon-band-2" class="ribbon-band" stroke="url(#ribbonGradMid)" stroke-width="28" stroke-linecap="round"/>
+          <path id="ribbon-wire-2" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerMid)"/>
 
-          <!-- Edge 2 -> 3 (AI Bootcamp to Proto-Ontologies) -->
-          <g id="edge-group-2-3">
-            <path id="glow-2-3" class="langgraph-edge-glow" stroke="#38BDF8"/>
-            <path id="path-2-3" class="langgraph-edge-path" stroke="url(#edgeGrad23)" marker-end="url(#arrow23)"/>
-            <circle id="packet-2-3" class="langgraph-packet" fill="#38BDF8" r="4"/>
-            <g id="pill-2-3">
-              <rect id="pill-bg-2-3" class="langgraph-pill-box" stroke="#38BDF8" rx="9" height="18"/>
-              <text id="pill-txt-2-3" class="langgraph-pill-text" fill="#BAE6FD" text-anchor="middle" dominant-baseline="central">[:GROUNDED_ON]</text>
-            </g>
-          </g>
+          <!-- Bottom Branch: To Proto-Ontologies -->
+          <path id="ribbon-band-3" class="ribbon-band" stroke="url(#ribbonGradBot)" stroke-width="28" stroke-linecap="round"/>
+          <path id="ribbon-wire-3" class="ribbon-core-wire" stroke="#FFFFFF" stroke-opacity="0.75" marker-end="url(#markerBot)"/>
         </svg>
 
-        <div class="characters-track" id="charactersTrack">
+        <div class="nodes-layout">
+          
+          <!-- CENTRAL HUB: HSN Labs -->
+          <div class="hub-column" id="hubCol">
+            <div class="hub-node-card" id="card-0" onclick="handleNodeClick(0)">
+              <div class="hub-port-out" id="hubPortOut"></div>
+              <span class="hub-pill-header">AI Processing Hub</span>
+              
+              <!-- Clean Atomic Hexagon Badge -->
+              <svg class="hub-badge-icon" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer Hexagonal Halo -->
+                <polygon points="120,20 205,70 205,170 120,220 35,170 35,70" fill="#151722" stroke="#A78BFA" stroke-width="8" stroke-linejoin="round"/>
+                <!-- Internal Neural Orbit Circles -->
+                <circle cx="120" cy="120" r="26" fill="#FFFFFF"/>
+                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none"/>
+                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(60 120 120)"/>
+                <ellipse cx="120" cy="120" rx="60" ry="22" stroke="#A78BFA" stroke-width="6" fill="none" transform="rotate(-60 120 120)"/>
+                <!-- Satellite Agent Nodes -->
+                <circle cx="120" cy="48" r="8" fill="#FFFFFF"/>
+                <circle cx="182" cy="84" r="8" fill="#FFFFFF"/>
+                <circle cx="182" cy="156" r="8" fill="#FFFFFF"/>
+                <circle cx="120" cy="192" r="8" fill="#FFFFFF"/>
+                <circle cx="58" cy="156" r="8" fill="#FFFFFF"/>
+                <circle cx="58" cy="84" r="8" fill="#FFFFFF"/>
+              </svg>
 
-          <!-- 0. HSN LABS (LangGraph Root Node: Orchestrator) -->
-          <div class="langgraph-node root-node" id="char-0" onclick="handleNodeClick(0)">
-            <div class="floating-tooltip">HSN Labs</div>
-            <div class="node-port port-right" id="port-out-0" style="border-color: #A78BFA; box-shadow: 0 0 10px #A78BFA;"></div>
+              <div class="hub-title">HSN Labs</div>
+              <div class="hub-subtitle">Deterministic Core Engine</div>
+
+              <div class="hub-cue">
+                <span class="brand-eyebrow-dot"></span>
+                <span>Click to expand architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BRANCH OUTPUTS (Right side 3 destination streams) -->
+          <div class="branches-column" id="branchesCol">
             
-            <div class="node-header">
-              <div class="node-status-wrap">
-                <span class="node-status-dot" style="background: #A78BFA; box-shadow: 0 0 8px #A78BFA;"></span>
-                <span class="node-type-tag">ORCHESTRATOR</span>
+            <!-- Branch 1: About Us (Green) -->
+            <div class="branch-card branch-1" id="card-1" onclick="handleNodeClick(1)">
+              <div class="branch-port-in" id="portIn1"></div>
+              <div class="branch-card-info">
+                <span class="branch-tag">Leadership & Squad</span>
+                <div class="branch-title">About Us</div>
+                <div class="branch-sub">Senior FDE Tech Leads (Ex-Deloitte/Meta)</div>
               </div>
-              <span class="node-idx-badge">00</span>
-            </div>
-
-            <div class="node-badge-body">
-              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
-                <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
-                <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
-                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
-                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
-                <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
-                <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
-                <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
-                <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
-              </svg>
-            </div>
-
-            <div class="node-footer">
-              <div class="node-title-text">HSN Labs</div>
-              <div class="node-sub-text">Boutique FDE</div>
-            </div>
-
-            <div class="expand-cue">
-              <div class="expand-cue-pill">
-                <span class="expand-cue-dot"></span>
-                <span>Click node to run graph</span>
+              <div class="branch-circle-icon">
+                <!-- People Squad Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
               </div>
             </div>
-          </div>
 
-          <!-- 1. ABOUT US (LangGraph Node 1: Senior Squad) -->
-          <div class="langgraph-node child-node" id="char-1" onclick="handleNodeClick(1)">
-            <div class="floating-tooltip">About Us</div>
-            <div class="node-port port-left" id="port-in-1" style="border-color: #A78BFA; box-shadow: 0 0 10px #A78BFA;"></div>
-            <div class="node-port port-right" id="port-out-1" style="border-color: #10B981; box-shadow: 0 0 10px #10B981;"></div>
-
-            <div class="node-header">
-              <div class="node-status-wrap">
-                <span class="node-status-dot" style="background: #10B981; box-shadow: 0 0 8px #10B981;"></span>
-                <span class="node-type-tag">LEADERSHIP</span>
+            <!-- Branch 2: AI Bootcamp (Blue) -->
+            <div class="branch-card branch-2" id="card-2" onclick="handleNodeClick(2)">
+              <div class="branch-port-in" id="portIn2"></div>
+              <div class="branch-card-info">
+                <span class="branch-tag">Rapid Deployment</span>
+                <div class="branch-title">AI Bootcamp</div>
+                <div class="branch-sub">5-Day On-Site Production Sprint</div>
               </div>
-              <span class="node-idx-badge">01</span>
-            </div>
-
-            <div class="node-badge-body">
-              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
-                <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
-                <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
-                <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-                <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
-                <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
-                <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
-                <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
-                <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
-              </svg>
-            </div>
-
-            <div class="node-footer">
-              <div class="node-title-text">About Us</div>
-              <div class="node-sub-text">Senior FDE Squad</div>
-            </div>
-          </div>
-
-          <!-- 2. AI BOOTCAMP (LangGraph Node 2: 5-Day Deployment) -->
-          <div class="langgraph-node child-node" id="char-2" onclick="handleNodeClick(2)">
-            <div class="floating-tooltip">AI Bootcamp</div>
-            <div class="node-port port-left" id="port-in-2" style="border-color: #10B981; box-shadow: 0 0 10px #10B981;"></div>
-            <div class="node-port port-right" id="port-out-2" style="border-color: #38BDF8; box-shadow: 0 0 10px #38BDF8;"></div>
-
-            <div class="node-header">
-              <div class="node-status-wrap">
-                <span class="node-status-dot" style="background: #38BDF8; box-shadow: 0 0 8px #38BDF8;"></span>
-                <span class="node-type-tag">DEPLOYMENT</span>
+              <div class="branch-circle-icon">
+                <!-- Target / Zap Execution Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
               </div>
-              <span class="node-idx-badge">02</span>
             </div>
 
-            <div class="node-badge-body">
-              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
-                <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
-                <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
-                <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
-                <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
-                      stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
-                <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
-                <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-                <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
-              </svg>
-            </div>
-
-            <div class="node-footer">
-              <div class="node-title-text">AI Bootcamp</div>
-              <div class="node-sub-text">5-Day Validation</div>
-            </div>
-          </div>
-
-          <!-- 3. PROTO-ONTOLOGIES (LangGraph Node 3: Open Schemas) -->
-          <div class="langgraph-node child-node" id="char-3" onclick="handleNodeClick(3)">
-            <div class="floating-tooltip">Proto-Ontologies</div>
-            <div class="node-port port-left" id="port-in-3" style="border-color: #38BDF8; box-shadow: 0 0 10px #38BDF8;"></div>
-
-            <div class="node-header">
-              <div class="node-status-wrap">
-                <span class="node-status-dot" style="background: #FB923C; box-shadow: 0 0 8px #FB923C;"></span>
-                <span class="node-type-tag">SCHEMAS</span>
+            <!-- Branch 3: Proto-Ontologies (Amber) -->
+            <div class="branch-card branch-3" id="card-3" onclick="handleNodeClick(3)">
+              <div class="branch-port-in" id="portIn3"></div>
+              <div class="branch-card-info">
+                <span class="branch-tag">Open Knowledge Hub</span>
+                <div class="branch-title">Proto-Ontologies</div>
+                <div class="branch-sub">Knowledge Graph Seed Schemas (MCP)</div>
               </div>
-              <span class="node-idx-badge">03</span>
+              <div class="branch-circle-icon">
+                <!-- Knowledge Graph Network Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+              </div>
             </div>
 
-            <div class="node-badge-body">
-              <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
-                <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
-                <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                  <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
-                  <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
-                  <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
-                </g>
-              </svg>
-            </div>
-
-            <div class="node-footer">
-              <div class="node-title-text">Proto-Ontologies</div>
-              <div class="node-sub-text">Open Knowledge Hub</div>
-            </div>
           </div>
 
         </div>
 
       </div>
 
-      <!-- Bottom Brand Bar -->
-      <div class="bottom-brand">
-        <a href="javascript:void(0)" onclick="resetGraph()" class="brand-logo-wrap">
-          <span class="logo-text">HSN LABS</span>
-        </a>
-        <div class="sub-links" id="subLinks">
-          <a href="javascript:void(0)" onclick="handleNodeClick(0)">HSN Labs</a>
-          <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="handleNodeClick(1)">About Us</a>
-          <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="handleNodeClick(2)">AI Bootcamp</a>
-          <span class="dot">•</span>
-          <a href="javascript:void(0)" onclick="handleNodeClick(3)">Proto-Ontologies</a>
-          <button class="reset-graph-btn" onclick="resetGraph()">Reset Graph</button>
+      <!-- Bottom Benefit Pillars (Exact Google Cloud Slide format) -->
+      <footer class="bottom-pillars">
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <span class="pillar-text">Deterministic & Invariant</span>
         </div>
-      </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap" style="color: #10B981;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span class="pillar-text">5-Day Production Validation</span>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap" style="color: #38BDF8;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <span class="pillar-text">Senior FDEs Embedded in VPC</span>
+        </div>
+
+        <button class="reset-btn" onclick="resetPipeline()">Reset View</button>
+      </footer>
 
     </div>
 
@@ -984,15 +919,15 @@
     let soundActive = true;
     let audioContext = null;
     let currentIdx = null;
-    let isGraphExpanded = false;
+    let isExpanded = false;
 
     const catalog = [
       {
         id: 0,
-        tag: "Core Engineering",
+        tag: "Core Engine",
         name: "HSN Labs",
-        description: "Boutique de Forward Deployed Engineering (FDE). We build custom deterministic AI agent systems grounded in real business ontologies for mission-critical operations with massive data volumes.",
-        surfaces: ["FDE Boutique", "Client VPC", "Deterministic Core"],
+        description: "Boutique de Forward Deployed Engineering (FDE). We engineer custom, deterministic AI systems grounded in your real business ontologies for mission-critical operations with massive transaction volumes.",
+        surfaces: ["FDE Boutique", "Client VPC", "Deterministic Systems"],
         industry: "Mission-Critical AI",
         since: "2026",
         ecosystem: "Databricks · Neo4j · AWS · Claude",
@@ -1018,7 +953,7 @@
       },
       {
         id: 1,
-        tag: "Who We Are",
+        tag: "Leadership & Squad",
         name: "About Us",
         description: "Founded by senior engineering leaders with enterprise experience at Deloitte, Santander, and Meta. We replace multi-month consulting bloat with embedded Forward Deployed Engineers who write code directly in your infrastructure.",
         surfaces: ["Senior FDE Squad", "Anti-Consultancy", "Zero Junior Bloat"],
@@ -1047,7 +982,7 @@
       },
       {
         id: 2,
-        tag: "Entry Offer",
+        tag: "Deployment",
         name: "AI Bootcamp",
         description: "A selective 5-day on-site deployment on client infrastructure. We ground an autonomous agent on real enterprise data and schemas to prove operational ROI in one week.",
         surfaces: ["5-Day On-Site", "Client VPC", "Live Data"],
@@ -1076,7 +1011,7 @@
       },
       {
         id: 3,
-        tag: "Inbound Asset",
+        tag: "Open Schemas",
         name: "Proto-Ontologies",
         description: "Open-source repository of minimal, opinionated seed schemas in Pydantic v2 and Cypher DDL. Bounding GraphRAG and autonomous agent workflows to eliminate hallucination cascades.",
         surfaces: ["Open Source", "PyPI", "FastMCP"],
@@ -1116,7 +1051,6 @@
 
         const t = audioContext.currentTime;
 
-        // Main bubble sine wave with rapid ascending frequency glide
         const osc = audioContext.createOscillator();
         const gain = audioContext.createGain();
 
@@ -1135,7 +1069,6 @@
         osc.start(t);
         osc.stop(t + duration + 0.01);
 
-        // Sub plop resonance
         const sub = audioContext.createOscillator();
         const subGain = audioContext.createGain();
         sub.type = 'triangle';
@@ -1160,15 +1093,14 @@
     });
 
     /* =========================================================
-       LANGGRAPH CURVED EDGES & PACKET DATAFLOW
+       DIMENSIONAL FLOW RIBBONS UPDATE
        ========================================================= */
-    function updateGraphEdges() {
-      if (!isGraphExpanded) return;
-      const svg = document.getElementById('graphSvg');
-      const containerRect = document.getElementById('graphContainer').getBoundingClientRect();
+    function updateRibbons() {
+      if (!isExpanded) return;
+      const containerRect = document.getElementById('pipelineContainer').getBoundingClientRect();
       
-      const getPortCoords = (portId) => {
-        const el = document.getElementById(portId);
+      const getCenter = (elId) => {
+        const el = document.getElementById(elId);
         if (!el) return { x: 0, y: 0 };
         const r = el.getBoundingClientRect();
         return {
@@ -1177,104 +1109,75 @@
         };
       };
 
-      const pOut0 = getPortCoords('port-out-0');
-      const pIn1  = getPortCoords('port-in-1');
-      const pOut1 = getPortCoords('port-out-1');
-      const pIn2  = getPortCoords('port-in-2');
-      const pOut2 = getPortCoords('port-out-2');
-      const pIn3  = getPortCoords('port-in-3');
+      const hubPort = getCenter('hubPortOut');
+      const p1 = getCenter('portIn1');
+      const p2 = getCenter('portIn2');
+      const p3 = getCenter('portIn3');
 
-      const renderLangGraphLink = (pathId, glowId, packetId, pillId, pillBgId, pillTxtId, start, end) => {
-        const pathEl = document.getElementById(pathId);
-        const glowEl = document.getElementById(glowId);
-        const packet = document.getElementById(packetId);
-        const pillGroup = document.getElementById(pillId);
-        const pillBg = document.getElementById(pillBgId);
-        const pillTxt = document.getElementById(pillTxtId);
+      const drawRibbon = (bandId, wireId, start, end) => {
+        const band = document.getElementById(bandId);
+        const wire = document.getElementById(wireId);
+        if (!band || !wire || start.x === 0 || end.x === 0) return;
 
-        if (!pathEl || start.x === 0 || end.x === 0) return;
+        const deltaX = Math.max((end.x - start.x) * 0.5, 40);
+        // Fluid S-Curve pipeline path
+        const d = `M ${start.x} ${start.y} C ${start.x + deltaX} ${start.y}, ${end.x - deltaX} ${end.y}, ${end.x - 6} ${end.y}`;
 
-        // LangGraph Smooth Cubic Bezier Curve: horizontal flow
-        const dx = Math.max((end.x - start.x) * 0.45, 20);
-        const d = `M ${start.x} ${start.y} C ${start.x + dx} ${start.y}, ${end.x - dx} ${end.y}, ${end.x} ${end.y}`;
-
-        pathEl.setAttribute('d', d);
-        if (glowEl) glowEl.setAttribute('d', d);
-
-        // Center pill on bezier curve midpoint
-        const midX = (start.x + end.x) / 2;
-        const midY = (start.y + end.y) / 2;
-
-        if (packet) {
-          packet.setAttribute('cx', midX);
-          packet.setAttribute('cy', midY);
-        }
-
-        if (pillGroup && pillBg && pillTxt) {
-          pillTxt.setAttribute('x', midX);
-          pillTxt.setAttribute('y', midY);
-
-          const bbox = pillTxt.getBBox();
-          const padX = 14;
-          pillBg.setAttribute('x', bbox.x - padX / 2);
-          pillBg.setAttribute('y', bbox.y - 2);
-          pillBg.setAttribute('width', bbox.width + padX);
-          pillBg.setAttribute('height', bbox.height + 4);
-        }
+        band.setAttribute('d', d);
+        wire.setAttribute('d', d);
       };
 
-      renderLangGraphLink('path-0-1', 'glow-0-1', 'packet-0-1', 'pill-0-1', 'pill-bg-0-1', 'pill-txt-0-1', pOut0, pIn1);
-      renderLangGraphLink('path-1-2', 'glow-1-2', 'packet-1-2', 'pill-1-2', 'pill-bg-1-2', 'pill-txt-1-2', pOut1, pIn2);
-      renderLangGraphLink('path-2-3', 'glow-2-3', 'packet-2-3', 'pill-2-3', 'pill-bg-2-3', 'pill-txt-2-3', pOut2, pIn3);
+      drawRibbon('ribbon-band-1', 'ribbon-wire-1', hubPort, p1);
+      drawRibbon('ribbon-band-2', 'ribbon-wire-2', hubPort, p2);
+      drawRibbon('ribbon-band-3', 'ribbon-wire-3', hubPort, p3);
     }
 
     window.addEventListener('resize', () => {
-      requestAnimationFrame(updateGraphEdges);
+      requestAnimationFrame(updateRibbons);
     });
 
     /* =========================================================
-       NODE CLICK & GRAPH REVEAL
+       NODE CLICK & PIPELINE EXPANSION
        ========================================================= */
     function handleNodeClick(index) {
-      if (index === 0 && !isGraphExpanded) {
-        expandGraphChain();
+      if (index === 0 && !isExpanded) {
+        expandPipeline();
         return;
       }
 
       playBubblePop(420 + (index * 90), 1450 + (index * 120), 0.08);
 
-      if (!isGraphExpanded) {
-        expandGraphChain();
+      if (!isExpanded) {
+        expandPipeline();
       }
       openDrawer(index);
     }
 
-    function expandGraphChain() {
-      isGraphExpanded = true;
+    function expandPipeline() {
+      isExpanded = true;
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('state-collapsed');
       viewport.classList.add('state-expanded');
 
-      // Sequential bubble pop chain reaction
+      // Sequential sound pops
       playBubblePop(360, 1350, 0.075);
-      setTimeout(() => playBubblePop(440, 1520, 0.075), 90);
-      setTimeout(() => playBubblePop(520, 1680, 0.075), 180);
-      setTimeout(() => playBubblePop(620, 1850, 0.08), 270);
+      setTimeout(() => playBubblePop(450, 1520, 0.075), 100);
+      setTimeout(() => playBubblePop(540, 1700, 0.075), 200);
+      setTimeout(() => playBubblePop(640, 1880, 0.08), 300);
 
-      // Re-calculate LangGraph edge paths as nodes animate in
-      const steps = [80, 180, 300, 480, 680];
-      steps.forEach(delay => setTimeout(updateGraphEdges, delay));
+      const steps = [60, 150, 280, 450, 650];
+      steps.forEach(delay => setTimeout(updateRibbons, delay));
     }
 
-    function resetGraph() {
-      isGraphExpanded = false;
+    function resetPipeline() {
+      isExpanded = false;
       closeDrawer();
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('state-expanded');
       viewport.classList.add('state-collapsed');
 
-      playBubblePop(320, 750, 0.09);
+      playBubblePop(300, 750, 0.09);
     }
 
     function openDrawer(index) {
@@ -1285,10 +1188,10 @@
       viewport.classList.add('mode-detail');
 
       for (let i = 0; i < 4; i++) {
-        const node = document.getElementById(`char-${i}`);
-        node.classList.remove('is-active');
-        if (i === index) {
-          node.classList.add('is-active');
+        const card = document.getElementById(`card-${i}`);
+        if (card) {
+          card.classList.remove('is-active');
+          if (i === index) card.classList.add('is-active');
         }
       }
 
@@ -1343,32 +1246,31 @@
 
       document.getElementById('drawerActionBtn').onclick = item.actionFn;
 
-      setTimeout(updateGraphEdges, 300);
+      setTimeout(updateRibbons, 300);
     }
 
     function closeDrawer() {
       currentIdx = null;
-      playBubblePop(340, 820, 0.08);
+      playBubblePop(320, 800, 0.08);
 
       const viewport = document.getElementById('viewport');
       viewport.classList.remove('mode-detail');
       viewport.classList.add('mode-overview');
 
       for (let i = 0; i < 4; i++) {
-        const node = document.getElementById(`char-${i}`);
-        node.classList.remove('is-active');
+        const card = document.getElementById(`card-${i}`);
+        if (card) card.classList.remove('is-active');
       }
 
-      setTimeout(updateGraphEdges, 300);
+      setTimeout(updateRibbons, 300);
     }
 
-    // Keyboard navigation
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         if (currentIdx !== null) {
           closeDrawer();
-        } else if (isGraphExpanded) {
-          resetGraph();
+        } else if (isExpanded) {
+          resetPipeline();
         }
       }
     });
