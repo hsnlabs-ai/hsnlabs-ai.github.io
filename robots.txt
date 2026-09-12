@@ -1,0 +1,130 @@
+# ==============================================================================
+# robots.txt for The Steadfast Labs (https://thesteadfastlabs.com)
+# Configured for Standard Search Engines & Generative AI / GEO / AEO Crawlers
+# ==============================================================================
+
+# Default rule for all web crawlers
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /assets/private/
+Allow: /
+
+# OpenAI Crawlers (ChatGPT, SearchGPT, Model Training)
+User-agent: GPTBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: OAI-SearchBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Anthropic Crawlers (Claude, Claude-Web, Training)
+User-agent: ClaudeBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: Claude-Web
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: anthropic-ai
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Perplexity AI Search & Answer Engine
+User-agent: PerplexityBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Google Search & Gemini / Vertex AI Training
+User-agent: Googlebot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Apple Intelligence & Siri Web Indexing
+User-agent: Applebot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: Applebot-Extended
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# ByteDance AI & Doubao
+User-agent: Bytespider
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Common Crawl (Foundation model datasets)
+User-agent: CCBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Meta AI / Llama Web Ingestion
+User-agent: Meta-ExternalAgent
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+User-agent: FacebookBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Amazon AI / Bedrock / Alexa
+User-agent: Amazonbot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Diffbot Knowledge Graph AI
+User-agent: Diffbot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Disallow: /private/
+Disallow: /admin/
+Allow: /
+
+# Sitemaps & AI Context Endpoints
+Sitemap: https://thesteadfastlabs.com/sitemap.xml
+# LLM Context: https://thesteadfastlabs.com/llms.txt
+# Full LLM Context: https://thesteadfastlabs.com/llms-full.txt
+# AI Agent Policy: https://thesteadfastlabs.com/ai.txt

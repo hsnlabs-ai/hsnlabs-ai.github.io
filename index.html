@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSN Labs</title>
+  <meta name="description" content="HSN Labs — Forward Deployed Engineering, Proto-Ontologies, AI Bootcamp, and Careers in Mission-Critical Systems.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'><rect width='32' height='32' rx='8' fill='%23000'/><circle cx='16' cy='16' r='8' fill='%23FFFFFF'/></svg>">
+
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Sound Control Button */
+    .sound-toggle {
+      position: fixed;
+      top: 28px;
+      left: 28px;
+      background: transparent;
+      border: none;
+      color: #71717A;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      transition: color 0.2s, transform 0.2s;
+      z-index: 100;
+    }
+    .sound-toggle:hover {
+      color: #FFFFFF;
+      transform: scale(1.1);
+    }
+    .sound-toggle svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Viewport Stage */
+    .viewport {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      position: relative;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .carousel-stage {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Floating Tooltip Capsule */
+    .floating-tooltip {
+      position: absolute;
+      top: -46px;
+      background: #18181B;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 120;
+      white-space: nowrap;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+    }
+    .char-node:hover .floating-tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Asynchronous Floating Physics */
+    @keyframes floatAtom {
+      0% { transform: translateY(-6px) rotate(-2deg); }
+      50% { transform: translateY(-20px) rotate(-0.5deg); }
+      100% { transform: translateY(-6px) rotate(-2deg); }
+    }
+
+    @keyframes floatChain {
+      0% { transform: translateY(2px) rotate(1deg); }
+      50% { transform: translateY(14px) rotate(2.5deg); }
+      100% { transform: translateY(2px) rotate(1deg); }
+    }
+
+    @keyframes floatHourglass {
+      0% { transform: translateY(14px) rotate(-1.5deg); }
+      50% { transform: translateY(-2px) rotate(0.5deg); }
+      100% { transform: translateY(14px) rotate(-1.5deg); }
+    }
+
+    @keyframes floatPeople {
+      0% { transform: translateY(4px) rotate(1.5deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+      100% { transform: translateY(4px) rotate(1.5deg); }
+    }
+
+    .characters-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 520px;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .char-node {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), 
+                  filter 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Mobile 2x2 Grid Layout */
+    @media (max-width: 768px) {
+      .characters-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 300px;
+        height: 300px;
+        gap: 0px;
+        justify-items: center;
+        align-items: center;
+      }
+      .viewport.mode-overview .char-node {
+        margin: 0 !important;
+        transform: scale(0.68) !important;
+      }
+      .badge-svg { width: 145px; height: 145px; }
+
+      .viewport.mode-detail {
+        flex-direction: column;
+      }
+      .viewport.mode-detail .carousel-stage {
+        height: 40%;
+      }
+      .viewport.mode-detail .spec-drawer {
+        width: 100vw !important;
+        height: 60% !important;
+        padding: 32px 24px 24px 24px !important;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .viewport.mode-detail .char-node.is-active {
+        transform: scale(0.85) translateY(0) !important;
+      }
+    }
+
+    /* Desktop Cluster: Cohesive Die-Cut Vinyl Sticker Pillows */
+    @media (min-width: 769px) {
+      .viewport.mode-overview .char-node {
+        opacity: 1;
+      }
+      .viewport.mode-overview #char-0 {
+        z-index: 20;
+        margin-right: -72px;
+        animation: floatAtom 5.2s ease-in-out infinite;
+      }
+      .viewport.mode-overview #char-0:hover {
+        animation-play-state: paused;
+        transform: translateY(-24px) rotate(-1deg) scale(1.06) !important;
+        z-index: 50;
+        filter: drop-shadow(0 22px 35px rgba(167, 139, 250, 0.45));
+      }
+
+      .viewport.mode-overview #char-1 {
+        z-index: 10;
+        margin-right: -68px;
+        animation: floatChain 6.4s ease-in-out infinite 0.8s;
+      }
+      .viewport.mode-overview #char-1:hover {
+        animation-play-state: paused;
+        transform: translateY(-14px) rotate(1deg) scale(1.06) !important;
+        z-index: 50;
+        filter: drop-shadow(0 22px 35px rgba(251, 146, 60, 0.45));
+      }
+
+      .viewport.mode-overview #char-2 {
+        z-index: 15;
+        margin-right: -64px;
+        animation: floatHourglass 5.8s ease-in-out infinite 1.6s;
+      }
+      .viewport.mode-overview #char-2:hover {
+        animation-play-state: paused;
+        transform: translateY(-4px) rotate(-1deg) scale(1.06) !important;
+        z-index: 50;
+        filter: drop-shadow(0 22px 35px rgba(56, 189, 248, 0.45));
+      }
+
+      .viewport.mode-overview #char-3 {
+        z-index: 5;
+        animation: floatPeople 6.8s ease-in-out infinite 2.4s;
+      }
+      .viewport.mode-overview #char-3:hover {
+        animation-play-state: paused;
+        transform: translateY(-12px) rotate(2deg) scale(1.06) !important;
+        z-index: 50;
+        filter: drop-shadow(0 22px 35px rgba(52, 211, 153, 0.45));
+      }
+    }
+
+    /* Detail Mode (Drawer Open) */
+    .viewport.mode-detail .char-node {
+      position: absolute;
+      transform: scale(0.42) !important;
+      opacity: 0.25;
+      pointer-events: auto;
+      filter: blur(1px);
+      margin: 0 !important;
+    }
+    .viewport.mode-detail .char-node:hover {
+      opacity: 0.6;
+      filter: blur(0px);
+    }
+    .viewport.mode-detail .char-node.is-active {
+      position: relative;
+      transform: scale(1.22) translateY(0) !important;
+      opacity: 1;
+      filter: none;
+      z-index: 40;
+    }
+    .viewport.mode-detail .char-node.is-prev {
+      left: -180px;
+      opacity: 0.28;
+    }
+    .viewport.mode-detail .char-node.is-next {
+      right: -180px;
+      opacity: 0.28;
+    }
+
+    /* Cohesive Badge Sizing & Shadow */
+    .badge-svg {
+      width: 220px;
+      height: 220px;
+      display: block;
+      filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.9));
+    }
+
+    /* Arrow Pill Navigator */
+    .carousel-arrows {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #141416;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .viewport.mode-detail .carousel-arrows {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .arrow-btn {
+      background: transparent;
+      border: none;
+      color: #9CA3AF;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 2px;
+      transition: color 0.15s;
+    }
+    .arrow-btn:hover {
+      color: #FFFFFF;
+    }
+
+    /* Bottom Brand Bar */
+    .bottom-brand {
+      position: absolute;
+      bottom: 34px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      z-index: 30;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .viewport.mode-detail .bottom-brand {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(15px);
+    }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+    .logo-text {
+      font-family: 'Satoshi', 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: 26px;
+      letter-spacing: 0.28em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .sub-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #71717A;
+      letter-spacing: -0.01em;
+    }
+    .sub-links a {
+      color: #8E8E93;
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+    .sub-links a:hover {
+      color: #FFFFFF;
+    }
+    .dot {
+      color: #52525B;
+      font-size: 12px;
+    }
+
+    /* RIGHT DRAWER */
+    .spec-drawer {
+      width: 0px;
+      height: 100%;
+      background: #08090C;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0;
+      opacity: 0;
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .viewport.mode-detail .spec-drawer {
+      width: 480px;
+      padding: 56px 44px 44px 44px;
+      opacity: 1;
+    }
+    @media (min-width: 1400px) {
+      .viewport.mode-detail .spec-drawer {
+        width: 540px;
+        padding: 64px 52px 48px 52px;
+      }
+    }
+
+    .spec-drawer::-webkit-scrollbar {
+      width: 5px;
+    }
+    .spec-drawer::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .spec-drawer::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 4px;
+    }
+
+    .drawer-close {
+      position: sticky;
+      top: 0;
+      align-self: flex-end;
+      background: rgba(8, 9, 12, 0.8);
+      backdrop-filter: blur(8px);
+      border: none;
+      color: #71717A;
+      font-size: 24px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 50%;
+      transition: color 0.15s;
+      z-index: 20;
+      margin-top: -24px;
+      margin-right: -16px;
+    }
+    .drawer-close:hover {
+      color: #FFFFFF;
+    }
+
+    .spec-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .spec-desc {
+      font-size: 14px;
+      line-height: 1.68;
+      color: #A1A1AA;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 32px;
+    }
+    .spec-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 13px;
+    }
+    .spec-label {
+      color: #71717A;
+    }
+    .spec-val {
+      color: #F4F4F5;
+      font-weight: 500;
+    }
+
+    .badge-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #E4E4E7;
+    }
+
+    .drawer-deep-dive {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      margin-bottom: 30px;
+    }
+    .deep-title {
+      font-size: 11px;
+      font-mono: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #71717A;
+      margin-bottom: 14px;
+    }
+    .deep-block {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .deep-block h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .deep-block p {
+      font-size: 12px;
+      line-height: 1.6;
+      color: #94A3B8;
+    }
+
+    .drawer-footer {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+    }
+    .drawer-microcopy {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #52525B;
+      margin-bottom: 16px;
+    }
+
+    .drawer-action-btn {
+      width: 100%;
+      padding: 14px;
+      border-radius: 9999px;
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .drawer-action-btn:hover {
+      background: #E4E4E7;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="soundToggle" class="sound-toggle" aria-label="Toggle Sound">
+    <svg id="soundIcon" viewBox="0 0 24 24">
+      <path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77zm-2.5 0L6.5 7H2v10h4.5l5 3.77V3.23z"/>
+    </svg>
+  </button>
+
+  <div id="viewport" class="viewport mode-overview">
+
+    <div class="carousel-stage">
+      
+      <div class="characters-track" id="charactersTrack">
+
+        <!-- 0. HSN LABS: Atomic Orbital Die-Cut Sticker (Purple / Lavender) -->
+        <div class="char-node" id="char-0" onclick="selectCharacter(0)">
+          <div class="floating-tooltip">HSN Labs</div>
+          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Die-Cut Vinyl Contour (Thick White Base + Lavender Outer Rim) -->
+            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#A78BFA" stroke-width="12" stroke-linejoin="round"/>
+            <!-- Solid Deep Dark Bed -->
+            <rect x="37" y="37" width="166" height="166" rx="45" fill="#13111C"/>
+
+            <!-- Atomic Orbital Core & Ellipses (Pure Clean Geometry) -->
+            <!-- Nucleus -->
+            <circle cx="120" cy="120" r="16" fill="#FFFFFF"/>
+            
+            <!-- Orbital Ring 1 (Horizontal) -->
+            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+            
+            <!-- Orbital Ring 2 (Tilted +60deg) -->
+            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(60 120 120)"/>
+            
+            <!-- Orbital Ring 3 (Tilted -60deg) -->
+            <ellipse cx="120" cy="120" rx="66" ry="24" stroke="#FFFFFF" stroke-width="8" fill="none" transform="rotate(-60 120 120)"/>
+
+            <!-- Satellite Electron Nodes on Orbits -->
+            <circle cx="178" cy="120" r="6" fill="#A78BFA"/>
+            <circle cx="91" cy="68" r="6" fill="#A78BFA"/>
+            <circle cx="91" cy="172" r="6" fill="#A78BFA"/>
+          </svg>
+        </div>
+
+        <!-- 1. PROTO-ONTOLOGIES: Interlinked Chain Link Sticker (Orange / Amber) -->
+        <div class="char-node" id="char-1" onclick="selectCharacter(1)">
+          <div class="floating-tooltip">Proto-Ontologies</div>
+          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Die-Cut Vinyl Contour (Thick White Base + Orange Outer Rim) -->
+            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#FB923C" stroke-width="12" stroke-linejoin="round"/>
+            <!-- Solid Deep Dark Bed -->
+            <rect x="37" y="37" width="166" height="166" rx="45" fill="#19120E"/>
+
+            <!-- Interlocked Chain Links (Exact Reference match, Solid Pure White) -->
+            <g transform="rotate(-45 120 120)" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <!-- Top Chain Loop -->
+              <path d="M120 78H98C87 78 78 87 78 98V118C78 129 87 138 98 138H120"/>
+              <!-- Bottom Chain Loop (Interlinked) -->
+              <path d="M120 102H142C153 102 162 111 162 122V142C162 153 153 162 142 162H120"/>
+              <!-- Diagonal Intersecting Lock Bar -->
+              <line x1="98" y1="138" x2="142" y2="102" stroke="#FFFFFF" stroke-width="14"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- 2. AI BOOTCAMP: Precision Hourglass Sticker (Sky / Electric Blue) -->
+        <div class="char-node" id="char-2" onclick="selectCharacter(2)">
+          <div class="floating-tooltip">AI Bootcamp</div>
+          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Die-Cut Vinyl Contour (Thick White Base + Blue Outer Rim) -->
+            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#38BDF8" stroke-width="12" stroke-linejoin="round"/>
+            <!-- Solid Deep Dark Bed -->
+            <rect x="37" y="37" width="166" height="166" rx="45" fill="#0E1620"/>
+
+            <!-- Minimalist Bold Hourglass Silhouette in Pure White -->
+            <!-- Top Cap Bar -->
+            <rect x="74" y="66" width="92" height="12" rx="6" fill="#FFFFFF"/>
+            <!-- Bottom Cap Bar -->
+            <rect x="74" y="162" width="92" height="12" rx="6" fill="#FFFFFF"/>
+
+            <!-- Flowing Hourglass Outline -->
+            <path d="M84 78C84 106 112 116 116 120C112 124 84 134 84 162H156C156 134 128 124 124 120C128 116 156 106 156 78H84Z" 
+                  stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round" fill="none"/>
+
+            <!-- Upper Chamber Level -->
+            <path d="M96 88H144C144 100 134 108 120 114C106 108 96 100 96 88Z" fill="#FFFFFF"/>
+            <!-- Sand Stream -->
+            <line x1="120" y1="114" x2="120" y2="136" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+            <!-- Lower Chamber Level -->
+            <path d="M96 152H144C144 144 136 138 120 138C104 138 96 144 96 152Z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+
+        <!-- 3. CAREERS: Connected Team / People Sticker (Emerald Green) -->
+        <div class="char-node" id="char-3" onclick="selectCharacter(3)">
+          <div class="floating-tooltip">Careers</div>
+          <svg class="badge-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Die-Cut Vinyl Contour (Thick White Base + Emerald Outer Rim) -->
+            <rect x="25" y="25" width="190" height="190" rx="55" fill="#FFFFFF" stroke="#10B981" stroke-width="12" stroke-linejoin="round"/>
+            <!-- Solid Deep Dark Bed -->
+            <rect x="37" y="37" width="166" height="166" rx="45" fill="#0D1914"/>
+
+            <!-- 3 Connected People Squad in Pure White -->
+            <!-- Left Person -->
+            <circle cx="82" cy="108" r="14" fill="#FFFFFF"/>
+            <path d="M60 160C60 142 70 134 82 134C94 134 104 142 104 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+
+            <!-- Right Person -->
+            <circle cx="158" cy="108" r="14" fill="#FFFFFF"/>
+            <path d="M136 160C136 142 146 134 158 134C170 134 180 142 180 160" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" fill="none"/>
+
+            <!-- Center Lead FDE (Elevated, Focal Point) -->
+            <circle cx="120" cy="88" r="17" fill="#FFFFFF"/>
+            <path d="M92 146C92 124 104 116 120 116C136 116 148 124 148 146" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+            <!-- Collaborative Bridge Link -->
+            <path d="M96 108H144" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="4 4"/>
+          </svg>
+        </div>
+
+      </div>
+
+      <!-- Arrow Capsule Navigator -->
+      <div class="carousel-arrows">
+        <button class="arrow-btn" onclick="navigate(-1)" aria-label="Previous">&lt;</button>
+        <button class="arrow-btn" onclick="navigate(1)" aria-label="Next">&gt;</button>
+      </div>
+
+      <!-- Bottom Brand Bar -->
+      <div class="bottom-brand">
+        <a href="javascript:void(0)" onclick="resetToOverview()" class="brand-logo-wrap">
+          <span class="logo-text">HSN LABS</span>
+        </a>
+        <div class="sub-links">
+          <a href="javascript:void(0)" onclick="selectCharacter(0)">HSN Labs</a>
+          <span class="dot">•</span>
+          <a href="javascript:void(0)" onclick="selectCharacter(1)">Proto-Ontologies</a>
+          <span class="dot">•</span>
+          <a href="javascript:void(0)" onclick="selectCharacter(2)">Bootcamp</a>
+          <span class="dot">•</span>
+          <a href="javascript:void(0)" onclick="selectCharacter(3)">Careers</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scrollable Detail Drawer -->
+    <aside class="spec-drawer" id="specDrawer">
+      <button class="drawer-close" onclick="resetToOverview()" aria-label="Close">&times;</button>
+      
+      <div id="drawerBody"></div>
+      <div id="drawerDeepDive" class="drawer-deep-dive"></div>
+      <div class="drawer-footer" id="drawerFooter"></div>
+    </aside>
+
+  </div>
+
+  <script>
+    let soundActive = true;
+    let audioContext = null;
+    let currentIdx = null;
+
+    const catalog = [
+      {
+        id: 0,
+        name: "HSN Labs",
+        description: "Boutique de Forward Deployed Engineering (FDE). We engineer custom deterministic AI systems grounded in your real business ontology for mission-critical operations with massive data volumes.",
+        surfaces: ["Boutique FDE", "Enterprise VPC"],
+        industry: "Enterprise AI",
+        since: "2026",
+        ecosystem: "Databricks · Neo4j · AWS · Claude",
+        status: "Active",
+        deepDiveTitle: "The FDE Operational Doctrine",
+        deepDiveBlocks: [
+          {
+            title: "The Invariant Law of Compounding Drift",
+            text: "Generalist LLMs decay exponentially across multi-step agent graphs: a 95% single-turn accuracy collapses to 59% after just 10 autonomous tool transitions. Production enterprise agents fail not from model weakness, but because probabilistic models lack an executable ontological boundary."
+          },
+          {
+            title: "Anti-Consultancy Tenancy",
+            text: "Traditional consultancies deploy junior trainees to bill hours while producing slide decks. HSN Labs embeds senior Forward Deployed Engineers inside your private perimeter, operating on fixed 2-week delivery increments with verifiable acceptance criteria."
+          },
+          {
+            title: "Deterministic Mission-Critical Core",
+            text: "We specialize where relational SQL and standard RAG fail: Bacen MED 2.0 (Resolução BCB nº 493/2025) 5-layer mule tracing and healthcare TISS/TUSS glosa leakage prevention."
+          }
+        ],
+        microcopy: "Modular scale sprints deployed directly into your enterprise tenancy at $6,000 / R$ 35k per sprint.",
+        actionLabel: "Apply for FDE Deployment",
+        actionFn: () => selectCharacter(2)
+      },
+      {
+        id: 1,
+        name: "Proto-Ontologies",
+        description: "The open schema standard for autonomous agents. Minimalist, opinionated seed schemas in Pydantic v2 and Cypher DDL that eliminate token burn and schema hallucinations in GraphRAG pipelines.",
+        surfaces: ["Open Source", "PyPI", "MCP"],
+        industry: "Knowledge Graph",
+        since: "2026",
+        ecosystem: "Pydantic v2 · Neo4j · FastMCP",
+        status: "Public Good",
+        deepDiveTitle: "The Open Architecture",
+        deepDiveBlocks: [
+          {
+            title: "Bounding Graph Extraction to Eliminate Hallucinations",
+            text: "Schema-free GraphRAG produces combinatorial entity explosions and runaway inference costs. Injecting an immutable seed schema enforces strict semantic boundaries, reducing LLM token burn by up to 90% in high-volume enterprise ingestion."
+          },
+          {
+            title: "Production Canonical Specifications",
+            text: "• br-fintech-pix-med2: 5-layer rapid mule account dispersion.<br>• br-healthcare-tiss-glosas: Clinical protocol & revenue leak mitigation.<br>• enterprise-b2b-mdm: Cross-system entity resolution."
+          },
+          {
+            title: "Model Context Protocol (MCP) Runtime Engine",
+            text: "Published as native FastMCP servers and llms.txt specs, enabling autonomous runtime inspection for Claude Desktop, Cursor, and enterprise multi-agent workflows."
+          }
+        ],
+        microcopy: "Licensed under MIT. Open specifications available on GitHub for the global AI engineering community.",
+        actionLabel: "Explore GitHub Repository",
+        actionFn: () => window.open('https://github.com/hsnlabs-ai/proto-ontologies', '_blank')
+      },
+      {
+        id: 2,
+        name: "AI Bootcamp",
+        description: "A 5-day on-site production immersion inspired by the Palantir deployment playbook. We compress months of enterprise hesitation into 5 days of intensive engineering on live sanitized data.",
+        surfaces: ["On-Site", "Sandbox VPC"],
+        industry: "Decision Acceleration",
+        since: "2026",
+        ecosystem: "Tier 1: Free · Tier 2: $2.5k",
+        status: "Booking Q4",
+        deepDiveTitle: "5-Day Execution Blueprint",
+        deepDiveBlocks: [
+          {
+            title: "Day 01 & 02: Ingestion & Ontology Lockdown",
+            text: "Air-gapped deployment inside your private VPC. We ingest sanitized schemas and formalize your operational entities, edge constraints, and regulatory invariants."
+          },
+          {
+            title: "Day 03 & 04: Agentic Assembly & Adversarial Evals",
+            text: "Our embedded squad writes the deterministic agent runtime and wires legacy enterprise APIs, subjected to automated stress testing and error-boundary evaluations."
+          },
+          {
+            title: "Day 05: C-Level ROI Signoff & Rollout Path",
+            text: "Live demonstration for CFO/COO/CTO on real infrastructure, featuring audited P&L savings and a clear transition plan for modular scale sprints."
+          }
+        ],
+        microcopy: "Tier 1 is selective for enterprises > $10M / R$ 50M. Tier 2 covers dedicated squad operational costs.",
+        actionLabel: "Submit Immersion Application",
+        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Bootcamp%20Application%20Request'
+      },
+      {
+        id: 3,
+        name: "Careers",
+        description: "We are assembling exceptional Forward Deployed Engineers, distributed systems architects, and knowledge graph researchers who want to build mission-critical systems in production.",
+        surfaces: ["Senior FDE", "Trainee"],
+        industry: "Talent & Engineering",
+        since: "2026",
+        ecosystem: "Python · Cypher · Distributed AI",
+        status: "Open Roles",
+        deepDiveTitle: "The Engineering Culture",
+        deepDiveBlocks: [
+          {
+            title: "Direct Client Ownership & Code Over Slides",
+            text: "You won't write slide decks or calculate billable hours. You write production Python (Pydantic v2), Cypher graph DDLs, and run automated evals inside client infrastructure."
+          },
+          {
+            title: "Senior FDE Track",
+            text: "For engineers experienced with distributed data pipelines, Neo4j/Memgraph, enterprise auth, and low-latency system reliability. Direct client ownership."
+          },
+          {
+            title: "Fast-Track Trainee Academy",
+            text: "Intensive apprenticeship alongside founding partners, mastering formal ontologies, agentic protocols (MCP), and enterprise forward-deployed delivery."
+          }
+        ],
+        microcopy: "Full-remote flexibility, equity participation on venture contracts, and direct exposure to enterprise leadership.",
+        actionLabel: "Send Code & Portfolio",
+        actionFn: () => window.location.href = 'mailto:contato@hsnlabs.ai?subject=Engineering%20Career%20Inquiry'
+      }
+    ];
+
+    function triggerAudio(frequency = 440, type = 'sine', duration = 0.08) {
+      if (!soundActive) return;
+      try {
+        if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioContext.state === 'suspended') audioContext.resume();
+
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(frequency, audioContext.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(frequency * 1.4, audioContext.currentTime + duration);
+
+        gain.gain.setValueAtTime(0.12, audioContext.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+
+        osc.start();
+        osc.stop(audioContext.currentTime + duration);
+      } catch (e) {}
+    }
+
+    document.getElementById('soundToggle').addEventListener('click', () => {
+      soundActive = !soundActive;
+      document.getElementById('soundToggle').style.opacity = soundActive ? '1' : '0.25';
+      if (soundActive) triggerAudio(520, 'sine', 0.1);
+    });
+
+    document.querySelectorAll('.char-node').forEach((node, i) => {
+      const freqs = [340, 440, 540, 640];
+      node.addEventListener('mouseenter', () => {
+        if (currentIdx === null) triggerAudio(freqs[i], 'triangle', 0.08);
+      });
+    });
+
+    function selectCharacter(index) {
+      currentIdx = index;
+      triggerAudio(580 + (index * 40), 'sine', 0.12);
+
+      const viewport = document.getElementById('viewport');
+      viewport.classList.remove('mode-overview');
+      viewport.classList.add('mode-detail');
+
+      for (let i = 0; i < 4; i++) {
+        const node = document.getElementById(`char-${i}`);
+        node.classList.remove('is-active', 'is-prev', 'is-next');
+        
+        if (i === index) {
+          node.classList.add('is-active');
+        } else if (i === (index - 1 + 4) % 4) {
+          node.classList.add('is-prev');
+        } else if (i === (index + 1) % 4) {
+          node.classList.add('is-next');
+        }
+      }
+
+      const item = catalog[index];
+      const badges = item.surfaces.map(s => `<span class="badge-pill">${s}</span>`).join(' ');
+
+      document.getElementById('drawerBody').innerHTML = `
+        <h2 class="spec-title">${item.name}</h2>
+        <p class="spec-desc">${item.description}</p>
+        
+        <div class="spec-table">
+          <div class="spec-row">
+            <span class="spec-label">Surfaces</span>
+            <span class="spec-val">${badges}</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Industry</span>
+            <span class="spec-val">${item.industry}</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Since</span>
+            <span class="spec-val">${item.since}</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Ecosystem</span>
+            <span class="spec-val text-xs text-zinc-300 font-mono">${item.ecosystem}</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Status</span>
+            <span class="spec-val text-emerald-400 font-mono text-xs">${item.status}</span>
+          </div>
+        </div>
+      `;
+
+      const blocksHtml = item.deepDiveBlocks.map(b => `
+        <div class="deep-block">
+          <h4>${b.title}</h4>
+          <p>${b.text}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('drawerDeepDive').innerHTML = `
+        <div class="deep-title">[ ${item.deepDiveTitle} ]</div>
+        ${blocksHtml}
+      `;
+
+      document.getElementById('drawerFooter').innerHTML = `
+        <div class="drawer-microcopy">${item.microcopy}</div>
+        <button class="drawer-action-btn" id="drawerActionBtn">${item.actionLabel} &rarr;</button>
+      `;
+
+      document.getElementById('drawerActionBtn').onclick = item.actionFn;
+    }
+
+    function resetToOverview() {
+      currentIdx = null;
+      triggerAudio(320, 'sine', 0.08);
+
+      const viewport = document.getElementById('viewport');
+      viewport.classList.remove('mode-detail');
+      viewport.classList.add('mode-overview');
+
+      for (let i = 0; i < 4; i++) {
+        const node = document.getElementById(`char-${i}`);
+        node.classList.remove('is-active', 'is-prev', 'is-next');
+      }
+    }
+
+    function navigate(direction) {
+      if (currentIdx === null) return;
+      let nextIdx = (currentIdx + direction + 4) % 4;
+      selectCharacter(nextIdx);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') resetToOverview();
+      if (currentIdx !== null) {
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://thesteadfastlabs.com/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thesteadfastlabs.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesteadfastlabs.com/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thesteadfastlabs.com/" />
+    <image:image>
+      <image:loc>https://thesteadfastlabs.com/assets/hero_poster.webp</image:loc>
+      <image:title>sflabs | Deterministic Control for Stochastic Systems</image:title>
+      <image:caption>sflabs — Agentic Reliability Engineering and Forward Deployed Engineering for enterprise AI systems.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://thesteadfastlabs.com/careers.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thesteadfastlabs.com/careers.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thesteadfastlabs.com/careers.html" />
+  </url>
+  <url>
+    <loc>https://thesteadfastlabs.com/bfsi.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thesteadfastlabs.com/bfsi.html" />
+  </url>
+  <url>
+    <loc>https://thesteadfastlabs.com/healthcare.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thesteadfastlabs.com/healthcare.html" />
+  </url>
+  <url>
+    <loc>https://thesteadfastlabs.com/roi-calculator.html</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thesteadfastlabs.com/roi-calculator.html" />
+  </url>
+</urlset>

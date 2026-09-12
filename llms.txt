@@ -1,0 +1,25 @@
+# HSN Labs | Boutique de Forward Deployed Engineering em IA
+
+> A HSN Labs é uma boutique de Forward Deployed Engineering (FDE) especializada em desenvolver agentes de IA sob medida a partir da ontologia real do negócio do cliente. Entregas modulares, metodologia proprietária e rollout seguro para operações corporativas de missão crítica com grandes volumes de dados.
+
+## Posicionamento Canônico & Proposta de Valor
+- [Frase Canônica](https://hsnlabs.ai/): Boutique de Forward Deployed Engineering (FDE). Desenvolvemos agentes de IA sob medida a partir da ontologia real do seu negócio. Entregas modulares, metodologia proprietária e rollout seguro para operações de missão crítica com grandes volumes de dados.
+- [Por que Sistemas e Agentes Falham em Produção](https://hsnlabs.ai/#tese): Análise fundamentada em dados empíricos auditados (S&P Global 2025: 42% de abandono; Gartner: 40% de cancelamento até 2027; Atlan 2026: menos de 15% dos pilotos de grafos sobrevivem).
+- [Contraste Operacional](https://hsnlabs.ai/#inimigo): Zero slides em PDF e zero juniores na operação. Engenharia sênior na trincheira contra o modelo tradicional de faturamento por homem-hora de consultorias generalistas de TI.
+
+## Oferta de Entrada & Modelo de Engajamento
+- [AI Bootcamp de 5 Dias](https://hsnlabs.ai/#bootcamp): Imersão prática na infraestrutura do cliente. Do acesso a dados reais no Dia 1 à demonstração funcional para o C-Level no Dia 5.
+  - Tier 1 (Gratuito Seletivo): Empresas com faturamento superior a R$ 50 milhões/ano, grande volume de dados e budget corporativo aprovado.
+  - Tier 2 (R$ 12.000): Médias empresas que demandam a imersão da squad sênior (taxa cobre custos operacionais).
+- [Sprints Modulares de FDE](https://hsnlabs.ai/#bootcamp): Continuidade de entrega e escala a R$ 35.000 por sprint quinzenal.
+
+## Casos Canônicos de Missão Crítica
+- [Pix MED 2.0 (Fintech & Bancos)](https://hsnlabs.ai/#casos): Resolução BCB nº 493/2025. Rastreamento em 5 camadas de contas-mula, detecção de dispersão rápida (< 180s) e bloqueio cautelar em grafos Neo4j/Memgraph.
+- [Glosas Médicas TISS/TUSS (Saúde Suplementar)](https://hsnlabs.ai/#casos): Auditoria semântica e conciliação prévia de contas hospitalares perante diretrizes da ANS para estancar sangrias de 10% a 15% do EBITDA.
+
+## Ecossistema Open Source
+- [Proto-Ontologies](https://github.com/hsnlabs-ai/proto-ontologies): Catálogo aberto de seed schemas executáveis (Pydantic v2 + Cypher DDL + JSON-Schema) para ancoragem de agentes autônomos.
+
+## Contato & Canais
+- E-mail: contato@hsnlabs.ai
+- Repositório GitHub: https://github.com/hsnlabs-ai
