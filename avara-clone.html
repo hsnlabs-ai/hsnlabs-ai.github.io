@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avara</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --bg: #000000;
+      --purple: #8B5CF6;
+      --orange: #F97316;
+      --blue: #3B82F6;
+      --green: #10B981;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: #FFF;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Left Sound Icon */
+    .sound-toggle {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      background: transparent;
+      border: none;
+      color: #666;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      transition: color 0.2s;
+    }
+    .sound-toggle:hover { color: #FFF; }
+
+    /* Bottom Center AVARA Logo & Links */
+    .bottom-nav {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 100;
+      gap: 16px;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    body.panel-open .bottom-nav {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(20px);
+    }
+
+    .avara-logo-svg {
+      height: 24px;
+      fill: #FFF;
+    }
+
+    .bottom-links {
+      display: flex;
+      gap: 12px;
+      color: #666;
+      font-size: 13px;
+    }
+    .bottom-links a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .bottom-links a:hover { color: #FFF; }
+    .bottom-links span { opacity: 0.5; }
+
+    /* Container for the physics objects */
+    .physics-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Anchor wrappers */
+    .node-anchor {
+      position: absolute;
+      will-change: transform, z-index;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none; 
+      transition: z-index 0s;
+    }
+    .node-anchor.is-dragging {
+      z-index: 50 !important;
+    }
+
+    /* Glow Behind Each Icon */
+    .glow-blob {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--glow-color);
+      filter: blur(60px);
+      opacity: 0;
+      z-index: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+      pointer-events: none;
+    }
+    .node-anchor:hover .glow-blob, .node-anchor.is-toggled .glow-blob, .node-anchor.is-dragging .glow-blob {
+      opacity: 0.35;
+      transform: scale(1.2);
+    }
+    
+    body.panel-open .node-anchor.is-active .glow-blob {
+      opacity: 0.6;
+      filter: blur(80px);
+      transform: scale(1.5);
+    }
+
+    /* Draggable logo wrapper */
+    .draggable-logo {
+      position: relative;
+      z-index: 2;
+      cursor: grab;
+      pointer-events: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      -webkit-user-drag: none;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .node-anchor.is-dragging .draggable-logo {
+      cursor: grabbing;
+      transform: scale(0.9);
+      transition: transform 0.1s;
+    }
+    .node-anchor:not(.is-dragging):hover .draggable-logo {
+      transform: scale(1.05);
+    }
+    body.panel-open .node-anchor.is-active .draggable-logo {
+      transform: scale(1.3);
+    }
+    body.panel-open .node-anchor:not(.is-active) {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.5) !important;
+      transition: all 0.4s ease !important;
+    }
+
+    /* The actual image */
+    .draggable-logo img {
+      width: clamp(120px, 15vw, 240px);
+      height: auto;
+      object-fit: contain;
+      pointer-events: none;
+    }
+    
+    /* Specific sizing for Avara assets */
+    #node-aave img { width: clamp(100px, 12vw, 150px); }
+    #node-family img { width: clamp(90px, 11vw, 140px); }
+    #node-lens img { width: clamp(120px, 14vw, 170px); }
+    #node-gho img { width: clamp(100px, 12vw, 150px); }
+
+    /* The hidden labels revealed on hover */
+    .node-label {
+      position: absolute;
+      bottom: -15px;
+      color: #888;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(10px) scale(0.9);
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      white-space: nowrap;
+      background: linear-gradient(0deg, rgb(13, 13, 13), rgb(13, 13, 13)), rgba(191, 191, 191, 0.13);
+      padding: 10px 18px;
+      border-radius: 30px;
+      box-shadow: rgba(255, 255, 255, 0.02) 0px 0px 0px 1px inset, rgba(255, 255, 255, 0.04) 0px 1px 2px 0px inset;
+      z-index: 10;
+    }
+    .node-anchor:hover .node-label, .node-anchor.is-toggled .node-label {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      color: #FFF;
+    }
+    .node-anchor.is-dragging .node-label, body.panel-open .node-anchor .node-label {
+      opacity: 0 !important;
+    }
+
+    /* Side Panel */
+    .side-panel {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      bottom: 2rem;
+      width: 440px;
+      max-width: calc(100vw - 4rem);
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(2rem);
+      border-radius: 1.25rem;
+      padding: 3rem 4rem;
+      box-sizing: border-box;
+      transform: translateX(120%);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 4rem rgba(0,0,0,0.8);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .side-panel.is-open {
+      transform: translateX(0);
+    }
+    
+    .panel-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: transparent;
+      border: none;
+      color: #FFF;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .panel-close:hover { background: rgba(255,255,255,0.1); }
+
+    .panel-title {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 0 0 1rem 0;
+    }
+    .panel-desc {
+      font-size: 1.125rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #CCC;
+      margin-bottom: 2.5rem;
+    }
+    .panel-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2.5rem;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.875rem;
+      color: #888;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-val {
+      color: #FFF;
+      font-weight: 400;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .detail-badge {
+      position: relative;
+      background: transparent;
+      color: var(--panel-color);
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.375rem;
+    }
+    .detail-badge::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--panel-color);
+      opacity: 0.1;
+    }
+    .detail-badge::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 0 1px var(--panel-color);
+      opacity: 0.4;
+    }
+
+    /* Shift layout when panel opens */
+    body.panel-open .physics-container {
+      transform: translateX(-15vw);
+    }
+    
+    /* Carousel Arrows */
+    .carousel-arrows {
+      position: fixed;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      z-index: 100;
+      background: rgba(191, 191, 191, 0.13);
+      padding: 0.5rem;
+      border-radius: 2rem;
+      box-shadow: rgba(255, 255, 255, 0.04) 0px 1px 2px 0px inset;
+    }
+    body.panel-open .carousel-arrows {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(calc(-50% - 15vw));
+    }
+    .arrow-btn {
+      background: none;
+      border: none;
+      color: #FFF;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.33;
+      transition: opacity 0.2s;
+      padding: 0 10px;
+    }
+    .arrow-btn:hover { opacity: 1; }
+
+    @media (max-width: 920px) {
+      .side-panel {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 85svh;
+        transform: translateY(100%);
+        border-radius: 1.25rem 1.25rem 0 0;
+        padding: 2rem 2rem 6rem;
+      }
+      .side-panel.is-open { transform: translateY(0); }
+      body.panel-open .physics-container { transform: translateY(-20vh); }
+      body.panel-open .carousel-arrows {
+        bottom: 1.5rem;
+        transform: translateX(-50%);
+      }
+      .panel-close { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Left Sound Icon -->
+  <button class="sound-toggle" aria-label="Toggle sound">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 5L6 9H2V15H6L11 19V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15.54 8.46C16.4774 9.39764 17.004 10.6692 17.004 11.995C17.004 13.3208 16.4774 14.5924 15.54 15.53" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.07 4.93C20.9447 6.80528 21.9979 9.34836 21.9979 12C21.9979 14.6516 20.9447 17.1947 19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Physics Container -->
+  <div class="physics-container" id="container">
+    
+    <!-- Node 1: Aave -->
+    <div class="node-anchor" id="node-aave" style="transform: translate(-200px, 0px);" data-id="0">
+      <div class="glow-blob" style="--glow-color: var(--purple);"></div>
+      <div class="draggable-logo">
+        <img src="./assets/avara/aave.png" alt="Aave">
+      </div>
+      <div class="node-label">Aave Labs</div>
+    </div>
+
+    <!-- Node 2: Family -->
+    <div class="node-anchor" id="node-family" style="transform: translate(-70px, 0px);" data-id="1">
+      <div class="glow-blob" style="--glow-color: var(--orange);"></div>
+      <div class="draggable-logo">
+        <img src="./assets/avara/family.png" alt="Family">
+      </div>
+      <div class="node-label">Family</div>
+    </div>
+
+    <!-- Node 3: Lens -->
+    <div class="node-anchor" id="node-lens" style="transform: translate(70px, 0px);" data-id="2">
+      <div class="glow-blob" style="--glow-color: var(--blue);"></div>
+      <div class="draggable-logo">
+        <img src="./assets/avara/lens.png" alt="Lens">
+      </div>
+      <div class="node-label">Lens</div>
+    </div>
+
+    <!-- Node 4: Gho -->
+    <div class="node-anchor" id="node-gho" style="transform: translate(200px, 0px);" data-id="3">
+      <div class="glow-blob" style="--glow-color: var(--green);"></div>
+      <div class="draggable-logo">
+        <img src="./assets/avara/gho.png" alt="GHO">
+      </div>
+      <div class="node-label">GHO</div>
+    </div>
+  </div>
+
+  <!-- Carousel Arrows -->
+  <div class="carousel-arrows">
+    <button class="arrow-btn" id="btn-prev">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="arrow-btn" id="btn-next">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <svg class="avara-logo-svg" viewBox="0 0 160 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 28L2 0H8L19 22L30 0H36L22 28H16ZM56 28L42 0H48L59 22L70 0H76L62 28H56ZM96 28L82 0H88L99 22L110 0H116L102 28H96ZM136 28L122 0H128L139 22L150 0H156L142 28H136Z" />
+    </svg>
+    <div class="bottom-links">
+      <a href="#">X</a><span>&bull;</span><a href="#">Hey</a><span>&bull;</span><a href="#">Blog</a><span>&bull;</span><a href="#">Careers</a>
+    </div>
+  </div>
+
+  <!-- Side Panel -->
+  <div class="side-panel" id="sidePanel">
+    <button class="panel-close" id="btnClose">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <h1 class="panel-title" id="panelTitle">GHO</h1>
+    <p class="panel-desc" id="panelDesc">GHO, developed by Aave Labs, is a decentralized, over-collateralized stablecoin that's native to the Aave Protocol. It serves as an internet payment layer and as a reliable digital asset for storing value over time.</p>
+    
+    <div class="panel-details">
+      <div class="detail-row">
+        <dt>Surfaces</dt>
+        <dd class="detail-val detail-badge" id="panelCat">Stablecoin</dd>
+      </div>
+      <div class="detail-row">
+        <dt>Industry</dt>
+        <dd class="detail-val" id="panelInd">DeFi</dd>
+      </div>
+      <div class="detail-row">
+        <dt>Since</dt>
+        <dd class="detail-val" id="panelYear">2023</dd>
+      </div>
+      <div class="detail-row">
+        <dt>Chains</dt>
+        <dd class="detail-val">EVM</dd>
+      </div>
+      <div class="detail-row">
+        <dt>Status</dt>
+        <dd class="detail-val" style="color: #10B981;">Active</dd>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Original Avara Data
+    const nodeData = [
+      { id: 'node-aave', title: "Aave Labs", desc: "Aave Labs is a software development company that builds decentralized protocols and applications, including the Aave Protocol.", cat: "Protocol", ind: "DeFi", year: "2017", color: "#8B5CF6" },
+      { id: 'node-family', title: "Family", desc: "Family is a crypto wallet that allows users to manage, explore, and discover the world of decentralized finance and Web3 seamlessly.", cat: "Wallet", ind: "Web3", year: "2023", color: "#F97316" },
+      { id: 'node-lens', title: "Lens", desc: "Lens Protocol is a Web3 social graph on the Polygon Proof-of-Stake blockchain designed to empower creators to own the links between themselves and their community.", cat: "Social Graph", ind: "Social", year: "2022", color: "#3B82F6" },
+      { id: 'node-gho', title: "GHO", desc: "GHO, developed by Aave Labs, is a decentralized, over-collateralized stablecoin that's native to the Aave Protocol.", cat: "Stablecoin", ind: "DeFi", year: "2023", color: "#10B981" }
+    ];
+
+    const nodes = document.querySelectorAll('.node-anchor');
+    const sidePanel = document.getElementById('sidePanel');
+    const btnClose = document.getElementById('btnClose');
+    
+    let isDragging = false;
+    let currentDragNode = null;
+    let startX = 0, startY = 0;
+    let hasMoved = false;
+    let activeNodeIdx = -1;
+    
+    // Physics State
+    const state = [];
+    nodes.forEach((node) => {
+      const transform = node.style.transform;
+      const match = transform.match(/translate\(([^p]+)px,\s*([^p]+)px\)/);
+      let targetX = match ? parseFloat(match[1]) : 0;
+      let targetY = match ? parseFloat(match[2]) : 0;
+      
+      if (window.innerWidth < 768) {
+        targetX *= 0.6;
+        targetY *= 0.6;
+      }
+      
+      state.push({
+        el: node,
+        x: targetX,
+        y: targetY,
+        vx: 0,
+        vy: 0,
+        targetX: targetX,
+        targetY: targetY,
+        homeX: targetX,
+        homeY: targetY,
+        id: parseInt(node.getAttribute('data-id'))
+      });
+    });
+
+    const SPRING_K = 0.08;    
+    const DAMPING = 0.65;      
+
+    function updatePhysics() {
+      state.forEach(s => {
+        if (!isDragging || currentDragNode !== s) {
+          const forceX = (s.targetX - s.x) * SPRING_K;
+          const forceY = (s.targetY - s.y) * SPRING_K;
+          
+          s.vx = (s.vx + forceX) * DAMPING;
+          s.vy = (s.vy + forceY) * DAMPING;
+          
+          s.x += s.vx;
+          s.y += s.vy;
+          
+          if (Math.abs(s.vx) > 0.005 || Math.abs(s.vy) > 0.005 || Math.abs(s.targetX - s.x) > 0.1) {
+            s.el.style.transform = `translate(${s.x}px, ${s.y}px)`;
+          }
+        }
+      });
+      requestAnimationFrame(updatePhysics);
+    }
+    updatePhysics();
+    
+    function openPanel(idx) {
+      activeNodeIdx = idx;
+      document.body.classList.add('panel-open');
+      sidePanel.classList.add('is-open');
+      
+      // Update Panel Data
+      const data = nodeData[idx];
+      document.getElementById('panelTitle').textContent = data.title;
+      document.getElementById('panelDesc').textContent = data.desc;
+      document.getElementById('panelCat').textContent = data.cat;
+      document.getElementById('panelInd').textContent = data.ind;
+      document.getElementById('panelYear').textContent = data.year;
+      
+      // Update badge color
+      sidePanel.style.setProperty('--panel-color', data.color);
+      
+      // Layout shift: Active node centers, others disappear
+      state.forEach(s => {
+        if (s.id === idx) {
+          s.targetX = 0;
+          s.targetY = 0;
+          s.el.classList.add('is-active');
+          s.el.style.zIndex = 60;
+        } else {
+          s.targetX = s.homeX; // Stay near home but will be scaled down & faded by CSS
+          s.targetY = s.homeY;
+          s.el.classList.remove('is-active');
+          s.el.style.zIndex = 10;
+        }
+      });
+    }
+
+    function closePanel() {
+      activeNodeIdx = -1;
+      document.body.classList.remove('panel-open');
+      sidePanel.classList.remove('is-open');
+      
+      // Return to home positions
+      state.forEach(s => {
+        s.targetX = s.homeX;
+        s.targetY = s.homeY;
+        s.el.classList.remove('is-active');
+      });
+    }
+
+    btnClose.addEventListener('click', closePanel);
+    
+    // Close panel on background click
+    document.getElementById('container').addEventListener('mousedown', (e) => {
+      if (activeNodeIdx > -1 && e.target === document.getElementById('container')) {
+        closePanel();
+      }
+    });
+    
+    // Carousel logic
+    document.getElementById('btn-prev').addEventListener('click', () => {
+      if (activeNodeIdx > -1) {
+        let next = activeNodeIdx - 1;
+        if (next < 0) next = state.length - 1;
+        openPanel(next);
+      }
+    });
+    document.getElementById('btn-next').addEventListener('click', () => {
+      if (activeNodeIdx > -1) {
+        let next = (activeNodeIdx + 1) % state.length;
+        openPanel(next);
+      }
+    });
+
+    // Mouse Events for Dragging / Clicking
+    state.forEach((s) => {
+      const draggableArea = s.el.querySelector('.draggable-logo');
+      
+      const onStart = (e) => {
+        isDragging = true;
+        hasMoved = false;
+        currentDragNode = s;
+        s.el.classList.add('is-dragging');
+        
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+        
+        startX = clientX - s.x;
+        startY = clientY - s.y;
+        s.vx = 0; s.vy = 0;
+      };
+      
+      draggableArea.addEventListener('mousedown', onStart);
+      draggableArea.addEventListener('touchstart', onStart, {passive: true});
+    });
+
+    const onMove = (e) => {
+      if (!isDragging || !currentDragNode) return;
+      hasMoved = true;
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      currentDragNode.x = clientX - startX;
+      currentDragNode.y = clientY - startY;
+      currentDragNode.el.style.transform = `translate(${currentDragNode.x}px, ${currentDragNode.y}px)`;
+    };
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, {passive: true});
+
+    const onEnd = () => {
+      if (currentDragNode) {
+        currentDragNode.el.classList.remove('is-dragging');
+        
+        // Click to open panel
+        if (!hasMoved) {
+           openPanel(currentDragNode.id);
+        } else if (activeNodeIdx === -1) {
+           // Drag when closed -> snap home
+           currentDragNode.targetX = currentDragNode.homeX;
+           currentDragNode.targetY = currentDragNode.homeY;
+        } else {
+           // Drag when open -> snap center
+           currentDragNode.targetX = 0;
+           currentDragNode.targetY = 0;
+        }
+        currentDragNode = null;
+      }
+      isDragging = false;
+    };
+    
+    window.addEventListener('mouseup', onEnd);
+    window.addEventListener('touchend', onEnd);
+    
+  </script>
+</body>
+</html>
