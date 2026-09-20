@@ -34,6 +34,10 @@ O site será implementado a partir de um template que será selecionado pelo Hug
 
 * Seguir rigorosamente as definições de tokens contidas em `DESIGN.md` e `tokens.json`.
 * Utilizar `tailwind.theme.json` caso o template utilize Tailwind CSS.
+* **Google Analytics 4:** Manter a tag oficial instalada no `<head>` de todas as páginas públicas:
+  * ID da métrica: `G-GMK24ECXMF`
+  * Código do fluxo: `15812853732`
+  * URL do fluxo: `https://hsn-labs.com`
 * Garantir compatibilidade 100% estática para deploy no GitHub Pages:
   * Ponto de entrada: `index.html` na raiz do repositório.
   * Caminhos de assets sempre relativos: `./assets/brand/...`.
