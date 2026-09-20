@@ -323,6 +323,52 @@
       flex-wrap: wrap;
     }
 
+    /* CLIENT PORTFOLIO STRIP */
+    .portfolio-strip {
+      width: 100%;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 36px 0;
+      margin-top: 64px;
+      background: var(--canvas-soft);
+    }
+
+    .portfolio-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-soft);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 28px 48px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+    }
+
+    .portfolio-item img {
+      opacity: 0.45;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      display: block;
+    }
+
+    .portfolio-item:hover img {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
     /* SECTIONS */
     .section-block {
       padding: 96px 0;
@@ -566,6 +612,42 @@
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-pill-primary">Apply for 5-Day Bootcamp</a>
         <a href="#contact" class="btn btn-pill-outline">Contact Us</a>
+      </div>
+    </div>
+
+    <!-- CLIENT PORTFOLIO STRIP -->
+    <div class="portfolio-strip">
+      <div class="container">
+        <div class="portfolio-label">Enterprises partnered with our engineering squads</div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" title="Deloitte">
+            <img src="./assets/portfolio/svg/deloitte-black.svg" alt="Deloitte" style="height: 22px;">
+          </div>
+          <div class="portfolio-item" title="PagoNext">
+            <img src="./assets/portfolio/svg/pagonxt-black.svg" alt="PagoNext" style="height: 20px;">
+          </div>
+          <div class="portfolio-item" title="Insi">
+            <img src="./assets/portfolio/svg/insi-black.svg" alt="Insi" style="height: 22px;">
+          </div>
+          <div class="portfolio-item" title="Softplan">
+            <img src="./assets/portfolio/svg/softplan-black.svg" alt="Softplan" style="height: 18px;">
+          </div>
+          <div class="portfolio-item" title="Unipar">
+            <img src="./assets/portfolio/svg/unipar-black.svg" alt="Unipar" style="height: 24px;">
+          </div>
+          <div class="portfolio-item" title="LWSA">
+            <img src="./assets/portfolio/svg/lwsa-black.svg" alt="LWSA" style="height: 18px;">
+          </div>
+          <div class="portfolio-item" title="Turbi">
+            <img src="./assets/portfolio/svg/turbi-black.svg" alt="Turbi" style="height: 18px;">
+          </div>
+          <div class="portfolio-item" title="Caju">
+            <img src="./assets/portfolio/svg/caju-black.svg" alt="Caju" style="height: 20px;">
+          </div>
+          <div class="portfolio-item" title="Cast Group">
+            <img src="./assets/portfolio/svg/castgroup-black.svg" alt="Cast Group" style="height: 18px;">
+          </div>
+        </div>
       </div>
     </div>
   </section>
