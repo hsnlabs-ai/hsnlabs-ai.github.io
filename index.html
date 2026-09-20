@@ -11,18 +11,153 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HSN Labs</title>
+  <title>HSN Labs — Forward Deployed Engineering</title>
   <link rel="icon" type="image/x-icon" href="./assets/brand/favicons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #07090E;
+      --card: #0E1017;
+      --border: #222736;
+      --cyan: #52B4FD;
+      --text: #FFFFFF;
+      --text-muted: #718096;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .hero-container {
+      max-width: 980px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .brand-logo {
+      height: 48px;
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: #94A3B8;
+      max-width: 620px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+    .portfolio-section {
+      width: 100%;
+      border-top: 1px solid var(--border);
+      padding-top: 40px;
+      margin-top: 20px;
+    }
+    .portfolio-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 36px 48px;
+    }
+    .portfolio-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .portfolio-item img {
+      max-height: 28px;
+      max-width: 120px;
+      object-fit: contain;
+      opacity: 0.6;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .portfolio-item:hover img {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
-<body style="background:#07090E; color:#FFF; font-family:sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;">
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPL6PVKC"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <div style="text-align:center;">
-    <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-dark.png" alt="HSN Labs" style="height:48px;">
-    <p style="color:#718096; font-size:14px; margin-top:16px;">Repositório zerado. Aguardando template oficial.</p>
-  </div>
+  <main class="hero-container">
+    <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-dark.png" alt="HSN Labs" class="brand-logo">
+    <h1 class="hero-title">Enterprise AI Execution Hub</h1>
+    <p class="hero-sub">Sistemas agênticos determinísticos e ontologias de negócios operando em produção de missão crítica.</p>
+
+    <!-- Seção de Portfólio na Hero Page -->
+    <section class="portfolio-section">
+      <div class="portfolio-label">Empresas atendidas por nossa engenharia</div>
+      <div class="portfolio-grid">
+        <!-- 1. Deloitte -->
+        <div class="portfolio-item" title="Deloitte">
+          <img src="./assets/portfolio/svg/deloitte-white.svg" alt="Deloitte" style="max-height: 26px;">
+        </div>
+        <!-- 2. PagoNext -->
+        <div class="portfolio-item" title="PagoNext">
+          <img src="./assets/portfolio/svg/pagonxt-white.svg" alt="PagoNext" style="max-height: 24px;">
+        </div>
+        <!-- 3. Insi -->
+        <div class="portfolio-item" title="Insi">
+          <img src="./assets/portfolio/svg/insi-white.svg" alt="Insi" style="max-height: 26px;">
+        </div>
+        <!-- 4. Softplan -->
+        <div class="portfolio-item" title="Softplan">
+          <img src="./assets/portfolio/svg/softplan-white.svg" alt="Softplan" style="max-height: 22px;">
+        </div>
+        <!-- 5. Unipar -->
+        <div class="portfolio-item" title="Unipar">
+          <img src="./assets/portfolio/svg/unipar-white.svg" alt="Unipar" style="max-height: 28px;">
+        </div>
+        <!-- 6. LWSA -->
+        <div class="portfolio-item" title="LWSA">
+          <img src="./assets/portfolio/svg/lwsa-white.svg" alt="LWSA" style="max-height: 22px;">
+        </div>
+        <!-- 7. Turbi -->
+        <div class="portfolio-item" title="Turbi">
+          <img src="./assets/portfolio/svg/turbi-white.svg" alt="Turbi" style="max-height: 22px;">
+        </div>
+        <!-- 8. Caju -->
+        <div class="portfolio-item" title="Caju">
+          <img src="./assets/portfolio/svg/caju-white.svg" alt="Caju" style="max-height: 24px;">
+        </div>
+        <!-- 9. Cast Group -->
+        <div class="portfolio-item" title="Cast Group">
+          <img src="./assets/portfolio/svg/castgroup-white.svg" alt="Cast Group" style="max-height: 22px;">
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
