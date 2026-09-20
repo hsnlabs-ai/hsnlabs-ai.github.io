@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Day Agentic Bootcamp — HSN Labs</title>
+  <meta name="description" content="A focused 120-hour technical deployment embedding senior Forward Deployed Engineers inside your VPC to build and validate a deterministic AI agent on business ontologies.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="./assets/brand/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/brand/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicons/favicon-16x16.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --canvas: #f5f5f5;
+      --canvas-soft: #fafafa;
+      --surface-card: #ffffff;
+      --surface-strong: #f0efed;
+      --ink: #07090e;
+      --primary: #07090e;
+      --primary-active: #141722;
+      --body: #475569;
+      --muted: #64748b;
+      --muted-soft: #94a3b8;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+
+      --cyan: #52B4FD;
+      --cyan-text: #0284c7;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-glow: rgba(82, 180, 253, 0.28);
+      --emerald: #10B981;
+
+      --gradient-cyan: rgba(82, 180, 253, 0.30);
+      --gradient-peach: rgba(244, 197, 168, 0.20);
+      --gradient-emerald: rgba(167, 229, 211, 0.25);
+      --gradient-lavender: rgba(200, 184, 224, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--body);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+      letter-spacing: 0.16px;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    .atmosphere-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1300px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .orb-cyan {
+      width: 520px;
+      height: 520px;
+      background: var(--gradient-cyan);
+      top: -100px;
+      left: 10%;
+    }
+
+    .orb-peach {
+      width: 440px;
+      height: 440px;
+      background: var(--gradient-peach);
+      top: 60px;
+      right: -40px;
+    }
+
+    .orb-emerald {
+      width: 480px;
+      height: 480px;
+      background: var(--gradient-emerald);
+      top: 500px;
+      left: -60px;
+    }
+
+    .orb-lavender {
+      width: 420px;
+      height: 420px;
+      background: var(--gradient-lavender);
+      top: 750px;
+      right: 12%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(245, 245, 245, 0.9);
+      border-bottom: 1px solid var(--hairline);
+      height: 72px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu { display: none; }
+    }
+
+    .nav-link {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover { color: var(--ink); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.925rem;
+      font-weight: 500;
+      border-radius: 9999px;
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn-pill-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border: 1px solid var(--primary);
+    }
+
+    .btn-pill-primary:hover {
+      background: var(--primary-active);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+      transform: translateY(-1px);
+    }
+
+    .btn-pill-outline {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .btn-pill-outline:hover {
+      background: var(--surface-strong);
+      border-color: var(--muted-soft);
+      transform: translateY(-1px);
+    }
+
+    .hero-bootcamp {
+      padding-top: 80px;
+      padding-bottom: 72px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--ink); }
+
+    .display-hero {
+      font-family: 'Cormorant Garamond', 'Waldenburg', Georgia, serif;
+      font-size: clamp(2.4rem, 5vw, 4.25rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+    }
+
+    .hero-lead {
+      font-size: 1.15rem;
+      color: var(--body);
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+      line-height: 1.65;
+    }
+
+    .section-block {
+      padding: 88px 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background: var(--canvas-soft);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .display-section {
+      font-family: 'Cormorant Garamond', 'Waldenburg', Georgia, serif;
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 56px auto;
+      line-height: 1.6;
+    }
+
+    /* DAYS TIMELINE GRID */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 960px) {
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .timeline-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .timeline-card:hover {
+      border-color: var(--hairline-strong);
+      transform: translateY(-2px);
+    }
+
+    .timeline-day {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--cyan-text);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .timeline-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .timeline-body {
+      font-size: 0.875rem;
+      color: var(--body);
+      line-height: 1.55;
+    }
+
+    /* CRITERIA GRID */
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      text-align: left;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 720px) {
+      .criteria-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .criteria-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+
+    .criteria-card strong {
+      font-size: 1.05rem;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .criteria-card p {
+      font-size: 0.925rem;
+      color: var(--body);
+      line-height: 1.55;
+    }
+
+    /* APPLICATION FORM */
+    .app-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 24px;
+      padding: 56px 48px;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+    }
+
+    .app-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+      margin-top: 36px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--cyan-subtle);
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .app-card {
+        padding: 36px 20px;
+      }
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .checkbox-input {
+      margin-top: 4px;
+      accent-color: var(--ink);
+      width: 16px;
+      height: 16px;
+    }
+
+    .checkbox-label {
+      font-size: 0.875rem;
+      color: var(--body);
+      line-height: 1.45;
+    }
+
+    .form-success-box {
+      display: none;
+      background: var(--canvas-soft);
+      border: 1px solid var(--hairline);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 24px;
+      text-align: center;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .site-footer {
+      background: var(--canvas);
+      border-top: 1px solid var(--hairline);
+      padding: 80px 0 48px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-col-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover { color: var(--ink); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--hairline);
+      padding-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ATMOSPHERIC BLOOMS -->
+  <div class="atmosphere-bg">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-peach"></div>
+    <div class="orb orb-emerald"></div>
+    <div class="orb orb-lavender"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="container header-container">
+      <a href="./index.html" class="brand-link">
+        <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./index.html#services" class="nav-link">Services</a></li>
+          <li><a href="./index.html#verticals" class="nav-link">Verticals</a></li>
+          <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#apply" class="btn btn-pill-primary">Apply Now</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-bootcamp">
+    <div class="container">
+      <a href="./index.html" class="back-link">← Return to Overview</a>
+      
+      <h1 class="display-hero">The 5-Day Agentic Bootcamp</h1>
+      
+      <p class="hero-lead">
+        A focused 120-hour technical deployment embedding senior Forward Deployed Engineers inside your VPC infrastructure. We validate data access, construct semantic ontologies, and ship a functioning, bounded AI agent with verified EBITDA returns before broad enterprise rollout.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 16px;">
+        <a href="#apply" class="btn btn-pill-primary">Start Technical Scoping</a>
+        <a href="#protocol" class="btn btn-pill-outline">View 5-Day Protocol</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTOCOL BREAKDOWN -->
+  <section class="section-block section-alt" id="protocol">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">The 120-Hour Deployment Protocol</h2>
+      <p class="section-lead">
+        Traditional consulting models deliver conceptual slide decks that fail when tested against live legacy schemas. HSN Labs executes a structured, code-first implementation sprint directly inside client repositories.
+      </p>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <div class="timeline-day">DAY 01</div>
+          <h3 class="timeline-title">VPC Architecture</h3>
+          <p class="timeline-body">
+            Private VPC access provisioning, database connection validation, schema threat modeling, and environmental air-gap isolation.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-day">DAY 02</div>
+          <h3 class="timeline-title">Ontology Mapping</h3>
+          <p class="timeline-body">
+            Extracting business invariants, mapping fragmented ERP relational tables into executable semantic graphs with GraphRAG knowledge trees.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-day">DAY 03</div>
+          <h3 class="timeline-title">Agent Assembly</h3>
+          <p class="timeline-body">
+            Writing deterministic Python state machines, schema validation boundaries, and prompt-isolated transactional execution workflows.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-day">DAY 04</div>
+          <h3 class="timeline-title">Stress Testing</h3>
+          <p class="timeline-body">
+            Synthetic edge-case fuzzing, adversarial schema stress audits, and mathematical verification that eliminate stochastic hallucination.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-day">DAY 05</div>
+          <h3 class="timeline-title">Production Audit</h3>
+          <p class="timeline-body">
+            Live sandbox deployment, executive presentation with measured EBITDA impact, and verified production transition roadmap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATION CRITERIA -->
+  <section class="section-block">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Bootcamp Qualification Criteria</h2>
+      <p class="section-lead">
+        Our forward deployed engineering squads accept engagements where deterministic agent architecture generates immediate, measurable EBITDA margin defense.
+      </p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <strong>01 • Material EBITDA Scale</strong>
+          <p>
+            Transactional volume or operational overhead where single-digit automation efficiency generates material financial return for the enterprise.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>02 • 48-Hour Data Provisioning</strong>
+          <p>
+            Executive sponsorship capable of granting isolated test VPC, database read replicas, or sandbox access within 48 hours of agreement.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>03 • Clear Operational Bottleneck</strong>
+          <p>
+            A well-defined operational, reconciliation, or compliance friction point prioritized for immediate executive resolution.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>04 • Engineering Collaboration</strong>
+          <p>
+            Direct access to senior internal technical leads for architectural coordination and legacy system schema clarity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="section-block section-alt" id="apply">
+    <div class="container">
+      <div class="app-card">
+        <h2 class="display-section" style="margin-bottom: 12px;">Apply for Bootcamp</h2>
+        <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
+          Complete the technical application below. Our engineering leads evaluate submissions within 24 hours.
+        </p>
+
+        <form class="app-form" id="bootcampForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Work Email</label>
+              <input type="email" name="email" class="form-input" placeholder="name@company.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Company Name</label>
+              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company Website</label>
+              <input type="text" name="website" class="form-input" placeholder="company.com" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Executive Role</label>
+              <select name="role" class="form-select" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="cto">Chief Technology Officer</option>
+                <option value="cio">Chief Information Officer</option>
+                <option value="vp_eng">VP of Engineering</option>
+                <option value="founder">Founder or CEO</option>
+                <option value="data_leader">Chief Data Officer</option>
+                <option value="other">Other Executive Sponsor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Annual Revenue</label>
+              <select name="revenue" class="form-select" required>
+                <option value="" disabled selected>Select annual revenue</option>
+                <option value="under_10m">Under 10M USD</option>
+                <option value="10m_50m">10M to 50M USD</option>
+                <option value="50m_250m">50M to 250M USD</option>
+                <option value="above_250m">Above 250M USD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Primary Database and ERP Architecture</label>
+            <select name="stack" class="form-select" required>
+              <option value="" disabled selected>Select primary database or ERP</option>
+              <option value="sap">SAP S4HANA or SAP ECC</option>
+              <option value="oracle">Oracle Database or Oracle NetSuite</option>
+              <option value="postgres">PostgreSQL or Timescale</option>
+              <option value="snowflake">Snowflake or BigQuery</option>
+              <option value="custom">Custom Relational or Distributed Stack</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Target Operational Bottleneck and Scope</label>
+            <textarea name="scope" rows="4" class="form-textarea" placeholder="Detail the business workflow, transactional volume, and failure modes of current systems." required></textarea>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="gateData" class="checkbox-input" required>
+            <label for="gateData" class="checkbox-label">
+              I confirm executive sponsorship to provision isolated test VPC or sandbox data access within 48 hours.
+            </label>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="gateTeam" class="checkbox-input" required>
+            <label for="gateTeam" class="checkbox-label">
+              I confirm availability of an internal engineering lead for architectural coordination during the 5 days.
+            </label>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 14px;">
+            <button type="submit" class="btn btn-pill-primary" style="padding: 14px 40px; font-size: 1rem; width: 100%; max-width: 340px;">
+              Submit Bootcamp Application
+            </button>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+              Technical review desk: contact@hsnlabs.ai
+            </span>
+          </div>
+        </form>
+
+        <div class="form-success-box" id="bootcampSuccess">
+          Thank you. Your bootcamp scoping application has been delivered directly to our forward deployed engineering leads. We will review your technical stack and schedule the intake call within 24 hours.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div style="max-width: 320px;">
+          <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 28px; width: auto; margin-bottom: 16px;">
+          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.6;">
+            Boutique building deterministic multi-agent architectures on business ontologies.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-nav">
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./index.html#verticals">Verticals</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+            <li><a href="https://github.com/hugonotnice/proto-ontologies" target="_blank">Proto-Ontologies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Engineering</div>
+          <ul class="footer-nav">
+            <li><a href="./llms.txt">llms.txt Specification</a></li>
+            <li><a href="./robots.txt">robots.txt</a></li>
+            <li><a href="./sitemap.xml">sitemap.xml</a></li>
+            <li><a href="./index.html#contact">Private VPC Deployment</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>2026 HSN Labs. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const bForm = document.getElementById('bootcampForm');
+      const bSuccess = document.getElementById('bootcampSuccess');
+      if (bForm && bSuccess) {
+        bForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          bForm.style.display = 'none';
+          bSuccess.style.display = 'block';
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -484,40 +484,79 @@
       border: 1px solid var(--hairline);
       border-radius: 24px;
       padding: 64px 48px;
-      max-width: 840px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
     }
 
-    .gates-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin: 40px 0 44px 0;
+    /* EDITORIAL CONTACT FORM */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-width: 600px;
+      margin: 36px auto 0 auto;
       text-align: left;
     }
 
-    .gate-card {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--cyan-subtle);
+    }
+
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: var(--muted-soft);
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-success-msg {
+      display: none;
       background: var(--canvas-soft);
       border: 1px solid var(--hairline);
       border-radius: 14px;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: var(--body);
-      line-height: 1.5;
-      transition: border-color 0.2s ease;
-    }
-
-    .gate-card:hover {
-      border-color: var(--hairline-strong);
-    }
-
-    .gate-card strong {
+      padding: 24px;
+      margin-top: 24px;
+      font-size: 0.95rem;
       color: var(--ink);
-      font-weight: 600;
-      display: block;
-      margin-bottom: 4px;
+      line-height: 1.6;
+      text-align: center;
     }
 
     /* FOOTER */
@@ -681,11 +720,12 @@
         <ul class="nav-menu">
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#verticals" class="nav-link">Verticals</a></li>
+          <li><a href="./bootcamp.html" class="nav-link">Bootcamp</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="#contact" class="btn btn-pill-primary">Apply for Bootcamp</a>
+      <a href="./bootcamp.html" class="btn btn-pill-primary">Apply for Bootcamp</a>
     </div>
   </header>
 
@@ -708,7 +748,7 @@
       </p>
 
       <div class="hero-ctas">
-        <a href="#contact" class="btn btn-pill-primary">Apply for 5-Day Bootcamp</a>
+        <a href="./bootcamp.html" class="btn btn-pill-primary">Apply for 5-Day Bootcamp</a>
         <a href="#contact" class="btn btn-pill-outline">Contact Us</a>
       </div>
     </div>
@@ -838,41 +878,61 @@
     </div>
   </section>
 
-  <!-- CONTACT / TECHNICAL SCOPING -->
+  <!-- CONTACT -->
   <section class="section-block section-alt" id="contact">
     <div class="container">
       <div class="scoping-card">
-        <h2 class="display-section" style="margin-bottom: 12px;">Schedule Technical Scoping</h2>
+        <h2 class="display-section" style="margin-bottom: 12px;">Contact Us</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
-          We work directly with founders, board members, and C-suite leaders prioritizing margin defense and operational automation within 60 days.
+          Get in touch with our engineering team to evaluate deterministic agent deployment inside your infrastructure.
         </p>
 
-        <div class="gates-list">
-          <div class="gate-card">
-            <strong>Material Impact</strong>
-            Transaction volume where small efficiency gains generate material EBITDA margin defense.
+        <form class="contact-form" id="contactForm">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Work Email</label>
+              <input type="email" name="email" class="form-input" placeholder="name@company.com" required>
+            </div>
           </div>
-          <div class="gate-card">
-            <strong>Rapid Data Access</strong>
-            Executive sponsorship with test data access provisioned inside 48 hours.
-          </div>
-          <div class="gate-card">
-            <strong>Clear Bottleneck</strong>
-            Clear operational bottleneck prioritized for resolution in Q3 or Q4.
-          </div>
-          <div class="gate-card">
-            <strong>Embedded Squad</strong>
-            Senior engineering squad embedded directly inside your private infrastructure.
-          </div>
-        </div>
 
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
-          <a href="mailto:contact@hsnlabs.ai?subject=HSN%20Labs%20-%20Technical%20Scoping%20Inquiry" class="btn btn-pill-primary" style="padding: 12px 32px; font-size: 1rem;">
-            Schedule Scoping Consultation
-          </a>
-          <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted);">
-            Direct engineering desk: contact@hsnlabs.ai
-          </span>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Company Name</label>
+              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Annual Revenue</label>
+              <select name="revenue" class="form-select" required>
+                <option value="" disabled selected>Select annual revenue</option>
+                <option value="under_10m">Under 10M USD</option>
+                <option value="10m_50m">10M to 50M USD</option>
+                <option value="50m_250m">50M to 250M USD</option>
+                <option value="above_250m">Above 250M USD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Project Scope and Operational Bottlenecks</label>
+            <textarea name="message" rows="4" class="form-textarea" placeholder="Describe your data systems, transactional scale, or target workflows for deterministic agents." required></textarea>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 10px;">
+            <button type="submit" class="btn btn-pill-primary" style="padding: 12px 36px; font-size: 1rem; width: 100%; max-width: 280px;">
+              Send Message
+            </button>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted);">
+              Direct engineering desk: contact@hsnlabs.ai
+            </span>
+          </div>
+        </form>
+
+        <div class="form-success-msg" id="formSuccess">
+          Thank you. An engineering lead will review your submission and respond within 24 hours.
         </div>
       </div>
     </div>
@@ -1033,6 +1093,17 @@
       container.addEventListener('click', () => {
         trigger(280);
       });
+
+      // Contact Form Handler
+      const cForm = document.getElementById('contactForm');
+      const cSuccess = document.getElementById('formSuccess');
+      if (cForm && cSuccess) {
+        cForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          cForm.style.display = 'none';
+          cSuccess.style.display = 'block';
+        });
+      }
     })();
   </script>
 </body>
