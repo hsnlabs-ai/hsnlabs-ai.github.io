@@ -140,25 +140,6 @@
       margin-bottom: 16px;
     }
 
-    /* CLEAN EDITORIAL CATEGORY LABELS — NO AI SLOP PILLS */
-    .hero-category {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .section-category {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
     .section-lead {
       font-size: 1.05rem;
       color: var(--muted);
@@ -357,16 +338,32 @@
     /* CARDS */
     .card-grid-4 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       text-align: left;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .card-grid-4 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card-grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       text-align: left;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 920px) {
+      .card-grid-3 {
+        grid-template-columns: 1fr;
+      }
     }
 
     .card {
@@ -384,14 +381,6 @@
       transform: translateY(-2px);
       border-color: var(--hairline-strong);
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
-    }
-
-    /* CLEAN INDEX TYPOGRAPHY — NO SLASH OR MONO SLOP */
-    .card-index {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted-soft);
-      margin-bottom: 16px;
     }
 
     .card-title {
@@ -559,7 +548,7 @@
   <!-- HERO -->
   <section class="hero-section">
     <div class="container">
-      <!-- 1. OFFICIAL LOGO EMBLEM ABOVE THE HEADLINE -->
+      <!-- OFFICIAL LOGO EMBLEM ABOVE THE HEADLINE -->
       <div class="hero-brand-symbol">
         <div class="brand-symbol-box" id="waterEmblemTrigger" title="Disturb the medium">
           <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
@@ -567,10 +556,7 @@
         </div>
       </div>
 
-      <!-- 2. CLEAN CATEGORY LABEL (NO PILL, NO BORDER, NO DOT) -->
-      <div class="hero-category">Forward Deployed Engineering • Deterministic Agentic Systems</div>
-      
-      <!-- 3. MAIN HEADLINE -->
+      <!-- MAIN HEADLINE -->
       <h1 class="display-hero">Production-Grade AI Agents on Business Ontologies</h1>
       
       <p class="hero-sub">
@@ -579,7 +565,7 @@
 
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-pill-primary">Apply for 5-Day Bootcamp</a>
-        <a href="#services" class="btn btn-pill-outline">Explore Architecture</a>
+        <a href="#contact" class="btn btn-pill-outline">Contact Us</a>
       </div>
     </div>
   </section>
@@ -587,7 +573,6 @@
   <!-- SERVICES -->
   <section class="section-block section-alt" id="services">
     <div class="container" style="text-align: center;">
-      <div class="section-category">Delivery Model</div>
       <h2 class="display-section">How We Deploy Enterprise Agentic Systems</h2>
       <p class="section-lead">
         Traditional management consulting delivers theoretical slide decks. HSN Labs deploys elite Forward Deployed Engineering squads directly in your repository to ship production code.
@@ -595,7 +580,6 @@
 
       <div class="card-grid-4">
         <div class="card">
-          <div class="card-index">01</div>
           <h3 class="card-title">Embedded FDE Squads</h3>
           <p class="card-body">
             Senior software engineers deployed inside your private VPC. We write production Python, Rust, and SQL alongside your core data architects, taking direct operational liability.
@@ -603,7 +587,6 @@
         </div>
 
         <div class="card">
-          <div class="card-index">02</div>
           <h3 class="card-title">Mathematical Guardrails</h3>
           <p class="card-body">
             Eliminating hallucinations at runtime. Mathematical schema validation, finite state machines, and rigid execution boundaries that isolate stochastic model outputs from sensitive ledgers.
@@ -611,7 +594,6 @@
         </div>
 
         <div class="card">
-          <div class="card-index">03</div>
           <h3 class="card-title">Ontologies and GraphRAG</h3>
           <p class="card-body">
             Mapping fragmented legacy databases and ERP records into executable semantic ontologies. Agents navigate structured knowledge trees with zero ambiguity and full provenance tracking.
@@ -619,7 +601,6 @@
         </div>
 
         <div class="card">
-          <div class="card-index">04</div>
           <h3 class="card-title">5-Day Agentic Bootcamp</h3>
           <p class="card-body">
             A focused, 120-hour technical deployment on client infrastructure. We validate data access, build an initial bounded agent, and deliver verified ROI metrics before broad enterprise rollout.
@@ -632,7 +613,6 @@
   <!-- VERTICALS -->
   <section class="section-block" id="verticals">
     <div class="container" style="text-align: center;">
-      <div class="section-category">Target Verticals</div>
       <h2 class="display-section">Architected for Regulated Operations</h2>
       <p class="section-lead">
         Our deterministic engineering is specifically built for enterprise domains where probabilistic error carries severe financial or regulatory penalties.
@@ -640,7 +620,6 @@
 
       <div class="card-grid-3">
         <div class="card">
-          <div class="card-index">01</div>
           <h3 class="card-title">BFSI Infrastructure</h3>
           <p class="card-body">
             Deterministic underwriting validation, automated ledger reconciliation, and real-time fraud telemetry. Multi-agent transaction routing strictly bounded by banking regulations with sub-180s auditability.
@@ -652,7 +631,6 @@
         </div>
 
         <div class="card">
-          <div class="card-index">02</div>
           <h3 class="card-title">Clinical Operations</h3>
           <p class="card-body">
             Automated medical billing audits, claims verification, and administrative protocol management. Zero-exfiltration private VPC isolation preserving strict patient confidentiality and regulatory compliance.
@@ -664,7 +642,6 @@
         </div>
 
         <div class="card">
-          <div class="card-index">03</div>
           <h3 class="card-title">Industrial Operations</h3>
           <p class="card-body">
             Autonomous procurement routing, real-time freight exception handling, and multi-node inventory balancing across legacy SAP and Oracle databases under rigid contractual SLAs.
@@ -682,7 +659,6 @@
   <section class="section-block section-alt" id="contact">
     <div class="container">
       <div class="scoping-card">
-        <div class="section-category">Initial Engagement</div>
         <h2 class="display-section" style="margin-bottom: 12px;">Schedule Technical Scoping</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
           We work directly with founders, board members, and C-suite leaders prioritizing margin defense and operational automation within 60 days.
