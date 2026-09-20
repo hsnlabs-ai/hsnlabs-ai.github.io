@@ -121,13 +121,15 @@
     /* TYPOGRAPHY */
     .display-hero {
       font-family: 'Cormorant Garamond', 'Waldenburg', Georgia, serif;
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-size: clamp(2rem, 5vw, 4.5rem);
       font-weight: 300;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
       color: var(--ink);
       max-width: 920px;
       margin: 0 auto 24px auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     .display-section {
@@ -559,6 +561,90 @@
       font-size: 0.85rem;
       color: var(--muted);
       font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* COMPACT MOBILE VIEWPORT ENHANCEMENTS */
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 20px;
+      }
+      .header-nav {
+        height: 64px;
+      }
+      .brand-logo-img {
+        height: 26px;
+      }
+      .header-container .btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+      }
+      .hero-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+      }
+      .hero-brand-symbol {
+        margin-bottom: 24px;
+      }
+      .brand-symbol-box {
+        width: 80px;
+        height: 80px;
+      }
+      .symbol-carp {
+        width: 44px;
+        height: 44px;
+        top: 4px;
+        right: 4px;
+      }
+      .display-hero {
+        font-size: 2.15rem;
+        line-height: 1.12;
+      }
+      .hero-sub {
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+      .portfolio-strip {
+        padding: 28px 0;
+        margin-top: 44px;
+      }
+      .portfolio-grid {
+        gap: 20px 28px;
+      }
+      .display-section {
+        font-size: 1.85rem;
+      }
+      .section-block {
+        padding: 64px 0;
+      }
+      .section-lead {
+        margin-bottom: 40px;
+      }
+      .card {
+        padding: 28px 22px;
+      }
+      .scoping-card {
+        padding: 40px 20px;
+      }
+      .gates-list {
+        grid-template-columns: 1fr;
+        margin: 28px 0 32px 0;
+      }
+      .site-footer {
+        padding: 56px 0 36px 0;
+      }
+      .footer-content {
+        gap: 36px;
+        margin-bottom: 40px;
+      }
     }
   </style>
 </head>
