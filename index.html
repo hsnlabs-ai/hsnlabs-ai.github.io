@@ -446,24 +446,36 @@
       line-height: 1.6;
     }
 
-    .card-metric {
-      margin-top: auto;
-      padding-top: 24px;
-      border-top: 1px solid var(--hairline);
+    .card-vertical {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .vertical-img-wrap {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: var(--canvas-soft);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .vertical-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .card-vertical:hover .vertical-img {
+      transform: scale(1.04);
+    }
+
+    .vertical-content {
+      padding: 28px 24px 32px 24px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-    }
-
-    .metric-value {
-      color: var(--emerald);
-      font-weight: 600;
-    }
-
-    .metric-label {
-      color: var(--muted);
+      flex-direction: column;
+      flex: 1;
     }
 
     /* CONTACT / SCOPING CARD */
@@ -787,36 +799,39 @@
       </p>
 
       <div class="card-grid-3">
-        <div class="card">
-          <h3 class="card-title">BFSI Infrastructure</h3>
-          <p class="card-body">
-            Deterministic underwriting validation, automated ledger reconciliation, and real-time fraud telemetry. Multi-agent transaction routing strictly bounded by banking regulations with sub-180s auditability.
-          </p>
-          <div class="card-metric">
-            <span class="metric-label">Reliability Metric</span>
-            <span class="metric-value">99.98% Invariant Match</span>
+        <div class="card card-vertical">
+          <div class="vertical-img-wrap">
+            <img src="./assets/verticals/bfsi.jpg" alt="Banking and Capital Markets" class="vertical-img">
+          </div>
+          <div class="vertical-content">
+            <h3 class="card-title">Banking and Capital Markets</h3>
+            <p class="card-body">
+              Probabilistic language models present severe risks on financial transactional ledgers where a single hallucination can corrupt balance reconciliation or breach compliance. Autonomous agents require strict mathematical invariants, immutable audit trails, and deterministic settlement validation under rigid regulatory standards.
+            </p>
           </div>
         </div>
 
-        <div class="card">
-          <h3 class="card-title">Clinical Operations</h3>
-          <p class="card-body">
-            Automated medical billing audits, claims verification, and administrative protocol management. Zero-exfiltration private VPC isolation preserving strict patient confidentiality and regulatory compliance.
-          </p>
-          <div class="card-metric">
-            <span class="metric-label">Privacy Standard</span>
-            <span class="metric-value">Air-Gapped Private VPC</span>
+        <div class="card card-vertical">
+          <div class="vertical-img-wrap">
+            <img src="./assets/verticals/healthcare.jpg" alt="Clinical and Health Operations" class="vertical-img">
+          </div>
+          <div class="vertical-content">
+            <h3 class="card-title">Clinical and Health Operations</h3>
+            <p class="card-body">
+              Healthcare billing audits and clinical protocol workflows cannot tolerate stochastic output variance. Deploying agents in medicine demands zero-exfiltration air-gapped VPC architecture, verifiable adherence to medical guidelines, and strict validation against TISS and TUSS schemas while isolating sensitive patient data.
+            </p>
           </div>
         </div>
 
-        <div class="card">
-          <h3 class="card-title">Industrial Operations</h3>
-          <p class="card-body">
-            Autonomous procurement routing, real-time freight exception handling, and multi-node inventory balancing across legacy SAP and Oracle databases under rigid contractual SLAs.
-          </p>
-          <div class="card-metric">
-            <span class="metric-label">Event Latency</span>
-            <span class="metric-value">Sub-3s SLA Routing</span>
+        <div class="card card-vertical">
+          <div class="vertical-img-wrap">
+            <img src="./assets/verticals/logistics.jpg" alt="Industrial Supply Chain and ERPs" class="vertical-img">
+          </div>
+          <div class="vertical-content">
+            <h3 class="card-title">Industrial Supply Chain and ERPs</h3>
+            <p class="card-body">
+              Mission-critical supply chains rely on complex relational databases across legacy SAP and Oracle systems. Unbounded agentic workflows break when disconnected from deterministic state machines, risking erroneous inventory allocation, misrouted freight exceptions, and costly contractual SLA violations.
+            </p>
           </div>
         </div>
       </div>
