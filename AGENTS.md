@@ -27,7 +27,7 @@ The website follows a validated 4-section architecture:
    - Technical eyebrow tag: `Forward Deployed Engineering • Mission-Critical Systems`.
    - Primary headline: High-impact statement of deterministic agentic systems.
    - Subtitle: Narrative explaining senior embedded FDE squads versus theoretical management consulting slides.
-   - Interactive Visual Centerpiece: The official HSN Labs 3-stage water motion logo.
+   - Interactive Visual Centerpiece: The official HSN Labs 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners (`border-radius: 0`). Never apply rounded corners to the mark.
    - Enterprise Portfolio Strip: Normalized monochrome vector logos of client enterprises: Deloitte, PagoNext, Insi, Softplan, Unipar, LWSA, Turbi, Caju, Cast Group.
 3. **Services Section (Our Delivery Model):**
    - 4 technical pillars:

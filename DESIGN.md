@@ -459,6 +459,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 - Use the pill shape for every CTA and badge.
 
 ### Don't
+- Don't round the corners of the HSN Labs square mark — it must remain a pure geometric square with sharp 90-degree corners (`border-radius: 0`).
 - Don't introduce a saturated brand action color. Ink pill is the only CTA color.
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.
