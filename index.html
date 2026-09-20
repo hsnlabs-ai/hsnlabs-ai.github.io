@@ -6,6 +6,12 @@
   <title>HSN Labs — Forward Deployed Engineering for Deterministic AI</title>
   <meta name="description" content="HSN Labs embeds senior Forward Deployed Engineering squads into enterprise infrastructure, building deterministic multi-agent systems on real business ontologies.">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="./assets/brand/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/brand/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicons/favicon-16x16.png">
+
   <!-- Google Fonts: Cormorant Garamond for Waldenburg-like light display, Inter for body, JetBrains Mono for tags -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +23,28 @@
       --canvas-soft: #fafafa;
       --surface-card: #ffffff;
       --surface-strong: #f0efed;
-      --ink: #0c0a09;
-      --primary: #292524;
-      --primary-active: #0c0a09;
-      --body: #4e4e4e;
-      --muted: #777169;
-      --muted-soft: #a8a29e;
-      --hairline: #e7e5e4;
-      --hairline-strong: #d6d3d1;
+      --ink: #07090e;
+      --primary: #07090e;
+      --primary-active: #141722;
+      --body: #475569;
+      --muted: #64748b;
+      --muted-soft: #94a3b8;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
 
-      /* Atmospheric gradient stops — ElevenLabs signature */
-      --gradient-mint: #a7e5d3;
-      --gradient-peach: #f4c5a8;
-      --gradient-lavender: #c8b8e0;
-      --gradient-sky: #a8c8e8;
-      --gradient-rose: #e8b8c4;
+      /* HSN Labs Brand Colors */
+      --cyan: #52B4FD;
+      --cyan-text: #0284c7;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-border: rgba(82, 180, 253, 0.28);
+      --cyan-glow: rgba(82, 180, 253, 0.25);
+      --emerald: #10B981;
+
+      /* Atmospheric gradient stops — ElevenLabs signature with HSN Labs palette */
+      --gradient-cyan: rgba(82, 180, 253, 0.32);
+      --gradient-peach: rgba(244, 197, 168, 0.22);
+      --gradient-emerald: rgba(167, 229, 211, 0.28);
+      --gradient-lavender: rgba(200, 184, 224, 0.20);
     }
 
     * {
@@ -56,13 +69,13 @@
       position: relative;
     }
 
-    /* ATMOSPHERIC GRADIENT BLOOMS — ElevenLabs Signature */
+    /* ATMOSPHERIC GRADIENT BLOOMS — ElevenLabs Signature with HSN Labs Cyan */
     .atmosphere-bg {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 1200px;
+      height: 1300px;
       pointer-events: none;
       z-index: 0;
       overflow: hidden;
@@ -72,41 +85,38 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(80px);
-      opacity: 0.45;
     }
 
-    .orb-mint {
-      width: 480px;
-      height: 480px;
-      background: var(--gradient-mint);
-      top: -120px;
-      left: -80px;
+    .orb-cyan {
+      width: 520px;
+      height: 520px;
+      background: var(--gradient-cyan);
+      top: -100px;
+      left: 10%;
     }
 
     .orb-peach {
       width: 440px;
       height: 440px;
       background: var(--gradient-peach);
-      top: 40px;
-      right: -60px;
+      top: 60px;
+      right: -40px;
+    }
+
+    .orb-emerald {
+      width: 480px;
+      height: 480px;
+      background: var(--gradient-emerald);
+      top: 500px;
+      left: -60px;
     }
 
     .orb-lavender {
-      width: 520px;
-      height: 520px;
+      width: 420px;
+      height: 420px;
       background: var(--gradient-lavender);
-      top: 450px;
-      left: 20%;
-      opacity: 0.35;
-    }
-
-    .orb-sky {
-      width: 380px;
-      height: 380px;
-      background: var(--gradient-sky);
-      top: 700px;
-      right: 15%;
-      opacity: 0.3;
+      top: 750px;
+      right: 12%;
     }
 
     /* TYPOGRAPHY */
@@ -132,14 +142,27 @@
     }
 
     .eyebrow {
-      font-family: 'Inter', sans-serif;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
-      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--muted);
-      display: inline-block;
+      color: var(--cyan-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       margin-bottom: 20px;
+      background: var(--cyan-subtle);
+      border: 1px solid var(--cyan-border);
+      padding: 5px 16px;
+      border-radius: 9999px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 6px var(--cyan);
     }
 
     .section-lead {
@@ -167,9 +190,9 @@
       z-index: 100;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: rgba(245, 245, 245, 0.88);
+      background: rgba(245, 245, 245, 0.9);
       border-bottom: 1px solid var(--hairline);
-      height: 68px;
+      height: 72px;
       display: flex;
       align-items: center;
     }
@@ -181,13 +204,16 @@
       width: 100%;
     }
 
-    .brand-title {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 1.1rem;
-      letter-spacing: -0.02em;
-      color: var(--ink);
+    .brand-link {
+      display: flex;
+      align-items: center;
       text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
     }
 
     .nav-menu {
@@ -213,7 +239,7 @@
       color: var(--ink);
     }
 
-    /* PILL BUTTONS — ElevenLabs Signature */
+    /* PILL BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -221,7 +247,7 @@
       font-size: 0.925rem;
       font-weight: 500;
       border-radius: 9999px;
-      padding: 10px 22px;
+      padding: 10px 24px;
       text-decoration: none;
       transition: all 0.2s ease;
       cursor: pointer;
@@ -236,23 +262,26 @@
 
     .btn-pill-primary:hover {
       background: var(--primary-active);
-      box-shadow: 0 4px 12px rgba(12, 10, 9, 0.12);
+      box-shadow: 0 4px 16px var(--cyan-glow);
+      transform: translateY(-1px);
     }
 
     .btn-pill-outline {
-      background: transparent;
+      background: #ffffff;
       color: var(--ink);
       border: 1px solid var(--hairline-strong);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
     .btn-pill-outline:hover {
       background: var(--surface-strong);
       border-color: var(--muted-soft);
+      transform: translateY(-1px);
     }
 
     /* HERO SECTION */
     .hero-section {
-      padding-top: 120px;
+      padding-top: 100px;
       padding-bottom: 96px;
       text-align: center;
       position: relative;
@@ -262,7 +291,7 @@
       font-size: 1.15rem;
       color: var(--body);
       max-width: 680px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 36px auto;
       line-height: 1.65;
     }
 
@@ -272,6 +301,76 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+
+    /* TACTILE HERO ARTIFACT — HSN LABS LIQUID EMBLEM */
+    .hero-emblem-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+
+    .hero-emblem-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 0 24px var(--cyan-subtle);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: inline-block;
+    }
+
+    .hero-emblem-wrap:hover .hero-emblem-card {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06), 0 0 32px var(--cyan-glow);
+      border-color: var(--cyan-border);
+    }
+
+    .emblem-basin {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      background: var(--cyan);
+    }
+
+    .emblem-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .emblem-carp {
+      position: absolute;
+      width: 66px;
+      height: 66px;
+      top: 6px;
+      right: 6px;
+      z-index: 10;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .emblem-cue {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-top: 14px;
+      transition: color 0.2s;
+    }
+
+    .hero-emblem-wrap:hover .emblem-cue {
+      color: var(--cyan-text);
     }
 
     /* SECTIONS */
@@ -286,7 +385,7 @@
       border-bottom: 1px solid var(--hairline);
     }
 
-    /* CARDS — ElevenLabs Signature */
+    /* CARDS */
     .card-grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -314,16 +413,17 @@
 
     .card:hover {
       transform: translateY(-2px);
-      border-color: var(--hairline-strong);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      border-color: var(--cyan-border);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04), 0 0 20px var(--cyan-subtle);
     }
 
     .card-num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.75rem;
-      color: var(--muted-soft);
+      color: var(--cyan-text);
       margin-bottom: 18px;
       letter-spacing: 0.08em;
+      font-weight: 500;
     }
 
     .card-title {
@@ -353,7 +453,7 @@
     }
 
     .metric-value {
-      color: var(--ink);
+      color: var(--emerald);
       font-weight: 600;
     }
 
@@ -370,7 +470,7 @@
       max-width: 840px;
       margin: 0 auto;
       text-align: center;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
     }
 
     .gates-list {
@@ -384,11 +484,16 @@
     .gate-card {
       background: var(--canvas-soft);
       border: 1px solid var(--hairline);
-      border-radius: 12px;
-      padding: 18px 20px;
+      border-radius: 14px;
+      padding: 20px;
       font-size: 0.9rem;
       color: var(--body);
       line-height: 1.5;
+      transition: border-color 0.2s ease;
+    }
+
+    .gate-card:hover {
+      border-color: var(--cyan-border);
     }
 
     .gate-card strong {
@@ -437,7 +542,7 @@
     }
 
     .footer-nav a:hover {
-      color: var(--ink);
+      color: var(--cyan-text);
     }
 
     .footer-bottom {
@@ -450,23 +555,26 @@
       gap: 16px;
       font-size: 0.85rem;
       color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
     }
   </style>
 </head>
 <body>
 
-  <!-- ATMOSPHERIC BLOOMS — ElevenLabs Signature -->
+  <!-- ATMOSPHERIC BLOOMS — ElevenLabs Signature with HSN Labs Cyan -->
   <div class="atmosphere-bg">
-    <div class="orb orb-mint"></div>
+    <div class="orb orb-cyan"></div>
     <div class="orb orb-peach"></div>
+    <div class="orb orb-emerald"></div>
     <div class="orb orb-lavender"></div>
-    <div class="orb orb-sky"></div>
   </div>
 
   <!-- HEADER -->
   <header class="header-nav">
     <div class="container header-container">
-      <a href="#" class="brand-title">hsn-labs</a>
+      <a href="#" class="brand-link">
+        <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
+      </a>
 
       <nav>
         <ul class="nav-menu">
@@ -483,7 +591,10 @@
   <!-- HERO -->
   <section class="hero-section">
     <div class="container">
-      <div class="eyebrow">Forward Deployed Engineering • Deterministic Agentic Systems</div>
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Forward Deployed Engineering • Deterministic Agentic Systems</span>
+      </div>
       
       <h1 class="display-hero">Production-Grade AI Agents on Business Ontologies</h1>
       
@@ -495,13 +606,27 @@
         <a href="#contact" class="btn btn-pill-primary">Apply for 5-Day Bootcamp</a>
         <a href="#services" class="btn btn-pill-outline">Explore Architecture</a>
       </div>
+
+      <!-- TACTILE HERO ARTIFACT — INTERACTIVE WATER BASIN EMBLEM -->
+      <div class="hero-emblem-wrap" id="waterEmblemTrigger" title="Click or hover to disturb the liquid medium">
+        <div class="hero-emblem-card">
+          <div class="emblem-basin">
+            <canvas id="waterEmblemCanvas" class="emblem-canvas" width="120" height="120"></canvas>
+            <img src="./assets/brand/elements/origami-carp-clean.png" alt="HSN Labs Origami Carp" class="emblem-carp">
+          </div>
+        </div>
+        <div class="emblem-cue">Interactive Liquid Basin • Click or Hover</div>
+      </div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section class="section-block section-alt" id="services">
     <div class="container" style="text-align: center;">
-      <div class="eyebrow">Delivery Model • Less Slides, More Code</div>
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Delivery Model • Less Slides, More Code</span>
+      </div>
       <h2 class="display-section">How We Deploy Enterprise Agentic Systems</h2>
       <p class="section-lead">
         Traditional management consulting delivers theoretical slide decks. HSN Labs deploys elite Forward Deployed Engineering squads directly in your repository to ship production code.
@@ -546,7 +671,10 @@
   <!-- VERTICALS -->
   <section class="section-block" id="verticals">
     <div class="container" style="text-align: center;">
-      <div class="eyebrow">High-Stakes Environments</div>
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>High-Stakes Environments</span>
+      </div>
       <h2 class="display-section">Architected for Regulated Operations</h2>
       <p class="section-lead">
         Our deterministic engineering is specifically built for enterprise domains where probabilistic error carries severe financial or regulatory penalties.
@@ -596,7 +724,10 @@
   <section class="section-block section-alt" id="contact">
     <div class="container">
       <div class="scoping-card">
-        <div class="eyebrow">Initial Engagement</div>
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span>Initial Engagement</span>
+        </div>
         <h2 class="display-section" style="margin-bottom: 12px;">Schedule Technical Scoping</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
           We work directly with founders, board members, and C-suite leaders prioritizing margin defense and operational automation within 60 days.
@@ -638,7 +769,7 @@
     <div class="container">
       <div class="footer-content">
         <div style="max-width: 320px;">
-          <div class="brand-title" style="margin-bottom: 12px;">hsn-labs</div>
+          <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 28px; width: auto; margin-bottom: 16px;">
           <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.6;">
             Forward Deployed Engineering boutique building deterministic multi-agent architectures on business ontologies.
           </p>
@@ -672,5 +803,124 @@
     </div>
   </footer>
 
+  <!-- 3-STAGE WATER MOTION ENGINE SCRIPT FOR ELEVENLABS THEME -->
+  <script>
+    (function() {
+      const container = document.getElementById('waterEmblemTrigger');
+      const canvas = document.getElementById('waterEmblemCanvas');
+      if (!canvas || !container) return;
+      const ctx = canvas.getContext('2d');
+      const W = 120, H = 120;
+
+      let buf1 = new Float32Array(W * H), buf2 = new Float32Array(W * H);
+      const damping = 0.982;
+      const baseR = 82, baseG = 180, baseB = 253; // #52B4FD
+      const imgData = ctx.createImageData(W, H);
+
+      let isRunning = false;
+      let stage = 1;
+      let causticWeight = 0.0;
+      let targetCaustic = 0.0;
+      let timeVal = 0;
+
+      function renderStatic() {
+        const d = imgData.data;
+        for (let i = 0; i < W * H; i++) {
+          const p = i * 4;
+          d[p] = baseR; d[p+1] = baseG; d[p+2] = baseB; d[p+3] = 255;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      function drop(cx, cy, radius, strength) {
+        for (let y = Math.max(1, cy - radius); y < Math.min(H - 1, cy + radius); y++) {
+          for (let x = Math.max(1, cx - radius); x < Math.min(W - 1, cx + radius); x++) {
+            const dist = Math.hypot(x - cx, y - cy);
+            if (dist < radius) {
+              buf1[y * W + x] += strength * Math.cos((dist / radius) * (Math.PI / 2));
+            }
+          }
+        }
+      }
+
+      function trigger(strength = 240) {
+        // Drop in carp center: x=82, y=39 on 120x120
+        drop(82, 39, 6, strength);
+        targetCaustic = 0.65;
+        stage = 2;
+        if (!isRunning) {
+          isRunning = true;
+          requestAnimationFrame(loop);
+        }
+      }
+
+      function loop() {
+        causticWeight += (targetCaustic - causticWeight) * 0.025;
+        timeVal += 0.02;
+
+        let totalEnergy = 0;
+        for (let y = 1; y < H - 1; y++) {
+          const row = y * W;
+          for (let x = 1; x < W - 1; x++) {
+            const idx = row + x;
+            let val = (buf1[idx - 1] + buf1[idx + 1] + buf1[idx - W] + buf1[idx + W]) * 0.5 - buf2[idx];
+            val *= damping;
+            buf2[idx] = val;
+            totalEnergy += Math.abs(val);
+          }
+        }
+
+        const temp = buf1; buf1 = buf2; buf2 = temp;
+        if (stage === 2 && totalEnergy < 240 && causticWeight > 0.45) {
+          stage = 3;
+        }
+
+        const d = imgData.data;
+        for (let i = 0; i < W * H; i++) {
+          const x = i % W, y = Math.floor(i / W), p = i * 4;
+          if (x === 0 || x === W - 1 || y === 0 || y === H - 1) {
+            d[p] = baseR; d[p+1] = baseG; d[p+2] = baseB; d[p+3] = 255;
+            continue;
+          }
+
+          const dx = buf1[i + 1] - buf1[i - 1], dy = buf1[i + W] - buf1[i - W];
+          const wave = (dx + dy) * 1.6;
+          let caustic = 0;
+          if (causticWeight > 0.005) {
+            const nx = x * 0.08, ny = y * 0.08;
+            caustic = (
+              Math.sin(nx + timeVal * 0.75) * Math.cos(ny - timeVal * 0.65) +
+              Math.sin(nx * 1.4 - timeVal * 0.45) * Math.sin(ny * 1.2 + timeVal * 0.8)
+            ) * 14.0 * causticWeight;
+          }
+
+          const mod = wave + caustic;
+          d[p] = Math.max(0, Math.min(255, baseR + mod * 0.85));
+          d[p+1] = Math.max(0, Math.min(255, baseG + mod * 0.95));
+          d[p+2] = Math.max(0, Math.min(255, baseB + mod));
+          d[p+3] = 255;
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+
+        if (stage === 1 && totalEnergy < 2 && causticWeight < 0.005) {
+          isRunning = false;
+          return;
+        }
+        requestAnimationFrame(loop);
+      }
+
+      renderStatic();
+
+      container.addEventListener('mouseenter', () => {
+        if (stage === 1) trigger(220);
+        else if (stage === 3) drop(82, 39, 5, 160);
+      });
+
+      container.addEventListener('click', () => {
+        trigger(300);
+      });
+    })();
+  </script>
 </body>
 </html>
