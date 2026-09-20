@@ -1,18 +1,40 @@
-# HSN Labs Website
+# HSN Labs — Official Website
 
-Official repository for the HSN Labs enterprise website.
+Repositório oficial do site da **HSN Labs**, boutique de Forward Deployed Engineering especializada em sistemas agênticos determinísticos e ontologias de negócios.
 
-## Structure
-- `index.html`: Main landing page (interactive dark design with audio controls).
-- `careers.html`: Forward Deployed Engineer roles and recruitment.
-- `bfsi.html`: Vertical landing page for Banking, Financial Services, and Insurance.
-- `healthcare.html`: Vertical landing page for Enterprise Healthcare.
-- `roi-calculator.html`: Interactive ROI and operational feasibility calculator.
-- `graphs.html`: Interactive knowledge graph visualization component.
-- `lab.html`: Architecture and methodology playground.
-- `assets/`: Image, logo, and video assets.
-- `sounds/`: UI sound effects and audio tracks.
-- `llms.txt`, `llms-full.txt`: Machine-readable semantic descriptors for AI search crawlers.
+Hospedado no GitHub Pages: [hsnlabs.ai](https://hsnlabs.ai) / [hugonotnice.github.io/hsn-labs-site](https://hugonotnice.github.io/hsn-labs-site)
 
-## Deployment
-Static site ready for deployment on GitHub Pages, Cloudflare Pages, or Vercel.
+---
+
+## Estrutura do Repositório
+
+```text
+├── assets/
+│   └── brand/               # Kit completo de identidade visual
+│       ├── elements/        # Carpa origami isolada em PNG transparente 1x e 4x
+│       ├── favicons/        # Pacote completo de ícones de navegação
+│       ├── lockups/         # Aplicações horizontal e vertical em PNG e WebP
+│       ├── motion/          # Animações em MP4, WebM, GIF e código HTML
+│       ├── symbol/          # Símbolo quadrado ciano oficial em 2000px
+│       └── wordmark/        # Tipografia vetorial SVG e PNG nas cores da marca
+├── AGENTS.md                # Diretrizes operacionais para agentes de código
+├── BRAND.md                 # Manual de identidade visual e regras de aplicação
+├── DESIGN.md                # Especificação oficial Google design-md com tokens
+├── GEMINI.md                # Diretrizes técnicas compatíveis com Gemini
+├── tailwind.theme.json      # Tokens prontos para Tailwind CSS
+├── tokens.json              # Tokens em formato W3C DTCG
+├── index.html               # Entrada estática para GitHub Pages
+└── README.md                # Este documento
+```
+
+---
+
+## Como rodar localmente
+
+```bash
+# Servir estaticamente via Python
+python3 -m http.server 8000
+
+# Abrir no navegador
+open http://localhost:8000
+```
