@@ -1,83 +1,67 @@
-# Manual de Identidade Visual - HSN Labs
+# HSN Labs — Brand Identity Guidelines
 
-Manual prático para aplicação da marca HSN Labs em produtos digitais, sites, apresentações e comunicação institucional.
-
----
-
-## 1. Conceito e Metáfora
-
-* **Posicionamento:** Forward Deployed Engineering boutique para sistemas agênticos de inteligência artificial em ontologias de negócios críticas.
-* **Símbolo:** Quadrado de água ciano com uma carpa koi em origami 3D de papel branco saltando em direção ao canto superior direito.
-* **Metáfora da Carpa Origami:**
-  * Dobras de papel: Estrutura, determinismo, engenharia tátil e rigor artesanal em oposição a alucinações sintéticas.
-  * Movimento ascendente: Progresso, capacidade de manobra e ascensão técnica.
-  * Água ciano: O meio líquido dinâmico onde os agentes operam.
+Operational standards for applying the HSN Labs brand across digital products, engineering documentation, investor decks, and public communications.
 
 ---
 
-## 2. Paleta Oficial de Cores
+## 1. Brand Concept and Metaphor
 
-* **#07090E - Obsidian Black:** Fundo principal do site, slides e cartões de alto contraste.
-* **#0E1017 - Charcoal Surface:** Superfície de cartões, blocos de código e containers.
-* **#161924 - Elevated Surface:** Estado elevado de cartões e áreas interativas no hover.
-* **#222736 - Technical Border:** Linhas de contorno, divisores de grade e bordas finas de 1px.
-* **#52B4FD - Brand Sky Blue:** Cor primária da marca e do quadrado de água. Ponto focal de interação e botões.
-* **#135BA1 - Cyan Deep:** Sombra e profundidade líquida nas calhas de onda do motion da água.
-* **#FFFFFF - Branco Puro:** Títulos display, logotipo wordmark e luzes das dobras de papel.
-* **#94A3B8 - Slate Text:** Textos corridos, parágrafos explicativos e subtítulos.
-* **#718096 - Muted Telemetry:** Metadados, carimbos de data, chaves JSON e legendas técnicas.
-* **#10B981 - Emerald Green:** Status operacionais aprovados, testes unitários e asserções determinísticas.
+* **Core Positioning:** Forward Deployed Engineering boutique building deterministic multi-agent architectures on business ontologies for mission-critical enterprise operations.
+* **Symbol:** Pure geometric cyan square containing a white paper origami koi carp leaping toward the upper right corner.
+* **Origami Metaphor:**
+  * Precise paper folds represent deterministic logic, structural rigor, and artisanal engineering versus stochastic drift.
+  * Ascending direction signals progress, technical velocity, and operational mastery.
+  * Cyan square represents the dynamic liquid medium where intelligent agents operate.
 
 ---
 
-## 3. Tipografia Oficial
+## 2. Strict Geometric Invariants
 
-* **Logotipo Wordmark:**
-  * Fonte: Sans-serif geométrica em caixa baixa pura: `hsn-labs`.
-  * Espaçamento entre letras: `0.1em`.
-* **Títulos e Display:**
-  * Família: `Satoshi` ou `Inter Display`.
-  * Pesos: 700 bold e 900 heavy.
-  * Tracking: `-0.02em`.
-* **Corpo de Texto:**
-  * Família: `Inter`.
-  * Pesos: 400 regular e 500 medium.
-  * Altura de linha: 1.6.
-* **Telemetria, Código e Métricas:**
-  * Família: `JetBrains Mono`.
-  * Pesos: 500 medium.
+* **Corner Radius Rule:**
+  * The cyan square symbol must ALWAYS maintain sharp 90-degree corners with `border-radius: 0`.
+  * Never apply rounded corners, squircles, circular masks, or border-radius to the cyan square mark.
+* **Angle and Orientation:**
+  * Never rotate, mirror, or slant the origami carp outside its original ascending trajectory.
+* **Exclusion Zone:**
+  * Maintain minimum clear space equal to half the width of the cyan square around all sides of the mark.
 
 ---
 
-## 4. Estrutura de Assets e Onde Usar
+## 3. Official Color Palette
 
-Pasta de origem no repositório: `assets/brand/`
-
-* `elements/`:
-  * `origami-carp-clean.png` e `origami-carp-clean-4x.png`: Carpa isolada com transparência alpha para fundos escuros em slides ou elementos gráficos flutuantes.
-  * `origami-carp-glow.png` e `origami-carp-glow-4x.png`: Versão com brilho perimetral original.
-* `symbol/`:
-  * `symbol-square-clean.png` e `symbol-square-clean-4x.png`: Quadrado ciano com a carpa. Uso em avatares de redes sociais como LinkedIn, GitHub e X, além de ícones de aplicativo.
-  * `symbol-square-pure-cyan.png`: Variação com ciano elétrico puro `#00FFFF`.
-* `wordmark/`:
-  * `hsn-labs-wordmark-white.svg` e `.png`: Texto institucional para aplicação sobre fundos pretos e cabeçalhos escuros.
-  * `hsn-labs-wordmark-black.svg` e `.png`: Texto para documentos de impressão, contratos e papéis timbrados claros.
-  * `hsn-labs-wordmark-cyan.svg`: Destaque com o ciano institucional.
-* `lockups/`:
-  * `hsn-labs-lockup-horizontal-dark.png` e `.webp`: Combinação de símbolo e texto lado a lado. Uso principal na barra de navegação superior do site e topo de slides.
-  * `hsn-labs-lockup-vertical-dark.png` e `.webp`: Combinação com símbolo acima do texto. Uso principal na capa de apresentações e hero section.
-* `favicons/`:
-  * Pacote completo de ícones de navegador de 16x16 até 512x512 pixels, `apple-touch-icon.png` e `favicon.ico`.
-* `motion/`:
-  * `hsn-labs-water-motion.mp4` e `.webm`: Vídeo 60fps em loop contínuo para apresentações em Keynote e hero backgrounds.
-  * `hsn-labs-water-motion.gif`: Formato universal para Google Slides, Notion, Trello e e-mails.
-  * `hsn-labs-water-logo.html`: Componente web modular em 3 etapas com física de ondas 2D e cáusticas de lagoa.
+* **Obsidian Black (`#07090E`):** Primary ink for high-contrast dark environments, typography, and buttons.
+* **Brand Sky Blue (`#52B4FD`):** Primary corporate identifier and background of the origami carp basin.
+* **Accessible Cyan (`#0284c7`):** High-contrast text on light surfaces meeting WCAG AA requirements.
+* **Canvas Floor (`#F5F5F5`):** Clean off-white surface for editorial print presentation.
+* **Card Surface (`#FFFFFF`):** Pure white elevated surface for cards and interactive modules.
+* **Hairline Border (`#E2E8F0`):** Subtle 1px structural dividing lines.
+* **Operational Emerald (`#10B981`):** Verified invariant passes, audit checks, and SLA metrics.
 
 ---
 
-## 5. Regras de Aplicação
+## 4. Typography System
 
-* Não esticar, distorcer ou girar o símbolo fora do ângulo ascendente original.
-* Não colocar o símbolo dentro de formas arredondadas genéricas de aplicativo como squircles.
-* Não aplicar gradientes roxos, fitas neon ou efeitos de inteligência artificial genérica.
-* Sempre garantir área de respiro mínima equivalente a metade da largura do quadrado ao redor do logo.
+* **Wordmark:** Pure lowercase geometric sans `hsn-labs` with uniform tracking.
+* **Display Headings:** Light serif display at weight 300 with tight line height.
+* **Running Body:** Inter regular and medium with slight positive tracking for airy reading.
+* **Code and Telemetry:** JetBrains Mono for system metrics, endpoints, and schema references.
+
+---
+
+## 5. Asset Library Directory
+
+All canonical files reside in `assets/brand/`:
+* `elements/`: Clean isolated transparent origami carp in 1x and 4x scales.
+* `symbol/`: Cyan square mark with carp in standard and 4x resolution.
+* `wordmark/`: Vector SVG wordmarks in black, white, and cyan.
+* `lockups/`: Horizontal and vertical lockups for light and dark backgrounds.
+* `motion/`: Physical liquid simulation renders in MP4, WebM, and GIF formats.
+* `favicons/`: Complete multi-resolution browser favicon bundle.
+
+---
+
+## 6. Prohibited Practices
+
+* Do not apply generic AI visual tropes such as neon gradients, purple ribbons, or floating spheres.
+* Do not alter the lowercase casing of the wordmark `hsn-labs`.
+* Do not combine the mark with third-party logos without maintaining the standard exclusion margin.
