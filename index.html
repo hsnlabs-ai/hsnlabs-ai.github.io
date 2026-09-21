@@ -358,17 +358,36 @@
       align-items: center;
       justify-content: center;
       height: 32px;
+      position: relative;
+      cursor: pointer;
     }
 
     .portfolio-item img {
-      opacity: 0.45;
-      transition: opacity 0.2s ease, transform 0.2s ease;
       display: block;
+      transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
-    .portfolio-item:hover img {
-      opacity: 0.85;
+    .portfolio-item img.logo-black {
+      opacity: 0.45;
+    }
+
+    .portfolio-item img.logo-color {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .portfolio-item:hover img.logo-black {
+      opacity: 0;
       transform: scale(1.05);
+    }
+
+    .portfolio-item:hover img.logo-color {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.05);
     }
 
     /* SECTIONS */
@@ -759,31 +778,40 @@
         <div class="portfolio-label">Our Portfolio</div>
         <div class="portfolio-grid">
           <div class="portfolio-item" title="Deloitte">
-            <img src="./assets/portfolio/svg/deloitte-black.svg" alt="Deloitte" style="height: 22px;">
+            <img src="./assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;">
+            <img src="./assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;">
           </div>
           <div class="portfolio-item" title="Santander">
-            <img src="./assets/portfolio/svg/santander-black.svg" alt="Santander" style="height: 18px;">
+            <img src="./assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;">
+            <img src="./assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;">
           </div>
           <div class="portfolio-item" title="Insi">
-            <img src="./assets/portfolio/svg/insi-black.svg" alt="Insi" style="height: 22px;">
+            <img src="./assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;">
+            <img src="./assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;">
           </div>
           <div class="portfolio-item" title="Softplan">
-            <img src="./assets/portfolio/svg/softplan-black.svg" alt="Softplan" style="height: 18px;">
+            <img src="./assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;">
+            <img src="./assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;">
           </div>
           <div class="portfolio-item" title="Unipar">
-            <img src="./assets/portfolio/svg/unipar-black.svg" alt="Unipar" style="height: 22px;">
+            <img src="./assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;">
+            <img src="./assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;">
           </div>
           <div class="portfolio-item" title="LWSA">
-            <img src="./assets/portfolio/svg/lwsa-black.svg" alt="LWSA" style="height: 18px;">
+            <img src="./assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;">
+            <img src="./assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;">
           </div>
           <div class="portfolio-item" title="Turbi">
-            <img src="./assets/portfolio/svg/turbi-black.svg" alt="Turbi" style="height: 18px;">
+            <img src="./assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;">
+            <img src="./assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;">
           </div>
           <div class="portfolio-item" title="Caju">
-            <img src="./assets/portfolio/svg/caju-black.svg" alt="Caju" style="height: 20px;">
+            <img src="./assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;">
+            <img src="./assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;">
           </div>
           <div class="portfolio-item" title="Cast Group">
-            <img src="./assets/portfolio/svg/castgroup-black.svg" alt="Cast Group" style="height: 20px;">
+            <img src="./assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;">
+            <img src="./assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;">
           </div>
         </div>
       </div>
