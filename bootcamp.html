@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>5-Day Agentic Bootcamp — HSN Labs</title>
   <meta name="description" content="A focused 5-day technical deployment inside your private cloud to build and validate a production deep agent on business ontologies.">
 
@@ -572,12 +572,25 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: color 0.2s ease, transform 0.2s ease;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
     }
 
     .footer-social-icon:hover {
       color: var(--ink);
+      background: var(--surface-card);
       transform: translateY(-1px);
+    }
+    /* iOS SAFARI AUTO-ZOOM PREVENTION */
+    @media (max-width: 768px) {
+      .form-input, .form-select, .form-textarea {
+        font-size: 16px !important;
+      }
+      .footer-newsletter-form input {
+        font-size: 16px !important;
+      }
     }
   </style>
 </head>
