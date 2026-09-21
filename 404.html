@@ -3,49 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Modern Slavery Statement — HSN Labs</title>
-    <!-- Open Graph / WhatsApp / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hsnlabs.ai/">
-  <meta property="og:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta property="og:description" content="Boutique building deterministic multi-agent architectures on business ontologies.">
-  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <title>404 — Route Not Found | HSN Labs</title>
+  <meta name="description" content="State machine exception: the requested deterministic route does not exist in our topology.">
+  <meta name="robots" content="noindex, follow">
 
-  <!-- Twitter / X Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://hsnlabs.ai/">
-  <meta name="twitter:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta name="twitter:description" content="Boutique building deterministic multi-agent architectures on business ontologies.">
-  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
-
-  <meta name="description" content="Modern Slavery Statement for HSN Labs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards.">
-
-  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="./assets/brand/favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/brand/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicons/favicon-16x16.png">
 
-  <!-- Google Fonts -->
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="404 — Route Not Found | HSN Labs">
+  <meta property="og:description" content="State machine exception: the requested route does not exist in our topology.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+
+  <!-- Google Fonts: Cormorant Garamond for display, Inter for UI and body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-    /* Typography Tokens */
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      /* Typography Tokens */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    /* Canonical Type Scale */
-    --text-xs: 0.75rem;
-    --text-sm: 0.85rem;
-    --text-base: 0.95rem;
-    --text-lg: 1.25rem;
-    --text-xl: 2rem;
-    --text-display: clamp(2.4rem, 5vw, 4.5rem);
+      /* Canonical Type Scale */
+      --text-xs: 0.75rem;
+      --text-sm: 0.85rem;
+      --text-base: 0.95rem;
+      --text-lg: 1.25rem;
+      --text-xl: 2rem;
+      --text-display: clamp(2.4rem, 5vw, 4.5rem);
+
       --canvas: #f5f5f5;
       --canvas-soft: #fafafa;
       --surface-card: #ffffff;
@@ -60,90 +51,56 @@
       --hairline-strong: #cbd5e1;
       --cyan: #52B4FD;
       --cyan-text: #0284c7;
-      --emerald: #10B981;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-glow: rgba(82, 180, 253, 0.28);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--canvas);
       color: var(--body);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: var(--font-sans);
       min-height: 100vh;
-      line-height: 1.65;
+      line-height: 1.6;
       letter-spacing: 0.16px;
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 32px;
+      width: 100%;
     }
 
     /* HEADER */
     .header-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
       background: rgba(245, 245, 245, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--hairline);
       height: 80px;
-      display: flex;
-      align-items: center;
     }
 
     .header-container {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      width: 100%;
-    }
-
-    .brand-link {
-      display: flex;
       align-items: center;
-      text-decoration: none;
+      height: 100%;
     }
 
-    .brand-logo-img {
-      height: 52px;
-      width: auto;
-      display: block;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-link {
-      color: var(--body);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--ink);
-    }
+    .brand-logo-img { height: 46px; width: auto; display: block; }
 
     /* BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.925rem;
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
       font-weight: 500;
       border-radius: 8px;
       padding: 10px 24px;
@@ -178,112 +135,71 @@
       transform: translateY(-1px);
     }
 
-    /* STATEMENT CONTENT */
-    .statement-hero {
-      padding: 72px 0 40px 0;
-      border-bottom: 1px solid var(--hairline);
-      background: var(--canvas-soft);
-    }
-
-    .back-link {
-      display: inline-flex;
+    /* 404 HERO CONTENT */
+    .error-hero {
+      flex: 1;
+      display: flex;
       align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-bottom: 24px;
-      transition: color 0.2s ease;
+      justify-content: center;
+      padding: 96px 0 120px 0;
+      text-align: center;
     }
 
-    .back-link:hover {
-      color: var(--ink);
-    }
-
-    
-
-    .display-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4vw, 3.4rem);
-      font-weight: 300;
-      color: var(--ink);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 14px;
-    }
-
-    .statement-meta {
-      font-family: var(--font-sans);
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .statement-wrapper {
-      padding: 64px 0 100px 0;
-    }
-
-    .statement-card {
+    .error-card {
       background: var(--surface-card);
       border: 1px solid var(--hairline);
-      padding: 56px;
-      max-width: 860px;
+      border-radius: 20px;
+      padding: 64px 48px;
+      max-width: 680px;
+      width: 100%;
       margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     }
 
-    .statement-section {
-      margin-bottom: 44px;
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 10vw, 7.5rem);
+      font-weight: 300;
+      line-height: 0.95;
+      color: var(--ink);
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
     }
 
-    .statement-section:last-child {
-      margin-bottom: 0;
+    .error-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cyan-text);
+      background: var(--cyan-subtle);
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin-bottom: 20px;
     }
 
-    .statement-h2 {
-      font-size: 1.3rem;
+    .error-title {
+      font-size: 1.45rem;
       font-weight: 600;
       color: var(--ink);
       margin-bottom: 16px;
       letter-spacing: -0.01em;
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 8px;
     }
 
-    .statement-p {
-      color: var(--body);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .statement-list {
-      list-style: disc;
-      padding-left: 24px;
-      margin-bottom: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .statement-list li {
-      color: var(--body);
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-
-    .statement-signoff {
-      margin-top: 32px;
-      padding-top: 24px;
-      border-top: 1px solid var(--hairline);
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
+    .error-desc {
+      font-size: 1rem;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.65;
+      max-width: 520px;
+      margin: 0 auto 36px auto;
     }
 
-    .statement-signoff strong {
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
     /* FOOTER */
@@ -326,9 +242,7 @@
       transition: color 0.2s ease;
     }
 
-    .footer-nav a:hover {
-      color: var(--ink);
-    }
+    .footer-nav a:hover { color: var(--ink); }
 
     .footer-bottom {
       border-top: 1px solid var(--hairline);
@@ -356,9 +270,7 @@
       transition: color 0.2s ease;
     }
 
-    .footer-bottom-links a:hover {
-      color: var(--ink);
-    }
+    .footer-bottom-links a:hover { color: var(--ink); }
 
     .footer-social-row {
       display: flex;
@@ -384,18 +296,12 @@
     }
 
     @media (max-width: 640px) {
-      .statement-card {
-        padding: 32px 20px;
-      }
-      .nav-menu {
-        display: none;
-      }
-    }
-    /* iOS SAFARI AUTO-ZOOM PREVENTION */
-    @media (max-width: 768px) {
-      .footer-newsletter-form input {
-        font-size: 16px !important;
-      }
+      .container { padding: 0 20px; }
+      .error-card { padding: 44px 24px; }
+      .error-actions { flex-direction: column; }
+      .error-actions .btn { width: 100%; }
+      .site-footer { padding: 56px 0 36px 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 40px; }
     }
 
     /* COOKIE CONSENT BANNER */
@@ -435,30 +341,13 @@
       margin-bottom: 18px;
     }
 
-    .cookie-text a {
-      color: var(--ink);
-      text-decoration: underline;
-    }
+    .cookie-text a { color: var(--ink); text-decoration: underline; }
 
-    .cookie-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .cookie-btn-accept {
-      padding: 8px 18px;
-      font-size: 0.82rem;
-      border-radius: 8px;
-    }
-
-    .cookie-btn-decline {
-      padding: 8px 16px;
-      font-size: 0.82rem;
-      border-radius: 8px;
-    }
-
+    .cookie-actions { display: flex; align-items: center; gap: 10px; }
+    .cookie-btn-accept { padding: 8px 18px; font-size: 0.82rem; border-radius: 8px; }
+    .cookie-btn-decline { padding: 8px 16px; font-size: 0.82rem; border-radius: 8px; }
   </style>
+
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -479,8 +368,14 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GMK24ECXMF');
-  </script>
 
+    // Smart 404 Telemetry Logging
+    gtag('event', 'page_not_found', {
+      'event_category': 'error',
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  </script>
 </head>
 <body>
 
@@ -491,116 +386,26 @@
         <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
       </a>
 
-      
-
       <a href="./bootcamp.html" class="btn btn-primary">Apply for Bootcamp</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="statement-hero">
+  <!-- 404 HERO CONTENT -->
+  <main class="error-hero">
     <div class="container">
-      <a href="./index.html" class="back-link">← Return to Overview</a>
-      <h1 class="display-title">Modern Slavery Statement</h1>
-      <div class="statement-meta">Last updated: February 2026</div>
-    </div>
-  </section>
+      <div class="error-card">
+        <div class="error-code">404</div>
+        <div class="error-badge">State Machine Exception</div>
+        <h1 class="error-title">Deterministic Route Not Found</h1>
+        <p class="error-desc">
+          The path you requested does not exist in our system topology. Autonomous agents isolate invalid state transitions before they corrupt production workflows.
+        </p>
 
-  <!-- STATEMENT BODY -->
-  <main class="statement-wrapper">
-    <div class="container">
-      <article class="statement-card">
-        
-        <section class="statement-section">
-          <h2 class="statement-h2">1. Our Commitment</h2>
-          <p class="statement-p">
-            HSN Labs maintains an uncompromising commitment to preventing modern slavery, human trafficking, forced labor, and unlawful servitude within our global operations and across our extended supplier networks. We acknowledge our corporate obligation to act with transparency, ethical discipline, and total integrity in every professional relationship.
-          </p>
-          <p class="statement-p">
-            This statement is published pursuant to Section 54 of the UK Modern Slavery Act 2015 and outlines the governance frameworks implemented to eliminate modern slavery risks from our advisory practices and technology ecosystems.
-          </p>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">2. Business Architecture and Reach</h2>
-          <p class="statement-p">
-            HSN Labs is an AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering and real business ontologies. Operating from our headquarters in São Paulo, Brazil, with international client engagements throughout the Americas and Europe, we guide enterprises from architecture blueprinting to production-grade deployment.
-          </p>
-          <p class="statement-p">
-            Our corporate base is situated at Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil, operating under strict adherence to national labor standards and international human rights principles.
-          </p>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">3. Supply Chain Profile and Risk Evaluation</h2>
-          <p class="statement-p">
-            Given our positioning as a specialized technology advisory boutique, our procurement profile consists predominantly of intellectual, software, and cloud resources. Our primary suppliers include:
-          </p>
-          <ul class="statement-list">
-            <li>Enterprise cloud infrastructure and data center operators</li>
-            <li>Software development tooling and testing environments</li>
-            <li>Cybersecurity verification and telemetry platforms</li>
-            <li>Specialized professional legal, accounting, and technical advisors</li>
-          </ul>
-          <p class="statement-p">
-            We consider our inherent exposure to forced labor to be very low. Nevertheless, we maintain rigorous vigilance across third-party partnerships, contractor onboarding, and cross-border vendor selections.
-          </p>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">4. Governance Framework and Internal Policies</h2>
-          <p class="statement-p">
-            Our zero-tolerance stance toward human exploitation is anchored by clear internal governance directives:
-          </p>
-          <ul class="statement-list">
-            <li>Professional Code of Conduct defining non-negotiable expectations regarding human dignity and fair labor</li>
-            <li>Anti-Bribery and Anti-Corruption Policy preventing coercive business practices</li>
-            <li>Whistleblowing Policy providing secure, confidential channels for reporting ethical infractions</li>
-            <li>Supplier Ethics Standards mandating compliance with statutory minimum wages and freely chosen employment</li>
-          </ul>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">5. Due Diligence and Vendor Governance</h2>
-          <p class="statement-p">
-            We apply risk-proportional screening during procurement and partner onboarding:
-          </p>
-          <ul class="statement-list">
-            <li>Evaluating partner reputational standing and verified legal compliance prior to contract execution</li>
-            <li>Incorporating explicit contractual requirements regarding modern slavery prevention in vendor agreements</li>
-            <li>Prioritizing accredited technology providers with audited compliance records</li>
-            <li>Reserving immediate contractual termination rights for any entity found in breach of fundamental human rights</li>
-          </ul>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">6. Reporting Concerns and Whistleblower Safeguards</h2>
-          <p class="statement-p">
-            Team members, enterprise clients, contractors, and external stakeholders are encouraged to report any suspicion of unethical conduct, labor abuses, or modern slavery risks. Reports may be transmitted directly to our compliance review team:
-          </p>
-          <ul class="statement-list">
-            <li>Reporting Email: ethics@hsnlabs.ai</li>
-            <li>Written Inquiries: HSN Labs Compliance, Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil</li>
-          </ul>
-          <p class="statement-p">
-            All submitted reports receive swift, confidential, and objective investigation under executive oversight. We strictly prohibit retaliation against any individual who raises concerns in good faith.
-          </p>
-        </section>
-
-        <section class="statement-section">
-          <h2 class="statement-h2">7. Continuous Improvement and Approval</h2>
-          <p class="statement-p">
-            HSN Labs continually reviews its governance mechanisms, updating oversight protocols as our client base and international presence expand.
-          </p>
-          <div class="statement-signoff">
-            <p><strong>Approved by Executive Leadership</strong></p>
-            <p>HSN Labs</p>
-            <p>São Paulo, Brazil</p>
-            <p>February 2026</p>
-          </div>
-        </section>
-
-      </article>
+        <div class="error-actions">
+          <a href="./index.html" class="btn btn-primary">Return to Production</a>
+          <a href="mailto:contact@hsnlabs.ai?subject=Routing%20Anomaly%20Report&body=Anomaly%20detected%20at%20URL:%20" id="reportLink" class="btn btn-outline">Report Anomaly</a>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -656,7 +461,7 @@
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
               </a>
-                            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-icon" title="X">
+              <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-icon" title="X">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -680,13 +485,14 @@
         <div>2026 HSN Labs. All rights reserved.</div>
         <div class="footer-bottom-links">
           <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="openCookieSettings()">Cookie Settings</a>
           <a href="./modern-slavery-statement.html">Modern Slavery Statement</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- COOKIE CONSENT BANNER (USERCENTRICS / LGPD COMPLIANT) -->
+  <!-- COOKIE CONSENT BANNER -->
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
     <div class="cookie-title">Cookie & Privacy Consent</div>
     <p class="cookie-text">
@@ -699,6 +505,12 @@
   </div>
 
   <script>
+    // Pre-fill broken route into anomaly report link
+    var rep = document.getElementById('reportLink');
+    if (rep) {
+      rep.href += encodeURIComponent(window.location.href);
+    }
+
     function initCookieBanner() {
       var consent = localStorage.getItem('hsn_cookie_consent');
       var banner = document.getElementById('cookieBanner');
@@ -710,9 +522,7 @@
     function acceptCookies() {
       localStorage.setItem('hsn_cookie_consent', 'accepted');
       if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          'analytics_storage': 'granted'
-        });
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
       }
       var banner = document.getElementById('cookieBanner');
       if (banner) banner.style.display = 'none';
@@ -721,9 +531,7 @@
     function declineCookies() {
       localStorage.setItem('hsn_cookie_consent', 'declined');
       if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          'analytics_storage': 'denied'
-        });
+        gtag('consent', 'update', { 'analytics_storage': 'denied' });
       }
       var banner = document.getElementById('cookieBanner');
       if (banner) banner.style.display = 'none';
@@ -736,6 +544,5 @@
 
     document.addEventListener('DOMContentLoaded', initCookieBanner);
   </script>
-
 </body>
 </html>
