@@ -43,8 +43,7 @@ Operational standards for applying the HSN Labs brand across digital products, e
 
 * **Wordmark:** Pure lowercase geometric sans `hsn-labs` with uniform tracking.
 * **Display Headings:** Light serif display at weight 300 with tight line height.
-* **Running Body:** Inter regular and medium with slight positive tracking for airy reading.
-* **Code and Telemetry:** JetBrains Mono for system metrics, endpoints, and schema references.
+* **Running Body and Interface:** Inter regular and medium with slight positive tracking for airy reading.
 
 ---
 

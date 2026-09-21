@@ -18,11 +18,11 @@ The website is engineered as a zero-dependency, high-performance static applicat
   * Primary action linking to the 5-Day Bootcamp and secondary action to Contact Us.
   * Client Portfolio strip featuring nine normalized monochrome enterprise marks.
 * **Services Section:**
-  * Balanced two-by-two grid presenting four core delivery pillars:
+  * Bento grid presenting four core delivery pillars:
     * Personalized Business Ontologies.
     * Deep Agent Infrastructure.
     * Deterministic Guardrails.
-    * Enterprise ADLC Stack with official vector ecosystem pills: LangChain, LangSmith, Azure AI, Palantir Foundry, Palantir AIP, Neo4j, AWS Bedrock, LlamaIndex, Google ADK.
+    * Enterprise ADLC Stack with official vector ecosystem badges: LangChain, LangSmith, Azure AI, Palantir Foundry, Palantir AIP, Neo4j, AWS Bedrock, LlamaIndex, Google ADK.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
     * Banking and Capital.
@@ -53,7 +53,6 @@ Built on the ElevenLabs editorial print design system without artificial visual 
 ### Typography Hierarchy
 * **Display Headings:** Cormorant Garamond at weight 300 with negative tracking.
 * **Body and UI:** Inter with positive tracking for airy editorial reading.
-* **Metrics and Code:** JetBrains Mono for telemetry and invariant verification.
 
 ---
 

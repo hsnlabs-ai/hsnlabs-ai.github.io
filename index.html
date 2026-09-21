@@ -12,13 +12,24 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicons/favicon-16x16.png">
 
-  <!-- Google Fonts: Cormorant Garamond for Waldenburg-like light display, Inter for body, JetBrains Mono for metrics -->
+  <!-- Google Fonts: Cormorant Garamond for display, Inter for UI and body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
+    /* Typography Tokens */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Canonical Type Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.85rem;
+    --text-base: 0.95rem;
+    --text-lg: 1.25rem;
+    --text-xl: 2rem;
+    --text-display: clamp(2.4rem, 5vw, 4.5rem);
       --canvas: #f5f5f5;
       --canvas-soft: #fafafa;
       --surface-card: #ffffff;
@@ -120,7 +131,7 @@
 
     /* TYPOGRAPHY */
     .display-hero {
-      font-family: 'Cormorant Garamond', 'Waldenburg', Georgia, serif;
+      font-family: var(--font-display);
       font-size: clamp(2rem, 5vw, 4.5rem);
       font-weight: 300;
       line-height: 1.1;
@@ -133,7 +144,7 @@
     }
 
     .display-section {
-      font-family: 'Cormorant Garamond', 'Waldenburg', Georgia, serif;
+      font-family: var(--font-display);
       font-size: clamp(2.2rem, 4vw, 3rem);
       font-weight: 300;
       line-height: 1.15;
@@ -216,14 +227,14 @@
       color: var(--ink);
     }
 
-    /* PILL BUTTONS */
+    /* BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 0.925rem;
       font-weight: 500;
-      border-radius: 9999px;
+      border-radius: 8px;
       padding: 10px 24px;
       text-decoration: none;
       transition: all 0.2s ease;
@@ -231,26 +242,26 @@
       line-height: 1;
     }
 
-    .btn-pill-primary {
+    .btn-primary {
       background: var(--primary);
       color: #ffffff;
       border: 1px solid var(--primary);
     }
 
-    .btn-pill-primary:hover {
+    .btn-primary:hover {
       background: var(--primary-active);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
       transform: translateY(-1px);
     }
 
-    .btn-pill-outline {
+    .btn-outline {
       background: #ffffff;
       color: var(--ink);
       border: 1px solid var(--hairline-strong);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
-    .btn-pill-outline:hover {
+    .btn-outline:hover {
       background: var(--surface-strong);
       border-color: var(--muted-soft);
       transform: translateY(-1px);
@@ -498,7 +509,7 @@
       border-top: 1px solid var(--hairline);
     }
 
-    .stack-pill {
+    .stack-item {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -516,7 +527,7 @@
       cursor: default;
     }
 
-    .stack-pill:hover {
+    .stack-item:hover {
       background: var(--surface-card);
       border-color: var(--cyan);
       color: var(--ink);
@@ -524,7 +535,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    .stack-pill img {
+    .stack-item img {
       width: 18px;
       height: 18px;
       flex-shrink: 0;
@@ -703,7 +714,7 @@
       gap: 16px;
       font-size: 0.82rem;
       color: var(--muted);
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-sans);
     }
 
     .footer-bottom-links {
@@ -716,7 +727,7 @@
       color: var(--muted);
       text-decoration: none;
       font-size: 0.82rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: var(--font-sans);
       transition: color 0.2s ease;
     }
 
@@ -855,7 +866,7 @@
         </ul>
       </nav>
 
-      <a href="./bootcamp.html" class="btn btn-pill-primary">Apply for Bootcamp</a>
+      <a href="./bootcamp.html" class="btn btn-primary">Apply for Bootcamp</a>
     </div>
   </header>
 
@@ -878,8 +889,8 @@
       </p>
 
       <div class="hero-ctas">
-        <a href="./bootcamp.html" class="btn btn-pill-primary">Apply for Bootcamp</a>
-        <a href="#contact" class="btn btn-pill-outline">Contact Us</a>
+        <a href="./bootcamp.html" class="btn btn-primary">Apply for Bootcamp</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
 
@@ -968,39 +979,39 @@
           </div>
 
           <div class="stack-grid">
-            <div class="stack-pill" title="LangChain">
+            <div class="stack-item" title="LangChain">
               <img src="./assets/stack/langchain.svg" alt="LangChain">
               <span>LangChain</span>
             </div>
-            <div class="stack-pill" title="LangSmith">
+            <div class="stack-item" title="LangSmith">
               <img src="./assets/stack/langsmith.svg" alt="LangSmith">
               <span>LangSmith</span>
             </div>
-            <div class="stack-pill" title="Azure AI Agent Service">
+            <div class="stack-item" title="Azure AI Agent Service">
               <img src="./assets/stack/azure.svg" alt="Azure AI Agent Service">
               <span>Azure AI</span>
             </div>
-            <div class="stack-pill" title="Palantir Foundry">
+            <div class="stack-item" title="Palantir Foundry">
               <img src="./assets/stack/palantir_foundry.svg" alt="Palantir Foundry">
               <span>Foundry</span>
             </div>
-            <div class="stack-pill" title="Palantir AIP">
+            <div class="stack-item" title="Palantir AIP">
               <img src="./assets/stack/palantir_aip.svg" alt="Palantir AIP">
               <span>Palantir AIP</span>
             </div>
-            <div class="stack-pill" title="Neo4j">
+            <div class="stack-item" title="Neo4j">
               <img src="./assets/stack/neo4j.svg" alt="Neo4j">
               <span>Neo4j</span>
             </div>
-            <div class="stack-pill" title="AWS Bedrock">
+            <div class="stack-item" title="AWS Bedrock">
               <img src="./assets/stack/bedrock.svg" alt="AWS Bedrock">
               <span>Bedrock</span>
             </div>
-            <div class="stack-pill" title="LlamaIndex">
+            <div class="stack-item" title="LlamaIndex">
               <img src="./assets/stack/llamaindex.svg" alt="LlamaIndex">
               <span>LlamaIndex</span>
             </div>
-            <div class="stack-pill" title="Google ADK">
+            <div class="stack-item" title="Google ADK">
               <img src="./assets/stack/google.svg" alt="Google ADK">
               <span>Google ADK</span>
             </div>
@@ -1102,7 +1113,7 @@
           </div>
 
           <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
-            <button type="submit" class="btn btn-pill-primary" style="padding: 12px 36px; font-size: 1rem; width: 100%; max-width: 280px;">
+            <button type="submit" class="btn btn-primary" style="padding: 12px 36px; font-size: 1rem; width: 100%; max-width: 280px;">
               Send Message
             </button>
           </div>
@@ -1147,8 +1158,8 @@
           <div class="footer-col-title">Stay Updated</div>
           <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.innerText='Sent'; setTimeout(() => b.innerText='Send', 3000); this.querySelector('input').value='';">
             <div style="display: flex; gap: 8px;">
-              <input type="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 9999px; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
-              <button type="submit" class="btn btn-pill-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 9999px; cursor: pointer; white-space: nowrap;">Send</button>
+              <input type="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 8px; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 8px; cursor: pointer; white-space: nowrap;">Send</button>
             </div>
           </form>
           <div style="margin-top: 22px;">
