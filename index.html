@@ -465,6 +465,54 @@
       line-height: 1.6;
     }
 
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .stack-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 8px;
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--body);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .stack-pill:hover {
+      background: var(--surface-card);
+      border-color: var(--cyan);
+      color: var(--ink);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .stack-pill img {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 480px) {
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     .card-vertical {
       padding: 0;
       overflow: hidden;
@@ -913,6 +961,45 @@
           <p class="card-body">
             Full lifecycle management with LangGraph and LangSmith for automated tracing, evaluation, and production monitoring.
           </p>
+
+          <div class="stack-grid">
+            <div class="stack-pill" title="LangChain">
+              <img src="./assets/stack/langchain.svg" alt="LangChain">
+              <span>LangChain</span>
+            </div>
+            <div class="stack-pill" title="LangSmith">
+              <img src="./assets/stack/langsmith.svg" alt="LangSmith">
+              <span>LangSmith</span>
+            </div>
+            <div class="stack-pill" title="Azure AI Agent Service">
+              <img src="./assets/stack/azure.svg" alt="Azure AI Agent Service">
+              <span>Azure AI</span>
+            </div>
+            <div class="stack-pill" title="Palantir Foundry">
+              <img src="./assets/stack/palantir.svg" alt="Palantir Foundry">
+              <span>Foundry</span>
+            </div>
+            <div class="stack-pill" title="Palantir AIP">
+              <img src="./assets/stack/palantir.svg" alt="Palantir AIP">
+              <span>Palantir AIP</span>
+            </div>
+            <div class="stack-pill" title="Neo4j">
+              <img src="./assets/stack/neo4j.svg" alt="Neo4j">
+              <span>Neo4j</span>
+            </div>
+            <div class="stack-pill" title="AWS Bedrock">
+              <img src="./assets/stack/bedrock.svg" alt="AWS Bedrock">
+              <span>Bedrock</span>
+            </div>
+            <div class="stack-pill" title="LlamaIndex">
+              <img src="./assets/stack/llamaindex.svg" alt="LlamaIndex">
+              <span>LlamaIndex</span>
+            </div>
+            <div class="stack-pill" title="Google ADK">
+              <img src="./assets/stack/google.svg" alt="Google ADK">
+              <span>Google ADK</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
