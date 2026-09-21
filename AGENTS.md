@@ -26,14 +26,14 @@ The website follows a clean 4-section architecture:
 2. Hero Page:
    * Brand mark centered above the primary headline: Official 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners with `border-radius: 0`. Never apply rounded corners to the mark.
    * Primary headline: `Production-Grade AI Agents on Business Ontologies`.
-   * Subtitle: Narrative explaining senior embedded FDE squads versus theoretical management consulting slides.
+   * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, PagoNext, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
 3. Services Section:
    * Balanced two-by-two grid presenting four technical pillars:
-     1. Embedded FDE Squads.
-     2. Mathematical Guardrails.
-     3. Ontologies and GraphRAG.
+     1. Hybrid Engineering and Deep Agents.
+     2. Specialized Architecture Consulting.
+     3. Business Ontologies and MCP Connectors.
      4. 5-Day Agentic Bootcamp.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:

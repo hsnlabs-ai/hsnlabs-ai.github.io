@@ -2,7 +2,7 @@
 
 Official production repository for the **HSN Labs** corporate website.
 
-HSN Labs is a Forward Deployed Engineering boutique building deterministic multi-agent architectures on business ontologies for mission-critical enterprise operations.
+HSN Labs is an AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering, enterprise ontologies, and custom deep agents for mission-critical operations.
 
 ---
 
@@ -19,9 +19,9 @@ The website is engineered as a zero-dependency, high-performance static applicat
   * Client Portfolio strip featuring nine normalized monochrome enterprise marks.
 * **Services Section:**
   * Balanced two-by-two grid presenting four core delivery pillars:
-    * Embedded FDE Squads.
-    * Mathematical Guardrails.
-    * Ontologies and GraphRAG.
+    * Hybrid Engineering and Deep Agents.
+    * Specialized Architecture Consulting.
+    * Business Ontologies and MCP Connectors.
     * 5-Day Agentic Bootcamp.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
