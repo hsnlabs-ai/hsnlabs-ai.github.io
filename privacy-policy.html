@@ -111,15 +111,17 @@
       color: var(--ink);
     }
 
+    /* PILL BUTTONS */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Inter', sans-serif;
+      font-size: 0.925rem;
       font-weight: 500;
       border-radius: 9999px;
+      padding: 10px 24px;
       text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.2s ease;
       cursor: pointer;
       line-height: 1;
     }
@@ -128,13 +130,24 @@
       background: var(--primary);
       color: #ffffff;
       border: 1px solid var(--primary);
-      padding: 10px 22px;
-      font-size: 0.9rem;
     }
 
     .btn-pill-primary:hover {
       background: var(--primary-active);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+      transform: translateY(-1px);
+    }
+
+    .btn-pill-outline {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .btn-pill-outline:hover {
+      background: var(--surface-strong);
+      border-color: var(--muted-soft);
       transform: translateY(-1px);
     }
 
