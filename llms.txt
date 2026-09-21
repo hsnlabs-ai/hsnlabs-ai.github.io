@@ -18,8 +18,8 @@
 
 ## Regulated Enterprise Verticals
 - [Banking and Capital Markets](https://hsnlabs.ai/#verticals): Eliminating hallucinations on financial ledgers through deterministic transaction validation and immutable audit trails.
-- [Clinical Health Operations](https://hsnlabs.ai/#verticals): Verifiable protocol adherence and zero-exfiltration architectures across healthcare billing and medical workflows.
-- [Supply Chain and ERP Systems](https://hsnlabs.ai/#verticals): Anchoring unbounded agentic workflows to deterministic state machines across legacy SAP and Oracle databases.
+- [Healthcare Operations](https://hsnlabs.ai/#verticals): Verifiable protocol adherence and zero-exfiltration architectures across healthcare billing and medical workflows.
+- [Legacy ERP and BPO](https://hsnlabs.ai/#verticals): Anchoring agentic workflows to deterministic state machines across legacy ERPs to replace fragile BPO operations.
 
 ## Open Source Ecosystem
 - [Proto-Ontologies](https://github.com/hugonotnice/proto-ontologies): Open-source repository of minimal, executable domain schemas for AI agents and enterprise ontologies.
