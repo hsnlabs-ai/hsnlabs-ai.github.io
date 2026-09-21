@@ -1,25 +1,29 @@
-# HSN Labs | Boutique de Forward Deployed Engineering em IA
+# HSN Labs
 
-> A HSN Labs é uma boutique de Forward Deployed Engineering (FDE) especializada em desenvolver agentes de IA sob medida a partir da ontologia real do negócio do cliente. Entregas modulares, metodologia proprietária e rollout seguro para operações corporativas de missão crítica com grandes volumes de dados.
+> AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering, personalized business ontologies, and resilient deep agents.
 
-## Posicionamento Canônico & Proposta de Valor
-- [Frase Canônica](https://hsnlabs.ai/): Boutique de Forward Deployed Engineering (FDE). Desenvolvemos agentes de IA sob medida a partir da ontologia real do seu negócio. Entregas modulares, metodologia proprietária e rollout seguro para operações de missão crítica com grandes volumes de dados.
-- [Por que Sistemas e Agentes Falham em Produção](https://hsnlabs.ai/#tese): Análise fundamentada em dados empíricos auditados (S&P Global 2025: 42% de abandono; Gartner: 40% de cancelamento até 2027; Atlan 2026: menos de 15% dos pilotos de grafos sobrevivem).
-- [Contraste Operacional](https://hsnlabs.ai/#inimigo): Zero slides em PDF e zero juniores na operação. Engenharia sênior na trincheira contra o modelo tradicional de faturamento por homem-hora de consultorias generalistas de TI.
+## Canonical Positioning & Value Proposition
+- [Overview](https://hsnlabs.ai/): HSN Labs is an AI architecture consulting boutique. We build production-grade deep agents tailored to the real business ontology of your enterprise.
+- [Why AI Agents Fail in Production](https://hsnlabs.ai/#services): Over ninety percent of enterprise agent proofs of concept fail when transitioning to production because stochastic models hit legacy systems, unmanaged drift, and rigid business rules. We solve runtime failure through hybrid engineering.
+- [Consulting Over Staffing](https://hsnlabs.ai/#services): Specialized architectural guidance and hands-on implementation rather than body shopping or hourly junior IT outsourcing.
 
-## Oferta de Entrada & Modelo de Engajamento
-- [AI Bootcamp de 5 Dias](https://hsnlabs.ai/#bootcamp): Imersão prática na infraestrutura do cliente. Do acesso a dados reais no Dia 1 à demonstração funcional para o C-Level no Dia 5.
-  - Tier 1 (Gratuito Seletivo): Empresas com faturamento superior a R$ 50 milhões/ano, grande volume de dados e budget corporativo aprovado.
-  - Tier 2 (R$ 12.000): Médias empresas que demandam a imersão da squad sênior (taxa cobre custos operacionais).
-- [Sprints Modulares de FDE](https://hsnlabs.ai/#bootcamp): Continuidade de entrega e escala a R$ 35.000 por sprint quinzenal.
+## Core Technical Delivery Pillars
+- [Personalized Business Ontologies](https://hsnlabs.ai/#services): Tailoring domain schemas and operational constraints directly to live ERP, CRM, and database models so models never guess business logic.
+- [Deep Agent Infrastructure](https://hsnlabs.ai/#services): Powering stateful multi-step execution, persistent memory, and standardized MCP tool orchestration across enterprise software.
+- [Deterministic Guardrails](https://hsnlabs.ai/#services): Enforcing strict schema boundaries, finite state machines, and runtime isolation to protect sensitive financial and transactional ledgers.
+- [Enterprise ADLC Stack](https://hsnlabs.ai/#services): Governing the complete Agent Development Lifecycle using market standards like LangGraph and LangSmith for rigorous evaluation, tracing, and production observability.
 
-## Casos Canônicos de Missão Crítica
-- [Pix MED 2.0 (Fintech & Bancos)](https://hsnlabs.ai/#casos): Resolução BCB nº 493/2025. Rastreamento em 5 camadas de contas-mula, detecção de dispersão rápida (< 180s) e bloqueio cautelar em grafos Neo4j/Memgraph.
-- [Glosas Médicas TISS/TUSS (Saúde Suplementar)](https://hsnlabs.ai/#casos): Auditoria semântica e conciliação prévia de contas hospitalares perante diretrizes da ANS para estancar sangrias de 10% a 15% do EBITDA.
+## Entry Engagement: 5-Day Agentic Bootcamp
+- [Bootcamp Deployment Protocol](https://hsnlabs.ai/bootcamp.html): A focused 120-hour technical deployment inside client infrastructure. We validate data access, connect initial MCP tools, and deploy a functional deep agent in a secure sandbox with verified operational ROI before broader enterprise commitment.
 
-## Ecossistema Open Source
-- [Proto-Ontologies](https://github.com/hsnlabs-ai/proto-ontologies): Catálogo aberto de seed schemas executáveis (Pydantic v2 + Cypher DDL + JSON-Schema) para ancoragem de agentes autônomos.
+## Regulated Enterprise Verticals
+- [Banking and Capital Markets](https://hsnlabs.ai/#verticals): Eliminating hallucinations on financial ledgers through deterministic transaction validation and immutable audit trails.
+- [Clinical Health Operations](https://hsnlabs.ai/#verticals): Verifiable protocol adherence and zero-exfiltration architectures across healthcare billing and medical workflows.
+- [Supply Chain and ERP Systems](https://hsnlabs.ai/#verticals): Anchoring unbounded agentic workflows to deterministic state machines across legacy SAP and Oracle databases.
 
-## Contato & Canais
-- E-mail: contato@hsnlabs.ai
-- Repositório GitHub: https://github.com/hsnlabs-ai
+## Open Source Ecosystem
+- [Proto-Ontologies](https://github.com/hugonotnice/proto-ontologies): Open-source repository of minimal, executable domain schemas for AI agents and enterprise ontologies.
+
+## Contact & Channels
+- Contact Form: https://hsnlabs.ai/#contact
+- GitHub: https://github.com/hugonotnice/hsn-labs-site

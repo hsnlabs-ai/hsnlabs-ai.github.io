@@ -7,45 +7,23 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://hsnlabs.ai/</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/" />
     <image:image>
-      <image:loc>https://hsnlabs.ai/assets/hero_poster.webp</image:loc>
-      <image:title>HSN Labs | Deterministic Control for Stochastic Systems</image:title>
-      <image:caption>HSN Labs — Forward Deployed Engineering and Forward Deployed Engineering for enterprise AI systems.</image:caption>
+      <image:loc>https://hsnlabs.ai/assets/brand/elements/origami-carp-clean.png</image:loc>
+      <image:title>HSN Labs | AI Architecture Consulting</image:title>
+      <image:caption>HSN Labs — Hybrid engineering, business ontologies, and deep agents for enterprise systems.</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://hsnlabs.ai/careers.html</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://hsnlabs.ai/bootcamp.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/careers.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/careers.html" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/bfsi.html</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/bfsi.html" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/healthcare.html</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/healthcare.html" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/roi-calculator.html</loc>
-    <lastmod>2026-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/roi-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/bootcamp.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/bootcamp.html" />
   </url>
 </urlset>
