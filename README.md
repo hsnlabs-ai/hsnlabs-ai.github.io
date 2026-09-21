@@ -19,10 +19,10 @@ The website is engineered as a zero-dependency, high-performance static applicat
   * Client Portfolio strip featuring nine normalized monochrome enterprise marks.
 * **Services Section:**
   * Balanced two-by-two grid presenting four core delivery pillars:
-    * Hybrid Engineering and Deep Agents.
-    * Specialized Architecture Consulting.
-    * Business Ontologies and MCP Connectors.
-    * 5-Day Agentic Bootcamp.
+    * Personalized Business Ontologies.
+    * Deep Agent Infrastructure.
+    * Deterministic Guardrails.
+    * Enterprise ADLC Stack.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
     * BFSI Infrastructure.

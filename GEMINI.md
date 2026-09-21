@@ -31,10 +31,10 @@ The website follows a clean 4-section architecture:
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, PagoNext, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
 3. Services Section:
    * Balanced two-by-two grid presenting four technical pillars:
-     1. Hybrid Engineering and Deep Agents.
-     2. Specialized Architecture Consulting.
-     3. Business Ontologies and MCP Connectors.
-     4. 5-Day Agentic Bootcamp.
+     1. Personalized Business Ontologies.
+     2. Deep Agent Infrastructure.
+     3. Deterministic Guardrails.
+     4. Enterprise ADLC Stack.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:
      1. BFSI Infrastructure.
