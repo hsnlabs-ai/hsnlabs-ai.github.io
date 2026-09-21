@@ -22,12 +22,12 @@ The website is engineered as a zero-dependency, high-performance static applicat
     * Personalized Business Ontologies.
     * Deep Agent Infrastructure.
     * Deterministic Guardrails.
-    * Enterprise ADLC Stack.
+    * Enterprise ADLC Stack with official vector ecosystem pills: LangChain, LangSmith, Azure AI, Palantir Foundry, Palantir AIP, Neo4j, AWS Bedrock, LlamaIndex, Google ADK.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
-    * BFSI Infrastructure.
-    * Clinical Operations.
-    * Industrial Operations.
+    * Banking and Capital.
+    * Healthcare Operations.
+    * Legacy ERP and BPO.
 * **Technical Scoping Section:**
   * Executive engagement card with four qualification gates and direct email dispatch.
 * **Footer:**
