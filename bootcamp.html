@@ -478,79 +478,58 @@
       line-height: 1.6;
     }
 
+    /* FOOTER */
     .site-footer {
       background: var(--canvas);
       border-top: 1px solid var(--hairline);
-      padding: 80px 0 48px 0;
+      padding: 72px 0 44px 0;
     }
 
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1.2fr 1.2fr 1.8fr;
       gap: 48px;
-      margin-bottom: 64px;
+      margin-bottom: 56px;
+      align-items: start;
     }
 
     .footer-col-title {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       color: var(--ink);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .footer-nav {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
     }
 
     .footer-nav a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
     }
 
     .footer-nav a:hover { color: var(--ink); }
 
     .footer-bottom {
       border-top: 1px solid var(--hairline);
-      padding-top: 32px;
+      padding-top: 28px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--muted);
       font-family: 'JetBrains Mono', monospace;
-    }
-
-    .footer-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 20px;
-      padding: 6px 12px;
-      background: var(--surface-card);
-      border: 1px solid var(--hairline);
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.76rem;
-      color: var(--muted);
-      letter-spacing: 0.02em;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--emerald);
-      box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
-      display: inline-block;
     }
 
     .footer-bottom-links {
@@ -562,7 +541,8 @@
     .footer-bottom-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
+      font-family: 'JetBrains Mono', monospace;
       transition: color 0.2s ease;
     }
 
@@ -573,8 +553,7 @@
     .footer-social-row {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-top: 14px;
+      gap: 12px;
     }
 
     .footer-social-icon {
@@ -835,18 +814,21 @@
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div style="max-width: 320px;">
-          <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 52px; width: auto; margin-bottom: 20px;">
-          <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.6;">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;">
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 280px; margin: 0 0 16px 0;">
             AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering and business ontologies.
           </p>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.76rem; color: var(--muted);">
+            São Paulo, SP • Brazil
+          </div>
         </div>
 
         <div>
           <div class="footer-col-title">Architecture</div>
           <ul class="footer-nav">
-            <li><a href="./index.html#services">Personalized Ontologies</a></li>
+            <li><a href="./index.html#services">Business Ontologies</a></li>
             <li><a href="./index.html#services">Deep Agent Infrastructure</a></li>
             <li><a href="./index.html#services">Deterministic Guardrails</a></li>
             <li><a href="./index.html#services">Enterprise ADLC Stack</a></li>
@@ -854,33 +836,48 @@
         </div>
 
         <div>
-          <div class="footer-col-title">Programs</div>
+          <div class="footer-col-title">Navigation</div>
           <ul class="footer-nav">
             <li><a href="./bootcamp.html">5-Day Agentic Bootcamp</a></li>
-            <li><a href="./index.html#verticals">Regulated Verticals</a></li>
-            <li><a href="https://github.com/hugonotnice/proto-ontologies" target="_blank">Proto-Ontologies</a></li>
+            <li><a href="./index.html#verticals">Verticals</a></li>
+            <li><a href="./index.html#contact">Contact Us</a></li>
           </ul>
         </div>
 
-        <div>
-          <div class="footer-col-title">Connect</div>
-          <div class="footer-social-row">
-            <a href="https://github.com/hugonotnice/hsn-labs-site" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-              </svg>
-            </a>
-            <a href="https://linkedin.com/in/hugonascimento" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-              </svg>
-            </a>
+        <div class="footer-col-subscribe">
+          <div class="footer-col-title">Stay Updated</div>
+          <p style="font-size: 0.86rem; color: var(--muted); line-height: 1.5; margin: 0 0 14px 0;">
+            Technical insights on deterministic agent architectures.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.innerText='Sent'; setTimeout(() => b.innerText='Send', 3000); this.querySelector('input').value='';">
+            <div style="display: flex; gap: 8px;">
+              <input type="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 9999px; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+              <button type="submit" class="btn btn-pill-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 9999px; cursor: pointer; white-space: nowrap;">Send</button>
+            </div>
+          </form>
+          <div style="margin-top: 22px;">
+            <div class="footer-col-title" style="margin-bottom: 10px;">Connect</div>
+            <div class="footer-social-row">
+              <a href="https://github.com/hugonotnice/hsn-labs-site" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/hugonascimento" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>2026 HSN Labs. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="./privacy-policy.html">Privacy Policy</a>
+        </div>
       </div>
     </div>
   </footer>
