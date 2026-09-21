@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: ElevenLabs-design-analysis
-description: A voice-AI brand whose marketing surfaces read like a quietly editorial print magazine. The base canvas is off-white (`#f5f5f5`) holding warm near-black ink (`#292524`); the brand voltage is photographic, not chromatic — soft pastel atmospheric gradient orbs (mint → peach → lavender → sky) drift through the page as the only "color" moments. Display runs Waldenburg Light at weight 300 — the editorial signature. Inter carries body, navigation, captions. CTAs are subtle: a near-black ink pill is the primary, a transparent outline is the secondary. The brand trusts atmospheric photography and modest type weights to do all of the brand work; there is no neon accent, no saturated CTA color, no developer-tools dark canvas.
+description: A voice-AI brand whose marketing surfaces read like a quietly editorial print magazine. The base canvas is off-white (`#f5f5f5`) holding warm near-black ink (`#292524`); the brand voltage is photographic, not chromatic — soft pastel atmospheric gradient orbs (mint → peach → lavender → sky) drift through the page as the only "color" moments. Display runs Waldenburg Light at weight 300 — the editorial signature. Inter carries body, navigation, captions. CTAs are subtle: a near-black ink button is the primary, a transparent outline is the secondary. The brand trusts atmospheric photography and modest type weights to do all of the brand work; there is no neon accent, no saturated CTA color, no developer-tools dark canvas.
 
 colors:
   primary: "#292524"
@@ -127,8 +127,7 @@ rounded:
   lg: 12px
   xl: 16px
   xxl: 24px
-  pill: 9999px
-  full: 9999px
+    full: 9999px
 
 spacing:
   xxs: 4px
@@ -151,18 +150,18 @@ components:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.md}"
     padding: 10px 20px
     height: 40px
   button-primary-active:
     backgroundColor: "{colors.primary-active}"
     textColor: "{colors.on-primary}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.md}"
   button-outline:
     backgroundColor: transparent
     textColor: "{colors.ink}"
     typography: "{typography.button}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.md}"
     padding: 9px 19px
     height: 40px
   button-tertiary-text:
@@ -219,11 +218,11 @@ components:
     rounded: "{rounded.md}"
     padding: 12px 16px
     height: 44px
-  badge-pill:
+  badge-rect:
     backgroundColor: "{colors.surface-strong}"
     textColor: "{colors.ink}"
     typography: "{typography.caption-uppercase}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.md}"
     padding: 4px 10px
   cta-band:
     backgroundColor: "{colors.canvas}"
@@ -258,15 +257,15 @@ ElevenLabs reads like a quietly editorial print magazine that happens to be a vo
 
 Type pairs **Waldenburg Light** (custom serif at weight 300) for display with **Inter** for body, navigation, captions. The display weight at 300 is the editorial signature — never bold, never heavy.
 
-CTAs are subtle: a near-black ink pill (`{component.button-primary}`) is the primary, a transparent outline (`{component.button-outline}`) is the secondary. The brand trusts atmospheric photography and modest type weights to carry brand work.
+CTAs are subtle: a near-black ink button (`{component.button-primary}`) is the primary, a transparent outline (`{component.button-outline}`) is the secondary. The brand trusts atmospheric photography and modest type weights to carry brand work.
 
 **Key Characteristics:**
 - Off-white canvas, warm near-black ink. No saturated CTA color.
-- Single primary action: ink pill at `{rounded.pill}`. Atmospheric gradients carry visual brand voltage.
+- Single primary action: ink button at `{rounded.md}`. Atmospheric gradients carry visual brand voltage.
 - Display runs Waldenburg Light at weight 300 — editorial magazine voice.
 - Body runs Inter at 400 with subtle letter-spacing (+0.15-0.18px).
 - Pastel gradient orbs (5 tokens: mint, peach, lavender, sky, rose) used as atmospheric brand decoration only.
-- Soft pill geometry (`{rounded.pill}` for CTAs, `{rounded.xl}` for cards).
+- Clean rectangular geometry with 8px radius (`{rounded.md}` for CTAs, `{rounded.xl}` for cards).
 - 96px section rhythm.
 
 ## Colors
@@ -295,7 +294,7 @@ CTAs are subtle: a near-black ink pill (`{component.button-primary}`) is the pri
 - **Body Strong** (`{colors.body-strong}` — #292524): Same as primary — emphasis.
 - **Muted** (`{colors.muted}` — #777169): Sub-titles.
 - **Muted Soft** (`{colors.muted-soft}` — #a8a29e): Disabled text.
-- **On Primary** (`{colors.on-primary}` — #ffffff): White text on ink pill.
+- **On Primary** (`{colors.on-primary}` — #ffffff): White text on ink button.
 - **On Dark** (`{colors.on-dark}` — #ffffff): White text on dark hero.
 - **On Dark Soft** (`{colors.on-dark-soft}` — #a8a29e): Muted off-white on dark.
 
@@ -388,7 +387,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 | `{rounded.lg}` | 12px | Compact cards |
 | `{rounded.xl}` | 16px | Feature cards, pricing tiers |
 | `{rounded.xxl}` | 24px | Gradient orb cards (extra-soft) |
-| `{rounded.pill}` | 9999px | All CTA buttons, badges |
+| `{rounded.md}` | 9999px | All CTA buttons, badges |
 | `{rounded.full}` | 9999px | Voice icon circles, avatars |
 
 ## Components
@@ -399,7 +398,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 ### Buttons
 
-**`button-primary`** — Near-black ink pill. Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}` (15px / 500), padding 10px × 20px, height 40px, rounded `{rounded.pill}`.
+**`button-primary`** — Near-black ink button. Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}` (15px / 500), padding 10px × 20px, height 40px, rounded `{rounded.md}`.
 
 **`button-primary-active`** — Press state. Background `{colors.primary-active}`.
 
@@ -439,11 +438,11 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 **`text-input`** — Background `{colors.surface-card}`, text `{colors.ink}`, rounded `{rounded.md}` (8px), padding 12px × 16px, height 44px, 1px `{colors.hairline-strong}` border. On focus, border thickens to 2px ink.
 
-**`badge-pill`** — Background `{colors.surface-strong}`, text `{colors.ink}`, type `{typography.caption-uppercase}`, rounded `{rounded.pill}`, padding 4px × 10px.
+**`badge-rect`** — Background `{colors.surface-strong}`, text `{colors.ink}`, type `{typography.caption-uppercase}`, rounded `{rounded.md}`, padding 4px × 10px.
 
 ### CTA / Footer
 
-**`cta-band`** — Pre-footer. Background `{colors.canvas}`, centered display headline in `{typography.display-lg}`, single ink pill CTA. 96px padding.
+**`cta-band`** — Pre-footer. Background `{colors.canvas}`, centered display headline in `{typography.display-lg}`, single ink button CTA. 96px padding.
 
 **`footer`** — Closing footer. Background `{colors.canvas}`, text `{colors.body}`. 5-column link list. 64×48px padding.
 
@@ -452,18 +451,18 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 ## Do's and Don'ts
 
 ### Do
-- Reserve `{colors.primary}` (ink pill) for primary CTAs.
+- Reserve `{colors.primary}` (ink button) for primary CTAs.
 - Use Waldenburg Light at weight 300 for every display headline. Never bold.
 - Use Inter at +0.15-0.18px tracking for body — the editorial dialect.
 - Use atmospheric gradient orbs (mint/peach/lavender/sky/rose) as decoration only.
-- Use the pill shape for every CTA and badge.
+- Use clean 8px radius for all CTAs and 6px for badges. Strictly avoid 9999px pills.
 
 ### Don't
 - Don't round the corners of the HSN Labs square mark — it must remain a pure geometric square with sharp 90-degree corners (`border-radius: 0`).
 - Don't introduce a saturated brand action color. Ink pill is the only CTA color.
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.
-- Don't use sharp `{rounded.none}` (0px) on CTAs. Pill geometry is the brand button.
+- Don't use sharp `{rounded.none}` (0px) on CTAs. 8px border radius is the brand button.
 - Don't drop body Inter to weight 300 to match Waldenburg — body stays at 400/500 for legibility.
 - Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs.
 
@@ -490,7 +489,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 ## Iteration Guide
 
 1. Focus on a single component at a time.
-2. CTAs default to `{rounded.pill}`. Cards use `{rounded.xl}` (16px).
+2. CTAs default to `{rounded.md}`. Cards use `{rounded.xl}` (16px).
 3. Variants live as separate entries.
 4. Use `{token.refs}` everywhere — never inline hex.
 5. Hover state never documented.

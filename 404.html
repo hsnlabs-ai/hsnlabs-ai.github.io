@@ -158,41 +158,30 @@
 
     .error-code {
       font-family: var(--font-display);
-      font-size: clamp(4rem, 10vw, 7.5rem);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
       font-weight: 300;
-      line-height: 0.95;
+      line-height: 1;
       color: var(--ink);
-      letter-spacing: -0.03em;
-      margin-bottom: 12px;
-    }
-
-    .error-badge {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--cyan-text);
-      background: var(--cyan-subtle);
-      padding: 6px 14px;
-      border-radius: 6px;
+      letter-spacing: -0.02em;
       margin-bottom: 20px;
     }
 
     .error-title {
-      font-size: 1.45rem;
-      font-weight: 600;
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 300;
       color: var(--ink);
       margin-bottom: 16px;
       letter-spacing: -0.01em;
+      line-height: 1.15;
     }
 
     .error-desc {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--muted);
-      line-height: 1.65;
-      max-width: 520px;
-      margin: 0 auto 36px auto;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 32px auto;
     }
 
     .error-actions {
@@ -395,15 +384,14 @@
     <div class="container">
       <div class="error-card">
         <div class="error-code">404</div>
-        <div class="error-badge">State Machine Exception</div>
-        <h1 class="error-title">Deterministic Route Not Found</h1>
+        <h1 class="error-title">Page Not Found</h1>
         <p class="error-desc">
-          The path you requested does not exist in our system topology. Autonomous agents isolate invalid state transitions before they corrupt production workflows.
+          The page you requested does not exist or may have moved. If you need assistance with an enterprise deployment or want to report an issue, contact our team directly.
         </p>
 
         <div class="error-actions">
-          <a href="./index.html" class="btn btn-primary">Return to Production</a>
-          <a href="mailto:contact@hsnlabs.ai?subject=Routing%20Anomaly%20Report&body=Anomaly%20detected%20at%20URL:%20" id="reportLink" class="btn btn-outline">Report Anomaly</a>
+          <a href="./index.html" class="btn btn-primary">Back to Home</a>
+          <a href="mailto:contact@hsnlabs.ai?subject=Missing%20Page%20Inquiry&body=URL:%20" id="reportLink" class="btn btn-outline">Contact Us</a>
         </div>
       </div>
     </div>
