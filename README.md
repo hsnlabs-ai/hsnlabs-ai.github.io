@@ -96,12 +96,19 @@ The website displays nine verified enterprise client marks in normalized monochr
 │   └── portfolio/             # Client portfolio vector assets
 │       ├── png/               # High-resolution raster client marks
 │       └── svg/               # Normalized monochrome vector client marks
+├── 404.html                   # Custom 404 error page with telemetry
+├── bootcamp.html              # Dedicated 5-Day Bootcamp application page
+├── index.html                 # Production entrypoint
+├── modern-slavery-statement.html # Supply chain and labor ethics statement
+├── privacy-policy.html        # LGPD and GDPR privacy policy
+├── sitemap.xml                # Search engine and crawler XML index
+├── robots.txt                 # Crawler access rules
+├── CNAME                      # Custom domain configuration for hsnlabs.ai
 ├── AGENTS.md                  # Operational directives for AI coding agents
 ├── BRAND.md                   # Brand guidelines and application rules
-├── DESIGN.md                  # Google design-md token specification
-├── GEMINI.md                  # Gemini model technical constraints
+├── DESIGN.md                  # Token specification
+├── GEMINI.md                  # Technical constraints
 ├── analytics.json             # Tag manager and measurement stream IDs
-├── index.html                 # Production entrypoint
 └── README.md                  # Repository documentation
 ```
 
