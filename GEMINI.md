@@ -28,7 +28,7 @@ The website follows a clean 4-section architecture:
    * Primary headline: `Production-Grade AI Agents on Business Ontologies`.
    * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
-   * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, PagoNext, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
+   * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
 3. Services Section:
    * Balanced two-by-two grid presenting four technical pillars:
      1. Personalized Business Ontologies.

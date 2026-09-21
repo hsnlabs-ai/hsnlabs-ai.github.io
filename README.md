@@ -72,7 +72,7 @@ The HSN Labs brand mark represents determinism through paper geometry and dynami
 
 The website displays nine verified enterprise client marks in normalized monochrome vector format:
 * Deloitte
-* PagoNext
+* Santander
 * Insi
 * Softplan
 * Unipar Carbocloro
