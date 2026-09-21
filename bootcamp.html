@@ -529,6 +529,46 @@
       color: var(--muted);
       font-family: 'JetBrains Mono', monospace;
     }
+
+    .footer-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 6px 12px;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+      display: inline-block;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-bottom-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--ink);
+    }
   </style>
 </head>
 <body>
@@ -781,22 +821,48 @@
           <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.6;">
             AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering and business ontologies.
           </p>
+          <div class="footer-status">
+            <span class="status-dot"></span>
+            <span>Zero-Exfiltration VPC Systems</span>
+          </div>
         </div>
 
         <div>
-          <div class="footer-col-title">Navigation</div>
+          <div class="footer-col-title">Architecture</div>
           <ul class="footer-nav">
-            <li><a href="./index.html#services">Services</a></li>
-            <li><a href="./index.html#verticals">Verticals</a></li>
-            <li><a href="./bootcamp.html">Bootcamp</a></li>
-            <li><a href="./index.html#contact">Contact</a></li>
+            <li><a href="./index.html#services">Personalized Ontologies</a></li>
+            <li><a href="./index.html#services">Deep Agent Infrastructure</a></li>
+            <li><a href="./index.html#services">Deterministic Guardrails</a></li>
+            <li><a href="./index.html#services">Enterprise ADLC Stack</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Programs</div>
+          <ul class="footer-nav">
+            <li><a href="./bootcamp.html">5-Day Agentic Bootcamp</a></li>
+            <li><a href="./index.html#verticals">Regulated Verticals</a></li>
             <li><a href="https://github.com/hugonotnice/proto-ontologies" target="_blank">Proto-Ontologies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <ul class="footer-nav">
+            <li><a href="./index.html#contact">Contact Architecture Team</a></li>
+            <li><a href="https://github.com/hugonotnice/hsn-labs-site" target="_blank">GitHub Repository</a></li>
+            <li><a href="https://linkedin.com/in/hugonascimento" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>2026 HSN Labs. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="./index.html#contact">Security Standards</a>
+          <span>•</span>
+          <a href="./index.html#contact">Terms of Assessment</a>
+        </div>
       </div>
     </div>
   </footer>
