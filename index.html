@@ -402,19 +402,43 @@
       border-bottom: 1px solid var(--hairline);
     }
 
-    /* CARDS */
-    .card-grid-4 {
+    /* SERVICES BENTO GRID */
+    .services-bento {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       text-align: left;
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
     }
 
-    @media (max-width: 768px) {
-      .card-grid-4 {
+    .card-bento-wide {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .card-bento-wide .stack-grid {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    @media (max-width: 920px) {
+      .services-bento {
         grid-template-columns: 1fr;
+      }
+      .card-bento-wide {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .card-bento-wide .stack-grid {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--hairline);
       }
     }
 
@@ -913,7 +937,7 @@
         Traditional management consulting delivers theoretical slide decks. HSN Labs provides specialized architecture consulting and hands-on deployment to solve why AI agents fail in production.
       </p>
 
-      <div class="card-grid-4">
+      <div class="services-bento">
         <div class="card">
           <h3 class="card-title">Personalized Business Ontologies</h3>
           <p class="card-body">
@@ -935,11 +959,13 @@
           </p>
         </div>
 
-        <div class="card">
-          <h3 class="card-title">Enterprise ADLC Stack</h3>
-          <p class="card-body">
-            Full lifecycle management with LangGraph and LangSmith for automated tracing, evaluation, and production monitoring.
-          </p>
+        <div class="card card-bento-wide">
+          <div class="bento-info">
+            <h3 class="card-title">Enterprise ADLC Stack</h3>
+            <p class="card-body">
+              Full lifecycle management with LangGraph and LangSmith for automated tracing, evaluation, and production monitoring.
+            </p>
+          </div>
 
           <div class="stack-grid">
             <div class="stack-pill" title="LangChain">
