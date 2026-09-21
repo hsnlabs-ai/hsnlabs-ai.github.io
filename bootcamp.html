@@ -592,7 +592,90 @@
         font-size: 16px !important;
       }
     }
+
+    /* COOKIE CONSENT BANNER */
+    .cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      max-width: 420px;
+      width: calc(100% - 48px);
+      background: var(--surface-card);
+      border: 1px solid var(--hairline-strong);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      z-index: 9999;
+      display: none;
+      animation: cookieFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes cookieFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cookie-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .cookie-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .cookie-text a {
+      color: var(--ink);
+      text-decoration: underline;
+    }
+
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cookie-btn-accept {
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      border-radius: 8px;
+    }
+
+    .cookie-btn-decline {
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      border-radius: 8px;
+    }
+
   </style>
+  <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var savedConsent = localStorage.getItem('hsn_cookie_consent');
+    var consentStatus = savedConsent === 'accepted' ? 'granted' : 'denied';
+    gtag('consent', 'default', {
+      'analytics_storage': consentStatus,
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMK24ECXMF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GMK24ECXMF');
+  </script>
+
 </head>
 <body>
 
@@ -611,13 +694,7 @@
         <img src="./assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
       </a>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="./index.html#services" class="nav-link">Services</a></li>
-          <li><a href="./index.html#verticals" class="nav-link">Verticals</a></li>
-          <li><a href="./index.html#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+      
 
       <a href="#apply" class="btn btn-primary">Apply for Bootcamp</a>
     </div>
@@ -917,5 +994,56 @@
       }
     })();
   </script>
+  <!-- COOKIE CONSENT BANNER (USERCENTRICS / LGPD COMPLIANT) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-title">Cookie & Privacy Consent</div>
+    <p class="cookie-text">
+      We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our <a href="./privacy-policy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-primary cookie-btn-accept" onclick="acceptCookies()">Accept All</button>
+      <button type="button" class="btn btn-outline cookie-btn-decline" onclick="declineCookies()">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    function initCookieBanner() {
+      var consent = localStorage.getItem('hsn_cookie_consent');
+      var banner = document.getElementById('cookieBanner');
+      if (!consent && banner) {
+        banner.style.display = 'block';
+      }
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('hsn_cookie_consent', 'accepted');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
+      var banner = document.getElementById('cookieBanner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function declineCookies() {
+      localStorage.setItem('hsn_cookie_consent', 'declined');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied'
+        });
+      }
+      var banner = document.getElementById('cookieBanner');
+      if (banner) banner.style.display = 'none';
+    }
+
+    function openCookieSettings() {
+      var banner = document.getElementById('cookieBanner');
+      if (banner) banner.style.display = 'block';
+    }
+
+    document.addEventListener('DOMContentLoaded', initCookieBanner);
+  </script>
+
 </body>
 </html>
