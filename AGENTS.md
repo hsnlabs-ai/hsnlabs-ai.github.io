@@ -66,8 +66,11 @@ The website follows a clean 4-section architecture:
   * Display: Cormorant Garamond weight 300 with negative tracking.
   * Body: Inter regular and medium with slight positive tracking.
   * Telemetry: JetBrains Mono for system metrics.
-* Logo Application:
-  * Always keep `border-radius: 0` on the cyan square symbol.
+* Logo & Component Geometry (Strict 90-Degree Invariant):
+  * Always keep `border-radius: 0` on the cyan square symbol, and on ALL interactive buttons, cards, boxes, badges, and form inputs.
+  * All cards and containers use the clean crumpled paper texture overlay (`assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
+  * Primary CTA buttons use Brand Sky Blue `#52B4FD` with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.65.
+  * Secondary CTA buttons use pure white paper with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.50.
   * Never alter the origami carp proportions or angle.
 
 ---

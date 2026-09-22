@@ -257,15 +257,16 @@ ElevenLabs reads like a quietly editorial print magazine that happens to be a vo
 
 Type pairs **Waldenburg Light** (custom serif at weight 300) for display with **Inter** for body, navigation, captions. The display weight at 300 is the editorial signature — never bold, never heavy.
 
-CTAs are subtle: a near-black ink button (`{component.button-primary}`) is the primary, a transparent outline (`{component.button-outline}`) is the secondary. The brand trusts atmospheric photography and modest type weights to carry brand work.
+CTAs use the official brand Sky Blue (`#52B4FD`) for the primary action with authentic paper crease texture and sharp 90-degree paper cuts, while secondary actions use white paper cardstock with dark ink. The components align with the sharp 90-degree square origami mark.
 
 **Key Characteristics:**
-- Off-white canvas, warm near-black ink. No saturated CTA color.
-- Single primary action: ink button at `{rounded.md}`. Atmospheric gradients carry visual brand voltage.
-- Display runs Waldenburg Light at weight 300 — editorial magazine voice.
+- Off-white canvas, sharp paper-cut elements with clean physical texture.
+- Single primary action: Sky Blue button (`#52B4FD`) with subtle crumpled paper texture overlay at 90-degree sharp corners (`border-radius: 0`).
+- Display runs Cormorant Garamond at weight 300 — editorial print voice.
 - Body runs Inter at 400 with subtle letter-spacing (+0.15-0.18px).
-- Pastel gradient orbs (5 tokens: mint, peach, lavender, sky, rose) used as atmospheric brand decoration only.
-- Clean rectangular geometry with 8px radius (`{rounded.md}` for CTAs, `{rounded.xl}` for cards).
+- Atmospheric gradient blooms used as atmospheric background brand decoration only.
+- Strict 90-degree paper-cut geometry (`border-radius: 0` for CTAs, cards, badges, and boxes) matching the brand water square.
+- Unified subtle crumpled paper texture overlay across all boxes and cards.
 - 96px section rhythm.
 
 ## Colors
@@ -451,20 +452,19 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 ## Do's and Don'ts
 
 ### Do
-- Reserve `{colors.primary}` (ink button) for primary CTAs.
-- Use Waldenburg Light at weight 300 for every display headline. Never bold.
+- Use Brand Sky Blue (`#52B4FD`) for primary CTAs with subtle paper crease overlay.
+- Use Cormorant Garamond at weight 300 for every display headline. Never bold.
 - Use Inter at +0.15-0.18px tracking for body — the editorial dialect.
-- Use atmospheric gradient orbs (mint/peach/lavender/sky/rose) as decoration only.
-- Use clean 8px radius for all CTAs and 6px for badges. Strictly avoid 9999px pills.
+- Use atmospheric gradient orbs as background decoration only.
+- Enforce strict 90-degree sharp corners (`border-radius: 0`) across all CTAs, cards, badges, and boxes to harmonize with the brand water square.
+- Apply unified clean crumpled paper texture overlay (`paper_crumpled_clean.jpg`) with multiply blend mode on cards and boxes.
 
 ### Don't
-- Don't round the corners of the HSN Labs square mark — it must remain a pure geometric square with sharp 90-degree corners (`border-radius: 0`).
-- Don't introduce a saturated brand action color. Ink pill is the only CTA color.
+- Don't round the corners of any element — the HSN Labs square mark and all UI components must maintain sharp 90-degree corners (`border-radius: 0`).
+- Don't use rounded corners or pill buttons (`border-radius: 8px` or `9999px`).
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.
-- Don't use sharp `{rounded.none}` (0px) on CTAs. 8px border radius is the brand button.
-- Don't drop body Inter to weight 300 to match Waldenburg — body stays at 400/500 for legibility.
-- Don't extract a CTA color from a third-party widget (cookie consent, OneTrust). The brand's CTA color is what appears on actual product CTAs.
+- Don't drop body Inter to weight 300 to match display serif — body stays at 400/500 for legibility.
 
 ## Responsive Behavior
 
