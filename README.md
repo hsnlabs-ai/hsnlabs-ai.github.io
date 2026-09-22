@@ -22,7 +22,7 @@ The website is engineered as a zero-dependency, high-performance static applicat
     * Personalized Business Ontologies.
     * Deep Agent Infrastructure.
     * Deterministic Guardrails.
-    * Enterprise ADLC Stack with official vector ecosystem badges: LangChain, LangSmith, Azure AI, Palantir Foundry, Palantir AIP, Neo4j, AWS Bedrock, LlamaIndex, Google ADK.
+    * Agent Development Life Cycle Stack: 4-stage enterprise pipeline with official tool badges covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
     * Banking and Capital.

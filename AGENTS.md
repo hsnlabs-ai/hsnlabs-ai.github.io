@@ -34,7 +34,7 @@ The website follows a clean 4-section architecture:
      1. Personalized Business Ontologies.
      2. Deep Agent Infrastructure.
      3. Deterministic Guardrails.
-     4. Enterprise ADLC Stack.
+     4. Agent Development Life Cycle Stack: 4-stage enterprise pipeline covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:
      1. BFSI Infrastructure.

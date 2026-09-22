@@ -149,15 +149,29 @@
     /* TYPOGRAPHY */
     .display-hero {
       font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 4.5rem);
       font-weight: 300;
-      line-height: 1.1;
       letter-spacing: -0.02em;
+      line-height: 1.12;
       color: var(--ink);
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto 24px auto;
       word-wrap: break-word;
       overflow-wrap: break-word;
+    }
+
+    .hero-title-lead {
+      display: block;
+      font-size: clamp(2.8rem, 5.8vw, 4.8rem);
+      font-weight: 300;
+      line-height: 1.08;
+    }
+
+    .hero-title-sub {
+      display: block;
+      font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-top: 6px;
     }
 
     .display-section {
@@ -444,16 +458,82 @@
 
     .card-bento-wide {
       grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 1fr 1.35fr;
-      gap: 40px;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
-    .card-bento-wide .stack-grid {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
+    .card-bento-wide .bento-info {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .adlc-columns-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 20px;
+    }
+
+    .adlc-col {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .adlc-col:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 4px;
+      bottom: 4px;
+      width: 1px;
+      background: var(--hairline);
+    }
+
+    .adlc-col-header {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      min-height: 24px;
+    }
+
+    .adlc-col-num {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cyan-text);
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+
+    .adlc-col-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      white-space: normal;
+    }
+
+    .adlc-col-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .adlc-col-stack .stack-item {
+      padding: 6px 8px;
+      font-size: 0.71rem;
+      gap: 7px;
+    }
+
+    .adlc-col-stack .stack-item img {
+      width: 15px;
+      height: 15px;
     }
 
     @media (max-width: 920px) {
@@ -462,13 +542,19 @@
       }
       .card-bento-wide {
         grid-column: auto;
-        grid-template-columns: 1fr;
-        gap: 24px;
       }
-      .card-bento-wide .stack-grid {
-        margin-top: 16px;
-        padding-top: 16px;
-        border-top: 1px solid var(--hairline);
+      .adlc-columns-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .adlc-col:not(:last-child)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .adlc-columns-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -826,8 +912,16 @@
         right: 4px;
       }
       .display-hero {
-        font-size: 2.15rem;
         line-height: 1.12;
+      }
+      .hero-title-lead {
+        font-size: 2.25rem;
+        line-height: 1.1;
+      }
+      .hero-title-sub {
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-top: 4px;
       }
       .hero-sub {
         font-size: 1.05rem;
@@ -1041,7 +1135,10 @@
       </div>
 
       <!-- MAIN HEADLINE -->
-      <h1 class="display-hero">AI Agents That Don't Fail in Production</h1>
+      <h1 class="display-hero">
+        <span class="hero-title-lead">Enterprise AI Agents</span>
+        <span class="hero-title-sub">that don't fail in production</span>
+      </h1>
       
       <p class="hero-sub">
         We use a business ontology tailored to your operations to build agentic systems, combining deterministic engineering with resilient deep agents.
@@ -1131,48 +1228,99 @@
 
         <div class="card card-bento-wide">
           <div class="bento-info">
-            <h3 class="card-title">Enterprise ADLC Stack</h3>
+            <h3 class="card-title">Agent Development Life Cycle Stack</h3>
             <p class="card-body">
-              Full lifecycle management with LangGraph and LangSmith for automated tracing, evaluation, and production monitoring.
+              Full lifecycle management across four regulated enterprise disciplines.
             </p>
           </div>
 
-          <div class="stack-grid">
-            <div class="stack-item" title="LangChain">
-              <img src="./assets/stack/langchain.svg" alt="LangChain">
-              <span>LangChain</span>
+          <div class="adlc-columns-grid">
+            <!-- Stage 1 -->
+            <div class="adlc-col">
+              <div class="adlc-col-header">
+                <span class="adlc-col-num">01</span>
+                <h4 class="adlc-col-title">Ontology & Design</h4>
+              </div>
+              <div class="adlc-col-stack">
+                <div class="stack-item" title="LangChain Hub">
+                  <img src="./assets/stack/langchain.svg" alt="LangChain Hub">
+                  <span>LangChain Hub</span>
+                </div>
+                <div class="stack-item" title="Palantir Foundry">
+                  <img src="./assets/stack/palantir_foundry.svg" alt="Palantir Foundry">
+                  <span>Foundry</span>
+                </div>
+                <div class="stack-item" title="Neo4j">
+                  <img src="./assets/stack/neo4j.svg" alt="Neo4j">
+                  <span>Neo4j</span>
+                </div>
+                <div class="stack-item" title="Collibra">
+                  <img src="./assets/stack/collibra.svg" alt="Collibra">
+                  <span>Collibra</span>
+                </div>
+              </div>
             </div>
-            <div class="stack-item" title="LangSmith">
-              <img src="./assets/stack/langsmith.svg" alt="LangSmith">
-              <span>LangSmith</span>
+
+            <!-- Stage 2 -->
+            <div class="adlc-col">
+              <div class="adlc-col-header">
+                <span class="adlc-col-num">02</span>
+                <h4 class="adlc-col-title">Infrastructure</h4>
+              </div>
+              <div class="adlc-col-stack">
+                <div class="stack-item" title="Redis">
+                  <img src="./assets/stack/redis.svg" alt="Redis">
+                  <span>Redis</span>
+                </div>
+                <div class="stack-item" title="Pinecone">
+                  <img src="./assets/stack/pinecone.svg" alt="Pinecone">
+                  <span>Pinecone</span>
+                </div>
+              </div>
             </div>
-            <div class="stack-item" title="Azure AI Agent Service">
-              <img src="./assets/stack/azure.svg" alt="Azure AI Agent Service">
-              <span>Azure AI</span>
+
+            <!-- Stage 3 -->
+            <div class="adlc-col">
+              <div class="adlc-col-header">
+                <span class="adlc-col-num">03</span>
+                <h4 class="adlc-col-title">Orchestration</h4>
+              </div>
+              <div class="adlc-col-stack">
+                <div class="stack-item" title="LangGraph">
+                  <img src="./assets/stack/langgraph.svg" alt="LangGraph">
+                  <span>LangGraph</span>
+                </div>
+                <div class="stack-item" title="MCP Protocol">
+                  <img src="./assets/stack/mcp.svg" alt="MCP Protocol">
+                  <span>MCP Protocol</span>
+                </div>
+              </div>
             </div>
-            <div class="stack-item" title="Palantir Foundry">
-              <img src="./assets/stack/palantir_foundry.svg" alt="Palantir Foundry">
-              <span>Foundry</span>
-            </div>
-            <div class="stack-item" title="Palantir AIP">
-              <img src="./assets/stack/palantir_aip.svg" alt="Palantir AIP">
-              <span>Palantir AIP</span>
-            </div>
-            <div class="stack-item" title="Neo4j">
-              <img src="./assets/stack/neo4j.svg" alt="Neo4j">
-              <span>Neo4j</span>
-            </div>
-            <div class="stack-item" title="AWS Bedrock">
-              <img src="./assets/stack/bedrock.svg" alt="AWS Bedrock">
-              <span>Bedrock</span>
-            </div>
-            <div class="stack-item" title="LlamaIndex">
-              <img src="./assets/stack/llamaindex.svg" alt="LlamaIndex">
-              <span>LlamaIndex</span>
-            </div>
-            <div class="stack-item" title="Google ADK">
-              <img src="./assets/stack/google.svg" alt="Google ADK">
-              <span>Google ADK</span>
+
+            <!-- Stage 4 -->
+            <div class="adlc-col">
+              <div class="adlc-col-header">
+                <span class="adlc-col-num">04</span>
+                <h4 class="adlc-col-title">Deploy, Evaluation & Observability</h4>
+              </div>
+              <div class="adlc-col-stack">
+                <div class="stack-item" title="LangSmith">
+                  <img src="./assets/stack/langsmith.svg" alt="LangSmith">
+                  <span>LangSmith</span>
+                </div>
+                <div class="stack-item" title="Braintrust">
+                  <img src="./assets/stack/braintrust.svg" alt="Braintrust">
+                  <span>Braintrust</span>
+                </div>
+                <div class="stack-item" title="DeepEval">
+                  <img src="./assets/stack/deepeval.svg" alt="DeepEval">
+                  <span>DeepEval</span>
+                </div>
+                <div class="stack-item" title="Azure AI Foundry">
+                  <img src="./assets/stack/azure.svg" alt="Azure AI Foundry">
+                  <span>Azure Foundry</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

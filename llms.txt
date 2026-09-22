@@ -11,7 +11,7 @@
 - [Personalized Business Ontologies](https://hsnlabs.ai/#services): Tailoring domain schemas and operational constraints directly to live ERP, CRM, and database models so models never guess business logic.
 - [Deep Agent Infrastructure](https://hsnlabs.ai/#services): Powering stateful multi-step execution, persistent memory, and standardized MCP tool orchestration across enterprise software.
 - [Deterministic Guardrails](https://hsnlabs.ai/#services): Enforcing strict schema boundaries, finite state machines, and runtime isolation to protect sensitive financial and transactional ledgers.
-- [Enterprise ADLC Stack](https://hsnlabs.ai/#services): Governing the complete Agent Development Lifecycle using market standards like LangGraph and LangSmith for rigorous evaluation, tracing, and production observability.
+- [Agent Development Life Cycle Stack](https://hsnlabs.ai/#services): Governing the complete Agent Development Lifecycle using market standards like LangGraph and LangSmith for rigorous evaluation, tracing, and production observability.
 
 ## Entry Engagement: 5-Day Agentic Bootcamp
 - [Bootcamp Deployment Protocol](https://hsnlabs.ai/bootcamp.html): A focused 120-hour technical deployment inside client infrastructure. We validate data access, connect initial MCP tools, and deploy a functional deep agent in a secure sandbox with verified operational ROI before broader enterprise commitment.
