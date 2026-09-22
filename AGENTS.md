@@ -68,7 +68,9 @@ The website follows a clean 4-section architecture:
   * Zero Monospace Rule: Monospace typefaces like JetBrains Mono are completely eliminated across all public surfaces to maintain an elegant editorial print aesthetic.
 * Logo & Component Geometry (Strict 90-Degree Invariant):
   * Always keep `border-radius: 0` on the cyan square symbol, and on ALL interactive buttons, cards, boxes, badges, and form inputs.
-  * All cards and containers use the clean crumpled paper texture overlay (`assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
+  * All cards, containers, and banners (including cookie banners and alert boxes) must use the clean crumpled paper texture overlay (`/assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
+    * CRITICAL: Use absolute paths (`/assets/...`) for the texture image to prevent 404s on subpages.
+    * CRITICAL: Set `isolation: isolate` on the parent container, and apply the texture via a `::before` pseudo-element with `z-index: -1` to prevent the texture from covering pure text nodes.
   * Primary CTA buttons use Brand Sky Blue `#52B4FD` with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.65.
   * Secondary CTA buttons use pure white paper with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.50.
   * Never alter the origami carp proportions or angle.
