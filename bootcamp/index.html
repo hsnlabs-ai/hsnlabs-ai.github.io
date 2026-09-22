@@ -226,22 +226,18 @@
       line-height: 1;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
     }
 
     .btn::before {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('./assets/textures/paper_crumpled_clean.jpg');
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
       background-size: cover;
       background-position: center;
       pointer-events: none;
-      z-index: 1;
-    }
-
-    .btn > * {
-      position: relative;
-      z-index: 2;
+      z-index: -1;
     }
 
     .btn-primary {
@@ -350,7 +346,7 @@
     /* DAYS TIMELINE GRID */
     .timeline-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       text-align: left;
       margin-bottom: 32px;
@@ -372,29 +368,25 @@
       transition: border-color 0.2s, transform 0.2s;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
     }
 
     .timeline-card::before,
     .criteria-card::before,
-    .app-card::before {
+    .app-card::before,
+    .cookie-banner::before,
+    .form-success-box::before {
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('./assets/textures/paper_crumpled_clean.jpg');
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
       background-size: cover;
       background-position: center;
       mix-blend-mode: multiply;
       opacity: 0.50;
       pointer-events: none;
-      z-index: 1;
-    }
-
-    .timeline-card > *,
-    .criteria-card > *,
-    .app-card > * {
-      position: relative;
-      z-index: 2;
+      z-index: -1;
     }
 
     .timeline-card:hover {
@@ -428,10 +420,10 @@
     /* CRITERIA GRID */
     .criteria-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       text-align: left;
-      max-width: 920px;
+      max-width: 1120px;
       margin: 0 auto;
     }
 
@@ -448,6 +440,7 @@
       padding: 28px 24px;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
     }
 
@@ -476,6 +469,7 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), 0 16px 40px rgba(0, 0, 0, 0.03);
       position: relative;
       overflow: hidden;
+      isolation: isolate;
     }
 
     .app-form {
@@ -561,6 +555,9 @@
 
     .form-success-box {
       display: none;
+      isolation: isolate;
+      position: relative;
+      overflow: hidden;
       background: var(--canvas-soft);
       border: 1px solid var(--hairline);
       border-radius: 0;
@@ -656,7 +653,7 @@
       justify-content: center;
       width: 44px;
       height: 44px;
-      border-radius: 8px;
+      border-radius: 0;
       transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
     }
 
@@ -725,6 +722,8 @@
     /* COOKIE CONSENT BANNER */
     .cookie-banner {
       position: fixed;
+      isolation: isolate;
+      overflow: hidden;
       bottom: 24px;
       left: 24px;
       max-width: 420px;
@@ -768,6 +767,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
 
     .cookie-btn-accept {
@@ -894,20 +894,12 @@
           <div class="timeline-day">STEP 03</div>
           <h3 class="timeline-title">Sandbox Prototype</h3>
           <p class="timeline-body">
-            Wiring deterministic Python state machines around deep agents in a secure, isolated test environment.
+            Deploying deep agents in a secure, isolated test environment, testing edge cases.
           </p>
         </div>
 
         <div class="timeline-card">
           <div class="timeline-day">STEP 04</div>
-          <h3 class="timeline-title">Stress Testing</h3>
-          <p class="timeline-body">
-            Testing edge cases and validation rules to stop model hallucinations before production.
-          </p>
-        </div>
-
-        <div class="timeline-card">
-          <div class="timeline-day">STEP 05</div>
           <h3 class="timeline-title">Business Case</h3>
           <p class="timeline-body">
             Final delivery of the business case with technical feasibility, ROI analysis, and rollout roadmap.
@@ -1063,8 +1055,8 @@
           <div class="footer-col-title">Stay Updated</div>
           <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const b=this.querySelector('button'); b.innerText='Sent'; setTimeout(() => b.innerText='Send', 3000); this.querySelector('input').value='';">
             <div style="display: flex; gap: 8px;">
-              <input type="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 8px; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
-              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 8px; cursor: pointer; white-space: nowrap;">Send</button>
+              <input type="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Send</button>
             </div>
           </form>
           <div style="margin-top: 22px;">
