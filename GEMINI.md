@@ -21,11 +21,11 @@ The website follows a clean 4-section architecture:
 1. Header:
    * Sticky blurred translucent navbar on off-white canvas.
    * Left: Official HSN Labs horizontal lockup.
-   * Navigation links: Services, Verticals, Contact.
+   * Minimalist navbar: Intermediate navigation links strictly eliminated to maximize visual breathing room and conversion focus; navbar contains only the brand lockup on the left and primary Apply for Bootcamp button on the right.
    * Primary action button linking to Bootcamp application.
 2. Hero Page:
    * Brand mark centered above the primary headline: Official 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners with `border-radius: 0`. Never apply rounded corners to the mark.
-   * Primary headline: `Production-Grade AI Agents on Business Ontologies`.
+   * Primary headline: Two-tier split-scale hierarchy with commanding anchor line `Enterprise AI Agents` and subordinate differentiator clause `that don't fail in production`.
    * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
@@ -37,9 +37,9 @@ The website follows a clean 4-section architecture:
      4. Agent Development Life Cycle Stack: 4-stage enterprise pipeline covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:
-     1. BFSI Infrastructure.
-     2. Clinical Operations.
-     3. Industrial Operations.
+     1. Banking and Capital.
+     2. Healthcare Operations.
+     3. Legacy ERP and BPO.
 5. Contact Section:
    * Direct technical scoping card with four qualification gates and direct email dispatch.
 6. Footer:
@@ -65,9 +65,12 @@ The website follows a clean 4-section architecture:
 * Typography:
   * Display: Cormorant Garamond weight 300 with negative tracking.
   * Body: Inter regular and medium with slight positive tracking.
-  * Telemetry: JetBrains Mono for system metrics.
-* Logo Application:
-  * Always keep `border-radius: 0` on the cyan square symbol.
+  * Zero Monospace Rule: Monospace typefaces like JetBrains Mono are completely eliminated across all public surfaces to maintain an elegant editorial print aesthetic.
+* Logo & Component Geometry (Strict 90-Degree Invariant):
+  * Always keep `border-radius: 0` on the cyan square symbol, and on ALL interactive buttons, cards, boxes, badges, and form inputs.
+  * All cards and containers use the clean crumpled paper texture overlay (`assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
+  * Primary CTA buttons use Brand Sky Blue `#52B4FD` with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.65.
+  * Secondary CTA buttons use pure white paper with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.50.
   * Never alter the origami carp proportions or angle.
 
 ---
