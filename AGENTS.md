@@ -80,3 +80,11 @@ The website follows a clean 4-section architecture:
 Maintain official Google tags on all public pages:
 * Google Tag Manager: `GTM-KPL6PVKC`
 * Google Analytics 4: `G-GMK24ECXMF` with Stream ID `15812853732`
+
+---
+
+## 5. Open Graph Synchronization Rule
+
+The social preview card `assets/brand/og-image.png` must strictly mirror the live Hero section:
+* Automated Script: `python3 scripts/update_og.py` extracts headlines, subtitles, and CTAs from `index.html` and renders a 1200x630 card with the official atmosphere orbs, symbol, and paper texture.
+* Git Pre-Commit Hook: Configured in `.git/hooks/pre-commit` to automatically re-render and stage `og-image.png` whenever `index.html` is committed.
