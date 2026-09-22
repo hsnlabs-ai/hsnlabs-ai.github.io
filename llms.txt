@@ -13,8 +13,8 @@
 - [Deterministic Guardrails](https://hsnlabs.ai/#services): Enforcing strict schema boundaries, finite state machines, and runtime isolation to protect sensitive financial and transactional ledgers.
 - [Agent Development Life Cycle Stack](https://hsnlabs.ai/#services): Governing the complete Agent Development Lifecycle using market standards like LangGraph and LangSmith for rigorous evaluation, tracing, and production observability.
 
-## Entry Engagement: 5-Day Agentic Bootcamp
-- [Bootcamp Deployment Protocol](https://hsnlabs.ai/bootcamp.html): A focused 120-hour technical deployment inside client infrastructure. We validate data access, connect initial MCP tools, and deploy a functional deep agent in a secure sandbox with verified operational ROI before broader enterprise commitment.
+## Entry Engagement: Agentic Bootcamp
+- [Bootcamp Deployment Protocol](https://hsnlabs.ai/bootcamp): A focused technical deployment inside client infrastructure. We validate data access, connect tools, and deliver an executive business case with verified operational ROI before broader enterprise commitment.
 
 ## Regulated Enterprise Verticals
 - [Banking and Capital Markets](https://hsnlabs.ai/#verticals): Eliminating hallucinations on financial ledgers through deterministic transaction validation and immutable audit trails.

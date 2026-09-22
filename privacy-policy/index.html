@@ -2,48 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script>
-    // Clean URL auto-redirect for GitHub Pages
-    if (window.location.pathname.endsWith('.html')) {
-      var clean = window.location.pathname.replace(/\.html$/, '');
-      window.location.replace(clean + window.location.search + window.location.hash);
-    }
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Page Not Found — HSN Labs</title>
-  <meta name="description" content="The page you requested does not exist. Return to HSN Labs or contact our team directly.">
-  <meta name="robots" content="noindex, follow">
+  <title>Privacy Policy — HSN Labs</title>
+    <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/privacy-policy">
+  <meta property="og:title" content="HSN Labs — AI Agents That Don't Fail in Production">
+  <meta property="og:description" content="Boutique building deterministic multi-agent architectures on business ontologies.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hsnlabs.ai/privacy-policy">
+  <meta name="twitter:title" content="HSN Labs — AI Agents That Don't Fail in Production">
+  <meta name="twitter:description" content="Boutique building deterministic multi-agent architectures on business ontologies.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+
+  <link rel="canonical" href="https://hsnlabs.ai/privacy-policy">
+  <meta name="description" content="Privacy Policy for HSN Labs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks.">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
 
-  <!-- Open Graph / WhatsApp / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="404 — Route Not Found | HSN Labs">
-  <meta property="og:description" content="State machine exception: the requested route does not exist in our topology.">
-  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
-
-  <!-- Google Fonts: Cormorant Garamond for display, Inter for UI and body -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Typography Tokens */
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Typography Tokens */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-      /* Canonical Type Scale */
-      --text-xs: 0.75rem;
-      --text-sm: 0.85rem;
-      --text-base: 0.95rem;
-      --text-lg: 1.25rem;
-      --text-xl: 2rem;
-      --text-display: clamp(2.4rem, 5vw, 4.5rem);
-
+    /* Canonical Type Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.85rem;
+    --text-base: 0.95rem;
+    --text-lg: 1.25rem;
+    --text-xl: 2rem;
+    --text-display: clamp(2.4rem, 5vw, 4.5rem);
       --canvas: #f5f5f5;
       --canvas-soft: #fafafa;
       --surface-card: #ffffff;
@@ -58,56 +61,93 @@
       --hairline-strong: #cbd5e1;
       --cyan: #52B4FD;
       --cyan-text: #0284c7;
-      --cyan-subtle: rgba(82, 180, 253, 0.12);
-      --cyan-glow: rgba(82, 180, 253, 0.28);
+      --emerald: #10B981;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
     body {
       background-color: var(--canvas);
       color: var(--body);
-      font-family: var(--font-sans);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
-      line-height: 1.6;
+      line-height: 1.65;
       letter-spacing: 0.16px;
       overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 32px;
-      width: 100%;
     }
 
     /* HEADER */
     .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       background: rgba(245, 245, 245, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--hairline);
       height: 80px;
+      display: flex;
+      align-items: center;
     }
 
     .header-container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      height: 100%;
+      justify-content: space-between;
+      width: 100%;
     }
 
-    .brand-logo-img { height: 46px; width: auto; display: block; }
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--body);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--ink);
+    }
 
     /* BUTTONS: 90-DEGREE STRAIGHT CUTS + AUTHENTIC PAPER TEXTURE */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-sans);
-      font-size: var(--text-base);
+      font-size: 0.925rem;
       font-weight: 500;
       border-radius: 0;
       padding: 10px 24px;
@@ -171,80 +211,104 @@
       transform: translateY(-1px);
     }
 
-    /* 404 HERO CONTENT */
-    .error-hero {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 96px 0 120px 0;
-      text-align: center;
+    /* POLICY CONTENT */
+    .policy-hero {
+      padding: 72px 0 40px 0;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--canvas-soft);
     }
 
-    .error-card {
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--ink);
+    }
+
+    
+
+    .display-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+
+    .policy-meta {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .policy-wrapper {
+      padding: 64px 0 100px 0;
+    }
+
+    .policy-card {
       background: var(--surface-card);
       border: 1px solid var(--hairline);
-      border-radius: 0;
-      padding: 64px 48px;
-      max-width: 680px;
-      width: 100%;
+      padding: 56px;
+      max-width: 860px;
       margin: 0 auto;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), 0 16px 40px rgba(0, 0, 0, 0.03);
-      position: relative;
-      overflow: hidden;
     }
 
-    .error-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('./assets/textures/paper_crumpled_clean.jpg');
-      background-size: cover;
-      background-position: center;
-      mix-blend-mode: multiply;
-      opacity: 0.50;
-      pointer-events: none;
-      z-index: 1;
+    .policy-section {
+      margin-bottom: 44px;
     }
 
-    .error-card > * {
-      position: relative;
-      z-index: 2;
+    .policy-section:last-child {
+      margin-bottom: 0;
     }
 
-    .error-code {
-      font-family: var(--font-display);
-      font-size: clamp(3.5rem, 8vw, 6.5rem);
-      font-weight: 300;
-      line-height: 1;
-      color: var(--ink);
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .error-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      font-weight: 300;
+    .policy-h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
       color: var(--ink);
       margin-bottom: 16px;
       letter-spacing: -0.01em;
-      line-height: 1.15;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 8px;
     }
 
-    .error-desc {
+    .policy-h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 20px 0 10px 0;
+    }
+
+    .policy-p {
+      color: var(--body);
       font-size: 0.95rem;
-      color: var(--muted);
-      line-height: 1.6;
-      max-width: 480px;
-      margin: 0 auto 32px auto;
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
-    .error-actions {
+    .policy-list {
+      list-style: disc;
+      padding-left: 24px;
+      margin-bottom: 18px;
       display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .policy-list li {
+      color: var(--body);
+      font-size: 0.95rem;
+      line-height: 1.65;
     }
 
     /* FOOTER */
@@ -287,7 +351,9 @@
       transition: color 0.2s ease;
     }
 
-    .footer-nav a:hover { color: var(--ink); }
+    .footer-nav a:hover {
+      color: var(--ink);
+    }
 
     .footer-bottom {
       border-top: 1px solid var(--hairline);
@@ -315,7 +381,9 @@
       transition: color 0.2s ease;
     }
 
-    .footer-bottom-links a:hover { color: var(--ink); }
+    .footer-bottom-links a:hover {
+      color: var(--ink);
+    }
 
     .footer-social-row {
       display: flex;
@@ -341,12 +409,38 @@
     }
 
     @media (max-width: 640px) {
-      .container { padding: 0 20px; }
-      .error-card { padding: 44px 24px; }
-      .error-actions { flex-direction: column; }
-      .error-actions .btn { width: 100%; }
-      .site-footer { padding: 56px 0 36px 0; }
-      .footer-grid { grid-template-columns: 1fr; gap: 36px; margin-bottom: 40px; }
+      .container {
+        padding: 0 16px;
+      }
+      .policy-card {
+        padding: 32px 20px;
+      }
+      .nav-menu {
+        display: none;
+      }
+      .site-footer {
+        padding: 56px 0 36px 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 40px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+    }
+    /* iOS SAFARI AUTO-ZOOM PREVENTION */
+    @media (max-width: 768px) {
+      .footer-newsletter-form input {
+        font-size: 16px !important;
+      }
     }
 
     /* COOKIE CONSENT BANNER */
@@ -386,13 +480,30 @@
       margin-bottom: 18px;
     }
 
-    .cookie-text a { color: var(--ink); text-decoration: underline; }
+    .cookie-text a {
+      color: var(--ink);
+      text-decoration: underline;
+    }
 
-    .cookie-actions { display: flex; align-items: center; gap: 10px; }
-    .cookie-btn-accept { padding: 8px 18px; font-size: 0.82rem; border-radius: 0; }
-    .cookie-btn-decline { padding: 8px 16px; font-size: 0.82rem; border-radius: 0; }
+    .cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cookie-btn-accept {
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      border-radius: 0;
+    }
+
+    .cookie-btn-decline {
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      border-radius: 0;
+    }
+
   </style>
-
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -413,14 +524,8 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GMK24ECXMF');
-
-    // Smart 404 Telemetry Logging
-    gtag('event', 'page_not_found', {
-      'event_category': 'error',
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
   </script>
+
 </head>
 <body>
 
@@ -431,25 +536,154 @@
         <img src="/assets/brand/lockups/hsn-labs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
       </a>
 
+      
+
       <a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>
     </div>
   </header>
 
-  <!-- 404 HERO CONTENT -->
-  <main class="error-hero">
+  <!-- HERO -->
+  <section class="policy-hero">
     <div class="container">
-      <div class="error-card">
-        <div class="error-code">404</div>
-        <h1 class="error-title">Page Not Found</h1>
-        <p class="error-desc">
-          The page you requested does not exist or may have moved. If you need assistance with an enterprise deployment or want to report an issue, contact our team directly.
-        </p>
+      <a href="/" class="back-link">← Return to Overview</a>
+      <h1 class="display-title">Privacy Policy</h1>
+      <div class="policy-meta">Last updated: February 2026</div>
+    </div>
+  </section>
 
-        <div class="error-actions">
-          <a href="/" class="btn btn-primary">Back to Home</a>
-          <a href="mailto:hugo@hsnlabs.ai?subject=Missing%20Page%20Inquiry&body=URL:%20" id="reportLink" class="btn btn-outline">Contact Us</a>
-        </div>
-      </div>
+  <!-- POLICY BODY -->
+  <main class="policy-wrapper">
+    <div class="container">
+      <article class="policy-card">
+        
+        <section class="policy-section">
+          <h2 class="policy-h2">1. Objective and Scope</h2>
+          <p class="policy-p">
+            HSN Labs, legal entity operated under Mondo Digital, located at Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil, recognizes the sensitive nature of data processed across our advisory, engineering, and digital platforms. This Privacy Policy governs the collection, handling, storage, and protection of personal data left by enterprise clients, technical leads, and site visitors.
+          </p>
+          <p class="policy-p">
+            Our data processing strictly complies with the Brazilian General Data Protection Law, Law 13709 of 2018, known as LGPD, the Brazilian Internet Civil Rights Framework, Law 12965 of 2014, as well as applicable international standards. This document details how information is handled with clear transparency, security, and integrity.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">2. Personal Data We Collect</h2>
+          <p class="policy-p">
+            We collect personal data through two distinct modalities:
+          </p>
+          
+          <h3 class="policy-h3">2.1 Information Voluntarily Provided</h3>
+          <p class="policy-p">
+            When engaging with our scoping forms, technical questionnaires, or newsletter forms, users submit information including:
+          </p>
+          <ul class="policy-list">
+            <li>Full name</li>
+            <li>Corporate work email</li>
+            <li>Company name and industry vertical</li>
+            <li>Annual revenue bracket</li>
+            <li>Technical project requirements, enterprise architecture descriptions, and infrastructure scope</li>
+          </ul>
+
+          <h3 class="policy-h3">2.2 Automatically Collected Data</h3>
+          <p class="policy-p">
+            During browsing, our infrastructure logs standard operational telemetry:
+          </p>
+          <ul class="policy-list">
+            <li>Device characteristics, browser version, and operating system</li>
+            <li>Connection IP address with date and time stamps</li>
+            <li>Referring URLs and navigation interaction paths</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">3. Cookies and Telemetry</h2>
+          <p class="policy-p">
+            HSN Labs uses minimal, essential cookies and analytics instrumentation to ensure website stability, monitor response times, and prevent security vulnerabilities. We reject deceptive tracking networks.
+          </p>
+          <p class="policy-p">
+            Visitors can inspect or restrict cookies at any time via web browser configuration controls. Restricting strictly technical session tokens may alter responsiveness on dynamic forms.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">4. Purpose and Legal Grounds for Processing</h2>
+          <p class="policy-p">
+            Collected information is processed under explicit legal bases set out in Article 7 of Law 13709 of 2018:
+          </p>
+          <ul class="policy-list">
+            <li>Execution of preliminary procedures linked to contracts requested by the data subject</li>
+            <li>Evaluation of technical scope for the Agentic Bootcamp and custom advisory architectures</li>
+            <li>Distribution of technical insights, architecture whitepapers, and engineering updates based on consent</li>
+            <li>Legitimate interest in securing digital infrastructure and maintaining deterministic system auditability</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">5. Data Sharing and Infrastructure Partners</h2>
+          <p class="policy-p">
+            HSN Labs does not sell, rent, or monetize personal data under any circumstance. Information is shared strictly under bound operational contracts with:
+          </p>
+          <ul class="policy-list">
+            <li>Enterprise cloud infrastructure and secure hosting providers</li>
+            <li>Operational tools supporting secure transactional communication</li>
+            <li>Public, judicial, or governmental authorities when compelled by valid legal orders</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">6. International Data Transfers</h2>
+          <p class="policy-p">
+            Due to our reliance on top-tier global cloud backbones, personal data may transit through encrypted facilities outside Brazil. All international routing observes standard contractual clauses and rigorous organizational safeguards complying with Chapter V of LGPD.
+          </p>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">7. Information Security Measures</h2>
+          <p class="policy-p">
+            We employ modern administrative, technical, and architectural security measures:
+          </p>
+          <ul class="policy-list">
+            <li>End-to-end transport layer encryption for all data in transit</li>
+            <li>AES-256 encryption for data at rest</li>
+            <li>Strict principle of least privilege across internal teams and runtime sandboxes</li>
+            <li>Continuous audit logs and environmental isolation protocols</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">8. Data Subject Rights</h2>
+          <p class="policy-p">
+            Under Article 18 of the LGPD, users maintain full sovereignty over their personal data, including the right to:
+          </p>
+          <ul class="policy-list">
+            <li>Confirm the existence of data processing</li>
+            <li>Access personal records stored in our systems</li>
+            <li>Request immediate correction of incomplete, inaccurate, or outdated data</li>
+            <li>Request anonymization, blocking, or elimination of unnecessary data</li>
+            <li>Revoke previously granted consent without penalty</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">9. Data Protection Officer and Contact</h2>
+          <p class="policy-p">
+            Requests regarding personal data processing or exercise of statutory rights should be directed to our Data Protection Officer:
+          </p>
+          <ul class="policy-list">
+            <li>Email: hugo@hsnlabs.ai</li>
+            <li>Physical Address: Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil</li>
+            <li>Response timeline: within 15 business days following formal receipt and identity verification</li>
+          </ul>
+        </section>
+
+        <section class="policy-section">
+          <h2 class="policy-h2">10. Applicable Law and Jurisdiction</h2>
+          <p class="policy-p">
+            This Policy is governed by and construed in accordance with the Laws of the Federative Republic of Brazil, specifically Law 13709 of 2018. The forum of the judicial district of São Paulo, State of São Paulo, Brazil, is elected to resolve disputes arising from this document.
+          </p>
+        </section>
+
+      </article>
     </div>
   </main>
 
@@ -505,7 +739,7 @@
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                 </svg>
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-icon" title="X">
+                            <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-icon" title="X">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
@@ -529,14 +763,13 @@
         <div>2026 HSN Labs. All rights reserved.</div>
         <div class="footer-bottom-links">
           <a href="/privacy-policy">Privacy Policy</a>
-          <a href="javascript:void(0)" onclick="openCookieSettings()">Cookie Settings</a>
           <a href="/modern-slavery-statement">Modern Slavery Statement</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- COOKIE CONSENT BANNER -->
+  <!-- COOKIE CONSENT BANNER (USERCENTRICS / LGPD COMPLIANT) -->
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
     <div class="cookie-title">Cookie & Privacy Consent</div>
     <p class="cookie-text">
@@ -549,12 +782,6 @@
   </div>
 
   <script>
-    // Pre-fill broken route into anomaly report link
-    var rep = document.getElementById('reportLink');
-    if (rep) {
-      rep.href += encodeURIComponent(window.location.href);
-    }
-
     function initCookieBanner() {
       var consent = localStorage.getItem('hsn_cookie_consent');
       var banner = document.getElementById('cookieBanner');
@@ -566,7 +793,9 @@
     function acceptCookies() {
       localStorage.setItem('hsn_cookie_consent', 'accepted');
       if (typeof gtag === 'function') {
-        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
       }
       var banner = document.getElementById('cookieBanner');
       if (banner) banner.style.display = 'none';
@@ -575,7 +804,9 @@
     function declineCookies() {
       localStorage.setItem('hsn_cookie_consent', 'declined');
       if (typeof gtag === 'function') {
-        gtag('consent', 'update', { 'analytics_storage': 'denied' });
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied'
+        });
       }
       var banner = document.getElementById('cookieBanner');
       if (banner) banner.style.display = 'none';
@@ -588,5 +819,6 @@
 
     document.addEventListener('DOMContentLoaded', initCookieBanner);
   </script>
+
 </body>
 </html>
