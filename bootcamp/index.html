@@ -362,10 +362,7 @@
       background: var(--surface-card);
       border: 1px solid var(--hairline);
       border-radius: 0;
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.2s, transform 0.2s;
+      padding: 28px 24px;
       position: relative;
       overflow: hidden;
       isolation: isolate;
@@ -394,21 +391,11 @@
       transform: translateY(-2px);
     }
 
-    .timeline-day {
-      font-family: var(--font-sans);
-      font-size: 0.75rem;
-      color: var(--cyan-text);
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-    }
-
-    .timeline-title {
+    .timeline-card strong {
       font-size: 1.05rem;
-      font-weight: 600;
       color: var(--ink);
-      margin-bottom: 10px;
-      line-height: 1.3;
+      display: block;
+      margin-bottom: 8px;
     }
 
     .timeline-body {
@@ -452,7 +439,7 @@
     }
 
     .criteria-card p {
-      font-size: 0.925rem;
+      font-size: 0.875rem;
       color: var(--body);
       line-height: 1.55;
     }
@@ -872,32 +859,28 @@
 
       <div class="timeline-grid">
         <div class="timeline-card">
-          <div class="timeline-day">STEP 01</div>
-          <h3 class="timeline-title">Environment Setup</h3>
+          <strong>01 • Environment Setup</strong>
           <p class="timeline-body">
             Database read replicas, ERP connections, and security isolation before writing code.
           </p>
         </div>
 
         <div class="timeline-card">
-          <div class="timeline-day">STEP 02</div>
-          <h3 class="timeline-title">Ontology Mapping</h3>
+          <strong>02 • Ontology Mapping</strong>
           <p class="timeline-body">
             Extracting business rules and mapping legacy ERP tables into executable business ontologies.
           </p>
         </div>
 
         <div class="timeline-card">
-          <div class="timeline-day">STEP 03</div>
-          <h3 class="timeline-title">Sandbox Prototype</h3>
+          <strong>03 • Sandbox Prototype</strong>
           <p class="timeline-body">
             Deploying deep agents in a secure, isolated test environment, testing edge cases.
           </p>
         </div>
 
         <div class="timeline-card">
-          <div class="timeline-day">STEP 04</div>
-          <h3 class="timeline-title">Business Case</h3>
+          <strong>04 • Business Case</strong>
           <p class="timeline-body">
             Final delivery of the business case with technical feasibility, ROI analysis, and rollout roadmap.
           </p>
