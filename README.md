@@ -2,7 +2,7 @@
 
 Official production repository for the **HSN Labs** corporate website.
 
-HSN Labs is an AI architecture consulting boutique solving why AI agents fail in production through hybrid engineering, enterprise ontologies, and custom deep agents for mission-critical operations.
+HSN Labs is an AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production.
 
 ---
 
