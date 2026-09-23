@@ -456,6 +456,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 - Use atmospheric gradient orbs as background decoration only.
 - Enforce strict 90-degree sharp corners (`border-radius: 0`) across all CTAs, cards, badges, and boxes to harmonize with the brand water square.
 - Apply unified clean crumpled paper texture overlay (`paper_crumpled_clean.jpg`) with multiply blend mode on cards and boxes.
+- For small square elements like the `.post-it-badge`, force `background-size: 400px;` so the paper texture does not blur when squeezed into a small area.
 
 ### Don't
 - Don't round the corners of any element — the HSN Labs square mark and all UI components must maintain sharp 90-degree corners (`border-radius: 0`).

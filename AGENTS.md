@@ -30,11 +30,12 @@ The website follows a clean 4-section architecture:
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
 3. Services Section:
-   * Balanced two-by-two grid presenting four technical pillars:
-     1. Personalized Business Ontologies.
-     2. Deep Agent Infrastructure.
-     3. Deterministic Guardrails.
-     4. Agent Development Life Cycle Stack: 4-stage enterprise pipeline covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
+   * Services / Delivery Method section with balanced two-by-two grid presenting four pillars:
+     1. Discovery Canvas (Scoping Tool).
+     2. Legacy Reader (Reverse-engineering engine).
+     3. Data Router (Surgical data extraction).
+     4. Agent Development Life Cycle (Orchestration and enterprise-grade tools).
+   * Numbered steps must use the `.post-it-badge` element, visually simulating a cyan square post-it floating above the card.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:
      1. Banking and Capital.
@@ -68,7 +69,9 @@ The website follows a clean 4-section architecture:
   * Zero Monospace Rule: Monospace typefaces like JetBrains Mono are completely eliminated across all public surfaces to maintain an elegant editorial print aesthetic.
 * Logo & Component Geometry (Strict 90-Degree Invariant):
   * Always keep `border-radius: 0` on the cyan square symbol, and on ALL interactive buttons, cards, boxes, badges, and form inputs.
-  * All cards, containers, and banners (including cookie banners and alert boxes) must use the clean crumpled paper texture overlay (`/assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
+  * All cards, containers, and banners (including cookie banners, alert boxes, and post-it badges) must use the clean crumpled paper texture overlay (`/assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply`. Opacity: 0.50 for large cards, 0.65 for `.btn-primary` and `.post-it-badge`.
+  * The `.post-it-badge` uses `width/height: 64px`, `background: var(--cyan)`, and edge lighting (`inset 0 1px 0 rgba(255, 255, 255, 0.4)`) combined with a dynamic float shadow (`0 4px 12px rgba(82, 180, 253, 0.45)`) and `transform: translateY(-2px)` to simulate physical depth.
+  * For small elements like `.post-it-badge`, the crumpled paper texture must use a forced background-size (e.g., `background-size: 400px;`) rather than `cover` to ensure the fibers are visible.
     * CRITICAL: Use absolute paths (`/assets/...`) for the texture image to prevent 404s on subpages.
     * CRITICAL: Set `isolation: isolate` on the parent container, and apply the texture via a `::before` pseudo-element with `z-index: -1` to prevent the texture from covering pure text nodes.
   * Primary CTA buttons use Brand Sky Blue `#52B4FD` with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.65.
