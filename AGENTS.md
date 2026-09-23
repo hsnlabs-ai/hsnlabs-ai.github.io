@@ -21,7 +21,7 @@ The website follows a clean 4-section architecture:
 1. Header:
    * Sticky blurred translucent navbar on off-white canvas.
    * Left: Official HSN Labs horizontal lockup.
-   * Minimalist navbar: Intermediate navigation links strictly eliminated to maximize visual breathing room and conversion focus; navbar contains only the brand lockup on the left and primary Apply for Bootcamp button on the right.
+   * Minimalist navbar: Contains brand lockup (left), secondary navigation dropdown "Services" (Bootcamp / Advisory), a GitHub repository link, and primary "Apply for Bootcamp" CTA (right). Dropdown uses paper texture overlay.
    * Primary action button linking to Bootcamp application.
 2. Hero Page:
    * Brand mark centered above the primary headline: Official 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners with `border-radius: 0`. Never apply rounded corners to the mark.
