@@ -48,7 +48,7 @@ def extract_hero_data():
 
 def build_og_template(data):
     paper_path = f"file://{ROOT_DIR}/assets/textures/paper_crumpled_clean.jpg"
-    lockup_path = f"file://{ROOT_DIR}/assets/brand/lockups/hsn-labs-lockup-horizontal-light.png"
+    lockup_path = f"file://{ROOT_DIR}/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png"
     carp_path = f"file://{ROOT_DIR}/assets/brand/elements/origami-carp-clean.png"
 
     html = f"""<!DOCTYPE html>

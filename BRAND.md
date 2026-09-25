@@ -41,7 +41,7 @@ Operational standards for applying the HSN Labs brand across digital products, e
 
 ## 4. Typography System
 
-* **Wordmark:** Pure lowercase geometric sans `hsn-labs` with uniform tracking.
+* **Wordmark:** Pure lowercase geometric sans `hsnlabs` with uniform tracking.
 * **Display Headings:** Light serif display at weight 300 with tight line height.
 * **Running Body and Interface:** Inter regular and medium with slight positive tracking for airy reading.
 
@@ -62,5 +62,5 @@ All canonical files reside in `assets/brand/`:
 ## 6. Prohibited Practices
 
 * Do not apply generic AI visual tropes such as neon gradients, purple ribbons, or floating spheres.
-* Do not alter the lowercase casing of the wordmark `hsn-labs`.
+* Do not alter the lowercase casing of the wordmark `hsnlabs`.
 * Do not combine the mark with third-party logos without maintaining the standard exclusion margin.
