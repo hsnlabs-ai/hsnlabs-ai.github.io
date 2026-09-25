@@ -7,7 +7,7 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://hsnlabs.ai/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/" />
@@ -20,31 +20,15 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/bootcamp</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/bootcamp" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/bootcamp" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/privacy-policy</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/privacy-policy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/privacy-policy" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/modern-slavery-statement</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/modern-slavery-statement" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/modern-slavery-statement" />
-  </url>
-  <url>
     <loc>https://hsnlabs.ai/advisory</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/advisory" />
@@ -53,17 +37,55 @@
   <url>
     <loc>https://hsnlabs.ai/blog/</loc>
     <lastmod>2026-09-25</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/blog/writing/</loc>
+    <loc>https://hsnlabs.ai/blog/services/</loc>
     <lastmod>2026-09-25</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/writing/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/writing/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/writing/manifesto/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/writing/chatbot-vs-agent/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/writing/cost-legacy-it/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/writing/integration-drift/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/writing/latam-airlines-case-study/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/privacy-policy</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/modern-slavery-statement</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
