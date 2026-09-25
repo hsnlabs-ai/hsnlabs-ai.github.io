@@ -21,6 +21,10 @@
 - [Healthcare Operations](https://hsnlabs.ai/#verticals): Verifiable protocol adherence and zero-exfiltration architectures across healthcare billing and medical workflows.
 - [Legacy ERP and BPO](https://hsnlabs.ai/#verticals): Anchoring agentic workflows to deterministic state machines across legacy ERPs to replace fragile BPO operations.
 
+## Knowledge Engine & Research
+- [HSN Labs Blog](https://hsnlabs.ai/blog/): Essays, case studies, and post-mortems on deterministic agentic engineering, ROI metrics, and enterprise architectures.
+- [RSS Feed](https://hsnlabs.ai/blog/feed_rss_created.xml): Structured machine-readable feed of all technical publications.
+
 ## Open Source Ecosystem
 - [Proto-Ontologies](https://github.com/hugonotnice/proto-ontologies): Open-source repository of minimal, executable domain schemas for AI agents and enterprise ontologies.
 

@@ -125,6 +125,8 @@ Allow: /
 
 # Sitemaps & AI Context Endpoints
 Sitemap: https://hsnlabs.ai/sitemap.xml
+Sitemap: https://hsnlabs.ai/blog/sitemap.xml
+Sitemap: https://hsnlabs.ai/blog/feed_rss_created.xml
 # LLM Context: https://hsnlabs.ai/llms.txt
 # Full LLM Context: https://hsnlabs.ai/llms-full.txt
 # AI Agent Policy: https://hsnlabs.ai/ai.txt
