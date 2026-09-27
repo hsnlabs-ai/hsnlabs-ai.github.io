@@ -131,3 +131,10 @@ open http://localhost:8124/index.html
 * **Google Tag Manager Container:** `GTM-KPL6PVKC`
 * **Google Analytics 4 Measurement ID:** `G-GMK24ECXMF`
 * **Stream ID:** `15812853732`
+
+---
+
+## 8. Multi-Repository Routing: Blog Architecture
+* The `/blog` route lives in an independent repository: `hsnlabs-ai/blog`, cloned locally at `/Users/hugosoares/blog_hsn_labs`.
+* In production, the `/blog` path is reverse-proxied and routed to the MkDocs blog deployment.
+* Local HTTP server on `site_hsn_labs` returns 404 for `/blog` because blog assets reside in the other repository. This is expected local behavior. Do not create local blog files in this repository.

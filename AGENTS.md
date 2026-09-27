@@ -93,3 +93,11 @@ Maintain official Google tags on all public pages:
 The social preview card `assets/brand/og-image.png` must strictly mirror the live Hero section:
 * Automated Script: `python3 scripts/update_og.py` extracts headlines, subtitles, and CTAs from `index.html` and renders a 1200x630 card with the official atmosphere orbs, symbol, and paper texture.
 * Git Pre-Commit Hook: Configured in `.git/hooks/pre-commit` to automatically re-render and stage `og-image.png` whenever `index.html` is committed.
+
+---
+
+## 6. Multi-Repository Architecture Invariant: The Blog
+* The blog does NOT live in this repository. It is a separate project and repository: hsnlabs-ai/blog, stored locally at /Users/hugosoares/blog_hsn_labs.
+* In production, the /blog path is reverse-proxied and routed to the independent MkDocs blog deployment.
+* In local development via python http server on site_hsn_labs, clicking /blog returns a 404 error because blog files do not exist here. This is expected local behavior.
+* Never create a /blog directory or mock pages here. Never overwrite or duplicate blog files across repositories.

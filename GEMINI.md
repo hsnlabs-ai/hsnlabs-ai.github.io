@@ -80,3 +80,10 @@ The website follows a clean 4-section architecture:
 Maintain official Google tags on all public pages:
 * Google Tag Manager: `GTM-KPL6PVKC`
 * Google Analytics 4: `G-GMK24ECXMF` with Stream ID `15812853732`
+
+---
+
+## 5. Multi-Repository Routing Invariant: Blog Route
+* The `/blog` route lives in an independent repository: `hsnlabs-ai/blog`, stored locally at `/Users/hugosoares/blog_hsn_labs`.
+* In production, the `/blog` path is reverse-proxied and routed to the MkDocs blog deployment.
+* Local HTTP server on `site_hsn_labs` returns 404 for `/blog` because blog assets reside in the other repository. This is expected local behavior. Never create local blog files in this repository.
