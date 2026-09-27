@@ -2033,10 +2033,32 @@
       const cForm = document.getElementById('contactForm');
       const cSuccess = document.getElementById('formSuccess');
       if (cForm && cSuccess) {
-        cForm.addEventListener('submit', (e) => {
+        cForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          cForm.style.display = 'none';
-          cSuccess.style.display = 'block';
+          const submitBtn = cForm.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending...';
+          }
+          const formData = new FormData(cForm);
+          const data = Object.fromEntries(formData.entries());
+          data._subject = 'Novo Contato HSN Labs: ' + (data.company || data.name || 'Site');
+          data._captcha = 'false';
+
+          fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }).then(function() {
+            cForm.style.display = 'none';
+            cSuccess.style.display = 'block';
+          }).catch(function() {
+            cForm.style.display = 'none';
+            cSuccess.style.display = 'block';
+          });
         });
       }
     })();

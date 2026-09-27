@@ -1264,10 +1264,34 @@
       const bForm = document.getElementById('bootcampForm');
       const bSuccess = document.getElementById('bootcampSuccess');
       if (bForm && bSuccess) {
-        bForm.addEventListener('submit', (e) => {
+        bForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          bForm.style.display = 'none';
-          bSuccess.style.display = 'block';
+          const submitBtn = bForm.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Submitting...';
+          }
+          const formData = new FormData(bForm);
+          const data = Object.fromEntries(formData.entries());
+          const chk = document.getElementById('gateSpecial');
+          data.performance_rebate = (chk && chk.checked) ? 'Yes' : 'No';
+          data._subject = 'Nova Inscrição Bootcamp HSN Labs: ' + (data.company || data.name || 'Site');
+          data._captcha = 'false';
+
+          fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }).then(function() {
+            bForm.style.display = 'none';
+            bSuccess.style.display = 'block';
+          }).catch(function() {
+            bForm.style.display = 'none';
+            bSuccess.style.display = 'block';
+          });
         });
       }
     })();
