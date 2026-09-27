@@ -888,7 +888,7 @@
 
         <div class="footer-col-subscribe">
           <div class="footer-col-title">Stay Updated</div>
-          <form class="footer-newsletter-form" action="https://hsnlabs.beehiiv.com/subscribe" method="GET" target="_blank">
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter HSN Labs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Send'; }, 4000); });">
             <div style="display: flex; gap: 8px;">
               <input type="email" name="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
               <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Send</button>
