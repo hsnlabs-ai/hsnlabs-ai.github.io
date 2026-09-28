@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/pt/mcp/">
   <meta property="og:title" content="Servidores MCP Enterprise — HSN Labs">
-  <meta property="og:description" content="We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance.">
+  <meta property="og:description" content="Implementacao de servidores privados Model Context Protocol no perimetro seguro da sua empresa. Conecte agentes a ERPs e bancos de dados.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/pt/mcp/">
   <meta name="twitter:title" content="Servidores MCP Enterprise — HSN Labs">
-  <meta name="twitter:description" content="We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance.">
+  <meta name="twitter:description" content="Implementacao de servidores privados Model Context Protocol no perimetro seguro da sua empresa. Conecte agentes a ERPs e bancos de dados.">
   <meta property="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/pt/mcp/">
@@ -1087,7 +1087,7 @@
           <div class="post-it-badge"><div class="content">04</div></div>
           <h3 class="card-title">Trilha de Auditoria em Execucao</h3>
           <p class="card-body">
-            Native OpenTelemetry instrumentation exporting structured execution traces. Logs tool invocations, parameter hashes, execution latency, and return states to your existing Datadog, CloudWatch, or Splunk stacks.
+            Instrumentacao nativa OpenTelemetry com exportacao de rastros estruturados de execucao. Registra chamadas de ferramentas, hashes de parametros, latencia e estados de retorno para seus clusters existentes de observabilidade Datadog, CloudWatch ou Splunk.
           </p>
         </div>
 
@@ -1154,7 +1154,7 @@
         <div class="criteria-card">
           <strong>01 • Executive Sponsor</strong>
           <p>
-            Direct sponsorship from a C-level executive, such as the CTO, CIO, or CISO with architectural mandate.
+            Patrocinio direto de um executivo C-level, como CTO, CIO ou CISO com mandato arquitetural.
           </p>
         </div>
 
@@ -1181,14 +1181,14 @@
       <div class="scoping-card">
         <h2 class="display-section" style="margin-bottom: 12px;">Scope Your MCP Sprint</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
-          Talk directly with our Forward Deployed Engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
+          Converse diretamente com nossa equipe de Forward Deployed Engineering para revisar sistemas, avaliar limites de perimetro e agendar implantacao.
         </p>
 
         <form class="contact-form" id="mcpContactForm">
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Full Name</label>
-              <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-input" placeholder="Seu Nome" required>
             </div>
             <div class="form-group">
               <label class="form-label">Work Email</label>
@@ -1199,25 +1199,25 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Company Name</label>
-              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+              <input type="text" name="company" class="form-input" placeholder="Nome da Empresa" required>
             </div>
             <div class="form-group">
               <label class="form-label">Systems to Connect</label>
               <select name="systems" class="form-select" required>
-                <option value="" disabled selected>Select primary system</option>
-                <option value="sap">SAP ERP / S4HANA</option>
-                <option value="totvs">TOTVS Protheus / RM</option>
-                <option value="relational_db">PostgreSQL / Oracle / SQL Server</option>
-                <option value="crm">Salesforce / HubSpot</option>
-                <option value="custom_apis">Internal Proprietary APIs</option>
-                <option value="multiple">Multiple Hybrid Systems</option>
+                <option value="" disabled selected>Selecione o sistema principal</option>
+                <option value="sap">SAP ERP ou S4HANA</option>
+                <option value="totvs">TOTVS Protheus ou RM</option>
+                <option value="relational_db">Bancos Relacionais PostgreSQL, Oracle ou SQL Server</option>
+                <option value="crm">CRM Salesforce ou HubSpot</option>
+                <option value="custom_apis">APIs Proprietarias Internas</option>
+                <option value="multiple">Multiplos Sistemas Hibridos</option>
               </select>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label">Target Agent Workload</label>
-            <textarea name="workload" rows="4" class="form-textarea" placeholder="Describe the business workflow, data sensitivity level, and target agent hosts." required></textarea>
+            <textarea name="workload" rows="4" class="form-textarea" placeholder="Descreva o fluxo de negocio, nivel de sensibilidade dos dados e sistemas de destino." required></textarea>
           </div>
 
           <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
@@ -1228,7 +1228,7 @@
         </form>
 
         <div class="form-success-msg" id="formSuccess">
-          Thank you. Our Forward Deployed Engineering team will review your system architecture and reply within 24 hours.
+          Obrigado. Nossa equipe de Forward Deployed Engineering analisara sua arquitetura e respondera em ate 24 horas.
         </div>
       </div>
     </div>
@@ -1406,7 +1406,7 @@
           const submitBtn = cForm.querySelector('button[type="submit"]');
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Submitting Scope...';
+            submitBtn.innerText = 'Enviando...';
           }
           const formData = new FormData(cForm);
           const data = Object.fromEntries(formData.entries());

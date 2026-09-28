@@ -1779,23 +1779,23 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Company Name</label>
-              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+              <input type="text" name="company" class="form-input" placeholder="Nome da Empresa" required>
             </div>
             <div class="form-group">
               <label class="form-label">Annual Revenue</label>
               <select name="revenue" class="form-select" required>
-                <option value="" disabled selected>Select annual revenue</option>
-                <option value="under_10m">Under 10M USD</option>
-                <option value="10m_50m">10M to 50M USD</option>
-                <option value="50m_250m">50M to 250M USD</option>
-                <option value="above_250m">Above 250M USD</option>
+                <option value="" disabled selected>Selecione a receita anual</option>
+                <option value="under_10m">Abaixo de 10M USD</option>
+                <option value="10m_50m">10M a 50M USD</option>
+                <option value="50m_250m">50M a 250M USD</option>
+                <option value="above_250m">Acima de 250M USD</option>
               </select>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label">What do you want to build or automate?</label>
-            <textarea name="message" rows="4" class="form-textarea" placeholder="Tell us about your current databases, ERPs, or the workflow you want to solve." required></textarea>
+            <textarea name="message" rows="4" class="form-textarea" placeholder="Conte-nos sobre seus bancos de dados atuais, ERPs ou o fluxo operacional que deseja automatizar." required></textarea>
           </div>
 
           <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
@@ -2048,7 +2048,7 @@
           const submitBtn = cForm.querySelector('button[type="submit"]');
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Sending...';
+            submitBtn.innerText = 'Enviando...';
           }
           const formData = new FormData(cForm);
           const data = Object.fromEntries(formData.entries());

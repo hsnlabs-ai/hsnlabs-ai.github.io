@@ -102,6 +102,31 @@ def test_gate_s5_asset_resolution():
             assert disk_path.exists(), f"ERRO: Asset inexistente referenciado em {item['pt']}: {disk_path}"
     print("PASS: Gate S5 Resolucao de Assets confirmada")
 
+def test_gate_s6_forms_and_buttons():
+    print("--- Gate S6: Localizacao de Formularios e Botoes PT ---")
+    forbidden_en_strings = [
+        'Select your role', 'Select annual revenue', 'Select primary system',
+        '>Request Call<', '>Request Consultation<', '>Send Message<', '>Request Technical Scoping<',
+        'placeholder="Your Name"', 'placeholder="Company Inc"'
+    ]
+    for item in PAGES:
+        pt_content = item["pt"].read_text(encoding="utf-8")
+        for bad in forbidden_en_strings:
+            assert bad not in pt_content, f"ERRO: String em ingles remanescente em {item['pt']}: {bad}"
+    print("PASS: Gate S6 Localizacao de Formularios e Botoes validada")
+
+def test_gate_s7_metadata_localization():
+    print("--- Gate S7: Localizacao de Metadados Open Graph e Twitter ---")
+    for item in PAGES:
+        pt_content = item["pt"].read_text(encoding="utf-8")
+        og_title = re.search(r'property="og:title" content="([^"]*)"', pt_content)
+        if og_title:
+            assert "AI Agents That Don't Fail" not in og_title.group(1), f"ERRO: og:title nao traduzido em {item['pt']}"
+        og_desc = re.search(r'property="og:description" content="([^"]*)"', pt_content)
+        if og_desc:
+            assert "Boutique building resilient" not in og_desc.group(1), f"ERRO: og:description nao traduzido em {item['pt']}"
+    print("PASS: Gate S7 Metadados Open Graph e Twitter validados")
+
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
     test_gate_s1_structural_integrity()
@@ -109,4 +134,6 @@ if __name__ == "__main__":
     test_gate_s3_reciprocity()
     test_gate_s4_language_isolation()
     test_gate_s5_asset_resolution()
-    print("=== TODAS AS ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
+    test_gate_s6_forms_and_buttons()
+    test_gate_s7_metadata_localization()
+    print("=== TODAS AS 7 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")

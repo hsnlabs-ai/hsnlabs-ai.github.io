@@ -7,8 +7,8 @@
     <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/pt/bootcamp/">
-  <meta property="og:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta property="og:description" content="Boutique building resilient multi-agent architectures on business ontologies.">
+  <meta property="og:title" content="Bootcamp de Agentes — HSN Labs">
+  <meta property="og:description" content="Alocamos Engenheiros Forward Deployed seniores junto a sua equipe para construir agentes de IA que operam em producao.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -16,8 +16,8 @@
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/pt/bootcamp/">
-  <meta name="twitter:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta name="twitter:description" content="Boutique building resilient multi-agent architectures on business ontologies.">
+  <meta name="twitter:title" content="Bootcamp de Agentes — HSN Labs">
+  <meta name="twitter:description" content="Alocamos Engenheiros Forward Deployed seniores junto a sua equipe para construir agentes de IA que operam em producao.">
   <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/pt/bootcamp/">
@@ -959,11 +959,11 @@
     "@type": "Service",
     "name": "Agentic Bootcamp",
     "serviceType": "Forward Deployed Engineering Sprint",
-    "description": "An intensive 12k USD enterprise engineering deployment inside client infrastructure to audit business rules, wire production agents, and deliver an executive business case with 100% fee credited toward production rollout.",
+    "description": "Alocacao de engenheiros senior forward deployed para desenhar ontologias, implementar guardrails e entregar um business case executivo em ate cinco dias com taxa creditada para o contrato de implantacao.",
     "provider": {
       "@type": "Organization",
       "name": "HSN Labs",
-      "url": "https://hsnlabs.ai/"
+      "url": "https://hsnlabs.ai/pt/bootcamp/"
     },
     "url": "https://hsnlabs.ai/bootcamp"
   }
@@ -1104,7 +1104,7 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Nome Completo</label>
-              <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-input" placeholder="Seu Nome" required>
             </div>
             <div class="form-group">
               <label class="form-label">E-mail Corporativo</label>
@@ -1115,11 +1115,11 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Nome da Empresa</label>
-              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+              <input type="text" name="company" class="form-input" placeholder="Nome da Empresa" required>
             </div>
             <div class="form-group">
               <label class="form-label">Website da Empresa</label>
-              <input type="text" name="website" class="form-input" placeholder="company.com" required>
+              <input type="text" name="website" class="form-input" placeholder="empresa.com.br" required>
             </div>
           </div>
 
@@ -1128,17 +1128,17 @@
               <label class="form-label">Cargo Executivo</label>
               <select name="role" class="form-select" required>
                 <option value="" disabled selected>Selecione seu cargo</option>
-                <option value="innovation_director">Director of Innovation</option>
-                <option value="cto_cio">Chief Technology Officer or CIO</option>
-                <option value="ceo">Chief Executive Officer</option>
-                <option value="cfo">Chief Financial Officer</option>
+                <option value="innovation_director">Diretor de Inovacao</option>
+                <option value="cto_cio">CTO ou CIO</option>
+                <option value="ceo">CEO</option>
+                <option value="cfo">CFO</option>
                 <option value="other">Other Executive Sponsor</option>
               </select>
             </div>
             <div class="form-group">
               <label class="form-label">Receita Anual</label>
               <select name="revenue" class="form-select" required>
-                <option value="" disabled selected>Select annual revenue</option>
+                <option value="" disabled selected>Selecione a receita anual</option>
                 <option value="under_10m">Abaixo de 10M USD</option>
                 <option value="10m_50m">10M to 50M USD</option>
                 <option value="50m_100m">50M to 100M USD</option>
@@ -1163,7 +1163,7 @@
         </form>
 
         <div class="form-success-box" id="bootcampSuccess">
-          Thank you. Your request has been delivered directly to our architecture leads. We will review your systems and confirm details within 24 hours.
+          Obrigado. Sua solicitacao foi enviada diretamente aos nossos lideres de arquitetura. Analisaremos seus sistemas e responderemos em ate 24 horas.
         </div>
       </div>
     </div>
@@ -1274,7 +1274,7 @@
           const submitBtn = bForm.querySelector('button[type="submit"]');
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Submitting...';
+            submitBtn.innerText = 'Enviando...';
           }
           const formData = new FormData(bForm);
           const data = Object.fromEntries(formData.entries());

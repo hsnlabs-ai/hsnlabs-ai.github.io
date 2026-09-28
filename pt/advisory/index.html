@@ -7,8 +7,8 @@
     <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/pt/advisory/">
-  <meta property="og:title" content="Agentic AI Advisory — HSN Labs">
-  <meta property="og:description" content="Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries.">
+  <meta property="og:title" content="Advisory de IA Agentica — HSN Labs">
+  <meta property="og:description" content="Consultoria de arquitetura para executivos liderando transformacao por agentes autonomos. Modernizacao de modelos operacionais e margem unitaria.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -16,8 +16,8 @@
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/pt/advisory/">
-  <meta name="twitter:title" content="Agentic AI Advisory — HSN Labs">
-  <meta name="twitter:description" content="Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries.">
+  <meta name="twitter:title" content="Advisory de IA Agentica — HSN Labs">
+  <meta name="twitter:description" content="Consultoria de arquitetura para executivos liderando transformacao por agentes autonomos. Modernizacao de modelos operacionais e margem unitaria.">
   <meta property="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/pt/advisory/">
@@ -1434,7 +1434,7 @@
         "@type": "Organization",
         "@id": "https://hsnlabs.ai/#organization",
         "name": "HSN Labs",
-        "url": "https://hsnlabs.ai/",
+        "url": "https://hsnlabs.ai/pt/advisory/",
         "logo": "https://hsnlabs.ai/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png",
         "image": "https://hsnlabs.ai/assets/brand/og-image.png",
         "description": "Laboratorio de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em producao.",
@@ -1463,7 +1463,7 @@
         "provider": { "@id": "https://hsnlabs.ai/#organization" },
         "serviceType": "Enterprise AI Agent Architecture & Business Ontologies",
         "areaServed": "Global",
-        "url": "https://hsnlabs.ai/"
+        "url": "https://hsnlabs.ai/pt/advisory/"
       }
     ]
   }
@@ -1590,7 +1590,7 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Full Name</label>
-              <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-input" placeholder="Seu Nome" required>
             </div>
             <div class="form-group">
               <label class="form-label">Work Email</label>
@@ -1601,23 +1601,23 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Company Name</label>
-              <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
+              <input type="text" name="company" class="form-input" placeholder="Nome da Empresa" required>
             </div>
             <div class="form-group">
               <label class="form-label">Role</label>
               <select name="role" class="form-select" required>
-                <option value="" disabled selected>Select your role</option>
-                <option value="c_level">C-Level / Founder</option>
-                <option value="vp_director">VP / Director</option>
-                <option value="manager">Manager / Head</option>
-                <option value="other">Other</option>
+                <option value="" disabled selected>Selecione seu cargo</option>
+                <option value="c_level">C-Level ou Fundador</option>
+                <option value="vp_director">VP ou Diretor</option>
+                <option value="manager">Gerente ou Head</option>
+                <option value="other">Outro</option>
               </select>
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label">What is your core objective?</label>
-            <textarea name="message" rows="4" class="form-textarea" placeholder="Tell us about the challenges you are facing with AI adoption and strategy." required></textarea>
+            <textarea name="message" rows="4" class="form-textarea" placeholder="Conte-nos sobre seus desafios com adocao de agentes e integracao a sistemas legados." required></textarea>
           </div>
 
           <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
@@ -1628,7 +1628,7 @@
         </form>
 
         <div class="form-success-msg" id="formSuccess">
-          Thank you. Our team will review your request and respond within 24 hours.
+          Obrigado. Nossa equipe analisara sua solicitacao e respondera em ate 24 horas.
         </div>
       </div>
     </div>
@@ -1869,7 +1869,7 @@
           const submitBtn = cForm.querySelector('button[type="submit"]');
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Sending...';
+            submitBtn.innerText = 'Enviando...';
           }
           const formData = new FormData(cForm);
           const data = Object.fromEntries(formData.entries());
