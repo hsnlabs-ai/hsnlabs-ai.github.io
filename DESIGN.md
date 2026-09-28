@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: ElevenLabs-design-analysis
-description: A deterministic AI architecture brand whose surfaces read like an editorial print magazine. The base canvas is off-white (`#f5f5f5`) holding pure white paper surfaces (`#ffffff`) and dark ink (`#07090e`). Display runs Cormorant Garamond at weight 300 — the editorial signature. Inter carries body, navigation, captions. CTAs use official Brand Sky Blue (`#52B4FD`) with subtle crumpled paper texture overlay at strict 90-degree sharp corners (`border-radius: 0`). Secondary action is a clean white paper card. All elements harmonize with the sharp 90-degree square origami mark.
+description: An enterprise AI architecture brand whose surfaces read like an editorial print magazine. The base canvas is off-white (`#f5f5f5`) holding pure white paper surfaces (`#ffffff`) and dark ink (`#07090e`). Display runs Cormorant Garamond at weight 300 — the editorial signature. Inter carries body, navigation, captions. CTAs use official Brand Sky Blue (`#52B4FD`) with subtle crumpled paper texture overlay at strict 90-degree sharp corners (`border-radius: 0`). Secondary action is a clean white paper card. All elements harmonize with the sharp 90-degree square origami mark.
 
 colors:
   primary: "#292524"

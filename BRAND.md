@@ -6,10 +6,10 @@ Operational standards for applying the HSN Labs brand across digital products, e
 
 ## 1. Brand Concept and Metaphor
 
-* **Core Positioning:** Forward Deployed Engineering boutique building deterministic multi-agent architectures on business ontologies for mission-critical enterprise operations.
+* **Core Positioning:** Forward Deployed Engineering boutique building resilient multi-agent architectures on business ontologies for mission-critical enterprise operations.
 * **Symbol:** Pure geometric cyan square containing a white paper origami koi carp leaping toward the upper right corner.
 * **Origami Metaphor:**
-  * Precise paper folds represent deterministic logic, structural rigor, and artisanal engineering versus stochastic drift.
+  * Precise paper folds represent structural rigor and artisanal engineering versus stochastic drift.
   * Ascending direction signals progress, technical velocity, and operational mastery.
   * Cyan square represents the dynamic liquid medium where intelligent agents operate.
 

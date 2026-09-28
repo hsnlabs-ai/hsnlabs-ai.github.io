@@ -6,7 +6,7 @@ Operational directives for Gemini models maintaining, extending, or refactoring 
 
 ## 1. Mission and Core Positioning
 
-HSN Labs is a Forward Deployed Engineering boutique building custom, deterministic multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
+HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
 * Primary Language: The website must be 100% in English. All copy, labels, meta tags, and alt texts are strictly English.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
@@ -33,7 +33,7 @@ The website follows a clean 4-section architecture:
    * Balanced two-by-two grid presenting four technical pillars:
      1. Personalized Business Ontologies.
      2. Deep Agent Infrastructure.
-     3. Deterministic Guardrails.
+     3. System Execution Boundaries and Guardrails.
      4. Agent Development Life Cycle Stack: 4-stage enterprise pipeline covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:

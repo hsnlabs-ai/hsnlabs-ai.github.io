@@ -6,7 +6,7 @@ Operational directives for AI coding agents maintaining, extending, or refactori
 
 ## 1. Mission and Core Positioning
 
-HSN Labs is a Forward Deployed Engineering boutique building custom, deterministic multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
+HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
 * Primary Language: The website must be 100% in English. All copy, labels, meta tags, and alt texts are strictly English.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.

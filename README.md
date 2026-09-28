@@ -21,7 +21,7 @@ The website is engineered as a zero-dependency, high-performance static applicat
   * Bento grid presenting four core delivery pillars:
     * Personalized Business Ontologies.
     * Deep Agent Infrastructure.
-    * Deterministic Guardrails.
+    * System Execution Boundaries and Guardrails.
     * Agent Development Life Cycle Stack: 4-stage enterprise pipeline with official tool badges covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
@@ -58,7 +58,7 @@ Built on the ElevenLabs editorial print design system without artificial visual 
 
 ## 3. Brand Identity and Logo Invariant
 
-The HSN Labs brand mark represents determinism through paper geometry and dynamic water physics.
+The HSN Labs brand mark represents engineering rigor through paper geometry and dynamic water physics.
 
 ### Strict Geometry Rule
 * The cyan square symbol must ALWAYS maintain sharp 90-degree corners with `border-radius: 0`.

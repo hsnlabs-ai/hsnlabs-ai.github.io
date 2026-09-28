@@ -27,7 +27,7 @@ def extract_hero_data():
     
     # Extract hero sub paragraph
     m_p = re.search(r'<p class="hero-sub">(.*?)</p>', content, re.DOTALL)
-    hero_p = m_p.group(1).strip() if m_p else "We use a business ontology tailored to your operations to build agentic systems, combining deterministic engineering with resilient deep agents."
+    hero_p = m_p.group(1).strip() if m_p else "We use a business ontology tailored to your operations to build agentic systems, combining strict system boundaries with resilient deep agents."
     # Clean whitespace
     hero_p = " ".join(hero_p.split())
     
