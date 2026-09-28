@@ -8,7 +8,7 @@ Operational directives for AI coding agents maintaining, extending, or refactori
 
 HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
-* Primary Language: The website must be 100% in English. All copy, labels, meta tags, and alt texts are strictly English.
+* Language Architecture: Bilingual dual-track. Primary English at root routes: /, /bootcamp/, /advisory/, /mcp/, /privacy-policy/, /modern-slavery-statement/. Secondary Portuguese under /pt/: /pt/, /pt/bootcamp/, /pt/advisory/, /pt/mcp/, /pt/privacy-policy/, /pt/modern-slavery-statement/. Reciprocal canonical and hreflang tags on all pages. Strict Zero-Parentheses Invariant on all visible Portuguese text.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
 * Aesthetic Standard: ElevenLabs editorial print-inspired aesthetic on an off-white canvas `#f5f5f5`. Rejects all AI slop: no pills with borders or glow dots, no loud slash headers, no generic neon purple gradients, no floating data ribbons, no abstract robotic illustrations.
 
@@ -101,3 +101,17 @@ The social preview card `assets/brand/og-image.png` must strictly mirror the liv
 * In production, the /blog path is reverse-proxied and routed to the independent MkDocs blog deployment.
 * In local development via python http server on site_hsn_labs, clicking /blog returns a 404 error because blog files do not exist here. This is expected local behavior.
 * Never create a /blog directory or mock pages here. Never overwrite or duplicate blog files across repositories.
+
+---
+
+## 7. Internationalization and Consistency Gates
+* Dual-track architecture: any modification to core copy, forms, or structural components on root English routes must be reflected in the reciprocal `/pt/` page.
+* Validation harness: always execute `python3 scripts/test_site_i18n_spec.py` prior to committing.
+* Verification gates:
+  1. Structural integrity across all 6 route pairs.
+  2. Strict Zero-Parentheses Invariant on all visible Portuguese text.
+  3. Reciprocal canonical and hreflang links.
+  4. Language isolation on navigation links.
+  5. Asset resolution.
+  6. Localization of form labels, options, placeholders, buttons, and feedback states.
+  7. Localization of Open Graph and Twitter Card metadata.
