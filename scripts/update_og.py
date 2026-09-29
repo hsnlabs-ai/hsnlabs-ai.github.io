@@ -27,9 +27,9 @@ def extract_hero_data():
     
     # Extract hero sub paragraph
     m_p = re.search(r'<p class="hero-sub">(.*?)</p>', content, re.DOTALL)
-    hero_p = m_p.group(1).strip() if m_p else "We use a business ontology tailored to your operations to build agentic systems, combining strict system boundaries with resilient deep agents."
+    hero_p = m_p.group(1).strip() if m_p else ""
     # Clean whitespace
-    hero_p = " ".join(hero_p.split())
+    hero_p = " ".join(hero_p.split()) if hero_p else ""
     
     # Extract CTAs
     m_cta1 = re.search(r'<a href="[^"]*" class="btn btn-primary">(.*?)</a>', content)
@@ -50,6 +50,8 @@ def build_og_template(data):
     paper_path = f"file://{ROOT_DIR}/assets/textures/paper_crumpled_clean.jpg"
     lockup_path = f"file://{ROOT_DIR}/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png"
     carp_path = f"file://{ROOT_DIR}/assets/brand/elements/origami-carp-clean.png"
+
+    hero_p_html = f'<p class="hero-sub">{data["hero_p"]}</p>' if data.get("hero_p") else ""
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -206,25 +208,25 @@ def build_og_template(data):
   .display-hero {{
     font-family: 'Cormorant Garamond', Georgia, serif;
     letter-spacing: -0.025em;
-    margin-bottom: 14px;
+    margin-bottom: 32px;
   }}
 
   .hero-title-lead {{
     display: block;
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 400;
-    line-height: 1.05;
+    line-height: 1.04;
     color: #07090e;
   }}
 
   .hero-title-sub {{
     display: block;
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 300;
     font-style: italic;
-    line-height: 1.08;
+    line-height: 1.12;
     color: #475569;
-    margin-top: 4px;
+    margin-top: 8px;
   }}
 
   .hero-sub {{
@@ -314,9 +316,7 @@ def build_og_template(data):
       <span class="hero-title-sub">{data['title_sub']}</span>
     </h1>
 
-    <p class="hero-sub">
-      {data['hero_p']}
-    </p>
+    {hero_p_html}
 
     <div class="hero-ctas">
       <span class="btn btn-primary">{data['cta1']}</span>
