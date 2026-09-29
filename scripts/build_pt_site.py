@@ -214,8 +214,8 @@ def build_pt_home():
         '<span class="hero-title-lead">Acelere a Adoção</span>'
     )
     html = html.replace(
-        '<span class="hero-title-sub">AI agent adoption</span>',
-        '<span class="hero-title-sub">de agentes de IA enterprise</span>'
+        '<span class="hero-title-sub" style="color: var(--cyan-text);">AI adoption</span>',
+        '<span class="hero-title-sub" style="color: var(--cyan-text);">de IA enterprise</span>'
     )
     html = html.replace(
         'Bridge the gap between AI strategy and live operations without disrupting legacy systems.',

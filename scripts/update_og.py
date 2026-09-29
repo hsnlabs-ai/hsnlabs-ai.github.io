@@ -22,8 +22,8 @@ def extract_hero_data():
     title_lead = m_lead.group(1).strip() if m_lead else "Enterprise AI Agents"
     
     # Extract title sub
-    m_sub = re.search(r'<span class="hero-title-sub">(.*?)</span>', content, re.DOTALL)
-    title_sub = m_sub.group(1).strip() if m_sub else "that don't fail in production"
+    m_sub = re.search(r'<span class="hero-title-sub"[^>]*>(.*?)</span>', content, re.DOTALL)
+    title_sub = m_sub.group(1).strip() if m_sub else "AI adoption"
     
     # Extract hero sub paragraph
     m_p = re.search(r'<p class="hero-sub">(.*?)</p>', content, re.DOTALL)
@@ -225,7 +225,7 @@ def build_og_template(data):
     font-weight: 300;
     font-style: italic;
     line-height: 1.12;
-    color: #475569;
+    color: #0284c7;
     margin-top: 8px;
   }}
 
