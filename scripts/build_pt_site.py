@@ -59,7 +59,7 @@ def localize_common_pt_components(html: str) -> str:
     new_cookie_banner = '''<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimento de privacidade e cookies">
     <div class="cookie-title">Consentimento de Privacidade e Cookies</div>
     <p class="cookie-text">
-      Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa <a href="/pt/privacy-policy/">Politica de Privacidade</a>.
+      Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa <a href="/pt/privacy-policy/">Política de Privacidade</a>.
     </p>
     <div class="cookie-actions">
       <button type="button" class="btn btn-primary cookie-btn-accept" onclick="acceptCookies()">Aceitar Todos</button>
@@ -71,19 +71,21 @@ def localize_common_pt_components(html: str) -> str:
     # 2. Form success message
     html = html.replace(
         'Thank you. An engineering lead will review your submission and respond within 24 hours.',
-        'Obrigado. Um engenheiro responsavel analisara seus dados e respondera em ate 24 horas.'
+        'Obrigado. Um engenheiro responsável analisará seus dados e responderá em até 24 horas.'
     )
 
     # 3. Footer brand tagline
     html = html.replace(
         'An engineering lab with over five years of shipping AI products and resilient agent architectures in production.',
-        'Laboratorio de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em producao.'
+        'Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.'
     )
 
     # 4. Footer navigation title and links
-    html = html.replace('<div class="footer-col-title">Navigation</div>', '<div class="footer-col-title">Navegacao</div>')
+    html = html.replace('<div class="footer-col-title">Navigation</div>', '<div class="footer-col-title">Navegação</div>')
     html = html.replace('<li><a href="/bootcamp">Agentic Bootcamp</a></li>', '<li><a href="/pt/bootcamp/">Bootcamp de Agentes</a></li>')
     html = html.replace('<li><a href="/advisory">Advisory</a></li>', '<li><a href="/pt/advisory/">Advisory</a></li>')
+    html = html.replace('<li><a href="/playbooks">Playbooks</a></li>', '<li><a href="/pt/playbooks/">Playbooks</a></li>')
+    html = html.replace('<li><a href="/blog/">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
     html = html.replace('<li><a href="/blog">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
     html = html.replace('<li><a href="/#contact">Contact Us</a></li>', '<li><a href="/pt/#contact">Fale Conosco</a></li>')
 
@@ -96,8 +98,8 @@ def localize_common_pt_components(html: str) -> str:
 
     # 6. Footer bottom bar
     html = html.replace('2026 HSN Labs. All rights reserved.', '2026 HSN Labs. Todos os direitos reservados.')
-    html = html.replace('<a href="/privacy-policy">Privacy Policy</a>', '<a href="/pt/privacy-policy/">Politica de Privacidade</a>')
-    html = html.replace('<a href="/modern-slavery-statement">Modern Slavery Statement</a>', '<a href="/pt/modern-slavery-statement/">Declaracao de Conformidade</a>')
+    html = html.replace('<a href="/privacy-policy">Privacy Policy</a>', '<a href="/pt/privacy-policy/">Política de Privacidade</a>')
+    html = html.replace('<a href="/modern-slavery-statement">Modern Slavery Statement</a>', '<a href="/pt/modern-slavery-statement/">Declaração de Conformidade</a>')
 
     return html
 
@@ -109,6 +111,7 @@ def update_english_page_headers():
         SITE_DIR / "mcp" / "index.html",
         SITE_DIR / "privacy-policy" / "index.html",
         SITE_DIR / "modern-slavery-statement" / "index.html",
+        SITE_DIR / "playbooks" / "index.html",
     ]
     
     path_map = {
@@ -118,6 +121,7 @@ def update_english_page_headers():
         "mcp/index.html": "/pt/mcp/",
         "privacy-policy/index.html": "/pt/privacy-policy/",
         "modern-slavery-statement/index.html": "/pt/modern-slavery-statement/",
+        "playbooks/index.html": "/pt/playbooks/",
     }
     
     for page in en_pages:
@@ -142,7 +146,8 @@ def update_english_page_headers():
         old_nav_pattern = r'<div class="nav-menu" style="[^"]*">.*?</div>'
         new_nav = f'''<div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/advisory" class="nav-link">Advisory</a>
-        <a href="/blog" class="nav-link">Blog</a>
+        <a href="/playbooks" class="nav-link">Playbooks</a>
+        <a href="/blog/" class="nav-link">Blog</a>
         <a href="{pt_target}" class="nav-link" style="font-weight: 500; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase;">PT</a>
       </div>'''
         
@@ -167,17 +172,25 @@ def build_pt_home():
         '<meta property="og:url" content="https://hsnlabs.ai/pt/">'
     )
     html = html.replace(
-        '<meta property="og:title" content="HSN Labs — AI Agents That Don\'t Fail in Production">',
-        '<meta property="og:title" content="HSN Labs — Agentes de IA que Nao Falham em Producao">'
+        '<meta property="og:title" content="HSN Labs — Accelerate Enterprise AI Agent Adoption">',
+        '<meta property="og:title" content="HSN Labs — Acelere a Adoção de Agentes de IA Enterprise">'
     )
     html = html.replace(
-        '<meta property="og:description" content="Boutique building resilient multi-agent architectures on business ontologies.">',
-        '<meta property="og:description" content="Boutique construindo arquiteturas multiagente resilientes sobre ontologias de negocios.">'
+        '<meta property="og:description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
+        '<meta property="og:description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
+    )
+    html = html.replace(
+        '<meta name="twitter:title" content="HSN Labs — Accelerate Enterprise AI Agent Adoption">',
+        '<meta name="twitter:title" content="HSN Labs — Acelere a Adoção de Agentes de IA Enterprise">'
+    )
+    html = html.replace(
+        '<meta name="twitter:description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
+        '<meta name="twitter:description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
     )
     html = html.replace('<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
     html = html.replace(
-        '<meta name="description" content="AI agents fail on unstructured data. We build the ontologies required for production.">',
-        '<meta name="description" content="Agentes de IA falham em dados corporativos sujos. Construimos as ontologias necessarias para producao real."'
+        '<meta name="description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
+        '<meta name="description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
     )
     
     hreflangs = '''  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/">
@@ -197,26 +210,26 @@ def build_pt_home():
     html = html.replace('<a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>', '<a href="/pt/bootcamp" class="btn btn-primary">Aplicar para o Bootcamp</a>')
     
     html = html.replace(
-        '<span class="hero-title-lead">Enterprise AI Agents</span>',
-        '<span class="hero-title-lead">Agentes de IA Enterprise</span>'
+        '<span class="hero-title-lead">Accelerate Enterprise</span>',
+        '<span class="hero-title-lead">Acelere a Adoção</span>'
     )
     html = html.replace(
-        '<span class="hero-title-sub">that don\'t fail in production</span>',
-        '<span class="hero-title-sub">que nao falham em producao</span>'
+        '<span class="hero-title-sub">AI agent adoption</span>',
+        '<span class="hero-title-sub">de agentes de IA enterprise</span>'
     )
     html = html.replace(
-        'AI agents fail on unstructured data. We build the ontologies required for production.',
-        'Agentes de IA falham em dados corporativos sujos. Construimos as ontologias necessarias para producao real.'
+        'Bridge the gap between AI strategy and live operations without disrupting legacy systems.',
+        'Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.'
     )
     html = html.replace('>Contact Us<', '>Fale Conosco<')
-    html = html.replace('>Our Portfolio<', '>Nosso Portfolio<')
+    html = html.replace('>Our Portfolio<', '>Nosso Portfólio<')
     
     html = html.replace('>Why Agents Fail<', '>Por Que Agentes Falham<')
     html = html.replace(
         'Most enterprise AI agents break when exposed to messy company data, complex compliance, and strict business rules.',
         'A maioria dos agentes corporativos quebra ao lidar com dados legados sujos, regras estritas de conformidade e integridade relacional.'
     )
-    html = html.replace('>SaaS Billing Reduction<', '>Reducao de Custos com SaaS<')
+    html = html.replace('>SaaS Billing Reduction<', '>Redução de Custos com SaaS<')
     html = html.replace('>Failed Pilots<', '>Pilotos que Falham<')
     html = html.replace('>Operational Errors<', '>Erros Operacionais<')
     html = html.replace('>Agent Development Life Cycle Stack<', '>Stack do Ciclo de Vida de Desenvolvimento de Agentes<')

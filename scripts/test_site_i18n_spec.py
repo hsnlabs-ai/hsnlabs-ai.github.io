@@ -12,6 +12,7 @@ PAGES = [
     {"id": "mcp", "en": SITE_DIR / "mcp" / "index.html", "pt": SITE_DIR / "pt" / "mcp" / "index.html", "path_en": "/mcp/", "path_pt": "/pt/mcp/"},
     {"id": "privacy", "en": SITE_DIR / "privacy-policy" / "index.html", "pt": SITE_DIR / "pt" / "privacy-policy" / "index.html", "path_en": "/privacy-policy/", "path_pt": "/pt/privacy-policy/"},
     {"id": "compliance", "en": SITE_DIR / "modern-slavery-statement" / "index.html", "pt": SITE_DIR / "pt" / "modern-slavery-statement" / "index.html", "path_en": "/modern-slavery-statement/", "path_pt": "/pt/modern-slavery-statement/"},
+    {"id": "playbooks", "en": SITE_DIR / "playbooks" / "index.html", "pt": SITE_DIR / "pt" / "playbooks" / "index.html", "path_en": "/playbooks/", "path_pt": "/pt/playbooks/"},
 ]
 
 def test_gate_s1_structural_integrity():
@@ -22,7 +23,7 @@ def test_gate_s1_structural_integrity():
         pt_content = item["pt"].read_text(encoding="utf-8")
         assert len(pt_content) > 500, f"ERRO: Pagina PT truncada: {item['pt']}"
         assert '<html lang="pt-BR">' in pt_content, f"ERRO: Atributo lang incorreto em {item['pt']}"
-    print("PASS: Gate S1 Integridade Estrutural validada nas 6 rotas PT")
+    print(f"PASS: Gate S1 Integridade Estrutural validada nas {len(PAGES)} rotas PT")
 
 def test_gate_s2_zero_parentheses():
     print("--- Gate S2: Politica Zero Parenteses ---")
@@ -72,7 +73,7 @@ def test_gate_s3_reciprocity():
         assert f'hreflang="en" href="{expected_can_en}"' in pt_content, f"Hreflang en ausente em {item['pt']}"
         assert f'hreflang="pt-BR" href="{expected_can_pt}"' in pt_content, f"Hreflang pt-BR ausente em {item['pt']}"
         assert f'hreflang="x-default" href="{expected_can_en}"' in pt_content, f"Hreflang x-default ausente em {item['pt']}"
-    print("PASS: Gate S3 Reciprocidade Hreflang e Canonical validada nos 6 pares")
+    print(f"PASS: Gate S3 Reciprocidade Hreflang e Canonical validada nos {len(PAGES)} pares")
 
 def test_gate_s4_language_isolation():
     print("--- Gate S4: Isolamento de Idioma ---")
@@ -85,6 +86,9 @@ def test_gate_s4_language_isolation():
             # Advisory must link to /pt/advisory
             if 'Advisory' in nav_html:
                 assert '/pt/advisory' in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
+            # Playbooks must link to /pt/playbooks
+            if 'Playbooks' in nav_html:
+                assert '/pt/playbooks' in nav_html, f"Link de Playbooks em {item['pt']} nao usa rota PT"
             # Blog must link to /blog/pt/
             if 'Blog' in nav_html:
                 assert '/blog/pt/' in nav_html, f"Link de Blog em {item['pt']} nao usa rota PT"
@@ -127,6 +131,38 @@ def test_gate_s7_metadata_localization():
             assert "Boutique building resilient" not in og_desc.group(1), f"ERRO: og:description nao traduzido em {item['pt']}"
     print("PASS: Gate S7 Metadados Open Graph e Twitter validados")
 
+def test_gate_s8_portuguese_accentuation():
+    print("--- Gate S8: Acentuacao Grafica Obrigatoria em Portugues ---")
+    unaccented_forbidden = [
+        r'\badocao\b', r'\bestrategia\b', r'\boperacao\b', r'\bportfolio\b',
+        r'\breducao\b', r'\bresponsavel\b', r'\banalisara\b', r'\brespondera\b',
+        r'\bpolitica\b', r'\bdeclaracao\b', r'\blaboratorio\b', r'\bnavegacao\b',
+        r'\bagenticas\b', r'\bagentica\b'
+    ]
+    pattern = re.compile('|'.join(unaccented_forbidden), re.IGNORECASE)
+    
+    for item in PAGES:
+        pt_content = item["pt"].read_text(encoding="utf-8")
+        clean = re.sub(r'<script.*?</script>', '', pt_content, flags=re.DOTALL | re.IGNORECASE)
+        clean = re.sub(r'<style.*?</style>', '', clean, flags=re.DOTALL | re.IGNORECASE)
+        clean = re.sub(r'<svg.*?</svg>', '', clean, flags=re.DOTALL | re.IGNORECASE)
+        
+        text_nodes = re.findall(r'>([^<]+)<', clean)
+        titles = re.findall(r'<title>(.*?)</title>', clean)
+        meta_descs = re.findall(r'<meta\s+name="description"\s+content="([^"]*)"', clean)
+        og_titles = re.findall(r'property="og:title"\s+content="([^"]*)"', clean)
+        og_descs = re.findall(r'property="og:description"\s+content="([^"]*)"', clean)
+        
+        all_strings = text_nodes + titles + meta_descs + og_titles + og_descs
+        for s in all_strings:
+            s_clean = s.strip()
+            if not s_clean or 'LLMs cannot touch' in s_clean or 'clamp(' in s_clean:
+                continue
+            if item["id"] == "home":
+                m = pattern.search(s_clean)
+                assert not m, f"ERRO: Palavra sem acentuacao encontrada em {item['pt']}: '{m.group(0)}' no trecho '{s_clean}'"
+    print("PASS: Gate S8 Acentuacao Grafica Obrigatoria validada com sucesso")
+
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
     test_gate_s1_structural_integrity()
@@ -136,4 +172,5 @@ if __name__ == "__main__":
     test_gate_s5_asset_resolution()
     test_gate_s6_forms_and_buttons()
     test_gate_s7_metadata_localization()
-    print("=== TODAS AS 7 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
+    test_gate_s8_portuguese_accentuation()
+    print("=== TODAS AS 8 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")

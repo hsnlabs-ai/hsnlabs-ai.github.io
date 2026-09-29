@@ -8,7 +8,7 @@ Operational directives for AI coding agents maintaining, extending, or refactori
 
 HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
-* Language Architecture: Bilingual dual-track. Primary English at root routes: /, /bootcamp/, /advisory/, /mcp/, /privacy-policy/, /modern-slavery-statement/. Secondary Portuguese under /pt/: /pt/, /pt/bootcamp/, /pt/advisory/, /pt/mcp/, /pt/privacy-policy/, /pt/modern-slavery-statement/. Reciprocal canonical and hreflang tags on all pages. Strict Zero-Parentheses Invariant on all visible Portuguese text.
+* Language Architecture: Bilingual dual-track. Primary English at root routes: /, /bootcamp/, /advisory/, /playbooks/, /mcp/, /privacy-policy/, /modern-slavery-statement/. Secondary Portuguese under /pt/: /pt/, /pt/bootcamp/, /pt/advisory/, /pt/playbooks/, /pt/mcp/, /pt/privacy-policy/, /pt/modern-slavery-statement/. Reciprocal canonical and hreflang tags on all pages. Strict Zero-Parentheses Invariant on all visible Portuguese text. Strict Portuguese Accentuation Invariant: All visible Portuguese text, headings, buttons, and metadata must strictly use standard Brazilian Portuguese orthography with proper diacritics (ã, õ, á, é, í, ó, ú, â, ê, ô, ç, à). ASCII unaccented variants (e.g., adocao, producao, estrategia, operacao, ate, voce, politica) are strictly prohibited.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
 * Aesthetic Standard: ElevenLabs editorial print-inspired aesthetic on an off-white canvas `#f5f5f5`. Rejects all AI slop: no pills with borders or glow dots, no loud slash headers, no generic neon purple gradients, no floating data ribbons, no abstract robotic illustrations.
 
@@ -115,3 +115,4 @@ The social preview card `assets/brand/og-image.png` must strictly mirror the liv
   5. Asset resolution.
   6. Localization of form labels, options, placeholders, buttons, and feedback states.
   7. Localization of Open Graph and Twitter Card metadata.
+  8. Strict Portuguese Accentuation Invariant (Gate S8) ensuring mandatory formal Brazilian Portuguese diacritics.

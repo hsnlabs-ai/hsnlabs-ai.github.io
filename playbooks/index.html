@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Agentic Bootcamp — HSN Labs</title>
+  <title>Proprietary Playbooks — HSN Labs</title>
     <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://hsnlabs.ai/bootcamp">
-  <meta property="og:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta property="og:description" content="Boutique building resilient multi-agent architectures on business ontologies.">
+  <meta property="og:url" content="https://hsnlabs.ai/playbooks">
+  <meta property="og:title" content="Proprietary Playbooks — HSN Labs">
+  <meta property="og:description" content="Proprietary engineering frameworks and methodologies: Agentic Adoption Canvas and Ontology Mapping.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://hsnlabs.ai/bootcamp">
-  <meta name="twitter:title" content="HSN Labs — AI Agents That Don't Fail in Production">
-  <meta name="twitter:description" content="Boutique building resilient multi-agent architectures on business ontologies.">
-  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+  <meta name="twitter:url" content="https://hsnlabs.ai/playbooks">
+  <meta name="twitter:title" content="Proprietary Playbooks — HSN Labs">
+  <meta name="twitter:description" content="Proprietary engineering frameworks and methodologies: Agentic Adoption Canvas and Ontology Mapping.">
+  <meta property="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
-  <link rel="canonical" href="https://hsnlabs.ai/bootcamp/">
-  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/bootcamp/">
-  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/bootcamp/">
-  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/bootcamp/">
-  <meta name="description" content="We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.">
+  <link rel="canonical" href="https://hsnlabs.ai/playbooks/">
+  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/playbooks/">
+  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/playbooks/">
+  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/playbooks/">
+  <meta name="description" content="Proprietary engineering frameworks and methodologies: Agentic Adoption Canvas and Ontology Mapping.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
@@ -32,7 +32,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Cormorant Garamond for display, Inter for UI and body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -63,12 +63,14 @@
       --hairline: #e2e8f0;
       --hairline-strong: #cbd5e1;
 
+      /* HSN Labs Brand Colors */
       --cyan: #52B4FD;
       --cyan-text: #0284c7;
       --cyan-subtle: rgba(82, 180, 253, 0.12);
       --cyan-glow: rgba(82, 180, 253, 0.28);
       --emerald: #10B981;
 
+      /* Atmospheric gradient stops — ElevenLabs signature with HSN Labs Cyan */
       --gradient-cyan: rgba(82, 180, 253, 0.30);
       --gradient-peach: rgba(244, 197, 168, 0.20);
       --gradient-emerald: rgba(167, 229, 211, 0.25);
@@ -85,7 +87,6 @@
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
-      width: 100%;
     }
 
     body {
@@ -96,11 +97,12 @@
       line-height: 1.6;
       letter-spacing: 0.16px;
       overflow-x: hidden;
+      position: relative;
       width: 100%;
       max-width: 100vw;
-      position: relative;
     }
 
+    /* ATMOSPHERIC GRADIENT BLOOMS */
     .atmosphere-bg {
       position: absolute;
       top: 0;
@@ -152,6 +154,53 @@
       right: 12%;
     }
 
+    /* TYPOGRAPHY */
+    .display-hero {
+      font-family: var(--font-display);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      color: var(--ink);
+      max-width: 960px;
+      margin: 0 auto 24px auto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .hero-title-lead {
+      display: block;
+      font-size: clamp(2.8rem, 5.8vw, 4.8rem);
+      font-weight: 300;
+      line-height: 1.08;
+    }
+
+    .hero-title-sub {
+      display: block;
+      font-size: clamp(1.6rem, 3.2vw, 2.35rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-top: 6px;
+    }
+
+    .display-section {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 64px auto;
+      line-height: 1.6;
+    }
+
+    /* CONTAINER */
     .container {
       width: 100%;
       max-width: 1160px;
@@ -161,9 +210,13 @@
       z-index: 1;
     }
 
+    /* HEADER */
     .header-nav {
       position: sticky;
       top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
       z-index: 100;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -172,6 +225,11 @@
       height: 80px;
       display: flex;
       align-items: center;
+    }
+
+    .header-nav .container {
+      width: 100%;
+      flex: 1;
     }
 
     .header-container {
@@ -212,7 +270,9 @@
       transition: color 0.2s ease;
     }
 
-    .nav-link:hover { color: var(--ink); }
+    .nav-link:hover {
+      color: var(--ink);
+    }
 
     /* BUTTONS: 90-DEGREE STRAIGHT CUTS + AUTHENTIC PAPER TEXTURE */
     .btn {
@@ -229,7 +289,6 @@
       line-height: 1;
       position: relative;
       overflow: hidden;
-      isolation: isolate;
     }
 
     .btn::before {
@@ -240,7 +299,12 @@
       background-size: cover;
       background-position: center;
       pointer-events: none;
-      z-index: -1;
+      z-index: 1;
+    }
+
+    .btn > * {
+      position: relative;
+      z-index: 2;
     }
 
     .btn-primary {
@@ -279,46 +343,145 @@
       transform: translateY(-1px);
     }
 
-    .hero-bootcamp {
+    /* HERO SECTION */
+    .hero-section {
       padding-top: 80px;
-      padding-bottom: 72px;
+      padding-bottom: 96px;
       text-align: center;
+      position: relative;
     }
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-decoration: none;
-      margin-bottom: 24px;
-      transition: color 0.2s;
+    /* OFFICIAL HSN LABS EMBLEM — POSITIONED ABOVE THE HEADLINE */
+    .hero-brand-symbol {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
     }
 
-    .back-link:hover { color: var(--ink); }
-
-    .display-hero {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 4.25rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--ink);
-      max-width: 900px;
-      margin: 0 auto 20px auto;
+    .brand-symbol-box {
+      width: 96px;
+      height: 96px;
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      background: var(--cyan);
+      box-shadow: 0 10px 26px var(--cyan-glow), 0 2px 8px rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: pan-y;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
     }
 
-    .hero-lead {
+    .brand-symbol-box:hover {
+      transform: scale(1.04);
+      box-shadow: 0 14px 34px rgba(82, 180, 253, 0.4);
+    }
+
+    .symbol-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .symbol-carp {
+      position: absolute;
+      width: 53px;
+      height: 53px;
+      top: 5px;
+      right: 5px;
+      z-index: 10;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-sub {
       font-size: 1.15rem;
       color: var(--body);
-      max-width: 720px;
-      margin: 0 auto 40px auto;
+      max-width: 680px;
+      margin: 0 auto 36px auto;
       line-height: 1.65;
     }
 
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* CLIENT PORTFOLIO STRIP */
+    .portfolio-strip {
+      width: 100%;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 36px 0;
+      margin-top: 64px;
+      background: var(--canvas-soft);
+    }
+
+    .portfolio-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted-soft);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 28px 48px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .portfolio-item img {
+      display: block;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .portfolio-item img.logo-black {
+      opacity: 0.45;
+    }
+
+    .portfolio-item img.logo-color {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .portfolio-item:hover img.logo-black {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+
+    .portfolio-item:hover img.logo-color {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    /* SECTIONS */
     .section-block {
-      padding: 88px 0;
+      padding: 96px 0;
       position: relative;
     }
 
@@ -328,55 +491,170 @@
       border-bottom: 1px solid var(--hairline);
     }
 
-    .display-section {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.75rem);
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin-bottom: 16px;
+    /* SERVICES BENTO GRID */
+    .services-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
-    .section-lead {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 640px;
-      margin: 0 auto 56px auto;
-      line-height: 1.6;
+    .card-bento-wide {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
-    /* DAYS TIMELINE GRID */
-    .timeline-grid {
+    .card-bento-wide .bento-info {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .adlc-columns-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      text-align: left;
-      margin-bottom: 32px;
+      gap: 20px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 20px;
     }
 
-    @media (max-width: 960px) {
-      .timeline-grid {
+    .adlc-col {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .adlc-col:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 4px;
+      bottom: 4px;
+      width: 1px;
+      background: var(--hairline);
+    }
+
+    .adlc-col-header {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      min-height: 24px;
+    }
+
+    .adlc-col-num {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--cyan-text);
+      letter-spacing: -0.01em;
+      flex-shrink: 0;
+    }
+
+    .adlc-col-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      white-space: normal;
+    }
+
+    .adlc-col-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .adlc-col-stack .stack-item {
+      padding: 6px 8px;
+      font-size: 0.71rem;
+      gap: 7px;
+    }
+
+    .adlc-col-stack .stack-item img {
+      width: 15px;
+      height: 15px;
+    }
+
+    @media (max-width: 920px) {
+      .services-bento {
+        grid-template-columns: 1fr;
+      }
+      .card-bento-wide {
+        grid-column: auto;
+      }
+      .adlc-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .adlc-col:not(:last-child)::after {
+        display: none;
+      }
+      .adlc-col {
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--hairline);
+      }
+      .adlc-col:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      .adlc-col-header {
+        margin-bottom: 12px;
+      }
+      .adlc-col-num {
+        font-size: 0.76rem;
+      }
+      .adlc-col-title {
+        font-size: 0.88rem;
+        white-space: normal;
+      }
+      .adlc-col-stack {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .adlc-col-stack {
         grid-template-columns: 1fr;
       }
     }
 
-    .timeline-card {
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 920px) {
+      .card-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
       background: var(--surface-card);
       border: 1px solid var(--hairline);
       border-radius: 0;
-      padding: 28px 24px;
+      padding: 36px 32px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
       position: relative;
       overflow: hidden;
-      isolation: isolate;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
     }
 
-    .timeline-card::before,
-    .criteria-card::before,
-    .app-card::before,
-    .cookie-banner::before,
-    .form-success-box::before {
+    .card::before {
       content: '';
       position: absolute;
       inset: 0;
@@ -386,88 +664,171 @@
       mix-blend-mode: multiply;
       opacity: 0.50;
       pointer-events: none;
-      z-index: -1;
+      z-index: 1;
     }
 
-    .timeline-card:hover {
-      border-color: var(--hairline-strong);
+    .card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card:hover {
       transform: translateY(-2px);
+      border-color: var(--hairline-strong);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 12px 30px rgba(0, 0, 0, 0.05);
     }
 
-    .timeline-card strong {
-      font-size: 1.05rem;
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
       color: var(--ink);
-      display: block;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
     }
 
-    .timeline-body {
-      font-size: 0.875rem;
+    .card-body {
+      font-size: 0.95rem;
       color: var(--body);
-      line-height: 1.55;
+      line-height: 1.6;
     }
 
-    /* CRITERIA GRID */
-    .criteria-grid {
+    .stack-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      text-align: left;
-      max-width: 1120px;
-      margin: 0 auto;
+      gap: 8px;
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline);
     }
 
-    @media (max-width: 720px) {
-      .criteria-grid {
-        grid-template-columns: 1fr;
+    .stack-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      background: var(--canvas);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      font-size: 0.74rem;
+      font-weight: 500;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+
+    .stack-item:hover {
+      background: var(--surface-card);
+      border-color: var(--cyan);
+      color: var(--ink);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .stack-item img {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    @media (max-width: 480px) {
+      .stack-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stack-item:nth-child(9) {
+        grid-column: 1 / -1;
+        max-width: 200px;
+        margin: 0 auto;
+        width: 100%;
       }
     }
 
-    .criteria-card {
-      background: var(--surface-card);
-      border: 1px solid var(--hairline);
-      border-radius: 0;
-      padding: 28px 24px;
-      position: relative;
+    /* iOS SAFARI AUTO-ZOOM PREVENTION */
+    @media (max-width: 768px) {
+      .form-input, .form-select, .form-textarea {
+        font-size: 16px !important;
+      }
+      .footer-newsletter-form input {
+        font-size: 16px !important;
+      }
+    }
+
+    .card-vertical {
+      padding: 0;
       overflow: hidden;
-      isolation: isolate;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
     }
 
-    .criteria-card strong {
-      font-size: 1.05rem;
-      color: var(--ink);
+    .vertical-img-wrap {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background: var(--canvas-soft);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .vertical-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      margin-bottom: 8px;
+      transition: transform 0.35s ease;
     }
 
-    .criteria-card p {
-      font-size: 0.875rem;
-      color: var(--body);
-      line-height: 1.55;
+    .card-vertical:hover .vertical-img {
+      transform: scale(1.04);
     }
 
-    /* APPLICATION FORM */
-    .app-card {
+    .vertical-content {
+      padding: 28px 24px 32px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* CONTACT / SCOPING CARD: UNIFIED PAPER TEXTURE + 90-DEGREE CUT */
+    .scoping-card {
       background: var(--surface-card);
       border: 1px solid var(--hairline);
       border-radius: 0;
-      padding: 56px 48px;
-      max-width: 780px;
+      padding: 64px 48px;
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02), 0 16px 40px rgba(0, 0, 0, 0.03);
       position: relative;
       overflow: hidden;
-      isolation: isolate;
     }
 
-    .app-form {
+    .scoping-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .scoping-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* EDITORIAL CONTACT FORM */
+    .contact-form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
+      max-width: 600px;
+      margin: 36px auto 0 auto;
       text-align: left;
-      margin-top: 36px;
     }
 
     .form-group {
@@ -502,6 +863,10 @@
       box-shadow: 0 0 0 1px var(--cyan);
     }
 
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: var(--muted-soft);
+    }
+
     .form-grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -509,53 +874,22 @@
     }
 
     @media (max-width: 640px) {
-      .header-nav {
-        height: 72px;
-      }
-      .brand-logo-img {
-        height: 42px;
-      }
       .form-grid-2 {
         grid-template-columns: 1fr;
       }
-      .app-card {
-        padding: 36px 20px;
-      }
     }
 
-    .checkbox-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
-    .checkbox-input {
-      margin-top: 4px;
-      accent-color: var(--ink);
-      width: 16px;
-      height: 16px;
-    }
-
-    .checkbox-label {
-      font-size: 0.875rem;
-      color: var(--body);
-      line-height: 1.45;
-    }
-
-    .form-success-box {
+    .form-success-msg {
       display: none;
-      isolation: isolate;
-      position: relative;
-      overflow: hidden;
       background: var(--canvas-soft);
       border: 1px solid var(--hairline);
-      border-radius: 0;
-      padding: 28px;
+      border-radius: 14px;
+      padding: 24px;
       margin-top: 24px;
-      text-align: center;
+      font-size: 0.95rem;
       color: var(--ink);
       line-height: 1.6;
+      text-align: center;
     }
 
     /* FOOTER */
@@ -598,7 +932,9 @@
       transition: color 0.2s ease;
     }
 
-    .footer-nav a:hover { color: var(--ink); }
+    .footer-nav a:hover {
+      color: var(--ink);
+    }
 
     .footer-bottom {
       border-top: 1px solid var(--hairline);
@@ -643,7 +979,7 @@
       justify-content: center;
       width: 44px;
       height: 44px;
-      border-radius: 0;
+      border-radius: 8px;
       transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
     }
 
@@ -652,16 +988,8 @@
       background: var(--surface-card);
       transform: translateY(-1px);
     }
-    /* iOS SAFARI AUTO-ZOOM PREVENTION */
-    @media (max-width: 768px) {
-      .form-input, .form-select, .form-textarea {
-        font-size: 16px !important;
-      }
-      .footer-newsletter-form input {
-        font-size: 16px !important;
-      }
-    }
 
+    /* COMPACT MOBILE VIEWPORT ENHANCEMENTS */
     @media (max-width: 640px) {
       .orb-cyan {
         width: 240px;
@@ -690,13 +1018,22 @@
       .container {
         padding: 0 16px;
       }
-      .site-footer {
-        padding: 56px 0 36px 0;
+      .header-nav {
+        height: 64px;
       }
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
-        margin-bottom: 40px;
+      .brand-logo-img {
+        height: 28px;
+        max-width: 150px;
+        width: auto;
+      }
+      .brand-link {
+        flex-shrink: 0;
+      }
+      .header-container .btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
       .footer-bottom {
         flex-direction: column;
@@ -707,13 +1044,87 @@
         flex-wrap: wrap;
         gap: 12px;
       }
+      .hero-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+      }
+      .hero-brand-symbol {
+        margin-bottom: 24px;
+      }
+      .brand-symbol-box {
+        width: 80px;
+        height: 80px;
+      }
+      .symbol-carp {
+        width: 44px;
+        height: 44px;
+        top: 4px;
+        right: 4px;
+      }
+      .display-hero {
+        line-height: 1.12;
+      }
+      .hero-title-lead {
+        font-size: 2.25rem;
+        line-height: 1.1;
+      }
+      .hero-title-sub {
+        font-size: 1.45rem;
+        line-height: 1.2;
+        margin-top: 4px;
+      }
+      .hero-sub {
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+      .portfolio-strip {
+        padding: 28px 0;
+        margin-top: 44px;
+      }
+      .portfolio-grid {
+        gap: 20px 28px;
+      }
+      .display-section {
+        font-size: 1.85rem;
+      }
+      .section-block {
+        padding: 64px 0;
+      }
+      .section-lead {
+        margin-bottom: 40px;
+      }
+      .card {
+        padding: 24px 18px;
+      }
+      .scoping-card {
+        padding: 40px 20px;
+      }
+      .gates-list {
+        grid-template-columns: 1fr;
+        margin: 28px 0 32px 0;
+      }
+      .site-footer {
+        padding: 56px 0 36px 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        margin-bottom: 40px;
+      }
     }
 
     /* COOKIE CONSENT BANNER */
     .cookie-banner {
       position: fixed;
-      isolation: isolate;
-      overflow: hidden;
       bottom: 24px;
       left: 24px;
       max-width: 420px;
@@ -757,7 +1168,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
     .cookie-btn-accept {
@@ -772,7 +1182,68 @@
       border-radius: 0;
     }
 
-  /* HEADER DROPDOWN & GITHUB BUTTON */
+
+    /* POST-IT BADGE (Standardized with Btn-Primary) */
+    .post-it-badge {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ffffff;
+      
+      background: var(--cyan);
+      /* Substitui a borda chapada por iluminacao de quina (Edge Lighting) */
+      box-shadow: 
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 4px 12px rgba(82, 180, 253, 0.45),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(-2px); /* Traz fisicamente o post-it pra cima da folha branca */
+    }
+    
+    .post-it-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      /* Zoom drastico para o amasso aparecer no espaco minusculo de 44px */
+      background-size: 400px;
+      background-position: center center;
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .post-it-badge .content {
+      position: relative;
+      z-index: 2;
+      line-height: 1;
+    }
+
+  
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    @media (max-width: 920px) {
+      .grid-2-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* HEADER DROPDOWN & GITHUB BUTTON */
     .nav-dropdown {
       position: relative;
       display: inline-block;
@@ -930,6 +1401,8 @@
       .header-actions .btn { padding: 8px 16px; font-size: 0.85rem; }
     }
 </style>
+
+
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -952,27 +1425,54 @@
     gtag('config', 'G-GMK24ECXMF');
   </script>
 
-  <!-- Schema.org Service Structured Data -->
+  <!-- Schema.org Structured Data (2026 Knowledge Graph & AI Citation) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Agentic Bootcamp",
-    "serviceType": "Forward Deployed Engineering Sprint",
-    "description": "An intensive 12k USD enterprise engineering deployment inside client infrastructure to audit business rules, wire production agents, and deliver an executive business case with 100% fee credited toward production rollout.",
-    "provider": {
-      "@type": "Organization",
-      "name": "HSN Labs",
-      "url": "https://hsnlabs.ai/"
-    },
-    "url": "https://hsnlabs.ai/bootcamp"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://hsnlabs.ai/#organization",
+        "name": "HSN Labs",
+        "url": "https://hsnlabs.ai/",
+        "logo": "https://hsnlabs.ai/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png",
+        "image": "https://hsnlabs.ai/assets/brand/og-image.png",
+        "description": "An engineering lab with over five years of shipping AI products and resilient agent architectures in production.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Paulista, 1374",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hugo@hsnlabs.ai",
+          "contactType": "Architecture Advisory"
+        },
+        "sameAs": [
+          "https://github.com/orgs/hsnlabs-ai/",
+          "https://www.linkedin.com/company/hsnlabs",
+          "https://x.com/hsnlabs"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://hsnlabs.ai/#service",
+        "name": "HSN Labs AI Architecture Advisory",
+        "provider": { "@id": "https://hsnlabs.ai/#organization" },
+        "serviceType": "Enterprise AI Agent Architecture & Business Ontologies",
+        "areaServed": "Global",
+        "url": "https://hsnlabs.ai/"
+      }
+    ]
   }
   </script>
 
 </head>
 <body>
 
-  <!-- ATMOSPHERIC BLOOMS -->
+  <!-- ATMOSPHERIC BLOOMS — ElevenLabs Signature with HSN Labs Cyan -->
   <div class="atmosphere-bg">
     <div class="orb orb-cyan"></div>
     <div class="orb orb-peach"></div>
@@ -989,9 +1489,9 @@
 
       <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/advisory" class="nav-link">Advisory</a>
-        <a href="/playbooks" class="nav-link">Playbooks</a>
+        <a href="/playbooks" class="nav-link" style="color: var(--ink); font-weight: 600;">Playbooks</a>
         <a href="/blog/" class="nav-link">Blog</a>
-        <a href="/pt/bootcamp/" class="nav-link" style="font-weight: 500; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase;">PT</a>
+        <a href="/pt/playbooks/" class="nav-link" style="font-weight: 500; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase;">PT</a>
       </div>
 
       <div class="header-actions">
@@ -1005,103 +1505,73 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero-bootcamp">
+  <section class="hero-section">
     <div class="container">
-      <a href="/" class="back-link">← Return to Overview</a>
+      <!-- OFFICIAL LOGO EMBLEM ABOVE THE HEADLINE -->
+      <div class="hero-brand-symbol">
+        <div class="brand-symbol-box" id="waterEmblemTrigger" title="Disturb the medium">
+          <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
+          <img src="/assets/brand/elements/origami-carp-clean.png" alt="HSN Labs" class="symbol-carp">
+        </div>
+      </div>
       
-      <h1 class="display-hero">Agentic Bootcamp</h1>
+      <h1 class="display-hero">
+        <span class="hero-title-lead">Proprietary Playbooks</span>
+        <span class="hero-title-sub" style="color: var(--cyan-text);">Frameworks that don't fail in production.</span>
+      </h1>
       
-      <p class="hero-lead">
-        We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts.
+      <p class="hero-subtitle">
+        Battle-tested methodologies developed inside mission-critical enterprise environments. We replace theoretical slides with executable tools: from organizational readiness to business ontologies.
       </p>
 
-      <div style="display: flex; gap: 14px; justify-content: center; margin-top: 28px; flex-wrap: wrap;">
-        <a href="#apply" class="btn btn-primary">Request Call</a>
-        <a href="#criteria" class="btn btn-outline">Review Criteria</a>
+      <div class="hero-actions" style="margin-top: 48px;">
+        <a href="#contact" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Start the Conversation</a>
       </div>
     </div>
   </section>
 
-  <!-- PROTOCOL BREAKDOWN -->
-  <section class="section-block section-alt" id="protocol">
+  
+  
+  <!-- PLAYBOOKS FOCUS -->
+  <section class="section-block section-alt">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Our Method</h2>
-
-      <div class="timeline-grid">
-        <div class="timeline-card">
-          <strong>01 • Environment Setup</strong>
-          <p class="timeline-body">
-            Database read replicas, ERP connections, and security isolation before writing code.
-          </p>
-        </div>
-
-        <div class="timeline-card">
-          <strong>02 • Ontology Mapping</strong>
-          <p class="timeline-body">
-            Extracting business rules and mapping legacy ERP tables into executable business ontologies.
-          </p>
-        </div>
-
-        <div class="timeline-card">
-          <strong>03 • Sandbox Prototype</strong>
-          <p class="timeline-body">
-            Deploying deep agents in a secure, isolated test environment, testing edge cases.
-          </p>
-        </div>
-
-        <div class="timeline-card">
-          <strong>04 • Business Case</strong>
-          <p class="timeline-body">
-            Delivery of technical feasibility, audited ROI metrics, and full rollout roadmap. Sprint fee is completely rebated against the production deployment contract.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUALIFICATION CRITERIA -->
-  <section class="section-block" id="criteria">
-    <div class="container" style="text-align: center;">
-      <h2 class="display-section">Qualification Criteria</h2>
+      <h2 class="display-section" style="margin-bottom: 12px;">Core Playbooks</h2>
       <p class="section-lead">
-        The bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+        Structured engineering frameworks built to de-risk agentic deployments across enterprise workflows.
       </p>
-
-      <div class="criteria-grid">
-        <div class="criteria-card">
-          <strong>01 • Executive Sponsor</strong>
-          <p>
-            Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
+      
+      <div class="grid-2-col" style="text-align: left;">
+        
+        <div class="card" style="text-align: center; padding-top: 40px;">
+          <div class="post-it-badge"><div class="content">01</div></div>
+          <h3 class="card-title">Agentic Adoption Canvas</h3>
+          <p class="card-body">
+            Strategic scoping instrument for enterprise leadership. Diagnoses operational readiness, establishes strict autonomy boundaries, classifies operational risk, and selects high-leverage workflows before code deployment.
           </p>
         </div>
 
-        <div class="criteria-card">
-          <strong>02 • Approved Budget</strong>
-          <p>
-            Minimum annual revenue of 10M USD with pre-approved budget for the current fiscal year to develop and deploy the project upon verified validation.
+        <div class="card" style="text-align: center; padding-top: 40px;">
+          <div class="post-it-badge"><div class="content">02</div></div>
+          <h3 class="card-title">Ontology Mapping</h3>
+          <p class="card-body">
+            Engineering blueprint translating enterprise schema, ERP entities, and tacit business rules into deterministic knowledge graphs. Eliminates hallucination by giving autonomous agents structured truth.
           </p>
         </div>
 
-        <div class="criteria-card">
-          <strong>03 • Data Access</strong>
-          <p>
-            Staging credentials or read replicas ready before day one.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- APPLICATION FORM -->
-  <section class="section-block section-alt" id="apply">
+  <!-- CONTACT -->
+  <section class="section-block section-alt" id="contact">
     <div class="container">
-      <div class="app-card">
-        <h2 class="display-section" style="margin-bottom: 12px;">Bootcamp Application</h2>
+      <div class="scoping-card">
+        <h2 class="display-section" style="margin-bottom: 12px;">Contact Us</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
-          Submit your information to request a technical intake call. We review your systems and confirm qualification details within 24 hours.
+          Talk to our strategy team about your AI roadmap and organizational transformation needs.
         </p>
 
-        <form class="app-form" id="bootcampForm">
+        <form class="contact-form" id="contactForm">
           <div class="form-grid-2">
             <div class="form-group">
               <label class="form-label">Full Name</label>
@@ -1119,58 +1589,36 @@
               <input type="text" name="company" class="form-input" placeholder="Company Inc" required>
             </div>
             <div class="form-group">
-              <label class="form-label">Company Website</label>
-              <input type="text" name="website" class="form-input" placeholder="company.com" required>
-            </div>
-          </div>
-
-          <div class="form-grid-2">
-            <div class="form-group">
-              <label class="form-label">Executive Role</label>
+              <label class="form-label">Role</label>
               <select name="role" class="form-select" required>
                 <option value="" disabled selected>Select your role</option>
-                <option value="innovation_director">Director of Innovation</option>
-                <option value="cto_cio">Chief Technology Officer or CIO</option>
-                <option value="ceo">Chief Executive Officer</option>
-                <option value="cfo">Chief Financial Officer</option>
-                <option value="other">Other Executive Sponsor</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Annual Revenue</label>
-              <select name="revenue" class="form-select" required>
-                <option value="" disabled selected>Select annual revenue</option>
-                <option value="under_10m">Under 10M USD</option>
-                <option value="10m_50m">10M to 50M USD</option>
-                <option value="50m_100m">50M to 100M USD</option>
-                <option value="100m_500m">100M to 500M USD</option>
-                <option value="above_500m">Above 500M USD</option>
+                <option value="c_level">C-Level / Founder</option>
+                <option value="vp_director">VP / Director</option>
+                <option value="manager">Manager / Head</option>
+                <option value="other">Other</option>
               </select>
             </div>
           </div>
 
-          <div class="checkbox-group">
-            <input type="checkbox" id="gateSpecial" class="checkbox-input">
-            <label for="gateSpecial" class="checkbox-label">
-              Apply for Performance Rebate Program — 100% fee credited toward production rollout.
-            </label>
+          <div class="form-group">
+            <label class="form-label">What is your core objective?</label>
+            <textarea name="message" rows="4" class="form-textarea" placeholder="Tell us about the challenges you are facing with AI adoption and strategy." required></textarea>
           </div>
 
-          <div style="display: flex; flex-direction: column; align-items: center; margin-top: 14px;">
-            <button type="submit" class="btn btn-primary" style="padding: 14px 40px; font-size: 1rem; width: 100%; max-width: 340px;">
-              Request Call
+          <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary" style="padding: 12px 36px; font-size: 1rem; width: 100%; max-width: 280px;">
+              Request Consultation
             </button>
           </div>
         </form>
 
-        <div class="form-success-box" id="bootcampSuccess">
-          Thank you. Your request has been delivered directly to our architecture leads. We will review your systems and confirm details within 24 hours.
+        <div class="form-success-msg" id="formSuccess">
+          Thank you. Our team will review your request and respond within 24 hours.
         </div>
       </div>
     </div>
   </section>
-
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1266,23 +1714,152 @@
     </div>
   </footer>
 
+  <!-- 3-STAGE WATER MOTION ENGINE SCRIPT (96x96 EMBLEM) -->
   <script>
     (function() {
-      const bForm = document.getElementById('bootcampForm');
-      const bSuccess = document.getElementById('bootcampSuccess');
-      if (bForm && bSuccess) {
-        bForm.addEventListener('submit', function(e) {
+      const container = document.getElementById('waterEmblemTrigger');
+      const canvas = document.getElementById('waterEmblemCanvas');
+      if (!canvas || !container) return;
+      const ctx = canvas.getContext('2d');
+      const W = 96, H = 96;
+
+      let buf1 = new Float32Array(W * H), buf2 = new Float32Array(W * H);
+      const damping = 0.985;
+      const baseR = 82, baseG = 180, baseB = 253; // #52B4FD
+      const imgData = ctx.createImageData(W, H);
+
+      let isRunning = false;
+      let stage = 1;
+      let causticWeight = 0.0;
+      let targetCaustic = 0.0;
+      let timeVal = 0;
+      let lastTime = 0;
+      const targetFPS = 36; // Paces wave propagation and reverberation smoothly
+      const frameInterval = 1000 / targetFPS;
+
+      function renderStatic() {
+        const d = imgData.data;
+        for (let i = 0; i < W * H; i++) {
+          const p = i * 4;
+          d[p] = baseR; d[p+1] = baseG; d[p+2] = baseB; d[p+3] = 255;
+        }
+        ctx.putImageData(imgData, 0, 0);
+      }
+
+      function drop(cx, cy, radius, strength) {
+        for (let y = Math.max(1, cy - radius); y < Math.min(H - 1, cy + radius); y++) {
+          for (let x = Math.max(1, cx - radius); x < Math.min(W - 1, cx + radius); x++) {
+            const dist = Math.hypot(x - cx, y - cy);
+            if (dist < radius) {
+              buf1[y * W + x] += strength * Math.cos((dist / radius) * (Math.PI / 2));
+            }
+          }
+        }
+      }
+
+      function trigger(strength = 175) {
+        // Drop in carp center: x=65, y=31 on 96x96
+        drop(65, 31, 5, strength);
+        targetCaustic = 0.55;
+        stage = 2;
+        if (!isRunning) {
+          isRunning = true;
+          lastTime = performance.now();
+          requestAnimationFrame(loop);
+        }
+      }
+
+      function loop(currentTime) {
+        if (!isRunning) return;
+        requestAnimationFrame(loop);
+
+        const delta = currentTime - lastTime;
+        if (delta < frameInterval) return;
+        lastTime = currentTime - (delta % frameInterval);
+
+        causticWeight += (targetCaustic - causticWeight) * 0.02;
+        timeVal += 0.008; // Calm, serene water undulation
+
+        let totalEnergy = 0;
+        for (let y = 1; y < H - 1; y++) {
+          const row = y * W;
+          for (let x = 1; x < W - 1; x++) {
+            const idx = row + x;
+            let val = (buf1[idx - 1] + buf1[idx + 1] + buf1[idx - W] + buf1[idx + W]) * 0.5 - buf2[idx];
+            val *= damping;
+            buf2[idx] = val;
+            totalEnergy += Math.abs(val);
+          }
+        }
+
+        const temp = buf1; buf1 = buf2; buf2 = temp;
+        if (stage === 2 && totalEnergy < 200 && causticWeight > 0.4) {
+          stage = 3;
+        }
+
+        const d = imgData.data;
+        for (let i = 0; i < W * H; i++) {
+          const x = i % W, y = Math.floor(i / W), p = i * 4;
+          if (x === 0 || x === W - 1 || y === 0 || y === H - 1) {
+            d[p] = baseR; d[p+1] = baseG; d[p+2] = baseB; d[p+3] = 255;
+            continue;
+          }
+
+          const dx = buf1[i + 1] - buf1[i - 1], dy = buf1[i + W] - buf1[i - W];
+          const wave = (dx + dy) * 1.25;
+          let caustic = 0;
+          if (causticWeight > 0.005) {
+            const nx = x * 0.09, ny = y * 0.09;
+            caustic = (
+              Math.sin(nx + timeVal * 0.75) * Math.cos(ny - timeVal * 0.65) +
+              Math.sin(nx * 1.4 - timeVal * 0.45) * Math.sin(ny * 1.2 + timeVal * 0.8)
+            ) * 11.0 * causticWeight;
+          }
+
+          const mod = wave + caustic;
+          d[p] = Math.max(0, Math.min(255, baseR + mod * 0.85));
+          d[p+1] = Math.max(0, Math.min(255, baseG + mod * 0.95));
+          d[p+2] = Math.max(0, Math.min(255, baseB + mod));
+          d[p+3] = 255;
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+
+        if (stage === 1 && totalEnergy < 2 && causticWeight < 0.005) {
+          isRunning = false;
+          return;
+        }
+      }
+
+      renderStatic();
+
+      container.addEventListener('mouseenter', () => {
+        if (stage === 1) trigger(175);
+        else if (stage === 3) drop(65, 31, 4, 120);
+      });
+
+      container.addEventListener('click', () => {
+        trigger(230);
+      });
+
+      container.addEventListener('touchstart', () => {
+        trigger(210);
+      }, { passive: true });
+
+      // Contact Form Handler
+      const cForm = document.getElementById('contactForm');
+      const cSuccess = document.getElementById('formSuccess');
+      if (cForm && cSuccess) {
+        cForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          const submitBtn = bForm.querySelector('button[type="submit"]');
+          const submitBtn = cForm.querySelector('button[type="submit"]');
           if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.innerText = 'Submitting...';
+            submitBtn.innerText = 'Sending...';
           }
-          const formData = new FormData(bForm);
+          const formData = new FormData(cForm);
           const data = Object.fromEntries(formData.entries());
-          const chk = document.getElementById('gateSpecial');
-          data.performance_rebate = (chk && chk.checked) ? 'Yes' : 'No';
-          data._subject = 'Nova Inscrição Bootcamp HSN Labs: ' + (data.company || data.name || 'Site');
+          data._subject = 'Novo Contato Advisory HSN Labs: ' + (data.company || data.name || 'Site');
           data._captcha = 'false';
 
           fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {
@@ -1293,11 +1870,11 @@
             },
             body: JSON.stringify(data)
           }).then(function() {
-            bForm.style.display = 'none';
-            bSuccess.style.display = 'block';
+            cForm.style.display = 'none';
+            cSuccess.style.display = 'block';
           }).catch(function() {
-            bForm.style.display = 'none';
-            bSuccess.style.display = 'block';
+            cForm.style.display = 'none';
+            cSuccess.style.display = 'block';
           });
         });
       }
