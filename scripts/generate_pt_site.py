@@ -57,7 +57,7 @@ html = html.replace(
     '<a href="/pt/advisory" class="nav-link">Advisory</a>'
 )
 html = html.replace(
-    '<a href="/blog" class="nav-link">Blog</a>',
+    '<a href="/blog/" class="nav-link">Blog</a>',
     '<a href="/blog/pt/" class="nav-link">Blog</a>'
 )
 html = html.replace(

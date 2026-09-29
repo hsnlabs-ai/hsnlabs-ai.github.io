@@ -86,7 +86,7 @@ def localize_common_pt_components(html: str) -> str:
     html = html.replace('<li><a href="/advisory">Advisory</a></li>', '<li><a href="/pt/advisory/">Advisory</a></li>')
     html = html.replace('<li><a href="/playbooks">Playbooks</a></li>', '<li><a href="/pt/playbooks/">Playbooks</a></li>')
     html = html.replace('<li><a href="/blog/">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
-    html = html.replace('<li><a href="/blog">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
+    html = html.replace('<li><a href="/blog/">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
     html = html.replace('<li><a href="/#contact">Contact Us</a></li>', '<li><a href="/pt/#contact">Fale Conosco</a></li>')
 
     # 5. Footer newsletter
