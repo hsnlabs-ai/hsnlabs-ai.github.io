@@ -23,7 +23,7 @@ def extract_hero_data():
     
     # Extract title sub
     m_sub = re.search(r'<span class="hero-title-sub"[^>]*>(.*?)</span>', content, re.DOTALL)
-    title_sub = m_sub.group(1).strip() if m_sub else "AI adoption"
+    title_sub = m_sub.group(1).strip() if m_sub else "Agentic AI adoption."
     
     # Extract hero sub paragraph
     m_p = re.search(r'<p class="hero-sub">(.*?)</p>', content, re.DOTALL)
