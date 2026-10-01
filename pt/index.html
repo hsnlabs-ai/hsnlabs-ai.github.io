@@ -157,14 +157,14 @@
     /* TYPOGRAPHY */
     .display-hero {
       font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem);
       font-weight: 300;
-      letter-spacing: -0.02em;
-      line-height: 1.08;
+      letter-spacing: -0.025em;
+      line-height: 1.14;
       color: var(--ink);
       max-width: 960px;
-      margin: 0 auto 36px auto;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
+      margin: 0 auto 32px auto;
+      text-wrap: balance;
     }
 
     .hero-title-lead {
@@ -1392,7 +1392,7 @@
       .brand-logo-img { height: 26px !important; width: auto !important; }
       .hero-title-lead { font-size: clamp(1.65rem, 6.8vw, 2.25rem) !important; line-height: 1.12 !important; }
       .hero-title-sub { font-size: clamp(1.1rem, 4.2vw, 1.45rem) !important; line-height: 1.25 !important; margin-top: 6px !important; }
-      .display-hero { max-width: 100% !important; margin-bottom: 28px !important; text-wrap: balance; }
+      .display-hero { font-size: clamp(2rem, 7vw, 2.6rem) !important; line-height: 1.18 !important; max-width: 100% !important; margin-bottom: 24px !important; text-wrap: balance; }
     }
 </style>
 
@@ -1510,8 +1510,7 @@
 
       <!-- MAIN HEADLINE -->
       <h1 class="display-hero">
-        <span class="hero-title-lead">Adoção de</span>
-        <span class="hero-title-sub" style="color: var(--cyan-text);">Engenharia Agêntica.</span>
+        Adoção de <span style="color: var(--cyan-text);">Engenharia Agêntica.</span>
       </h1>
       <p class="hero-tagline" style="font-size: 1.15rem; color: var(--body); max-width: 680px; margin: 0 auto 32px auto; line-height: 1.6;">
         Transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.
