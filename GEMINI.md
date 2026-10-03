@@ -29,12 +29,19 @@ The website follows a clean 4-section architecture:
    * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
-3. Services Section:
-   * Balanced two-by-two grid presenting four technical pillars:
-     1. Personalized Business Ontologies.
-     2. Deep Agent Infrastructure.
-     3. System Execution Boundaries and Guardrails.
-     4. Agent Development Life Cycle Stack: 4-stage enterprise pipeline covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
+3. Services Section ("Why Agents Fail"):
+   * Bento grid with asymmetric layout:
+     * Three top diagnostic cards:
+       1. SaaS Billing Reduction.
+       2. Failed Pilots.
+       3. Operational Errors.
+     * Card 4: Full-width spanning card (`.card-bento-wide` with `grid-column: 1 / -1 !important`):
+       * Title: Enterprise Agentic Architecture.
+       * Narrative: Open alternative to Palantir AIP, binding agents to software guards, state machines, and executable ontologies.
+       * Desktop Engine: Hardware-accelerated interactive pan and zoom viewport (`.blueprint-viewport`, `.blueprint-canvas`), initial focus framing on primary components (scale ~0.56), controls `[ + ]`, `[ − ]`, `[ FIT ]`, `[ ⛶ ]`, and drag-ghost prevention (`dragstart` event prevented, `-webkit-user-drag: none`). Seamless quadriculado drafting background.
+       * Mobile Optimization: Viewport is hidden on mobile (`@media (max-width: 768px)`) to completely prevent touch scroll-traps. Replaced by `.blueprint-mobile-card` with a clean static preview and full-width CTA linking to `/architecture.html`.
+       * Agent Accessibility: Structured `.sr-only` semantic tree listing all 12 components for screen readers, LLM web extractors, and search engine crawlers.
+       * Standalone Fullscreen View: Dedicated route `/architecture.html` rendering the vector blueprint.
 4. Verticals Section:
    * Three-column layout for regulated enterprise industries:
      1. Banking and Capital.

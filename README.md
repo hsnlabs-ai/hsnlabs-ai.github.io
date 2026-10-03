@@ -17,12 +17,17 @@ The website is engineered as a zero-dependency, high-performance static applicat
   * Editorial display headline and value proposition.
   * Primary action linking to the 5-Day Bootcamp and secondary action to Contact Us.
   * Client Portfolio strip featuring nine normalized monochrome enterprise marks.
-* **Services Section:**
-  * Bento grid presenting four core delivery pillars:
-    * Personalized Business Ontologies.
-    * Deep Agent Infrastructure.
-    * System Execution Boundaries and Guardrails.
-    * Agent Development Life Cycle Stack: 4-stage enterprise pipeline with official tool badges covering Ontology & Design, Infrastructure, Orchestration, and Deploy, Evaluation & Observability.
+* **Services Section ("Why Agents Fail"):**
+  * Bento grid with asymmetric layout:
+    * Three diagnostic cards:
+      * **SaaS Billing Reduction:** Direct database integration to automate manual workflows and eliminate recurring seat costs.
+      * **Failed Pilots:** Replacing brittle prompt wrappers with robust operational architectures.
+      * **Operational Errors:** Enforcing deterministic state boundaries to guarantee transactional integrity.
+    * **Enterprise Agentic Architecture Card (`.card-bento-wide`):**
+      * Desktop interactive viewport with zoom/pan engine and initial focus framing on primary modules.
+      * Mobile-optimized touch-safe static card linking to full-screen architecture, eliminating scroll-trapping.
+      * Semantic `.sr-only` specification tree of all 12 architecture components for AI crawlers and agents.
+      * Standalone full-resolution route at `/architecture.html`.
 * **Verticals Section:**
   * Three-column layout covering high-stakes regulated domains:
     * Banking and Capital.
@@ -93,10 +98,14 @@ The website displays nine verified enterprise client marks in normalized monochr
 │   │   ├── motion/            # Rendered video, webm, and gif motion files
 │   │   ├── symbol/            # Official cyan square symbol in high resolution
 │   │   └── wordmark/          # Vector SVG wordmarks in black, white, and cyan
+│   ├── diagrams/              # Technical architecture blueprints and schematics
+│   │   ├── hsn_labs_agentic_architecture.png # 2880x1620 retina transparent blueprint
+│   │   └── hsn_labs_agentic_architecture.svg # Vector source
 │   └── portfolio/             # Client portfolio vector assets
 │       ├── png/               # High-resolution raster client marks
 │       └── svg/               # Normalized monochrome vector client marks
 ├── 404.html                   # Custom 404 error page with telemetry
+├── architecture.html          # Standalone full-resolution vector architecture view
 ├── bootcamp.html              # Dedicated 5-Day Bootcamp application page
 ├── index.html                 # Production entrypoint
 ├── modern-slavery-statement.html # Supply chain and labor ethics statement
