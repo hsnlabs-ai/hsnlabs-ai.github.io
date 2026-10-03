@@ -501,18 +501,7 @@
       margin: 0 auto;
     }
 
-    .card-bento-wide {
-      grid-column: 1 / -1;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .card-bento-wide .bento-info {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto;
-    }
+    
 
     .adlc-columns-grid {
       display: grid;
@@ -1394,6 +1383,228 @@
       .hero-title-sub { font-size: clamp(1.1rem, 4.2vw, 1.45rem) !important; line-height: 1.25 !important; margin-top: 6px !important; }
       .display-hero { font-size: clamp(2rem, 7vw, 2.6rem) !important; line-height: 1.18 !important; max-width: 100% !important; margin-bottom: 24px !important; text-wrap: balance; }
     }
+
+    
+    .card-bento-wide {
+      grid-column: 1 / -1 !important;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 32px 32px 32px;
+      position: relative;
+      width: 100%;
+      background: var(--surface);
+    }
+
+    /* BENTO CARD 4: INTERACTIVE BLUEPRINT VIEWPORT */
+    /* Responsive Blueprint Display */
+    .blueprint-mobile-card {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .blueprint-viewport {
+        display: none !important;
+      }
+      .blueprint-mobile-card {
+        display: flex !important;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        width: 100%;
+      }
+      .blueprint-mobile-preview {
+        width: 100%;
+        background-color: #fafaf9;
+        background-image: 
+          linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+        background-size: 24px 24px;
+        border: 1px solid var(--hairline);
+        padding: 16px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .blueprint-mobile-preview img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    .blueprint-viewport, .blueprint-canvas, .blueprint-img {
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    @media (max-width: 768px) {
+      .blueprint-viewport {
+        height: 340px !important;
+        margin-top: 18px;
+        touch-action: pan-y;
+      }
+      .blueprint-mobile-bar {
+        display: block !important;
+        margin-top: 14px;
+        width: 100%;
+      }
+      .blueprint-controls {
+        display: none !important;
+      }
+    }
+    @media (min-width: 769px) {
+      .blueprint-mobile-bar {
+        display: none !important;
+      }
+    }
+    
+    .blueprint-viewport {
+      position: relative;
+      width: 100%;
+      height: 580px;
+      margin-top: 28px;
+      background-color: #fafaf9;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
+      background-size: 32px 32px;
+      border: 1px solid var(--hairline);
+      border-radius: 0 !important;
+      overflow: hidden;
+      cursor: grab;
+      user-select: none;
+      -webkit-user-select: none;
+      outline: none;
+    }
+    .blueprint-viewport:active {
+      cursor: grabbing;
+    }
+    .blueprint-viewport.is-fullscreen {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      z-index: 99999;
+      border: none;
+    }
+    .blueprint-controls {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: flex;
+      gap: 6px;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--hairline);
+      border-radius: 0 !important;
+      padding: 4px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(8px);
+    }
+    .blueprint-btn {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      border: 1px solid var(--hairline);
+      border-radius: 0 !important;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      padding: 0;
+    }
+    .blueprint-btn:hover {
+      background: var(--canvas);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .blueprint-btn svg {
+      display: block;
+    }
+    .blueprint-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--hairline);
+      border-radius: 0 !important;
+      padding: 5px 12px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+      pointer-events: none;
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .blueprint-hint-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--emerald);
+      border-radius: 0;
+    }
+    .blueprint-canvas-wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .blueprint-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: 0 0;
+      will-change: transform;
+    }
+    .blueprint-img {
+      width: 2880px;
+      height: 1620px;
+      height: auto;
+      display: block;
+      max-width: none;
+      pointer-events: none;
+      border: 1px solid var(--hairline);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    }
+    .blueprint-card-footer {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      
+      .blueprint-viewport { height: 420px; margin-top: 20px; }
+      .blueprint-card-footer { flex-direction: column; align-items: stretch; text-align: center; }
+      .blueprint-card-footer .btn-primary { justify-content: center; }
+    }
 </style>
 
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
@@ -1601,114 +1812,73 @@
           </p>
         </div>
 
-        <div class="card card-bento-wide">
+                                        <div class="card card-bento-wide">
           <div class="bento-info" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <div class="post-it-badge" style="margin-bottom: 20px;"><div class="noise-layer"></div><div class="content">4</div></div>
-            <h3 class="card-title">Agent Development Life Cycle Stack</h3>
+            <h3 class="card-title">Enterprise Agentic Architecture</h3>
             <p class="card-body">
-              After isolating operational risks, we orchestrate the full lifecycle using enterprise-grade tools.
+              The open alternative to Palantir AIP. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.
             </p>
           </div>
 
-          <div class="adlc-columns-grid">
-            <!-- Stage 1 -->
-            <div class="adlc-col">
-              <div class="adlc-col-header">
-                <span class="adlc-col-num">I</span>
-                <h4 class="adlc-col-title">Ontology & Design</h4>
-              </div>
-              <div class="adlc-col-stack">
-                <div class="stack-item" title="LangChain Hub">
-                  <img src="/assets/stack/langchain.svg" alt="LangChain Hub">
-                  <span>LangChain Hub</span>
-                </div>
-                <div class="stack-item" title="Palantir Foundry">
-                  <img src="/assets/stack/palantir_foundry.svg" alt="Palantir Foundry">
-                  <span>Foundry</span>
-                </div>
-                <div class="stack-item" title="Neo4j">
-                  <img src="/assets/stack/neo4j.svg" alt="Neo4j">
-                  <span>Neo4j</span>
-                </div>
-                <div class="stack-item" title="Collibra">
-                  <img src="/assets/stack/collibra.svg" alt="Collibra">
-                  <span>Collibra</span>
-                </div>
-              </div>
+          <!-- Interactive Blueprint Viewport -->
+          <div class="blueprint-viewport" id="blueprintViewport" draggable="false" tabindex="0" aria-label="Interactive Architecture Blueprint">
+            <div class="blueprint-controls">
+              <button type="button" class="blueprint-btn" id="bpZoomIn" title="Zoom in" aria-label="Zoom in">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <button type="button" class="blueprint-btn" id="bpZoomOut" title="Zoom out" aria-label="Zoom out">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+              <button type="button" class="blueprint-btn" id="bpReset" title="Fit to view" aria-label="Fit to view">
+                <span>FIT</span>
+              </button>
+              <button type="button" class="blueprint-btn" id="bpFullscreen" title="Toggle fullscreen" aria-label="Toggle fullscreen">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+              </button>
             </div>
 
-            <!-- Stage 2 -->
-            <div class="adlc-col">
-              <div class="adlc-col-header">
-                <span class="adlc-col-num">II</span>
-                <h4 class="adlc-col-title">Infrastructure</h4>
-              </div>
-              <div class="adlc-col-stack">
-                <div class="stack-item" title="Redis">
-                  <img src="/assets/stack/redis.svg" alt="Redis">
-                  <span>Redis</span>
-                </div>
-                <div class="stack-item" title="Pinecone">
-                  <img src="/assets/stack/pinecone.svg" alt="Pinecone">
-                  <span>Pinecone</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Stage 3 -->
-            <div class="adlc-col">
-              <div class="adlc-col-header">
-                <span class="adlc-col-num">III</span>
-                <h4 class="adlc-col-title">Orchestration</h4>
-              </div>
-              <div class="adlc-col-stack">
-                <div class="stack-item" title="LangGraph">
-                  <img src="/assets/stack/langgraph.svg" alt="LangGraph">
-                  <span>LangGraph</span>
-                </div>
-                <div class="stack-item" title="MCP Protocol">
-                  <img src="/assets/stack/mcp.svg" alt="MCP Protocol">
-                  <span>MCP Protocol</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Stage 4 -->
-            <div class="adlc-col">
-              <div class="adlc-col-header">
-                <span class="adlc-col-num">IV</span>
-                <h4 class="adlc-col-title">Deploy & Observability</h4>
-              </div>
-              <div class="adlc-col-stack">
-                <div class="stack-item" title="LangSmith">
-                  <img src="/assets/stack/langsmith.svg" alt="LangSmith">
-                  <span>LangSmith</span>
-                </div>
-                <div class="stack-item" title="Braintrust">
-                  <img src="/assets/stack/braintrust.svg" alt="Braintrust">
-                  <span>Braintrust</span>
-                </div>
-                <div class="stack-item" title="DeepEval">
-                  <img src="/assets/stack/deepeval.svg" alt="DeepEval">
-                  <span>DeepEval</span>
-                </div>
-                <div class="stack-item" title="Azure AI Foundry">
-                  <img src="/assets/stack/azure.svg" alt="Azure AI Foundry">
-                  <span>Azure Foundry</span>
-                </div>
+            <div class="blueprint-canvas-wrap">
+              <div class="blueprint-canvas" id="blueprintCanvas" draggable="false">
+                <img src="/assets/diagrams/hsn_labs_agentic_architecture.png" alt="HSN Labs Enterprise Agentic Architecture Diagram" class="blueprint-img" id="blueprintImg" width="2880" height="1620" draggable="false">
               </div>
             </div>
           </div>
-          
-          <div style="border-top: 1px solid var(--hairline); margin-top: 24px; padding-top: 16px; text-align: center;">
-            <p style="font-size: 0.8rem; color: var(--muted); font-weight: 500; margin: 0;">+ 20 more enterprise platforms supported across the pipeline</p>
+
+          <!-- Mobile Optimized Card: Touch Safe Static Preview -->
+          <div class="blueprint-mobile-card">
+            <div class="blueprint-mobile-preview">
+              <img src="/assets/diagrams/hsn_labs_agentic_architecture.png" alt="HSN Labs Enterprise Agentic Architecture Preview" width="2880" height="1620" loading="lazy">
+            </div>
+            <a href="/architecture.html" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; text-align: center; padding: 12px 18px; font-weight: 700;">
+              <span>Explore Fullscreen Architecture ↗</span>
+            </a>
+          </div>
+
+          <!-- Semantic Specifications for AI Agents and Search Engines -->
+          <div class="sr-only">
+            <h4>HSN Labs Enterprise Agentic Architecture Components</h4>
+            <ol>
+              <li>Secure Model Integration and Access: Presidio Moderation, Redis Semantic Cache, LiteLLM Gateway</li>
+              <li>End-to-End Observability: LangSmith Tracing, Latency and Token Usage Tracking</li>
+              <li>Context Engineering: Document Loaders, LCEL Logic Chains, Kafka Action Streams</li>
+              <li>State and Ontology System: LangGraph State Core, Dynamic Edges and Action Protocols</li>
+              <li>Vector Compute and Tool Services: Chroma, Qdrant, Milvus, pgvector and Worker Scaling</li>
+              <li>Security and Governance: NeMo Guardrails, Human in the Loop Checkpoints, Access Control</li>
+              <li>Agent Lifecycle: Agent Building, StateGraph Orchestration, Evaluation Suites</li>
+              <li>Operational Automation: Celery Beat, Event-Driven Kafka, LangServe REST Endpoints</li>
+              <li>Development Environments: LangGraph Studio, VS Code, MCP Inspector</li>
+              <li>Human and AI Applications: Open WebUI, CopilotKit, Streaming Artifacts</li>
+              <li>Package Release and Deploy: Docker Compose, Helm Charts, Kubernetes Orchestration</li>
+              <li>Enterprise Automation: Knowledge Hub, Multi-Agent Swarms, Neo4j Semantic Graphs</li>
+            </ol>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VERTICALS -->
+<!-- VERTICALS -->
   <section class="section-block" id="verticals">
     <div class="container" style="text-align: center;">
       <h2 class="display-section">Regulated Enterprise Verticals</h2>
@@ -2147,6 +2317,218 @@
     }
 
     document.addEventListener('DOMContentLoaded', initCookieBanner);
+  </script>
+
+
+  <!-- Blueprint Viewport Interactive Engine -->
+  <script>
+    (function() {
+      var viewport = document.getElementById('blueprintViewport');
+      var canvas = document.getElementById('blueprintCanvas');
+      var img = document.getElementById('blueprintImg');
+      var btnIn = document.getElementById('bpZoomIn');
+      var btnOut = document.getElementById('bpZoomOut');
+      var btnReset = document.getElementById('bpReset');
+      var btnFull = document.getElementById('bpFullscreen');
+
+      if (!viewport || !canvas || !img) return;
+
+      var scale = 1;
+      var panX = 0;
+      var panY = 0;
+      var isDragging = false;
+      var startX = 0;
+      var startY = 0;
+      var initialPanX = 0;
+      var initialPanY = 0;
+
+      var minScale = 0.15;
+      var maxScale = 2.6;
+
+      function updateTransform() {
+        canvas.style.transform = 'translate3d(' + panX + 'px, ' + panY + 'px, 0) scale(' + scale + ')';
+      }
+
+      function initView() {
+        var vw = viewport.clientWidth;
+        var vh = viewport.clientHeight;
+
+        // Focus framing: Architecture Components (x=355) through LangGraph Core & Security (x≈2050)
+        var targetBoxWidth = 1720;
+        var targetBoxX = 355;
+        var targetBoxY = 120;
+
+        scale = (vw - 36) / targetBoxWidth;
+        if (scale < 0.45) scale = 0.45;
+        if (scale > 0.75) scale = 0.75;
+
+        panX = 20 - targetBoxX * scale;
+        panY = 24 - targetBoxY * scale;
+
+        updateTransform();
+      }
+
+      if (img.complete) {
+        initView();
+      } else {
+        img.onload = initView;
+      }
+      window.addEventListener('resize', function() {
+        if (!isDragging) initView();
+      });
+
+      // Prevent native browser drag ghosting
+      viewport.addEventListener('dragstart', function(e) { e.preventDefault(); return false; });
+      canvas.addEventListener('dragstart', function(e) { e.preventDefault(); return false; });
+      img.addEventListener('dragstart', function(e) { e.preventDefault(); return false; });
+
+      viewport.addEventListener('mousedown', function(e) {
+        if (e.target.closest('.blueprint-controls')) return;
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        initialPanX = panX;
+        initialPanY = panY;
+        viewport.style.cursor = 'grabbing';
+        e.preventDefault();
+      });
+
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        var dx = e.clientX - startX;
+        var dy = e.clientY - startY;
+        panX = initialPanX + dx;
+        panY = initialPanY + dy;
+        updateTransform();
+      });
+
+      window.addEventListener('mouseup', function() {
+        if (isDragging) {
+          isDragging = false;
+          viewport.style.cursor = 'grab';
+        }
+      });
+
+      viewport.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        var rect = viewport.getBoundingClientRect();
+        var mouseX = e.clientX - rect.left;
+        var mouseY = e.clientY - rect.top;
+
+        var zoomFactor = e.deltaY < 0 ? 1.15 : 0.87;
+        var newScale = scale * zoomFactor;
+        if (newScale < minScale) newScale = minScale;
+        if (newScale > maxScale) newScale = maxScale;
+
+        panX = mouseX - (mouseX - panX) * (newScale / scale);
+        panY = mouseY - (mouseY - panY) * (newScale / scale);
+        scale = newScale;
+
+        updateTransform();
+      }, { passive: false });
+
+      viewport.addEventListener('dblclick', function(e) {
+        if (e.target.closest('.blueprint-controls')) return;
+        if (scale > 0.8) {
+          fitToViewport();
+        } else {
+          var rect = viewport.getBoundingClientRect();
+          var mouseX = e.clientX - rect.left;
+          var mouseY = e.clientY - rect.top;
+          var newScale = 1.15;
+          panX = mouseX - (mouseX - panX) * (newScale / scale);
+          panY = mouseY - (mouseY - panY) * (newScale / scale);
+          scale = newScale;
+          updateTransform();
+        }
+      });
+
+      if (btnIn) {
+        btnIn.addEventListener('click', function() {
+          var vw = viewport.clientWidth;
+          var vh = viewport.clientHeight;
+          var newScale = Math.min(scale * 1.25, maxScale);
+          panX = (vw / 2) - ((vw / 2) - panX) * (newScale / scale);
+          panY = (vh / 2) - ((vh / 2) - panY) * (newScale / scale);
+          scale = newScale;
+          updateTransform();
+        });
+      }
+
+      if (btnOut) {
+        btnOut.addEventListener('click', function() {
+          var vw = viewport.clientWidth;
+          var vh = viewport.clientHeight;
+          var newScale = Math.max(scale / 1.25, minScale);
+          panX = (vw / 2) - ((vw / 2) - panX) * (newScale / scale);
+          panY = (vh / 2) - ((vh / 2) - panY) * (newScale / scale);
+          scale = newScale;
+          updateTransform();
+        });
+      }
+
+      if (btnReset) {
+        btnReset.addEventListener('click', function() {
+          fitToViewport();
+        });
+      }
+
+      if (btnFull) {
+        btnFull.addEventListener('click', function() {
+          viewport.classList.toggle('is-fullscreen');
+          setTimeout(fitToViewport, 50);
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && viewport.classList.contains('is-fullscreen')) {
+          viewport.classList.remove('is-fullscreen');
+          setTimeout(fitToViewport, 50);
+        }
+      });
+
+      // Touch events (Pinch-to-zoom and drag)
+      var touchStartDist = 0;
+      var touchStartScale = 1;
+      viewport.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          initialPanX = panX;
+          initialPanY = panY;
+        } else if (e.touches.length === 2) {
+          isDragging = false;
+          var dx = e.touches[0].clientX - e.touches[1].clientX;
+          var dy = e.touches[0].clientY - e.touches[1].clientY;
+          touchStartDist = Math.hypot(dx, dy);
+          touchStartScale = scale;
+        }
+      }, { passive: true });
+
+      viewport.addEventListener('touchmove', function(e) {
+        if (isDragging && e.touches.length === 1) {
+          var dx = e.touches[0].clientX - startX;
+          var dy = e.touches[0].clientY - startY;
+          panX = initialPanX + dx;
+          panY = initialPanY + dy;
+          updateTransform();
+        } else if (e.touches.length === 2 && touchStartDist > 0) {
+          var dx = e.touches[0].clientX - e.touches[1].clientX;
+          var dy = e.touches[0].clientY - e.touches[1].clientY;
+          var dist = Math.hypot(dx, dy);
+          var factor = dist / touchStartDist;
+          var newScale = Math.min(Math.max(touchStartScale * factor, minScale), maxScale);
+          scale = newScale;
+          updateTransform();
+        }
+      }, { passive: true });
+
+      viewport.addEventListener('touchend', function() {
+        isDragging = false;
+        touchStartDist = 0;
+      });
+    })();
   </script>
 
 </body>
