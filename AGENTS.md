@@ -116,3 +116,15 @@ The social preview card `assets/brand/og-image.png` must strictly mirror the liv
   6. Localization of form labels, options, placeholders, buttons, and feedback states.
   7. Localization of Open Graph and Twitter Card metadata.
   8. Strict Portuguese Accentuation Invariant (Gate S8) ensuring mandatory formal Brazilian Portuguese diacritics.
+  9. Strict Footer Parity Invariant (Gate S9) enforcing that all 8 English routes and 7 Portuguese routes use canonical components from `components/footer_en.html` and `components/footer_pt.html` via `scripts/sync_footer.py`.
+
+---
+
+## 8. Footer Architecture and Synchronization Invariant
+* Single Source of Truth: Canonical footers live in `components/footer_en.html` (English) and `components/footer_pt.html` (Portuguese).
+* Never edit footer HTML fragments inside subpages directly.
+* To update the footer across all 15 routes:
+  1. Modify `components/footer_en.html` or `components/footer_pt.html`.
+  2. Run `python3 scripts/sync_footer.py`.
+  3. Validate with `python3 scripts/test_site_i18n_spec.py`.
+* Automated Pre-Commit Hook: Validates that Gate S9 passes on any commit touching `.html` or component files.

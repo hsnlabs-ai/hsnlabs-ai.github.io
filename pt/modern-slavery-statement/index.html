@@ -835,7 +835,7 @@
         <div class="footer-col-brand">
           <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;">
           <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 280px; margin: 0;">
-            Laboratorio de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em producao.
+            Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
           </p>
         </div>
 
@@ -852,7 +852,7 @@
         </div>
 
         <div>
-          <div class="footer-col-title">Navegacao</div>
+          <div class="footer-col-title">Navegação</div>
           <ul class="footer-nav">
             <li><a href="/pt/bootcamp/">Bootcamp de Agentes</a></li>
             <li><a href="/pt/advisory/">Advisory</a></li>
@@ -865,12 +865,35 @@
 
         <div class="footer-col-subscribe">
           <div class="footer-col-title">Stay Updated</div>
+          <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Notas de campo de arquitetura e playbooks no seu e-mail corporativo.</p>
           <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter HSN Labs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
             <div style="display: flex; gap: 8px;">
               <input type="email" name="email" placeholder="seu.email@empresa.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
               <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Assinar</button>
             </div>
           </form>
+
+          <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--hairline);">
+            <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between;">
+              <div style="display: flex; gap: 12px; align-items: center; min-width: 0;">
+                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 44px; height: 44px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;">
+                <div style="min-width: 0;">
+                  <div style="font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.2;">[Agentes] x [a Gente]</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-top: 3px; display: flex; align-items: center; gap: 4px;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span><strong>1.600+</strong> assinantes</span>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Assinar [Agentes] x [a Gente] no LinkedIn" class="btn btn-outline" style="padding: 7px 12px; font-size: 0.82rem; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div style="font-size: 0.78rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
+              Fora do hype, discutimos como a engenharia agêntica multiplica e alavanca a capacidade laboral humana.
+            </div>
+          </div>
           <div style="margin-top: 22px;">
             <div class="footer-col-title" style="margin-bottom: 10px;">Connect</div>
             <div class="footer-social-row">
@@ -917,8 +940,8 @@
       <div class="footer-bottom">
         <div>2026 HSN Labs. Todos os direitos reservados.</div>
         <div class="footer-bottom-links">
-          <a href="/pt/privacy-policy/">Politica de Privacidade</a>
-          <a href="/pt/modern-slavery-statement/">Declaracao de Conformidade</a>
+          <a href="/pt/privacy-policy/">Política de Privacidade</a>
+          <a href="/pt/modern-slavery-statement/">Declaração de Conformidade</a>
         </div>
       </div>
     </div>

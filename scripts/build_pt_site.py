@@ -74,32 +74,11 @@ def localize_common_pt_components(html: str) -> str:
         'Obrigado. Um engenheiro responsável analisará seus dados e responderá em até 24 horas.'
     )
 
-    # 3. Footer brand tagline
-    html = html.replace(
-        'An engineering lab with over five years of shipping AI products and resilient agent architectures in production.',
-        'Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.'
-    )
-
-    # 4. Footer navigation title and links
-    html = html.replace('<div class="footer-col-title">Navigation</div>', '<div class="footer-col-title">Navegação</div>')
-    html = html.replace('<li><a href="/bootcamp">Agentic Bootcamp</a></li>', '<li><a href="/pt/bootcamp/">Bootcamp de Agentes</a></li>')
-    html = html.replace('<li><a href="/advisory">Advisory</a></li>', '<li><a href="/pt/advisory/">Advisory</a></li>')
-    html = html.replace('<li><a href="/playbooks">Playbooks</a></li>', '<li><a href="/pt/playbooks/">Playbooks</a></li>')
-    html = html.replace('<li><a href="/blog/">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
-    html = html.replace('<li><a href="/blog/">Blog</a></li>', '<li><a href="/blog/pt/">Blog</a></li>')
-    html = html.replace('<li><a href="/#contact">Contact Us</a></li>', '<li><a href="/pt/#contact">Fale Conosco</a></li>')
-
-    # 5. Footer newsletter
-    html = html.replace('placeholder="name@company.com"', 'placeholder="seu.email@empresa.com"')
-    html = html.replace(">Send</button>", ">Assinar</button>")
-    html = html.replace("b.innerText='Joining...';", "b.innerText='Enviando...';")
-    html = html.replace("b.innerText='Subscribed';", "b.innerText='Inscrito';")
-    html = html.replace("b.innerText='Send';", "b.innerText='Assinar';")
-
-    # 6. Footer bottom bar
-    html = html.replace('2026 HSN Labs. All rights reserved.', '2026 HSN Labs. Todos os direitos reservados.')
-    html = html.replace('<a href="/privacy-policy">Privacy Policy</a>', '<a href="/pt/privacy-policy/">Política de Privacidade</a>')
-    html = html.replace('<a href="/modern-slavery-statement">Modern Slavery Statement</a>', '<a href="/pt/modern-slavery-statement/">Declaração de Conformidade</a>')
+    # 3. Canonical Footer Injection (Single Source of Truth)
+    footer_pt_file = SITE_DIR / "components" / "footer_pt.html"
+    if footer_pt_file.exists():
+        canonical_pt_footer = footer_pt_file.read_text(encoding="utf-8").strip()
+        html = re.sub(r'<footer class="site-footer">.*?</footer>', canonical_pt_footer, html, flags=re.DOTALL)
 
     return html
 

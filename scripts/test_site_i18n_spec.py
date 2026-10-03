@@ -163,6 +163,67 @@ def test_gate_s8_portuguese_accentuation():
                 assert not m, f"ERRO: Palavra sem acentuacao encontrada em {item['pt']}: '{m.group(0)}' no trecho '{s_clean}'"
     print("PASS: Gate S8 Acentuacao Grafica Obrigatoria validada com sucesso")
 
+def test_gate_s9_footer_consistency():
+    print("--- Gate S9: Paridade Estrita de Rodape (Footer Invariant) ---")
+    footer_en_file = SITE_DIR / "components" / "footer_en.html"
+    footer_pt_file = SITE_DIR / "components" / "footer_pt.html"
+    assert footer_en_file.exists(), f"ERRO: Componente de rodape EN ausente: {footer_en_file}"
+    assert footer_pt_file.exists(), f"ERRO: Componente de rodape PT ausente: {footer_pt_file}"
+    
+    canonical_en = re.sub(r'\s+', ' ', footer_en_file.read_text(encoding="utf-8").strip())
+    canonical_pt = re.sub(r'\s+', ' ', footer_pt_file.read_text(encoding="utf-8").strip())
+    
+    en_pages = [
+        SITE_DIR / "index.html",
+        SITE_DIR / "bootcamp" / "index.html",
+        SITE_DIR / "advisory" / "index.html",
+        SITE_DIR / "playbooks" / "index.html",
+        SITE_DIR / "mcp" / "index.html",
+        SITE_DIR / "privacy-policy" / "index.html",
+        SITE_DIR / "modern-slavery-statement" / "index.html",
+        SITE_DIR / "404.html",
+    ]
+    
+    pt_pages = [
+        SITE_DIR / "pt" / "index.html",
+        SITE_DIR / "pt" / "bootcamp" / "index.html",
+        SITE_DIR / "pt" / "advisory" / "index.html",
+        SITE_DIR / "pt" / "playbooks" / "index.html",
+        SITE_DIR / "pt" / "mcp" / "index.html",
+        SITE_DIR / "pt" / "privacy-policy" / "index.html",
+        SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
+    ]
+    
+    # 1. Validate EN Footers
+    for page in en_pages:
+        assert page.exists(), f"ERRO: Pagina EN inexistente: {page}"
+        content = page.read_text(encoding="utf-8")
+        m = re.search(r'<footer class="site-footer">.*?</footer>', content, re.DOTALL)
+        assert m, f"ERRO: Tag de rodape ausente em {page}"
+        page_footer = re.sub(r'\s+', ' ', m.group(0).strip())
+        assert page_footer == canonical_en, f"ERRO: Inconsistencia de rodape EN em {page.name}"
+        assert "[Agentes] x [a Gente]" in m.group(0), f"ERRO: Newsletter ausente em {page}"
+        assert "1,600+" in m.group(0) and "subscribers" in m.group(0), f"ERRO: Contagem de inscritos ausente em {page}"
+        assert len(re.findall(r'footer-social-icon', m.group(0))) == 7, f"ERRO: Icones sociais incompletos em {page}"
+        
+    # 2. Validate PT Footers
+    for page in pt_pages:
+        assert page.exists(), f"ERRO: Pagina PT inexistente: {page}"
+        content = page.read_text(encoding="utf-8")
+        m = re.search(r'<footer class="site-footer">.*?</footer>', content, re.DOTALL)
+        assert m, f"ERRO: Tag de rodape ausente em {page}"
+        page_footer = re.sub(r'\s+', ' ', m.group(0).strip())
+        assert page_footer == canonical_pt, f"ERRO: Inconsistencia de rodape PT em {page.name}"
+        assert "[Agentes] x [a Gente]" in m.group(0), f"ERRO: Newsletter ausente em {page}"
+        assert "1.600+" in m.group(0) and "assinantes" in m.group(0), f"ERRO: Contagem de inscritos ausente em {page}"
+        assert len(re.findall(r'footer-social-icon', m.group(0))) == 7, f"ERRO: Icones sociais incompletos em {page}"
+        assert "Navegação" in m.group(0), f"ERRO: Titulo Navegacao sem acentuacao em {page}"
+        assert "Laboratório" in m.group(0), f"ERRO: Laboratorio sem acentuacao em {page}"
+        assert "Política de Privacidade" in m.group(0), f"ERRO: Politica sem acentuacao em {page}"
+        assert "Declaração de Conformidade" in m.group(0), f"ERRO: Declaracao sem acentuacao em {page}"
+        
+    print(f"PASS: Gate S9 Paridade Estrita de Rodape validada nas {len(en_pages)} rotas EN e {len(pt_pages)} rotas PT")
+
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
     test_gate_s1_structural_integrity()
@@ -173,4 +234,5 @@ if __name__ == "__main__":
     test_gate_s6_forms_and_buttons()
     test_gate_s7_metadata_localization()
     test_gate_s8_portuguese_accentuation()
-    print("=== TODAS AS 8 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
+    test_gate_s9_footer_consistency()
+    print("=== TODAS AS 9 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
