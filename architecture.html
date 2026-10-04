@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HSN Labs Agentic Architecture Boilerplate Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSN Labs Enterprise Agentic Architecture Blueprint</title>
+  <link rel="icon" href="/assets/brand/favicons/favicon.ico">
   <style>
     * {
       margin: 0;
@@ -15,25 +17,159 @@
         linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.045) 1px, transparent 1px);
       background-size: 32px 32px;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    /* Topbar */
+    .arch-topbar {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      right: 14px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      z-index: 1000;
+      pointer-events: none;
     }
-    svg {
-      width: 100vw;
-      height: 56.25vw;
-      max-height: 100vh;
-      max-width: 177.78vh;
-      display: block;
-      box-shadow: 0 4px 24px rgba(12, 10, 9, 0.08);
+    .arch-topbar-left, .arch-topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      pointer-events: auto;
+    }
+    .arch-btn {
+      height: 38px;
+      padding: 0 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #ffffff;
+      border: 1px solid #d6d3d1;
+      color: #0c0a09;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+      transition: all 0.15s ease;
+      touch-action: manipulation;
+    }
+    .arch-btn .blueprint-svg {
+      stroke: currentColor;
+    }
+    .arch-btn:hover, .arch-btn:active {
+      background: #f5f5f4;
+      border-color: #0284c7;
+      color: #0284c7;
+    }
+    .arch-badge {
+      height: 38px;
+      padding: 0 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #e7e5e4;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #44403c;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      backdrop-filter: blur(8px);
+    }
+    .arch-badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #16a34a;
+    }
+
+    /* Layout & Sizing */
+    @media (min-width: 901px) {
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .blueprint-svg {
+        width: 100vw;
+        height: 56.25vw;
+        max-height: 100vh;
+        max-width: 177.78vh;
+        display: block;
+        box-shadow: 0 8px 32px rgba(12, 10, 9, 0.08);
+      }
+    }
+
+    /* Mobile & Tablet: Natural Scroll & Touch Pan */
+    @media (max-width: 900px) {
+      body {
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-top: 60px;
+        padding-bottom: 24px;
+      }
+      .arch-badge {
+        display: none !important;
+      }
+      .arch-topbar {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+      }
+      .blueprint-svg {
+        width: 1440px;
+        height: 810px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 20px rgba(12, 10, 9, 0.06);
+      }
     }
   </style>
 </head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 1620" width="2880" height="1620" style="background:transparent; font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <header class="arch-topbar">
+    <div class="arch-topbar-left">
+      <a href="/" class="arch-btn" aria-label="Back to site">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back to Site</span>
+      </a>
+      <div class="arch-badge">
+        <span class="arch-badge-dot"></span>
+        <span>HSN Labs Enterprise Architecture</span>
+      </div>
+    </div>
+  </header>
+
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back</span>
+      </a>
+      <div class="arch-badge">
+        <span class="arch-badge-dot"></span>
+        <span>HSN Labs Enterprise Architecture</span>
+      </div>
+    </div>
+
+    <div class="arch-topbar-right">
+      <button type="button" class="arch-btn arch-btn-icon" id="btnZoomIn" title="Zoom in" aria-label="Zoom in">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <button type="button" class="arch-btn arch-btn-icon" id="btnZoomOut" title="Zoom out" aria-label="Zoom out">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      </button>
+      <button type="button" class="arch-btn" id="btnReset" title="Fit to view" aria-label="Fit to view">
+        FIT
+      </button>
+    </div>
+  </header>
+
+  <div class="arch-viewport" id="archViewport">
+    <div class="arch-canvas" id="archCanvas">
+<svg class="blueprint-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 1620" width="2880" height="1620" style="background:transparent; font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <defs>
     <!-- Paper texture overlay pattern -->
     <pattern id="paper-texture" width="2880" height="1620" patternUnits="userSpaceOnUse">
@@ -902,5 +1038,7 @@
   <!-- Bottom footer removed for clean layout -->
 
 </svg>
+
+  
 </body>
 </html>
