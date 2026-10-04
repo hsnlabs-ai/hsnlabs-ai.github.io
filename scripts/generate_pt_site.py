@@ -111,20 +111,20 @@ html = html.replace(
     'A maioria dos agentes corporativos quebra ao lidar com dados legados sujos, regras estritas de conformidade e integridade relacional.'
 )
 html = html.replace(
-    '<h3 class="card-title">SaaS Billing Reduction</h3>',
-    '<h3 class="card-title">Reducao de Custos com SaaS</h3>'
+    '<h3 class="card-title">Legacy and Fragmented Data</h3>',
+    '<h3 class="card-title">Legado e Dados Fragmentados</h3>'
 )
 html = html.replace(
-    '<h3 class="card-title">Failed Pilots</h3>',
-    '<h3 class="card-title">Pilotos que Falham</h3>'
+    '<h3 class="card-title">Static Ontology</h3>',
+    '<h3 class="card-title">Ontologia Estática</h3>'
 )
 html = html.replace(
-    '<h3 class="card-title">Operational Errors</h3>',
-    '<h3 class="card-title">Erros Operacionais</h3>'
+    '<h3 class="card-title">Governance &amp; Compliance</h3>',
+    '<h3 class="card-title">Governança e Compliance</h3>'
 )
 html = html.replace(
-    '<h3 class="card-title">Agent Development Life Cycle Stack</h3>',
-    '<h3 class="card-title">Stack do Ciclo de Vida de Desenvolvimento de Agentes</h3>'
+    '<h3 class="card-title">Complex Enterprise ADLC</h3>',
+    '<h3 class="card-title">ADLC Enterprise Complexo</h3>'
 )
 
 # 6. Regulated Enterprise Verticals

@@ -208,10 +208,26 @@ def build_pt_home():
         'Most enterprise AI agents break when exposed to messy company data, complex compliance, and strict business rules.',
         'A maioria dos agentes corporativos quebra ao lidar com dados legados sujos, regras estritas de conformidade e integridade relacional.'
     )
-    html = html.replace('>SaaS Billing Reduction<', '>Redução de Custos com SaaS<')
-    html = html.replace('>Failed Pilots<', '>Pilotos que Falham<')
-    html = html.replace('>Operational Errors<', '>Erros Operacionais<')
-    html = html.replace('>Agent Development Life Cycle Stack<', '>Stack do Ciclo de Vida de Desenvolvimento de Agentes<')
+    html = html.replace('>Legacy and Fragmented Data<', '>Legado e Dados Fragmentados<')
+    html = html.replace(
+        'Legacy ERPs, disconnected databases, and unstructured silos break standard LLMs. Without domain-adapted data pipelines and strict schema normalization, models fail to read or sync corporate state accurately.',
+        'A maioria dos agentes quebra ao lidar com ERPs legados, bancos desconectados e silos não estruturados. Sem pipelines adaptados e normalização estrita de esquemas, modelos falham na leitura e sincronização de dados corporativos.'
+    )
+    html = html.replace('>Static Ontology<', '>Ontologia Estática<')
+    html = html.replace(
+        'Hardcoded schemas and rigid prompts collapse when real-world operations shift. Without dynamic business ontologies that mirror evolving processes, agents lose context, misroute actions, and execute on stale assumptions.',
+        'Esquemas rígidos e prompts estáticos quebram quando a operação real evolui. Sem ontologias dinâmicas de negócio que acompanhem os processos, agentes perdem contexto, desviam rotas e operam sob premissas desatualizadas.'
+    )
+    html = html.replace('>Governance &amp; Compliance<', '>Governança e Compliance<')
+    html = html.replace(
+        'Probabilistic models cannot guarantee transactional integrity. Without deterministic code-level guards, strict audit logs, and compliance boundaries, hallucinations cause regulatory exposure, fines, and data leaks.',
+        'Modelos probabilísticos não garantem integridade transacional. Sem guardas de código determinísticas, auditoria estrita e limites de conformidade, alucinações geram riscos regulatórios, multas e vazamento de dados.'
+    )
+    html = html.replace('>Complex Enterprise ADLC<', '>ADLC Enterprise Complexo<')
+    html = html.replace(
+        'The Agentic Development Life Cycle (ADLC) introduces a complex, non-deterministic layer over the deterministic enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
+        'O ciclo de vida de desenvolvimento de agentes (ADLC) introduz uma camada não determinística complexa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
+    )
     
     html = html.replace('>Regulated Enterprise Verticals<', '>Setores Corporativos Regulados<')
     

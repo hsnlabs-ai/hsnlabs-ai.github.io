@@ -20,10 +20,10 @@ The website is engineered as a zero-dependency, high-performance static applicat
 * **Services Section ("Why Agents Fail"):**
   * Bento grid with asymmetric layout:
     * Three diagnostic cards:
-      * **SaaS Billing Reduction:** Direct database integration to automate manual workflows and eliminate recurring seat costs.
-      * **Failed Pilots:** Replacing brittle prompt wrappers with robust operational architectures.
-      * **Operational Errors:** Enforcing deterministic state boundaries to guarantee transactional integrity.
-    * **Enterprise Agentic Architecture Card (`.card-bento-wide`):**
+      * **Legacy and Fragmented Data:** Handling messy legacy ERPs, databases, and unstructured silos.
+      * **Static Ontology:** Overcoming brittle schemas and hardcoded prompts with dynamic business ontologies.
+      * **Governance & Compliance:** Enforcing deterministic guards and audit trails to guarantee transactional integrity.
+    * **Complex Enterprise ADLC Card (`.card-bento-wide`):**
       * Desktop interactive viewport with zoom/pan engine and initial focus framing on primary modules.
       * Mobile-optimized touch-safe static card linking to full-screen architecture, eliminating scroll-trapping.
       * Semantic `.sr-only` specification tree of all 12 architecture components for AI crawlers and agents.
