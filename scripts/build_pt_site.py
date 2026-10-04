@@ -225,15 +225,15 @@ def build_pt_home():
     )
     html = html.replace('>Complex Enterprise ADLC<', '>ADLC Enterprise Complexo<')
     html = html.replace(
-        'The Agentic Development Life Cycle (ADLC) introduces a complex, non-deterministic layer over the deterministic enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
-        'O ciclo de vida de desenvolvimento de agentes (ADLC) introduz uma camada não determinística complexa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
+        'The Agentic Development Life Cycle — ADLC — introduces a rigorous spec-driven layer over the deterministic enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
+        'O ciclo de vida de desenvolvimento de agentes — ADLC — introduz uma camada spec-driven rigorosa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
     )
     
     html = html.replace('>Regulated Enterprise Verticals<', '>Setores Corporativos Regulados<')
     
     html = html.replace(
-        'Legacy ERPs break when agents act without guardrails. We reverse engineer legacy code into executable ontologies — Code to Spec — and anchor agents to strict state machines to prevent operational errors.',
-        'ERPs legados quebram quando agentes operam sem guardrails. Aplicamos engenharia reversa de codigo legado para ontologias executaveis — Code to Spec — e ancoramos agentes a maquinas de estados para evitar falhas operacionais.'
+        'Legacy ERPs break when agents act without guardrails. We reverse engineer legacy code into executable ontologies — Code to Spec — and deploy spec-driven agents anchored to strict state machines.',
+        'ERPs legados quebram quando agentes operam sem guardrails. Aplicamos engenharia reversa de código legado para ontologias executáveis — Code to Spec — e implantamos agentes spec-driven ancorados em máquinas de estados.'
     )
     
     html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
@@ -318,8 +318,13 @@ def build_pt_bootcamp():
         'Database read replicas, ERP connections, and security isolation before writing code.',
         'Replicas de leitura de banco de dados, conexoes ERP e isolamento de seguranca antes de escrever qualquer codigo.'
     )
-    html = html.replace('02 • Code to Spec &amp; Ontology', '02 • Code to Spec e Mapeamento Ontologico')
+    html = html.replace('02 • Code to Spec &amp; Spec-Driven Engineering', '02 • Code to Spec e Engenharia Spec-Driven')
+    html = html.replace('02 • Code to Spec &amp; Ontology', '02 • Code to Spec e Engenharia Spec-Driven')
     html = html.replace('02 • Ontology Mapping', '02 • Mapeamento Ontologico')
+    html = html.replace(
+        'Reverse engineering legacy code into formal specifications — Code to Spec — and mapping into executable business ontologies under a spec-driven architecture.',
+        'Engenharia reversa de código legado para especificações formais — Code to Spec — e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.'
+    )
     html = html.replace(
         'Reverse engineering business rules from legacy code and mapping tables into executable business ontologies.',
         'Engenharia reversa de regras de negocio a partir de codigo legado e mapeamento em ontologias executaveis.'
