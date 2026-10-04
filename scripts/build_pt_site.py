@@ -231,10 +231,27 @@ def build_pt_home():
     
     html = html.replace('>Regulated Enterprise Verticals<', '>Setores Corporativos Regulados<')
     
+    html = html.replace(
+        'Legacy ERPs break when agents act without guardrails. We reverse engineer legacy code into executable ontologies — Code to Spec — and anchor agents to strict state machines to prevent operational errors.',
+        'ERPs legados quebram quando agentes operam sem guardrails. Aplicamos engenharia reversa de codigo legado para ontologias executaveis — Code to Spec — e ancoramos agentes a maquinas de estados para evitar falhas operacionais.'
+    )
+    
     html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
     html = html.replace('placeholder="name@company.com"', 'placeholder="seu.email@empresa.com"')
+    html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
     html = html.replace('placeholder="Acme Corp"', 'placeholder="Nome da Empresa"')
+    html = html.replace('placeholder="Tell us about your current databases, ERPs, or the workflow you want to solve."', 'placeholder="Conte-nos sobre seus bancos de dados, ERPs ou o fluxo de trabalho que deseja resolver."')
     html = html.replace('placeholder="What are you looking to build or automate?"', 'placeholder="O que voce precisa construir ou automatizar?"')
+    html = html.replace('Select annual revenue', 'Selecione a faixa de receita')
+    html = html.replace('Annual Revenue', 'Receita Anual')
+    html = html.replace('Full Name', 'Nome Completo')
+    html = html.replace('Work Email', 'E-mail Corporativo')
+    html = html.replace('Company Name', 'Nome da Empresa')
+    html = html.replace('What do you want to build or automate?', 'O que voce deseja construir ou automatizar?')
+    html = html.replace('Under 10M USD', 'Abaixo de 10M USD')
+    html = html.replace('10M to 50M USD', '10M a 50M USD')
+    html = html.replace('50M to 250M USD', '50M a 250M USD')
+    html = html.replace('Above 250M USD', 'Acima de 250M USD')
     html = html.replace('>Send Message<', '>Enviar Mensagem<')
     
     html = localize_common_pt_components(html)
@@ -252,6 +269,12 @@ def build_pt_bootcamp():
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
     html = html.replace('<title>Agentic Bootcamp — HSN Labs</title>', '<title>Bootcamp de Agentes — HSN Labs</title>')
+    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace(
+        'content="Boutique building resilient multi-agent architectures on business ontologies."',
+        'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
+    )
     
     html = html.replace('content="https://hsnlabs.ai/bootcamp"', 'content="https://hsnlabs.ai/pt/bootcamp/"')
     html = html.replace('content="https://hsnlabs.ai/bootcamp/"', 'content="https://hsnlabs.ai/pt/bootcamp/"')
@@ -295,7 +318,12 @@ def build_pt_bootcamp():
         'Database read replicas, ERP connections, and security isolation before writing code.',
         'Replicas de leitura de banco de dados, conexoes ERP e isolamento de seguranca antes de escrever qualquer codigo.'
     )
+    html = html.replace('02 • Code to Spec &amp; Ontology', '02 • Code to Spec e Mapeamento Ontologico')
     html = html.replace('02 • Ontology Mapping', '02 • Mapeamento Ontologico')
+    html = html.replace(
+        'Reverse engineering business rules from legacy code and mapping tables into executable business ontologies.',
+        'Engenharia reversa de regras de negocio a partir de codigo legado e mapeamento em ontologias executaveis.'
+    )
     html = html.replace(
         'Extracting business rules and mapping legacy ERP tables into executable business ontologies.',
         'Extracao de regras de negocio e mapeamento de tabelas de ERP legado em ontologias de negocio executaveis.'
@@ -328,6 +356,10 @@ def build_pt_bootcamp():
     )
     html = html.replace('03 • Data Access', '03 • Acesso a Dados')
     html = html.replace(
+        'Staging credentials or read replicas ready before day one. No massive data lakes required — we extract surgical data slices where information lives.',
+        'Credenciais de homologacao ou replicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos — extraimos fatias cirurgicas de dados onde a informacao reside.'
+    )
+    html = html.replace(
         'Staging credentials or read replicas ready before day one.',
         'Credenciais de homologacao ou replicas de leitura liberadas antes do primeiro dia.'
     )
@@ -343,7 +375,10 @@ def build_pt_bootcamp():
     html = html.replace('Company Website', 'Website da Empresa')
     html = html.replace('Executive Role', 'Cargo Executivo')
     html = html.replace('Select your role', 'Selecione seu cargo')
+    html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
+    html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
     html = html.replace('Annual Revenue', 'Receita Anual')
+    html = html.replace('Select annual revenue', 'Selecione a faixa de receita')
     html = html.replace('Select revenue tier', 'Selecione a faixa de receita')
     html = html.replace('Under 10M USD', 'Abaixo de 10M USD')
     html = html.replace('Above 500M USD', 'Acima de 500M USD')
@@ -423,6 +458,24 @@ def build_pt_advisory():
         'Visibilidade para conselhos sobre confiabilidade de agentes autonomos, conformidade regulatoria e trilhas de auditoria. Ajudamos a lideranca a estabelecer limites operacionais que evitam custos excessivos.'
     )
     
+    html = html.replace('Full Name', 'Nome Completo')
+    html = html.replace('Work Email', 'E-mail Corporativo')
+    html = html.replace('Company Name', 'Nome da Empresa')
+    html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
+    html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
+    html = html.replace('Select your role', 'Selecione seu cargo')
+    html = html.replace('>Request Consultation<', '>Solicitar Consultoria<')
+    html = html.replace('What is your core objective?', 'Qual o seu objetivo principal?')
+    html = html.replace('placeholder="Tell us about the challenges you are facing with AI adoption and strategy."', 'placeholder="Conte-nos sobre os desafios que voce enfrenta com a adocao e estrategia de IA."')
+    html = html.replace('>C-Level / Founder<', '>C-Level / Fundador<')
+    html = html.replace('>VP / Director<', '>VP / Diretor<')
+    html = html.replace('>Manager / Head<', '>Gerente / Head<')
+    html = html.replace('>Other<', '>Outro<')
+    html = html.replace(
+        'Thank you. Our team will review your request and respond within 24 hours.',
+        'Obrigado. Nossa equipe revisara sua solicitacao e respondera em ate 24 horas.'
+    )
+    
     html = localize_common_pt_components(html)
     html = clean_html_body_text_only(html)
     dest.write_text(html, encoding="utf-8")
@@ -500,6 +553,26 @@ def build_pt_mcp():
     html = html.replace('Enterprise Identity & RBAC', 'Identidade Enterprise e RBAC')
     html = html.replace('Runtime Audit Trail', 'Trilha de Auditoria em Execucao')
     
+    html = html.replace('Full Name', 'Nome Completo')
+    html = html.replace('Work Email', 'E-mail Corporativo')
+    html = html.replace('Company Name', 'Nome da Empresa')
+    html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
+    html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
+    html = html.replace('Systems to Connect', 'Sistemas a Conectar')
+    html = html.replace('Select primary system', 'Selecione o sistema principal')
+    html = html.replace('Multiple Hybrid Systems', 'Multiplos Sistemas Hibridos')
+    html = html.replace('Internal Proprietary APIs', 'APIs Proprietarias Internas')
+    html = html.replace('Target Agent Workload', 'Carga de Trabalho Alvo do Agente')
+    html = html.replace(
+        'placeholder="Describe the business workflow, data sensitivity level, and target agent hosts."',
+        'placeholder="Descreva o fluxo de trabalho, o nivel de sensibilidade dos dados e as plataformas de agentes."'
+    )
+    html = html.replace('>Request Technical Scoping<', '>Solicitar Escopo Tecnico<')
+    html = html.replace(
+        'Thank you. Our Forward Deployed Engineering team will review your system architecture and reply within 24 hours.',
+        'Obrigado. Nossa equipe de Engenharia Forward Deployed revisara a arquitetura do sistema e respondera em ate 24 horas.'
+    )
+    
     html = localize_common_pt_components(html)
     html = clean_html_body_text_only(html)
     dest.write_text(html, encoding="utf-8")
@@ -514,6 +587,12 @@ def build_pt_privacy_policy():
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
     html = html.replace('<title>Privacy Policy — HSN Labs</title>', '<title>Politica de Privacidade — HSN Labs</title>')
+    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace(
+        'content="Boutique building resilient multi-agent architectures on business ontologies."',
+        'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
+    )
     
     html = html.replace('content="https://hsnlabs.ai/privacy-policy"', 'content="https://hsnlabs.ai/pt/privacy-policy/"')
     html = html.replace('content="https://hsnlabs.ai/privacy-policy/"', 'content="https://hsnlabs.ai/pt/privacy-policy/"')
@@ -553,6 +632,12 @@ def build_pt_compliance():
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
     html = html.replace('<title>Modern Slavery Statement — HSN Labs</title>', '<title>Declaracao de Conformidade e Etica — HSN Labs</title>')
+    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace(
+        'content="Boutique building resilient multi-agent architectures on business ontologies."',
+        'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
+    )
     
     html = html.replace('content="https://hsnlabs.ai/modern-slavery-statement"', 'content="https://hsnlabs.ai/pt/modern-slavery-statement/"')
     html = html.replace('content="https://hsnlabs.ai/modern-slavery-statement/"', 'content="https://hsnlabs.ai/pt/modern-slavery-statement/"')
