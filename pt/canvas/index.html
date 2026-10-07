@@ -1312,23 +1312,15 @@
                 </h1>
                 <span class="version-badge">v1.4</span>
                 <span class="date-badge">Atualizado em outubro de 2026</span>
-                <span class="license-badge">MIT License</span>
-              </div>
+                </div>
             </div>
 
             <div class="header-right">
-              <!-- Zoom, Fit & Minimalist Loupe -->
-              <div class="control-pill" title="Escala e Ajuste ao Viewport">
+              <!-- Zoom: - 100% + -->
+              <div class="control-pill" title="Zoom">
                 <button class="pill-btn zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
                 <span class="zoom-val" id="zoom-text">100%</span>
                 <button class="pill-btn zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
-                <button class="pill-btn fit-btn" onclick="fitCanvasToScreen()" title="Ajustar à Tela">FIT</button>
-                <button class="pill-btn icon-btn" id="btn-lupa" onclick="toggleLupa()" title="Lupa de Leitura [Atalho: Z]" aria-label="Lupa de Leitura">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
-                </button>
               </div>
 
               <!-- Ações do Cliente -->
@@ -1634,17 +1626,18 @@
 
 </div>
 
+                  <!-- Rodapé do Canvas Sheet -->
+          <div class="canvas-sheet-footer" style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding-top: 14px; margin-top: 14px; border-top: 1px solid var(--hairline-strong); font-size: 11px; color: var(--muted);">
+            <span>The Agentic Pilot Canvas • HSN Labs — hsnlabs.ai</span>
+            <span class="license-badge">MIT License</span>
+          </div>
         </div>
       </div>
     </div>
   </main>
 
   <!-- Modais de Leitura e Edição -->
-<!-- Floating Magnifier Loupe -->
-<div class="magnifier-loupe" id="magnifier-loupe">
-  <div class="loupe-title" id="loupe-title">Lupa de Leitura</div>
-  <div class="loupe-body" id="loupe-body"></div>
-</div>
+
 
 <!-- Large Presentation Reading Modal for Post-it Cards -->
 <div class="reading-modal-overlay" id="reading-modal" onclick="closeReadingModal(event)">
