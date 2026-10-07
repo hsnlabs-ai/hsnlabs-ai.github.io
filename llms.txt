@@ -30,14 +30,6 @@ Guiding C-levels through the structural transformation required to protect marke
 - Bootcamp Deployment Protocol: https://hsnlabs.ai/bootcamp/
 An intensive 12k USD enterprise production sprint inside client infrastructure. We validate data access, connect tools, and deliver an executive business case with verified operational ROI. Qualified accounts unlock our Performance Rebate where 100% of the fee is credited toward the full production contract upon rollout.
 
-## Regulated Enterprise Verticals
-- Banking and Capital Markets: https://hsnlabs.ai/#verticals
-Eliminating hallucinations on financial ledgers through code-level transaction validation and immutable audit trails.
-- Healthcare Operations: https://hsnlabs.ai/#verticals
-Verifiable protocol adherence and zero-exfiltration architectures across healthcare billing and medical workflows.
-- Legacy ERP and BPO: https://hsnlabs.ai/#verticals
-Anchoring agentic workflows to validated state machines across legacy ERPs to replace fragile BPO operations.
-
 ## Knowledge Engine & Research
 - HSN Labs Blog: https://hsnlabs.ai/blog/
 Technical posts, case studies, and post-mortems on enterprise agent architectures and runtime observability.

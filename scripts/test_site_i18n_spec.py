@@ -156,7 +156,7 @@ def test_gate_s8_portuguese_accentuation():
         all_strings = text_nodes + titles + meta_descs + og_titles + og_descs
         for s in all_strings:
             s_clean = s.strip()
-            if not s_clean or 'LLMs cannot touch' in s_clean or 'clamp(' in s_clean:
+            if not s_clean or 'clamp(' in s_clean:
                 continue
             if item["id"] == "home":
                 m = pattern.search(s_clean)

@@ -127,11 +127,6 @@ html = html.replace(
     '<h3 class="card-title">ADLC Enterprise Complexo</h3>'
 )
 
-# 6. Regulated Enterprise Verticals
-html = html.replace(
-    '<h2 class="display-section">Regulated Enterprise Verticals</h2>',
-    '<h2 class="display-section">Setores Corporativos Regulados</h2>'
-)
 html = html.replace(
     '<h2 class="display-section" style="margin-bottom: 12px;">Contact Us</h2>',
     '<h2 class="display-section" style="margin-bottom: 12px;">Fale Conosco</h2>'

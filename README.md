@@ -28,11 +28,6 @@ The website is engineered as a zero-dependency, high-performance static applicat
       * Mobile-optimized touch-safe static card linking to full-screen architecture, eliminating scroll-trapping.
       * Semantic `.sr-only` specification tree of all 12 architecture components for AI crawlers and agents.
       * Standalone full-resolution route at `/architecture.html`.
-* **Verticals Section:**
-  * Three-column layout covering high-stakes regulated domains:
-    * Banking and Capital.
-    * Healthcare Operations.
-    * Legacy ERP and BPO.
 * **Technical Scoping Section:**
   * Executive engagement card with four qualification gates and direct email dispatch.
 * **Footer:**

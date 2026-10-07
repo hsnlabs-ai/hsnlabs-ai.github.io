@@ -43,14 +43,9 @@ The website follows a clean 4-section architecture:
        * Agent Accessibility: Structured `.sr-only` semantic tree listing all 12 components for screen readers, LLM web extractors, and search engine crawlers.
        * Standalone Fullscreen View: Dedicated route `/architecture.html` rendering the vector blueprint.
    * Numbered steps must use the `.post-it-badge` element, visually simulating a cyan square post-it floating above the card.
-4. Verticals Section:
-   * Three-column layout for regulated enterprise industries:
-     1. Banking and Capital.
-     2. Healthcare Operations.
-     3. Legacy ERP and BPO.
-5. Contact Section:
+4. Contact Section:
    * Direct technical scoping card with four qualification gates and direct email dispatch.
-6. Footer:
+5. Footer:
    * Institutional signature with wordmark lockup, navigation links, and engineering specifications.
    * Copyright line: `2026 HSN Labs. All rights reserved.`
    * Prohibited in footer bottom: Do not add redundant location strings or repetitive descriptor suffixes.

@@ -229,13 +229,6 @@ def build_pt_home():
         'O ciclo de vida de desenvolvimento de agentes — ADLC — introduz uma camada spec-driven rigorosa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
     )
     
-    html = html.replace('>Regulated Enterprise Verticals<', '>Setores Corporativos Regulados<')
-    
-    html = html.replace(
-        'Legacy ERPs break when agents act without guardrails. We reverse engineer legacy code into executable ontologies — Code to Spec — and deploy spec-driven agents anchored to strict state machines.',
-        'ERPs legados quebram quando agentes operam sem guardrails. Aplicamos engenharia reversa de código legado para ontologias executáveis — Code to Spec — e implantamos agentes spec-driven ancorados em máquinas de estados.'
-    )
-    
     html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
     html = html.replace('placeholder="name@company.com"', 'placeholder="seu.email@empresa.com"')
     html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
@@ -252,6 +245,11 @@ def build_pt_home():
     html = html.replace('10M to 50M USD', '10M a 50M USD')
     html = html.replace('50M to 250M USD', '50M a 250M USD')
     html = html.replace('Above 250M USD', 'Acima de 250M USD')
+    html = html.replace(
+        'Talk to our architecture team to see if your systems are ready for production deep agents.',
+        'Converse com nossa equipe de arquitetura para validar a prontidão dos seus sistemas para agentes de produção.'
+    )
+    html = re.sub(r'>\s*Send Message\s*<', '>Enviar Mensagem<', html)
     html = html.replace('>Send Message<', '>Enviar Mensagem<')
     
     html = localize_common_pt_components(html)
@@ -333,7 +331,12 @@ def build_pt_bootcamp():
         'Extracting business rules and mapping legacy ERP tables into executable business ontologies.',
         'Extracao de regras de negocio e mapeamento de tabelas de ERP legado em ontologias de negocio executaveis.'
     )
+    html = html.replace('alt="LangGraph Runtime"', 'alt="Runtime LangGraph"')
     html = html.replace('03 • Sandbox Prototype', '03 • Prototipo em Sandbox')
+    html = html.replace(
+        'Deploying deep agents in a secure, isolated test environment, testing edge cases on LangGraph state graphs and sovereign runtimes.',
+        'Implantacao de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.'
+    )
     html = html.replace(
         'Deploying deep agents in a secure, isolated test environment, testing edge cases.',
         'Implantacao de deep agents em ambiente de teste isolado e seguro, validando casos de borda.'
