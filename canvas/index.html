@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>The Agentic Pilot Canvas — HSN Labs</title>
   <meta name="description" content="Framework aberto sob licença MIT para desenho de arquitetura de pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF.">
   <link rel="canonical" href="https://hsnlabs.ai/canvas/">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/canvas/">
   <meta property="og:title" content="The Agentic Pilot Canvas — HSN Labs">
-  <meta property="og:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que sobrevivem à produção e superam a barreira do POC.">
+  <meta property="og:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que não falham em produção.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/canvas/">
   <meta name="twitter:title" content="The Agentic Pilot Canvas — HSN Labs">
-  <meta name="twitter:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que sobrevivem à produção e superam a barreira do POC.">
+  <meta name="twitter:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que não falham em produção.">
   <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
   <!-- Favicons Oficiais HSN Labs -->
@@ -30,21 +30,46 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      /* HSN Labs Editorial Design Tokens */
+      /* Typography Tokens HSN Labs */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-hand: 'Nanum Pen Script', 'Caveat', cursive, sans-serif;
+
+      /* Palette Tokens HSN Labs */
       --canvas: #f5f5f5;
+      --canvas-soft: #fafafa;
       --surface-card: #ffffff;
-      --ink: #0c0a09;
-      --primary: #292524;
-      --body: #4e4e4e;
-      --muted: #8c827a;
-      --hairline: #e7e5e4;
-      --hairline-strong: #0c0a09;
-      
+      --surface-strong: #f0efed;
+      --ink: #07090e;
+      --primary: #07090e;
+      --primary-active: #141722;
+      --body: #475569;
+      --muted: #64748b;
+      --muted-soft: #94a3b8;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+
+      /* HSN Labs Brand Colors */
+      --cyan: #52B4FD;
+      --cyan-text: #0284c7;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-glow: rgba(82, 180, 253, 0.28);
+      --emerald: #10B981;
+
+      /* Atmospheric gradient stops */
+      --gradient-cyan: rgba(82, 180, 253, 0.25);
+      --gradient-peach: rgba(244, 197, 168, 0.18);
+      --gradient-emerald: rgba(167, 229, 211, 0.22);
+      --gradient-lavender: rgba(200, 184, 224, 0.16);
+
       /* Post-it colors */
       --postit-yellow: #fef9c3;
       --postit-yellow-border: #fef08a;
@@ -54,10 +79,6 @@
       --postit-pink-border: #fecdd3;
       --postit-green: #dcfce7;
       --postit-green-border: #bbf7d0;
-
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-hand: 'Nanum Pen Script', 'Caveat', 'Segoe Script', cursive, sans-serif;
     }
 
     * {
@@ -68,150 +89,218 @@
 
     body {
       background-color: var(--canvas);
-      color: var(--ink);
+      color: var(--body);
       font-family: var(--font-sans);
-      font-size: 12px;
-      line-height: 1.4;
-      padding: 24px;
+      font-size: 13px;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
     }
 
-    .page-container {
+    /* Atmospheric Ambient Background */
+    .ambient-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1000px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .orb-cyan {
+      width: 520px;
+      height: 520px;
+      background: var(--gradient-cyan);
+      top: -100px;
+      left: 8%;
+    }
+
+    .orb-peach {
+      width: 440px;
+      height: 440px;
+      background: var(--gradient-peach);
+      top: 40px;
+      right: 2%;
+    }
+
+    /* Official Site Header */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
       width: 100%;
-      max-width: 1380px;
-      margin: 0 auto;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(245, 245, 245, 0.9);
+      border-bottom: 1px solid var(--hairline);
+      height: 72px;
       display: flex;
-      flex-direction: column;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* THE CANVAS SHEET */
-    .canvas-sheet {
-      min-width: 1180px;
-      background: var(--surface-card);
-      border: 2px solid var(--hairline-strong);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
-    }
-
-    /* Header Bar: Minimalist with Company & Date on Left, Controls on Right */
-    .sheet-header {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--hairline-strong);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--ink);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
       gap: 16px;
     }
 
-    .header-left {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .header-left h1 {
-      font-family: var(--font-display);
-      font-size: 32px;
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      color: var(--ink);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .license-badge {
-      font-family: var(--font-sans);
-      font-size: 9px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: var(--muted);
-      border: 1px solid var(--hairline-strong);
-      padding: 2px 7px;
-      border-radius: 2px;
-      background: var(--surface-card);
-      line-height: 1.2;
-    }
-
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* Minimalist Control Pills */
-    .control-pill {
+    .header-github-link {
       display: inline-flex;
       align-items: center;
-      border: 1px solid var(--hairline-strong);
-      background: var(--surface-card);
-      padding: 2px;
-      gap: 2px;
-    }
-
-    .pill-btn {
-      background: transparent;
-      border: none;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
       color: var(--muted);
-      font-family: var(--font-sans);
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      padding: 5px 11px;
-      cursor: pointer;
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid var(--hairline);
+      background: var(--surface-card);
+      border-radius: 0;
       transition: all 0.15s ease;
+    }
+
+    .header-github-link:hover {
+      color: var(--ink);
+      border-color: var(--hairline-strong);
+    }
+
+    .header-github-link svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* Authentic Paper Buttons with 90-degree cuts */
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border-radius: 0;
+      padding: 8px 18px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
       line-height: 1;
+      position: relative;
+      overflow: hidden;
+      font-family: var(--font-sans);
     }
 
-    .pill-btn.icon-btn {
-      padding: 5px 8px;
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      z-index: 1;
     }
 
-    .pill-btn.zoom-btn {
-      padding: 5px 8px;
-      font-size: 11px;
+    .btn > * {
+      position: relative;
+      z-index: 2;
     }
 
-    .pill-btn.active {
-      background: var(--ink);
-      color: #fff;
+    .btn-primary {
+      background: var(--cyan);
+      color: #ffffff;
+      border: 1px solid #3fa5f3;
+      box-shadow: 0 1px 3px rgba(82, 180, 253, 0.3);
     }
 
-    .pill-btn:hover:not(.active) {
-      color: var(--ink);
-      background: var(--canvas);
+    .btn-primary::before {
+      mix-blend-mode: multiply;
+      opacity: 0.65;
     }
 
-    .zoom-val {
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--ink);
-      padding: 0 4px;
-      min-width: 32px;
-      text-align: center;
-      user-select: none;
+    .btn-primary:hover {
+      background: #42abfc;
+      transform: translateY(-1px);
+    }
+
+    
+    /* Outline Button Style (Official Site Pattern) */
+    .btn-outline {
+      background: #ffffff !important;
+      color: var(--ink) !important;
+      border: 1px solid var(--hairline-strong) !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+    .btn-outline::before {
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+    }
+    .btn-outline:hover {
+      background: #f8fafc !important;
+      border-color: var(--ink) !important;
+      transform: translateY(-1px);
     }
 
     /* Magnifier Loupe Floating Display */
     .magnifier-loupe {
       position: fixed;
       width: 290px;
-      border-radius: 6px;
-      border: 2px solid var(--ink);
+      border-radius: 0;
+      border: 1px solid var(--ink);
       background: #ffffff;
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.20), 0 2px 8px rgba(0, 0, 0, 0.06);
       pointer-events: none;
       display: none;
       z-index: 3000;
@@ -234,7 +323,7 @@
     }
 
     .loupe-body {
-      font-size: 14.5px;
+      font-size: 13.5px;
       line-height: 1.35;
       color: var(--ink);
       font-family: var(--font-sans);
@@ -243,20 +332,331 @@
 
     .loupe-body em {
       color: #78716c;
-      font-size: 12.5px;
+      font-size: 11.5px;
       display: block;
       margin-top: 5px;
       font-style: normal;
     }
 
-    /* ===================================================
-       THE 2D CANVAS GRID v0.4 (Human-Aligned Cognitive Flow)
-       =================================================== */
+    /* Main Canvas Section */
+    .canvas-section {
+      flex: 1;
+      padding: 24px 0 48px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Canvas Viewport Wrapper */
+    .canvas-viewport-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+    }
+
+    /* THE CANVAS SHEET — Authentic Paper Sheet */
+    .canvas-sheet {
+      min-width: 1120px;
+      max-width: 1160px;
+      margin: 0 auto;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline-strong);
+      border-radius: 0;
+      padding: 18px 22px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 12px 32px rgba(0, 0, 0, 0.04);
+      position: relative;
+      overflow: hidden;
+      transform-origin: top center;
+      transition: transform 0.15s ease-out;
+    }
+
+    /* Subtle Paper Texture on Canvas Sheet */
+    .canvas-sheet::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .canvas-sheet > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Sheet Header — Editorial & Minimalist */
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      margin-bottom: 0;
+      border-bottom: 1px solid var(--hairline-strong);
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .header-left h1 {
+      font-family: var(--font-display);
+      font-size: 23px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .license-badge {
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--cyan-subtle);
+      color: var(--cyan-text);
+      border: 1px solid rgba(82, 180, 253, 0.35);
+      padding: 2px 7px;
+      border-radius: 0;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Minimalist Control Pills styled after ADLC Blueprint */
+    .control-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      padding: 2px;
+      gap: 2px;
+      border-radius: 0;
+      position: relative;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .control-pill::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      mix-blend-mode: multiply;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    .pill-btn {
+      background: transparent;
+      border: none;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border-radius: 0;
+      transition: all 0.15s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pill-btn:hover {
+      background: var(--canvas);
+      color: var(--ink);
+    }
+
+    .pill-btn.active {
+      background: var(--ink);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .pill-btn.fit-btn {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #0284c7;
+    }
+
+    .zoom-val {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 0 4px;
+      min-width: 32px;
+      text-align: center;
+    }
+
+    /* Toast Notification */
+    #toast-notification {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 0;
+      font-size: 12px;
+      font-weight: 500;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 9999;
+    }
+    #toast-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Site Footer Styles */
+    .site-footer {
+      background: var(--canvas);
+      border-top: 1px solid var(--hairline);
+      padding: 64px 0 40px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1fr 1.6fr;
+      gap: 40px;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+
+    .footer-col-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-nav a:hover {
+      color: var(--ink);
+    }
+
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social-icon {
+      color: var(--muted);
+      transition: color 0.15s ease;
+      display: inline-flex;
+    }
+
+    .footer-social-icon:hover {
+      color: var(--ink);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--hairline);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: var(--font-sans);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-bottom-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--ink);
+    }
+
+    /* Print Styles */
+    @media print {
+      .header-nav, .site-footer, .ambient-glow, .sheet-header .header-right, .btn-add, #toast-notification, .modal-overlay, .reading-modal-overlay, .magnifier-loupe {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .canvas-section {
+        padding: 0 !important;
+      }
+      .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .canvas-sheet {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 12px !important;
+      }
+      .canvas-sheet::before {
+        display: none !important;
+      }
+      @page {
+        size: landscape;
+        margin: 6mm;
+      }
+    }
+
     .canvas-grid {
       display: grid;
       grid-template-columns: 18% 23% 17% 19% 23%;
-      grid-template-rows: minmax(185px, auto) minmax(410px, 1fr) minmax(230px, auto);
-      border: 2px solid var(--hairline-strong);
+      grid-template-rows: minmax(150px, auto) minmax(285px, auto) minmax(160px, auto);
+      border: 1px solid var(--hairline-strong);
       border-top: none;
       background: var(--hairline-strong);
       gap: 1px;
@@ -578,7 +978,7 @@
 
     .modal-card {
       background: #fff;
-      border: 2px solid var(--hairline-strong);
+      border: 1px solid var(--hairline-strong);
       width: 340px;
       padding: 18px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -817,152 +1217,100 @@
     }
 
     /* Preserva layout canvas 2D mesmo em viewports menores */
-  
-    /* Print Styles for PDF Export */
-    @media print {
-      body {
-        padding: 0 !important;
-        background: #ffffff !important;
-      }
-      .page-container {
-        padding: 0 !important;
-        max-width: 100% !important;
-      }
-      .canvas-sheet {
-        box-shadow: none !important;
-        border: 1px solid #d1d5db !important;
-        width: 100% !important;
-        padding: 16px 20px !important;
-      }
-      .sheet-header .header-right,
-      .btn-add,
-      .modal-overlay,
-      .magnifier-loupe,
-      #toast-notification,
-      .sheet-footer,
-      .action-pill {
-        display: none !important;
-      }
-      .postit {
-        box-shadow: none !important;
-        border: 1px solid rgba(0, 0, 0, 0.15) !important;
-      }
-      @page {
-        size: landscape;
-        margin: 8mm;
-      }
-    }
-
-    /* Toast Notification */
-    #toast-notification {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--ink);
-      color: #ffffff;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 500;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: all 0.25s ease;
-      z-index: 9999;
-    }
-    #toast-notification.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-
-    /* Footer Institucional Discreto */
-    .sheet-footer {
-      margin-top: 18px;
-      padding-top: 14px;
-      border-top: 1px solid var(--hairline);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: var(--muted);
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .sheet-footer a {
-      color: var(--body);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.15s ease;
-    }
-    .sheet-footer a:hover {
-      border-bottom-color: var(--body);
-      color: var(--ink);
-    }
-
   </style>
 </head>
 <body>
 
-<div class="page-container">
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-peach"></div>
+  </div>
 
-  <!-- THE CANVAS SHEET (v0.4 Human-Aligned & Minimalist) -->
-  <div class="canvas-sheet" id="canvas-sheet">
+  <!-- Header Oficial HSN Labs -->
+  <header class="header-nav">
+    <div class="container header-container">
+      <a href="/" class="brand-link">
+        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
+      </a>
 
-    <!-- Header: Title + Org on Left with MIT License badge, Discrete Controls on Right -->
-    <div class="sheet-header">
-      <div class="header-left">
-        <h1>
-          The Agentic Pilot Canvas • <a href="/" style="color: inherit; text-decoration: none;" title="Página Inicial HSN Labs">HSN Labs — hsnlabs.ai</a>
-          <span class="license-badge">MIT License</span>
-        </h1>
+      <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
+        <a href="/advisory" class="nav-link">Advisory</a>
+        <a href="/playbooks" class="nav-link">Playbooks</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/pt/" class="nav-link" style="font-weight: 500; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase;">PT</a>
       </div>
 
-      <div class="header-right">
-        <!-- Zoom & Minimalist Icon Loupe -->
-        <div class="control-pill" title="Zoom e Lupa">
-          <button class="pill-btn zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
-          <span class="zoom-val" id="zoom-text">100%</span>
-          <button class="pill-btn zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
-          <button class="pill-btn icon-btn" id="btn-lupa" onclick="toggleLupa()" title="Lupa de Leitura [Atalho: Z]" aria-label="Lupa de Leitura">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Ações do Cliente: Compartilhar, Exportar PDF, Limpar -->
-        <div class="control-pill action-pill">
-          <button class="pill-btn" onclick="copyShareLink()" title="Copiar link para compartilhar">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-            Compartilhar
-          </button>
-          <button class="pill-btn" onclick="exportPDF()" title="Imprimir ou salvar em PDF">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;">
-              <polyline points="6 9 6 2 18 2 18 9"></polyline>
-              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-              <rect x="6" y="14" width="12" height="8"></rect>
-            </svg>
-            PDF
-          </button>
-          <button class="pill-btn" onclick="exportJSON()" title="Exportar dados do piloto em JSON">Exportar</button>
-        </div>
-
-        <!-- State Toggle: Preenchido / Vazio (Natural State: Vazio) -->
-        <div class="control-pill">
-          <button class="pill-btn" id="btn-mode-filled" onclick="setCanvasMode('filled')">Preenchido</button>
-          <button class="pill-btn active" id="btn-mode-empty" onclick="setCanvasMode('empty')">Vazio</button>
-        </div>
+      <div class="header-actions">
+        <a href="https://github.com/hsnlabs-ai" class="header-github-link" target="_blank" rel="noopener" title="View GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <span>hsnlabs</span>
+        </a>
+        <a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>
       </div>
     </div>
+  </header>
 
-    <!-- 2D Canvas Grid v0.4 -->
-    <div class="canvas-grid">
+  <!-- Main Section: Canvas Sheet -->
+  <main class="canvas-section">
+    <div class="container">
+      <div class="canvas-viewport-wrapper">
+        <div class="canvas-sheet" id="canvas-sheet">
+
+          <!-- Sheet Header: Title on Left, Controls on Right -->
+          <div class="sheet-header">
+            <div class="header-left">
+              <h1>
+                The Agentic Pilot Canvas
+                <span class="license-badge">MIT License</span>
+              </h1>
+            </div>
+
+            <div class="header-right">
+              <!-- Zoom, Fit & Minimalist Loupe -->
+              <div class="control-pill" title="Escala e Ajuste ao Viewport">
+                <button class="pill-btn zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
+                <span class="zoom-val" id="zoom-text">100%</span>
+                <button class="pill-btn zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
+                <button class="pill-btn fit-btn" onclick="fitCanvasToScreen()" title="Ajustar à Tela">FIT</button>
+                <button class="pill-btn icon-btn" id="btn-lupa" onclick="toggleLupa()" title="Lupa de Leitura [Atalho: Z]" aria-label="Lupa de Leitura">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Ações do Cliente -->
+              <div class="control-pill">
+                <button class="pill-btn" onclick="copyShareLink()" title="Copiar link para compartilhar">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 2px;">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                  Compartilhar
+                </button>
+                <button class="pill-btn" onclick="exportPDF()" title="Imprimir ou salvar em PDF">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 2px;">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg>
+                  PDF
+                </button>
+                <button class="pill-btn" onclick="exportJSON()" title="Exportar dados do piloto em JSON">Exportar</button>
+              </div>
+
+              <!-- State Toggle: Preenchido / Vazio (Natural State: Vazio) -->
+              <div class="control-pill">
+                <button class="pill-btn" id="btn-mode-filled" onclick="setCanvasMode('filled')">Preenchido</button>
+                <button class="pill-btn active" id="btn-mode-empty" onclick="setCanvasMode('empty')">Vazio</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2D Canvas Grid v0.4 (10 Blocos Metodológicos Preservados) -->
+<div class="canvas-grid">
 
       <!-- 1. PROCESSO ALVO & IMPACTO (Col 1, Row 1-2) -->
       <div class="c-box b-process">
@@ -1236,6 +1584,12 @@
 
 </div>
 
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modais de Leitura e Edição -->
 <!-- Floating Magnifier Loupe -->
 <div class="magnifier-loupe" id="magnifier-loupe">
   <div class="loupe-title" id="loupe-title">Lupa de Leitura</div>
@@ -1274,8 +1628,130 @@
   </div>
 </div>
 
+  <!-- Toast de Feedback -->
+  <div id="toast-notification">Link copiado para a área de transferência</div>
+
+  <!-- Footer Oficial HSN Labs -->
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;">
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 280px; margin: 0;">
+            Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">São Paulo</div>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0 0 8px 0;">
+            WeWork Av. Paulista<br>
+            Av. Paulista, 1374<br>
+            Bela Vista, São Paulo
+          </p>
+          <a href="mailto:hugo@hsnlabs.ai" style="font-size: 0.86rem; color: var(--ink); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
+            hugo@hsnlabs.ai
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navegação</div>
+          <ul class="footer-nav">
+            <li><a href="/pt/bootcamp/">Bootcamp de Agentes</a></li>
+            <li><a href="/pt/advisory/">Advisory</a></li>
+            <li><a href="/pt/playbooks/">Playbooks</a></li>
+            <li><a href="/pt/mcp/">Enterprise MCP</a></li>
+            <li><a href="/blog/pt/">Blog</a></li>
+            <li><a href="/pt/#contact">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-subscribe" style="min-width: 280px;">
+          <div class="footer-col-title">Stay Updated</div>
+          <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Notas de campo de arquitetura e playbooks no seu e-mail corporativo.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter HSN Labs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
+            <div style="display: flex; gap: 8px;">
+              <input type="email" name="email" placeholder="seu.email@empresa.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Assinar</button>
+            </div>
+          </form>
+
+          <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--hairline);">
+            <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between;">
+              <div style="display: flex; gap: 12px; align-items: center; min-width: 0;">
+                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 44px; height: 44px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;">
+                <div style="min-width: 0;">
+                  <div style="font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-top: 3px; display: flex; align-items: center; gap: 4px;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span><strong>1.600+</strong> assinantes</span>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Assinar [Agentes] x [a Gente] no LinkedIn" class="btn btn-outline" style="padding: 7px 12px; font-size: 0.82rem; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div style="font-size: 0.78rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
+              Fora do hype, discutimos como a engenharia agêntica multiplica e alavanca a capacidade laboral humana.
+            </div>
+          </div>
+          <div style="margin-top: 22px;">
+            <div class="footer-col-title" style="margin-bottom: 10px;">Connect</div>
+            <div class="footer-social-row">
+              <a href="https://github.com/orgs/hsnlabs-ai/" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+                            <a href="https://x.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="https://instagram.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@hsnlabs.ai" target="_blank" rel="noopener" class="footer-social-icon" title="TikTok">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
+              </a>
+              <a href="/blog/feed_rss_created.xml" target="_blank" rel="noopener" class="footer-social-icon" title="RSS Feed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>2026 HSN Labs. Todos os direitos reservados.</div>
+        <div class="footer-bottom-links">
+          <a href="/pt/privacy-policy/">Política de Privacidade</a>
+          <a href="/pt/modern-slavery-statement/">Declaração de Conformidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 <script>
-  let targetAreaId = '';
+let targetAreaId = '';
   let selectedColor = 'yellow';
   let currentZoom = 1.0;
   let isLupaActive = false;
@@ -1493,7 +1969,6 @@
     if (confirm('Deseja realmente remover este post-it do canvas?')) {
       activeReadingPostit.remove();
       activeReadingPostit = null;
-      saveCustomToStorage();
       const modal = document.getElementById('reading-modal');
       if (modal) modal.classList.remove('active');
     }
@@ -1624,7 +2099,6 @@
   }
 
   function setCanvasMode(mode) {
-    currentMode = mode;
     const btnFilled = document.getElementById('btn-mode-filled');
     const btnEmpty = document.getElementById('btn-mode-empty');
 
@@ -1635,8 +2109,7 @@
     } else {
       if (btnFilled) btnFilled.classList.remove('active');
       if (btnEmpty) btnEmpty.classList.add('active');
-      const savedData = loadCustomFromStorage();
-      renderPostits(savedData || null);
+      renderPostits(null);
     }
   }
 
@@ -1707,14 +2180,14 @@
 
     area.appendChild(postit);
     closeModal();
-    saveCustomToStorage();
   }
 
+  // Inicializar com o estado natural: vazio
+  window.addEventListener('DOMContentLoaded', () => {
+    setCanvasMode('empty');
+  });
 
-  // Chave de Armazenamento Local
-  const STORAGE_KEY = 'hsn_agentic_pilot_canvas_custom_v04';
-  let currentMode = 'empty';
-
+  // Toast
   function showToast(msg) {
     const toast = document.getElementById('toast-notification');
     if (!toast) return;
@@ -1742,6 +2215,29 @@
     window.print();
   }
 
+  // Fit to screen
+  function fitCanvasToScreen() {
+    const sheet = document.getElementById('canvas-sheet');
+    const container = document.querySelector('.container');
+    if (!sheet || !container) return;
+    
+    const availableWidth = container.clientWidth - 10;
+    const sheetWidth = 1140;
+    
+    if (availableWidth < sheetWidth) {
+      currentZoom = Math.max(0.6, Math.round((availableWidth / sheetWidth) * 10) / 10);
+    } else {
+      currentZoom = 1.0;
+    }
+    sheet.style.transform = `scale(${currentZoom})`;
+    const zoomText = document.getElementById('zoom-text');
+    if (zoomText) zoomText.innerText = `${Math.round(currentZoom * 100)}%`;
+    showToast(`Escala ajustada para ${Math.round(currentZoom * 100)}%`);
+  }
+
+  // LocalStorage Persistence
+  const STORAGE_KEY = 'hsn_agentic_pilot_canvas_custom_v04';
+
   function getCanvasDataFromDOM() {
     const data = {};
     document.querySelectorAll('.postit-area').forEach(area => {
@@ -1765,23 +2261,22 @@
   }
 
   function saveCustomToStorage() {
-    if (currentMode !== 'empty') return;
+    const btnEmpty = document.getElementById('btn-mode-empty');
+    if (!btnEmpty || !btnEmpty.classList.contains('active')) return;
     const data = getCanvasDataFromDOM();
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (e) {
-      console.warn('Não foi possível salvar no localStorage:', e);
+      console.warn('LocalStorage error:', e);
     }
   }
 
   function loadCustomFromStorage() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        return JSON.parse(raw);
-      }
+      if (raw) return JSON.parse(raw);
     } catch (e) {
-      console.warn('Erro ao carregar do localStorage:', e);
+      console.warn('LocalStorage load error:', e);
     }
     return null;
   }
@@ -1800,13 +2295,28 @@
     showToast('Arquivo JSON baixado com sucesso');
   }
 
-  // Inicializar com o estado natural: vazio
-  window.addEventListener('DOMContentLoaded', () => {
-    setCanvasMode('empty');
-  });
+  // Hook into setCanvasMode for storage
+  const origSetCanvasMode = setCanvasMode;
+  setCanvasMode = function(mode) {
+    origSetCanvasMode(mode);
+    if (mode === 'empty') {
+      const saved = loadCustomFromStorage();
+      if (saved) renderPostits(saved);
+    }
+  };
+
+  const origSavePostit = savePostit;
+  savePostit = function() {
+    origSavePostit();
+    saveCustomToStorage();
+  };
+
+  const origDelete = deleteCurrentPostit;
+  deleteCurrentPostit = function() {
+    origDelete();
+    saveCustomToStorage();
+  };
 </script>
 
-
-<div id="toast-notification">Link copiado para a área de transferência</div>
 </body>
 </html>
