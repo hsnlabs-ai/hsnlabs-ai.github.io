@@ -12,7 +12,6 @@ PAGES = [
     {"id": "mcp", "en": SITE_DIR / "mcp" / "index.html", "pt": SITE_DIR / "pt" / "mcp" / "index.html", "path_en": "/mcp/", "path_pt": "/pt/mcp/"},
     {"id": "privacy", "en": SITE_DIR / "privacy-policy" / "index.html", "pt": SITE_DIR / "pt" / "privacy-policy" / "index.html", "path_en": "/privacy-policy/", "path_pt": "/pt/privacy-policy/"},
     {"id": "compliance", "en": SITE_DIR / "modern-slavery-statement" / "index.html", "pt": SITE_DIR / "pt" / "modern-slavery-statement" / "index.html", "path_en": "/modern-slavery-statement/", "path_pt": "/pt/modern-slavery-statement/"},
-    {"id": "playbooks", "en": SITE_DIR / "playbooks" / "index.html", "pt": SITE_DIR / "pt" / "playbooks" / "index.html", "path_en": "/playbooks/", "path_pt": "/pt/playbooks/"},
 ]
 
 def test_gate_s1_structural_integrity():
@@ -177,7 +176,6 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "index.html",
         SITE_DIR / "bootcamp" / "index.html",
         SITE_DIR / "advisory" / "index.html",
-        SITE_DIR / "playbooks" / "index.html",
         SITE_DIR / "mcp" / "index.html",
         SITE_DIR / "privacy-policy" / "index.html",
         SITE_DIR / "modern-slavery-statement" / "index.html",
@@ -188,7 +186,6 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "pt" / "index.html",
         SITE_DIR / "pt" / "bootcamp" / "index.html",
         SITE_DIR / "pt" / "advisory" / "index.html",
-        SITE_DIR / "pt" / "playbooks" / "index.html",
         SITE_DIR / "pt" / "mcp" / "index.html",
         SITE_DIR / "pt" / "privacy-policy" / "index.html",
         SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
