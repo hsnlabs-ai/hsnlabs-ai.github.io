@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Agentic Pilot Canvas — HSN Labs</title>
+  <meta name="description" content="Framework aberto sob licença MIT para desenho de arquitetura de pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF.">
+  <link rel="canonical" href="https://hsnlabs.ai/pt/canvas/">
+  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/canvas/">
+  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/canvas/">
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/canvas/">
+  <meta property="og:title" content="The Agentic Pilot Canvas — HSN Labs">
+  <meta property="og:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que sobrevivem à produção e superam a barreira do POC.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hsnlabs.ai/canvas/">
+  <meta name="twitter:title" content="The Agentic Pilot Canvas — HSN Labs">
+  <meta name="twitter:description" content="Framework aberto sob licença MIT para estruturar pilotos de IA que sobrevivem à produção e superam a barreira do POC.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+
+  <!-- Favicons Oficiais HSN Labs -->
+  <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* HSN Labs Editorial Design Tokens */
+      --canvas: #f5f5f5;
+      --surface-card: #ffffff;
+      --ink: #0c0a09;
+      --primary: #292524;
+      --body: #4e4e4e;
+      --muted: #8c827a;
+      --hairline: #e7e5e4;
+      --hairline-strong: #0c0a09;
+      
+      /* Post-it colors */
+      --postit-yellow: #fef9c3;
+      --postit-yellow-border: #fef08a;
+      --postit-blue: #e0f2fe;
+      --postit-blue-border: #bae6fd;
+      --postit-pink: #ffe4e6;
+      --postit-pink-border: #fecdd3;
+      --postit-green: #dcfce7;
+      --postit-green-border: #bbf7d0;
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-hand: 'Nanum Pen Script', 'Caveat', 'Segoe Script', cursive, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* THE CANVAS SHEET */
+    .canvas-sheet {
+      background: var(--surface-card);
+      border: 2px solid var(--hairline-strong);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Header Bar: Minimalist with Company & Date on Left, Controls on Right */
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--hairline-strong);
+      gap: 16px;
+    }
+
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .header-left h1 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .license-badge {
+      font-family: var(--font-sans);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+      border: 1px solid var(--hairline-strong);
+      padding: 2px 7px;
+      border-radius: 2px;
+      background: var(--surface-card);
+      line-height: 1.2;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Minimalist Control Pills */
+    .control-pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--hairline-strong);
+      background: var(--surface-card);
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .pill-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-family: var(--font-sans);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      padding: 5px 11px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      line-height: 1;
+    }
+
+    .pill-btn.icon-btn {
+      padding: 5px 8px;
+    }
+
+    .pill-btn.zoom-btn {
+      padding: 5px 8px;
+      font-size: 11px;
+    }
+
+    .pill-btn.active {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .pill-btn:hover:not(.active) {
+      color: var(--ink);
+      background: var(--canvas);
+    }
+
+    .zoom-val {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 0 4px;
+      min-width: 32px;
+      text-align: center;
+      user-select: none;
+    }
+
+    /* Magnifier Loupe Floating Display */
+    .magnifier-loupe {
+      position: fixed;
+      width: 290px;
+      border-radius: 6px;
+      border: 2px solid var(--ink);
+      background: #ffffff;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28), 0 2px 8px rgba(0, 0, 0, 0.08);
+      pointer-events: none;
+      display: none;
+      z-index: 3000;
+      padding: 14px 16px;
+      box-sizing: border-box;
+      transform: translate(-50%, -125%);
+    }
+
+    .magnifier-loupe.active {
+      display: block;
+    }
+
+    .loupe-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .loupe-body {
+      font-size: 14.5px;
+      line-height: 1.35;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 500;
+    }
+
+    .loupe-body em {
+      color: #78716c;
+      font-size: 12.5px;
+      display: block;
+      margin-top: 5px;
+      font-style: normal;
+    }
+
+    /* ===================================================
+       THE 2D CANVAS GRID v0.4 (Human-Aligned Cognitive Flow)
+       =================================================== */
+    .canvas-grid {
+      display: grid;
+      grid-template-columns: 18% 23% 17% 19% 23%;
+      grid-template-rows: minmax(185px, auto) minmax(410px, 1fr) minmax(230px, auto);
+      border: 2px solid var(--hairline-strong);
+      border-top: none;
+      background: var(--hairline-strong);
+      gap: 1px;
+    }
+
+    /* Canvas Box */
+    .c-box {
+      background: var(--surface-card);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Grid Position Mappings v0.4 */
+    /* 1. Processo Alvo & Dor Real (Col 1, Row 1-2) */
+    .b-process {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+
+    /* 2. Provocação Determinística (Col 2, Row 1 - Compacto) */
+    .b-deterministic {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    /* 3. Legados, conexão e dados (Col 2, Row 2 - Expandido) */
+    .b-legacy {
+      grid-column: 2;
+      grid-row: 2;
+      background: #fdfdfd;
+    }
+
+    /* 4. Ontologia Operacional (CENTER, Col 3, Row 1-2) */
+    .b-ontology {
+      grid-column: 3;
+      grid-row: 1 / 3;
+      background: #fdfdfd;
+    }
+
+    /* 5. Human in the loop (Col 4, Row 1) */
+    .b-governance {
+      grid-column: 4;
+      grid-row: 1;
+    }
+
+    /* 6. Governança e Compliance (Col 4, Row 2) */
+    .b-compliance {
+      grid-column: 4;
+      grid-row: 2;
+    }
+
+    /* 7. Sabotadores (Col 5, Row 1 - Compacto) */
+    .b-saboteurs {
+      grid-column: 5;
+      grid-row: 1;
+    }
+
+    /* 8. Harness (Col 5, Row 2 - Expandido) */
+    .b-harness,
+    .b-tokenomics {
+      grid-column: 5;
+      grid-row: 2;
+      background: #fdfdfd;
+    }
+
+    /* 9. Ancoragem de valor e ROI (Col 1-2, Row 3 - Base Expandida) */
+    .b-roi {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      background: #fdfdfd;
+    }
+
+    /* 10. Do sucesso do piloto ao rollout (Col 3-5, Row 3 - Base Expandida) */
+    .b-rollout {
+      grid-column: 3 / 6;
+      grid-row: 3;
+      background: #fdfdfd;
+    }
+
+    /* Box Header */
+    .box-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 6px;
+    }
+
+    .box-title-group h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--ink);
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .box-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Minimalist '+' Add Button */
+    .btn-add {
+      background: transparent;
+      border: 1px solid var(--hairline);
+      color: var(--muted);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      padding: 0;
+      user-select: none;
+    }
+
+    .btn-add:hover {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .box-icon {
+      width: 19px;
+      height: 19px;
+      color: var(--primary);
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    /* Guiding Questions */
+    .box-questions {
+      color: var(--muted);
+      font-size: 9.5px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .box-questions p {
+      margin-bottom: 2px;
+    }
+
+    .box-questions p strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .q-hint {
+      color: #948b83;
+      font-size: 8.5px;
+      line-height: 1.35;
+      margin-top: 1px;
+      margin-bottom: 6px !important;
+      padding-left: 2px;
+    }
+
+    /* Tighter spacing in blocks 3 & 8 for optimal breathing room */
+    .b-legacy .box-questions p,
+    .b-harness .box-questions p {
+      margin-bottom: 2px;
+    }
+    .b-legacy .q-hint,
+    .b-harness .q-hint {
+      margin-bottom: 4px !important;
+    }
+
+    /* Empty Work Area */
+    .postit-area {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 8px;
+      min-height: 110px;
+      position: relative;
+    }
+
+    /* Post-it Notes: Pure Square with Paper Texture */
+    .postit {
+      width: 104px;
+      height: 104px;
+      aspect-ratio: 1 / 1;
+      padding: 8px 6px;
+      font-family: var(--font-hand);
+      color: #1c1917;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      word-break: break-word;
+      overflow: hidden;
+      border-radius: 1px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      
+      /* Authentic Paper Texture */
+      background-image: 
+        linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.03) 100%),
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.015) 0%, transparent 80%);
+      box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.07),
+        0 3px 8px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      border-top: 3px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* Post-its for Bloco 1 & Bloco 4: positioned close to text, not vertically centered */
+    .b-process .postit-area,
+    .b-ontology .postit-area {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      padding-top: 14px;
+    }
+
+    .b-process .postit,
+    .b-ontology .postit {
+      width: 132px;
+      height: 132px;
+      padding: 9px 8px;
+    }
+
+    /* Three-Card Geometry for Bloco 3 & Bloco 8 (Expanded Space) */
+    .b-legacy .postit-area,
+    .b-harness .postit-area {
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      align-content: flex-start;
+      padding-top: 10px;
+    }
+
+    .b-legacy .postit,
+    .b-harness .postit {
+      width: 102px;
+      height: 102px;
+      padding: 7px 6px;
+    }
+
+    .b-roi .postit,
+    .b-rollout .postit {
+      width: 104px;
+      height: 104px;
+    }
+
+    .postit:hover {
+      transform: scale(1.08) rotate(0deg) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      z-index: 20;
+    }
+
+    .postit.yellow {
+      background-color: var(--postit-yellow);
+      border-top-color: #fde047;
+    }
+
+    .postit.blue {
+      background-color: var(--postit-blue);
+      border-top-color: #7dd3fc;
+    }
+
+    .postit.pink {
+      background-color: var(--postit-pink);
+      border-top-color: #fda4af;
+    }
+
+    .postit.green {
+      background-color: var(--postit-green);
+      border-top-color: #86efac;
+    }
+
+    /* Sheet Footer (Single Minimalist Line) */
+    .sheet-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 2px solid var(--hairline-strong);
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.3px;
+    }
+
+    /* Modal Styling */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(2px);
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #fff;
+      border: 2px solid var(--hairline-strong);
+      width: 340px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--ink);
+    }
+
+    .modal-textarea {
+      width: 100%;
+      height: 85px;
+      padding: 10px;
+      font-family: var(--font-hand);
+      font-size: 17px;
+      border: 1px solid var(--hairline);
+      resize: none;
+      outline: none;
+      color: #1c1917;
+    }
+
+    .modal-textarea:focus {
+      border-color: var(--ink);
+    }
+
+    .modal-colors {
+      display: flex;
+      gap: 8px;
+    }
+
+    .color-swatch {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .color-swatch.selected {
+      border: 2px solid var(--ink);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .btn-modal {
+      background: transparent;
+      border: 1px solid var(--hairline);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 12px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-modal:hover {
+      background: var(--canvas);
+    }
+
+    .btn-modal.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    /* Presentation Fullscreen / Large Reading Modal */
+    .reading-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(12, 10, 9, 0.65);
+      backdrop-filter: blur(5px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 5000;
+      padding: 24px;
+      animation: fadeInModal 0.16s ease-out;
+    }
+
+    .reading-modal-overlay.active {
+      display: flex;
+    }
+
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes scaleUpCard {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .reading-card-container {
+      width: 90%;
+      max-width: 660px;
+      min-height: 320px;
+      max-height: 85vh;
+      padding: 38px 44px;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 4px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.15);
+      animation: scaleUpCard 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      word-break: break-word;
+      border-top: 8px solid rgba(0, 0, 0, 0.12);
+      overflow-y: auto;
+    }
+
+    .reading-card-container.yellow {
+      background: #fef9c3;
+      border-top-color: #eab308;
+      color: #1c1917;
+    }
+
+    .reading-card-container.blue {
+      background: #e0f2fe;
+      border-top-color: #0284c7;
+      color: #0c2a40;
+    }
+
+    .reading-card-container.pink {
+      background: #fce7f3;
+      border-top-color: #db2777;
+      color: #3b0724;
+    }
+
+    .reading-card-container.green {
+      background: #dcfce7;
+      border-top-color: #16a34a;
+      color: #052e16;
+    }
+
+    .reading-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.06);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 15px;
+      color: #44403c;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .reading-close-btn:hover {
+      background: rgba(0, 0, 0, 0.15);
+      color: #000;
+    }
+
+    .reading-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      opacity: 0.7;
+      margin-bottom: 16px;
+      font-family: var(--font-sans);
+    }
+
+    .reading-card-body {
+      font-family: var(--font-hand);
+      font-size: 26px;
+      line-height: 1.35;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 12px 0;
+    }
+
+    .reading-card-body strong {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 10px;
+      opacity: 0.85;
+    }
+
+    .reading-card-body em {
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .reading-card-footer {
+      font-size: 11px;
+      font-family: var(--font-sans);
+      opacity: 0.45;
+      text-align: right;
+      user-select: none;
+    }
+
+    .reading-delete-btn {
+      background: transparent;
+      border: none;
+      color: rgba(0, 0, 0, 0.4);
+      font-size: 11px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 3px;
+      transition: all 0.15s ease;
+    }
+
+    .reading-delete-btn:hover {
+      color: #dc2626;
+      background: rgba(220, 38, 38, 0.08);
+    }
+
+    @media (max-width: 1100px) {
+      .canvas-grid {
+        grid-template-columns: 1fr;
+      }
+      .b-process, .b-deterministic, .b-legacy, .b-ontology,
+      .b-governance, .b-compliance, .b-saboteurs, .b-harness, .b-roi, .b-rollout {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+      }
+    }
+  
+    /* Print Styles for PDF Export */
+    @media print {
+      body {
+        padding: 0 !important;
+        background: #ffffff !important;
+      }
+      .page-container {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .canvas-sheet {
+        box-shadow: none !important;
+        border: 1px solid #d1d5db !important;
+        width: 100% !important;
+        padding: 16px 20px !important;
+      }
+      .sheet-header .header-right,
+      .btn-add,
+      .modal-overlay,
+      .magnifier-loupe,
+      #toast-notification,
+      .sheet-footer,
+      .action-pill {
+        display: none !important;
+      }
+      .postit {
+        box-shadow: none !important;
+        border: 1px solid rgba(0, 0, 0, 0.15) !important;
+      }
+      @page {
+        size: landscape;
+        margin: 8mm;
+      }
+    }
+
+    /* Toast Notification */
+    #toast-notification {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 9999;
+    }
+    #toast-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Footer Institucional Discreto */
+    .sheet-footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .sheet-footer a {
+      color: var(--body);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+    .sheet-footer a:hover {
+      border-bottom-color: var(--body);
+      color: var(--ink);
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="page-container">
+
+  <!-- THE CANVAS SHEET (v0.4 Human-Aligned & Minimalist) -->
+  <div class="canvas-sheet" id="canvas-sheet">
+
+    <!-- Header: Title + Org on Left with MIT License badge, Discrete Controls on Right -->
+    <div class="sheet-header">
+      <div class="header-left">
+        <h1>
+          The Agentic Pilot Canvas • <a href="/" style="color: inherit; text-decoration: none;" title="Página Inicial HSN Labs">HSN Labs — hsnlabs.ai</a>
+          <span class="license-badge">MIT License</span>
+        </h1>
+      </div>
+
+      <div class="header-right">
+        <!-- Zoom & Minimalist Icon Loupe -->
+        <div class="control-pill" title="Zoom e Lupa">
+          <button class="pill-btn zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
+          <span class="zoom-val" id="zoom-text">100%</span>
+          <button class="pill-btn zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
+          <button class="pill-btn icon-btn" id="btn-lupa" onclick="toggleLupa()" title="Lupa de Leitura [Atalho: Z]" aria-label="Lupa de Leitura">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Ações do Cliente: Compartilhar, Exportar PDF, Limpar -->
+        <div class="control-pill action-pill">
+          <button class="pill-btn" onclick="copyShareLink()" title="Copiar link para compartilhar">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+            </svg>
+            Compartilhar
+          </button>
+          <button class="pill-btn" onclick="exportPDF()" title="Imprimir ou salvar em PDF">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            PDF
+          </button>
+          <button class="pill-btn" onclick="exportJSON()" title="Exportar dados do piloto em JSON">Exportar</button>
+        </div>
+
+        <!-- State Toggle: Preenchido / Vazio (Natural State: Vazio) -->
+        <div class="control-pill">
+          <button class="pill-btn" id="btn-mode-filled" onclick="setCanvasMode('filled')">Preenchido</button>
+          <button class="pill-btn active" id="btn-mode-empty" onclick="setCanvasMode('empty')">Vazio</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2D Canvas Grid v0.4 -->
+    <div class="canvas-grid">
+
+      <!-- 1. PROCESSO ALVO & IMPACTO (Col 1, Row 1-2) -->
+      <div class="c-box b-process">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              1. Processo Alvo & Impacto
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-process', '1. Processo Alvo & Impacto')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>1.1 O Processo Manual:</strong> Qual trabalho manual repetitivo mais consome o tempo da equipe no fluxo atual e qual o resultado ideal quando concluído?</p>
+          <p class="q-hint"><em>Exemplos comparando o fluxo atual AS-IS com o desejado TO-BE: triagem de 500 currículos, digitação de faturas no ERP, enriquecer leads no CRM.</em></p>
+          <p><strong>1.2 Gargalo & Sintomas:</strong> Onde o fluxo trava e quais os sintomas visíveis dessa sobrecarga?</p>
+          <p class="q-hint"><em>Ex: Horas extras recorrentes no fechamento, erros manuais de digitação, analistas agindo como digitadores.</em></p>
+        </div>
+        <div class="postit-area" id="area-process"></div>
+      </div>
+
+      <!-- 2. IMPACTO NÃO DETERMINÍSTICO (Col 2, Row 1) -->
+      <div class="c-box b-deterministic">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              2. Impacto não determinístico
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-deterministic', '2. Impacto não determinístico')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>2.1 Teste de Sanidade:</strong> Esse processo realmente exige a flexibilidade de um agente ou o risco não tolera margem de incerteza?</p>
+          <p class="q-hint"><em>Exemplos para avaliar se precisa de IA: Cálculos fiscais e folha exigem código determinístico; interpretar e-mails caóticos e conciliar dados exige IA.</em></p>
+          <p><strong>2.2 Raio de Destruição:</strong> Se o agente falhar, qual o estrago interno financeiro ou emocional e o prejuízo externo para clientes e mercado?</p>
+          <p class="q-hint"><em>Exemplos de blast radius e impacto emocional: Ansiedade da equipe, sensação de desumanização, medo de queimar leads, multas e clientes VIP irritados.</em></p>
+        </div>
+        <div class="postit-area" id="area-deterministic"></div>
+      </div>
+
+      <!-- 3. LEGADOS, CONEXÃO E DADOS (Col 2, Row 2) -->
+      <div class="c-box b-legacy">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+              3. Legados, conexão e dados
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-legacy', '3. Legados, conexão e dados')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>3.1 Onde os Dados Moram:</strong> Em quais sistemas, planilhas ou e-mails as informações desse processo estão guardadas hoje?</p>
+          <p class="q-hint"><em>Exemplos: SAP S/4HANA no módulo MM, TOTVS, Salesforce, planilhas mestras no Drive ou contratos em PDF.</em></p>
+          <p><strong>3.2 Dinâmica de Acesso:</strong> Como a equipe acessa esses dados no dia a dia e com que frequência eles são atualizados?</p>
+          <p class="q-hint"><em>Ex: Consulta diária via tela, APIs, ou exportação de CSV; isolamento em réplica read-only no staging D1.</em></p>
+          <p><strong>3.3 Engenharia Reversa como Oportunidade:</strong> Quais regras ocultas em planilhas ou sistemas antigos podemos auditar para virar documentação viva?</p>
+          <p class="q-hint"><em>Ex: Mapear 30 stored procedures legadas ou macros antigas do Excel para transformá-las em código tipado.</em></p>
+        </div>
+        <div class="postit-area" id="area-legacy"></div>
+      </div>
+
+      <!-- 4. ONTOLOGIA OPERACIONAL (CENTER, Col 3, Row 1-2) -->
+      <div class="c-box b-ontology">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="6 3 18 3 22 9 12 22 2 9"></polygon>
+              </svg>
+              4. Ontologia Operacional
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-ontology', '4. Ontologia Operacional')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>4.1 Objetos do Mundo Real:</strong> Quais são os itens centrais desse trabalho que o agente precisa reconhecer para entender a operação?</p>
+          <p class="q-hint"><em>Ex. RH: Colaborador, Vaga, Avaliação. Finanças: Fatura, PedidoCompra, Fornecedor. Vendas: Lead, Oportunidade.</em></p>
+          <p><strong>4.2 Ações Tipadas & Invariantes:</strong> Quais as únicas ações que o agente pode executar e qual regra nunca pode ser violada?</p>
+          <p class="q-hint"><em>Exemplos de ações tipadas: ClassificarDiscrepancia, NotificarGestor. Invariante: agente nunca roda SQL livre nem paga direto.</em></p>
+        </div>
+        <div class="postit-area" id="area-ontology"></div>
+      </div>
+
+      <!-- 5. HUMAN IN THE LOOP (Col 4, Row 1) -->
+      <div class="c-box b-governance">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              5. Human in the loop
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-governance', '5. Human in the loop')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>5.1 Limiares de Bloqueio:</strong> Em quais situações de valor, risco ou incerteza o agente é proibido de agir sozinho e deve pedir aprovação?</p>
+          <p class="q-hint"><em>Ex: Confiança do modelo < 95%; valores > R$ 500 em faturas; demissões/promoções em RH; clientes VIP com risco de cancelamento.</em></p>
+          <p><strong>5.2 Responsabilidade no CPF:</strong> Quem é a pessoa responsável por avaliar e bater o martelo formal nas exceções que o agente sinalizar?</p>
+          <p class="q-hint"><em>Ex: Card com 1 clique de aprovação no Teams/Slack. A máquina processa, mas o gestor assina a decisão no CPF.</em></p>
+        </div>
+        <div class="postit-area" id="area-governance"></div>
+      </div>
+
+      <!-- 6. GOVERNANÇA E COMPLIANCE (Col 4, Row 2) -->
+      <div class="c-box b-compliance">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="11" width="18" height="11" rx="0" ry="0"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              6. Governança e Compliance
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-compliance', '6. Governança e Compliance')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>6.1 Sigilo & LGPD:</strong> Quais dados confidenciais ou sensíveis das pessoas e da empresa não podem vazar de forma alguma?</p>
+          <p class="q-hint"><em>Ex: CPF, salários, dados médicos ou bancários mascarados antes da inferência, com retenção zero para treino.</em></p>
+          <p><strong>6.2 Tracing Imutável:</strong> Como a empresa vai auditar e comprovar o histórico de cada ação e raciocínio que o agente realizou?</p>
+          <p class="q-hint"><em>Ex: Trilha OpenTelemetry gravando hash, timestamp e prompt para reconstituir qualquer transação em auditorias.</em></p>
+        </div>
+        <div class="postit-area" id="area-compliance"></div>
+      </div>
+
+      <!-- 7. SABOTADORES (Col 5, Row 1) -->
+      <div class="c-box b-saboteurs">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+              </svg>
+              7. Sabotadores
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-saboteurs', '7. Sabotadores')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>7.1 Medos & Perda Política:</strong> Quem na organização pode sentir receio de perder espaço, equipe, relevância ou controle?</p>
+          <p class="q-hint"><em>Ex: Analistas com medo de demissão; gestores com receio de perder tamanho de time; TI com medo de Shadow IT.</em></p>
+          <p><strong>7.2 Framing Anti-Sabotagem:</strong> Como reposicionar o projeto para transformar céticos em patrocinadores ativos da solução?</p>
+          <p class="q-hint"><em>Ex: Vender o agente como estagiário digital de trabalho repetitivo e colocar a TI como guardiã da governança no comitê.</em></p>
+        </div>
+        <div class="postit-area" id="area-saboteurs"></div>
+      </div>
+
+      <!-- 8. HARNESS (Col 5, Row 2) -->
+      <div class="c-box b-harness">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              8. Harness
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-harness', '8. Harness')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>8.1 Runtime & Ferramentas:</strong> Quais ferramentas, telas e permissões o agente precisa ter para conseguir trabalhar?</p>
+          <p class="q-hint"><em>Ex: OCR de PDFs especializado, conector seguro de banco de dados, sandbox Docker isolada e integração Slack/Teams.</em></p>
+          <p><strong>8.2 Memória & Contexto:</strong> Onde e como o agente guardará a memória das conversas e o histórico das tarefas já feitas?</p>
+          <p class="q-hint"><em>Ex: Gerenciamento de janela de contexto, histórico de transações e memória vetorial para consulta a manuais de regras.</em></p>
+          <p><strong>8.3 Evals & Testes Contínuos:</strong> Quais testes práticos provarão que o agente está calibrado e sem regressões antes do deploy?</p>
+          <p class="q-hint"><em>Ex: Bateria automatizada com 200 casos reais desafiadores rodada a cada atualização de prompt ou modelo.</em></p>
+        </div>
+        <div class="postit-area" id="area-harness"></div>
+      </div>
+
+      <!-- 9. ANCORAGEM DE VALOR E ROI (Col 1-2, Row 3) -->
+      <div class="c-box b-roi">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              9. Ancoragem de valor e ROI
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-roi', '9. Ancoragem de valor e ROI')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>9.1 Diagnóstico do Dual Bleed:</strong> Quanto a empresa queima hoje na soma de salários/horas extras com licenças de softwares?</p>
+          <p class="q-hint"><em>Ex: 12 analistas x R$ 8.500/mês + R$ 15.000 em horas extras + R$ 14.000 em softwares satélites legados.</em></p>
+          <p><strong>9.2 Economia Líquida na DRE:</strong> Quais custos reais serão cortados imediatamente após descontar os custos de IA?</p>
+          <p class="q-hint"><em>Ex: Economia de R$ 98k/mês MENOS R$ 16k de infraestrutura = R$ 82k/mês líquido auditável pelo CFO.</em></p>
+          <p><strong>9.3 Prazo de Payback do Piloto:</strong> Em quantos meses o valor investido no projeto precisa se pagar para ser um sucesso financeiro?</p>
+          <p class="q-hint"><em>Ex: Investimento inicial de R$ 120k amortizado em apenas 45 a 60 dias de operação produtiva.</em></p>
+        </div>
+        <div class="postit-area" id="area-roi"></div>
+      </div>
+
+      <!-- 10. DO SUCESSO DO PILOTO AO ROLLOUT (Col 3-5, Row 3) -->
+      <div class="c-box b-rollout">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>
+              <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+              10. Do sucesso do piloto ao rollout
+            </h2>
+          </div>
+          <div class="box-actions">
+            <button class="btn-add" title="Adicionar Post-it" onclick="openAddModal('b-rollout', '10. Do sucesso do piloto ao rollout')">+</button>
+          </div>
+        </div>
+        <div class="box-questions">
+          <p><strong>10.1 Meta de Sucesso no Sandbox:</strong> Qual meta clara de resolução e acurácia definirá que o piloto deu certo no D5?</p>
+          <p class="q-hint"><em>Ex: 75% a 80% de resolução autônoma ponta a ponta com zero erro nas regras determinísticas.</em></p>
+          <p><strong>10.2 Aval Executivo dos Co-Autores:</strong> Quem são os líderes que precisam dar o aval final para considerar o teste validado?</p>
+          <p class="q-hint"><em>Ex: Parecer assinado conjuntamente pelo Head de Operações/RH, Arquiteto de TI e Controller.</em></p>
+          <p><strong>10.3 Gatilho Contratual de Produção:</strong> Qual é o gatilho combinado para liberar a implantação definitiva para toda a empresa?</p>
+          <p class="q-hint"><em>Exemplos: Atingida a acurácia combinada no sandbox, o orçamento de rollout de R$ 120k é destravado automaticamente.</em></p>
+        </div>
+        <div class="postit-area" id="area-rollout"></div>
+      </div>
+
+    </div>
+
+    <!-- Sheet Footer: Single Minimalist Line -->
+    <div class="sheet-footer">
+      <span>The Agentic Pilot Canvas • HSN Labs — hsnlabs.ai</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Floating Magnifier Loupe -->
+<div class="magnifier-loupe" id="magnifier-loupe">
+  <div class="loupe-title" id="loupe-title">Lupa de Leitura</div>
+  <div class="loupe-body" id="loupe-body"></div>
+</div>
+
+<!-- Large Presentation Reading Modal for Post-it Cards -->
+<div class="reading-modal-overlay" id="reading-modal" onclick="closeReadingModal(event)">
+  <div class="reading-card-container" id="reading-card" onclick="event.stopPropagation()">
+    <button class="reading-close-btn" onclick="closeReadingModal()" title="Fechar (Esc)">✕</button>
+    <div class="reading-badge" id="reading-badge">Post-it Ampliado</div>
+    <div class="reading-card-body" id="reading-body"></div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 10px;">
+      <button class="reading-delete-btn" onclick="deleteCurrentPostit()" title="Excluir este post-it do canvas">Excluir Post-it</button>
+      <div class="reading-card-footer">Clique fora ou pressione ESC para fechar</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal to add new Post-it -->
+<div class="modal-overlay" id="modal-postit" onclick="if(event.target===this) closeModal()">
+  <div class="modal-card">
+    <div class="modal-title" id="modal-box-title">Adicionar Post-it</div>
+    <textarea class="modal-textarea" id="modal-text" placeholder="Escreva a anotação aqui..."></textarea>
+    <div style="font-size: 10px; color: var(--muted); text-transform: uppercase;">Cor do Post-it:</div>
+    <div class="modal-colors">
+      <div class="color-swatch selected" style="background: var(--postit-yellow);" onclick="selectColor('yellow', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-blue);" onclick="selectColor('blue', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-pink);" onclick="selectColor('pink', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-green);" onclick="selectColor('green', this)"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-modal" onclick="closeModal()">Cancelar</button>
+      <button class="btn-modal primary" onclick="savePostit()">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let targetAreaId = '';
+  let selectedColor = 'yellow';
+  let currentZoom = 1.0;
+  let isLupaActive = false;
+
+  const BLOCK_DEFAULT_COLORS = {
+    'b-process': 'yellow',
+    'b-deterministic': 'yellow',
+    'b-ontology': 'yellow',
+    'b-legacy': 'blue',
+    'b-harness': 'blue',
+    'b-governance': 'pink',
+    'b-compliance': 'pink',
+    'b-saboteurs': 'pink',
+    'b-roi': 'green',
+    'b-rollout': 'green'
+  };
+
+  const FILLED_DATA = {
+    // 1. PROCESSO ALVO & IMPACTO (2 perguntas -> 2 cards GRANDES e detalhados)
+    'area-process': [
+      { 
+        text: '<strong>1.1 AS-IS vs TO-BE:</strong><br>Triagem e resposta manual de 1.800 chamados/mês sobre benefícios, férias, 13º e ponto no Teams.<br><em>Meta TO-BE:</em> Resposta em segundos com simulação precisa em tempo real.', 
+        color: 'yellow' 
+      },
+      { 
+        text: '<strong>1.2 Gargalo Operacional:</strong><br>6 analistas de RH gastam 65% do dia como digitadores entre o TOTVS RM e tickets, gerando fila de espera de 4 dias e erros frequentes em cálculos de férias.', 
+        color: 'yellow' 
+      }
+    ],
+
+    // 2. IMPACTO NÃO DETERMINÍSTICO (2 perguntas -> 2 cards detalhados)
+    'area-deterministic': [
+      { 
+        text: '<strong>2.1 Teste de Sanidade:</strong><br>Interpretar dúvidas em linguagem natural e correlacionar com políticas exige IA.<br><em>Cálculo de folha e rescisão:</em> Roda estritamente em código determinístico.', 
+        color: 'yellow' 
+      },
+      { 
+        text: '<strong>2.2 Blast Radius & Impactos:</strong><br><em>Emocional:</em> Ansiedade e desconfiança de colaboradores sobre férias/salário.<br><em>Risco Externo:</em> Passivo trabalhista caso informe cálculo rescisório ou FGTS errado.', 
+        color: 'yellow' 
+      }
+    ],
+
+    // 3. LEGADOS, CONEXÃO E DADOS (3 perguntas -> 3 cards detalhados)
+    'area-legacy': [
+      { 
+        text: '<strong>3.1 Onde os Dados Moram:</strong><br>HCMs legados — TOTVS RM, Senior, ADP — e 15 políticas internas em PDFs no Sharepoint.', 
+        color: 'blue' 
+      },
+      { 
+        text: '<strong>3.2 Dinâmica de Acesso:</strong><br>Consultas via telas do TOTVS e export diário para réplica read-only no staging D1 em PostgreSQL.', 
+        color: 'blue' 
+      },
+      { 
+        text: '<strong>3.3 Engenharia Reversa:</strong><br>Mapear e tipar regras de 15 PDFs e 12 stored procedures antigas de adicionais e dissídio.', 
+        color: 'blue' 
+      }
+    ],
+
+    // 4. ONTOLOGIA OPERACIONAL (2 perguntas -> 2 cards GRANDES e detalhados)
+    'area-ontology': [
+      { 
+        text: '<strong>4.1 Objetos do Mundo Real:</strong><br>Colaborador, SolicitacaoFerias, EspelhoPonto, Holerite, BeneficioPlano, PoliticaInterna, OcorrenciaPonto.', 
+        color: 'yellow' 
+      },
+      { 
+        text: '<strong>4.2 Ações Tipadas & Invariantes:</strong><br>ConsultarSaldo [id], SimularFerias [id], AbrirTicket [id].<br><em>Invariante:</em> Agente é read-only; proibido rodar SQL livre ou alterar folha direto.', 
+        color: 'yellow' 
+      }
+    ],
+
+    // 5. HUMAN IN THE LOOP (2 perguntas -> 2 cards detalhados)
+    'area-governance': [
+      { 
+        text: '<strong>5.1 Limiares de Bloqueio:</strong><br>Afastamentos médicos, rescisões, divergências de salário na folha ou confiança < 90% travam na hora.', 
+        color: 'pink' 
+      },
+      { 
+        text: '<strong>5.2 Decisão no CPF:</strong><br>Business Partner do RH recebe card interativo no Teams e assina a decisão final no CPF em 1 clique.', 
+        color: 'pink' 
+      }
+    ],
+
+    // 6. GOVERNANÇA E COMPLIANCE (2 perguntas -> 2 cards detalhados)
+    'area-compliance': [
+      { 
+        text: '<strong>6.1 Sigilo & LGPD:</strong><br>Mascaramento obrigatório de CPF, dados médicos e salários antes de inferência; retenção zero para treino.', 
+        color: 'pink' 
+      },
+      { 
+        text: '<strong>6.2 Tracing Imutável:</strong><br>Trilha OpenTelemetry registrando hash imutável, prompt, tabelas consultadas e resposta para auditorias.', 
+        color: 'pink' 
+      }
+    ],
+
+    // 7. SABOTADORES (2 perguntas -> 2 cards detalhados)
+    'area-saboteurs': [
+      { 
+        text: '<strong>7.1 Medos & Perda Política:</strong><br>Analistas com receio de demissão e gestores com receio de desumanização no atendimento.', 
+        color: 'pink' 
+      },
+      { 
+        text: '<strong>7.2 Framing Anti-Sabotagem:</strong><br>Agente posicionado como "copiloto de triagem", liberando o RH para acolhimento e desenvolvimento.', 
+        color: 'pink' 
+      }
+    ],
+
+    // 8. HARNESS (3 perguntas -> 3 cards detalhados)
+    'area-harness': [
+      { 
+        text: '<strong>8.1 Runtime & Tools:</strong><br>Scaffolding isolado com conector MCP para HCMs, parser estruturado de políticas e integração Teams.', 
+        color: 'blue' 
+      },
+      { 
+        text: '<strong>8.2 Memória & Contexto:</strong><br>Janela de diálogo delimitada, memória semântica vetorial de regras e isolamento estrito por sessão.', 
+        color: 'blue' 
+      },
+      { 
+        text: '<strong>8.3 Evals de Regressão:</strong><br>Bateria automatizada de 250 conversas reais desafiadoras executada a cada ajuste de prompt.', 
+        color: 'blue' 
+      }
+    ],
+
+    // 9. ANCORAGEM DE VALOR E ROI (3 perguntas -> 3 cards detalhados)
+    'area-roi': [
+      { 
+        text: '<strong>9.1 Diagnóstico Dual Bleed:</strong><br>R$ 85k/mês em horas operacionais de analistas de RH + R$ 18k/mês em licenças de tickets legados.', 
+        color: 'green' 
+      },
+      { 
+        text: '<strong>9.2 Economia Líquida na DRE:</strong><br>R$ 74k/mês de economia líquida comprovada — descontando R$ 29k de infraestrutura, LLM e suporte —.', 
+        color: 'green' 
+      },
+      { 
+        text: '<strong>9.3 Prazo de Payback:</strong><br>Investimento inicial de R$ 120k no piloto amortizado integralmente em 50 dias de operação produtiva.', 
+        color: 'green' 
+      }
+    ],
+
+    // 10. DO SUCESSO DO PILOTO AO ROLLOUT (3 perguntas -> 3 cards detalhados)
+    'area-rollout': [
+      { 
+        text: '<strong>10.1 Meta de Sucesso D5:</strong><br>Taxa de resolução autônoma ≥ 80% das dúvidas com zero alucinação ou erro em regras no sandbox.', 
+        color: 'green' 
+      },
+      { 
+        text: '<strong>10.2 Aval dos Co-Autores:</strong><br>Parecer assinado conjuntamente pelo VP de Gente & Gestão, Arquiteto Corporativo e Gerente de DP.', 
+        color: 'green' 
+      },
+      { 
+        text: '<strong>10.3 Gatilho de Produção:</strong><br>Atingida a meta no D5, destrava automaticamente a liberação do agente para os 4.000 colaboradores.', 
+        color: 'green' 
+      }
+    ]
+  };
+
+  function zoomCanvas(delta) {
+    currentZoom = Math.min(1.5, Math.max(0.7, Math.round((currentZoom + delta) * 10) / 10));
+    const sheet = document.getElementById('canvas-sheet');
+    const zoomText = document.getElementById('zoom-text');
+    if (sheet) {
+      sheet.style.transform = `scale(${currentZoom})`;
+      sheet.style.transformOrigin = 'top center';
+    }
+    if (zoomText) {
+      zoomText.innerText = `${Math.round(currentZoom * 100)}%`;
+    }
+  }
+
+  function toggleLupa() {
+    isLupaActive = !isLupaActive;
+    const btn = document.getElementById('btn-lupa');
+    const loupe = document.getElementById('magnifier-loupe');
+    if (isLupaActive) {
+      if (btn) btn.classList.add('active');
+      document.body.style.cursor = 'crosshair';
+    } else {
+      if (btn) btn.classList.remove('active');
+      if (loupe) loupe.classList.remove('active');
+      document.body.style.cursor = 'default';
+    }
+  }
+
+  let activeReadingPostit = null;
+
+  function openReadingModal(text, color, blockTitle, postitEl) {
+    const modal = document.getElementById('reading-modal');
+    const card = document.getElementById('reading-card');
+    const body = document.getElementById('reading-body');
+    const badge = document.getElementById('reading-badge');
+
+    if (!modal || !card || !body) return;
+
+    activeReadingPostit = postitEl || null;
+
+    card.className = 'reading-card-container ' + (color || 'yellow');
+    body.innerHTML = text;
+    if (badge) {
+      badge.innerText = blockTitle ? blockTitle.toUpperCase() : 'POST-IT EM DESTAQUE';
+    }
+
+    modal.classList.add('active');
+  }
+
+  function closeReadingModal(e) {
+    if (e && e.target && e.target.id !== 'reading-modal' && !e.target.classList.contains('reading-close-btn')) {
+      return;
+    }
+    const modal = document.getElementById('reading-modal');
+    if (modal) modal.classList.remove('active');
+    activeReadingPostit = null;
+  }
+
+  function deleteCurrentPostit() {
+    if (!activeReadingPostit) return;
+    if (confirm('Deseja realmente remover este post-it do canvas?')) {
+      activeReadingPostit.remove();
+      activeReadingPostit = null;
+      saveCustomToStorage();
+      const modal = document.getElementById('reading-modal');
+      if (modal) modal.classList.remove('active');
+    }
+  }
+
+  // Tecla 'z' ativa lupa, 'Esc' fecha modais
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const readingModal = document.getElementById('reading-modal');
+      if (readingModal && readingModal.classList.contains('active')) {
+        readingModal.classList.remove('active');
+        activeReadingPostit = null;
+        return;
+      }
+      closeModal();
+      return;
+    }
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'z' || e.key === 'Z') {
+      toggleLupa();
+    }
+  });
+
+  // Rastreamento para exibir a lupa flutuante
+  document.addEventListener('mousemove', (e) => {
+    if (!isLupaActive) return;
+    const loupe = document.getElementById('magnifier-loupe');
+    const loupeTitle = document.getElementById('loupe-title');
+    const loupeBody = document.getElementById('loupe-body');
+    if (!loupe || !loupeBody) return;
+
+    const target = document.elementFromPoint(e.clientX, e.clientY);
+    if (!target) return;
+
+    const questionP = target.closest('.box-questions p');
+    const postit = target.closest('.postit');
+    const boxTitle = target.closest('.box-title-group h2');
+
+    if (questionP) {
+      loupe.classList.add('active');
+      loupeTitle.innerText = 'Pergunta em Destaque';
+      loupeBody.innerHTML = questionP.innerHTML;
+      positionLoupe(e, loupe);
+    } else if (postit) {
+      loupe.classList.add('active');
+      loupeTitle.innerText = 'Post-it Ampliado';
+      loupeBody.innerHTML = postit.innerHTML;
+      positionLoupe(e, loupe);
+    } else if (boxTitle) {
+      loupe.classList.add('active');
+      loupeTitle.innerText = 'Bloco Metodológico';
+      loupeBody.innerHTML = `<strong>${boxTitle.innerText}</strong>`;
+      positionLoupe(e, loupe);
+    } else {
+      loupe.classList.remove('active');
+    }
+  });
+
+  function positionLoupe(e, loupe) {
+    const x = e.clientX;
+    const y = e.clientY;
+    const loupeWidth = 290;
+    const loupeHeight = 120;
+    
+    let top = y - 18;
+    let left = x;
+    if (y < 150) {
+      top = y + loupeHeight + 25;
+    }
+    if (left < loupeWidth / 2 + 10) {
+      left = loupeWidth / 2 + 10;
+    } else if (left > window.innerWidth - loupeWidth / 2 - 10) {
+      left = window.innerWidth - loupeWidth / 2 - 10;
+    }
+    loupe.style.left = `${left}px`;
+    loupe.style.top = `${top}px`;
+  }
+
+  function calculateFontSize(text, isLarge) {
+    const clean = text.replace(/<[^>]*>/g, '').trim();
+    const len = clean.length;
+    if (isLarge) {
+      if (len <= 75) return { fontSize: '15px', lineHeight: '1.2' };
+      if (len <= 115) return { fontSize: '13px', lineHeight: '1.22' };
+      if (len <= 165) return { fontSize: '11.5px', lineHeight: '1.25' };
+      return { fontSize: '10.5px', lineHeight: '1.25' };
+    } else {
+      if (len <= 55) return { fontSize: '13.5px', lineHeight: '1.18' };
+      if (len <= 85) return { fontSize: '11.5px', lineHeight: '1.2' };
+      if (len <= 125) return { fontSize: '10px', lineHeight: '1.22' };
+      if (len <= 160) return { fontSize: '9px', lineHeight: '1.25' };
+      return { fontSize: '8.5px', lineHeight: '1.25' };
+    }
+  }
+
+  function renderPostits(data) {
+    document.querySelectorAll('.postit-area').forEach(area => {
+      area.innerHTML = '';
+    });
+    if (!data) return;
+
+    for (const [areaId, items] of Object.entries(data)) {
+      const area = document.getElementById(areaId);
+      if (!area) continue;
+
+      const isLarge = areaId === 'area-process' || areaId === 'area-ontology';
+
+      items.forEach((item, idx) => {
+        const postit = document.createElement('div');
+        const rot = (idx % 2 === 0 ? -1.2 : 1.4).toFixed(1);
+        postit.className = `postit ${item.color}`;
+        postit.style.transform = `rotate(${rot}deg)`;
+        
+        const { fontSize, lineHeight } = calculateFontSize(item.text, isLarge);
+        postit.style.fontSize = fontSize;
+        postit.style.lineHeight = lineHeight;
+        
+        postit.innerHTML = `<span>${item.text}</span>`;
+        postit.onclick = function(e) {
+          e.stopPropagation();
+          const blockBox = postit.closest('.c-box');
+          const blockTitle = blockBox ? (blockBox.querySelector('.box-title-group h2') ? blockBox.querySelector('.box-title-group h2').innerText.trim() : '') : '';
+          openReadingModal(item.text, item.color, blockTitle, postit);
+        };
+        area.appendChild(postit);
+      });
+    }
+  }
+
+  function setCanvasMode(mode) {
+    currentMode = mode;
+    const btnFilled = document.getElementById('btn-mode-filled');
+    const btnEmpty = document.getElementById('btn-mode-empty');
+
+    if (mode === 'filled') {
+      if (btnFilled) btnFilled.classList.add('active');
+      if (btnEmpty) btnEmpty.classList.remove('active');
+      renderPostits(FILLED_DATA);
+    } else {
+      if (btnFilled) btnFilled.classList.remove('active');
+      if (btnEmpty) btnEmpty.classList.add('active');
+      const savedData = loadCustomFromStorage();
+      renderPostits(savedData || null);
+    }
+  }
+
+  function openAddModal(boxClass, boxTitle) {
+    const areaMap = {
+      'b-process': 'area-process',
+      'b-deterministic': 'area-deterministic',
+      'b-legacy': 'area-legacy',
+      'b-ontology': 'area-ontology',
+      'b-governance': 'area-governance',
+      'b-compliance': 'area-compliance',
+      'b-saboteurs': 'area-saboteurs',
+      'b-tokenomics': 'area-harness',
+      'b-harness': 'area-harness',
+      'b-roi': 'area-roi',
+      'b-rollout': 'area-rollout'
+    };
+    targetAreaId = areaMap[boxClass] || '';
+    if (!targetAreaId) return;
+
+    const defColor = BLOCK_DEFAULT_COLORS[boxClass] || 'yellow';
+    selectColor(defColor, document.querySelector(`.color-swatch[onclick*="${defColor}"]`));
+
+    document.getElementById('modal-box-title').innerText = boxTitle;
+    document.getElementById('modal-text').value = '';
+    document.getElementById('modal-postit').classList.add('active');
+    document.getElementById('modal-text').focus();
+  }
+
+  function closeModal() {
+    document.getElementById('modal-postit').classList.remove('active');
+  }
+
+  function selectColor(color, el) {
+    selectedColor = color;
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+    if (el) el.classList.add('selected');
+  }
+
+  function savePostit() {
+    const text = document.getElementById('modal-text').value.trim();
+    if (!text || !targetAreaId) {
+      closeModal();
+      return;
+    }
+
+    const area = document.getElementById(targetAreaId);
+    if (!area) return;
+
+    const postit = document.createElement('div');
+    const rot = (Math.random() * 3 - 1.5).toFixed(1);
+    postit.className = `postit ${selectedColor}`;
+    postit.style.transform = `rotate(${rot}deg)`;
+    
+    const isLarge = targetAreaId === 'area-process' || targetAreaId === 'area-ontology';
+    const { fontSize, lineHeight } = calculateFontSize(text, isLarge);
+    postit.style.fontSize = fontSize;
+    postit.style.lineHeight = lineHeight;
+    
+    postit.innerHTML = `<span>${text.replace(/\n/g, '<br>')}</span>`;
+
+    postit.onclick = function(e) {
+      e.stopPropagation();
+      const blockBox = postit.closest('.c-box');
+      const blockTitle = blockBox ? (blockBox.querySelector('.box-title-group h2') ? blockBox.querySelector('.box-title-group h2').innerText.trim() : '') : '';
+      openReadingModal(text.replace(/\n/g, '<br>'), selectedColor, blockTitle, postit);
+    };
+
+    area.appendChild(postit);
+    closeModal();
+    saveCustomToStorage();
+  }
+
+
+  // Chave de Armazenamento Local
+  const STORAGE_KEY = 'hsn_agentic_pilot_canvas_custom_v04';
+  let currentMode = 'empty';
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast-notification');
+    if (!toast) return;
+    toast.innerText = msg;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+
+  function copyShareLink() {
+    const url = 'https://hsnlabs.ai/canvas/';
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link copiado: https://hsnlabs.ai/canvas/');
+      }).catch(() => {
+        prompt('Copie o link do Canvas:', url);
+      });
+    } else {
+      prompt('Copie o link do Canvas:', url);
+    }
+  }
+
+  function exportPDF() {
+    window.print();
+  }
+
+  function getCanvasDataFromDOM() {
+    const data = {};
+    document.querySelectorAll('.postit-area').forEach(area => {
+      const areaId = area.id;
+      const items = [];
+      area.querySelectorAll('.postit').forEach(p => {
+        let color = 'yellow';
+        if (p.classList.contains('blue')) color = 'blue';
+        else if (p.classList.contains('pink')) color = 'pink';
+        else if (p.classList.contains('green')) color = 'green';
+        
+        const span = p.querySelector('span');
+        const text = span ? span.innerHTML.replace(/<br>/g, '\n') : p.innerText;
+        items.push({ color, text });
+      });
+      if (items.length > 0) {
+        data[areaId] = items;
+      }
+    });
+    return data;
+  }
+
+  function saveCustomToStorage() {
+    if (currentMode !== 'empty') return;
+    const data = getCanvasDataFromDOM();
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+      console.warn('Não foi possível salvar no localStorage:', e);
+    }
+  }
+
+  function loadCustomFromStorage() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        return JSON.parse(raw);
+      }
+    } catch (e) {
+      console.warn('Erro ao carregar do localStorage:', e);
+    }
+    return null;
+  }
+
+  function exportJSON() {
+    const data = getCanvasDataFromDOM();
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'agentic-pilot-canvas.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('Arquivo JSON baixado com sucesso');
+  }
+
+  // Inicializar com o estado natural: vazio
+  window.addEventListener('DOMContentLoaded', () => {
+    setCanvasMode('empty');
+  });
+</script>
+
+
+<div id="toast-notification">Link copiado para a área de transferência</div>
+</body>
+</html>

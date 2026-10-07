@@ -53,6 +53,15 @@
       "title_pt": "Hugo S. Nascimento — Arquitetura de Agentes Enterprise",
       "description_en": "Essays and field notes on enterprise AI architectures and business ontologies.",
       "description_pt": "Ensaios e notas de campo sobre arquiteturas de agentes enterprise e ontologias."
+    },
+    {
+      "id": "site_canvas",
+      "en_path": "/canvas/",
+      "pt_path": "/pt/canvas/",
+      "title_en": "The Agentic Pilot Canvas | HSN Labs",
+      "title_pt": "The Agentic Pilot Canvas | HSN Labs",
+      "description_en": "Open MIT architecture framework for designing enterprise agent pilots that survive production.",
+      "description_pt": "Framework aberto de arquitetura para desenhar pilotos de agentes enterprise que sobrevivem à produção."
     }
   ],
   "blog_posts": [
