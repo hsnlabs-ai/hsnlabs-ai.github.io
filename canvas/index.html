@@ -77,14 +77,18 @@
     }
 
     .page-container {
+      width: 100%;
       max-width: 1380px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     /* THE CANVAS SHEET */
     .canvas-sheet {
+      min-width: 1180px;
       background: var(--surface-card);
       border: 2px solid var(--hairline-strong);
       padding: 24px;
@@ -812,16 +816,7 @@
       background: rgba(220, 38, 38, 0.08);
     }
 
-    @media (max-width: 1100px) {
-      .canvas-grid {
-        grid-template-columns: 1fr;
-      }
-      .b-process, .b-deterministic, .b-legacy, .b-ontology,
-      .b-governance, .b-compliance, .b-saboteurs, .b-harness, .b-roi, .b-rollout {
-        grid-column: 1 !important;
-        grid-row: auto !important;
-      }
-    }
+    /* Preserva layout canvas 2D mesmo em viewports menores */
   
     /* Print Styles for PDF Export */
     @media print {
