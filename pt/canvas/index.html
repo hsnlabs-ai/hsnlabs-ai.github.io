@@ -518,7 +518,61 @@
       color: #0284c7;
     }
 
+    
+    /* Unified Zoom Control Pill (Identical to Homepage Blueprint) */
+    .zoom-control-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .zoom-btn {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      border-radius: 0 !important;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .zoom-btn:hover {
+      background: var(--canvas);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
     .zoom-val {
+      min-width: 44px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      padding: 0;
+      text-align: center;
+      user-select: none;
+    }
+
+    .legacy-zoom-val {
       font-family: var(--font-sans);
       font-size: 11px;
       font-weight: 600;
@@ -1317,10 +1371,10 @@
 
             <div class="header-right">
               <!-- Zoom: - 100% + -->
-              <div class="control-pill" title="Zoom">
-                <button class="pill-btn zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
+              <div class="control-pill zoom-control-pill" title="Zoom">
+                <button type="button" class="zoom-btn" onclick="zoomCanvas(-0.1)" title="Diminuir Zoom">−</button>
                 <span class="zoom-val" id="zoom-text">100%</span>
-                <button class="pill-btn zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
+                <button type="button" class="zoom-btn" onclick="zoomCanvas(0.1)" title="Aumentar Zoom">+</button>
               </div>
 
               <!-- Ações do Cliente -->

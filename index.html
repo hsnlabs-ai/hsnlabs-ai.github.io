@@ -1474,36 +1474,54 @@
       top: 14px;
       right: 14px;
       display: flex;
-      gap: 6px;
+      align-items: center;
+      gap: 4px;
       z-index: 20;
       background: rgba(255, 255, 255, 0.95);
       border: 1px solid var(--hairline);
       border-radius: 0 !important;
-      padding: 4px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      padding: 3px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
       backdrop-filter: blur(8px);
     }
+
     .blueprint-btn {
-      width: 34px;
-      height: 34px;
+      width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--surface);
+      background: #ffffff;
       border: 1px solid var(--hairline);
       border-radius: 0 !important;
       color: var(--ink);
       font-family: var(--font-sans);
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease;
       padding: 0;
+      line-height: 1;
     }
+
     .blueprint-btn:hover {
       background: var(--canvas);
       border-color: var(--cyan);
       color: var(--cyan);
+    }
+
+    .blueprint-val {
+      min-width: 44px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      user-select: none;
     }
     .blueprint-btn svg {
       display: block;
@@ -1791,15 +1809,9 @@
           <!-- Interactive Blueprint Viewport -->
           <div class="blueprint-viewport" id="blueprintViewport" draggable="false" tabindex="0" aria-label="Interactive Architecture Blueprint">
             <div class="blueprint-controls">
-              <button type="button" class="blueprint-btn" id="bpZoomIn" title="Zoom in" aria-label="Zoom in">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-              </button>
-              <button type="button" class="blueprint-btn" id="bpZoomOut" title="Zoom out" aria-label="Zoom out">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-              </button>
-              <button type="button" class="blueprint-btn" id="bpFullscreen" title="Toggle fullscreen" aria-label="Toggle fullscreen">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-              </button>
+              <button type="button" class="blueprint-btn" id="bpZoomOut" title="Zoom out" aria-label="Zoom out">−</button>
+              <span class="blueprint-val" id="bpZoomVal">100%</span>
+              <button type="button" class="blueprint-btn" id="bpZoomIn" title="Zoom in" aria-label="Zoom in">+</button>
             </div>
 
             <div class="blueprint-canvas-wrap">
@@ -2263,6 +2275,10 @@
 
       function updateTransform() {
         canvas.style.transform = 'translate3d(' + panX + 'px, ' + panY + 'px, 0) scale(' + scale + ')';
+        var valEl = document.getElementById('bpZoomVal');
+        if (valEl) {
+          valEl.innerText = Math.round(scale * 100) + '%';
+        }
       }
 
       function initView() {
