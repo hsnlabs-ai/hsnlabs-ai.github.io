@@ -224,6 +224,33 @@ def test_gate_s9_footer_consistency():
         
     print(f"PASS: Gate S9 Paridade Estrita de Rodape validada nas {len(en_pages)} rotas EN e {len(pt_pages)} rotas PT")
 
+def test_gate_s10_language_leak_detection():
+    print("--- Gate S10: Detector de Vazamento de Idioma (Language Leak) ---")
+    en_leaks_forbidden = [
+        "Agentic Engineering Adoption",
+        "Operational transition to enterprise agents without disrupting legacy systems",
+        "Why Agents Fail",
+        "Most enterprise AI agents break when exposed to messy company data",
+        "Regulated Enterprise Verticals",
+        "Talk to our architecture team to see if your systems are ready",
+    ]
+    for item in PAGES:
+        pt_content = item["pt"].read_text(encoding="utf-8")
+        for leak in en_leaks_forbidden:
+            assert leak not in pt_content, f"ERRO: Vazamento de ingles detectado em {item['pt']}: '{leak}'"
+    print("PASS: Gate S10 Nenhum vazamento de idioma detectado em rotas PT")
+
+def test_gate_s11_section_parity():
+    print("--- Gate S11: Paridade Estrutural de Secoes (Section Parity) ---")
+    en_content = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    pt_content = (SITE_DIR / "pt" / "index.html").read_text(encoding="utf-8")
+    
+    en_sections = re.findall(r'<section[^>]*\sid="([^"]+)"', en_content)
+    pt_sections = re.findall(r'<section[^>]*\sid="([^"]+)"', pt_content)
+    
+    assert en_sections == pt_sections, f"ERRO: Descompasso de secoes entre EN e PT!\nEN: {en_sections}\nPT: {pt_sections}"
+    print(f"PASS: Gate S11 Paridade de secoes validada com sucesso: {en_sections}")
+
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
     test_gate_s1_structural_integrity()
@@ -235,4 +262,6 @@ if __name__ == "__main__":
     test_gate_s7_metadata_localization()
     test_gate_s8_portuguese_accentuation()
     test_gate_s9_footer_consistency()
-    print("=== TODAS AS 9 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
+    test_gate_s10_language_leak_detection()
+    test_gate_s11_section_parity()
+    print("=== TODAS AS 11 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")

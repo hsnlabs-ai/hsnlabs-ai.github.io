@@ -53,6 +53,13 @@ def clean_html_body_text_only(html: str) -> str:
 
     return html
 
+def safe_replace(html: str, old: str, new: str, required: bool = True) -> str:
+    if old not in html:
+        if required:
+            raise AssertionError(f"CRITICAL i18n BUILD FAILURE: Translation key not found in source HTML:\n{repr(old)}")
+        return html
+    return html.replace(old, new)
+
 def localize_common_pt_components(html: str) -> str:
     # 1. Cookie consent banner
     old_cookie_pattern = r'<div class="cookie-banner" id="cookieBanner"[\s\S]*?</div>\s*</div>'
@@ -141,43 +148,33 @@ def build_pt_home():
     dest = dest_dir / "index.html"
     
     html = src.read_text(encoding="utf-8")
-    html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace(
-        '<title>Boutique | Agentic AI - hsn labs</title>',
-        '<title>Boutique | Arquitetura de Agentes de IA — HSN Labs</title>'
-    )
-    html = html.replace(
-        '<meta property="og:url" content="https://hsnlabs.ai/">',
-        '<meta property="og:url" content="https://hsnlabs.ai/pt/">'
-    )
-    html = html.replace(
-        '<meta property="og:title" content="HSN Labs — Accelerate Enterprise AI Agent Adoption">',
-        '<meta property="og:title" content="HSN Labs — Acelere a Adoção de Agentes de IA Enterprise">'
-    )
-    html = html.replace(
-        '<meta property="og:description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
-        '<meta property="og:description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
-    )
-    html = html.replace(
-        '<meta name="twitter:title" content="HSN Labs — Accelerate Enterprise AI Agent Adoption">',
-        '<meta name="twitter:title" content="HSN Labs — Acelere a Adoção de Agentes de IA Enterprise">'
-    )
-    html = html.replace(
-        '<meta name="twitter:description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
-        '<meta name="twitter:description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
-    )
-    html = html.replace('<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
-    html = html.replace(
-        '<meta name="description" content="Bridge the gap between AI strategy and live operations without disrupting legacy systems.">',
-        '<meta name="description" content="Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.">'
-    )
+    html = safe_replace(html, '<html lang="en">', '<html lang="pt-BR">')
     
+    # 1. Title and Head Meta Tags
+    html = safe_replace(html, '<title>Agentic Engineering Adoption | HSN Labs</title>', '<title>Adoção de Engenharia Agêntica | HSN Labs</title>')
+    html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
+    html = safe_replace(html, '<meta property="og:title" content="HSN Labs — Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs — Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta property="og:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta property="og:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
+    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs — Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs — Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta name="twitter:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="twitter:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
+    html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
+    html = safe_replace(html, '<meta name="description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
+    
+    # Hreflangs
     hreflangs = '''  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/">
   <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/">'''
     html = re.sub(r'\s*<link rel="alternate" hreflang="[^"]+" href="[^"]+">', '', html)
     html = re.sub(r'(<link rel="canonical" href="[^"]+">)', r'\1\n' + hreflangs, html)
     
+    # Schema.org JSON-LD description
+    html = safe_replace(
+        html,
+        '"description": "An engineering lab with over five years of shipping AI products and resilient agent architectures in production."',
+        '"description": "Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção."'
+    )
+    
+    # Nav Menu
     old_nav_pattern = r'<div class="nav-menu" style="[^"]*">.*?</div>'
     new_nav = '''<div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/pt/advisory" class="nav-link">Advisory</a>
@@ -186,71 +183,87 @@ def build_pt_home():
       </div>'''
     html = re.sub(old_nav_pattern, new_nav, html, flags=re.DOTALL)
     
-    html = html.replace('<a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>', '<a href="/pt/bootcamp" class="btn btn-primary">Aplicar para o Bootcamp</a>')
+    # 2. Hero Section
+    html = safe_replace(
+        html,
+        '''      <h1 class="display-hero">
+        Agentic Engineering <span style="color: var(--cyan-text);">Adoption.</span>
+      </h1>''',
+        '''      <h1 class="display-hero">
+        Adoção de <span style="color: var(--cyan-text);">Engenharia Agêntica.</span>
+      </h1>'''
+    )
+    html = safe_replace(
+        html,
+        'Operational transition to enterprise agents without disrupting legacy systems or business rules.',
+        'Transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.'
+    )
+    html = safe_replace(html, '<a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>', '<a href="/pt/bootcamp" class="btn btn-primary">Aplicar para o Bootcamp</a>')
+    html = safe_replace(html, '>Contact Us<', '>Fale Conosco<')
+    html = safe_replace(html, '>Our Portfolio<', '>Nosso Portfólio<')
     
-    html = html.replace(
-        '<span class="hero-title-lead">Accelerate Enterprise</span>',
-        '<span class="hero-title-lead">Acelere a Adoção</span>'
-    )
-    html = html.replace(
-        '<span class="hero-title-sub" style="color: var(--cyan-text);">Agentic AI adoption.</span>',
-        '<span class="hero-title-sub" style="color: var(--cyan-text);">de IA agêntica enterprise.</span>'
-    )
-    html = html.replace(
-        'Bridge the gap between AI strategy and live operations without disrupting legacy systems.',
-        'Conecte a estratégia de IA à operação real sem travar os sistemas legados da companhia.'
-    )
-    html = html.replace('>Contact Us<', '>Fale Conosco<')
-    html = html.replace('>Our Portfolio<', '>Nosso Portfólio<')
-    
-    html = html.replace('>Why Agents Fail<', '>Por Que Agentes Falham<')
-    html = html.replace(
+    # 3. Services / Bento Grid
+    html = safe_replace(html, '>Why Agents Fail<', '>Por Que Agentes Falham<')
+    html = safe_replace(
+        html,
         'Most enterprise AI agents break when exposed to messy company data, complex compliance, and strict business rules.',
         'A maioria dos agentes corporativos quebra ao lidar com dados legados sujos, regras estritas de conformidade e integridade relacional.'
     )
-    html = html.replace('>Legacy and Fragmented Data<', '>Legado e Dados Fragmentados<')
-    html = html.replace(
+    html = safe_replace(html, '>Legacy and Fragmented Data<', '>Legado e Dados Fragmentados<')
+    html = safe_replace(
+        html,
         'Legacy ERPs, disconnected databases, and unstructured silos break standard LLMs. Without domain-adapted data pipelines and strict schema normalization, models fail to read or sync corporate state accurately.',
         'A maioria dos agentes quebra ao lidar com ERPs legados, bancos desconectados e silos não estruturados. Sem pipelines adaptados e normalização estrita de esquemas, modelos falham na leitura e sincronização de dados corporativos.'
     )
-    html = html.replace('>Static Ontology<', '>Ontologia Estática<')
-    html = html.replace(
+    html = safe_replace(html, '>Static Ontology<', '>Ontologia Estática<')
+    html = safe_replace(
+        html,
         'Hardcoded schemas and rigid prompts collapse when real-world operations shift. Without dynamic business ontologies that mirror evolving processes, agents lose context, misroute actions, and execute on stale assumptions.',
         'Esquemas rígidos e prompts estáticos quebram quando a operação real evolui. Sem ontologias dinâmicas de negócio que acompanhem os processos, agentes perdem contexto, desviam rotas e operam sob premissas desatualizadas.'
     )
-    html = html.replace('>Governance &amp; Compliance<', '>Governança e Compliance<')
-    html = html.replace(
+    html = safe_replace(html, '>Governance &amp; Compliance<', '>Governança e Compliance<')
+    html = safe_replace(
+        html,
         'Probabilistic models cannot guarantee transactional integrity. Without deterministic code-level guards, strict audit logs, and compliance boundaries, hallucinations cause regulatory exposure, fines, and data leaks.',
         'Modelos probabilísticos não garantem integridade transacional. Sem guardas de código determinísticas, auditoria estrita e limites de conformidade, alucinações geram riscos regulatórios, multas e vazamento de dados.'
     )
-    html = html.replace('>Complex Enterprise ADLC<', '>ADLC Enterprise Complexo<')
-    html = html.replace(
+    html = safe_replace(html, '>Complex Enterprise ADLC<', '>ADLC Enterprise Complexo<')
+    html = safe_replace(
+        html,
         'The Agentic Development Life Cycle — ADLC — introduces a rigorous spec-driven layer over the deterministic enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
         'O ciclo de vida de desenvolvimento de agentes — ADLC — introduz uma camada spec-driven rigorosa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
     )
     
-    html = html.replace('placeholder="Your Name"', 'placeholder="Seu Nome"')
-    html = html.replace('placeholder="name@company.com"', 'placeholder="seu.email@empresa.com"')
-    html = html.replace('placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
-    html = html.replace('placeholder="Acme Corp"', 'placeholder="Nome da Empresa"')
-    html = html.replace('placeholder="Tell us about your current databases, ERPs, or the workflow you want to solve."', 'placeholder="Conte-nos sobre seus bancos de dados, ERPs ou o fluxo de trabalho que deseja resolver."')
-    html = html.replace('placeholder="What are you looking to build or automate?"', 'placeholder="O que voce precisa construir ou automatizar?"')
-    html = html.replace('Select annual revenue', 'Selecione a faixa de receita')
-    html = html.replace('Annual Revenue', 'Receita Anual')
-    html = html.replace('Full Name', 'Nome Completo')
-    html = html.replace('Work Email', 'E-mail Corporativo')
-    html = html.replace('Company Name', 'Nome da Empresa')
-    html = html.replace('What do you want to build or automate?', 'O que voce deseja construir ou automatizar?')
-    html = html.replace('Under 10M USD', 'Abaixo de 10M USD')
-    html = html.replace('10M to 50M USD', '10M a 50M USD')
-    html = html.replace('50M to 250M USD', '50M a 250M USD')
-    html = html.replace('Above 250M USD', 'Acima de 250M USD')
-    html = html.replace(
+    # 4. Blueprint card controls & specs
+    html = safe_replace(html, 'title="Zoom in" aria-label="Zoom in"', 'title="Aproximar zoom" aria-label="Aproximar zoom"')
+    html = safe_replace(html, 'title="Zoom out" aria-label="Zoom out"', 'title="Afastar zoom" aria-label="Afastar zoom"')
+    html = safe_replace(html, 'title="Toggle fullscreen" aria-label="Toggle fullscreen"', 'title="Alternar tela cheia" aria-label="Alternar tela cheia"')
+    html = safe_replace(html, 'alt="HSN Labs Enterprise Agentic Architecture Diagram"', 'alt="Diagrama de Arquitetura Agêntica Enterprise da HSN Labs"')
+    html = safe_replace(html, 'alt="HSN Labs Enterprise Agentic Architecture Preview"', 'alt="Prévia da Arquitetura Agêntica Enterprise da HSN Labs"')
+    html = safe_replace(html, '<span>Explore Fullscreen Architecture ↗</span>', '<span>Explorar Arquitetura em Tela Cheia ↗</span>')
+    html = safe_replace(html, '<h4>HSN Labs Enterprise Agentic Architecture Components</h4>', '<h4>Componentes da Arquitetura Agêntica Enterprise da HSN Labs</h4>')
+    
+    # 5. Form & Contact Section
+    html = safe_replace(html, 'placeholder="Your Name"', 'placeholder="Seu Nome"')
+    html = safe_replace(html, 'placeholder="name@company.com"', 'placeholder="seu.email@empresa.com"')
+    html = safe_replace(html, 'placeholder="Company Inc"', 'placeholder="Nome da Empresa"')
+    html = safe_replace(html, 'placeholder="Tell us about your current databases, ERPs, or the workflow you want to solve."', 'placeholder="Conte-nos sobre seus bancos de dados, ERPs ou o fluxo de trabalho que deseja resolver."')
+    html = safe_replace(html, 'Select annual revenue', 'Selecione a faixa de receita')
+    html = safe_replace(html, 'Annual Revenue', 'Receita Anual')
+    html = safe_replace(html, 'Full Name', 'Nome Completo')
+    html = safe_replace(html, 'Work Email', 'E-mail Corporativo')
+    html = safe_replace(html, 'Company Name', 'Nome da Empresa')
+    html = safe_replace(html, 'What do you want to build or automate?', 'O que voce deseja construir ou automatizar?')
+    html = safe_replace(html, 'Under 10M USD', 'Abaixo de 10M USD')
+    html = safe_replace(html, '10M to 50M USD', '10M a 50M USD')
+    html = safe_replace(html, '50M to 250M USD', '50M a 250M USD')
+    html = safe_replace(html, 'Above 250M USD', 'Acima de 250M USD')
+    html = safe_replace(
+        html,
         'Talk to our architecture team to see if your systems are ready for production deep agents.',
         'Converse com nossa equipe de arquitetura para validar a prontidão dos seus sistemas para agentes de produção.'
     )
     html = re.sub(r'>\s*Send Message\s*<', '>Enviar Mensagem<', html)
-    html = html.replace('>Send Message<', '>Enviar Mensagem<')
     
     html = localize_common_pt_components(html)
     html = clean_html_body_text_only(html)
