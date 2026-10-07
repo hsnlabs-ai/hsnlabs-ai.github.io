@@ -694,4 +694,22 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/buy-versus-build-b2b-enterprise-crm/" />
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/" />
   </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
+  </url>
 </urlset>

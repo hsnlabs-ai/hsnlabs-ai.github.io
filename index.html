@@ -746,38 +746,6 @@
       }
     }
 
-    .card-vertical {
-      padding: 0;
-      overflow: hidden;
-    }
-
-    .vertical-img-wrap {
-      width: 100%;
-      height: 180px;
-      overflow: hidden;
-      background: var(--canvas-soft);
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .vertical-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.35s ease;
-    }
-
-    .card-vertical:hover .vertical-img {
-      transform: scale(1.04);
-    }
-
-    .vertical-content {
-      padding: 28px 24px 32px 24px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
     /* CONTACT / SCOPING CARD: UNIFIED PAPER TEXTURE + 90-DEGREE CUT */
     .scoping-card {
       background: var(--surface-card);
@@ -1878,56 +1846,8 @@
     </div>
   </section>
 
-<!-- VERTICALS -->
-  <section class="section-block" id="verticals">
-    <div class="container" style="text-align: center;">
-      <h2 class="display-section">Regulated Enterprise Verticals</h2>
-      <p class="section-lead">
-        Built for complex operations where mistakes carry real financial or regulatory costs.
-      </p>
-
-      <div class="card-grid-3">
-        <div class="card card-vertical">
-          <div class="vertical-img-wrap">
-            <img src="/assets/verticals/bfsi.jpg" alt="Banking and Capital" class="vertical-img">
-          </div>
-          <div class="vertical-content">
-            <h3 class="card-title">Banking and Capital</h3>
-            <p class="card-body">
-              LLMs cannot touch balances directly. We combine strict code-level transaction checks with audited reasoning logs so agents never commit bad data.
-            </p>
-          </div>
-        </div>
-
-        <div class="card card-vertical">
-          <div class="vertical-img-wrap">
-            <img src="/assets/verticals/healthcare.jpg" alt="Healthcare Operations" class="vertical-img">
-          </div>
-          <div class="vertical-content">
-            <h3 class="card-title">Healthcare Operations</h3>
-            <p class="card-body">
-              Clinical workflows and medical billing have zero room for error. We isolate patient records inside your cloud and validate against health data schemas.
-            </p>
-          </div>
-        </div>
-
-        <div class="card card-vertical">
-          <div class="vertical-img-wrap">
-            <img src="/assets/verticals/logistics.jpg" alt="Legacy ERP and BPO" class="vertical-img">
-          </div>
-          <div class="vertical-content">
-            <h3 class="card-title">Legacy ERP and BPO</h3>
-            <p class="card-body">
-              Legacy ERPs break when agents act without guardrails. We reverse engineer legacy code into executable ontologies — Code to Spec — and deploy spec-driven agents anchored to strict state machines.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
-  <section class="section-block section-alt" id="contact">
+  <section class="section-block" id="contact">
     <div class="container">
       <div class="scoping-card">
         <h2 class="display-section" style="margin-bottom: 12px;">Contact Us</h2>
@@ -2010,6 +1930,7 @@
           <div class="footer-col-title">Navigation</div>
           <ul class="footer-nav">
             <li><a href="/bootcamp">Agentic Bootcamp</a></li>
+            <li><a href="/canvas/">The Agentic Pilot Canvas</a></li>
             <li><a href="/advisory">Advisory</a></li>
             <li><a href="/playbooks">Playbooks</a></li>
             <li><a href="/mcp">Enterprise MCP</a></li>
