@@ -963,6 +963,73 @@
     @media (max-width: 768px) {
       .header-github-link { display: none; }
       .header-actions .btn { padding: 8px 16px; font-size: 0.85rem; }
+      .hero-founder-callout { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; }
+      .hero-founder-callout .btn { width: 100% !important; }
+    }
+
+    /* HERO FOUNDER CALLOUT */
+    .hero-founder-callout {
+      margin: 36px auto 0 auto;
+      max-width: 540px;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-founder-callout::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .founder-avatar-box {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #f0efed;
+    }
+
+    .founder-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder-meta-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .founder-meta-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.3;
     }
 </style>
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
@@ -1056,6 +1123,22 @@
       <div style="display: flex; gap: 14px; justify-content: center; margin-top: 28px; flex-wrap: wrap;">
         <a href="#apply" class="btn btn-primary">Request Call</a>
         <a href="#criteria" class="btn btn-outline">Review Criteria</a>
+      </div>
+
+      <!-- Founder Callout in Hero -->
+      <div class="hero-founder-callout">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="founder-avatar-box">
+            <img src="/assets/images/author/hugo-nascimento-square.jpg" alt="Hugo Soares" class="founder-avatar-img">
+          </div>
+          <div>
+            <div class="founder-meta-title">Want to validate fit first?</div>
+            <div class="founder-meta-name">Ask Hugo Soares, Founder &amp; CPTO</div>
+          </div>
+        </div>
+        <a href="mailto:hugo@hsnlabs.ai?subject=Bootcamp%20Fit%20Inquiry%20-%20HSN%20Labs" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.84rem;">
+          Get in Touch
+        </a>
       </div>
     </div>
   </section>
