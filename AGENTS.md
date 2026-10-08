@@ -21,8 +21,12 @@ The website follows a clean 4-section architecture:
 1. Header:
    * Sticky blurred translucent navbar on off-white canvas.
    * Left: Official HSN Labs horizontal lockup.
-   * Minimalist navbar: Contains brand lockup (left), secondary navigation dropdown "Services" (Bootcamp / Advisory), a GitHub repository link, and primary "Apply for Bootcamp" CTA (right). Dropdown uses paper texture overlay.
-   * Primary action button linking to Bootcamp application.
+   * Navigation links: `Advisory`, `Blog` (or `Advisory`, `Blog` in PT under `/pt/`).
+   * Actions block (`.header-actions`) order standard:
+     1. GitHub repository link with SVG icon and text (`hsnlabs`).
+     2. Editorial interpunct language switcher (`.lang-switch`, `EN · PT`).
+     3. Primary CTA button (`Apply for Bootcamp` / `Aplicar para o Bootcamp` in PT).
+   * Mobile responsive invariant: GitHub link is hidden below 768px (`display: none !important;`). The language switcher (`EN · PT`) and CTA button remain visible, properly spaced without horizontal overflow down to 360px viewport width.
 2. Hero Page:
    * Brand mark centered above the primary headline: Official 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners with `border-radius: 0`. Never apply rounded corners to the mark.
    * Primary headline: Two-tier split-scale hierarchy with commanding anchor line `Enterprise AI Agents` and subordinate differentiator clause `that don't fail in production`.
