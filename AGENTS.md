@@ -32,6 +32,7 @@ The website follows a clean 4-section architecture:
    * Primary headline: Two-tier split-scale hierarchy with commanding anchor line `Enterprise AI Agents` and subordinate differentiator clause `that don't fail in production`.
    * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
    * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
+   * Hero Founder Callout (`.hero-founder-callout`): Placed directly below the Hero CTAs and above the Client Portfolio Strip across all root and sub-pages. Sharp 90-degree card with avatar (`/assets/images/author/hugo-nascimento-square.jpg`), official title 'Founder & CPTO' ('Founder e CPTO' in PT), crumpled paper texture overlay, and direct contact CTA.
    * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
 3. Services Section ("Why Agents Fail"):
    * Bento grid with asymmetric layout:
