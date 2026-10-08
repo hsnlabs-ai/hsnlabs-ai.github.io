@@ -62,6 +62,24 @@
       "title_pt": "The Agentic Pilot Canvas | HSN Labs",
       "description_en": "Open MIT architecture framework for designing enterprise agent pilots that survive production.",
       "description_pt": "Framework aberto de arquitetura para desenhar pilotos de agentes enterprise que sobrevivem à produção."
+    },
+    {
+      "id": "site_mcp",
+      "en_path": "/mcp/",
+      "pt_path": "/pt/mcp/",
+      "title_en": "Enterprise MCP Servers | HSN Labs",
+      "title_pt": "Servidores MCP Enterprise | HSN Labs",
+      "description_en": "Secure context pipelines for mission-critical core data.",
+      "description_pt": "Dutos seguros de contexto para dados corporativos de missao critica."
+    },
+    {
+      "id": "site_langchain",
+      "en_path": "/langchain/",
+      "pt_path": "/pt/langchain/",
+      "title_en": "LangChain Partner — From Language Model to Real Intelligence | HSN Labs",
+      "title_pt": "Parceiro LangChain — Do Modelo de Linguagem a Inteligencia Real | HSN Labs",
+      "description_en": "From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.",
+      "description_pt": "Do modelo de linguagem a inteligencia real. A HSN Labs faz parceria com a LangChain para construir aplicacoes agenticas de missao critica em todo o ciclo de vida."
     }
   ],
   "blog_posts": [

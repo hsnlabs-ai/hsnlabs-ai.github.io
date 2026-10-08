@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LangChain Partner — From Language Model to Real Intelligence — HSN Labs</title>
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/langchain/">
+  <meta property="og:title" content="LangChain Partner — From Language Model to Real Intelligence — HSN Labs">
+  <meta property="og:description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hsnlabs.ai/langchain/">
+  <meta name="twitter:title" content="LangChain Partner — From Language Model to Real Intelligence — HSN Labs">
+  <meta name="twitter:description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+
+  <link rel="canonical" href="https://hsnlabs.ai/langchain/">
+  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/langchain/">
+  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/langchain/">
+  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/langchain/">
+  <meta name="description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
+
+  <!-- Global Tracking / GTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KPL6PVKC');</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMK24ECXMF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GMK24ECXMF');
+  </script>
+
+  <!-- Schema.org Service Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "LangChain & LangGraph Architecture Consulting",
+    "serviceType": "Agent Architecture Engineering",
+    "description": "HSN Labs partners with LangChain to design and deploy deterministic agent state machines, LangSmith continuous evaluation suites, and sovereign enterprise runtimes.",
+    "provider": {
+      "@type": "Organization",
+      "name": "HSN Labs",
+      "url": "https://hsnlabs.ai/"
+    },
+    "url": "https://hsnlabs.ai/langchain/"
+  }
+  </script>
+
+  <!-- Google Fonts: Cormorant Garamond for display, Inter for body and UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Typography Tokens */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Type Scale */
+      --text-xs: 0.75rem;
+      --text-sm: 0.85rem;
+      --text-base: 0.95rem;
+      --text-lg: 1.25rem;
+      --text-xl: 2rem;
+      --text-display: clamp(2.8rem, 5.5vw, 4.6rem);
+
+      /* Colors */
+      --canvas: #f5f5f5;
+      --canvas-soft: #fafafa;
+      --surface-card: #ffffff;
+      --surface-strong: #f0efed;
+      --ink: #07090e;
+      --primary: #07090e;
+      --primary-active: #141722;
+      --body: #475569;
+      --muted: #64748b;
+      --muted-soft: #94a3b8;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+
+      /* HSN Labs Brand Colors */
+      --cyan: #52B4FD;
+      --cyan-text: #0284c7;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-glow: rgba(82, 180, 253, 0.28);
+      --emerald: #10B981;
+
+      /* Atmospheric gradient stops */
+      --gradient-cyan: rgba(82, 180, 253, 0.30);
+      --gradient-peach: rgba(244, 197, 168, 0.20);
+      --gradient-emerald: rgba(167, 229, 211, 0.25);
+      --gradient-lavender: rgba(200, 184, 224, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--body);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.6;
+      letter-spacing: 0.16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
+    }
+
+    /* ATMOSPHERIC GRADIENT BLOOMS */
+    .atmosphere-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 1400px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .orb-cyan {
+      width: 520px;
+      height: 520px;
+      background: var(--gradient-cyan);
+      top: -100px;
+      left: 10%;
+    }
+
+    .orb-peach {
+      width: 440px;
+      height: 440px;
+      background: var(--gradient-peach);
+      top: 60px;
+      right: -40px;
+    }
+
+    .orb-emerald {
+      width: 480px;
+      height: 480px;
+      background: var(--gradient-emerald);
+      top: 520px;
+      left: -60px;
+    }
+
+    .orb-lavender {
+      width: 420px;
+      height: 420px;
+      background: var(--gradient-lavender);
+      top: 800px;
+      right: 10%;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(245, 245, 245, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--hairline);
+      z-index: 1000;
+      height: 68px;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+      margin-right: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover { color: var(--ink); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .header-github-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .header-github-link:hover { color: var(--ink); }
+
+    @media (max-width: 768px) {
+      .header-github-link { display: none !important; }
+      .nav-menu { display: none !important; }
+      .header-actions { gap: 10px !important; }
+      .header-actions .btn { padding: 6px 10px !important; font-size: 0.75rem !important; }
+      .brand-logo-img { height: 26px !important; width: auto !important; }
+      .hero-title-lead { font-size: clamp(2.2rem, 8.5vw, 3.2rem) !important; }
+      .hero-title-sub { font-size: clamp(1.2rem, 4.8vw, 1.7rem) !important; }
+      .display-hero { font-size: clamp(2.4rem, 8vw, 3.4rem) !important; line-height: 1.15 !important; }
+      .hero-founder-callout { flex-direction: column !important; align-items: flex-start !important; gap: 14px !important; }
+      .hero-founder-callout .btn { width: 100% !important; }
+      .portfolio-grid { gap: 24px 32px !important; }
+      .card { padding: 32px 24px !important; }
+      .timeline-card { padding: 28px 20px !important; }
+      .exec-scoping-card { grid-template-columns: 1fr !important; padding: 32px 24px !important; text-align: center !important; }
+      .exec-photo-box { margin: 0 auto !important; }
+      .footer-newsletter-form input { font-size: 16px !important; }
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lang-switch .lang-item {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      line-height: 1;
+    }
+
+    .lang-switch a.lang-item:hover { color: var(--ink); }
+
+    .lang-switch .lang-item.active {
+      color: var(--ink);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    .lang-switch .lang-sep {
+      color: var(--hairline-strong);
+      font-size: 0.75rem;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* BUTTONS: STRICT 90-DEGREE STRAIGHT CUTS + PAPER TEXTURE OVERLAY */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.925rem;
+      font-weight: 500;
+      border-radius: 0;
+      padding: 11px 24px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid transparent;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #ffffff;
+      border: 1px solid #3fa5f3;
+      box-shadow: 0 2px 6px rgba(82, 180, 253, 0.35), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-primary::before {
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+    }
+
+    .btn-primary:hover {
+      background: #42abfc;
+      box-shadow: 0 4px 14px rgba(82, 180, 253, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-outline::before {
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+    }
+
+    .btn-outline:hover {
+      background: #f8fafc;
+      border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      padding-top: 76px;
+      padding-bottom: 84px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-brand-symbol {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .brand-symbol-box {
+      width: 96px;
+      height: 96px;
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      background: var(--cyan);
+      box-shadow: 0 10px 26px var(--cyan-glow), 0 2px 8px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .symbol-carp {
+      width: 53px;
+      height: 53px;
+      object-fit: contain;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .partner-label-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      padding: 8px 18px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .partner-label-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.40;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .partner-label-strip img {
+      height: 18px;
+      width: auto;
+      display: block;
+    }
+
+    .partner-label-text {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .display-hero {
+      font-family: var(--font-display);
+      font-size: var(--text-display);
+      font-weight: 300;
+      letter-spacing: -0.025em;
+      line-height: 1.08;
+      color: var(--ink);
+      max-width: 980px;
+      margin: 0 auto 20px auto;
+      text-wrap: balance;
+    }
+
+    .hero-title-lead {
+      display: block;
+      font-size: clamp(3.2rem, 6.2vw, 5rem);
+      margin-bottom: 6px;
+    }
+
+    .hero-title-sub {
+      display: block;
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cyan-text);
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--body);
+      max-width: 740px;
+      margin: 0 auto 36px auto;
+      line-height: 1.65;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* HERO FOUNDER CALLOUT (Incentro Pattern) */
+    .hero-founder-callout {
+      margin: 48px auto 0 auto;
+      max-width: 540px;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    .hero-founder-callout::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .founder-avatar-box {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #f0efed;
+    }
+
+    .founder-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .founder-meta-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .founder-meta-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    /* CLIENT PORTFOLIO STRIP */
+    .portfolio-strip {
+      padding: 44px 0;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      background: var(--canvas-soft);
+    }
+
+    .portfolio-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      margin-bottom: 22px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .portfolio-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px 56px;
+    }
+
+    .portfolio-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.65;
+      transition: opacity 0.2s ease;
+      cursor: default;
+    }
+
+    .portfolio-item:hover {
+      opacity: 1;
+    }
+
+    .portfolio-item .logo-color {
+      display: none;
+    }
+
+    .portfolio-item:hover .logo-black {
+      display: none;
+    }
+
+    .portfolio-item:hover .logo-color {
+      display: block;
+    }
+
+    /* SECTIONS */
+    .section-block {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background: var(--canvas-soft);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .display-section {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.8vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 56px auto;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* CARDS: 90-DEGREE STRAIGHT CUTS + PAPER TEXTURE OVERLAY */
+    .card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 40px 34px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .card:hover {
+      border-color: var(--hairline-strong);
+      transform: translateY(-2px);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 14px;
+      letter-spacing: -0.015em;
+    }
+
+    .card-body {
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.65;
+    }
+
+    /* POST-IT BADGE: STRICT 90-DEGREE CYAN FLOATING SQUARE */
+    .post-it-badge {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #ffffff;
+      background: var(--cyan);
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(82, 180, 253, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+      isolation: isolate;
+    }
+
+    .post-it-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: 400px;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .post-it-badge .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BENTO GRIDS */
+    .services-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+
+    @media (max-width: 920px) {
+      .services-bento {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* TIMELINE GRID */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: left;
+    }
+
+    @media (max-width: 960px) {
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .timeline-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 34px 26px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .timeline-card strong {
+      font-size: 1.05rem;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .timeline-body {
+      font-size: 0.92rem;
+      color: var(--body);
+      line-height: 1.6;
+    }
+
+    /* EXECUTIVE SCOPING CARD */
+    .exec-scoping-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 56px 48px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      display: grid;
+      grid-template-columns: 120px 1.5fr 1fr;
+      gap: 40px;
+      align-items: center;
+      text-align: left;
+    }
+
+    .exec-scoping-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .exec-photo-box {
+      width: 110px;
+      height: 110px;
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      overflow: hidden;
+      background: #f0efed;
+    }
+
+    .exec-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 920px) {
+      .exec-scoping-card {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+        text-align: center;
+      }
+      .exec-photo-box {
+        margin: 0 auto;
+      }
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--canvas);
+      border-top: 1px solid var(--hairline);
+      padding: 72px 0 44px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1fr 1.6fr;
+      gap: 48px;
+      margin-bottom: 56px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    .footer-col-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-nav a:hover {
+      color: var(--ink);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--hairline);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: var(--font-sans);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-bottom-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-family: var(--font-sans);
+      transition: color 0.2s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--ink);
+    }
+
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-social-icon {
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+
+    .footer-social-icon:hover {
+      color: var(--ink);
+      background: var(--surface-card);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ATMOSPHERIC GRADIENT BLOOMS -->
+  <div class="atmosphere-bg">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-peach"></div>
+    <div class="orb orb-emerald"></div>
+    <div class="orb orb-lavender"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="container header-container">
+      <a href="/" class="brand-link">
+        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
+      </a>
+
+      <div class="nav-menu">
+        <a href="/advisory" class="nav-link">Advisory</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/hsnlabs-ai" class="header-github-link" target="_blank" rel="noopener" title="View GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <span>hsnlabs</span>
+        </a>
+        <div class="lang-switch">
+          <span class="lang-item active">EN</span>
+          <span class="lang-sep">·</span>
+          <a href="/pt/langchain/" class="lang-item">PT</a>
+        </div>
+        <a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Canonical HSN Labs Architecture & Incentro Copy Model) -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-brand-symbol">
+        <div class="brand-symbol-box">
+          <img src="/assets/brand/elements/origami-carp-clean.png" alt="HSN Labs" class="symbol-carp">
+        </div>
+      </div>
+
+      <div class="partner-label-strip">
+        <img src="/assets/stack/langchain.svg" alt="LangChain">
+        <span class="partner-label-text">LangChain Partner &middot; Consulting &amp; Services</span>
+      </div>
+
+      <h1 class="display-hero">
+        <span class="hero-title-lead">LangChain</span>
+        <span class="hero-title-sub">From language model to real intelligence.</span>
+      </h1>
+
+      <p class="hero-tagline">
+        LangChain helps developers build mission-critical applications across the entire agent development lifecycle. It connects powerful language models with your data and tools &mdash; without struggling with complex implementations.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>
+        <a href="#benefits" class="btn btn-outline">Explore the Benefits</a>
+      </div>
+
+      <!-- Incentro-style Founder Callout in Hero -->
+      <div class="hero-founder-callout">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="founder-avatar-box">
+            <img src="/assets/images/author/hugo-nascimento-square.jpg" alt="Hugo Soares" class="founder-avatar-img">
+          </div>
+          <div>
+            <div class="founder-meta-title">Want to know more?</div>
+            <div class="founder-meta-name">Ask Hugo Soares, Founder &amp; CPTO</div>
+          </div>
+        </div>
+        <a href="mailto:hugo@hsnlabs.ai?subject=LangChain%20Architecture%20Inquiry%20-%20HSN%20Labs" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.84rem;">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT PORTFOLIO STRIP -->
+  <div class="portfolio-strip">
+    <div class="container">
+      <div class="portfolio-label">Production Deployments &amp; Architecture Advisory</div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" title="Deloitte">
+          <img src="/assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;">
+          <img src="/assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;">
+        </div>
+        <div class="portfolio-item" title="Santander">
+          <img src="/assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;">
+          <img src="/assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;">
+        </div>
+        <div class="portfolio-item" title="Insi">
+          <img src="/assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;">
+          <img src="/assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;">
+        </div>
+        <div class="portfolio-item" title="Softplan">
+          <img src="/assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;">
+          <img src="/assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;">
+        </div>
+        <div class="portfolio-item" title="Unipar">
+          <img src="/assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;">
+          <img src="/assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;">
+        </div>
+        <div class="portfolio-item" title="LWSA">
+          <img src="/assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;">
+          <img src="/assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;">
+        </div>
+        <div class="portfolio-item" title="Turbi">
+          <img src="/assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;">
+          <img src="/assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;">
+        </div>
+        <div class="portfolio-item" title="Caju">
+          <img src="/assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;">
+          <img src="/assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;">
+        </div>
+        <div class="portfolio-item" title="Cast Group">
+          <img src="/assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;">
+          <img src="/assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: THE BENEFITS OF LANGCHAIN (Incentro Copy Model) -->
+  <section class="section-block section-alt" id="benefits">
+    <div class="container">
+      <h2 class="display-section">The benefits of LangChain</h2>
+      <p class="section-lead">
+        Why engineering leaders build and standardize mission-critical agent infrastructure on LangChain and LangGraph.
+      </p>
+
+      <div class="services-bento">
+        <!-- Benefit 1 -->
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">1</div></div>
+          <h3 class="card-title">Open, modular and ready for your landscape</h3>
+          <p class="card-body">
+            LangChain provides a structured environment for building AI applications, with support for multiple LLM providers and data integrations. Thanks to its modular design, it seamlessly integrates with your existing IT architecture.
+          </p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">2</div></div>
+          <h3 class="card-title">No more IT mess</h3>
+          <p class="card-body">
+            Generative AI sounds powerful, but implementation is often complex. LangChain abstracts that complexity: it manages how you combine LLMs with data, logic, and external tools. Result: faster development, fewer errors, more control.
+          </p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">3</div></div>
+          <h3 class="card-title">Smarter than basic AI</h3>
+          <p class="card-body">
+            LLMs are powerful, but have limitations like outdated knowledge or limited context. LangChain captures this by dynamically retrieving data from sources like CRMs, vector search engines or cloud files. This keeps your AI current and relevant.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: ECOSYSTEM FRAMEWORK (Incentro Copy Model) -->
+  <section class="section-block" id="ecosystem">
+    <div class="container">
+      <h2 class="display-section">Ecosystem framework</h2>
+      <p class="section-lead">
+        LangChain stays at the forefront of AI developments. The LangChain ecosystem is constantly growing with new technologies &mdash; perfect for companies that want to move with the latest AI trends. This flexibility continuously creates new opportunities to deploy AI within your organization.
+      </p>
+
+      <div class="services-bento">
+        <!-- Pillar 1: Development -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text);">Development</span>
+            <img src="/assets/stack/langgraph.svg" alt="LangGraph" style="width: 26px; height: 26px;">
+          </div>
+          <h3 class="card-title">LangGraph State Machine</h3>
+          <p class="card-body">
+            Use open-source components and third-party integrations to build at lightning speed. With <strong>LangGraph</strong>, you can create stateful agents with built-in memory and human-in-the-loop governance.
+          </p>
+        </div>
+
+        <!-- Pillar 2: Productionization -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text);">Productionization</span>
+            <img src="/assets/stack/langsmith.svg" alt="LangSmith" style="width: 26px; height: 26px;">
+          </div>
+          <h3 class="card-title">LangSmith Observability</h3>
+          <p class="card-body">
+            Test, monitor, and continuously improve with <strong>LangSmith</strong>. Complete control over quality and performance, so you can roll out with confidence into mission-critical business workflows.
+          </p>
+        </div>
+
+        <!-- Pillar 3: Deployment -->
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text);">Deployment</span>
+            <img src="/assets/stack/deepagents.svg" alt="LangGraph Platform" style="width: 26px; height: 26px;">
+          </div>
+          <h3 class="card-title">LangGraph Platform</h3>
+          <p class="card-body">
+            Turn your LangGraph app directly into scalable APIs and smart assistants by deploying with LangGraph Platform, private Kubernetes clusters, or sovereign VPC infrastructure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: FROM POC TO PRODUCTION (Incentro Copy Model) -->
+  <section class="section-block section-alt" id="methodology">
+    <div class="container">
+      <h2 class="display-section">From POC to production</h2>
+      <p class="section-lead">
+        As an AI partner, HSN Labs ensures LangChain doesn't get stuck in a POC. We turn your ideas into working solutions with clear governance, logging and scalability. Our approach:
+      </p>
+
+      <div class="timeline-grid">
+        <div class="timeline-card">
+          <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 01</span>
+          <strong>Validation</strong>
+          <p class="timeline-body">
+            Validation of your use case for technical and organizational feasibility before starting development.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 02</span>
+          <strong>Setup of LangChain agents</strong>
+          <p class="timeline-body">
+            Setup of LangChain and LangGraph agents including custom tooling, long-term memory, and robust integrations.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 03</span>
+          <strong>Integration into your existing systems</strong>
+          <p class="timeline-body">
+            Integration into your existing systems such as ERP, CRM, databases, or intranet infrastructure.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 04</span>
+          <strong>Adoption guidance &amp; handover</strong>
+          <p class="timeline-body">
+            Hands-on adoption guidance, documentation, and continuous handover to your internal engineering teams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: OUR EXPERTISE WITH LANGCHAIN (Incentro Copy Model + Executive Card) -->
+  <section class="section-block" id="expertise">
+    <div class="container">
+      <h2 class="display-section">Our expertise with LangChain</h2>
+      <p class="section-lead">
+        HSN Labs helps organizations leverage LangChain optimally: scalable, secure and integrated into existing processes. Think of AI agents we build that handle customer inquiries, enrich reports or consult internal knowledge &mdash; fully tailored to your organization.
+      </p>
+
+      <div class="exec-scoping-card">
+        <div class="exec-photo-box">
+          <img src="/assets/images/author/hugo-nascimento-square.jpg" alt="Hugo Soares" class="exec-photo-img">
+        </div>
+
+        <div>
+          <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 4px;">Want to know more?</span>
+          <h3 style="font-family: var(--font-display); font-size: 2rem; font-weight: 400; color: var(--ink); margin-bottom: 4px;">Hugo Soares</h3>
+          <div style="font-size: 0.9rem; color: var(--muted); margin-bottom: 14px;">Founder &amp; CPTO, HSN Labs</div>
+          <p style="font-size: 0.95rem; color: var(--body); line-height: 1.6; margin: 0;">
+            We ensure your enterprise agents bridge the gap from prototypes to resilient, governed systems of record. Connect directly with our engineering team to scope your LangChain and LangGraph implementation.
+          </p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="mailto:hugo@hsnlabs.ai?subject=LangChain%20Architecture%20Inquiry%20-%20HSN%20Labs" class="btn btn-primary" style="width: 100%;">
+            Get in touch
+          </a>
+          <a href="/bootcamp" class="btn btn-outline" style="width: 100%;">
+            Apply for Bootcamp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANONICAL FOOTER EN -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;">
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 280px; margin: 0;">
+            An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">São Paulo</div>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin: 0 0 8px 0;">
+            WeWork Av. Paulista<br>
+            Av. Paulista, 1374<br>
+            Bela Vista, São Paulo
+          </p>
+          <a href="mailto:hugo@hsnlabs.ai" style="font-size: 0.86rem; color: var(--ink); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
+            hugo@hsnlabs.ai
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-nav">
+            <li><a href="/bootcamp">Agentic Bootcamp</a></li>
+            <li><a href="/canvas/">The Agentic Pilot Canvas</a></li>
+            <li><a href="/advisory">Advisory</a></li>
+            <li><a href="/mcp">Enterprise MCP</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-subscribe">
+          <div class="footer-col-title">Stay Updated</div>
+          <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Architecture field notes &amp; playbooks sent to your corporate inbox.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter HSN Labs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Send'; }, 4000); });">
+            <div style="display: flex; gap: 8px;">
+              <input type="email" name="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline); padding: 9px 14px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Send</button>
+            </div>
+          </form>
+
+          <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--hairline);">
+            <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+              <div style="display: flex; gap: 10px; align-items: center; min-width: 0;">
+                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 38px; height: 38px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;">
+                <div style="min-width: 0;">
+                  <div style="font-size: 0.88rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
+                  <div style="font-size: 0.78rem; color: var(--muted); margin-top: 2px; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span><strong>1,600+</strong> subscribers</span>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Subscribe to [Agentes] x [a Gente] on LinkedIn" style="background: #ffffff; border: 1px solid var(--hairline-strong); color: var(--ink); padding: 5px 10px; font-size: 0.8rem; font-weight: 500; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div style="font-size: 0.78rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
+              Beyond the hype: how agentic engineering multiplies and leverages human labor capacity.
+            </div>
+          </div>
+          <div style="margin-top: 22px;">
+            <div class="footer-col-title" style="margin-bottom: 10px;">Connect</div>
+            <div class="footer-social-row">
+              <a href="https://github.com/orgs/hsnlabs-ai/" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+              <a href="https://x.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a href="https://instagram.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="https://www.tiktok.com/@hsnlabs.ai" target="_blank" rel="noopener" class="footer-social-icon" title="TikTok">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
+              </a>
+              <a href="/blog/feed_rss_created.xml" target="_blank" rel="noopener" class="footer-social-icon" title="RSS Feed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>2026 HSN Labs. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/modern-slavery-statement">Modern Slavery Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
