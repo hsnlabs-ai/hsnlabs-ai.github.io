@@ -4,3 +4,5 @@ _next/
 dist/
 tmp/
 node_modules/
+*-preview.html
+preview_*.html
