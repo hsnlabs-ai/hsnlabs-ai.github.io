@@ -145,6 +145,41 @@
       color: var(--ink);
     }
 
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lang-switch .lang-item {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      line-height: 1;
+    }
+
+    .lang-switch a.lang-item:hover {
+      color: var(--ink);
+    }
+
+    .lang-switch .lang-item.active {
+      color: var(--ink);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    .lang-switch .lang-sep {
+      color: var(--hairline-strong);
+      font-size: 0.75rem;
+      line-height: 1;
+      user-select: none;
+    }
+
     /* BUTTONS: 90-DEGREE STRAIGHT CUTS + AUTHENTIC PAPER TEXTURE */
     .btn {
       display: inline-flex;
@@ -707,7 +742,11 @@
       <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/pt/advisory" class="nav-link">Advisory</a>
         <a href="/blog/pt/" class="nav-link">Blog</a>
-        <a href="/modern-slavery-statement/" class="nav-link" style="font-weight: 500; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase;">EN</a>
+        <div class="lang-switch">
+          <a href="/modern-slavery-statement/" class="lang-item">EN</a>
+          <span class="lang-sep">·</span>
+          <span class="lang-item active">PT</span>
+        </div>
       </div>
 
       <div class="header-actions">
