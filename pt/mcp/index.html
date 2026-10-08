@@ -975,6 +975,38 @@
     }
 
     /* HERO FOUNDER CALLOUT */
+    .founder-cred-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      color: var(--ink);
+      margin-top: 5px;
+      transition: opacity 0.15s ease;
+    }
+    .founder-cred-link:hover {
+      opacity: 0.75;
+    }
+    .founder-cred-logo {
+      height: 16px;
+      width: auto;
+      display: block;
+    }
+    .founder-cred-text {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .founder-cred-arrow {
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-left: 1px;
+    }
+
 
     .hero-founder-callout {
       margin: 36px auto 0 auto;
@@ -1122,6 +1154,11 @@
           <div>
             <div class="founder-meta-title">Precisa de ajuda para comecar?</div>
             <div class="founder-meta-name">Compartilhe com Hugo, CPTO</div>
+            <a href="/pt/langchain" class="founder-cred-link" title="LangChain Certified Engineer">
+              <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
+              <span class="founder-cred-text">Certified Engineer</span>
+              <span class="founder-cred-arrow">↗</span>
+            </a>
           </div>
         </div>
         <a href="#contact" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;">
