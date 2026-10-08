@@ -91,8 +91,10 @@ def test_gate_s4_language_isolation():
             # Blog must link to /blog/pt/
             if 'Blog' in nav_html:
                 assert '/blog/pt/' in nav_html, f"Link de Blog em {item['pt']} nao usa rota PT"
-            # Switcher must point to EN
-            assert f'href="{item["path_en"]}"' in nav_html or f'href="{item["path_en"][:-1]}"' in nav_html or 'href="/"' in nav_html, f"Seletor EN ausente em {item['pt']}"
+        # Switcher must point to EN in header
+        header_match = re.search(r'<header[^>]*>(.*?)</header>', pt_content, re.DOTALL)
+        header_html = header_match.group(1) if header_match else pt_content
+        assert f'href="{item["path_en"]}"' in header_html or f'href="{item["path_en"][:-1]}"' in header_html or 'href="/"' in header_html, f"Seletor EN ausente em {item['pt']}"
     print("PASS: Gate S4 Isolamento de Idioma validado")
 
 def test_gate_s5_asset_resolution():
