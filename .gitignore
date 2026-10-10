@@ -6,3 +6,4 @@ tmp/
 node_modules/
 *-preview.html
 preview_*.html
+preview_*.png

@@ -1726,6 +1726,431 @@
       .blueprint-card-footer { flex-direction: column; align-items: stretch; text-align: center; }
       .blueprint-card-footer .btn-primary { justify-content: center; }
     }
+
+    /* =========================================================================
+       SECTION 1: MARKET REALITY CALLOUT (ANTI-HYPE BANNER)
+       ========================================================================= */
+    .section-reality {
+      padding: 64px 0;
+      background: var(--canvas);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .reality-banner {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 48px 56px;
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .reality-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .reality-banner > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .reality-content {
+      flex: 1 1 58%;
+    }
+
+    .reality-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+    }
+
+    .reality-lead {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--body);
+      margin: 0;
+      max-width: 540px;
+    }
+
+    .reality-divider {
+      width: 2px;
+      align-self: stretch;
+      background: var(--cyan);
+      flex-shrink: 0;
+    }
+
+    .reality-stat-box {
+      flex: 0 0 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reality-stat-number {
+      font-size: clamp(3.75rem, 5.5vw, 5rem);
+      font-weight: 700;
+      color: #0284c7;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .reality-stat-desc {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .reality-stat-source {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-bottom: 1px dotted var(--hairline-strong);
+      width: fit-content;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .reality-stat-source:hover {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+
+    @media (max-width: 900px) {
+      .reality-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        padding: 36px 28px;
+      }
+      .reality-divider {
+        width: 100%;
+        height: 2px;
+        align-self: auto;
+      }
+      .reality-stat-box {
+        flex: 1 1 auto;
+        width: 100%;
+      }
+    }
+
+    /* =========================================================================
+       SECTION 3: EDITORIAL INSIGHTS & NEWSLETTER STRIP
+       ========================================================================= */
+    .section-editorial {
+      padding: 96px 0;
+      background: var(--canvas-soft);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .editorial-archive-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--hairline-strong);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .editorial-archive-link:hover {
+      color: var(--cyan-text);
+      border-bottom-color: var(--cyan);
+      transform: translateX(2px);
+    }
+
+    .editorial-archive-link .arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .editorial-archive-link:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 64px;
+    }
+
+    .editorial-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
+    }
+
+    .editorial-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.40;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .editorial-card > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .editorial-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--hairline-strong);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 12px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .editorial-card-media {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: var(--canvas-soft);
+      position: relative;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .editorial-card:hover .editorial-card-media img {
+      transform: scale(1.03);
+    }
+
+    .editorial-card-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+
+    .editorial-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .editorial-tag {
+      color: var(--cyan-text);
+      font-weight: 600;
+    }
+
+    .editorial-sep {
+      color: var(--hairline-strong);
+    }
+
+    .editorial-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--ink);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .editorial-title a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .editorial-title a:hover {
+      color: var(--cyan-text);
+    }
+
+    /* NEWSLETTER STRIP */
+    .newsletter-strip {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 40px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .newsletter-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .newsletter-strip > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .newsletter-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 8px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .newsletter-sub {
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.55;
+      margin: 0;
+      max-width: 440px;
+    }
+
+    .newsletter-fields {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .newsletter-field {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .newsletter-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+
+    .newsletter-input {
+      padding: 10px 14px;
+      font-size: 0.9rem;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      border-radius: 0;
+      width: 100%;
+      height: 42px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .newsletter-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(82, 180, 253, 0.25);
+    }
+
+    .newsletter-action {
+      flex-shrink: 0;
+    }
+
+    .newsletter-btn {
+      height: 42px;
+      padding: 0 24px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .newsletter-footer-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .newsletter-footer-note a {
+      color: var(--muted);
+      text-decoration: underline;
+      transition: color 0.15s ease;
+    }
+
+    .newsletter-footer-note a:hover {
+      color: var(--ink);
+    }
+
+    @media (max-width: 960px) {
+      .editorial-grid {
+        grid-template-columns: 1fr;
+      }
+      .editorial-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .newsletter-strip {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 32px 24px;
+      }
+      .newsletter-fields {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .newsletter-btn {
+        width: 100%;
+      }
+    }
+
 </style>
 
   <!-- Google Consent Mode v2 and Google Analytics 4 (G-GMK24ECXMF) -->
@@ -1924,6 +2349,30 @@
     </div>
   </section>
 
+  <!-- MARKET REALITY / STAT CALLOUT -->
+  <section class="section-block section-reality" id="market-reality">
+    <div class="container">
+      <div class="reality-banner">
+        <div class="reality-content">
+          <h2 class="reality-heading">Almost half of enterprise AI projects stall in demo.</h2>
+          <p class="reality-lead">
+            Others collapse the moment the consultant leaves. We build for resilient production runs owned by your internal engineering team.
+          </p>
+        </div>
+        <div class="reality-divider" aria-hidden="true"></div>
+        <div class="reality-stat-box">
+          <div class="reality-stat-number">46%</div>
+          <div class="reality-stat-desc">
+            of enterprise AI proofs of concept were abandoned before reaching production in 2025.
+          </div>
+          <a href="https://www.spglobal.com/marketintelligence/en/news-insights/research/ai-poc-abandonment-rate" target="_blank" rel="noopener" class="reality-stat-source">
+            Source: S&P Global Market Intelligence, 2025 ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="section-block section-alt" id="services">
     <div class="container" style="text-align: center;">
@@ -2010,6 +2459,105 @@
             </ol>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITORIAL INSIGHTS & NEWSLETTER -->
+  <section class="section-block section-editorial" id="editorial">
+    <div class="container">
+      <div class="editorial-header">
+        <div>
+          <h2 class="display-section" style="text-align: left; margin-bottom: 8px;">Before you decide.</h2>
+          <p class="section-lead" style="text-align: left; margin: 0; max-width: 640px;">
+            Real costs, failure modes, and verified production patterns in agentic architectures, backed by data.
+          </p>
+        </div>
+        <a href="/blog/" class="editorial-archive-link">
+          <span>Explore all essays</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="editorial-grid">
+        <!-- Post 1: Spoke 1 (Why Agents Fail) -->
+        <article class="editorial-card">
+          <div class="editorial-card-media">
+            <img src="/assets/images/posts/the-poc-graveyard.webp" alt="The PoC Graveyard" loading="lazy">
+          </div>
+          <div class="editorial-card-content">
+            <div class="editorial-meta">
+              <span class="editorial-tag">Why Agents Fail</span>
+              <span class="editorial-sep">·</span>
+              <span class="editorial-read">14 min read</span>
+            </div>
+            <h3 class="editorial-title">
+              <a href="/blog/post/the-poc-graveyard/">The PoC Graveyard: Why 90% of enterprise pilots collapse under dirty data</a>
+            </h3>
+          </div>
+        </article>
+
+        <!-- Post 2: Spoke 2 (Agentic Engineering) -->
+        <article class="editorial-card">
+          <div class="editorial-card-media">
+            <img src="/assets/images/posts/ontology-vs-database-schema.webp" alt="Ontology versus Database Schema" loading="lazy">
+          </div>
+          <div class="editorial-card-content">
+            <div class="editorial-meta">
+              <span class="editorial-tag">Agentic Engineering</span>
+              <span class="editorial-sep">·</span>
+              <span class="editorial-read">16 min read</span>
+            </div>
+            <h3 class="editorial-title">
+              <a href="/blog/post/ontology-vs-database-schema/">Ontology versus Database Schema: Why tables alone cannot define permissible business transitions</a>
+            </h3>
+          </div>
+        </article>
+
+        <!-- Post 3: Spoke 3 (Future of Work) -->
+        <article class="editorial-card">
+          <div class="editorial-card-media">
+            <img src="/assets/images/posts/bpo-replacement-matrix.webp" alt="The BPO Replacement Matrix" loading="lazy">
+          </div>
+          <div class="editorial-card-content">
+            <div class="editorial-meta">
+              <span class="editorial-tag">Future of Work</span>
+              <span class="editorial-sep">·</span>
+              <span class="editorial-read">20 min read</span>
+            </div>
+            <h3 class="editorial-title">
+              <a href="/blog/post/bpo-replacement-matrix/">The BPO Replacement Matrix: Replacing per-seat SaaS taxes and operational liabilities</a>
+            </h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- NEWSLETTER CONVERSION STRIP -->
+      <div class="newsletter-strip">
+        <div class="newsletter-info">
+          <h3 class="newsletter-title">Get our technical teardowns directly in your inbox.</h3>
+          <p class="newsletter-sub">
+            Real inference economics, failure post-mortems, and governance specs, backed by verifiable data.
+          </p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscription confirmed for HSN Labs technical teardowns.');">
+          <div class="newsletter-fields">
+            <div class="newsletter-field">
+              <label class="newsletter-label" for="newsNameEn">First name</label>
+              <input type="text" id="newsNameEn" class="form-input newsletter-input" placeholder="Your name" required>
+            </div>
+            <div class="newsletter-field">
+              <label class="newsletter-label" for="newsEmailEn">Work email</label>
+              <input type="email" id="newsEmailEn" class="form-input newsletter-input" placeholder="you@company.com" required>
+            </div>
+            <div class="newsletter-action">
+              <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+            </div>
+          </div>
+          <div class="newsletter-footer-note">
+            Unsubscribe anytime. Or follow the newsletter on LinkedIn: <a href="https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/" target="_blank" rel="noopener">Agentes x a Gente ↗</a>
+          </div>
+        </form>
       </div>
     </div>
   </section>
