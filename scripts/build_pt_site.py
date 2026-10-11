@@ -29,17 +29,18 @@ def clean_html_body_text_only(html: str) -> str:
 
     def clean_text(match):
         txt = match.group(1)
-        cleaned = re.sub(r'\(([^)]+)\)', r'— \1 —', txt)
-        cleaned = cleaned.replace('(', '— ').replace(')', ' —')
-        cleaned = re.sub(r'—\s*—+', '—', cleaned)
+        cleaned = re.sub(r'\(([^)]+)\)', r', ,', txt)
+        cleaned = cleaned.replace('(', '').replace(')', '')
+        cleaned = re.sub(r',\s*,+', ',', cleaned)
         return f">{cleaned}<"
 
     html = re.sub(r'>([^<]+)<', clean_text, html)
 
     def clean_meta_desc(match):
         desc = match.group(1)
-        cleaned = re.sub(r'\(([^)]+)\)', r'— \1 —', desc)
-        cleaned = cleaned.replace('(', '— ').replace(')', ' —')
+        cleaned = re.sub(r'\(([^)]+)\)', r', ,', desc)
+        cleaned = cleaned.replace('(', '').replace(')', '')
+        cleaned = re.sub(r',\s*,+', ',', cleaned)
         return f'<meta name="description" content="{cleaned}"'
 
     html = re.sub(r'<meta\s+name="description"\s+content="([^"]*)"', clean_meta_desc, html)
@@ -153,9 +154,9 @@ def build_pt_home():
     # 1. Title and Head Meta Tags
     html = safe_replace(html, '<title>Agentic Engineering Adoption | HSN Labs</title>', '<title>Adoção de Engenharia Agêntica | HSN Labs</title>')
     html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta property="og:title" content="HSN Labs — Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs — Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta property="og:title" content="HSN Labs · Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs · Adoção de Engenharia Agêntica">')
     html = safe_replace(html, '<meta property="og:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta property="og:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
-    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs — Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs — Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs · Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs · Adoção de Engenharia Agêntica">')
     html = safe_replace(html, '<meta name="twitter:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="twitter:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
     html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
     html = safe_replace(html, '<meta name="description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
@@ -230,8 +231,8 @@ def build_pt_home():
     html = safe_replace(html, '>Complex Enterprise ADLC<', '>ADLC Enterprise Complexo<')
     html = safe_replace(
         html,
-        'The Agentic Development Life Cycle — ADLC — introduces a rigorous spec-driven layer over the deterministic enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
-        'O ciclo de vida de desenvolvimento de agentes — ADLC — introduz uma camada spec-driven rigorosa sobre a camada determinística da empresa. Vinculamos agentes autônomos a guardas de código, máquinas de estados finitos e ontologias executáveis para que operações críticas nunca falhem em produção.'
+        'The Agentic Development Life Cycle, or ADLC, establishes a rigorous spec-driven governance layer over the enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
+        'O ciclo de vida de desenvolvimento agêntico, ou ADLC, estabelece governança orientada a especificações sobre a infraestrutura corporativa. Vinculamos agentes autônomos a guardas de código, máquinas de estado finitas e ontologias executáveis para garantir que fluxos críticos operem com determinismo em produção.'
     )
     
     # 4. Blueprint card controls & specs
@@ -279,9 +280,9 @@ def build_pt_bootcamp():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Agentic Bootcamp — HSN Labs</title>', '<title>Bootcamp de Agentes — HSN Labs</title>')
-    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Agentic Bootcamp · HSN Labs</title>', '<title>Bootcamp de Agentes · HSN Labs</title>')
+    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
@@ -333,8 +334,8 @@ def build_pt_bootcamp():
     html = html.replace('02 • Code to Spec &amp; Ontology', '02 • Code to Spec e Engenharia Spec-Driven')
     html = html.replace('02 • Ontology Mapping', '02 • Mapeamento Ontologico')
     html = html.replace(
-        'Reverse engineering legacy code into formal specifications — Code to Spec — and mapping into executable business ontologies under a spec-driven architecture.',
-        'Engenharia reversa de código legado para especificações formais — Code to Spec — e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.'
+        'Reverse engineering legacy code into formal specifications, known as Code to Spec, and mapping into executable business ontologies under a spec-driven architecture.',
+        'Engenharia reversa de código legado para especificações formais, no modelo Code to Spec, e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.'
     )
     html = html.replace(
         'Reverse engineering business rules from legacy code and mapping tables into executable business ontologies.',
@@ -377,8 +378,8 @@ def build_pt_bootcamp():
     )
     html = html.replace('03 • Data Access', '03 • Acesso a Dados')
     html = html.replace(
-        'Staging credentials or read replicas ready before day one. No massive data lakes required — we extract surgical data slices where information lives.',
-        'Credenciais de homologacao ou replicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos — extraimos fatias cirurgicas de dados onde a informacao reside.'
+        'Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.',
+        'Credenciais de homologacao ou replicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraimos fatias cirurgicas de dados onde a informacao reside.'
     )
     html = html.replace(
         'Staging credentials or read replicas ready before day one.',
@@ -404,8 +405,8 @@ def build_pt_bootcamp():
     html = html.replace('Under 10M USD', 'Abaixo de 10M USD')
     html = html.replace('Above 500M USD', 'Acima de 500M USD')
     html = html.replace(
-        'Apply for Performance Rebate Program — 100% fee credited toward production rollout.',
-        'Candidatar-se ao Programa de Reembolso por Desempenho — taxa cem por cento creditada para o contrato de producao.'
+        'Apply for Performance Rebate Program with 100% fee credited toward production rollout.',
+        'Candidatar-se ao Programa de Reembolso por Desempenho com taxa cem por cento creditada para o contrato de producao.'
     )
     
     html = localize_common_pt_components(html)
@@ -422,7 +423,7 @@ def build_pt_advisory():
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
     html = html.replace('<title>Architecture Advisory | Hugo S. Nascimento</title>', '<title>Advisory de Arquitetura | Hugo S. Nascimento</title>')
-    html = html.replace('<title>Architecture Advisory — HSN Labs</title>', '<title>Advisory de Arquitetura — HSN Labs</title>')
+    html = html.replace('<title>Architecture Advisory · HSN Labs</title>', '<title>Advisory de Arquitetura · HSN Labs</title>')
     
     html = html.replace('content="https://hsnlabs.ai/advisory"', 'content="https://hsnlabs.ai/pt/advisory/"')
     html = html.replace('content="https://hsnlabs.ai/advisory/"', 'content="https://hsnlabs.ai/pt/advisory/"')
@@ -510,7 +511,7 @@ def build_pt_mcp():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Enterprise MCP Servers — HSN Labs</title>', '<title>Servidores MCP Enterprise — HSN Labs</title>')
+    html = html.replace('<title>Enterprise MCP Servers · HSN Labs</title>', '<title>Servidores MCP Enterprise · HSN Labs</title>')
     
     html = html.replace('content="https://hsnlabs.ai/mcp"', 'content="https://hsnlabs.ai/pt/mcp/"')
     html = html.replace('content="https://hsnlabs.ai/mcp/"', 'content="https://hsnlabs.ai/pt/mcp/"')
@@ -607,9 +608,9 @@ def build_pt_privacy_policy():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Privacy Policy — HSN Labs</title>', '<title>Politica de Privacidade — HSN Labs</title>')
-    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Privacy Policy · HSN Labs</title>', '<title>Politica de Privacidade · HSN Labs</title>')
+    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
@@ -652,9 +653,9 @@ def build_pt_compliance():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Modern Slavery Statement — HSN Labs</title>', '<title>Declaracao de Conformidade e Etica — HSN Labs</title>')
-    html = html.replace('content="HSN Labs — AI Agents That Don\'t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs — AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs — Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Modern Slavery Statement · HSN Labs</title>', '<title>Declaracao de Conformidade e Etica · HSN Labs</title>')
+    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
