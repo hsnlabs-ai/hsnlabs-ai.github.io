@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>LangChain Partner — From Language Model to Real Intelligence — HSN Labs</title>
+  <title>LangChain &amp; LangGraph — In Production Since 2022 — HSN Labs</title>
 
   <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/langchain/">
-  <meta property="og:title" content="LangChain Partner — From Language Model to Real Intelligence — HSN Labs">
-  <meta property="og:description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+  <meta property="og:title" content="LangChain &amp; LangGraph — In Production Since 2022 — HSN Labs">
+  <meta property="og:description" content="Independent agentic engineering with LangChain &amp; LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -17,15 +17,15 @@
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/langchain/">
-  <meta name="twitter:title" content="LangChain Partner — From Language Model to Real Intelligence — HSN Labs">
-  <meta name="twitter:description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+  <meta name="twitter:title" content="LangChain &amp; LangGraph — In Production Since 2022 — HSN Labs">
+  <meta name="twitter:description" content="Independent agentic engineering with LangChain &amp; LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.">
   <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/langchain/">
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/langchain/">
   <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/langchain/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/langchain/">
-  <meta name="description" content="From language model to real intelligence. HSN Labs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.">
+  <meta name="description" content="Independent agentic engineering with LangChain &amp; LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
@@ -56,7 +56,7 @@
     "@type": "Service",
     "name": "LangChain & LangGraph Architecture Consulting",
     "serviceType": "Agent Architecture Engineering",
-    "description": "HSN Labs partners with LangChain to design and deploy deterministic agent state machines, LangSmith continuous evaluation suites, and sovereign enterprise runtimes.",
+    "description": "HSN Labs architects deterministic agent state machines, LangSmith continuous evaluation suites, and sovereign enterprise runtimes with LangChain since 2022.",
     "provider": {
       "@type": "Organization",
       "name": "HSN Labs",
@@ -429,45 +429,36 @@
       user-select: none;
     }
 
-    .partner-label-strip {
+    .founder-cred-link {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: var(--surface-card);
-      border: 1px solid var(--hairline);
-      padding: 8px 18px;
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      gap: 7px;
+      text-decoration: none;
+      color: var(--ink);
+      margin-top: 5px;
+      transition: opacity 0.15s ease;
     }
-
-    .partner-label-strip::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
-      background-size: cover;
-      background-position: center;
-      mix-blend-mode: multiply;
-      opacity: 0.40;
-      pointer-events: none;
-      z-index: -1;
+    .founder-cred-link:hover {
+      opacity: 0.75;
     }
-
-    .partner-label-strip img {
-      height: 18px;
+    .founder-cred-logo {
+      height: 16px;
       width: auto;
       display: block;
     }
-
-    .partner-label-text {
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .founder-cred-text {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .founder-cred-arrow {
+      font-size: 0.78rem;
+      color: var(--cyan-text);
+      font-weight: 600;
+      margin-left: 1px;
     }
 
     .display-hero {
@@ -1010,7 +1001,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION (Canonical HSN Labs Architecture & Incentro Copy Model) -->
+  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="container">
       <div class="hero-brand-symbol">
@@ -1019,18 +1010,13 @@
         </div>
       </div>
 
-      <div class="partner-label-strip">
-        <img src="/assets/stack/langchain.svg" alt="LangChain">
-        <span class="partner-label-text">LangChain Partner &middot; Consulting &amp; Services</span>
-      </div>
-
       <h1 class="display-hero">
-        <span class="hero-title-lead">LangChain</span>
+        <span class="hero-title-lead">LangChain &amp; LangGraph</span>
         <span class="hero-title-sub">From language model to real intelligence.</span>
       </h1>
 
       <p class="hero-tagline">
-        LangChain helps developers build mission-critical applications across the entire agent development lifecycle. It connects powerful language models with your data and tools &mdash; without struggling with complex implementations.
+        Building mission-critical agent applications in production since 2022. Connecting frontier models to your enterprise data and tools with deterministic execution control.
       </p>
 
       <div class="hero-ctas">
@@ -1038,15 +1024,20 @@
         <a href="#benefits" class="btn btn-outline">Explore the Benefits</a>
       </div>
 
-      <!-- Incentro-style Founder Callout in Hero -->
+      <!-- Founder Callout in Hero -->
       <div class="hero-founder-callout">
         <div style="display: flex; align-items: center; gap: 14px;">
           <div class="founder-avatar-box" data-initial-index="1">
             <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
           </div>
           <div>
-            <div class="founder-meta-title">Let's talk about your project</div>
+            <div class="founder-meta-title">Need help getting started?</div>
             <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+            <a href="#contact" class="founder-cred-link" title="LangChain Certified Engineer">
+              <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
+              <span class="founder-cred-text">Certified Engineer</span>
+              <span class="founder-cred-arrow">↗</span>
+            </a>
           </div>
         </div>
         <a href="#contact" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;">
@@ -1101,51 +1092,48 @@
     </div>
   </div>
 
-  <!-- SECTION 1: THE BENEFITS OF LANGCHAIN (Incentro Copy Model) -->
+  <!-- SECTION 1: THE BENEFITS OF LANGCHAIN -->
   <section class="section-block section-alt" id="benefits">
     <div class="container">
       <h2 class="display-section">The benefits of LangChain</h2>
       <p class="section-lead">
-        Why engineering leaders build and standardize mission-critical agent infrastructure on LangChain and LangGraph.
+        Why engineering leaders standardize agent architectures on LangChain and LangGraph.
       </p>
 
       <div class="services-bento">
         <!-- Benefit 1 -->
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">1</div></div>
+        <div class="card">
           <h3 class="card-title">Open, modular and ready for your landscape</h3>
           <p class="card-body">
-            LangChain provides a structured environment for building AI applications, with support for multiple LLM providers and data integrations. Thanks to its modular design, it seamlessly integrates with your existing IT architecture.
+            Structured environment supporting multiple LLM providers and data sources, integrating directly with your existing IT architecture.
           </p>
         </div>
 
         <!-- Benefit 2 -->
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">2</div></div>
-          <h3 class="card-title">No more IT mess</h3>
+        <div class="card">
+          <h3 class="card-title">Reduced complexity and deterministic control</h3>
           <p class="card-body">
-            Generative AI sounds powerful, but implementation is often complex. LangChain abstracts that complexity: it manages how you combine LLMs with data, logic, and external tools. Result: faster development, fewer errors, more control.
+            Orchestrating models, logic, and external tools. Faster development, fewer runtime errors, and complete operational control.
           </p>
         </div>
 
         <!-- Benefit 3 -->
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">3</div></div>
-          <h3 class="card-title">Smarter than basic AI</h3>
+        <div class="card">
+          <h3 class="card-title">Connected context beyond basic models</h3>
           <p class="card-body">
-            LLMs are powerful, but have limitations like outdated knowledge or limited context. LangChain captures this by dynamically retrieving data from sources like CRMs, vector search engines or cloud files. This keeps your AI current and relevant.
+            Dynamic retrieval from CRMs, vector search, SQL databases, and cloud files, keeping agents grounded in live business data.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 2: ECOSYSTEM FRAMEWORK (Incentro Copy Model) -->
+  <!-- SECTION 2: ECOSYSTEM FRAMEWORK -->
   <section class="section-block" id="ecosystem">
     <div class="container">
       <h2 class="display-section">Ecosystem framework</h2>
       <p class="section-lead">
-        LangChain stays at the forefront of AI developments. The LangChain ecosystem is constantly growing with new technologies &mdash; perfect for companies that want to move with the latest AI trends. This flexibility continuously creates new opportunities to deploy AI within your organization.
+        The three essential layers for taking agents from experimentation to continuous production.
       </p>
 
       <div class="services-bento">
@@ -1155,9 +1143,9 @@
             <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text);">Development</span>
             <img src="/assets/stack/langgraph.svg" alt="LangGraph" style="width: 26px; height: 26px;">
           </div>
-          <h3 class="card-title">LangGraph State Machine</h3>
+          <h3 class="card-title">LangGraph State Core</h3>
           <p class="card-body">
-            Use open-source components and third-party integrations to build at lightning speed. With <strong>LangGraph</strong>, you can create stateful agents with built-in memory and human-in-the-loop governance.
+            Modular state machines with persistent memory, cyclic flow control, and human-in-the-loop review gates.
           </p>
         </div>
 
@@ -1169,7 +1157,7 @@
           </div>
           <h3 class="card-title">LangSmith Observability</h3>
           <p class="card-body">
-            Test, monitor, and continuously improve with <strong>LangSmith</strong>. Complete control over quality and performance, so you can roll out with confidence into mission-critical business workflows.
+            End-to-end trace observability, latency and token cost tracking, and continuous regression evaluation suites.
           </p>
         </div>
 
@@ -1179,21 +1167,21 @@
             <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text);">Deployment</span>
             <img src="/assets/stack/deepagents.svg" alt="LangGraph Platform" style="width: 26px; height: 26px;">
           </div>
-          <h3 class="card-title">LangGraph Platform</h3>
+          <h3 class="card-title">Sovereign VPC Runtimes</h3>
           <p class="card-body">
-            Turn your LangGraph app directly into scalable APIs and smart assistants by deploying with LangGraph Platform, private Kubernetes clusters, or sovereign VPC infrastructure.
+            Self-hosted deployments on private Kubernetes clusters or sovereign VPCs, keeping all data inside your security perimeter.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: FROM POC TO PRODUCTION (Incentro Copy Model) -->
+  <!-- SECTION 3: FROM POC TO PRODUCTION -->
   <section class="section-block section-alt" id="methodology">
     <div class="container">
       <h2 class="display-section">From POC to production</h2>
       <p class="section-lead">
-        As an AI partner, HSN Labs ensures LangChain doesn't get stuck in a POC. We turn your ideas into working solutions with clear governance, logging and scalability. Our approach:
+        Our practical approach to ensuring agent initiatives advance beyond prototypes into mission-critical systems:
       </p>
 
       <div class="timeline-grid">
@@ -1201,32 +1189,59 @@
           <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 01</span>
           <strong>Validation</strong>
           <p class="timeline-body">
-            Validation of your use case for technical and organizational feasibility before starting development.
+            Technical, architectural, and business feasibility assessment before writing code.
           </p>
         </div>
 
         <div class="timeline-card">
           <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 02</span>
-          <strong>Setup of LangChain agents</strong>
+          <strong>Agent Setup</strong>
           <p class="timeline-body">
-            Setup of LangChain and LangGraph agents including custom tooling, long-term memory, and robust integrations.
+            Building LangGraph state graphs with custom tooling and long-term memory.
           </p>
         </div>
 
         <div class="timeline-card">
           <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 03</span>
-          <strong>Integration into your existing systems</strong>
+          <strong>Integration</strong>
           <p class="timeline-body">
-            Integration into your existing systems such as ERP, CRM, databases, or intranet infrastructure.
+            Direct connection to core enterprise systems including ERPs, CRMs, and relational databases.
           </p>
         </div>
 
         <div class="timeline-card">
           <span style="font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); display: block; margin-bottom: 8px;">Step 04</span>
-          <strong>Adoption guidance &amp; handover</strong>
+          <strong>Handover</strong>
           <p class="timeline-body">
-            Hands-on adoption guidance, documentation, and continuous handover to your internal engineering teams.
+            Architecture documentation, evaluation test suites, and continuous knowledge transfer to your team.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: EXECUTIVE SCOPING -->
+  <section class="section-block" id="contact">
+    <div class="container">
+      <h2 class="display-section">Tailored engineering for your enterprise stack</h2>
+      <p class="section-lead">
+        No theoretical slide decks. We deliver working software and audited code that your company fully owns.
+      </p>
+
+      <div class="exec-scoping-card">
+        <div class="exec-photo-box">
+          <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo S. Nascimento" class="exec-photo-img">
+        </div>
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 4px;">Hugo S. Nascimento</h3>
+          <div style="font-size: 0.88rem; color: var(--muted); margin-bottom: 12px;">Founder &amp; CPTO &middot; LangChain Certified Engineer</div>
+          <p style="font-size: 0.95rem; color: var(--body); line-height: 1.6; margin: 0;">
+            We advise CTOs, VPs of Engineering, and technical leaders on designing, auditing, and hardening agent architectures. From initial feasibility audits to complete code handover to your internal team, we deliver deterministic software that you fully own.
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+          <a href="/bootcamp" class="btn btn-primary" style="width: 100%;">Apply for Bootcamp</a>
+          <a href="mailto:hugo@hsnlabs.ai" class="btn btn-outline" style="width: 100%;">Talk to Hugo</a>
         </div>
       </div>
     </div>
