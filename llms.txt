@@ -1,6 +1,6 @@
 # HSN Labs
 
-> AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production.
+> AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production. A clean markdown version of every page on the main site is available by appending index.md to the directory path (for example, https://hsnlabs.ai/bootcamp/index.md, https://hsnlabs.ai/pt/bootcamp/index.md, or https://hsnlabs.ai/index.md). The main site is in English, with a Brazilian Portuguese version under the /pt/ path.
 
 ## Canonical Positioning & Value Proposition
 - Overview: https://hsnlabs.ai/

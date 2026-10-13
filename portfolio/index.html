@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cases · We proudly tell the success stories of our clients · HSN Labs</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/portfolio/">
+  <meta property="og:title" content="Cases · We proudly tell the success stories of our clients · HSN Labs">
+  <meta property="og:description" content="Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hsnlabs.ai/portfolio/">
+  <meta name="twitter:title" content="Cases · We proudly tell the success stories of our clients · HSN Labs">
+  <meta name="twitter:description" content="Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs.">
+  <meta property="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">
+
+  <link rel="canonical" href="https://hsnlabs.ai/portfolio/">
+  <link rel="alternate" type="text/markdown" href="https://hsnlabs.ai/portfolio/index.md">
+  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/portfolio/">
+  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/portfolio/">
+  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/portfolio/">
+  <meta name="description" content="Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs.">
+
+  <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
+
+  <!-- Incentro Typographic Scale: Plus Jakarta Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-headings: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Incentro Exact HSL Palette */
+      --uranus: #d6eefb;             /* Fresh sky blue hero */
+      --neptune: #80c4ea;            /* Giant title accent */
+      --sunlight: #ffffff;           /* Clean white */
+      --crater: #000000;             /* Pure black */
+      --ink: #07090e;                /* Deep text ink */
+      --body: #374151;               /* Darker body gray */
+      --muted: #6b7280;              /* Secondary gray */
+      --soft-gray: #f3f4f6;          /* Soft background */
+      --hairline: #e5e7eb;           /* Clean border line */
+      --starburst: #fed7aa;          /* Subtle warm divider */
+      --cyan: #52B4FD;               /* HSN Labs Accent */
+      --pill-yellow: #fef08a;        /* Incentro tag yellow */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html, body {
+      background-color: #ffffff;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    .header-nav {
+      position: sticky;
+      top: 0; left: 0; right: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--hairline);
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-logo-img { height: 44px; width: auto; display: block; }
+    .nav-menu {
+      margin-left: auto;
+      margin-right: 32px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav-link {
+      color: #111827;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--cyan);
+    }
+    .header-actions { display: flex; align-items: center; gap: 18px; }
+    .header-github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .header-github-link:hover { color: var(--ink); }
+    .header-github-link svg { width: 18px; height: 18px; fill: currentColor; }
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .lang-item { color: var(--muted); text-decoration: none; }
+    .lang-item.active { color: var(--ink); font-weight: 700; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #ffffff;
+      border: 1px solid var(--ink);
+    }
+    .btn-primary:hover {
+      background: #1f2937;
+      transform: translateY(-1px);
+    }
+
+    /* INCENTRO HERO SECTION */
+    .hero-section {
+      background-color: var(--uranus);
+      padding: 80px 0 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-big-title {
+      font-family: var(--font-headings);
+      font-size: clamp(4.5rem, 13vw, 12rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 0.82;
+      letter-spacing: -0.05em;
+      color: #8bc3ea;
+      margin-bottom: 32px;
+      user-select: none;
+    }
+
+    /* FEATURED HERO CARD */
+    .featured-hero-card {
+      background: transparent;
+      margin-bottom: 24px;
+    }
+    .featured-img-wrap {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 7.2;
+      overflow: hidden;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      position: relative;
+      background: #0b1120;
+    }
+    .featured-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 20px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .featured-img-wrap:hover .featured-img {
+      transform: scale(1.03);
+    }
+    .featured-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .pill-case {
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 9999px;
+      display: inline-block;
+    }
+    .reading-time {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1f2937;
+    }
+    .featured-content-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .featured-headline {
+      font-family: var(--font-headings);
+      font-size: clamp(2rem, 3.8vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+      text-decoration: none;
+      display: block;
+    }
+    .featured-headline:hover {
+      color: #0284c7;
+    }
+    .featured-desc {
+      font-size: 1.1rem;
+      color: #374151;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .btn-pill-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      border-radius: 9999px;
+      padding: 12px 28px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-pill-action:hover {
+      background: var(--ink);
+      color: #ffffff;
+    }
+    .btn-pill-action svg {
+      transition: transform 0.2s ease;
+    }
+    .btn-pill-action:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* SECTION 2: GRID OF CASES */
+    .catalog-section {
+      padding: 96px 0 120px 0;
+      background: #ffffff;
+    }
+    .catalog-header-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .catalog-header-title {
+      font-family: var(--font-headings);
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #831843; /* Deep Incentro Mars / Burgundy tone */
+      margin-bottom: 28px;
+      max-width: 900px;
+    }
+    .catalog-divider {
+      border: none;
+      height: 1px;
+      background: #fed7aa; /* Incentro Starburst warm line */
+      margin-bottom: 40px;
+    }
+
+    /* FILTER BAR */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+    }
+    .filter-pill {
+      background: #f3f4f6;
+      border: 1px solid transparent;
+      color: #374151;
+      padding: 8px 20px;
+      border-radius: 9999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .filter-pill:hover {
+      background: #e5e7eb;
+      color: #111827;
+    }
+    .filter-pill.active {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    /* INCENTRO GRID ARCHITECTURE */
+    .cases-mosaic {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+      row-gap: 56px;
+    }
+    .case-item {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-item.half {
+      width: 50%;
+    }
+    .case-item.third {
+      width: 33.333%;
+    }
+
+    .case-img-link {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      background: #111827;
+      position: relative;
+    }
+    .case-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .case-img-link:hover .case-img {
+      transform: scale(1.04);
+    }
+
+    .case-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .case-tag-pill {
+      background: #fef08a; /* Soft sunlight yellow */
+      color: #713f12;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 10px;
+      border-radius: 9999px;
+    }
+    .case-card-read {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .case-card-title {
+      font-family: var(--font-headings);
+      font-size: 1.45rem;
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 12px;
+      text-decoration: none;
+      display: block;
+    }
+    .case-item.half .case-card-title {
+      font-size: 1.75rem;
+    }
+    .case-card-title:hover {
+      color: #0284c7;
+    }
+
+    .case-card-desc {
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.55;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    /* ACCORDION DEEP DIVE INSIDE CARD */
+    .case-details-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 2px;
+      align-self: flex-start;
+      transition: all 0.15s ease;
+    }
+    .case-details-trigger:hover {
+      color: #0284c7;
+      border-color: #0284c7;
+    }
+
+    .case-expanded-specs {
+      display: none;
+      margin-top: 18px;
+      padding: 16px;
+      background: #f9fafb;
+      border-radius: 12px;
+      border: 1px solid var(--hairline);
+      font-size: 0.84rem;
+    }
+    .case-expanded-specs.open {
+      display: block;
+    }
+    .spec-row {
+      margin-bottom: 10px;
+    }
+    .spec-row:last-child {
+      margin-bottom: 0;
+    }
+    .spec-label {
+      font-weight: 700;
+      color: var(--ink);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+    .spec-val {
+      color: #4b5563;
+      line-height: 1.45;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #fafafa;
+      border-top: 1px solid var(--hairline);
+      padding: 72px 0 44px 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.6fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .footer-col-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .footer-nav { list-style: none; }
+    .footer-nav li { margin-bottom: 8px; }
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.15s ease;
+    }
+    .footer-nav a:hover { color: var(--ink); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--hairline);
+      padding-top: 28px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { color: var(--muted); text-decoration: none; }
+    .footer-bottom-links a:hover { color: var(--ink); }
+
+    @media (max-width: 1024px) {
+      .case-item.half, .case-item.third {
+        width: 50%;
+      }
+      .featured-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .case-item.half, .case-item.third {
+        width: 100%;
+      }
+      .hero-section {
+        padding: 48px 0 64px 0;
+      }
+      .hero-big-title {
+        margin-bottom: 20px;
+      }
+      .featured-img-wrap {
+        aspect-ratio: 16 / 10;
+        border-radius: 14px;
+      }
+      .featured-img {
+        border-radius: 14px;
+      }
+      .catalog-section {
+        padding: 56px 0 80px 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <!-- Apollo Website Visitor Tracking -->
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"69e90a89f9d8290015e5446a"})},
+document.head.appendChild(o)}initApollo();</script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="container header-container">
+      <a href="/" class="brand-link">
+        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" class="brand-logo-img">
+      </a>
+      <div class="nav-menu">
+        <a href="/advisory" class="nav-link">Advisory</a>
+        <a href="/portfolio" class="nav-link active">Cases</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+      </div>
+      <div class="header-actions">
+        <a href="https://github.com/hsnlabs-ai" class="header-github-link" target="_blank" rel="noopener" title="View GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <span>hsnlabs</span>
+        </a>
+        <div class="lang-switch">
+          <a href="/portfolio" class="lang-item active">EN</a>
+          <span class="lang-sep">·</span>
+          <a href="/pt/portfolio/" class="lang-item ">PT</a>
+        </div>
+        <a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (INCENTRO REPLICA) -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-big-title">Cases</h1>
+
+        <div class="featured-hero-card">
+          <a href="#case-featured-specs" onclick="toggleSpec('feat-specs'); return false;" class="featured-img-wrap">
+            <img src="/assets/cases/hero-basworld.webp" alt="Featured Case" class="featured-img">
+          </a>
+
+          <div class="featured-meta-row">
+            <span class="pill-case">Featured Case</span>
+            <span class="reading-time">5 min read</span>
+          </div>
+
+          <div class="featured-content-grid">
+            <div>
+              <h2 class="featured-headline">
+                <a href="#case-featured-specs" onclick="toggleSpec('feat-specs'); return false;" style="color:inherit; text-decoration:none;">HR Tech Enterprise: From fragmented legacy portals to instant resolution on WhatsApp & Teams</a>
+              </h2>
+            </div>
+            <div>
+              <p class="featured-desc">Discover how an enterprise workforce platform replaced manual Tier-1 support with autonomous agentic orchestration over TOTVS and SAP in just 8 weeks.</p>
+              <a href="#case-featured-specs" onclick="toggleSpec('feat-specs'); return false;" class="btn-pill-action">
+                <span>Read case</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- EXPANDABLE SPEC FOR FEATURED -->
+          <div class="case-expanded-specs" id="feat-specs" style="margin-top: 28px; background:#ffffff;">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+              <div class="spec-row">
+                <div class="spec-label">O Desafio</div>
+                <div class="spec-val">Gargalo de atendimento em rotinas de RH e departamento pessoal (férias, benefícios, holerites) sobre ERPs legados (TOTVS, Senior, SAP).</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Arquitetura Agêntica</div>
+                <div class="spec-val">Ponte corporativa Model Context Protocol (MCP) expondo ferramentas a um núcleo LangGraph conectado a WhatsApp e Microsoft Teams.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Impacto de Negócio</div>
+                <div class="spec-val">Resolução imediata superior a 70% dos chamados manuais de N1, sem analista humano na ponta e resposta média &lt; 5 segundos.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança & HITL</div>
+                <div class="spec-val">Portão de aprovação humana mandatória para mutações salariais ou folha, mascaramento de PII e logs imutáveis de conformidade.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MOSAIC OF CASES -->
+    <section class="catalog-section">
+      <div class="container">
+        <div class="catalog-header-eyebrow">Cases</div>
+        <h2 class="catalog-header-title">We proudly tell the success stories of our clients</h2>
+        <hr class="catalog-divider">
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+          <button class="filter-pill active" onclick="filterPills('all', this)">All</button>
+          <button class="filter-pill " onclick="filterPills('hr-ops', this)">HR & Operations</button>
+          <button class="filter-pill " onclick="filterPills('insurance', this)">Insurance & Sales</button>
+          <button class="filter-pill " onclick="filterPills('finance', this)">Finance & ERP</button>
+          <button class="filter-pill " onclick="filterPills('logistics', this)">Supply Chain & Logistics</button>
+        </div>
+
+        <!-- CASES MOSAIC -->
+        <div class="cases-mosaic">
+          <article class="case-item half" data-cat="insurance">
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-vanameyde');" class="case-img-link">
+              <img src="/assets/cases/case-vanameyde.webp" alt="Series B Insurtech: Slashing broker ramp-up by 45% with adaptive voice simulations and LLM-as-a-Judge" class="case-img">
+            </a>
+
+            <div class="case-card-meta">
+              <span class="case-tag-pill">Insurtech · Sales</span>
+              <span class="case-card-read">5 min read</span>
+            </div>
+
+            <h3 class="case-card-title">
+              <a href="javascript:void(0);" onclick="toggleSpec('spec-case-vanameyde');" style="color:inherit; text-decoration:none;">Series B Insurtech: Slashing broker ramp-up by 45% with adaptive voice simulations and LLM-as-a-Judge</a>
+            </h3>
+
+            <p class="case-card-desc">How an innovative life insurance provider replaced slow manual roleplays with interactive agentic buyer simulations and automated rubric scoring.</p>
+
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-vanameyde');" class="case-details-trigger">
+              <span>Read case</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- EXPANDABLE ARCHITECTURE SPEC -->
+            <div class="case-expanded-specs" id="spec-case-vanameyde">
+              <div class="spec-row">
+                <div class="spec-label">Desafio:</div>
+                <div class="spec-val">Ramp-up demorado de 60-90 dias para novos corretores de seguros de vida e falta de braço de gestores para treinar objeções complexas repetidamente.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mecanismo Técnico:</div>
+                <div class="spec-val">StateGraph dinâmico com modelos de voz e texto emulando personas resistentes, conectado a pipeline de avaliação com LLM-as-a-Judge.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Métricas:</div>
+                <div class="spec-val">-45% no tempo de ramp-up (de 75 para menos de 40 dias) e aumento de 28% na conversão de propostas.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança:</div>
+                <div class="spec-val">Guardrails estritos de conformidade regulatória SUSEP; zero promessas de cobertura indevidas permitidas durante os treinos.</div>
+              </div>
+            </div>
+          </article>
+          <article class="case-item half" data-cat="logistics">
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-cargonaut');" class="case-img-link">
+              <img src="/assets/cases/case-cargonaut.webp" alt="National Logistics: Automating delivery anomaly resolution and tax validation via multimodal agents" class="case-img">
+            </a>
+
+            <div class="case-card-meta">
+              <span class="case-tag-pill">Logistics · Supply Chain</span>
+              <span class="case-card-read">4 min read</span>
+            </div>
+
+            <h3 class="case-card-title">
+              <a href="javascript:void(0);" onclick="toggleSpec('spec-case-cargonaut');" style="color:inherit; text-decoration:none;">National Logistics: Automating delivery anomaly resolution and tax validation via multimodal agents</a>
+            </h3>
+
+            <p class="case-card-desc">Airport & national freight automation: how multimodal vision agents resolve delivery exceptions and cross-check SEFAZ tax documents in real-time.</p>
+
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-cargonaut');" class="case-details-trigger">
+              <span>Read case</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- EXPANDABLE ARCHITECTURE SPEC -->
+            <div class="case-expanded-specs" id="spec-case-cargonaut">
+              <div class="spec-row">
+                <div class="spec-label">Desafio:</div>
+                <div class="spec-val">Ocorrências de entrega (avarias, recusas, divergências fiscais) paralisavam motoristas e exigiam horas de chamados manuais com a central.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mecanismo Técnico:</div>
+                <div class="spec-val">Agentes de despacho orientados a eventos via WhatsApp recebendo fotos de comprovantes e validando status fiscal na SEFAZ em tempo real.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Métricas:</div>
+                <div class="spec-val">Tempo de tratativa reduzido de 4 horas para 48 minutos (-80%) e eliminação de multas de estadia por falta de canhoto.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança:</div>
+                <div class="spec-val">Limites financeiros determinísticos de reenvio; divergências de carga acima da tolerância escalam imediatamente a supervisores humanos.</div>
+              </div>
+            </div>
+          </article>
+          <article class="case-item third" data-cat="hr-ops">
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-payter');" class="case-img-link">
+              <img src="/assets/cases/case-payter.webp" alt="Benefits Unicorn: Overcoming Slack's 3-second timeout rule with event-driven SQS agent queues" class="case-img">
+            </a>
+
+            <div class="case-card-meta">
+              <span class="case-tag-pill">Fintech · Internal Ops</span>
+              <span class="case-card-read">3 min read</span>
+            </div>
+
+            <h3 class="case-card-title">
+              <a href="javascript:void(0);" onclick="toggleSpec('spec-case-payter');" style="color:inherit; text-decoration:none;">Benefits Unicorn: Overcoming Slack's 3-second timeout rule with event-driven SQS agent queues</a>
+            </h3>
+
+            <p class="case-card-desc">How a leading corporate benefits fintech replaced fragmented internal operations with an asynchronous concierge agent running over AWS SQS and Python workers.</p>
+
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-payter');" class="case-details-trigger">
+              <span>Read case</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- EXPANDABLE ARCHITECTURE SPEC -->
+            <div class="case-expanded-specs" id="spec-case-payter">
+              <div class="spec-row">
+                <div class="spec-label">Desafio:</div>
+                <div class="spec-val">Chamadas síncronas de LLM estouravam o limite rígido de 3 segundos dos webhooks do Slack, travando integrações e gerando filas de espera.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mecanismo Técnico:</div>
+                <div class="spec-val">Arquitetura assíncrona orientada a eventos: API Gateway enfileira webhooks em Amazon SQS, consumido por workers agênticos com resposta em background.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Métricas:</div>
+                <div class="spec-val">Mais de 60% das dúvidas operacionais repetitivas resolvidas de forma autônoma com tempo médio de resposta inferior a 5 segundos.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança:</div>
+                <div class="spec-val">Isolamento estrito de permissões por canal do Slack e mascaramento de dados sensíveis de cartões em conformidade com PCI-DSS.</div>
+              </div>
+            </div>
+          </article>
+          <article class="case-item third" data-cat="finance">
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-stedin');" class="case-img-link">
+              <img src="/assets/cases/case-stedin.webp" alt="Financial Institution: Cutting daily ERP closing cycles from 6 hours to 12 minutes with deterministic FSMs" class="case-img">
+            </a>
+
+            <div class="case-card-meta">
+              <span class="case-tag-pill">Banking · Financial ERP</span>
+              <span class="case-card-read">5 min read</span>
+            </div>
+
+            <h3 class="case-card-title">
+              <a href="javascript:void(0);" onclick="toggleSpec('spec-case-stedin');" style="color:inherit; text-decoration:none;">Financial Institution: Cutting daily ERP closing cycles from 6 hours to 12 minutes with deterministic FSMs</a>
+            </h3>
+
+            <p class="case-card-desc">How a credit and payment gateway deployed Finite State Machine (FSM) agents over SAP ERP to eliminate manual reconciliation errors and audit penalties.</p>
+
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-stedin');" class="case-details-trigger">
+              <span>Read case</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- EXPANDABLE ARCHITECTURE SPEC -->
+            <div class="case-expanded-specs" id="spec-case-stedin">
+              <div class="spec-row">
+                <div class="spec-label">Desafio:</div>
+                <div class="spec-val">Auditoria manual de extratos e conciliação de adquirentes contra o ERP consumia 6 horas diárias de analistas com alto risco de autuações do BACEN.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mecanismo Técnico:</div>
+                <div class="spec-val">Máquina de Estados Finitos (FSM) determinística em Python. LLMs restritos ao parsing de extratos heterogêneos; cálculos 100% matemáticos em código.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Métricas:</div>
+                <div class="spec-val">Ciclo diário de conciliação reduzido de 6 horas para 12 minutos com 100% de rastreabilidade sobre milhões de transações.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança:</div>
+                <div class="spec-val">Controle rigoroso de RBAC em VPC privada e comprovantes matemáticos criptografados prontos para auditoria de órgãos reguladores.</div>
+              </div>
+            </div>
+          </article>
+          <article class="case-item third" data-cat="hr-ops">
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-youforce');" class="case-img-link">
+              <img src="/assets/cases/case-youforce.webp" alt="Manufacturing Enterprise: Unifying fragmented ERP data with zero-trust Model Context Protocol" class="case-img">
+            </a>
+
+            <div class="case-card-meta">
+              <span class="case-tag-pill">Enterprise · Legacy Systems</span>
+              <span class="case-card-read">4 min read</span>
+            </div>
+
+            <h3 class="case-card-title">
+              <a href="javascript:void(0);" onclick="toggleSpec('spec-case-youforce');" style="color:inherit; text-decoration:none;">Manufacturing Enterprise: Unifying fragmented ERP data with zero-trust Model Context Protocol</a>
+            </h3>
+
+            <p class="case-card-desc">Replacing fragmented plant maintenance tickets with an agent that queries equipment manuals, telemetry, and SAP work orders autonomously.</p>
+
+            <a href="javascript:void(0);" onclick="toggleSpec('spec-case-youforce');" class="case-details-trigger">
+              <span>Read case</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+
+            <!-- EXPANDABLE ARCHITECTURE SPEC -->
+            <div class="case-expanded-specs" id="spec-case-youforce">
+              <div class="spec-row">
+                <div class="spec-label">Desafio:</div>
+                <div class="spec-val">Equipes de manutenção perdiam até 40% do turno buscando diagramas e histórico de manutenção em sistemas legados descentralizados.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Mecanismo Técnico:</div>
+                <div class="spec-val">Servidor MCP conectando telemetria IoT de máquinas industriais a ordens de serviço do SAP com busca semântica em base de conhecimento técnica.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Métricas:</div>
+                <div class="spec-val">Queda de 35% no tempo médio de reparo (MTTR) de maquinário crítico e eliminação de paradas não programadas.</div>
+              </div>
+              <div class="spec-row">
+                <div class="spec-label">Governança:</div>
+                <div class="spec-val">Operações críticas de parada ou religamento exigem confirmação biométrica e validação dupla de engenheiro responsável.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="HSN Labs" style="height: 44px; margin-bottom: 16px;">
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 280px;">
+            An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">São Paulo</div>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">
+            Rua Pais Leme, 215 · Conjunto 1713<br>Pinheiros, São Paulo
+          </p>
+          <a href="mailto:hugo@hsnlabs.ai" style="font-size: 0.86rem; color: var(--ink); text-decoration: none; font-weight: 600;">hugo@hsnlabs.ai</a>
+        </div>
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-nav">
+            <li><a href="/bootcamp">Agentic Bootcamp</a></li>
+            <li><a href="/advisory">Advisory</a></li>
+            <li><a href="/portfolio">Cases</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Stay Updated</div>
+          <p style="font-size: 0.82rem; color: var(--muted); margin-bottom: 14px;">
+            [Agentes] x [a Gente] · 1,600+ subscribers on LinkedIn.
+          </p>
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 18px; font-size:0.8rem;">
+            Subscribe on LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>2026 HSN Labs. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/modern-slavery-statement">Modern Slavery Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSpec(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('open');
+      }
+    }
+
+    function filterPills(category, btn) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('article[data-cat]').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
