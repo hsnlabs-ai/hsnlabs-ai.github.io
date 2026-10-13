@@ -24,7 +24,7 @@ A maioria dos agentes corporativos quebra ao lidar com dados legados sujos, regr
 
 ### Legado e Dados Fragmentados
 
-A maioria dos agentes quebra ao lidar com ERPs legados, bancos desconectados e silos não estruturados. Sem pipelines adaptados e normalização estrita de esquemas, modelos falham na leitura e sincronização de dados corporativos.
+Um agente de IA em produção é tão bom quanto o contexto e a estrutura de dados a que tem acesso. Sem pipelines adaptados e normalização estrita de esquemas sobre sistemas legados, modelos falham na leitura e sincronização do estado corporativo.
 
 ### Ontologia Estática
 
