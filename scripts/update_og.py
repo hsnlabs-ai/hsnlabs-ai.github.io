@@ -1,64 +1,84 @@
 #!/usr/bin/env python3
 """
 Dynamic Open Graph Image Generator for HSN Labs (hsnlabs.ai)
-Automatically syncs assets/brand/og-image.png with the Hero section of index.html.
+Generates editorial 1200x630 Open Graph cards in English (og-image.png) and Portuguese (og-image-pt.png),
+matching the exact visual structure of the live website navbar and hero without text bloat.
 """
 
-import os
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-INDEX_HTML = ROOT_DIR / "index.html"
-OG_OUTPUT = ROOT_DIR / "assets" / "brand" / "og-image.png"
-TEMP_HTML = Path("/tmp/hsn_og_dynamic.html")
+BLOG_DIR = ROOT_DIR.parent / "blog_hsn_labs"
+INDEX_EN = ROOT_DIR / "index.html"
+INDEX_PT = ROOT_DIR / "pt" / "index.html"
+OG_EN_OUTPUT = ROOT_DIR / "assets" / "brand" / "og-image.png"
+OG_PT_OUTPUT = ROOT_DIR / "assets" / "brand" / "og-image-pt.png"
+TEMP_DIR = Path("/Users/hugosoares/.hermes/cache/scratch")
+TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
-def extract_hero_data():
-    content = INDEX_HTML.read_text(encoding="utf-8")
-    
-    # Extract title lead
-    m_lead = re.search(r'<span class="hero-title-lead">(.*?)</span>', content, re.DOTALL)
-    title_lead = m_lead.group(1).strip() if m_lead else "Enterprise AI Agents"
-    
-    # Extract title sub
-    m_sub = re.search(r'<span class="hero-title-sub"[^>]*>(.*?)</span>', content, re.DOTALL)
-    title_sub = m_sub.group(1).strip() if m_sub else "Agentic AI adoption."
-    
-    # Extract hero sub paragraph
-    m_p = re.search(r'<p class="hero-sub">(.*?)</p>', content, re.DOTALL)
-    hero_p = m_p.group(1).strip() if m_p else ""
-    # Clean whitespace
-    hero_p = " ".join(hero_p.split()) if hero_p else ""
-    
-    # Extract CTAs
-    m_cta1 = re.search(r'<a href="[^"]*" class="btn btn-primary">(.*?)</a>', content)
+
+def extract_hero_data(html_path: Path, lang: str):
+    content = html_path.read_text(encoding="utf-8")
+
+    m_h1 = re.search(r'<h1 class="display-hero">\s*(.*?)\s*</h1>', content, re.DOTALL)
+    if m_h1:
+        raw_h1 = m_h1.group(1).strip()
+        m_span = re.search(r'^(.*?)<span[^>]*>(.*?)</span>(.*)$', raw_h1, re.DOTALL)
+        if m_span:
+            lead = " ".join(m_span.group(1).split())
+            accent = " ".join(m_span.group(2).split())
+        else:
+            lead = " ".join(re.sub(r'<[^>]+>', '', raw_h1).split())
+            accent = ""
+    else:
+        if lang == "pt":
+            lead, accent = "Adoção de", "Engenharia Agêntica."
+        else:
+            lead, accent = "Agentic Engineering", "Adoption."
+
+    m_ctas = re.search(r'<div class="hero-ctas">(.*?)</div>', content, re.DOTALL)
+    cta_block = m_ctas.group(1) if m_ctas else content
+    m_cta1 = re.search(r'<a[^>]*class="btn btn-primary"[^>]*>(.*?)</a>', cta_block)
+    m_cta2 = re.search(r'<a[^>]*class="btn btn-outline"[^>]*>(.*?)</a>', cta_block)
+
+    if lang == "pt":
+        cta1 = m_cta1.group(1).strip() if m_cta1 else "Aplicar para o Bootcamp"
+        cta2 = m_cta2.group(1).strip() if m_cta2 else "Fale Conosco"
+        return {
+            "lang": "pt-BR",
+            "lead": lead,
+            "accent": accent,
+            "cta1": cta1,
+            "cta2": cta2,
+            "lang_switch_html": '<span>EN ·</span> PT',
+        }
+
     cta1 = m_cta1.group(1).strip() if m_cta1 else "Apply for Bootcamp"
-    
-    m_cta2 = re.search(r'<a href="[^"]*" class="btn btn-outline">(.*?)</a>', content)
     cta2 = m_cta2.group(1).strip() if m_cta2 else "Contact Us"
-
     return {
-        "title_lead": title_lead,
-        "title_sub": title_sub,
-        "hero_p": hero_p,
+        "lang": "en",
+        "lead": lead,
+        "accent": accent,
         "cta1": cta1,
-        "cta2": cta2
+        "cta2": cta2,
+        "lang_switch_html": 'EN <span>· PT</span>',
     }
 
-def build_og_template(data):
+
+def build_og_template(data: dict) -> str:
     paper_path = f"file://{ROOT_DIR}/assets/textures/paper_crumpled_clean.jpg"
     lockup_path = f"file://{ROOT_DIR}/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png"
     carp_path = f"file://{ROOT_DIR}/assets/brand/elements/origami-carp-clean.png"
 
-    hero_p_html = f'<p class="hero-sub">{data["hero_p"]}</p>' if data.get("hero_p") else ""
-
     html = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{data['lang']}">
 <head>
 <meta charset="UTF-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500;600&display=swap');
 
   * {{
     box-sizing: border-box;
@@ -77,11 +97,9 @@ def build_og_template(data):
     color: #475569;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 36px 64px 44px 64px;
-    border: 1px solid #e2e8f0;
   }}
 
+  /* Atmospheric blooms identical to index.html */
   .atmosphere-bg {{
     position: absolute;
     inset: 0;
@@ -95,21 +113,21 @@ def build_og_template(data):
   .orb {{
     position: absolute;
     border-radius: 50%;
-    filter: blur(85px);
+    filter: blur(90px);
   }}
 
   .orb-cyan {{
     width: 580px;
     height: 580px;
-    background: rgba(82, 180, 253, 0.38);
-    top: -160px;
+    background: rgba(82, 180, 253, 0.30);
+    top: -120px;
     left: 8%;
   }}
 
   .orb-peach {{
     width: 480px;
     height: 480px;
-    background: rgba(244, 197, 168, 0.32);
+    background: rgba(244, 197, 168, 0.22);
     top: -40px;
     right: -60px;
   }}
@@ -117,79 +135,82 @@ def build_og_template(data):
   .orb-emerald {{
     width: 460px;
     height: 460px;
-    background: rgba(167, 229, 211, 0.30);
-    bottom: -120px;
+    background: rgba(167, 229, 211, 0.25);
+    bottom: -140px;
     left: -40px;
   }}
 
   .orb-lavender {{
     width: 440px;
     height: 440px;
-    background: rgba(200, 184, 224, 0.28);
+    background: rgba(200, 184, 224, 0.18);
     bottom: -80px;
     right: 12%;
   }}
 
-  .paper-overlay {{
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('{paper_path}');
-    background-size: cover;
-    background-position: center;
-    mix-blend-mode: multiply;
-    opacity: 0.40;
-    pointer-events: none;
-    z-index: 1;
-  }}
-
-  .relative-content {{
+  /* Header identical to site navbar */
+  .header-nav {{
     position: relative;
     z-index: 2;
-    width: 100%;
-  }}
-
-  .header-nav {{
+    height: 76px;
+    background: rgba(245, 245, 245, 0.85);
+    border-bottom: 1px solid #e2e8f0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.85);
-    padding-bottom: 20px;
+    justify-content: space-between;
+    padding: 0 56px;
   }}
 
   .brand-logo-img {{
-    height: 38px;
+    height: 44px;
     width: auto;
     display: block;
   }}
 
-  .header-badge {{
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #0284c7;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid #e2e8f0;
-    padding: 6px 14px;
-    border-radius: 0;
+  .header-right {{
+    display: flex;
+    align-items: center;
+    gap: 24px;
   }}
 
+  .nav-item {{
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 400;
+  }}
+
+  .lang-switch {{
+    font-size: 13px;
+    font-weight: 600;
+    color: #07090e;
+    letter-spacing: 0.04em;
+  }}
+
+  .lang-switch span {{
+    color: #94a3b8;
+    font-weight: 400;
+  }}
+
+  /* Hero Center identical to site hero */
   .hero-center {{
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: auto 0;
-    padding: 24px 0 10px 0;
+    padding: 0 64px 16px 64px;
   }}
 
   .brand-symbol-box {{
-    width: 76px;
-    height: 76px;
+    width: 92px;
+    height: 92px;
     border-radius: 0;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 34px auto;
     background: #52B4FD;
-    box-shadow: 0 10px 26px rgba(82, 180, 253, 0.32), 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 12px 32px rgba(82, 180, 253, 0.28), 0 2px 8px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,8 +219,8 @@ def build_og_template(data):
   }}
 
   .symbol-carp {{
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     position: relative;
     z-index: 2;
@@ -207,34 +228,17 @@ def build_og_template(data):
 
   .display-hero {{
     font-family: 'Cormorant Garamond', Georgia, serif;
-    letter-spacing: -0.025em;
-    margin-bottom: 32px;
-  }}
-
-  .hero-title-lead {{
-    display: block;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1.04;
-    color: #07090e;
-  }}
-
-  .hero-title-sub {{
-    display: block;
-    font-size: 56px;
+    font-size: 74px;
     font-weight: 300;
-    font-style: italic;
-    line-height: 1.12;
-    color: #0284c7;
-    margin-top: 8px;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: #07090e;
+    margin: 0 auto 38px auto;
   }}
 
-  .hero-sub {{
-    font-size: 17px;
-    line-height: 1.55;
-    color: #64748b;
-    max-width: 820px;
-    margin: 0 auto 24px auto;
+  .display-hero .accent {{
+    color: #0284c7;
+    font-weight: 300;
   }}
 
   .hero-ctas {{
@@ -247,47 +251,41 @@ def build_og_template(data):
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14.5px;
     font-weight: 500;
     border-radius: 0;
-    padding: 10px 24px;
-    text-decoration: none;
+    padding: 13px 28px;
     line-height: 1;
     position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }}
+
+  .btn::before {{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('{paper_path}');
+    background-size: 360px auto;
+    background-position: center;
+    mix-blend-mode: multiply;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: -1;
   }}
 
   .btn-primary {{
     background: #52B4FD;
     color: #ffffff;
     border: 1px solid #3fa5f3;
-    box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);
+    box-shadow: 0 2px 8px rgba(82, 180, 253, 0.30);
   }}
 
   .btn-outline {{
     background: #ffffff;
     color: #07090e;
     border: 1px solid #cbd5e1;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }}
-
-  .footer-strip {{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(226, 232, 240, 0.85);
-    padding-top: 14px;
-    font-size: 12px;
-    color: #94a3b8;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }}
-
-  .footer-strip .url {{
-    font-weight: 600;
-    color: #07090e;
-    letter-spacing: 0.02em;
-    text-transform: none;
-    font-size: 13px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
   }}
 </style>
 </head>
@@ -299,56 +297,68 @@ def build_og_template(data):
     <div class="orb orb-lavender"></div>
   </div>
 
-  <div class="paper-overlay"></div>
-
-  <div class="relative-content header-nav">
+  <header class="header-nav">
     <img src="{lockup_path}" alt="HSN Labs" class="brand-logo-img">
-    <span class="header-badge">Forward Deployed Engineering</span>
-  </div>
+    <div class="header-right">
+      <span class="nav-item">Advisory</span>
+      <span class="nav-item">Blog</span>
+      <span class="lang-switch">{data['lang_switch_html']}</span>
+      <span class="btn btn-primary" style="padding: 10px 20px; font-size: 13.5px;">{data['cta1']}</span>
+    </div>
+  </header>
 
-  <div class="relative-content hero-center">
+  <div class="hero-center">
     <div class="brand-symbol-box">
       <img src="{carp_path}" alt="HSN Labs" class="symbol-carp">
     </div>
 
     <h1 class="display-hero">
-      <span class="hero-title-lead">{data['title_lead']}</span>
-      <span class="hero-title-sub">{data['title_sub']}</span>
+      {data['lead']} <span class="accent">{data['accent']}</span>
     </h1>
-
-    {hero_p_html}
 
     <div class="hero-ctas">
       <span class="btn btn-primary">{data['cta1']}</span>
       <span class="btn btn-outline">{data['cta2']}</span>
     </div>
   </div>
-
-  <div class="relative-content footer-strip">
-    <span class="url">hsnlabs.ai</span>
-    <span>High-Assurance AI • Business Ontologies • Private VPC</span>
-  </div>
 </body>
 </html>
 """
     return html
 
-def render_screenshot():
-    data = extract_hero_data()
+
+def render_card(html_source: Path, lang: str, output_path: Path):
+    data = extract_hero_data(html_source, lang)
     html = build_og_template(data)
-    TEMP_HTML.write_text(html, encoding="utf-8")
-    
+    temp_html = TEMP_DIR / f"hsn_og_{lang}.html"
+    temp_html.write_text(html, encoding="utf-8")
+
     cmd = [
         "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
         "--headless",
         "--disable-gpu",
-        f"--screenshot={OG_OUTPUT}",
+        f"--screenshot={output_path}",
         "--window-size=1200,630",
+        "--default-background-color=f5f5f5",
         "--hide-scrollbars",
-        f"file://{TEMP_HTML}"
+        f"file://{temp_html}",
     ]
     subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print(f"Successfully synchronized {OG_OUTPUT}")
+    print(f"Successfully generated {output_path} ({output_path.stat().st_size} bytes)")
+
+
+def main():
+    render_card(INDEX_EN, "en", OG_EN_OUTPUT)
+    if INDEX_PT.exists():
+        render_card(INDEX_PT, "pt", OG_PT_OUTPUT)
+
+    blog_brand_dir = BLOG_DIR / "docs" / "assets" / "brand"
+    if blog_brand_dir.exists():
+        shutil.copy2(OG_EN_OUTPUT, blog_brand_dir / "og-image.png")
+        if OG_PT_OUTPUT.exists():
+            shutil.copy2(OG_PT_OUTPUT, blog_brand_dir / "og-image-pt.png")
+        print(f"Synchronized OG images to {blog_brand_dir}")
+
 
 if __name__ == "__main__":
-    render_screenshot()
+    main()

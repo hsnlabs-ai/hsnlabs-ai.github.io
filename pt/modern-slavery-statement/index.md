@@ -1,16 +1,16 @@
 ---
-title: "Declaracao de Conformidade e Etica · HSN Labs"
-description: "Modern Slavery Statement for HSN Labs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
+title: "Declaração de Conformidade e Ética · HSN Labs"
+description: "Declaração de Conformidade e Ética da HSN Labs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos."
 url: "https://hsnlabs.ai/pt/modern-slavery-statement/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Declaracao de Conformidade e Etica · HSN Labs
+# Declaração de Conformidade e Ética · HSN Labs
 
-> Modern Slavery Statement for HSN Labs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards.
+> Declaração de Conformidade e Ética da HSN Labs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos.
 
-# Declaracao de Conformidade e Etica
+# Declaração de Conformidade e Ética
 
 ## 1. Our Commitment
 

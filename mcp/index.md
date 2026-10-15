@@ -3,7 +3,7 @@ title: "Enterprise MCP Servers · HSN Labs"
 description: "We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance."
 url: "https://hsnlabs.ai/mcp/"
 locale: "en"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Enterprise MCP Servers · HSN Labs

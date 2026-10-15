@@ -10,6 +10,9 @@ PAGES = [
     {"id": "bootcamp", "en": SITE_DIR / "bootcamp" / "index.html", "pt": SITE_DIR / "pt" / "bootcamp" / "index.html", "path_en": "/bootcamp/", "path_pt": "/pt/bootcamp/"},
     {"id": "advisory", "en": SITE_DIR / "advisory" / "index.html", "pt": SITE_DIR / "pt" / "advisory" / "index.html", "path_en": "/advisory/", "path_pt": "/pt/advisory/"},
     {"id": "mcp", "en": SITE_DIR / "mcp" / "index.html", "pt": SITE_DIR / "pt" / "mcp" / "index.html", "path_en": "/mcp/", "path_pt": "/pt/mcp/"},
+    {"id": "langchain", "en": SITE_DIR / "langchain" / "index.html", "pt": SITE_DIR / "pt" / "langchain" / "index.html", "path_en": "/langchain/", "path_pt": "/pt/langchain/"},
+    {"id": "portfolio", "en": SITE_DIR / "portfolio" / "index.html", "pt": SITE_DIR / "pt" / "portfolio" / "index.html", "path_en": "/portfolio/", "path_pt": "/pt/portfolio/"},
+    {"id": "canvas", "en": SITE_DIR / "canvas" / "index.html", "pt": SITE_DIR / "pt" / "canvas" / "index.html", "path_en": "/canvas/", "path_pt": "/pt/canvas/"},
     {"id": "privacy", "en": SITE_DIR / "privacy-policy" / "index.html", "pt": SITE_DIR / "pt" / "privacy-policy" / "index.html", "path_en": "/privacy-policy/", "path_pt": "/pt/privacy-policy/"},
     {"id": "compliance", "en": SITE_DIR / "modern-slavery-statement" / "index.html", "pt": SITE_DIR / "pt" / "modern-slavery-statement" / "index.html", "path_en": "/modern-slavery-statement/", "path_pt": "/pt/modern-slavery-statement/"},
 ]
@@ -29,15 +32,11 @@ def test_gate_s2_zero_parentheses():
     for item in PAGES:
         pt_file = item["pt"]
         content = pt_file.read_text(encoding="utf-8")
-        # Remove script and style blocks where JS/CSS syntax naturally requires ()
         body_no_script = re.sub(r'<script.*?</script>', '', content, flags=re.DOTALL | re.IGNORECASE)
         body_clean = re.sub(r'<style.*?</style>', '', body_no_script, flags=re.DOTALL | re.IGNORECASE)
-        # Also remove inline SVGs which might contain transform(...)
         body_clean = re.sub(r'<svg.*?</svg>', '', body_clean, flags=re.DOTALL | re.IGNORECASE)
-        # Also remove inline style attributes
         body_clean = re.sub(r'style="[^"]*"', '', body_clean)
         
-        # Check text nodes
         text_nodes = re.findall(r'>([^<]+)<', body_clean)
         for t in text_nodes:
             stripped = t.strip()
@@ -45,7 +44,6 @@ def test_gate_s2_zero_parentheses():
                 continue
             assert '(' not in stripped and ')' not in stripped, f"ERRO: Parentese encontrado em texto visivel de {pt_file}: {stripped}"
             
-        # Check title and meta description
         titles = re.findall(r'<title>(.*?)</title>', body_clean)
         for title in titles:
             assert '(' not in title and ')' not in title, f"ERRO: Parentese encontrado em <title> de {pt_file}: {title}"
@@ -60,15 +58,12 @@ def test_gate_s3_reciprocity():
         en_content = item["en"].read_text(encoding="utf-8")
         pt_content = item["pt"].read_text(encoding="utf-8")
         
-        # Canonical EN
         expected_can_en = f'https://hsnlabs.ai{item["path_en"]}'
         assert f'rel="canonical" href="{expected_can_en}"' in en_content or f'rel="canonical" href="{expected_can_en[:-1]}"' in en_content, f"Canonical EN invalido em {item['en']}"
         
-        # Canonical PT
         expected_can_pt = f'https://hsnlabs.ai{item["path_pt"]}'
         assert f'rel="canonical" href="{expected_can_pt}"' in pt_content or f'rel="canonical" href="{expected_can_pt[:-1]}"' in pt_content, f"Canonical PT invalido em {item['pt']}"
         
-        # Hreflang in PT
         assert f'hreflang="en" href="{expected_can_en}"' in pt_content, f"Hreflang en ausente em {item['pt']}"
         assert f'hreflang="pt-BR" href="{expected_can_pt}"' in pt_content, f"Hreflang pt-BR ausente em {item['pt']}"
         assert f'hreflang="x-default" href="{expected_can_en}"' in pt_content, f"Hreflang x-default ausente em {item['pt']}"
@@ -78,20 +73,15 @@ def test_gate_s4_language_isolation():
     print("--- Gate S4: Isolamento de Idioma ---")
     for item in PAGES:
         pt_content = item["pt"].read_text(encoding="utf-8")
-        # Check nav menu links
         nav_match = re.search(r'<div class="nav-menu"[^>]*>(.*?)</div>', pt_content, re.DOTALL)
         if nav_match:
             nav_html = nav_match.group(1)
-            # Advisory must link to /pt/advisory
             if 'Advisory' in nav_html:
                 assert '/pt/advisory' in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
-            # Playbooks must link to /pt/playbooks
             if 'Playbooks' in nav_html:
                 assert '/pt/playbooks' in nav_html, f"Link de Playbooks em {item['pt']} nao usa rota PT"
-            # Blog must link to /blog/pt/
             if 'Blog' in nav_html:
                 assert '/blog/pt/' in nav_html, f"Link de Blog em {item['pt']} nao usa rota PT"
-        # Switcher must point to EN in header
         header_match = re.search(r'<header[^>]*>(.*?)</header>', pt_content, re.DOTALL)
         header_html = header_match.group(1) if header_match else pt_content
         assert f'href="{item["path_en"]}"' in header_html or f'href="{item["path_en"][:-1]}"' in header_html or 'href="/"' in header_html, f"Seletor EN ausente em {item['pt']}"
@@ -121,24 +111,64 @@ def test_gate_s6_forms_and_buttons():
     print("PASS: Gate S6 Localizacao de Formularios e Botoes validada")
 
 def test_gate_s7_metadata_localization():
-    print("--- Gate S7: Localizacao de Metadados Open Graph e Twitter ---")
+    print("--- Gate S7: Localizacao e Sincronia de Metadados Open Graph e Twitter ---")
+    forbidden_en_meta = [
+        "AI Agents That Don't Fail",
+        "Boutique building resilient",
+        "We build private, secure Model Context Protocol",
+        "Discover how leading enterprises build",
+        "Privacy Policy for HSN Labs",
+        "Modern Slavery Statement for HSN Labs",
+    ]
     for item in PAGES:
-        pt_content = item["pt"].read_text(encoding="utf-8")
-        og_title = re.search(r'property="og:title" content="([^"]*)"', pt_content)
-        if og_title:
-            assert "AI Agents That Don't Fail" not in og_title.group(1), f"ERRO: og:title nao traduzido em {item['pt']}"
-        og_desc = re.search(r'property="og:description" content="([^"]*)"', pt_content)
-        if og_desc:
-            assert "Boutique building resilient" not in og_desc.group(1), f"ERRO: og:description nao traduzido em {item['pt']}"
-    print("PASS: Gate S7 Metadados Open Graph e Twitter validados")
+        for lang_key, path_key in [("en", "path_en"), ("pt", "path_pt")]:
+            file_path = item[lang_key]
+            content = file_path.read_text(encoding="utf-8")
+            desc = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', content)
+            og_desc = re.search(r'<meta\s+property="og:description"\s+content="([^"]*)"', content)
+            tw_desc = re.search(r'<meta\s+name="twitter:description"\s+content="([^"]*)"', content)
+            og_url = re.search(r'<meta\s+property="og:url"\s+content="([^"]*)"', content)
+            tw_url = re.search(r'<meta\s+name="twitter:url"\s+content="([^"]*)"', content)
+            og_img = re.search(r'<meta\s+property="og:image"\s+content="([^"]*)"', content)
+            tw_img = re.search(r'<meta\s+name="twitter:image"\s+content="([^"]*)"', content)
+
+            assert desc and og_desc and tw_desc, f"ERRO: Meta description/OG/Twitter ausente em {file_path}"
+            assert desc.group(1) == og_desc.group(1) == tw_desc.group(1), (
+                f"ERRO: Divergencia entre meta description e og/twitter description em {file_path}:\n"
+                f"  desc: {desc.group(1)}\n  og:desc: {og_desc.group(1)}"
+            )
+            expected_url = f"https://hsnlabs.ai{item[path_key]}"
+            assert og_url and og_url.group(1) == expected_url, f"ERRO: og:url incorreto em {file_path}: {og_url.group(1) if og_url else None} != {expected_url}"
+            assert tw_url and tw_url.group(1) == expected_url, f"ERRO: twitter:url incorreto em {file_path}: {tw_url.group(1) if tw_url else None} != {expected_url}"
+            assert og_img and tw_img and og_img.group(1) == tw_img.group(1), f"ERRO: og:image != twitter:image em {file_path}"
+
+            if lang_key == "pt":
+                assert og_img.group(1).endswith("og-image-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-image-pt.png"
+                for bad in forbidden_en_meta:
+                    assert bad not in desc.group(1), f"ERRO: Meta description em ingles em {file_path}: {desc.group(1)}"
+    print("PASS: Gate S7 Metadados Open Graph, Twitter e Meta Description 100% sincronizados e localizados")
 
 def test_gate_s8_portuguese_accentuation():
     print("--- Gate S8: Acentuacao Grafica Obrigatoria em Portugues ---")
     unaccented_forbidden = [
-        r'\badocao\b', r'\bestrategia\b', r'\boperacao\b', r'\bportfolio\b',
+        r'\badocao\b', r'\bestrategia\b', r'\boperacao\b', r'\boperacoes\b',
         r'\breducao\b', r'\bresponsavel\b', r'\banalisara\b', r'\brespondera\b',
         r'\bpolitica\b', r'\bdeclaracao\b', r'\blaboratorio\b', r'\bnavegacao\b',
-        r'\bagenticas\b', r'\bagentica\b'
+        r'\bagenticas\b', r'\bagentica\b', r'\bproducao\b', r'\bimplantacao\b',
+        r'\bintegracao\b', r'\bvalidacao\b', r'\bgovernanca\b', r'\bperimetro\b',
+        r'\bcriticos\b', r'\bautonomos\b', r'\bnegocio\b', r'\betica\b',
+        r'\bsenior\b', r'\bqualificacao\b', r'\bcriterios\b',
+        r'\bmetodo\b', r'\bprototipo\b', r'\bhomologacao\b', r'\breplicas\b',
+        r'\bcodigo\b', r'\bconexoes\b', r'\bseguranca\b', r'\bextracao\b',
+        r'\bmetricas\b', r'\btecnica\b', r'\btecnico\b', r'\bminima\b',
+        r'\bmilhoes\b', r'\borcamento\b', r'\bcirurgicas\b', r'\binformacao\b',
+        r'\binscricao\b', r'\bvoce\b', r'\bate\b', r'\bvisao\b', r'\batualizacao\b',
+        r'\bsolicitacao\b', r'\brevisara\b', r'\balucinacao\b', r'\balucinacoes\b',
+        r'\bexposicao\b', r'\bexecucao\b', r'\bfuncao\b', r'\bpermissao\b',
+        r'\balcadas\b', r'\baprovacao\b', r'\bsupervisao\b', r'\bgenericos\b',
+        r'\bacao\b', r'\bacoes\b', r'\bconstruimos\b', r'\bdeterministicos\b',
+        r'\bdeterministicas\b', r'\bmaquinas\b', r'\bavaliacao\b', r'\bcontinuas\b',
+        r'\bmultiplos\b', r'\bhibridos\b', r'\bproprietarias\b', r'\bnivel\b'
     ]
     pattern = re.compile('|'.join(unaccented_forbidden), re.IGNORECASE)
     
@@ -159,10 +189,9 @@ def test_gate_s8_portuguese_accentuation():
             s_clean = s.strip()
             if not s_clean or 'clamp(' in s_clean:
                 continue
-            if item["id"] == "home":
-                m = pattern.search(s_clean)
-                assert not m, f"ERRO: Palavra sem acentuacao encontrada em {item['pt']}: '{m.group(0)}' no trecho '{s_clean}'"
-    print("PASS: Gate S8 Acentuacao Grafica Obrigatoria validada com sucesso")
+            m = pattern.search(s_clean)
+            assert not m, f"ERRO: Palavra sem acentuacao encontrada em {item['pt']}: '{m.group(0)}' no trecho '{s_clean}'"
+    print("PASS: Gate S8 Acentuacao Grafica Obrigatoria validada em todas as 9 rotas PT")
 
 def test_gate_s9_footer_consistency():
     print("--- Gate S9: Paridade Estrita de Rodape (Footer Invariant) ---")
@@ -180,6 +209,7 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "advisory" / "index.html",
         SITE_DIR / "mcp" / "index.html",
         SITE_DIR / "langchain" / "index.html",
+        SITE_DIR / "portfolio" / "index.html",
         SITE_DIR / "privacy-policy" / "index.html",
         SITE_DIR / "modern-slavery-statement" / "index.html",
         SITE_DIR / "404.html",
@@ -191,11 +221,13 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "pt" / "advisory" / "index.html",
         SITE_DIR / "pt" / "mcp" / "index.html",
         SITE_DIR / "pt" / "langchain" / "index.html",
+        SITE_DIR / "pt" / "portfolio" / "index.html",
+        SITE_DIR / "canvas" / "index.html",
+        SITE_DIR / "pt" / "canvas" / "index.html",
         SITE_DIR / "pt" / "privacy-policy" / "index.html",
         SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
     ]
     
-    # 1. Validate EN Footers
     for page in en_pages:
         assert page.exists(), f"ERRO: Pagina EN inexistente: {page}"
         content = page.read_text(encoding="utf-8")
@@ -207,7 +239,6 @@ def test_gate_s9_footer_consistency():
         assert "1,600+" in m.group(0) and "subscribers" in m.group(0), f"ERRO: Contagem de inscritos ausente em {page}"
         assert len(re.findall(r'footer-social-icon', m.group(0))) == 7, f"ERRO: Icones sociais incompletos em {page}"
         
-    # 2. Validate PT Footers
     for page in pt_pages:
         assert page.exists(), f"ERRO: Pagina PT inexistente: {page}"
         content = page.read_text(encoding="utf-8")

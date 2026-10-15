@@ -1,14 +1,14 @@
 ---
 title: "Cases · Histórias de sucesso e sistemas em produção · HSN Labs"
-description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs."
+description: "Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a HSN Labs."
 url: "https://hsnlabs.ai/pt/portfolio/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Cases · Histórias de sucesso e sistemas em produção · HSN Labs
 
-> Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs.
+> Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a HSN Labs.
 
 # Cases
 
@@ -38,18 +38,22 @@ Como uma instituição financeira implementou agentes baseados em Máquinas de E
 
 Substituição de ordens manuais de manutenção fabril por agentes que cruzam manuais técnicos, telemetria e ordens do SAP autonomamente.
 
-Laboratório de engenharia especializado em arquiteturas agênticas e governança determinística em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
-Rua Pais Leme, 215 · Conjunto 1713Pinheiros, São Paulo
+Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
+
+- The Agentic Pilot Canvas
 
 - Advisory
 
-- Cases
+- Enterprise MCP
+
+- LangChain & LangGraph
 
 - Blog
 
-- Contact
+- Fale Conosco
 
-[Agentes] x [a Gente] · 1,600+ subscribers on LinkedIn.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.

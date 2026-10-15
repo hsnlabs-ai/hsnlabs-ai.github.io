@@ -1,14 +1,14 @@
 ---
 title: "LangChain & LangGraph · Em Produção desde 2022 · HSN Labs"
-description: "Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suites LangSmith para sistemas de missão crítica."
+description: "Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
 url: "https://hsnlabs.ai/pt/langchain/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # LangChain & LangGraph · Em Produção desde 2022 · HSN Labs
 
-> Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suites LangSmith para sistemas de missão crítica.
+> Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica.
 
 # LangChain & LangGraph Do modelo de linguagem à inteligência real.
 

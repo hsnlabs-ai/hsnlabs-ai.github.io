@@ -19,6 +19,7 @@ EN_PAGES = [
     SITE_DIR / "advisory" / "index.html",
     SITE_DIR / "mcp" / "index.html",
     SITE_DIR / "langchain" / "index.html",
+    SITE_DIR / "portfolio" / "index.html",
     SITE_DIR / "privacy-policy" / "index.html",
     SITE_DIR / "modern-slavery-statement" / "index.html",
     SITE_DIR / "404.html",
@@ -30,6 +31,9 @@ PT_PAGES = [
     SITE_DIR / "pt" / "advisory" / "index.html",
     SITE_DIR / "pt" / "mcp" / "index.html",
     SITE_DIR / "pt" / "langchain" / "index.html",
+    SITE_DIR / "pt" / "portfolio" / "index.html",
+    SITE_DIR / "canvas" / "index.html",
+    SITE_DIR / "pt" / "canvas" / "index.html",
     SITE_DIR / "pt" / "privacy-policy" / "index.html",
     SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
 ]

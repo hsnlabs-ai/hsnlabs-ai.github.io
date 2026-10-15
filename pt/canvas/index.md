@@ -1,14 +1,14 @@
 ---
 title: "The Agentic Pilot Canvas v1.4 · HSN Labs"
-description: "Framework aberto de arquitetura para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF. Versão 1.4 atualizada em outubro de 2026."
+description: "Framework aberto de arquitetura sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF."
 url: "https://hsnlabs.ai/pt/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # The Agentic Pilot Canvas v1.4 · HSN Labs
 
-> Framework aberto de arquitetura para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF. Versão 1.4 atualizada em outubro de 2026.
+> Framework aberto de arquitetura sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF.
 
 # The Agentic Pilot Canvas
 
@@ -130,7 +130,7 @@ Exemplos: Atingida a acurácia combinada no sandbox, o orçamento de rollout de 
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
-WeWork Av. Paulista Av. Paulista, 1374 Bela Vista, São Paulo
+Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Bootcamp de Agentes
 
@@ -139,6 +139,8 @@ WeWork Av. Paulista Av. Paulista, 1374 Bela Vista, São Paulo
 - Advisory
 
 - Enterprise MCP
+
+- LangChain & LangGraph
 
 - Blog
 

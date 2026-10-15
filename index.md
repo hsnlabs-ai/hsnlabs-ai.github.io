@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | HSN Labs"
 description: "HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade."
 url: "https://hsnlabs.ai/"
 locale: "en"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Agentic Engineering Adoption | HSN Labs

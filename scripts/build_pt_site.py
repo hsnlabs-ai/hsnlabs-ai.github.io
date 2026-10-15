@@ -154,12 +154,15 @@ def build_pt_home():
     # 1. Title and Head Meta Tags
     html = safe_replace(html, '<title>Agentic Engineering Adoption | HSN Labs</title>', '<title>Adoção de Engenharia Agêntica | HSN Labs</title>')
     html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta property="og:title" content="HSN Labs · Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs · Adoção de Engenharia Agêntica">')
-    html = safe_replace(html, '<meta property="og:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta property="og:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
-    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs · Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs · Adoção de Engenharia Agêntica">')
-    html = safe_replace(html, '<meta name="twitter:description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="twitter:description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
+    html = safe_replace(html, '<meta property="og:title" content="HSN Labs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta property="og:description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta property="og:description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
+    html = safe_replace(html, '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
+    html = safe_replace(html, '<meta name="twitter:url" content="https://hsnlabs.ai/">', '<meta name="twitter:url" content="https://hsnlabs.ai/pt/">')
+    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta name="twitter:description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="twitter:description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
+    html = safe_replace(html, '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta name="description" content="Agentic Engineering Adoption: operational transition to enterprise agents without disrupting legacy systems or business rules.">', '<meta name="description" content="Adoção de Engenharia Agêntica: transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.">')
+    html = safe_replace(html, '<meta name="description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     
     # Hreflangs
     hreflangs = '''  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/">
@@ -196,8 +199,8 @@ def build_pt_home():
     )
     html = safe_replace(
         html,
-        'Operational transition to enterprise agents without disrupting legacy systems or business rules.',
-        'Transição operacional para agentes corporativos sem ruptura de sistemas legados ou regras de negócio.'
+        'Your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.',
+        'Seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.'
     )
     html = safe_replace(html, '<a href="/bootcamp" class="btn btn-primary">Apply for Bootcamp</a>', '<a href="/pt/bootcamp" class="btn btn-primary">Aplicar para o Bootcamp</a>')
     html = safe_replace(html, '>Contact Us<', '>Fale Conosco<')
@@ -213,8 +216,8 @@ def build_pt_home():
     html = safe_replace(html, '>Legacy and Fragmented Data<', '>Legado e Dados Fragmentados<')
     html = safe_replace(
         html,
-        'Legacy ERPs, disconnected databases, and unstructured silos break standard LLMs. Without domain-adapted data pipelines and strict schema normalization, models fail to read or sync corporate state accurately.',
-        'A maioria dos agentes quebra ao lidar com ERPs legados, bancos desconectados e silos não estruturados. Sem pipelines adaptados e normalização estrita de esquemas, modelos falham na leitura e sincronização de dados corporativos.'
+        'An enterprise AI agent in production is only as good as the context and data structures it can access. Without domain-adapted pipelines and strict schema normalization over legacy systems, models fail to sync corporate state accurately.',
+        'Um agente de IA em produção é tão bom quanto o contexto e a estrutura de dados a que tem acesso. Sem pipelines adaptados e normalização estrita de esquemas sobre sistemas legados, modelos falham na leitura e sincronização do estado corporativo.'
     )
     html = safe_replace(html, '>Static Ontology<', '>Ontologia Estática<')
     html = safe_replace(
@@ -254,7 +257,7 @@ def build_pt_home():
     html = safe_replace(html, 'Full Name', 'Nome Completo')
     html = safe_replace(html, 'Work Email', 'E-mail Corporativo')
     html = safe_replace(html, 'Company Name', 'Nome da Empresa')
-    html = safe_replace(html, 'What do you want to build or automate?', 'O que voce deseja construir ou automatizar?')
+    html = safe_replace(html, 'What do you want to build or automate?', 'O que você deseja construir ou automatizar?')
     html = safe_replace(html, 'Under 10M USD', 'Abaixo de 10M USD')
     html = safe_replace(html, '10M to 50M USD', '10M a 50M USD')
     html = safe_replace(html, '50M to 250M USD', '50M a 250M USD')

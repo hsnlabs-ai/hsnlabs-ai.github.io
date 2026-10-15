@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · HSN Labs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Agentic Bootcamp · HSN Labs

@@ -3,7 +3,7 @@ title: "Cases · We proudly tell the success stories of our clients · HSN Labs"
 description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs."
 url: "https://hsnlabs.ai/portfolio/"
 locale: "en"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Cases · We proudly tell the success stories of our clients · HSN Labs
@@ -40,16 +40,20 @@ Replacing fragmented plant maintenance tickets with an agent that queries equipm
 
 An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
 
-Rua Pais Leme, 215 · Conjunto 1713Pinheiros, São Paulo
+Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
+- The Agentic Pilot Canvas
+
 - Advisory
 
-- Cases
+- Enterprise MCP
+
+- LangChain & LangGraph
 
 - Blog
 
-- Contact
+- Contact Us
 
-[Agentes] x [a Gente] · 1,600+ subscribers on LinkedIn.
+Architecture field notes & playbooks sent to your corporate inbox.

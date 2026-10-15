@@ -1,42 +1,42 @@
 ---
 title: "Bootcamp de Agentes · HSN Labs"
-description: "Alocamos Engenheiros Forward Deployed seniores junto a sua equipe para construir agentes de IA que operam em producao. Cem por cento creditado para o contrato de implantacao em contas qualificadas."
+description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/pt/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
 # Bootcamp de Agentes · HSN Labs
 
-> Alocamos Engenheiros Forward Deployed seniores junto a sua equipe para construir agentes de IA que operam em producao. Cem por cento creditado para o contrato de implantacao em contas qualificadas.
+> Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
 
 # Bootcamp de Agentes
 
-Alocamos um engenheiro senior FDE dentro da sua operacao. Cem por cento creditado para implantacao em contas qualificadas.
+Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas.
 
-## Nosso Metodo
+## Nosso Método
 
-Replicas de leitura de banco de dados, conexoes ERP e isolamento de seguranca antes de escrever qualquer codigo.
+Réplicas de leitura de banco de dados, conexões ERP e isolamento de segurança antes de escrever qualquer código.
 
 Engenharia reversa de código legado para especificações formais, no modelo Code to Spec, e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.
 
-Implantacao de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.
+Implantação de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.
 
-Entrega de viabilidade tecnica, metricas auditadas de ROI e roadmap de implantacao. Taxa do sprint totalmente reembolsada no contrato de producao.
+Entrega de viabilidade técnica, métricas auditadas de ROI e roadmap de implantação. Taxa do sprint totalmente reembolsada no contrato de produção.
 
-## Criterios de Qualificacao
+## Critérios de Qualificação
 
-O bootcamp e um sprint intensivo de producao de 12 mil USD. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa e cem por cento creditada para o contrato de producao.
+O bootcamp é um sprint intensivo de produção de 1 a 5 dias. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
 Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 
-Receita anual minima de 10 milhoes de USD com orcamento pre-aprovado no ano fiscal vigente para desenvolver e implantar o projeto.
+Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano fiscal vigente para desenvolver e implantar o projeto.
 
-Credenciais de homologacao ou replicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraimos fatias cirurgicas de dados onde a informacao reside.
+Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraímos fatias cirúrgicas de dados onde a informação reside.
 
-## Inscricao no Bootcamp
+## Inscrição no Bootcamp
 
-Envie seus dados para solicitar uma chamada tecnica. Analisamos seus sistemas e confirmamos os detalhes de qualificacao em ate 24 horas.
+Envie seus dados para solicitar uma chamada técnica. Analisamos seus sistemas e confirmamos os detalhes de qualificação em até 24 horas.
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 

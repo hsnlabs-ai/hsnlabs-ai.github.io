@@ -1,16 +1,16 @@
 ---
-title: "Politica de Privacidade · HSN Labs"
-description: "Privacy Policy for HSN Labs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
+title: "Política de Privacidade · HSN Labs"
+description: "Política de Privacidade da HSN Labs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade."
 url: "https://hsnlabs.ai/pt/privacy-policy/"
 locale: "pt-BR"
-updatedAt: "2026-10-13T10:28:42Z"
+updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Politica de Privacidade · HSN Labs
+# Política de Privacidade · HSN Labs
 
-> Privacy Policy for HSN Labs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks.
+> Política de Privacidade da HSN Labs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade.
 
-# Politica de Privacidade
+# Política de Privacidade
 
 ## 1. Objective and Scope
 
