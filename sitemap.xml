@@ -191,6 +191,24 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/pt/snowflake/" />
   </url>
   <url>
+    <loc>https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
+  </url>
+  <url>
     <loc>https://hsnlabs.ai/blog/post/autonomous-negotiations-collections-contracts/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
