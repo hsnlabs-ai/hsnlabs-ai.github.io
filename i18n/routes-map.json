@@ -80,6 +80,15 @@
       "title_pt": "Parceiro LangChain — Do Modelo de Linguagem a Inteligencia Real | hsnlabs",
       "description_en": "From language model to real intelligence. hsnlabs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.",
       "description_pt": "Do modelo de linguagem a inteligencia real. A hsnlabs faz parceria com a LangChain para construir aplicacoes agenticas de missao critica em todo o ciclo de vida."
+    },
+    {
+      "id": "site_snowflake",
+      "en_path": "/snowflake/",
+      "pt_path": "/pt/snowflake/",
+      "title_en": "Snowflake AI Data Cloud · Agent Architecture | hsnlabs",
+      "title_pt": "Snowflake AI Data Cloud · Arquitetura de Agentes | hsnlabs",
+      "description_en": "Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance.",
+      "description_pt": "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis diretamente sobre a Snowflake AI Data Cloud com governança sem cópias."
     }
   ],
   "blog_posts": [

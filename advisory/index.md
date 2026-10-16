@@ -3,7 +3,7 @@ title: "Agentic AI Advisory · hsnlabs"
 description: "Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries."
 url: "https://hsnlabs.ai/advisory/"
 locale: "en"
-updatedAt: "2026-10-15T19:01:44Z"
+updatedAt: "2026-10-16T12:35:22Z"
 ---
 
 # Agentic AI Advisory · hsnlabs
@@ -49,6 +49,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Enterprise MCP
 
 - LangChain & LangGraph
+
+- Snowflake AI Data Cloud
 
 - Blog
 

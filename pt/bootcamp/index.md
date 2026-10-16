@@ -3,7 +3,7 @@ title: "Bootcamp de Agentes · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/pt/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-15T19:01:44Z"
+updatedAt: "2026-10-16T12:35:22Z"
 ---
 
 # Bootcamp de Agentes · hsnlabs
@@ -51,6 +51,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Enterprise MCP
 
 - LangChain & LangGraph
+
+- Snowflake AI Data Cloud
 
 - Blog
 

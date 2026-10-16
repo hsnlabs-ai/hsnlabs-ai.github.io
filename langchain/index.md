@@ -3,7 +3,7 @@ title: "LangChain & LangGraph · In Production Since 2022 · hsnlabs"
 description: "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
 url: "https://hsnlabs.ai/langchain/"
 locale: "en"
-updatedAt: "2026-10-15T19:01:44Z"
+updatedAt: "2026-10-16T12:35:22Z"
 ---
 
 # LangChain & LangGraph · In Production Since 2022 · hsnlabs
@@ -79,6 +79,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Enterprise MCP
 
 - LangChain & LangGraph
+
+- Snowflake AI Data Cloud
 
 - Blog
 

@@ -3,7 +3,7 @@ title: "Adoção de Engenharia Agêntica | hsnlabs"
 description: "A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década."
 url: "https://hsnlabs.ai/pt/"
 locale: "pt-BR"
-updatedAt: "2026-10-15T19:01:44Z"
+updatedAt: "2026-10-16T12:35:22Z"
 ---
 
 # Adoção de Engenharia Agêntica | hsnlabs
@@ -95,6 +95,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Enterprise MCP
 
 - LangChain & LangGraph
+
+- Snowflake AI Data Cloud
 
 - Blog
 

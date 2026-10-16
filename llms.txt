@@ -30,6 +30,14 @@ Guiding C-levels through the structural transformation required to protect marke
 - Bootcamp Deployment Protocol: https://hsnlabs.ai/bootcamp/
 An intensive 1-to-5-day Forward Deployed Engineering sprint inside client infrastructure. We validate data access, connect tools, and deliver a working sandbox prototype and executive business case with verified operational ROI. Qualifying enterprise accounts unlock fully sponsored terms or a 100% Performance Rebate credited toward production rollout.
 
+## Ecosystem & Platform Alliances
+- Snowflake AI Data Cloud Architecture: https://hsnlabs.ai/snowflake/
+Operationalizing deterministic LangGraph state machines and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance and row-level security.
+- LangChain & LangGraph Architecture: https://hsnlabs.ai/langchain/
+Independent agentic engineering with LangChain and LangGraph in production since 2022, featuring stateful StateGraph orchestration, LangSmith evaluation suites, and sovereign VPC runtimes.
+- Enterprise MCP Servers: https://hsnlabs.ai/mcp/
+Private, zero-trust Model Context Protocol servers connecting deep agents to SAP, TOTVS, and relational databases inside your cloud perimeter.
+
 ## Enterprise Architecture Benchmarks & Vendor Comparisons
 - Palantir TCO vs Global Consultancies vs hsnlabs: https://hsnlabs.ai/blog/post/palantir-pricing-tco-and-open-alternatives/
 Audited financial comparison of Palantir Foundry and AIP (SEC Form 10-K Government vs Commercial power law and UK G-Cloud 14 rate card), global systems integrators (Accenture, Capgemini, Globant), and hsnlabs open operational ontologies in Python, Pydantic, LangGraph, and MCP at up to 80 percent lower TCO.
@@ -67,6 +75,8 @@ Structured machine-readable feed of all technical publications.
 - Bootcamp de Agentes: https://hsnlabs.ai/pt/bootcamp/
 - Advisory de Arquitetura: https://hsnlabs.ai/pt/advisory/
 - Servidores MCP Enterprise: https://hsnlabs.ai/pt/mcp/
+- Arquitetura LangChain e LangGraph: https://hsnlabs.ai/pt/langchain/
+- Arquitetura Snowflake AI Data Cloud: https://hsnlabs.ai/pt/snowflake/
 - Blog hsnlabs em Portugues: https://hsnlabs.ai/blog/pt/
 - O TCO Real da Palantir vs Consultorias Globais vs hsnlabs: https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/
 - Palantir vs Databricks vs Arquitetura Hibrida hsnlabs: https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/
