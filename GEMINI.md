@@ -1,4 +1,4 @@
-# Gemini Agent Directives — HSN Labs Official Website
+# Gemini Agent Directives — hsnlabs Official Website
 
 Operational directives for Gemini models maintaining, extending, or refactoring this repository.
 
@@ -6,7 +6,7 @@ Operational directives for Gemini models maintaining, extending, or refactoring 
 
 ## 1. Mission and Core Positioning
 
-HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
+hsnlabs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
 * Primary Language: The website must be 100% in English. All copy, labels, meta tags, and alt texts are strictly English.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
@@ -20,7 +20,7 @@ The website follows a clean 4-section architecture:
 
 1. Header:
    * Sticky blurred translucent navbar on off-white canvas.
-   * Left: Official HSN Labs horizontal lockup.
+   * Left: Official hsnlabs horizontal lockup.
    * Minimalist navbar: Intermediate navigation links strictly eliminated to maximize visual breathing room and conversion focus; navbar contains only the brand lockup on the left and primary Apply for Bootcamp button on the right.
    * Primary action button linking to Bootcamp application.
 2. Hero Page:
@@ -46,7 +46,7 @@ The website follows a clean 4-section architecture:
    * Direct technical scoping card with four qualification gates and direct email dispatch.
 5. Footer:
    * Institutional signature with wordmark lockup, navigation links, and engineering specifications.
-   * Copyright line: `2026 HSN Labs. All rights reserved.`
+   * Copyright line: `2026 hsnlabs. All rights reserved.`
    * Prohibited in footer bottom: Do not add redundant location strings or repetitive descriptor suffixes.
 
 ---

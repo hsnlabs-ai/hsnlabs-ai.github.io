@@ -1,5 +1,5 @@
 /**
- * Founder Callout 5-Pair Synchronized Rotation Engine &middot; HSN Labs
+ * Founder Callout 5-Pair Synchronized Rotation Engine &middot; hsnlabs
  * Strictly standardizes the two CTA parts:
  *   - Subtitle: "Share it with Hugo, CPTO" (PT: "Compartilhe com Hugo, CPTO")
  *   - Button: "Start a Conversation" (PT: "Iniciar Conversa")

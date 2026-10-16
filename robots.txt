@@ -1,5 +1,5 @@
 # ==============================================================================
-# robots.txt for HSN Labs (https://hsnlabs.ai)
+# robots.txt for hsnlabs (https://hsnlabs.ai)
 # Configured for Standard Search Engines & Generative AI / GEO / AEO Crawlers
 # ==============================================================================
 

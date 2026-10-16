@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Capa: A Cascata de Dominós do High IC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #06080b;
+      color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .cover-container {
+      width: 1200px;
+      height: 630px;
+      background: #090d12;
+      border: 1px solid #1f2937;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 48px;
+    }
+    .grid-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+    .header {
+      position: relative;
+      z-index: 2;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #00e5ff;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: #00e5ff;
+      border-radius: 50%;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #8b949e;
+      font-weight: 400;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .domino-cascade {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+    .domino-card {
+      background: #0d1117;
+      border: 1px solid #21262d;
+      border-radius: 6px;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    .domino-card.final {
+      border-color: #00ff88;
+      background: rgba(0, 255, 136, 0.03);
+    }
+    .step-number {
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: #00e5ff;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .step-number.final-num {
+      color: #00ff88;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f0f6fc;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 12px;
+      color: #8b949e;
+      line-height: 1.4;
+    }
+    .connector {
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-top: 2px solid #30363d;
+      border-right: 2px solid #30363d;
+      transform: rotate(45deg);
+      z-index: 3;
+    }
+    .footer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #21262d;
+      padding-top: 18px;
+    }
+    .meta-source {
+      font-size: 12px;
+      color: #6e7681;
+      font-family: ui-monospace, monospace;
+    }
+    .brand-tag {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: #f0f6fc;
+    }
+    .brand-tag span {
+      color: #00e5ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="cover-container">
+    <div class="grid-background"></div>
+    
+    <div class="header">
+      <div class="badge">[Agentes] x [a Gente] • Spoke 3: Future of Work</div>
+      <h1>A Cascata de Dominós do High IC</h1>
+      <p class="subtitle">Como a IA dissolve pirâmides corporativas, comprime a liderança média e cria operadores hiper-remunerados.</p>
+    </div>
+
+    <div class="domino-cascade">
+      <div class="domino-card">
+        <div>
+          <div class="step-number">01 / CATALISADOR</div>
+          <div class="card-title">Produtividade Individual via IA</div>
+          <div class="card-desc">Operadores seniores usam IA para absorver tarefas repetitivas, dados e código sem fricção.</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <div class="domino-card">
+        <div>
+          <div class="step-number">02 / COMPRESSÃO</div>
+          <div class="card-title">Retração de Vagas Juniores</div>
+          <div class="card-desc">Tarefas de entrada e suporte operacional são automatizadas. A base da pirâmide seca.</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <div class="domino-card">
+        <div>
+          <div class="step-number">03 / COLAPSO</div>
+          <div class="card-title">Queda da Gestão Média</div>
+          <div class="card-desc">Sem equipes grandes para fiscalizar nem recados manuais para passar, o middle management perde função.</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <div class="domino-card">
+        <div>
+          <div class="step-number">04 / EFICIÊNCIA</div>
+          <div class="card-title">Hiperautonomia Organizacional</div>
+          <div class="card-desc">Equipes mínimas operam com contexto integral. O custo e a burocracia de coordenação caem a zero.</div>
+        </div>
+        <div class="connector"></div>
+      </div>
+
+      <div class="domino-card final">
+        <div>
+          <div class="step-number final-num">05 / REVOLUÇÃO</div>
+          <div class="card-title">Ascensão do High IC</div>
+          <div class="card-desc">Orçamentos de esquadrões inteiros migram para reter operadores de elite com salários recordes.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="meta-source">METODOLOGIA: hsnlabs • CASE STUDIES: SHOPIFY, META & AI-FIRST ENTERPRISES</div>
+      <div class="brand-tag">hsnlabs <span>[×]</span> AGENTES [×] GENTE</div>
+    </div>
+  </div>
+</body>
+</html>

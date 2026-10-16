@@ -1,8 +1,8 @@
 {
   "provider": "google_tag_manager",
   "gtm_container_id": "GTM-KPL6PVKC",
-  "ga4_stream_name": "hsn-labs",
-  "ga4_stream_url": "https://hsn-labs.com",
+  "ga4_stream_name": "hsnlabs",
+  "ga4_stream_url": "https://hsnlabs.com",
   "ga4_stream_id": "15812853732",
   "ga4_measurement_id": "G-GMK24ECXMF"
 }

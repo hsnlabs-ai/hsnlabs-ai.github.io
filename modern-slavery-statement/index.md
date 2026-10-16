@@ -1,26 +1,26 @@
 ---
-title: "Modern Slavery Statement · HSN Labs"
-description: "Modern Slavery Statement for HSN Labs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
+title: "Modern Slavery Statement · hsnlabs"
+description: "Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
 url: "https://hsnlabs.ai/modern-slavery-statement/"
 locale: "en"
 updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Modern Slavery Statement · HSN Labs
+# Modern Slavery Statement · hsnlabs
 
-> Modern Slavery Statement for HSN Labs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards.
+> Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards.
 
 # Modern Slavery Statement
 
 ## 1. Our Commitment
 
-HSN Labs maintains an uncompromising commitment to preventing modern slavery, human trafficking, forced labor, and unlawful servitude within our global operations and across our extended supplier networks. We acknowledge our corporate obligation to act with transparency, ethical discipline, and total integrity in every professional relationship.
+hsnlabs maintains an uncompromising commitment to preventing modern slavery, human trafficking, forced labor, and unlawful servitude within our global operations and across our extended supplier networks. We acknowledge our corporate obligation to act with transparency, ethical discipline, and total integrity in every professional relationship.
 
 This statement is published pursuant to Section 54 of the UK Modern Slavery Act 2015 and outlines the governance frameworks implemented to eliminate modern slavery risks from our advisory practices and technology ecosystems.
 
 ## 2. Business Architecture and Reach
 
-HSN Labs is an engineering lab with over five years of shipping AI products and resilient agent architectures in production. Operating from our headquarters in São Paulo, Brazil, with international client engagements throughout the Americas and Europe, we guide enterprises from architecture blueprinting to production-grade deployment.
+hsnlabs is an engineering lab with over five years of shipping AI products and resilient agent architectures in production. Operating from our headquarters in São Paulo, Brazil, with international client engagements throughout the Americas and Europe, we guide enterprises from architecture blueprinting to production-grade deployment.
 
 Our corporate base is situated at Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil, operating under strict adherence to national labor standards and international human rights principles.
 
@@ -68,17 +68,17 @@ Team members, enterprise clients, contractors, and external stakeholders are enc
 
 - Reporting Email: hugo@hsnlabs.ai
 
-- Written Inquiries: HSN Labs Compliance, Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil
+- Written Inquiries: hsnlabs Compliance, Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil
 
 All submitted reports receive swift, confidential, and objective investigation under executive oversight. We strictly prohibit retaliation against any individual who raises concerns in good faith.
 
 ## 7. Continuous Improvement and Approval
 
-HSN Labs continually reviews its governance mechanisms, updating oversight protocols as our client base and international presence expand.
+hsnlabs continually reviews its governance mechanisms, updating oversight protocols as our client base and international presence expand.
 
 Approved by Executive Leadership
 
-HSN Labs
+hsnlabs
 
 São Paulo, Brazil
 

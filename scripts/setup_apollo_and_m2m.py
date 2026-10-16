@@ -125,7 +125,7 @@ def extract_clean_markdown(html_content, canonical_url, locale):
     parser = HTMLToMarkdownParser()
     parser.feed(html_content)
 
-    title = parser.title or "HSN Labs"
+    title = parser.title or "hsnlabs"
     desc = parser.description
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 

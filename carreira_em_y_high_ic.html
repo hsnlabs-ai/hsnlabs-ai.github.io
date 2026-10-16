@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+  body {
+    width: 1200px;
+    height: 675px;
+    background-color: #f5f5f5;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #07090e;
+    position: relative;
+    overflow: hidden;
+    padding: 34px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .badge {
+    color: #0284c7;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #07090e;
+    letter-spacing: -0.5px;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #64748b;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .brand-logo-container {
+    width: 44px;
+    height: 44px;
+    background: #52B4FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+  }
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  /* Main Grid / Visual */
+  .content {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 22px;
+    align-items: stretch;
+    margin: 16px 0;
+    flex: 1;
+  }
+
+  /* Base / Left column: Carreira em Y Clássica de TI */
+  .col-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #64748b;
+    margin-bottom: 2px;
+  }
+  .card-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.15;
+    color: #07090e;
+    margin-bottom: 8px;
+  }
+
+  /* Tracks comparison */
+  .y-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .track-headers {
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 2px;
+  }
+
+  .track-tier {
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    align-items: center;
+    background: #fafafa;
+    border: 1px solid #f1f5f9;
+    padding: 6px 8px;
+    font-size: 11.5px;
+  }
+  .track-tier.tier-top {
+    background: #f0f9ff;
+    border-color: #bae6fd;
+  }
+
+  .tier-left {
+    text-align: right;
+    color: #334155;
+    font-weight: 600;
+  }
+  .tier-mid {
+    text-align: center;
+    font-weight: 600;
+    color: #0284c7;
+    font-size: 11px;
+  }
+  .tier-right {
+    text-align: left;
+    color: #0284c7;
+    font-weight: 600;
+  }
+
+  .tier-sub {
+    font-size: 9.5px;
+    color: #64748b;
+    font-weight: 400;
+    display: block;
+  }
+
+  /* Expanded Areas Grid */
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: space-between;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .area-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 13px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .area-name {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #0284c7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .area-role {
+    font-size: 13px;
+    font-weight: 600;
+    color: #07090e;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .area-desc {
+    font-size: 11px;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  /* Rationale banner */
+  .rationale-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+  }
+  .rationale-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #52B4FD;
+  }
+
+  .rationale-item h4 {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    color: #07090e;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .rationale-item p {
+    font-size: 11.5px;
+    color: #475569;
+    line-height: 1.45;
+  }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  .footer-right {
+    color: #0284c7;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <div class="badge">AGENTES [×] GENTE</div>
+      <h1 class="title">A Carreira em Y na Era da Inteligência Artificial</h1>
+      <p class="subtitle">Como a paridade salarial de especialistas saiu de TI e redefine todas as áreas de negócio</p>
+    </div>
+    <div class="brand-logo-container">
+      <img src="file:///Users/hugosoares/site_hsn_labs/assets/brand/elements/origami-carp-clean.png" class="brand-logo" alt="Origami hsnlabs">
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Coluna 1: O Modelo de Paridade (Origem TI) -->
+    <div class="col-card">
+      <div>
+        <div class="card-label">Precedente Histórico em TI</div>
+        <div class="card-title">A Carreira em Y Clássica</div>
+        <p style="font-size: 11.5px; color: #64748b; line-height: 1.4; margin-bottom: 10px;">
+          Em Big Tech, o arquiteto sênior nunca precisou virar gestor para ter prestígio e remuneração de diretoria.
+        </p>
+      </div>
+
+      <div class="y-diagram">
+        <div class="track-headers">
+          <span style="text-align: right;">Gestão de Pessoas</span>
+          <span style="text-align: center;">=</span>
+          <span style="text-align: left;">High IC (Técnico)</span>
+        </div>
+
+        <div class="track-tier tier-top">
+          <div class="tier-left">VP / Diretoria<br><span class="tier-sub">Estratégia & Pessoas</span></div>
+          <div class="tier-mid">⟷</div>
+          <div class="tier-right">Distinguished / Fellow<br><span class="tier-sub">Impacto Sistêmico Global</span></div>
+        </div>
+        <div class="track-tier">
+          <div class="tier-left">Diretor Setorial<br><span class="tier-sub">Gestão de Departamentos</span></div>
+          <div class="tier-mid">⟷</div>
+          <div class="tier-right">Principal Engineer<br><span class="tier-sub">Arquitetura de Alto Nível</span></div>
+        </div>
+        <div class="track-tier">
+          <div class="tier-left">Gerente de Equipe<br><span class="tier-sub">Coordenação & Avaliações</span></div>
+          <div class="tier-mid">⟷</div>
+          <div class="tier-right">Staff Engineer<br><span class="tier-sub">Execução Ponta a Ponta</span></div>
+        </div>
+
+        <div style="background: #e2e8f0; height: 1px; margin: 3px 0;"></div>
+        <div style="text-align: center; font-size: 10.5px; color: #475569; padding: 5px; background: #fafafa; border: 1px dashed #cbd5e1;">
+          <strong>Base Comum:</strong> Júnior → Pleno → Sênior Especialista
+        </div>
+      </div>
+
+      <div style="font-size: 10px; color: #64748b; text-align: center; margin-top: 6px; font-weight: 500;">
+        Bandas de remuneração equivalentes sem gerenciar equipes
+      </div>
+    </div>
+
+    <!-- Coluna 2: Expansão para outras áreas + Racional -->
+    <div class="right-container">
+
+      <!-- 4 Áreas com High IC -->
+      <div>
+        <div class="card-label">O Transbordamento para Novas Áreas</div>
+        <div class="card-title" style="margin-bottom: 8px;">Quem incorpora IA e tecnologia adota a mesma lógica</div>
+        
+        <div class="areas-grid">
+          <div class="area-card">
+            <div class="area-name">Finanças & Controladoria</div>
+            <div class="area-role">Financial Systems Architect</div>
+            <div class="area-desc">Domina contabilidade e projeta agentes para conciliação bancária, fechamentos e auditoria sem exército de analistas.</div>
+          </div>
+
+          <div class="area-card">
+            <div class="area-name">Jurídico & Compliance</div>
+            <div class="area-role">Legal Engineer / Specialist</div>
+            <div class="area-desc">Sênior em direito contratual e regulatório que usa modelos de linguagem para auditar contratos em minutos.</div>
+          </div>
+
+          <div class="area-card">
+            <div class="area-name">Marketing & Growth</div>
+            <div class="area-role">Growth Systems Engineer</div>
+            <div class="area-desc">Combina copy persuasivo, dados e agentes para rodar cadências, testes de hipóteses e campanhas sem filas.</div>
+          </div>
+
+          <div class="area-card">
+            <div class="area-name">Operações & RH</div>
+            <div class="area-role">Operations & People Architect</div>
+            <div class="area-desc">Conecta folha, admissão e benefícios via APIs e agentes, eliminando tarefas repetitivas de triagem e aprovação.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Racional Econômico e Operacional -->
+      <div class="rationale-box">
+        <div class="rationale-item">
+          <h4>
+            <span style="display:inline-block; width:7px; height:7px; background:#ef4444; border-radius:50%;"></span>
+            O Modelo Analógico Tradicional
+          </h4>
+          <p>
+            <strong>Alavanca = Headcount de Pessoas.</strong> Para crescer em remuneração, o profissional precisava liderar mais braços. Isso criava camadas burocráticas, reuniões de alinhamento e o pesado <em>imposto de coordenação</em>.
+          </p>
+        </div>
+
+        <div class="rationale-item">
+          <h4>
+            <span style="display:inline-block; width:7px; height:7px; background:#0284c7; border-radius:50%;"></span>
+            O Racional na Era da Inteligência Artificial
+          </h4>
+          <p>
+            <strong>Alavanca = Software, Dados e Agentes.</strong> O valor migrou do número de pessoas chefiadas para o <em>julgamento crítico + entrega ponta a ponta</em>. 1 High IC com IA entrega o impacto de 8 pessoas, justificando salário de diretoria.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>hsnlabs • Reflexões sobre trabalho e tecnologia</div>
+    <div class="footer-right">hsnlabs.ai</div>
+  </div>
+
+</body>
+</html>

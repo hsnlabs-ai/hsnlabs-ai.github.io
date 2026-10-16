@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Render HSN Labs Architecture Diagram PNG (2880x1620)
+Render hsnlabs Architecture Diagram PNG (2880x1620)
 Exports the vector blueprint from architecture.html directly to
 assets/diagrams/hsn_labs_agentic_architecture.png in pixel-perfect retina fidelity.
 """

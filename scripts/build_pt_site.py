@@ -152,17 +152,17 @@ def build_pt_home():
     html = safe_replace(html, '<html lang="en">', '<html lang="pt-BR">')
     
     # 1. Title and Head Meta Tags
-    html = safe_replace(html, '<title>Agentic Engineering Adoption | HSN Labs</title>', '<title>Adoção de Engenharia Agêntica | HSN Labs</title>')
+    html = safe_replace(html, '<title>Agentic Engineering Adoption | hsnlabs</title>', '<title>Adoção de Engenharia Agêntica | hsnlabs</title>')
     html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta property="og:title" content="HSN Labs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="HSN Labs &middot; Adoção de Engenharia Agêntica">')
-    html = safe_replace(html, '<meta property="og:description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta property="og:description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
+    html = safe_replace(html, '<meta property="og:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta property="og:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta property="og:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<meta name="twitter:url" content="https://hsnlabs.ai/">', '<meta name="twitter:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta name="twitter:title" content="HSN Labs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="HSN Labs &middot; Adoção de Engenharia Agêntica">')
-    html = safe_replace(html, '<meta name="twitter:description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="twitter:description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
+    html = safe_replace(html, '<meta name="twitter:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta name="twitter:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="twitter:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta name="description" content="HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="description" content="A HSN Labs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
+    html = safe_replace(html, '<meta name="description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     
     # Hreflangs
     hreflangs = '''  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/">
@@ -242,10 +242,10 @@ def build_pt_home():
     html = safe_replace(html, 'title="Zoom in" aria-label="Zoom in"', 'title="Aproximar zoom" aria-label="Aproximar zoom"')
     html = safe_replace(html, 'title="Zoom out" aria-label="Zoom out"', 'title="Afastar zoom" aria-label="Afastar zoom"')
     html = safe_replace(html, 'title="Toggle fullscreen" aria-label="Toggle fullscreen"', 'title="Alternar tela cheia" aria-label="Alternar tela cheia"')
-    html = safe_replace(html, 'alt="HSN Labs Enterprise Agentic Architecture Diagram"', 'alt="Diagrama de Arquitetura Agêntica Enterprise da HSN Labs"')
-    html = safe_replace(html, 'alt="HSN Labs Enterprise Agentic Architecture Preview"', 'alt="Prévia da Arquitetura Agêntica Enterprise da HSN Labs"')
+    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Diagram"', 'alt="Diagrama de Arquitetura Agêntica Enterprise da hsnlabs"')
+    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Preview"', 'alt="Prévia da Arquitetura Agêntica Enterprise da hsnlabs"')
     html = safe_replace(html, '<span>Explore Fullscreen Architecture ↗</span>', '<span>Explorar Arquitetura em Tela Cheia ↗</span>')
-    html = safe_replace(html, '<h4>HSN Labs Enterprise Agentic Architecture Components</h4>', '<h4>Componentes da Arquitetura Agêntica Enterprise da HSN Labs</h4>')
+    html = safe_replace(html, '<h4>hsnlabs Enterprise Agentic Architecture Components</h4>', '<h4>Componentes da Arquitetura Agêntica Enterprise da hsnlabs</h4>')
     
     # 5. Form & Contact Section
     html = safe_replace(html, 'placeholder="Your Name"', 'placeholder="Seu Nome"')
@@ -283,9 +283,9 @@ def build_pt_bootcamp():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Agentic Bootcamp · HSN Labs</title>', '<title>Bootcamp de Agentes · HSN Labs</title>')
-    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Agentic Bootcamp · hsnlabs</title>', '<title>Bootcamp de Agentes · hsnlabs</title>')
+    html = html.replace('content="hsnlabs · AI Agents That Don\'t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="hsnlabs · AI Agents That Don&#39;t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
@@ -426,7 +426,7 @@ def build_pt_advisory():
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
     html = html.replace('<title>Architecture Advisory | Hugo S. Nascimento</title>', '<title>Advisory de Arquitetura | Hugo S. Nascimento</title>')
-    html = html.replace('<title>Architecture Advisory · HSN Labs</title>', '<title>Advisory de Arquitetura · HSN Labs</title>')
+    html = html.replace('<title>Architecture Advisory · hsnlabs</title>', '<title>Advisory de Arquitetura · hsnlabs</title>')
     
     html = html.replace('content="https://hsnlabs.ai/advisory"', 'content="https://hsnlabs.ai/pt/advisory/"')
     html = html.replace('content="https://hsnlabs.ai/advisory/"', 'content="https://hsnlabs.ai/pt/advisory/"')
@@ -514,7 +514,7 @@ def build_pt_mcp():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Enterprise MCP Servers · HSN Labs</title>', '<title>Servidores MCP Enterprise · HSN Labs</title>')
+    html = html.replace('<title>Enterprise MCP Servers · hsnlabs</title>', '<title>Servidores MCP Enterprise · hsnlabs</title>')
     
     html = html.replace('content="https://hsnlabs.ai/mcp"', 'content="https://hsnlabs.ai/pt/mcp/"')
     html = html.replace('content="https://hsnlabs.ai/mcp/"', 'content="https://hsnlabs.ai/pt/mcp/"')
@@ -611,9 +611,9 @@ def build_pt_privacy_policy():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Privacy Policy · HSN Labs</title>', '<title>Politica de Privacidade · HSN Labs</title>')
-    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Privacy Policy · hsnlabs</title>', '<title>Politica de Privacidade · hsnlabs</title>')
+    html = html.replace('content="hsnlabs · AI Agents That Don\'t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="hsnlabs · AI Agents That Don&#39;t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'
@@ -656,9 +656,9 @@ def build_pt_compliance():
     
     html = src.read_text(encoding="utf-8")
     html = html.replace('<html lang="en">', '<html lang="pt-BR">')
-    html = html.replace('<title>Modern Slavery Statement · HSN Labs</title>', '<title>Declaracao de Conformidade e Etica · HSN Labs</title>')
-    html = html.replace('content="HSN Labs · AI Agents That Don\'t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
-    html = html.replace('content="HSN Labs · AI Agents That Don&#39;t Fail in Production"', 'content="HSN Labs · Agentes de IA que Operam em Produção"')
+    html = html.replace('<title>Modern Slavery Statement · hsnlabs</title>', '<title>Declaracao de Conformidade e Etica · hsnlabs</title>')
+    html = html.replace('content="hsnlabs · AI Agents That Don\'t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
+    html = html.replace('content="hsnlabs · AI Agents That Don&#39;t Fail in Production"', 'content="hsnlabs · Agentes de IA que Operam em Produção"')
     html = html.replace(
         'content="Boutique building resilient multi-agent architectures on business ontologies."',
         'content="Boutique especializada em arquiteturas multiagentes resilientes sobre ontologias de negócio."'

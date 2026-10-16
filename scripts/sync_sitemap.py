@@ -65,8 +65,8 @@ for page in routes.get("site_pages", []):
     if page["en_path"] == "/":
         img = {
             "loc": "https://hsnlabs.ai/assets/brand/og-image.png",
-            "title": "HSN Labs | Enterprise AI Architectures",
-            "caption": "HSN Labs — Hybrid engineering, business ontologies, and deterministic agents."
+            "title": "hsnlabs | Enterprise AI Architectures",
+            "caption": "hsnlabs — Hybrid engineering, business ontologies, and deterministic agents."
         }
     add_url_block(en_url, pt_url, priority=prio, changefreq=freq, image_info=img)
 

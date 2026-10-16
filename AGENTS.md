@@ -1,4 +1,4 @@
-# Agent Guidelines — HSN Labs Official Website
+# Agent Guidelines — hsnlabs Official Website
 
 Operational directives for AI coding agents maintaining, extending, or refactoring this repository.
 
@@ -6,7 +6,7 @@ Operational directives for AI coding agents maintaining, extending, or refactori
 
 ## 1. Mission and Core Positioning
 
-HSN Labs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
+hsnlabs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
 * Language Architecture: Bilingual dual-track. Primary English at root routes: /, /bootcamp/, /advisory/, /playbooks/, /mcp/, /privacy-policy/, /modern-slavery-statement/. Secondary Portuguese under /pt/: /pt/, /pt/bootcamp/, /pt/advisory/, /pt/playbooks/, /pt/mcp/, /pt/privacy-policy/, /pt/modern-slavery-statement/. Reciprocal canonical and hreflang tags on all pages. Strict Zero-Parentheses Invariant on all visible Portuguese text. Strict Portuguese Accentuation Invariant: All visible Portuguese text, headings, buttons, and metadata must strictly use standard Brazilian Portuguese orthography with proper diacritics (ã, õ, á, é, í, ó, ú, â, ê, ô, ç, à). ASCII unaccented variants (e.g., adocao, producao, estrategia, operacao, ate, voce, politica) are strictly prohibited.
 * Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
@@ -20,7 +20,7 @@ The website follows a clean 4-section architecture:
 
 1. Header:
    * Sticky blurred translucent navbar on off-white canvas.
-   * Left: Official HSN Labs horizontal lockup.
+   * Left: Official hsnlabs horizontal lockup.
    * Navigation links: `Advisory`, `Blog` (or `Advisory`, `Blog` in PT under `/pt/`).
    * Actions block (`.header-actions`) order standard:
      1. GitHub repository link with SVG icon and text (`hsnlabs`).
@@ -52,7 +52,7 @@ The website follows a clean 4-section architecture:
    * Direct technical scoping card with four qualification gates and direct email dispatch.
 5. Footer:
    * Institutional signature with wordmark lockup, navigation links, and engineering specifications.
-   * Copyright line: `2026 HSN Labs. All rights reserved.`
+   * Copyright line: `2026 hsnlabs. All rights reserved.`
    * Prohibited in footer bottom: Do not add redundant location strings or repetitive descriptor suffixes.
 
 ---

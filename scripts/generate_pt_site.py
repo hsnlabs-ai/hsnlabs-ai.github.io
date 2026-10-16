@@ -15,16 +15,16 @@ html = html.replace('<html lang="en">', '<html lang="pt-BR">')
 
 # 2. Update head meta tags
 html = html.replace(
-    '<title>Boutique | Agentic AI - hsn labs</title>',
-    '<title>Boutique | Arquitetura de Agentes de IA - HSN Labs</title>'
+    '<title>Boutique | Agentic AI - hsnlabs</title>',
+    '<title>Boutique | Arquitetura de Agentes de IA - hsnlabs</title>'
 )
 html = html.replace(
     '<meta property="og:url" content="https://hsnlabs.ai/">',
     '<meta property="og:url" content="https://hsnlabs.ai/pt/">'
 )
 html = html.replace(
-    '<meta property="og:title" content="HSN Labs — AI Agents That Don\'t Fail in Production">',
-    '<meta property="og:title" content="HSN Labs — Agentes de IA que Nao Falham em Producao">'
+    '<meta property="og:title" content="hsnlabs — AI Agents That Don\'t Fail in Production">',
+    '<meta property="og:title" content="hsnlabs — Agentes de IA que Nao Falham em Producao">'
 )
 html = html.replace(
     '<meta property="og:description" content="Boutique building resilient multi-agent architectures on business ontologies.">',
@@ -35,8 +35,8 @@ html = html.replace(
     '<meta name="twitter:url" content="https://hsnlabs.ai/pt/">'
 )
 html = html.replace(
-    '<meta name="twitter:title" content="HSN Labs — AI Agents That Don\'t Fail in Production">',
-    '<meta name="twitter:title" content="HSN Labs — Agentes de IA que Nao Falham em Producao">'
+    '<meta name="twitter:title" content="hsnlabs — AI Agents That Don\'t Fail in Production">',
+    '<meta name="twitter:title" content="hsnlabs — Agentes de IA que Nao Falham em Producao">'
 )
 html = html.replace(
     '<meta name="twitter:description" content="Boutique building resilient multi-agent architectures on business ontologies.">',

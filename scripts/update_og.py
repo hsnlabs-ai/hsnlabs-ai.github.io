@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Dynamic Open Graph Image Generator for HSN Labs (hsnlabs.ai)
+Dynamic Open Graph Image Generator for hsnlabs (hsnlabs.ai)
 Generates editorial 1200x630 Open Graph cards in English (og-image.png) and Portuguese (og-image-pt.png),
 matching the exact visual structure of the live website navbar and hero without text bloat.
 """
@@ -298,7 +298,7 @@ def build_og_template(data: dict) -> str:
   </div>
 
   <header class="header-nav">
-    <img src="{lockup_path}" alt="HSN Labs" class="brand-logo-img">
+    <img src="{lockup_path}" alt="hsnlabs" class="brand-logo-img">
     <div class="header-right">
       <span class="nav-item">Advisory</span>
       <span class="nav-item">Blog</span>
@@ -309,7 +309,7 @@ def build_og_template(data: dict) -> str:
 
   <div class="hero-center">
     <div class="brand-symbol-box">
-      <img src="{carp_path}" alt="HSN Labs" class="symbol-carp">
+      <img src="{carp_path}" alt="hsnlabs" class="symbol-carp">
     </div>
 
     <h1 class="display-hero">

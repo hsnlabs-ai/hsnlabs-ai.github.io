@@ -1,12 +1,12 @@
 ---
-title: "Conselho Executivo de IA & Advisory · HSN Labs"
+title: "Conselho Executivo de IA & Advisory · hsnlabs"
 description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/pt/advisory/"
 locale: "pt-BR"
 updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Conselho Executivo de IA & Advisory · HSN Labs
+# Conselho Executivo de IA & Advisory · hsnlabs
 
 > Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento.
 
@@ -20,7 +20,7 @@ Empresário, consultor e diretor de tecnologia e produto atuando como CPTO, Hugo
 
 Engenheiro certificado pela LangChain, atua diretamente no conselho de empresas em crescimento e grandes operações para traduzir a disrupção da IA em decisões seguras de arquitetura, reestruturação operacional e blindagem de margem.
 
-- Founder & CPTO na Eva People e HSN Labs
+- Founder & CPTO na Eva People e hsnlabs
 
 - LangChain Certified Engineer com histórico em produção corporativa
 

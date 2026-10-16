@@ -117,8 +117,8 @@ def test_gate_s7_metadata_localization():
         "Boutique building resilient",
         "We build private, secure Model Context Protocol",
         "Discover how leading enterprises build",
-        "Privacy Policy for HSN Labs",
-        "Modern Slavery Statement for HSN Labs",
+        "Privacy Policy for hsnlabs",
+        "Modern Slavery Statement for hsnlabs",
     ]
     for item in PAGES:
         for lang_key, path_key in [("en", "path_en"), ("pt", "path_pt")]:

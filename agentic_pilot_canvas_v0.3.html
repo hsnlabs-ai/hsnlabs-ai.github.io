@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Agentic Pilot Canvas — hsnlabs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* hsnlabs Editorial Design Tokens */
+      --canvas: #f5f5f5;
+      --canvas-soft: #fafafa;
+      --surface-card: #ffffff;
+      --ink: #0c0a09;
+      --primary: #292524;
+      --body: #4e4e4e;
+      --muted: #777169;
+      --hairline: #e7e5e4;
+      --hairline-strong: #0c0a09;
+      --brand-sky: #52B4FD;
+      
+      /* Post-it colors */
+      --postit-yellow: #fef9c3;
+      --postit-yellow-border: #fef08a;
+      --postit-blue: #e0f2fe;
+      --postit-blue-border: #bae6fd;
+      --postit-pink: #ffe4e6;
+      --postit-pink-border: #fecdd3;
+      --postit-green: #dcfce7;
+      --postit-green-border: #bbf7d0;
+
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-hand: 'Nanum Pen Script', 'Caveat', 'Segoe Script', cursive, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Top Control Toolbar (Minimalist) */
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      padding: 10px 18px;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-hsn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .logo-carp {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+
+    .logo-text {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .divider-v {
+      width: 1px;
+      height: 16px;
+      background: var(--hairline);
+    }
+
+    .doc-type {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-tool {
+      background: transparent;
+      border: 1px solid var(--hairline);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 6px 14px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-tool:hover {
+      background: var(--canvas);
+      border-color: var(--muted);
+    }
+
+    .btn-tool.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .btn-approve {
+      background: var(--brand-sky);
+      border: 1px solid var(--brand-sky);
+      color: #000;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 16px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-approve:hover {
+      background: #3fa2ec;
+    }
+
+    /* ===================================================
+       THE CANVAS SHEET (Physical Printed Paper Aesthetic)
+       =================================================== */
+    .canvas-sheet {
+      background: var(--surface-card);
+      border: 2px solid var(--hairline-strong);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    /* Header Bar */
+    .sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--hairline-strong);
+      margin-bottom: 0; /* Direct integration with grid */
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-branding h1 {
+      font-family: var(--font-display);
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 1.0;
+      letter-spacing: -0.8px;
+      color: var(--ink);
+    }
+
+    .meta-table {
+      display: flex;
+      border: 1px solid var(--hairline-strong);
+    }
+
+    .meta-cell {
+      border-right: 1px solid var(--hairline-strong);
+      padding: 6px 14px;
+      min-width: 140px;
+    }
+
+    .meta-cell:last-child {
+      border-right: none;
+      min-width: 90px;
+    }
+
+    .meta-label {
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .meta-input {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--ink);
+      font-family: var(--font-sans);
+    }
+
+    /* ===================================================
+       THE 2D BMC GRID (Alexander Osterwalder Topology)
+       =================================================== */
+    .canvas-grid {
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: auto auto auto;
+      border: 2px solid var(--hairline-strong);
+      border-top: none; /* Connects smoothly to header */
+      background: var(--hairline-strong); /* lines created by grid gap */
+      gap: 1px;
+    }
+
+    /* Canvas Box */
+    .c-box {
+      background: var(--surface-card);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+      position: relative;
+    }
+
+    /* Grid Position Mappings (BMC Equivalent) */
+    /* 1. Key Partners -> Legados & Engenharia Reversa (Col 1, Row 1-2) */
+    .b-partners {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+
+    /* 2. Key Activities -> Provocação Determinística (Col 2, Row 1) */
+    .b-activities {
+      grid-column: 2;
+      grid-row: 1;
+      min-height: 260px;
+    }
+
+    /* 3. Key Resources -> Roteamento k-LLM & Tokenomics (Col 2, Row 2) */
+    .b-resources {
+      grid-column: 2;
+      grid-row: 2;
+      min-height: 260px;
+    }
+
+    /* 4. Value Propositions -> Ontologia Operacional (CENTER, Col 3, Row 1-2) */
+    .b-value {
+      grid-column: 3;
+      grid-row: 1 / 3;
+      background: #fdfdfd;
+    }
+
+    /* 5. Customer Relationships -> Governança & HITL (Col 4, Row 1) */
+    .b-relationships {
+      grid-column: 4;
+      grid-row: 1;
+      min-height: 260px;
+    }
+
+    /* 6. Channels -> Compliance & Tracing (Col 4, Row 2) */
+    .b-channels {
+      grid-column: 4;
+      grid-row: 2;
+      min-height: 260px;
+    }
+
+    /* 7. Customer Segments -> Processo Alvo & Impacto (Col 5, Row 1-2) */
+    .b-segments {
+      grid-column: 5;
+      grid-row: 1 / 3;
+    }
+
+    /* 8. Cost Structure -> Hipótese de Valor & ROI (CFO) (Col 1-2, Row 3) */
+    .b-cost {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      min-height: 190px;
+    }
+
+    /* 9. Revenue Streams -> Critérios de Sucesso (Go/No-Go) (Col 3-5, Row 3) */
+    .b-revenue {
+      grid-column: 3 / 6;
+      grid-row: 3;
+      min-height: 190px;
+    }
+
+    /* Box Header */
+    .box-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .box-title-group h2 {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .box-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--primary);
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    /* Guiding Questions (Subtle, Muted, Osterwalder Style) */
+    .box-questions {
+      color: var(--muted);
+      font-size: 9.5px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .box-questions p {
+      margin-bottom: 4px;
+    }
+
+    /* Empty Work Area (For Post-Its) */
+    .postit-area {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 10px;
+      min-height: 120px;
+      position: relative;
+    }
+
+    /* Post-it Notes (Clean, Authentic Workshop Stickers) */
+    .postit {
+      padding: 12px;
+      font-family: var(--font-hand);
+      font-size: 16px;
+      line-height: 1.25;
+      color: #1c1917;
+      width: 135px;
+      min-height: 90px;
+      box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.08);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .postit:hover {
+      transform: scale(1.04) rotate(0deg) !important;
+      box-shadow: 2px 6px 14px rgba(0, 0, 0, 0.14);
+      z-index: 10;
+    }
+
+    .postit.yellow {
+      background: var(--postit-yellow);
+      border-top: 1px solid var(--postit-yellow-border);
+      transform: rotate(-1deg);
+    }
+
+    .postit.blue {
+      background: var(--postit-blue);
+      border-top: 1px solid var(--postit-blue-border);
+      transform: rotate(1.2deg);
+    }
+
+    .postit.pink {
+      background: var(--postit-pink);
+      border-top: 1px solid var(--postit-pink-border);
+      transform: rotate(-1.5deg);
+    }
+
+    .postit.green {
+      background: var(--postit-green);
+      border-top: 1px solid var(--postit-green-border);
+      transform: rotate(0.8deg);
+    }
+
+    /* Subtle placeholder watermark when empty */
+    .empty-hint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 11px;
+      color: #d6d3d1;
+      font-family: var(--font-sans);
+      font-style: italic;
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .canvas-sheet.empty .empty-hint {
+      display: block;
+    }
+
+    .canvas-sheet.empty .postit {
+      display: none;
+    }
+
+    /* Sheet Footer */
+    .sheet-footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+      margin-top: 14px;
+      font-size: 9.5px;
+      color: var(--muted);
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Dialog modal for adding post-its */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-card {
+      background: #fff;
+      border: 2px solid var(--ink);
+      padding: 20px;
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .modal-textarea {
+      width: 100%;
+      height: 90px;
+      font-family: var(--font-hand);
+      font-size: 18px;
+      padding: 10px;
+      border: 1px solid var(--hairline);
+      resize: none;
+      background: var(--postit-yellow);
+    }
+
+    .modal-colors {
+      display: flex;
+      gap: 8px;
+    }
+
+    .color-swatch {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .color-swatch.selected {
+      border: 2px solid var(--ink);
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    @media (max-width: 1100px) {
+      .canvas-grid {
+        grid-template-columns: 1fr;
+      }
+      .b-partners, .b-activities, .b-resources, .b-value,
+      .b-relationships, .b-channels, .b-segments, .b-cost, .b-revenue {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-container">
+
+  <!-- Minimalist Control Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <a href="https://hsnlabs.ai" target="_blank" class="logo-hsn">
+        <img src="https://hsnlabs.ai/assets/brand/elements/origami-carp-clean.png" alt="hsnlabs" class="logo-carp">
+        <span class="logo-text">hsnlabs</span>
+      </a>
+      <div class="divider-v"></div>
+      <span class="doc-type">Agentic Engineering Advisory</span>
+    </div>
+
+    <div class="toolbar-right">
+      <button class="btn-tool active" id="btn-toggle-notes" onclick="toggleNotes()">
+        <span>📝</span> <span id="lbl-toggle">Exibir Post-its</span>
+      </button>
+      <button class="btn-tool" onclick="window.print()">
+        <span>🖨️</span> Imprimir / PDF
+      </button>
+      <button class="btn-approve" id="btn-approve-trello" data-hermes-send="Aprovo o layout final minimalista do The Agentic Pilot Canvas. Pode sincronizar o Trello e salvar o template v0.3 no Obsidian.">
+        <span>✓</span> Aprovar & Sincronizar Trello
+      </button>
+    </div>
+  </div>
+
+  <!-- THE CANVAS SHEET (Osterwalder BMC + hsnlabs Editorial) -->
+  <div class="canvas-sheet" id="canvas-sheet">
+
+    <!-- Header & Metadata (Pure Title + 4 Meta Boxes, No Subtitle) -->
+    <div class="sheet-header">
+      <div class="header-branding">
+        <h1>The Agentic Pilot Canvas</h1>
+      </div>
+
+      <div class="meta-table">
+        <div class="meta-cell">
+          <span class="meta-label">Desenhado Para:</span>
+          <div class="meta-input">Enterprise Client (Piloto)</div>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Desenhado Por:</span>
+          <div class="meta-input">Founder & CPTO // hsnlabs</div>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Data:</span>
+          <div class="meta-input">Outubro 2026</div>
+        </div>
+        <div class="meta-cell">
+          <span class="meta-label">Versão:</span>
+          <div class="meta-input">v0.3 (Palantir AIP)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2D Canvas Grid (9 Blocks Osterwalder Layout) -->
+    <div class="canvas-grid">
+
+      <!-- 1. KEY PARTNERS -> Legados & Engenharia Reversa -->
+      <div class="c-box b-partners" onclick="openAddModal('b-partners', 'Sistemas Legados & Engenharia Reversa')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Sistemas Legados & Engenharia Reversa</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Quais ERPs (SAP, TOTVS) ou bancos relacionais contêm os dados reais?</p>
+          <p>• Quais stored procedures e scripts legados guardam as regras não documentadas?</p>
+          <p>• Qual a fatia cirúrgica de dados (staging / read replica) isolada no D1?</p>
+        </div>
+        <div class="postit-area" id="area-partners">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit blue">
+            <span>SAP S/4HANA (módulo MM) + réplica PostgreSQL</span>
+          </div>
+          <div class="postit blue">
+            <span>28 procedures SQL com cálculo de ICMS/PIS/COFINS sem documentação</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. KEY ACTIVITIES -> Provocação Determinística (Código / FSM) -->
+      <div class="c-box b-activities" onclick="openAddModal('b-activities', 'Provocação Determinística (Código / FSM)')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Provocação Determinística</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Quais regras financeiras e fiscais NUNCA tocam no modelo de linguagem?</p>
+          <p>• Quais travas destrutivas rodam em código puro (taxa de erro zero)?</p>
+        </div>
+        <div class="postit-area" id="area-activities">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit green">
+            <span>Validação de alíquotas 100% Pydantic/FSM (Erro Zero)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. KEY RESOURCES -> Roteamento k-LLM & Tokenomics -->
+      <div class="c-box b-resources" onclick="openAddModal('b-resources', 'Roteamento k-LLM & Tokenomics')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Roteamento k-LLM & Tokenomics</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Qual LLM rápido/barato fará a triagem inicial (ex: Gemini Flash / Llama 8B)?</p>
+          <p>• Qual modelo fará raciocínio complexo sob demanda?</p>
+          <p>• Como evitar vendor lock-in e manter custo &lt; 5% do operador?</p>
+        </div>
+        <div class="postit-area" id="area-resources">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit yellow">
+            <span>LiteLLM Gateway: Flash para 92% dos fluxos; Opus sob demanda</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. VALUE PROPOSITIONS -> A Ontologia Operacional (CENTER STAGE) -->
+      <div class="c-box b-value" onclick="openAddModal('b-value', 'A Ontologia Operacional (Palantir AIP)')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>A Ontologia Operacional</h2>
+            <div style="font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;">Palantir AIP Architecture</div>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polygon points="6 3 18 3 22 9 12 22 2 9"></polygon>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Quais <strong>Objetos de Negócio</strong> mapeiam a operação (Faturas, Clientes, Contratos)?</p>
+          <p>• Quais <strong>Ações Tipadas</strong> o agente pode disparar com guardrails?</p>
+          <p>• Quais <strong>Invariantes</strong> impedem mutações indevidas no banco?</p>
+          <p style="color: var(--ink); font-weight: 500;">* O LLM nunca toca o SQL direto; ele interage apenas com a Ontologia.</p>
+        </div>
+        <div class="postit-area" id="area-value">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit yellow">
+            <span>OBJETOS:<br>Fatura, PedidoCompra, Fornecedor, DivergenciaFiscal</span>
+          </div>
+          <div class="postit yellow">
+            <span>AÇÕES:<br>AprovarFatura(id)<br>BloquearPagamento(id, motivo)<br>EncaminharCompras(id)</span>
+          </div>
+          <div class="postit blue">
+            <span>INVARIANTE:<br>Valor &gt; R$ 50k exige validação humana dupla</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. CUSTOMER RELATIONSHIPS -> Governança & Fallback Humano (HITL) -->
+      <div class="c-box b-relationships" onclick="openAddModal('b-relationships', 'Governança & Fallback Humano (HITL)')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Governança & HITL</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Qual o limiar de incerteza (confidence score) para acionar o desvio humano?</p>
+          <p>• Como a mesa de exceções audita o caso (compliance bancário)?</p>
+          <p>• Como colocar a TI como guardiã da governança (anti-sabotagem)?</p>
+        </div>
+        <div class="postit-area" id="area-relationships">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit pink">
+            <span>Confidence &lt; 0.92 desvia para analista sênior com 1-click confirm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. CHANNELS -> Compliance Regulatório & Tracing -->
+      <div class="c-box b-channels" onclick="openAddModal('b-channels', 'Compliance Regulatório & Tracing')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Compliance & Tracing</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="11" width="18" height="11" rx="0" ry="0"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Como garantir LGPD, retenção zero para treino e mascaramento de PII?</p>
+          <p>• Como o tracing imutável (OpenTelemetry/LangSmith) audita cada token e ação?</p>
+        </div>
+        <div class="postit-area" id="area-channels">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit pink">
+            <span>Trilha OpenTelemetry imutável com hash criptográfico por transação</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. CUSTOMER SEGMENTS -> Processo Alvo & Impacto Operacional -->
+      <div class="c-box b-segments" onclick="openAddModal('b-segments', 'Processo Alvo & Impacto Operacional')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Processo Alvo & Impacto</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Qual o processo manual alvo (AS-IS vs. TO-BE)?</p>
+          <p>• O impacto é 100% de <strong>Backoffice Interno</strong> (risco reputacional zero)?</p>
+          <p>• Quantos operadores realizam digitação cruzada de telas?</p>
+        </div>
+        <div class="postit-area" id="area-segments">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit green">
+            <span>Conciliação de faturas fiscais de frete vs pedidos de compra</span>
+          </div>
+          <div class="postit green">
+            <span>100% Backoffice Interno (Logística e Fiscal)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. COST STRUCTURE -> Hipótese de Valor & ROI (CFO / DRE) (Bottom Left, Spans 2 cols) -->
+      <div class="c-box b-cost" onclick="openAddModal('b-cost', 'Hipótese de Valor & ROI (CFO / DRE)')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Hipótese de Valor & ROI (CFO / DRE)</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Qual o <strong>Dual Bleed</strong> atual: Licenças SaaS por assento (R$ 800-1200) + Custo do operador (R$ 6k-8k)?</p>
+          <p>• Qual a economia líquida auditável na DRE (corte de horas extras, licenças, multas de SLA)?</p>
+          <p>• Em quantos meses a implantação de R$ 120k é totalmente amortizada (Payback de 2 a 3 meses)?</p>
+        </div>
+        <div class="postit-area" id="area-cost">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit yellow">
+            <span>12 operadores dedicados a R$ 8.500/mês + R$ 1.100/licença = R$ 115k/mês OPEX</span>
+          </div>
+          <div class="postit blue">
+            <span>Descontinuação de 8 licenças satélites + zero hora extra = Payback em 75 dias</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. REVENUE STREAMS -> Critérios de Sucesso & Gatilho (Go / No-Go) (Bottom Right, Spans 3 cols) -->
+      <div class="c-box b-revenue" onclick="openAddModal('b-revenue', 'Critérios de Sucesso & Gatilho (Go / No-Go)')">
+        <div class="box-header">
+          <div class="box-title-group">
+            <h2>Critérios de Sucesso & Gatilho de Rollout (Go / No-Go)</h2>
+          </div>
+          <svg class="box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+            <line x1="4" y1="22" x2="4" y2="15"></line>
+          </svg>
+        </div>
+        <div class="box-questions">
+          <p>• Qual a <strong>Escada de Automação</strong>: Ponto de partida (Tier 1 Assistido) vs Ponto de chegada (Tier 2-3 Autônomo com guardrails)?</p>
+          <p>• Qual a meta de deflexão e resolução sem toque humano no sandbox (meta de 70% a 80%)?</p>
+          <p>• Qual o <strong>Gatilho Contratual</strong> no D5 para liberação automática do orçamento de rollout de R$ 120k?</p>
+        </div>
+        <div class="postit-area" id="area-revenue">
+          <div class="empty-hint">[ Espaço para Post-its ]</div>
+          <div class="postit green">
+            <span>Meta D5: 75% de deflexão autônoma das faturas sem erro em staging</span>
+          </div>
+          <div class="postit yellow">
+            <span>Gatilho Contratual: Aprovada a acurácia, libera orçamento de produção R$ 120k</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sheet Footer (Minimalist attribution only) -->
+    <div class="sheet-footer">
+      <div class="footer-left">
+        <span>The Agentic Pilot Canvas é uma metodologia proprietária da <strong>hsnlabs</strong> para transição e adoção de engenharia agêntica sem ruptura de sistemas legados. Inspirado na ontologia da Palantir AIP e no Business Model Canvas.</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Modal to add new Post-it -->
+<div class="modal-overlay" id="modal-postit" onclick="if(event.target===this) closeModal()">
+  <div class="modal-card">
+    <div class="modal-title" id="modal-box-title">Adicionar Post-it</div>
+    <textarea class="modal-textarea" id="modal-text" placeholder="Escreva a anotação aqui..."></textarea>
+    <div style="font-size: 10px; color: var(--muted); text-transform: uppercase;">Cor do Post-it:</div>
+    <div class="modal-colors">
+      <div class="color-swatch selected" style="background: var(--postit-yellow);" onclick="selectColor('yellow', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-blue);" onclick="selectColor('blue', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-pink);" onclick="selectColor('pink', this)"></div>
+      <div class="color-swatch" style="background: var(--postit-green);" onclick="selectColor('green', this)"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-tool" onclick="closeModal()">Cancelar</button>
+      <button class="btn-tool active" onclick="savePostit()">Adicionar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let targetAreaId = '';
+  let selectedColor = 'yellow';
+  let showNotes = true;
+
+  function toggleNotes() {
+    showNotes = !showNotes;
+    const sheet = document.getElementById('canvas-sheet');
+    const btn = document.getElementById('btn-toggle-notes');
+    const lbl = document.getElementById('lbl-toggle');
+
+    if (showNotes) {
+      sheet.classList.remove('empty');
+      btn.classList.add('active');
+      lbl.innerText = 'Ocultar Post-its';
+    } else {
+      sheet.classList.add('empty');
+      btn.classList.remove('active');
+      lbl.innerText = 'Exibir Post-its';
+    }
+  }
+
+  function openAddModal(boxClass, title) {
+    const area = document.querySelector('.' + boxClass + ' .postit-area');
+    if (!area) return;
+    targetAreaId = area.id;
+    document.getElementById('modal-box-title').innerText = 'Post-it // ' + title;
+    document.getElementById('modal-text').value = '';
+    document.getElementById('modal-postit').style.display = 'flex';
+    document.getElementById('modal-text').focus();
+  }
+
+  function closeModal() {
+    document.getElementById('modal-postit').style.display = 'none';
+  }
+
+  function selectColor(color, el) {
+    selectedColor = color;
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+    el.classList.add('selected');
+    const bgMap = {
+      yellow: 'var(--postit-yellow)',
+      blue: 'var(--postit-blue)',
+      pink: 'var(--postit-pink)',
+      green: 'var(--postit-green)'
+    };
+    document.getElementById('modal-text').style.background = bgMap[color];
+  }
+
+  function savePostit() {
+    const text = document.getElementById('modal-text').value.trim();
+    if (!text || !targetAreaId) {
+      closeModal();
+      return;
+    }
+    const area = document.getElementById(targetAreaId);
+    const postit = document.createElement('div');
+    postit.className = 'postit ' + selectedColor;
+    postit.innerHTML = '<span>' + text.replace(/\n/g, '<br>') + '</span>';
+    area.appendChild(postit);
+    closeModal();
+  }
+</script>
+
+</body>
+</html>

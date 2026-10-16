@@ -1,20 +1,20 @@
 ---
-title: "Privacy Policy · HSN Labs"
-description: "Privacy Policy for HSN Labs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
+title: "Privacy Policy · hsnlabs"
+description: "Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
 url: "https://hsnlabs.ai/privacy-policy/"
 locale: "en"
 updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Privacy Policy · HSN Labs
+# Privacy Policy · hsnlabs
 
-> Privacy Policy for HSN Labs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks.
+> Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks.
 
 # Privacy Policy
 
 ## 1. Objective and Scope
 
-HSN Labs, legal entity operated under Mondo Digital, located at Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil, recognizes the sensitive nature of data processed across our advisory, engineering, and digital platforms. This Privacy Policy governs the collection, handling, storage, and protection of personal data left by enterprise clients, technical leads, and site visitors.
+hsnlabs, legal entity operated under Mondo Digital, located at Rua Paz Leme, Pinheiros, São Paulo, SP, Brazil, recognizes the sensitive nature of data processed across our advisory, engineering, and digital platforms. This Privacy Policy governs the collection, handling, storage, and protection of personal data left by enterprise clients, technical leads, and site visitors.
 
 Our data processing strictly complies with the Brazilian General Data Protection Law, Law 13709 of 2018, known as LGPD, the Brazilian Internet Civil Rights Framework, Law 12965 of 2014, as well as applicable international standards. This document details how information is handled with clear transparency, security, and integrity.
 
@@ -48,7 +48,7 @@ During browsing, our infrastructure logs standard operational telemetry:
 
 ## 3. Cookies and Telemetry
 
-HSN Labs uses minimal, essential cookies and analytics instrumentation to ensure website stability, monitor response times, and prevent security vulnerabilities. We reject deceptive tracking networks.
+hsnlabs uses minimal, essential cookies and analytics instrumentation to ensure website stability, monitor response times, and prevent security vulnerabilities. We reject deceptive tracking networks.
 
 Visitors can inspect or restrict cookies at any time via web browser configuration controls. Restricting strictly technical session tokens may alter responsiveness on dynamic forms.
 
@@ -66,7 +66,7 @@ Collected information is processed under explicit legal bases set out in Article
 
 ## 5. Data Sharing and Infrastructure Partners
 
-HSN Labs does not sell, rent, or monetize personal data under any circumstance. Information is shared strictly under bound operational contracts with:
+hsnlabs does not sell, rent, or monetize personal data under any circumstance. Information is shared strictly under bound operational contracts with:
 
 - Enterprise cloud infrastructure and secure hosting providers
 

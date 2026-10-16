@@ -1,8 +1,8 @@
-# HSN Labs — Official Website Repository
+# hsnlabs — Official Website Repository
 
-Official production repository for the **HSN Labs** corporate website.
+Official production repository for the **hsnlabs** corporate website.
 
-HSN Labs is an AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production.
+hsnlabs is an AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production.
 
 ---
 
@@ -58,7 +58,7 @@ Built on the ElevenLabs editorial print design system without artificial visual 
 
 ## 3. Brand Identity and Logo Invariant
 
-The HSN Labs brand mark represents engineering rigor through paper geometry and dynamic water physics.
+The hsnlabs brand mark represents engineering rigor through paper geometry and dynamic water physics.
 
 ### Strict Geometry Rule
 * The cyan square symbol must ALWAYS maintain sharp 90-degree corners with `border-radius: 0`.

@@ -87,7 +87,7 @@ site_hsn_labs/
 * Hreflang en: `https://hsnlabs.ai/playbooks/`
 * Hreflang pt-BR: `https://hsnlabs.ai/pt/playbooks/`
 * Hreflang x-default: `https://hsnlabs.ai/playbooks/`
-* Title: `Proprietary Playbooks | HSN Labs`
+* Title: `Proprietary Playbooks | hsnlabs`
 * Description: `Battle-tested enterprise frameworks: Agentic Adoption Canvas and Ontology Mapping.`
 
 #### Rota PT `pt/playbooks/index.html`
@@ -95,7 +95,7 @@ site_hsn_labs/
 * Hreflang en: `https://hsnlabs.ai/playbooks/`
 * Hreflang pt-BR: `https://hsnlabs.ai/pt/playbooks/`
 * Hreflang x-default: `https://hsnlabs.ai/playbooks/`
-* Title: `Playbooks Proprietarios | HSN Labs`
+* Title: `Playbooks Proprietarios | hsnlabs`
 * Description: `Metodologias de engenharia e arquitetura: Agentic Adoption Canvas e Ontology Mapping.`
 * Regra: zero parenteses no texto visivel.
 

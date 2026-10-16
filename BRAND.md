@@ -1,6 +1,6 @@
-# HSN Labs — Brand Identity Guidelines
+# hsnlabs — Brand Identity Guidelines
 
-Operational standards for applying the HSN Labs brand across digital products, engineering documentation, investor decks, and public communications.
+Operational standards for applying the hsnlabs brand across digital products, engineering documentation, investor decks, and public communications.
 
 ---
 

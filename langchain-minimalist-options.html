@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opções Ultra-Minimalistas — Certified LangChain Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #07090e;
+      --paper: #f5f5f5;
+      --card: #ffffff;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+      --muted: #64748b;
+      --accent: #52B4FD;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--paper) 100%);
+      line-height: 1.5;
+      padding: 30px 16px 80px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 18px;
+    }
+    .brand-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .options-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .option-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      padding: 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .option-meta-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--hairline);
+    }
+    .opt-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+    }
+    .opt-tag {
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    /* BASE FOUNDER CARD */
+    .founder-base-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .founder-base-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .founder-avatar-box {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--hairline);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #f0efed;
+    }
+    .founder-avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .founder-meta-title {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .founder-meta-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .founder-callout-btn {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      display: inline-block;
+      transition: all 0.15s ease;
+    }
+    .founder-callout-btn:hover {
+      background: #f8fafc;
+      border-color: var(--ink);
+    }
+
+    /* ==============================================================
+       OPÇÃO 1: LINHA DE CREDENCIAL INTEGRADA AO NOME DO HUGO
+       ============================================================== */
+    .opt1-cred-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--muted);
+      margin-top: 4px;
+      font-size: 0.74rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .opt1-cred-line:hover {
+      color: var(--ink);
+    }
+    .opt1-cred-line .svg-wrap {
+      height: 13px;
+      width: 13px;
+      display: flex;
+      align-items: center;
+    }
+    .opt1-cred-line .svg-wrap svg {
+      height: 13px;
+      width: auto;
+    }
+    .opt1-cred-line .arrow {
+      font-size: 0.76rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ==============================================================
+       OPÇÃO 2: SUB-LINHA INSTITUCIONAL NO RODAPÉ DO CARD
+       ============================================================== */
+    .opt2-subline {
+      border-top: 1px solid var(--hairline);
+      padding: 8px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.72rem;
+      transition: all 0.15s ease;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .opt2-subline:hover {
+      background: #f8fafc;
+      color: var(--ink);
+    }
+    .opt2-subline .left-side {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .opt2-subline .left-side svg {
+      height: 13px;
+      width: auto;
+    }
+    .opt2-subline .cred-text {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .opt2-subline .right-arrow {
+      font-size: 0.76rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ==============================================================
+       OPÇÃO 3: GHOST CHIP MONOCROMÁTICO (MINIMALISTA)
+       ============================================================== */
+    .opt3-ghost-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      padding: 4px 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: all 0.15s ease;
+      margin-bottom: 6px;
+    }
+    .opt3-ghost-chip:hover {
+      border-color: var(--ink);
+      background: #f8fafc;
+    }
+    .opt3-ghost-chip .svg-wrap svg {
+      height: 12px;
+      width: auto;
+      display: block;
+    }
+    .opt3-ghost-chip .arrow {
+      color: var(--accent);
+      font-size: 0.76rem;
+    }
+
+    /* ==============================================================
+       OPÇÃO 4: ENDORSEMENT ANCHOR ACIMA DO CARD
+       ============================================================== */
+    .opt4-anchor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      transition: color 0.15s ease;
+    }
+    .opt4-anchor:hover {
+      color: var(--ink);
+    }
+    .opt4-anchor svg {
+      height: 14px;
+      width: auto;
+    }
+    .opt4-anchor .dot {
+      color: var(--hairline-strong);
+    }
+    .opt4-anchor .link-text {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ==============================================================
+       OPÇÃO 5: COMPACT SEAL SOB O AVATAR
+       ============================================================== */
+    .opt5-avatar-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .opt5-seal-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.15s ease;
+      white-space: nowrap;
+    }
+    .opt5-seal-link:hover {
+      color: var(--ink);
+    }
+    .opt5-seal-link svg {
+      height: 11px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="brand-tag">hsnlabs — Design de Autoridade</div>
+    <h1>5 Opções Ultra-Minimalistas</h1>
+    <p class="subtitle">Aplicação com a chancela oficial <strong>Certified LangChain Engineer</strong>, vetor autêntico e máxima sobriedade editorial.</p>
+  </header>
+
+  <div class="options-stack">
+
+    <!-- OPÇÃO 1 -->
+    <div class="option-card">
+      <div class="option-meta-header">
+        <span class="opt-name">Opção 1 — Credencial Atrelada ao Autor</span>
+        <span class="opt-tag">Direta e Pessoal: O certificado qualifica o Hugo</span>
+      </div>
+
+      <div class="founder-base-card" style="padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="founder-avatar-box">
+            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento">
+          </div>
+          <div>
+            <div class="founder-meta-title">Have a project in mind?</div>
+            <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+            <a href="/langchain" class="opt1-cred-line" title="Ver certificação oficial">
+              <span class="svg-wrap"></span>
+              <span>Certified LangChain Engineer</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+        <a href="#contact" class="founder-callout-btn">
+          Start a Conversation
+        </a>
+      </div>
+    </div>
+
+    <!-- OPÇÃO 2 -->
+    <div class="option-card">
+      <div class="option-meta-header">
+        <span class="opt-name">Opção 2 — Linha Sub-Footer Finíssima</span>
+        <span class="opt-tag">100% Alinhada à Grade, Silenciosa e Nobre</span>
+      </div>
+
+      <div class="founder-base-card" style="display: flex; flex-direction: column;">
+        <div style="padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="founder-avatar-box">
+              <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo S. Nascimento">
+            </div>
+            <div>
+              <div class="founder-meta-title">Let's talk about your project</div>
+              <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+            </div>
+          </div>
+          <a href="#contact" class="founder-callout-btn">
+            Start a Conversation
+          </a>
+        </div>
+
+        <!-- Linha sutil de chancela -->
+        <a href="/langchain" class="opt2-subline" title="Ver credenciamento oficial LangChain">
+          <div class="left-side">
+            
+            <span class="cred-text">Certified LangChain Engineer</span>
+          </div>
+          <span class="right-arrow">Explore Practice ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- OPÇÃO 3 -->
+    <div class="option-card">
+      <div class="option-meta-header">
+        <span class="opt-name">Opção 3 — Ghost Chip Minimalista</span>
+        <span class="opt-tag">Selo Limpo em Fundo Branco com Vetor Puro</span>
+      </div>
+
+      <div class="founder-base-card" style="padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="founder-avatar-box">
+            <img src="/assets/images/author/pool/hugo_09.jpg" alt="Hugo S. Nascimento">
+          </div>
+          <div>
+            <a href="/langchain" class="opt3-ghost-chip" title="Ver certificação">
+              <span class="svg-wrap"></span>
+              <span>Certified LangChain Engineer</span>
+              <span class="arrow">↗</span>
+            </a>
+            <div class="founder-meta-title">Building something new?</div>
+            <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+          </div>
+        </div>
+        <a href="#contact" class="founder-callout-btn">
+          Start a Conversation
+        </a>
+      </div>
+    </div>
+
+    <!-- OPÇÃO 4 -->
+    <div class="option-card">
+      <div class="option-meta-header">
+        <span class="opt-name">Opção 4 — Linha de Endosso Flutuante (Above Card)</span>
+        <span class="opt-tag">Card do Hugo 100% Intocado + Endosso Superior</span>
+      </div>
+
+      <div style="max-width: 580px; margin: 0 auto;">
+        <!-- Linha de endosso acima do card -->
+        <a href="/langchain" class="opt4-anchor" title="Ver certificação oficial LangChain">
+          
+          <span class="link-text">Certified LangChain Engineer</span>
+          <span class="dot">·</span>
+          <span>Enterprise Practice</span>
+          <span style="color: var(--accent); font-weight: bold;">↗</span>
+        </a>
+
+        <!-- Card limpo sem qualquer poluição -->
+        <div class="founder-base-card" style="padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="founder-avatar-box">
+              <img src="/assets/images/author/pool/hugo_08.jpg" alt="Hugo S. Nascimento">
+            </div>
+            <div>
+              <div class="founder-meta-title">Want to run an idea by me?</div>
+              <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+            </div>
+          </div>
+          <a href="#contact" class="founder-callout-btn">
+            Start a Conversation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPÇÃO 5 -->
+    <div class="option-card">
+      <div class="option-meta-header">
+        <span class="opt-name">Opção 5 — Micro-Selo Acoplado ao Avatar</span>
+        <span class="opt-tag">Equilíbrio com o Bloco Visual da Foto</span>
+      </div>
+
+      <div class="founder-base-card" style="padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="opt5-avatar-col">
+            <div class="founder-avatar-box">
+              <img src="/assets/images/author/pool/hugo_05.jpg" alt="Hugo S. Nascimento">
+            </div>
+            <a href="/langchain" class="opt5-seal-link" title="Ver certificação">
+              
+              <span>Certified ↗</span>
+            </a>
+          </div>
+          <div>
+            <div class="founder-meta-title">Need help getting started?</div>
+            <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+          </div>
+        </div>
+        <a href="#contact" class="founder-callout-btn">
+          Start a Conversation
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

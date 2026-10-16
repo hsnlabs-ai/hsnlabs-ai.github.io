@@ -1,14 +1,14 @@
 ---
-title: "Agentic Engineering Adoption | HSN Labs"
-description: "HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade."
+title: "Agentic Engineering Adoption | hsnlabs"
+description: "hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade."
 url: "https://hsnlabs.ai/"
 locale: "en"
 updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Agentic Engineering Adoption | HSN Labs
+# Agentic Engineering Adoption | hsnlabs
 
-> HSN Labs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.
+> hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.
 
 # Agentic Engineering Adoption.
 
@@ -38,7 +38,7 @@ Probabilistic models cannot guarantee transactional integrity. Without determini
 
 The Agentic Development Life Cycle, or ADLC, establishes a rigorous spec-driven governance layer over the enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.
 
-#### HSN Labs Enterprise Agentic Architecture Components
+#### hsnlabs Enterprise Agentic Architecture Components
 
 - Secure Model Integration and Access: Presidio Moderation, Redis Semantic Cache, LiteLLM Gateway
 

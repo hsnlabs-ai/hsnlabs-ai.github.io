@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>5 Propostas de Chancela Editorial — LangChain Certified</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #07090e;
+      --paper: #f5f5f5;
+      --card: #ffffff;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+      --muted: #64748b;
+      --accent: #52B4FD;
+      --navy: #161F34;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background-color: var(--paper);
+      background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, var(--paper) 100%);
+      line-height: 1.5;
+      padding: 40px 20px 100px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 24px;
+    }
+    .brand-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .subtitle {
+      font-size: 0.94rem;
+      color: var(--muted);
+      margin-top: 6px;
+      max-width: 680px;
+    }
+
+    .proposals-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .proposal-box {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      padding: 28px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+      position: relative;
+    }
+    .proposal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed var(--hairline);
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .proposal-num {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .proposal-concept {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .proposal-explanation {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-left: 2px solid var(--accent);
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    /* MOCK FOUNDER CARD BASE */
+    .founder-base-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    .founder-base-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .founder-avatar-box {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--hairline);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #f0efed;
+    }
+    .founder-avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .founder-meta-title {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+    .founder-meta-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .founder-callout-btn {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap !important;
+      flex-shrink: 0 !important;
+      display: inline-block;
+      transition: all 0.15s ease;
+    }
+    .founder-callout-btn:hover {
+      background: #f8fafc;
+      border-color: var(--ink);
+    }
+
+    /* ==============================================================
+       OPÇÃO 1: THE ENDORSEMENT SUB-BAR (RODAPÉ DE CHANCELA NO CARD)
+       ============================================================== */
+    .opt1-container {
+      max-width: 580px;
+      margin: 0 auto;
+    }
+    .opt1-body {
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .opt1-footer-bar {
+      border-top: 1px solid var(--hairline);
+      background: #fafafa;
+      padding: 8px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: var(--ink);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .opt1-footer-bar:hover {
+      background: #f1f5f9;
+    }
+    .opt1-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .opt1-lc-mark {
+      height: 14px;
+      display: flex;
+      align-items: center;
+    }
+    .opt1-lc-mark svg {
+      height: 14px;
+      width: auto;
+    }
+    .opt1-pill {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .opt1-right {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ==============================================================
+       OPÇÃO 2: CO-BRANDED HERO EYEBROW (hsnlabs × LANGCHAIN)
+       ============================================================== */
+    .opt2-eyebrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      border: 1px solid var(--hairline-strong);
+      padding: 7px 16px 7px 12px;
+      text-decoration: none;
+      color: var(--ink);
+      margin: 0 auto 24px auto;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      transition: all 0.2s ease;
+    }
+    .opt2-eyebrow-link:hover {
+      border-color: var(--ink);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .opt2-lc-svg {
+      height: 16px;
+      display: flex;
+      align-items: center;
+    }
+    .opt2-lc-svg svg {
+      height: 16px;
+      width: auto;
+    }
+    .opt2-sep {
+      color: var(--hairline-strong);
+      font-weight: 300;
+    }
+    .opt2-label {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .opt2-arrow {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* ==============================================================
+       OPÇÃO 3: PLACA MODULAR DUPLA (FOUNDER + CERTIFICATION PLAQUE)
+       ============================================================== */
+    .opt3-split {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+    @media (max-width: 680px) {
+      .opt3-split { grid-template-columns: 1fr; }
+    }
+    .opt3-plaque {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--ink);
+      min-width: 170px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: all 0.18s ease;
+      position: relative;
+    }
+    .opt3-plaque:hover {
+      border-color: var(--ink);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .opt3-plaque-tag {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .opt3-plaque-svg {
+      height: 18px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .opt3-plaque-svg svg {
+      height: 18px;
+      width: auto;
+    }
+    .opt3-plaque-sub {
+      font-size: 0.7rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ==============================================================
+       OPÇÃO 4: THE ARCHITECTURAL HORIZONTAL STRIP
+       ============================================================== */
+    .opt4-strip {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.18s ease;
+    }
+    .opt4-strip:hover {
+      border-color: var(--ink);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .opt4-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .opt4-lc-logo {
+      height: 22px;
+      display: flex;
+      align-items: center;
+    }
+    .opt4-lc-logo svg {
+      height: 22px;
+      width: auto;
+    }
+    .opt4-text-wrap {
+      text-align: left;
+    }
+    .opt4-role {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .opt4-claim {
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .opt4-action {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ==============================================================
+       OPÇÃO 5: FLOATING ENGINEERING STAMP
+       ============================================================== */
+    .opt5-stamp {
+      background: #ffffff;
+      border: 1px solid var(--ink);
+      padding: 12px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+    .opt5-stamp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      border-color: var(--accent);
+    }
+    .opt5-stamp .lc-mark svg {
+      height: 20px;
+      width: auto;
+    }
+    .opt5-stamp .meta {
+      text-align: left;
+    }
+    .opt5-stamp .meta-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .opt5-stamp .meta-sub {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="brand-tag">hsnlabs — Design de Autoridade</div>
+    <h1>5 Opções Refinadas: Chancela Oficial LangChain</h1>
+    <p class="subtitle">Soluções modernas, elegantes e com prestígio visual, respeitando as proporções do Brand Kit oficial e a identidade editorial da hsnlabs.</p>
+  </header>
+
+  <div class="proposals-stack">
+
+    <!-- PROPOSTA 1 -->
+    <div class="proposal-box">
+      <div class="proposal-header">
+        <div class="proposal-num">
+          <span>01. The Endorsement Sub-Bar</span>
+        </div>
+        <span class="proposal-concept">Rodapé de Chancela Integrado na Base do Card</span>
+      </div>
+
+      <div class="opt1-container">
+        <div class="founder-base-card" style="display: flex; flex-direction: column;">
+          <div class="opt1-body">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div class="founder-avatar-box">
+                <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento">
+              </div>
+              <div>
+                <div class="founder-meta-title">Have a project in mind?</div>
+                <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+              </div>
+            </div>
+            <a href="#contact" class="founder-callout-btn">
+              Start a Conversation
+            </a>
+          </div>
+
+          <!-- Rodapé de Chancela Oficial -->
+          <a href="/langchain" class="opt1-footer-bar" title="Conhecer nossa homologação LangChain Certified">
+            <div class="opt1-left">
+              <div class="opt1-lc-mark">
+                
+              </div>
+              <span class="opt1-pill">Certified Consulting Partner</span>
+            </div>
+            <span class="opt1-right">Ver Parceria ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="proposal-explanation">
+        <strong>Por que é elegante:</strong> Preserva a pureza do card do Hugo (sem adesivos flutuando sobre a borda). O rodapé em tom `#fafafa` com o lockup oficial em escala vetorial real confere a chancela institucional com acabamento de produto Tier-1 (como Stripe ou Vercel).
+      </div>
+    </div>
+
+    <!-- PROPOSTA 2 -->
+    <div class="proposal-box">
+      <div class="proposal-header">
+        <div class="proposal-num">
+          <span>02. The Co-Branded Hero Eyebrow</span>
+        </div>
+        <span class="proposal-concept">Selo de Aliança no Topo da Hero (Acima do H1)</span>
+      </div>
+
+      <div style="text-align: center; padding: 10px 0;">
+        <a href="/langchain" class="opt2-eyebrow-link" title="hsnlabs é Parceira Oficial Homologada da LangChain">
+          <div class="opt2-lc-svg">
+            
+          </div>
+          <span class="opt2-sep">|</span>
+          <span class="opt2-label">Certified Architecture Partner</span>
+          <span class="opt2-arrow">↗</span>
+        </a>
+
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.8rem; font-weight: 600; color: var(--ink);">
+          Enterprise AI Agents that don't fail in production.
+        </div>
+      </div>
+
+      <div class="proposal-explanation">
+        <strong>Por que é elegante:</strong> Padrão clássico de boutiques de ponta (Linear, Focused.io). O visitante vê a chancela no primeiro segundo da página, antes mesmo do título. Não compete com nenhum botão e dá máximo destaque à marca LangChain.
+      </div>
+    </div>
+
+    <!-- PROPOSTA 3 -->
+    <div class="proposal-box">
+      <div class="proposal-header">
+        <div class="proposal-num">
+          <span>03. The Modular Certification Plaque</span>
+        </div>
+        <span class="proposal-concept">Placa Arquitetural Acoplada ao Card do Fundador</span>
+      </div>
+
+      <div class="opt3-split">
+        <!-- Card do Fundador -->
+        <div class="founder-base-card" style="padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="founder-avatar-box">
+              <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo S. Nascimento">
+            </div>
+            <div>
+              <div class="founder-meta-title">Let's talk about your project</div>
+              <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+            </div>
+          </div>
+          <a href="#contact" class="founder-callout-btn">
+            Start a Conversation
+          </a>
+        </div>
+
+        <!-- Placa de Certificação -->
+        <a href="/langchain" class="opt3-plaque" title="Ver credenciamento oficial LangChain">
+          <div class="opt3-plaque-tag">Official Alliance</div>
+          <div class="opt3-plaque-svg">
+            
+          </div>
+          <div class="opt3-plaque-sub">
+            <span>Certified Partner</span>
+            <span style="color: var(--accent); font-weight: bold;">↗</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="proposal-explanation">
+        <strong>Por que é elegante:</strong> Cria um bloco duplo modular (grid moderno). O lado esquerdo é a figura humana e pessoal do fundador; o lado direito é o "selo de garantia" da tecnologia, cada um com sua função clara e sem aperto.
+      </div>
+    </div>
+
+    <!-- PROPOSTA 4 -->
+    <div class="proposal-box">
+      <div class="proposal-header">
+        <div class="proposal-num">
+          <span>04. The Architecture Strip Lockup</span>
+        </div>
+        <span class="proposal-concept">Faixa Institucional Independente Entre a Hero e o Portfólio</span>
+      </div>
+
+      <a href="/langchain" class="opt4-strip" title="Conhecer nossa prática oficial LangChain">
+        <div class="opt4-left">
+          <div class="opt4-lc-logo">
+            
+          </div>
+          <div class="opt4-text-wrap">
+            <div class="opt4-role">Official Certified Partner</div>
+            <div class="opt4-claim">Enterprise LangGraph & LangSmith Architecture</div>
+          </div>
+        </div>
+        <span class="opt4-action">
+          <span>Conhecer Parceria</span>
+          <span>↗</span>
+        </span>
+      </a>
+
+      <div class="proposal-explanation">
+        <strong>Por que é elegante:</strong> Dá espaço respiratório completo para a marca LangChain brilhar, conforme exigido pelos guidelines corporativos de branding. Funciona como uma chancela de infraestrutura de alto impacto.
+      </div>
+    </div>
+
+    <!-- PROPOSTA 5 -->
+    <div class="proposal-box">
+      <div class="proposal-header">
+        <div class="proposal-num">
+          <span>05. The Engineering Stamp (Badge Flutuante)</span>
+        </div>
+        <span class="proposal-concept">Selo Fixo no Canto Inferior da Tela</span>
+      </div>
+
+      <div style="text-align: center; padding: 14px 0;">
+        <a href="/langchain" class="opt5-stamp" title="hsnlabs é Parceira Homologada LangChain">
+          <div class="lc-mark">
+            
+          </div>
+          <div class="meta">
+            <div class="meta-title">Certified Architecture Partner</div>
+            <div class="meta-sub">Enterprise Agent Consulting</div>
+          </div>
+          <span style="color: var(--accent); font-weight: bold;">↗</span>
+        </a>
+      </div>
+
+      <div class="proposal-explanation">
+        <strong>Por que é elegante:</strong> Fica presente de forma não invasiva durante toda a navegação do executivo, como os selos de auditoria e conformidade técnica (SOC2 / ISO) de empresas maduras.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-scripts/sync_footer.py — HSN Labs Official Footer Synchronization Engine.
+scripts/sync_footer.py — hsnlabs Official Footer Synchronization Engine.
 
 Maintains strict parity across all 15 website routes by treating
 components/footer_en.html and components/footer_pt.html as the single source of truth.
@@ -169,7 +169,7 @@ def sync_page_footer(file_path: Path, canonical_footer: str) -> bool:
         return False
 
 def main():
-    print("=== SINCRONIZANDO RODAPES HSN LABS ===")
+    print("=== SINCRONIZANDO RODAPES hsnlabs ===")
     print("\n--- Paginas em Ingles (EN) ---")
     en_updated = sum(sync_page_footer(p, FOOTER_EN) for p in EN_PAGES)
     

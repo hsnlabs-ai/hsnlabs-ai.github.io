@@ -459,7 +459,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 - For small square elements like the `.post-it-badge`, force `background-size: 400px;` so the paper texture does not blur when squeezed into a small area.
 
 ### Don't
-- Don't round the corners of any element — the HSN Labs square mark and all UI components must maintain sharp 90-degree corners (`border-radius: 0`).
+- Don't round the corners of any element — the hsnlabs square mark and all UI components must maintain sharp 90-degree corners (`border-radius: 0`).
 - Don't use rounded corners or pill buttons (`border-radius: 8px` or `9999px`).
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.

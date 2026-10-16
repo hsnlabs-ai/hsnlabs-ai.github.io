@@ -1,14 +1,14 @@
 ---
-title: "Cases · We proudly tell the success stories of our clients · HSN Labs"
-description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs."
+title: "Cases · We proudly tell the success stories of our clients · hsnlabs"
+description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs."
 url: "https://hsnlabs.ai/portfolio/"
 locale: "en"
 updatedAt: "2026-10-15T19:01:44Z"
 ---
 
-# Cases · We proudly tell the success stories of our clients · HSN Labs
+# Cases · We proudly tell the success stories of our clients · hsnlabs
 
-> Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with HSN Labs.
+> Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs.
 
 # Cases
 
