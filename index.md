@@ -1,22 +1,22 @@
 ---
 title: "Adoção de Engenharia Agêntica | hsnlabs"
-description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Bootcamp na sua operação."
+description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T13:38:47Z"
+updatedAt: "2026-10-17T18:09:04Z"
 ---
 
 # Adoção de Engenharia Agêntica | hsnlabs
 
-> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Bootcamp na sua operação.
+> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação.
 
 # Adoção de Engenharia Agêntica.
 
-Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Bootcamp na sua operação.
+Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação.
 
 ## Como escapar do cemitério de PoCs.
 
-Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Bootcamp de Agentes, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
+Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Agentic Bootcamp, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
 
 ## Por Que Agentes Falham
 
@@ -86,7 +86,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Bootcamp de Agentes
+- Agentic Bootcamp
 
 - The Agentic Pilot Canvas
 

@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | hsnlabs"
 description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp inside your operation."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-17T13:38:47Z"
+updatedAt: "2026-10-17T18:09:04Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs

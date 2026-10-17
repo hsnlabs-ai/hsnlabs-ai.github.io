@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-17T13:38:47Z"
+updatedAt: "2026-10-17T18:09:04Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -26,7 +26,7 @@ Delivery of technical feasibility, audited ROI metrics, and full rollout roadmap
 
 ## Qualification Criteria
 
-The Bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+The Agentic Bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
 
 Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
 
@@ -34,7 +34,7 @@ Minimum annual revenue of 10M USD with pre-approved budget for the current fisca
 
 Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.
 
-## Bootcamp Application
+## Agentic Bootcamp Application
 
 Submit your information to request a technical intake call. We review your systems and confirm qualification details within 24 hours.
 

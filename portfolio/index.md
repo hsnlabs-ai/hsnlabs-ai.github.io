@@ -3,7 +3,7 @@ title: "Cases · Histórias de sucesso e sistemas em produção · hsnlabs"
 description: "Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a hsnlabs."
 url: "https://hsnlabs.ai/portfolio/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T13:38:48Z"
+updatedAt: "2026-10-17T18:09:04Z"
 ---
 
 # Cases · Histórias de sucesso e sistemas em produção · hsnlabs
@@ -42,7 +42,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Bootcamp de Agentes
+- Agentic Bootcamp
 
 - The Agentic Pilot Canvas
 

@@ -3,7 +3,7 @@ title: "Braintrust Evals & CI/CD · Agent Architecture · hsnlabs"
 description: "Eliminate stochastic prompt failures in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability."
 url: "https://hsnlabs.ai/en/braintrust/"
 locale: "en"
-updatedAt: "2026-10-17T13:38:48Z"
+updatedAt: "2026-10-17T18:09:04Z"
 ---
 
 # Braintrust Evals & CI/CD · Agent Architecture · hsnlabs

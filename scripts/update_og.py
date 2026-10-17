@@ -45,7 +45,7 @@ def extract_hero_data(html_path: Path, lang: str):
     m_cta2 = re.search(r'<a[^>]*class="btn btn-outline"[^>]*>(.*?)</a>', cta_block)
 
     if lang == "pt":
-        cta1 = m_cta1.group(1).strip() if m_cta1 else "Aplicar para o Bootcamp"
+        cta1 = m_cta1.group(1).strip() if m_cta1 else "Conhecer o Agentic Bootcamp"
         cta2 = m_cta2.group(1).strip() if m_cta2 else "Fale Conosco"
         return {
             "lang": "pt-BR",
@@ -56,7 +56,7 @@ def extract_hero_data(html_path: Path, lang: str):
             "lang_switch_html": '<span>EN ·</span> PT',
         }
 
-    cta1 = m_cta1.group(1).strip() if m_cta1 else "Apply for Bootcamp"
+    cta1 = m_cta1.group(1).strip() if m_cta1 else "Explore Agentic Bootcamp"
     cta2 = m_cta2.group(1).strip() if m_cta2 else "Contact Us"
     return {
         "lang": "en",
