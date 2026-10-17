@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | hsnlabs"
 description: "hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade."
 url: "https://hsnlabs.ai/"
 locale: "en"
-updatedAt: "2026-10-16T12:35:22Z"
+updatedAt: "2026-10-17T11:59:33Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
@@ -97,6 +97,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
+
+- Braintrust Evals
 
 - Blog
 

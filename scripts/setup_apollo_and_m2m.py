@@ -38,6 +38,8 @@ PAGES = [
     ("pt/langchain/index.html", "pt/langchain/index.md", "https://hsnlabs.ai/pt/langchain/", "pt-BR"),
     ("snowflake/index.html", "snowflake/index.md", "https://hsnlabs.ai/snowflake/", "en"),
     ("pt/snowflake/index.html", "pt/snowflake/index.md", "https://hsnlabs.ai/pt/snowflake/", "pt-BR"),
+    ("braintrust/index.html", "braintrust/index.md", "https://hsnlabs.ai/braintrust/", "en"),
+    ("pt/braintrust/index.html", "pt/braintrust/index.md", "https://hsnlabs.ai/pt/braintrust/", "pt-BR"),
     ("playbooks/index.html", "playbooks/index.md", "https://hsnlabs.ai/playbooks/", "en"),
     ("pt/playbooks/index.html", "pt/playbooks/index.md", "https://hsnlabs.ai/pt/playbooks/", "pt-BR"),
     ("portfolio/index.html", "portfolio/index.md", "https://hsnlabs.ai/portfolio/", "en"),

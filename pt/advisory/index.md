@@ -3,7 +3,7 @@ title: "Conselho Executivo de IA & Advisory · hsnlabs"
 description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/pt/advisory/"
 locale: "pt-BR"
-updatedAt: "2026-10-16T12:35:22Z"
+updatedAt: "2026-10-17T11:59:33Z"
 ---
 
 # Conselho Executivo de IA & Advisory · hsnlabs
@@ -87,6 +87,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
+
+- Braintrust Evals
 
 - Blog
 

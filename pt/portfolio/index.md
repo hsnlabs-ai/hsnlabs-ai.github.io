@@ -3,7 +3,7 @@ title: "Cases · Histórias de sucesso e sistemas em produção · hsnlabs"
 description: "Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a hsnlabs."
 url: "https://hsnlabs.ai/pt/portfolio/"
 locale: "pt-BR"
-updatedAt: "2026-10-16T12:35:22Z"
+updatedAt: "2026-10-17T11:59:34Z"
 ---
 
 # Cases · Histórias de sucesso e sistemas em produção · hsnlabs
@@ -53,6 +53,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
+
+- Braintrust Evals
 
 - Blog
 

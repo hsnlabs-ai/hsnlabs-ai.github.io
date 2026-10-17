@@ -3,7 +3,7 @@ title: "Snowflake AI Data Cloud · Agent Architecture · hsnlabs"
 description: "Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance."
 url: "https://hsnlabs.ai/snowflake/"
 locale: "en"
-updatedAt: "2026-10-16T12:35:22Z"
+updatedAt: "2026-10-17T11:59:34Z"
 ---
 
 # Snowflake AI Data Cloud · Agent Architecture · hsnlabs
@@ -81,6 +81,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
+
+- Braintrust Evals
 
 - Blog
 
