@@ -28,7 +28,7 @@ Guiding C-levels through the structural transformation required to protect marke
 
 ## Entry Engagement: Agentic Bootcamp
 - Bootcamp Deployment Protocol: https://hsnlabs.ai/bootcamp/
-An intensive 1-to-5-day Forward Deployed Engineering sprint inside client infrastructure. We validate data access, connect tools, and deliver a working sandbox prototype and executive business case with verified operational ROI. Qualifying enterprise accounts unlock fully sponsored terms or a 100% Performance Rebate credited toward production rollout.
+An intensive Forward Deployed Engineering sprint inside client infrastructure. We validate data access, connect tools, and deliver a working sandbox prototype and executive business case with verified operational ROI. Qualifying enterprise accounts unlock fully sponsored terms or a 100% Performance Rebate credited toward production rollout.
 
 ## Ecosystem & Platform Alliances
 - Snowflake AI Data Cloud Architecture: https://hsnlabs.ai/snowflake/

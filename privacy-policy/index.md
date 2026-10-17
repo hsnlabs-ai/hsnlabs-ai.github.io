@@ -1,16 +1,16 @@
 ---
-title: "Privacy Policy · hsnlabs"
-description: "Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
+title: "Política de Privacidade · hsnlabs"
+description: "Política de Privacidade da hsnlabs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade."
 url: "https://hsnlabs.ai/privacy-policy/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:34Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# Privacy Policy · hsnlabs
+# Política de Privacidade · hsnlabs
 
-> Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks.
+> Política de Privacidade da hsnlabs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade.
 
-# Privacy Policy
+# Política de Privacidade
 
 ## 1. Objective and Scope
 
@@ -58,7 +58,7 @@ Collected information is processed under explicit legal bases set out in Article
 
 - Execution of preliminary procedures linked to contracts requested by the data subject
 
-- Evaluation of technical scope for the Agentic Bootcamp and custom advisory architectures
+- Avaliação de escopo técnico para o Bootcamp de Agentes e arquiteturas consultivas sob medida
 
 - Distribution of technical insights, architecture whitepapers, and engineering updates based on consent
 
@@ -118,11 +118,11 @@ Requests regarding personal data processing or exercise of statutory rights shou
 
 This Policy is governed by and construed in accordance with the Laws of the Federative Republic of Brazil, specifically Law 13709 of 2018. The forum of the judicial district of São Paulo, State of São Paulo, Brazil, is elected to resolve disputes arising from this document.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -138,8 +138,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
-We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.

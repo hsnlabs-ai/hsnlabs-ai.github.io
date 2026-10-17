@@ -1,76 +1,76 @@
 ---
-title: "Snowflake AI Data Cloud · Agent Architecture · hsnlabs"
-description: "Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance."
+title: "Snowflake AI Data Cloud · Arquitetura de Agentes · hsnlabs"
+description: "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis diretamente sobre a Snowflake AI Data Cloud com governança sem cópias."
 url: "https://hsnlabs.ai/snowflake/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:34Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# Snowflake AI Data Cloud · Agent Architecture · hsnlabs
+# Snowflake AI Data Cloud · Arquitetura de Agentes · hsnlabs
 
-> Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance.
+> Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis diretamente sobre a Snowflake AI Data Cloud com governança sem cópias.
 
-# Snowflake AI Data Cloud From enterprise tables to governed autonomy.
+# Snowflake AI Data Cloud Das tabelas corporativas à autonomia governada.
 
-Operationalizing autonomous agents directly over the Snowflake AI Data Cloud. We bind deterministic state machines and executable business ontologies to your governed enterprise data.
+Operacionalizando agentes autônomos diretamente sobre a Snowflake AI Data Cloud. Vinculamos máquinas de estado determinísticas e ontologias executáveis aos seus dados corporativos governados.
 
-## The benefits of the Snowflake AI Data Cloud
+## Os benefícios da Snowflake AI Data Cloud
 
-Why enterprise engineering leaders anchor governed agent architectures on the Snowflake platform.
+Por que líderes de engenharia ancoram arquiteturas governadas de agentes na plataforma Snowflake.
 
-### Zero-copy grounding over live enterprise data
+### Ancoragem sem cópias sobre dados corporativos vivos
 
-Direct connection to governed tables and unstructured documents on the Snowflake platform, eliminating fragile ETL pipelines and stale data copies.
+Conexão direta às tabelas governadas e documentos não estruturados na plataforma Snowflake, eliminando dutos frágeis de ETL e réplicas defasadas.
 
-### Deterministic governance and role-based boundaries
+### Governança determinística e fronteiras de acesso
 
-Combining code-level state guards with native Snowflake access controls so autonomous agents strictly enforce compliance and row-level security.
+Combinação de guardas de código com o controle nativo de permissões da Snowflake para que agentes respeitem alçadas e segurança em nível de linha.
 
-### Dynamic business ontology over relational schemas
+### Ontologia dinâmica sobre esquemas relacionais
 
-Translating raw tables into executable business ontologies that validate state transitions before any transactional action is committed.
+Tradução de tabelas brutas em ontologias de negócios executáveis que validam transições de estado antes de efetivar qualquer escrita ou transação.
 
-## Architecture framework
+## A estrutura da arquitetura
 
-The three essential layers connecting the Snowflake AI Data Cloud to deterministic agent execution.
+As três camadas essenciais que conectam a Snowflake AI Data Cloud à execução determinística de agentes.
 
 ### Snowflake AI Data Cloud
 
-Unified enterprise tables, hybrid vector search, and governed SQL execution within your existing security perimeter.
+Tabelas corporativas unificadas, busca vetorial híbrida e execução governada de SQL dentro do seu perímetro de segurança.
 
 ### LangGraph State Core
 
-Finite state machines and dynamic business ontologies that orchestrate multi-step reasoning over live Snowflake data.
+Máquinas de estado finitas e ontologias dinâmicas que orquestram raciocínio em múltiplas etapas sobre dados vivos na Snowflake.
 
-### Guardrails & Audit Suites
+### Guardrails e Suítes de Auditoria
 
-Deterministic schema validation, SQL query guardrails, human-in-the-loop checkpoints, and continuous regression testing.
+Validação determinística de esquemas, bloqueio de consultas fora de escopo, supervisão humana e testes contínuos de regressão.
 
-## From POC to production
+## Do piloto à produção
 
-Our practical approach to ensuring agent initiatives advance beyond prototypes into mission-critical systems:
+Nossa abordagem prática para transformar provas de conceito em sistemas de missão crítica:
 
-Technical, architectural, and business feasibility assessment before writing code.
+Avaliação de viabilidade técnica, arquitetural e de negócios antes do início do código.
 
-Mapping governed schemas on the Snowflake platform into executable business ontologies and state graphs.
+Mapeamento dos esquemas governados na plataforma Snowflake em ontologias executáveis e grafos de estado.
 
-Connecting deterministic agents to Snowflake tables, vector indexes, ERPs, and transactional APIs.
+Conexão determinística dos agentes às tabelas Snowflake, índices vetoriais, ERPs e APIs transacionais.
 
-Architecture documentation, evaluation test suites, and continuous knowledge transfer to your team.
+Documentação de arquitetura, suítes de avaliação e transferência técnica para sua equipe.
 
-## Tailored engineering for your enterprise stack
+## Engenharia sob medida para sua arquitetura
 
-No theoretical slide decks. We deliver working software and audited code that your company fully owns.
+Sem apresentações teóricas de slides, entregamos software funcional com código que pertence integralmente à sua empresa.
 
 ### Hugo S. Nascimento
 
-We advise CTOs, VPs of Engineering, and technical leaders on designing, auditing, and hardening agent architectures. From initial feasibility audits to complete code handover to your internal team, we deliver deterministic software that you fully own.
+Trabalhamos diretamente com CTOs, VPs de Engenharia e equipes de produto para auditar fluxos existentes, eliminar pontos de falha e colocar agentes em operação sobre sistemas corporativos legados.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -86,6 +86,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.

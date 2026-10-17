@@ -1,48 +1,48 @@
 ---
-title: "Agentic Bootcamp · hsnlabs"
-description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
+title: "Bootcamp de Agentes · hsnlabs"
+description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
-locale: "en"
-updatedAt: "2026-10-17T12:40:41Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:47Z"
 ---
 
-# Agentic Bootcamp · hsnlabs
+# Bootcamp de Agentes · hsnlabs
 
-> We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.
+> Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
 
-# Agentic Bootcamp
+# Bootcamp de Agentes
 
-We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Braintrust, and LangChain.
+Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Braintrust e LangChain.
 
-## Our Method
+## Nosso Método
 
-Database read replicas, ERP connections, and security isolation before writing code.
+Réplicas de leitura de banco de dados, conexões ERP e isolamento de segurança antes de escrever qualquer código.
 
-Reverse engineering legacy code into formal specifications, known as Code to Spec, and mapping into executable business ontologies under a spec-driven architecture.
+Engenharia reversa de código legado para especificações formais, no modelo Code to Spec, e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.
 
-Deploying deep agents in a secure, isolated test environment, testing edge cases on LangGraph state graphs and sovereign runtimes.
+Implantação de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.
 
-Delivery of technical feasibility, audited ROI metrics, and full rollout roadmap. Sprint fee is completely rebated against the production deployment contract.
+Entrega de viabilidade técnica, métricas auditadas de ROI e roadmap de implantação. Taxa do sprint totalmente reembolsada no contrato de produção.
 
-## Qualification Criteria
+## Critérios de Qualificação
 
-The bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+O Bootcamp é um sprint intensivo de produção na sua operação. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
-Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
+Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 
-Minimum annual revenue of 10M USD with pre-approved budget for the current fiscal year to develop and deploy the project upon verified validation.
+Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano fiscal vigente para desenvolver e implantar o projeto.
 
-Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.
+Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraímos fatias cirúrgicas de dados onde a informação reside.
 
-## Bootcamp Application
+## Inscrição no Bootcamp
 
-Submit your information to request a technical intake call. We review your systems and confirm qualification details within 24 hours.
+Envie seus dados para solicitar uma chamada técnica. Analisamos seus sistemas e confirmamos os detalhes de qualificação em até 24 horas.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -58,8 +58,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
-We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.

@@ -3,7 +3,7 @@ title: "Adoção de Engenharia Agêntica | hsnlabs"
 description: "A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década."
 url: "https://hsnlabs.ai/pt/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T11:59:33Z"
+updatedAt: "2026-10-17T12:40:41Z"
 ---
 
 # Adoção de Engenharia Agêntica | hsnlabs

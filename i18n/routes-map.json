@@ -2,26 +2,26 @@
   "site_pages": [
     {
       "id": "site_home",
-      "en_path": "/",
-      "pt_path": "/pt/",
+      "en_path": "/en/",
+      "pt_path": "/",
       "title_en": "hsnlabs — AI Agents That Don't Fail in Production",
       "title_pt": "hsnlabs — Agentes de IA que Nao Falham em Producao",
-      "description_en": "Boutique building resilient multi-agent architectures on business ontologies.",
-      "description_pt": "Boutique de engenharia construindo arquiteturas multiagente resilientes em ontologias de negocios."
+      "description_en": "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.",
+      "description_pt": "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados para preparar sua operação para a próxima década."
     },
     {
       "id": "site_bootcamp",
-      "en_path": "/bootcamp/",
-      "pt_path": "/pt/bootcamp/",
-      "title_en": "5-Day Enterprise Agent Bootcamp | hsnlabs",
-      "title_pt": "Bootcamp de Agentes Enterprise de 5 Dias | hsnlabs",
-      "description_en": "Five-day intensive sprint replacing manual BPO workflows with deterministic AI agents.",
-      "description_pt": "Sprint intensivo de cinco dias substituindo fluxos manuais de BPO por agentes de IA determinísticos."
+      "en_path": "/en/bootcamp/",
+      "pt_path": "/bootcamp/",
+      "title_en": "Agentic Bootcamp | hsnlabs",
+      "title_pt": "Bootcamp de Agentes | hsnlabs",
+      "description_en": "Intensive engineering sprint replacing manual BPO workflows with deterministic AI agents.",
+      "description_pt": "Sprint intensivo de engenharia substituindo fluxos manuais de BPO por agentes de IA determinísticos."
     },
     {
       "id": "site_advisory",
-      "en_path": "/advisory/",
-      "pt_path": "/pt/advisory/",
+      "en_path": "/en/advisory/",
+      "pt_path": "/advisory/",
       "title_en": "Architecture Advisory | Hugo S. Nascimento",
       "title_pt": "Advisory de Arquitetura | Hugo S. Nascimento",
       "description_en": "Strategic architecture advisory for C-level executives on agent transition.",
@@ -29,8 +29,8 @@
     },
     {
       "id": "site_privacy_policy",
-      "en_path": "/privacy-policy/",
-      "pt_path": "/pt/privacy-policy/",
+      "en_path": "/en/privacy-policy/",
+      "pt_path": "/privacy-policy/",
       "title_en": "Privacy Policy | hsnlabs",
       "title_pt": "Politica de Privacidade | hsnlabs",
       "description_en": "Privacy policy and data governance terms.",
@@ -38,8 +38,8 @@
     },
     {
       "id": "site_modern_slavery",
-      "en_path": "/modern-slavery-statement/",
-      "pt_path": "/pt/modern-slavery-statement/",
+      "en_path": "/en/modern-slavery-statement/",
+      "pt_path": "/modern-slavery-statement/",
       "title_en": "Modern Slavery Statement | hsnlabs",
       "title_pt": "Declaracao de Escravidao Moderna | hsnlabs",
       "description_en": "Ethics and compliance statement.",
@@ -56,8 +56,8 @@
     },
     {
       "id": "site_canvas",
-      "en_path": "/canvas/",
-      "pt_path": "/pt/canvas/",
+      "en_path": "/en/canvas/",
+      "pt_path": "/canvas/",
       "title_en": "The Agentic Pilot Canvas | hsnlabs",
       "title_pt": "The Agentic Pilot Canvas | hsnlabs",
       "description_en": "Open MIT architecture framework for designing enterprise agent pilots that survive production.",
@@ -65,8 +65,8 @@
     },
     {
       "id": "site_mcp",
-      "en_path": "/mcp/",
-      "pt_path": "/pt/mcp/",
+      "en_path": "/en/mcp/",
+      "pt_path": "/mcp/",
       "title_en": "Enterprise MCP Servers | hsnlabs",
       "title_pt": "Servidores MCP Enterprise | hsnlabs",
       "description_en": "Secure context pipelines for mission-critical core data.",
@@ -74,8 +74,8 @@
     },
     {
       "id": "site_langchain",
-      "en_path": "/langchain/",
-      "pt_path": "/pt/langchain/",
+      "en_path": "/en/langchain/",
+      "pt_path": "/langchain/",
       "title_en": "LangChain Partner — From Language Model to Real Intelligence | hsnlabs",
       "title_pt": "Parceiro LangChain — Do Modelo de Linguagem a Inteligencia Real | hsnlabs",
       "description_en": "From language model to real intelligence. hsnlabs partners with LangChain to build mission-critical agent applications across the entire development lifecycle.",
@@ -83,8 +83,8 @@
     },
     {
       "id": "site_snowflake",
-      "en_path": "/snowflake/",
-      "pt_path": "/pt/snowflake/",
+      "en_path": "/en/snowflake/",
+      "pt_path": "/snowflake/",
       "title_en": "Snowflake AI Data Cloud · Agent Architecture | hsnlabs",
       "title_pt": "Snowflake AI Data Cloud · Arquitetura de Agentes | hsnlabs",
       "description_en": "Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance.",
@@ -92,8 +92,8 @@
     },
     {
       "id": "braintrust",
-      "en_path": "/braintrust/",
-      "pt_path": "/pt/braintrust/",
+      "en_path": "/en/braintrust/",
+      "pt_path": "/braintrust/",
       "title_en": "Braintrust Evals & CI/CD · Agent Architecture · hsnlabs",
       "title_pt": "Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs"
     }

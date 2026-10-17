@@ -1,16 +1,16 @@
 ---
-title: "Modern Slavery Statement · hsnlabs"
-description: "Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
+title: "Declaração de Conformidade e Ética · hsnlabs"
+description: "Declaração de Conformidade e Ética da hsnlabs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos."
 url: "https://hsnlabs.ai/modern-slavery-statement/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:34Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# Modern Slavery Statement · hsnlabs
+# Declaração de Conformidade e Ética · hsnlabs
 
-> Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards.
+> Declaração de Conformidade e Ética da hsnlabs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos.
 
-# Modern Slavery Statement
+# Declaração de Conformidade e Ética
 
 ## 1. Our Commitment
 
@@ -84,11 +84,11 @@ São Paulo, Brazil
 
 February 2026
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -104,8 +104,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
-We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.

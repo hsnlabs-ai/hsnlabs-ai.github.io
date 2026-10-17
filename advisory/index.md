@@ -1,46 +1,82 @@
 ---
-title: "Agentic AI Advisory · hsnlabs"
-description: "Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries."
+title: "Conselho Executivo de IA & Advisory · hsnlabs"
+description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/advisory/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:33Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:47Z"
 ---
 
-# Agentic AI Advisory · hsnlabs
+# Conselho Executivo de IA & Advisory · hsnlabs
 
-> Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries.
+> Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento.
 
-# Agentic AI Advisory Beyond technical implementation.
+# Advisory de IA Agêntica Além da implementação técnica.
 
-## The Disruption Gap
+Um assento executivo dedicado para founders e C-levels liderarem a transição de arquitetura, mitigação de risco operacional e blindagem de margem diante da disrupção por agentes autônomos.
 
-Autonomous agents threaten traditional operating margins. We prepare your enterprise to defend market share and scale safely.
+## Hugo Nascimento.
 
-### Operating Models
+Empresário, consultor e diretor de tecnologia e produto atuando como CPTO, Hugo Nascimento é pioneiro na implementação de sistemas agênticos em produção para grandes contas e referência na aplicação dessas arquiteturas desde 2022.
 
-Software no longer just assists workers. It executes work. We help executive teams restructure core workflows, reallocate headcount to high-leverage supervision, and adapt operating rhythms for continuous autonomous execution.
+Engenheiro certificado pela LangChain, atua diretamente no conselho de empresas em crescimento e grandes operações para traduzir a disrupção da IA em decisões seguras de arquitetura, reestruturação operacional e blindagem de margem.
 
-### Margin Defense
+- Founder & CPTO na Eva People e hsnlabs
 
-New competitors deploy digital workforces at a fraction of traditional BPO costs. We audit your cost structures, identify vulnerable high-friction operations, and build defense plans to maintain your operational edge.
+- LangChain Certified Engineer com histórico em produção corporativa
 
-### Progressive Migration
+- +5 anos implementando agentes e modelos em larga escala
 
-Replacing legacy operations all at once creates catastrophic risk. We engineer progressive routing paths that swap human and rule-based tasks for autonomous deep agents without disrupting live revenue lines.
+- Especialista em governança, limites operacionais e arquitetura híbrida
 
-### Executive Governance
+## Conselho Semestral de IA
 
-Establishing strict operational boundaries. We design escalation protocols, human-in-the-loop oversight rules, and liability frameworks to ensure autonomous systems never compromise compliance or brand trust.
+Um ciclo de 6 meses de acompanhamento próximo e confidencial com Hugo Nascimento, focado em destravar decisões críticas de arquitetura de IA e mitigar riscos operacionais.
 
-## Contact Us
+### Sessão Mensal de Conselho
 
-Talk to our strategy team about your AI roadmap and organizational transformation needs.
+Reunião estratégica mensal de 2 horas dedicada com founders e C-levels para revisar o roadmap de IA, auditar escolhas de tecnologia, vetar iniciativas sem ROI e calibrar prioridades.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+### Canal Assíncrono Direto
+
+Acesso executivo direto ao Hugo via canal prioritário para sparring estratégico contínuo, revisão de escopos, avaliação de propostas de fornecedores e validação ágil de decisões técnicas.
+
+### Governança & Guardrails
+
+Auditoria prática de limites de sistema, políticas de Human-in-the-Loop e supervisão humana, observabilidade e conformidade, assegurando que deep agents operem sem risco à integridade da empresa.
+
+## O Abismo da Disrupção
+
+Agentes autônomos ameaçam as margens operacionais tradicionais. Preparamos sua empresa para defender mercado e escalar com segurança.
+
+### Modelos Operacionais
+
+O software não atua mais apenas como assistente. Ele executa trabalho. Ajudamos diretorias a reestruturar fluxos, realocar equipes para supervisão estratégica e adaptar ritmos para execução autônoma contínua.
+
+### Defesa de Margem
+
+Novos concorrentes implantam forças de trabalho digitais por uma fração do custo de BPO tradicional. Auditamos suas estruturas de custo, identificamos operações vulneráveis e desenhamos planos de defesa.
+
+### Migração Progressiva
+
+Substituir operações legadas de uma só vez gera risco desastroso. Desenhamos rotas progressivas que transferem tarefas manuais para deep agents sem interromper fluxos de receita ativos.
+
+### Governança Executiva
+
+Estabelecemos limites operacionais estritos. Desenhamos protocolos de escalada, regras de supervisão human-in-the-loop e matrizes de responsabilidade para garantir que sistemas autônomos nunca comprometam compliance ou a reputação da marca.
+
+## Conte sobre a sua empresa
+
+Vou revisar pessoalmente cada aplicação. Busco founders e executivos de empresas com faturamento anual acima de R$ 10 milhões, dispostos a trabalhar por um ciclo de 6 meses na transição de arquitetura, governança e mitigação de risco com IA agêntica.
+
+### Aplicação Recebida
+
+Obrigado pelo envio. Hugo Nascimento revisará os dados da sua empresa pessoalmente e retornará pelo seu e-mail corporativo em até 48 horas.
+
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -56,8 +92,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
-We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.

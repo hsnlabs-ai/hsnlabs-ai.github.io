@@ -33,7 +33,7 @@ def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_in
     lines.append(f'    <lastmod>{today}</lastmod>')
     lines.append(f'    <changefreq>{changefreq}</changefreq>')
     lines.append(f'    <priority>{priority}</priority>')
-    lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{en_url}" />')
+    lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{pt_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{en_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="pt-BR" href="{pt_url}" />')
     if image_info:
@@ -50,7 +50,7 @@ def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_in
     lines.append(f'    <lastmod>{today}</lastmod>')
     lines.append(f'    <changefreq>{changefreq}</changefreq>')
     lines.append(f'    <priority>{priority}</priority>')
-    lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{en_url}" />')
+    lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{pt_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{en_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="pt-BR" href="{pt_url}" />')
     lines.append('  </url>')
@@ -62,7 +62,7 @@ for page in routes.get("site_pages", []):
     prio = "1.0" if page["en_path"] == "/" else "0.9"
     freq = "weekly" if page["en_path"] == "/" else "monthly"
     img = None
-    if page["en_path"] == "/":
+    if page["pt_path"] == "/":
         img = {
             "loc": "https://hsnlabs.ai/assets/brand/og-image.png",
             "title": "hsnlabs | Enterprise AI Architectures",
