@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-17T12:30:37Z"
+updatedAt: "2026-10-17T12:37:35Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -12,7 +12,7 @@ updatedAt: "2026-10-17T12:30:37Z"
 
 # Agentic Bootcamp
 
-We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts.
+We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake with 400 USD in trial usage, Braintrust, and LangChain.
 
 ## Our Method
 
@@ -33,8 +33,6 @@ Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
 Minimum annual revenue of 10M USD with pre-approved budget for the current fiscal year to develop and deploy the project upon verified validation.
 
 Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.
-
-Every approved bootcamp deployment includes an ecosystem infrastructure and evaluation credits bundle quoted at 5,000 USD total for the client, composed exclusively of partner credits across Google Cloud Platform, Snowflake with 400 USD in initial trial usage, Braintrust, and LangChain.
 
 ## Bootcamp Application
 

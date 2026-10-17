@@ -3,7 +3,7 @@ title: "Bootcamp de Agentes · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/pt/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T12:30:37Z"
+updatedAt: "2026-10-17T12:37:35Z"
 ---
 
 # Bootcamp de Agentes · hsnlabs
@@ -12,7 +12,7 @@ updatedAt: "2026-10-17T12:30:37Z"
 
 # Bootcamp de Agentes
 
-Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas.
+Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake com 400 USD de trial, Braintrust e LangChain.
 
 ## Nosso Método
 
@@ -33,8 +33,6 @@ Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano fiscal vigente para desenvolver e implantar o projeto.
 
 Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraímos fatias cirúrgicas de dados onde a informação reside.
-
-Cada implantação aprovada no bootcamp inclui um pacote de créditos de infraestrutura e avaliação cotado em 5.000 USD no total para o cliente, composto exclusivamente por créditos de Google Cloud Platform, Snowflake com 400 USD de crédito inicial, Braintrust e LangChain.
 
 ## Inscrição no Bootcamp
 
