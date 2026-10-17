@@ -12,8 +12,8 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 BLOG_DIR = ROOT_DIR.parent / "blog_hsn_labs"
-INDEX_EN = ROOT_DIR / "index.html"
-INDEX_PT = ROOT_DIR / "pt" / "index.html"
+INDEX_PT = ROOT_DIR / "index.html"
+INDEX_EN = ROOT_DIR / "en" / "index.html"
 OG_EN_OUTPUT = ROOT_DIR / "assets" / "brand" / "og-image.png"
 OG_PT_OUTPUT = ROOT_DIR / "assets" / "brand" / "og-image-pt.png"
 TEMP_DIR = Path("/Users/hugosoares/.hermes/cache/scratch")

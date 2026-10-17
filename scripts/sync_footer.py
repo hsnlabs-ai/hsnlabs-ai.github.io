@@ -14,6 +14,20 @@ FOOTER_EN = (SITE_DIR / "components" / "footer_en.html").read_text(encoding="utf
 FOOTER_PT = (SITE_DIR / "components" / "footer_pt.html").read_text(encoding="utf-8").strip()
 
 EN_PAGES = [
+    SITE_DIR / "en" / "index.html",
+    SITE_DIR / "en" / "bootcamp" / "index.html",
+    SITE_DIR / "en" / "advisory" / "index.html",
+    SITE_DIR / "en" / "mcp" / "index.html",
+    SITE_DIR / "en" / "langchain" / "index.html",
+    SITE_DIR / "en" / "snowflake" / "index.html",
+    SITE_DIR / "en" / "braintrust" / "index.html",
+    SITE_DIR / "en" / "portfolio" / "index.html",
+    SITE_DIR / "en" / "privacy-policy" / "index.html",
+    SITE_DIR / "en" / "modern-slavery-statement" / "index.html",
+    SITE_DIR / "404.html",
+]
+
+PT_PAGES = [
     SITE_DIR / "index.html",
     SITE_DIR / "bootcamp" / "index.html",
     SITE_DIR / "advisory" / "index.html",
@@ -22,24 +36,10 @@ EN_PAGES = [
     SITE_DIR / "snowflake" / "index.html",
     SITE_DIR / "braintrust" / "index.html",
     SITE_DIR / "portfolio" / "index.html",
+    SITE_DIR / "canvas" / "index.html",
+    SITE_DIR / "en" / "canvas" / "index.html",
     SITE_DIR / "privacy-policy" / "index.html",
     SITE_DIR / "modern-slavery-statement" / "index.html",
-    SITE_DIR / "404.html",
-]
-
-PT_PAGES = [
-    SITE_DIR / "pt" / "index.html",
-    SITE_DIR / "pt" / "bootcamp" / "index.html",
-    SITE_DIR / "pt" / "advisory" / "index.html",
-    SITE_DIR / "pt" / "mcp" / "index.html",
-    SITE_DIR / "pt" / "langchain" / "index.html",
-    SITE_DIR / "pt" / "snowflake" / "index.html",
-    SITE_DIR / "pt" / "braintrust" / "index.html",
-    SITE_DIR / "pt" / "portfolio" / "index.html",
-    SITE_DIR / "canvas" / "index.html",
-    SITE_DIR / "pt" / "canvas" / "index.html",
-    SITE_DIR / "pt" / "privacy-policy" / "index.html",
-    SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
 ]
 
 MCP_STANDARD_FOOTER_CSS = '''    /* FOOTER */

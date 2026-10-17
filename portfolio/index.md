@@ -1,48 +1,48 @@
 ---
-title: "Cases · We proudly tell the success stories of our clients · hsnlabs"
-description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs."
+title: "Cases · Histórias de sucesso e sistemas em produção · hsnlabs"
+description: "Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a hsnlabs."
 url: "https://hsnlabs.ai/portfolio/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:34Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# Cases · We proudly tell the success stories of our clients · hsnlabs
+# Cases · Histórias de sucesso e sistemas em produção · hsnlabs
 
-> Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs.
+> Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a hsnlabs.
 
 # Cases
 
-## HR Tech Enterprise: From fragmented legacy portals to instant resolution on WhatsApp & Teams
+## HR Tech Enterprise: Da fragmentação de portais legados à resolução instantânea em WhatsApp e Teams
 
-Discover how an enterprise workforce platform replaced manual Tier-1 support with autonomous agentic orchestration over TOTVS and SAP in just 8 weeks.
+Descubra como uma plataforma corporativa de RH substituiu o atendimento manual de N1 por orquestração agêntica sobre TOTVS e SAP em apenas 8 semanas.
 
-## We proudly tell the success stories of our clients
+## Temos orgulho de contar as histórias de sucesso dos nossos clientes
 
-### Series B Insurtech: Slashing broker ramp-up by 45% with adaptive voice simulations and LLM-as-a-Judge
+### Insurtech Série B: Reduzindo o ramp-up de corretores em 45% com simulações adaptativas e LLM-as-a-Judge
 
-How an innovative life insurance provider replaced slow manual roleplays with interactive agentic buyer simulations and automated rubric scoring.
+Como uma distribuidora de seguros substituiu roleplays manuais por simulações adaptativas de compradores com avaliação contínua via LLM-as-a-Judge.
 
-### National Logistics: Automating delivery anomaly resolution and tax validation via multimodal agents
+### Operador Logístico: Automatizando a resolução de anomalias de entrega e validação fiscal com agentes multimodais
 
-Airport & national freight automation: how multimodal vision agents resolve delivery exceptions and cross-check SEFAZ tax documents in real-time.
+Automação de frete e centros de distribuição: como agentes multimodais de visão resolvem exceções de entrega e validam CT-e em tempo real.
 
-### Benefits Unicorn: Overcoming Slack's 3-second timeout rule with event-driven SQS agent queues
+### Unicórnio de Benefícios: Superando o limite de 3 segundos do Slack com filas de mensageria assíncronas
 
-How a leading corporate benefits fintech replaced fragmented internal operations with an asynchronous concierge agent running over AWS SQS and Python workers.
+Como um unicórnio brasileiro de benefícios automatizou o suporte operacional interno com um concierge assíncrono sobre AWS SQS e workers em Python.
 
-### Financial Institution: Cutting daily ERP closing cycles from 6 hours to 12 minutes with deterministic FSMs
+### Instituição Financeira: Reduzindo o fechamento diário do ERP de 6 horas para 12 minutos com FSMs determinísticas
 
-How a credit and payment gateway deployed Finite State Machine (FSM) agents over SAP ERP to eliminate manual reconciliation errors and audit penalties.
+Como uma instituição financeira implementou agentes baseados em Máquinas de Estados Finitos sobre o SAP para eliminar erros de conciliação diária.
 
-### Manufacturing Enterprise: Unifying fragmented ERP data with zero-trust Model Context Protocol
+### Indústria & Manufatura: Unificando dados legados de chão de fábrica com Model Context Protocol zero-trust
 
-Replacing fragmented plant maintenance tickets with an agent that queries equipment manuals, telemetry, and SAP work orders autonomously.
+Substituição de ordens manuais de manutenção fabril por agentes que cruzam manuais técnicos, telemetria e ordens do SAP autonomamente.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -58,6 +58,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.

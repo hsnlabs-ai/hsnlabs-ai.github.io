@@ -6,17 +6,17 @@ from pathlib import Path
 SITE_DIR = Path("/Users/hugosoares/site_hsn_labs")
 
 PAGES = [
-    {"id": "home", "en": SITE_DIR / "index.html", "pt": SITE_DIR / "pt" / "index.html", "path_en": "/", "path_pt": "/pt/"},
-    {"id": "bootcamp", "en": SITE_DIR / "bootcamp" / "index.html", "pt": SITE_DIR / "pt" / "bootcamp" / "index.html", "path_en": "/bootcamp/", "path_pt": "/pt/bootcamp/"},
-    {"id": "advisory", "en": SITE_DIR / "advisory" / "index.html", "pt": SITE_DIR / "pt" / "advisory" / "index.html", "path_en": "/advisory/", "path_pt": "/pt/advisory/"},
-    {"id": "mcp", "en": SITE_DIR / "mcp" / "index.html", "pt": SITE_DIR / "pt" / "mcp" / "index.html", "path_en": "/mcp/", "path_pt": "/pt/mcp/"},
-    {"id": "langchain", "en": SITE_DIR / "langchain" / "index.html", "pt": SITE_DIR / "pt" / "langchain" / "index.html", "path_en": "/langchain/", "path_pt": "/pt/langchain/"},
-    {"id": "snowflake", "en": SITE_DIR / "snowflake" / "index.html", "pt": SITE_DIR / "pt" / "snowflake" / "index.html", "path_en": "/snowflake/", "path_pt": "/pt/snowflake/"},
-    {"id": "braintrust", "en": SITE_DIR / "braintrust" / "index.html", "pt": SITE_DIR / "pt" / "braintrust" / "index.html", "path_en": "/braintrust/", "path_pt": "/pt/braintrust/"},
-    {"id": "portfolio", "en": SITE_DIR / "portfolio" / "index.html", "pt": SITE_DIR / "pt" / "portfolio" / "index.html", "path_en": "/portfolio/", "path_pt": "/pt/portfolio/"},
-    {"id": "canvas", "en": SITE_DIR / "canvas" / "index.html", "pt": SITE_DIR / "pt" / "canvas" / "index.html", "path_en": "/canvas/", "path_pt": "/pt/canvas/"},
-    {"id": "privacy", "en": SITE_DIR / "privacy-policy" / "index.html", "pt": SITE_DIR / "pt" / "privacy-policy" / "index.html", "path_en": "/privacy-policy/", "path_pt": "/pt/privacy-policy/"},
-    {"id": "compliance", "en": SITE_DIR / "modern-slavery-statement" / "index.html", "pt": SITE_DIR / "pt" / "modern-slavery-statement" / "index.html", "path_en": "/modern-slavery-statement/", "path_pt": "/pt/modern-slavery-statement/"},
+    {"id": "home", "pt": SITE_DIR / "index.html", "en": SITE_DIR / "en" / "index.html", "path_pt": "/", "path_en": "/en/"},
+    {"id": "bootcamp", "pt": SITE_DIR / "bootcamp" / "index.html", "en": SITE_DIR / "en" / "bootcamp" / "index.html", "path_pt": "/bootcamp/", "path_en": "/en/bootcamp/"},
+    {"id": "advisory", "pt": SITE_DIR / "advisory" / "index.html", "en": SITE_DIR / "en" / "advisory" / "index.html", "path_pt": "/advisory/", "path_en": "/en/advisory/"},
+    {"id": "mcp", "pt": SITE_DIR / "mcp" / "index.html", "en": SITE_DIR / "en" / "mcp" / "index.html", "path_pt": "/mcp/", "path_en": "/en/mcp/"},
+    {"id": "langchain", "pt": SITE_DIR / "langchain" / "index.html", "en": SITE_DIR / "en" / "langchain" / "index.html", "path_pt": "/langchain/", "path_en": "/en/langchain/"},
+    {"id": "snowflake", "pt": SITE_DIR / "snowflake" / "index.html", "en": SITE_DIR / "en" / "snowflake" / "index.html", "path_pt": "/snowflake/", "path_en": "/en/snowflake/"},
+    {"id": "braintrust", "pt": SITE_DIR / "braintrust" / "index.html", "en": SITE_DIR / "en" / "braintrust" / "index.html", "path_pt": "/braintrust/", "path_en": "/en/braintrust/"},
+    {"id": "portfolio", "pt": SITE_DIR / "portfolio" / "index.html", "en": SITE_DIR / "en" / "portfolio" / "index.html", "path_pt": "/portfolio/", "path_en": "/en/portfolio/"},
+    {"id": "canvas", "pt": SITE_DIR / "canvas" / "index.html", "en": SITE_DIR / "en" / "canvas" / "index.html", "path_pt": "/canvas/", "path_en": "/en/canvas/"},
+    {"id": "privacy", "pt": SITE_DIR / "privacy-policy" / "index.html", "en": SITE_DIR / "en" / "privacy-policy" / "index.html", "path_pt": "/privacy-policy/", "path_en": "/en/privacy-policy/"},
+    {"id": "compliance", "pt": SITE_DIR / "modern-slavery-statement" / "index.html", "en": SITE_DIR / "en" / "modern-slavery-statement" / "index.html", "path_pt": "/modern-slavery-statement/", "path_en": "/en/modern-slavery-statement/"},
 ]
 
 def test_gate_s1_structural_integrity():
@@ -68,7 +68,7 @@ def test_gate_s3_reciprocity():
         
         assert f'hreflang="en" href="{expected_can_en}"' in pt_content, f"Hreflang en ausente em {item['pt']}"
         assert f'hreflang="pt-BR" href="{expected_can_pt}"' in pt_content, f"Hreflang pt-BR ausente em {item['pt']}"
-        assert f'hreflang="x-default" href="{expected_can_en}"' in pt_content, f"Hreflang x-default ausente em {item['pt']}"
+        assert f'hreflang="x-default" href="{expected_can_pt}"' in pt_content, f"Hreflang x-default ausente em {item['pt']}"
     print(f"PASS: Gate S3 Reciprocidade Hreflang e Canonical validada nos {len(PAGES)} pares")
 
 def test_gate_s4_language_isolation():
@@ -79,9 +79,9 @@ def test_gate_s4_language_isolation():
         if nav_match:
             nav_html = nav_match.group(1)
             if 'Advisory' in nav_html:
-                assert '/pt/advisory' in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
+                assert '/advisory' in nav_html and '/en/advisory' not in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
             if 'Playbooks' in nav_html:
-                assert '/pt/playbooks' in nav_html, f"Link de Playbooks em {item['pt']} nao usa rota PT"
+                assert '/playbooks' in nav_html and '/en/playbooks' not in nav_html, f"Link de Playbooks em {item['pt']} nao usa rota PT"
             if 'Blog' in nav_html:
                 assert '/blog/pt/' in nav_html, f"Link de Blog em {item['pt']} nao usa rota PT"
         header_match = re.search(r'<header[^>]*>(.*?)</header>', pt_content, re.DOTALL)
@@ -206,6 +206,20 @@ def test_gate_s9_footer_consistency():
     canonical_pt = re.sub(r'\s+', ' ', footer_pt_file.read_text(encoding="utf-8").strip())
     
     en_pages = [
+        SITE_DIR / "en" / "index.html",
+        SITE_DIR / "en" / "bootcamp" / "index.html",
+        SITE_DIR / "en" / "advisory" / "index.html",
+        SITE_DIR / "en" / "mcp" / "index.html",
+        SITE_DIR / "en" / "langchain" / "index.html",
+        SITE_DIR / "en" / "snowflake" / "index.html",
+        SITE_DIR / "en" / "braintrust" / "index.html",
+        SITE_DIR / "en" / "portfolio" / "index.html",
+        SITE_DIR / "en" / "privacy-policy" / "index.html",
+        SITE_DIR / "en" / "modern-slavery-statement" / "index.html",
+        SITE_DIR / "404.html",
+    ]
+    
+    pt_pages = [
         SITE_DIR / "index.html",
         SITE_DIR / "bootcamp" / "index.html",
         SITE_DIR / "advisory" / "index.html",
@@ -214,24 +228,10 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "snowflake" / "index.html",
         SITE_DIR / "braintrust" / "index.html",
         SITE_DIR / "portfolio" / "index.html",
+        SITE_DIR / "canvas" / "index.html",
+        SITE_DIR / "en" / "canvas" / "index.html",
         SITE_DIR / "privacy-policy" / "index.html",
         SITE_DIR / "modern-slavery-statement" / "index.html",
-        SITE_DIR / "404.html",
-    ]
-    
-    pt_pages = [
-        SITE_DIR / "pt" / "index.html",
-        SITE_DIR / "pt" / "bootcamp" / "index.html",
-        SITE_DIR / "pt" / "advisory" / "index.html",
-        SITE_DIR / "pt" / "mcp" / "index.html",
-        SITE_DIR / "pt" / "langchain" / "index.html",
-        SITE_DIR / "pt" / "snowflake" / "index.html",
-        SITE_DIR / "pt" / "braintrust" / "index.html",
-        SITE_DIR / "pt" / "portfolio" / "index.html",
-        SITE_DIR / "canvas" / "index.html",
-        SITE_DIR / "pt" / "canvas" / "index.html",
-        SITE_DIR / "pt" / "privacy-policy" / "index.html",
-        SITE_DIR / "pt" / "modern-slavery-statement" / "index.html",
     ]
     
     for page in en_pages:
@@ -280,8 +280,8 @@ def test_gate_s10_language_leak_detection():
 
 def test_gate_s11_section_parity():
     print("--- Gate S11: Paridade Estrutural de Secoes (Section Parity) ---")
-    en_content = (SITE_DIR / "index.html").read_text(encoding="utf-8")
-    pt_content = (SITE_DIR / "pt" / "index.html").read_text(encoding="utf-8")
+    pt_content = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    en_content = (SITE_DIR / "en" / "index.html").read_text(encoding="utf-8")
     
     en_sections = re.findall(r'<section[^>]*\sid="([^"]+)"', en_content)
     pt_sections = re.findall(r'<section[^>]*\sid="([^"]+)"', pt_content)

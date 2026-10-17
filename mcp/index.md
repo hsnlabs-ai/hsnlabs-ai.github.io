@@ -1,92 +1,92 @@
 ---
-title: "Enterprise MCP Servers · hsnlabs"
-description: "We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance."
+title: "Servidores MCP Enterprise · hsnlabs"
+description: "Construímos servidores privados e seguros de Model Context Protocol dentro da sua infraestrutura corporativa. Conecte agentes autônomos aos seus ERPs e bancos de dados sob governança zero-trust."
 url: "https://hsnlabs.ai/mcp/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:33Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:47Z"
 ---
 
-# Enterprise MCP Servers · hsnlabs
+# Servidores MCP Enterprise · hsnlabs
 
-> We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance.
+> Construímos servidores privados e seguros de Model Context Protocol dentro da sua infraestrutura corporativa. Conecte agentes autônomos aos seus ERPs e bancos de dados sob governança zero-trust.
 
-# Enterprise MCP Servers Secure context pipelines for mission-critical core data.
+# Servidores MCP Enterprise Pipelines de contexto seguro para dados operacionais críticos.
 
-Autonomous agents fail when disconnected from live business context or exposed to unvetted API tools. We build and harden private Model Context Protocol servers directly inside your cloud perimeter, connecting deep agents to SAP, TOTVS, and SQL databases under zero-trust governance.
+Agentes autônomos falham quando desconectados do contexto real do negócio ou expostos a ferramentas de API sem validação. Construímos e blindamos servidores privados de Model Context Protocol dentro do seu perímetro de nuvem, conectando deep agents ao SAP, TOTVS e bancos relacionais sob governança zero trust.
 
-## The Integration Hazard
+## O Risco de Integração
 
-Public SaaS connectors and brittle API scripts create catastrophic security holes and runtime hallucinations.
+Conectores SaaS públicos e scripts frágeis de API abrem brechas críticas de segurança e geram alucinações em produção.
 
-### Perimeter Exposure
+### Exposição de Perímetro
 
-Public SaaS connectors require routing sensitive database credentials and customer records through third-party multi-tenant clouds. CISOs and risk committees reject external data transit on regulatory grounds.
+Conectores SaaS públicos exigem trafegar credenciais de banco e registros confidenciais por nuvens de terceiros. CISOs e comitês de risco vetam esse tráfego por razões regulatórias estritas.
 
-### Schema Hallucination
+### Alucinação de Schema
 
-Stochastic models guess unmapped columns, foreign keys, and status codes on complex ERPs. When an agent calls an unhardened tool, malformed payloads fail silently or trigger destructive database rollbacks.
+Modelos probabilísticos adivinham colunas, chaves estrangeiras e códigos de status em ERPs complexos. Sem contratos firmes, cargas corrompidas falham silenciosamente ou causam rollbacks destrutivos.
 
-### Blind Tool Execution
+### Execução Cega
 
-Without granular role-based bounds, an agent granted write access can mutate inventory tables, trigger duplicate vendor disbursements, or bypass enterprise authorization tiers without supervision.
+Sem limites granulares baseados em função, um agente com permissão de escrita pode alterar estoques, duplicar desembolsos ou contornar alçadas de aprovação sem supervisão humana.
 
-### Zero Telemetry
+### Zero Telemetria
 
-Generic REST webhooks provide no standard audit trail for AI actions. In the event of an operational anomaly, engineering teams cannot trace which prompt triggered which tool call or verify parameter provenance.
+Webhooks genéricos não oferecem trilha de auditoria padronizada para ações de IA. Em incidentes operacionais, a engenharia não consegue rastrear qual prompt disparou qual chamada.
 
-## What We Engineer
+## O Que Construímos
 
-Production-ready Model Context Protocol infrastructure deployed inside your sovereign environment.
+Infraestrutura Model Context Protocol pronta para produção, implantada diretamente no seu ambiente soberano.
 
-### Sovereign MCP Runtime
+### Runtime MCP Soberano
 
-Containerized, high-throughput Model Context Protocol server written in Python or TypeScript, deployed directly inside your VPC on AWS, Azure, GCP, or on-premise Kubernetes clusters with zero external dependencies.
+Servidor Model Context Protocol conteinerizado de alta vazão em Python ou TypeScript, implantado diretamente dentro da sua VPC na AWS, Azure, GCP ou clusters Kubernetes on-premise sem dependências externas.
 
-### Deterministic Data Contracts
+### Contratos Determinísticos
 
-Strict runtime input validation and typed JSON schemas. Prevents agent payload distortion before execution hits backend stored procedures, transactional tables, or microservice gateways.
+Validação estrita de entrada em tempo de execução e esquemas JSON tipados. Impede distorções de payload antes que a execução atinja stored procedures, tabelas transacionais ou gateways de microsserviços.
 
-### Enterprise Identity & RBAC
+### Identidade Enterprise e RBAC
 
-Zero-trust access policies tied directly to corporate identity providers like Okta, Microsoft Entra ID, or Google Workspace. Agents execute tools under strict ephemeral scoped permissions with customer KMS encryption.
+Políticas de acesso zero-trust vinculadas diretamente a provedores de identidade corporativos como Okta, Microsoft Entra ID ou Google Workspace. Agentes executam ferramentas sob permissões efêmeras com criptografia KMS do cliente.
 
-### Runtime Audit Trail
+### Trilha de Auditoria em Execução
 
-Native OpenTelemetry instrumentation exporting structured execution traces. Logs tool invocations, parameter hashes, execution latency, and return states to your existing Datadog, CloudWatch, or Splunk stacks.
+Instrumentação nativa em OpenTelemetry exportando traces estruturados de execução. Registra invocações de ferramentas, hashes de parâmetros, latência e estados de retorno no Datadog, CloudWatch ou Splunk.
 
-## Deployment Protocol
+## Protocolo de Implantação
 
-A predictable five-day forward deployed engineering sprint from legacy discovery to verified production deployment.
+Um sprint previsível de cinco dias de engenharia Forward Deployed, do mapeamento legado à implantação verificada em produção.
 
-Network topology review, VPC isolation setup, and staging credential provisioning.
+Revisão da topologia de rede, configuração de isolamento de VPC e provisionamento de credenciais de homologação.
 
-Extracting ERP schema tables and converting business rules into deterministic contracts.
+Extração de tabelas de schema do ERP e conversão de regras de negócio em contratos determinísticos.
 
-Coding the private MCP server with rigid input validators and prompt injection guards.
+Codificação do servidor MCP privado com validadores rígidos de entrada e guardas contra prompt injection.
 
-Connecting Claude, Cursor, Copilot, or internal agents and executing regression suites.
+Conexão com Claude, Cursor, Copilot ou agentes internos e execução de baterias de testes de regressão.
 
-Security audit sign-off, telemetry dashboard verification, and engineering runbook delivery.
+Homologação de auditoria de segurança, verificação de painéis de telemetria e entrega do runbook de engenharia.
 
-## Engagement Criteria
+## Critérios de Engajamento
 
-The MCP Production Sprint is an intensive 12k USD forward deployed engineering deployment. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+O Sprint de Produção MCP é uma implantação intensiva de engenharia Forward Deployed. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
-Direct sponsorship from a C-level executive, such as the CTO, CIO, or CISO with architectural mandate.
+Patrocínio direto de um executivo C-level, como CTO, CIO ou CISO com mandato arquitetural.
 
-Staging credentials, VPN perimeter access, or read replicas prepared before day one of the sprint.
+Credenciais de homologação, acesso de perímetro VPN ou réplicas de leitura preparadas antes do primeiro dia do sprint.
 
-An active enterprise roadmap deploying autonomous agents on core company workflows within 90 days.
+Um roadmap corporativo ativo implantando agentes autônomos em fluxos críticos da empresa dentro de 90 dias.
 
-## Scope Your MCP Sprint
+## Escopo do Seu Sprint MCP
 
-Talk directly with our Forward Deployed Engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
+Converse diretamente com nossa equipe de Engenharia Forward Deployed para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -102,8 +102,8 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
-We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.

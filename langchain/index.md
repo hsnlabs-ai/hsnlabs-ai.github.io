@@ -1,76 +1,76 @@
 ---
-title: "LangChain & LangGraph · In Production Since 2022 · hsnlabs"
-description: "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
+title: "LangChain & LangGraph · Em Produção desde 2022 · hsnlabs"
+description: "Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
 url: "https://hsnlabs.ai/langchain/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:33Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# LangChain & LangGraph · In Production Since 2022 · hsnlabs
+# LangChain & LangGraph · Em Produção desde 2022 · hsnlabs
 
-> Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.
+> Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica.
 
-# LangChain & LangGraph From language model to real intelligence.
+# LangChain & LangGraph Do modelo de linguagem à inteligência real.
 
-Building mission-critical agent applications in production since 2022. Connecting frontier models to your enterprise data and tools with deterministic execution control.
+Construindo sistemas de agentes de missão crítica em produção desde 2022. Conectamos modelos aos seus dados e ferramentas corporativas com controle determinístico de execução.
 
-## The benefits of LangChain
+## Os benefícios da LangChain
 
-Why engineering leaders standardize agent architectures on LangChain and LangGraph.
+Por que líderes de engenharia padronizam arquiteturas de agentes sobre LangChain e LangGraph.
 
-### Open, modular and ready for your landscape
+### Aberta, modular e pronta para sua infraestrutura
 
-Structured environment supporting multiple LLM providers and data sources, integrating directly with your existing IT architecture.
+Ambiente estruturado para múltiplos modelos e provedores de dados. Desenho modular com integração direta à sua arquitetura corporativa existente.
 
-### Reduced complexity and deterministic control
+### Controle e redução de complexidade técnica
 
-Orchestrating models, logic, and external tools. Faster development, fewer runtime errors, and complete operational control.
+Orquestração de modelos, dados, lógica e ferramentas externas. Desenvolvimento mais rápido, menos erros de execução e governança contínua.
 
-### Connected context beyond basic models
+### Contexto conectado além de modelos básicos
 
-Dynamic retrieval from CRMs, vector search, SQL databases, and cloud files, keeping agents grounded in live business data.
+Recuperação dinâmica em CRMs, bancos SQL, motores vetoriais e arquivos em nuvem, mantendo o agente ancorado em dados corporativos atualizados.
 
-## Ecosystem framework
+## A estrutura do ecossistema
 
-The three essential layers for taking agents from experimentation to continuous production.
+As três camadas essenciais para levar agentes da experimentação à operação contínua.
 
 ### LangGraph State Core
 
-Modular state machines with persistent memory, cyclic flow control, and human-in-the-loop review gates.
+Grafos de estado modulares com memória persistente, controle de fluxo e governança com intervenção humana.
 
 ### LangSmith Observability
 
-End-to-end trace observability, latency and token cost tracking, and continuous regression evaluation suites.
+Rastreamento ponta a ponta, monitoramento de qualidade, latência e custo por token com suítes de testes contínuos.
 
-### Sovereign VPC Runtimes
+### Deploy Soberano em VPC
 
-Self-hosted deployments on private Kubernetes clusters or sovereign VPCs, keeping all data inside your security perimeter.
+Execução em contêineres, clusters privados de Kubernetes ou nuvem soberana, com isolamento total dos seus dados.
 
-## From POC to production
+## Do piloto à produção
 
-Our practical approach to ensuring agent initiatives advance beyond prototypes into mission-critical systems:
+Nossa abordagem prática para transformar provas de conceito em sistemas de missão crítica:
 
-Technical, architectural, and business feasibility assessment before writing code.
+Avaliação de viabilidade técnica, arquitetural e de negócios antes do início do código.
 
-Building LangGraph state graphs with custom tooling and long-term memory.
+Construção dos grafos no LangGraph com ferramentas sob medida e memória durável.
 
-Direct connection to core enterprise systems including ERPs, CRMs, and relational databases.
+Conexão direta aos seus sistemas corporativos como ERPs, CRMs e bancos relacionais.
 
-Architecture documentation, evaluation test suites, and continuous knowledge transfer to your team.
+Documentação de arquitetura, suítes de avaliação e transferência técnica para sua equipe.
 
-## Tailored engineering for your enterprise stack
+## Engenharia sob medida para sua arquitetura
 
-No theoretical slide decks. We deliver working software and audited code that your company fully owns.
+Sem apresentações teóricas de slides, entregamos software funcional com código que pertence integralmente à sua empresa.
 
 ### Hugo S. Nascimento
 
-We advise CTOs, VPs of Engineering, and technical leaders on designing, auditing, and hardening agent architectures. From initial feasibility audits to complete code handover to your internal team, we deliver deterministic software that you fully own.
+Trabalhamos diretamente com CTOs, VPs de Engenharia e equipes de produto para auditar fluxos existentes, eliminar pontos de falha e colocar agentes em operação sobre sistemas corporativos legados.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -86,6 +86,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.

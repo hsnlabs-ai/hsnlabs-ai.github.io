@@ -1,76 +1,76 @@
 ---
-title: "Braintrust Evals & CI/CD · Agent Architecture · hsnlabs"
-description: "Eliminate stochastic prompt failures in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability."
+title: "Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs"
+description: "Eliminamos falhas probabilísticas em produção com suítes de avaliação contínua no Braintrust, travas de regressão em CI/CD e observabilidade de agentes."
 url: "https://hsnlabs.ai/braintrust/"
-locale: "en"
-updatedAt: "2026-10-17T11:59:34Z"
+locale: "pt-BR"
+updatedAt: "2026-10-17T13:38:48Z"
 ---
 
-# Braintrust Evals & CI/CD · Agent Architecture · hsnlabs
+# Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs
 
-> Eliminate stochastic prompt failures in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability.
+> Eliminamos falhas probabilísticas em produção com suítes de avaliação contínua no Braintrust, travas de regressão em CI/CD e observabilidade de agentes.
 
-# Braintrust Evals & CI/CD From stochastic prompts to deterministic verification.
+# Braintrust Evals e CI/CD De prompts probabilísticos à verificação determinística.
 
-Replacing manual prompt vibe checks with continuous evaluation pipelines. We engineer deterministic scoring rubrics, regression datasets, and live trace observability in Braintrust so enterprise agents never degrade in production.
+Substituindo testes manuais subjetivos por dutos contínuos de avaliação. Projetamos rubricas determinísticas de pontuação, conjuntos de dados de regressão e observabilidade viva no Braintrust para que agentes corporativos nunca degradem em produção.
 
-## The benefits of Braintrust Evals
+## Os benefícios do Braintrust Evals
 
-Why enterprise engineering leaders standardize continuous agent evaluation and CI/CD gates on Braintrust.
+Por que líderes de engenharia padronizam avaliação contínua e travas de CI/CD de agentes na plataforma Braintrust.
 
-### Automated CI/CD regression gates before deploy
+### Travas automatizadas de CI/CD antes da publicação
 
-Every prompt edit, model swap, or tool schema change runs automatically against golden production datasets in Braintrust, blocking regressions before code reaches users.
+Cada ajuste de prompt, troca de modelo ou alteração de ferramenta roda automaticamente contra bases de referência no Braintrust, bloqueando regressões antes do código chegar ao usuário.
 
-### Production trace conversion into golden datasets
+### Conversão de falhas reais em conjuntos de testes
 
-Real-world edge cases and production anomalies captured via live telemetry are converted in one click into permanent regression test cases.
+Casos extremos e anomalias capturados pela telemetria em produção são convertidos em casos permanentes de teste de regressão para blindar atualizações futuras.
 
-### Code-level scorers over subjective LLM judges
+### Avaliadores em código acima de juízes subjetivos
 
-Combining deterministic Python assertion scorers with calibrated rubric evaluators to measure accuracy, latency, and token cost across every workflow step.
+Combinação de asserções determinísticas em Python com rubricas calibradas para medir precisão, latência e custo de tokens em cada etapa do fluxo.
 
-## Architecture framework
+## A estrutura da arquitetura
 
-The three essential layers connecting Braintrust evaluation pipelines to deterministic agent execution.
+As três camadas essenciais que conectam os dutos de avaliação do Braintrust à execução determinística de agentes.
 
-### Braintrust Evaluation Engine
+### Motor de Avaliação Braintrust
 
-Golden evaluation datasets, automated CI/CD pull-request scoring, and real-time latency and cost telemetry across models.
+Conjuntos de dados de referência, pontuação automatizada a cada alteração de código e telemetria em tempo real de latência e custo.
 
 ### LangGraph State Core
 
-Finite state machines and dynamic business ontologies that expose every node transition for granular step-by-step evaluation.
+Máquinas de estado finitas e ontologias dinâmicas que expõem cada transição de nó para avaliação granular passo a passo.
 
-### Guardrails & Audit Suites
+### Guardrails e Suítes de Auditoria
 
-Deterministic schema validation, SQL query guardrails, human-in-the-loop checkpoints, and continuous regression testing.
+Validação determinística de esquemas, bloqueio de consultas fora de escopo, supervisão humana e testes contínuos de regressão.
 
-## From POC to production
+## Do piloto à produção
 
-Our practical approach to ensuring agent initiatives advance beyond prototypes into mission-critical systems:
+Nossa abordagem prática para transformar provas de conceito em sistemas de missão crítica:
 
-Technical, architectural, and business feasibility assessment before writing code.
+Avaliação de viabilidade técnica, arquitetural e de negócios antes do início do código.
 
-Curating real enterprise edge cases into versioned Braintrust datasets and deterministic code-level scoring functions.
+Curadoria dos casos críticos da operação em conjuntos de dados versionados no Braintrust e funções determinísticas de pontuação.
 
-Wiring Braintrust evaluation gates directly into GitHub Actions and LangGraph deployments to block hallucination regressions.
+Integração direta das suítes do Braintrust ao fluxo de publicação em LangGraph para impedir regressões e alucinações em produção.
 
-Architecture documentation, evaluation test suites, and continuous knowledge transfer to your team.
+Documentação de arquitetura, suítes de avaliação e transferência técnica para sua equipe.
 
-## Tailored engineering for your enterprise stack
+## Engenharia sob medida para sua arquitetura
 
-No theoretical slide decks. We deliver working software and audited code that your company fully owns.
+Sem apresentações teóricas de slides, entregamos software funcional com código que pertence integralmente à sua empresa.
 
 ### Hugo S. Nascimento
 
-We advise CTOs, VPs of Engineering, and technical leaders on designing, auditing, and hardening agent architectures. From initial feasibility audits to complete code handover to your internal team, we deliver deterministic software that you fully own.
+Trabalhamos diretamente com CTOs, VPs de Engenharia e equipes de produto para auditar fluxos existentes, eliminar pontos de falha e colocar agentes em operação sobre sistemas corporativos legados.
 
-An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Bootcamp de Agentes
 
 - The Agentic Pilot Canvas
 
@@ -86,6 +86,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Blog
 
-- Contact Us
+- Fale Conosco
 
-Architecture field notes & playbooks sent to your corporate inbox.
+Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
