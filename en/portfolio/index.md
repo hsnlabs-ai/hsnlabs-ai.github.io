@@ -3,7 +3,7 @@ title: "Cases · We proudly tell the success stories of our clients · hsnlabs"
 description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs."
 url: "https://hsnlabs.ai/en/portfolio/"
 locale: "en"
-updatedAt: "2026-10-17T18:09:04Z"
+updatedAt: "2026-10-17T18:26:26Z"
 ---
 
 # Cases · We proudly tell the success stories of our clients · hsnlabs

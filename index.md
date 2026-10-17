@@ -1,18 +1,18 @@
 ---
 title: "Adoção de Engenharia Agêntica | hsnlabs"
-description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação."
+description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T18:09:04Z"
+updatedAt: "2026-10-17T18:26:26Z"
 ---
 
 # Adoção de Engenharia Agêntica | hsnlabs
 
-> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação.
+> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 # Adoção de Engenharia Agêntica.
 
-Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp na sua operação.
+Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 ## Como escapar do cemitério de PoCs.
 
