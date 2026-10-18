@@ -181,16 +181,33 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
     }
 
     @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+      .header-github-link {
+        display: none !important;
+      }
       .site-footer {
-        padding: 52px 0 32px 0;
+        padding: 48px 0 32px 0;
       }
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        margin-bottom: 36px;
+        grid-template-columns: 1.08fr 0.92fr !important;
+        gap: 26px 16px !important;
+        margin-bottom: 32px;
+      }
+      .footer-col-brand,
+      .footer-col-office,
+      .footer-col-subscribe {
+        grid-column: 1 / -1 !important;
       }
       .footer-nav a {
         white-space: normal;
+        font-size: 0.82rem;
+        line-height: 1.35;
+      }
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
       }
       .footer-bottom-left {
         flex-direction: column;
@@ -205,10 +222,20 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
         gap: 14px;
       }
       .footer-social-row {
-        flex-wrap: wrap;
-        gap: 4px;
+        flex-wrap: nowrap;
+        gap: 3px;
       }
-    }"""
+      .footer-social-icon {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    @media (max-width: 355px) {
+      .footer-social-row {
+        flex-wrap: wrap;
+      }
+    }
+    /* END FOOTER */"""
 
 
 def sync_page_footer(file_path: Path, canonical_footer: str) -> bool:
@@ -229,10 +256,12 @@ def sync_page_footer(file_path: Path, canonical_footer: str) -> bool:
         print(f'ERRO: Nenhuma tag <footer class="site-footer"> encontrada em {file_path}')
         return False
 
-    # 2. Replace primary footer CSS block in <style>
+    # 2. Replace primary footer CSS block in <style> (including any previously injected media blocks)
     css_patterns = [
-        r'/\*\s*(?:FOOTER|RODAPÉ|Site Footer Styles)\s*\*/[\s\S]*?\.footer-social-icon:hover\s*\{[^}]*\}',
-        r'/\*\s*(?:FOOTER|RODAPÉ|Site Footer Styles)\s*\*/[\s\S]*?\.footer-bottom-links a:hover\s*\{[^}]*\}',
+        r'[ \t]*/\*\s*FOOTER\s*\*/[\s\S]*?/\*\s*END FOOTER\s*\*/',
+        r'[ \t]*/\*\s*(?:FOOTER|RODAPÉ|Site Footer Styles)\s*\*/[\s\S]*?(?:\s*@media\s*\(max-width:\s*980px\)[\s\S]*?\.footer-social-row\s*\{\s*flex-wrap:\s*wrap;\s*gap:\s*4px;\s*\}\s*\})+',
+        r'[ \t]*/\*\s*(?:FOOTER|RODAPÉ|Site Footer Styles)\s*\*/[\s\S]*?\.footer-social-icon:hover\s*\{[^}]*\}',
+        r'[ \t]*/\*\s*(?:FOOTER|RODAPÉ|Site Footer Styles)\s*\*/[\s\S]*?\.footer-bottom-links a:hover\s*\{[^}]*\}',
     ]
     replaced_css = False
     for pat in css_patterns:
