@@ -2013,6 +2013,65 @@
       color: var(--cyan-text);
     }
 
+    .editorial-byline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .editorial-byline strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .editorial-byline-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 0;
+      border: 1px solid var(--hairline-strong);
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .newsletter-author-anchor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .newsletter-author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid var(--hairline-strong);
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .newsletter-author-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .newsletter-author-role {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
     /* NEWSLETTER STRIP */
     .newsletter-strip {
       background: var(--surface-card);
@@ -2336,6 +2395,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
       <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/advisory/" class="nav-link">Advisory</a>
+        <a href="/portfolio/" class="nav-link">Cases</a>
         <a href="/blog/pt/" class="nav-link">Blog</a>
       </div>
 
@@ -2377,37 +2437,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <a href="/bootcamp/" class="btn btn-primary">Conhecer o Agentic Bootcamp</a>
         <a href="#contact" class="btn btn-outline">Fale Conosco</a>
       </div>
-
-
-      <!-- Founder Callout in Hero -->
-      <div class="hero-founder-callout">
-        <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
-          <div class="founder-avatar-box" data-initial-index="0">
-            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
-          </div>
-          <div>
-            <div class="founder-meta-title">Tem um projeto em mente?</div>
-            <div class="founder-meta-name">Compartilhe com Hugo, CPTO</div>
-          </div>
-        </div>
-
-        <div class="founder-cred-group">
-          <a href="/langchain/" class="founder-cred-item" title="LangChain Certified Engineer">
-            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
-            <span class="founder-cred-sub">Certified <span class="founder-cred-arrow">↗</span></span>
-          </a>
-          <a href="/snowflake/" class="founder-cred-item" title="Snowflake AI Data Cloud Partner">
-            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
-            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
-          </a>
-          <a href="/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
-            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
-            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
-          </a>
-        </div>
-
-        <a href="#contact" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;"><span>Iniciar Conversa</span></a>
-      </div>
     </div>
 
     <!-- CLIENT PORTFOLIO STRIP -->
@@ -2415,42 +2444,42 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="container">
         <div class="portfolio-label"><a href="/portfolio/" class="portfolio-label-link" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--hairline-strong); padding-bottom: 2px; transition: color 0.15s ease;">Nosso Portfólio · Ver Casos Práticos ↗</a></div>
         <div class="portfolio-grid">
-          <div class="portfolio-item" title="Deloitte">
+          <a href="/portfolio/" class="portfolio-item" title="Deloitte" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;">
             <img src="/assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="Santander">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Santander" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;">
             <img src="/assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Insi">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Insi" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;">
             <img src="/assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="Softplan">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Softplan" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;">
             <img src="/assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Unipar">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Unipar" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;">
             <img src="/assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="LWSA">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="LWSA" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;">
             <img src="/assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Turbi">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Turbi" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;">
             <img src="/assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Caju">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Caju" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;">
             <img src="/assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;">
-          </div>
-          <div class="portfolio-item" title="Cast Group">
+          </a>
+          <a href="/portfolio/" class="portfolio-item" title="Cast Group" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;">
             <img src="/assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;">
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -2476,6 +2505,39 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
             Fonte: S&P Global Market Intelligence, 2025 ↗
           </a>
         </div>
+      </div>
+
+      <!-- FIELD DOCUMENTARY STRIP (OPTIONS 19, 08, 01) -->
+      <div class="field-proof-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 22px;">
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_19_hugo_briefing_arquitetura_sala_slide.jpg" alt="Briefing executivo de arquitetura agêntica em sala" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">01 · Alinhamento Arquitetural</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Mapeamento de regras de negócio e limites determinísticos com lideranças antes de escrever código.</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_08_hugo_mentoria_mesa_tablet_horizontal.jpg" alt="Mentoria hands-on na bancada durante o Agentic Bootcamp" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">02 · Imersão em Bancada</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Engenharia FDE lado a lado com sua equipe desenhando fluxos e ontologias sobre processos reais.</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_01_over_the_shoulder_laptop_skill.jpg" alt="Configuração prática de SKILL.md e especificações de agentes no laptop" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">03 · Code to Spec</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Instrumentação direta de agentes, especificações <code>SKILL.md</code> e guardas de execução em sandbox.</div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -2551,18 +2613,18 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="sr-only">
             <h4>Componentes da Arquitetura Agêntica Enterprise da hsnlabs</h4>
             <ol>
-              <li>Secure Model Integration and Access: Presidio Moderation, Redis Semantic Cache, LiteLLM Gateway</li>
-              <li>End-to-End Observability: LangSmith Tracing, Latency and Token Usage Tracking</li>
-              <li>Context Engineering: Document Loaders, LCEL Logic Chains, Kafka Action Streams</li>
-              <li>State and Ontology System: LangGraph State Core, Dynamic Edges and Action Protocols</li>
+              <li>Integração e Acesso Seguro a Modelos: Moderação Presidio, Cache Semântico Redis, Gateway LiteLLM</li>
+              <li>Observabilidade de Ponta a Ponta: Rastreamento LangSmith, Monitoramento de Latência e Uso de Tokens</li>
+              <li>Engenharia de Contexto: Carregadores de Documentos, Cadeias Lógicas LCEL, Fluxos de Ação Kafka</li>
+              <li>Sistema de Estado e Ontologia: Núcleo de Estado LangGraph, Arestas Dinâmicas e Protocolos de Ação</li>
               <li>Serviços de Vetores e Dados Corporativos: Databricks Lakehouse, Snowflake, Qdrant, pgvector, Pinecone e Escalonamento de Workers</li>
-              <li>Security and Governance: NeMo Guardrails, Human in the Loop Checkpoints, Access Control</li>
+              <li>Segurança e Governança: NeMo Guardrails, Pontos de Verificação Human-in-the-Loop, Controle de Acesso</li>
               <li>Ciclo de Vida de Agentes: Construção de Agentes, Orquestração StateGraph, Suítes de Avaliação com Braintrust e LangSmith</li>
-              <li>Operational Automation: Celery Beat, Event-Driven Kafka, LangServe REST Endpoints</li>
-              <li>Development Environments: LangGraph Studio, VS Code, MCP Inspector</li>
-              <li>Human and AI Applications: Open WebUI, CopilotKit, Streaming Artifacts</li>
-              <li>Package Release and Deploy: Docker Compose, Helm Charts, Kubernetes Orchestration</li>
-              <li>Enterprise Automation: Knowledge Hub, Multi-Agent Swarms, Neo4j Semantic Graphs</li>
+              <li>Automação Operacional: Celery Beat, Kafka Orientado a Eventos, Endpoints REST LangServe</li>
+              <li>Ambientes de Desenvolvimento: LangGraph Studio, VS Code, MCP Inspector</li>
+              <li>Aplicações Humanas e de IA: Open WebUI, CopilotKit, Artefatos em Streaming</li>
+              <li>Empacotamento, Release e Deploy: Docker Compose, Helm Charts, Orquestração Kubernetes</li>
+              <li>Automação Corporativa: Central de Conhecimento, Enxames Multiagentes, Grafos Semânticos Neo4j</li>
             </ol>
           </div>
         </div>
@@ -2598,9 +2660,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">14 min de leitura</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/pt/post/cemiterio-de-pocs/">O Cemitério de PoCs: por que 90% dos pilotos corporativos colapsam ao tocar dados reais</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>Por <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
 
@@ -2615,9 +2681,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">16 min de leitura</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/pt/post/ontologia-vs-schema-banco-dados/">Ontologia versus Schema de Banco: tabelas isoladas não definem transições válidas de negócio</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>Por <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
 
@@ -2632,9 +2702,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">20 min de leitura</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/pt/post/matriz-substituicao-bpo/">A Matriz de Substituição de BPO: eliminando taxas por assento de SaaS e passivos operacionais</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>Por <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
       </div>
@@ -2646,8 +2720,15 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <p class="newsletter-sub">
             Custos reais de inferência, autópsias de falhas e padrões de governança, com fonte e data.
           </p>
+          <div class="newsletter-author-anchor">
+            <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo Nascimento" class="newsletter-author-avatar" loading="lazy">
+            <div>
+              <div class="newsletter-author-name">Hugo Nascimento · Founder &amp; CPTO</div>
+              <div class="newsletter-author-role">Editor da newsletter [Agentes] x [a Gente] · 1.600+ inscritos</div>
+            </div>
+          </div>
         </div>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrição confirmada na newsletter técnica hsnlabs.');">
+        <form class="newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const n=f.querySelector('#newsNamePt'); const inp=f.querySelector('#newsEmailPt'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:n.value, email:inp.value, type:'newsletter_editorial', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; n.value=''; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
           <div class="newsletter-fields">
             <div class="newsletter-field">
               <label class="newsletter-label" for="newsNamePt">Primeiro nome</label>
@@ -2672,6 +2753,38 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   <!-- CONTACT -->
   <section class="section-block" id="contact">
     <div class="container">
+      <!-- Founder Callout moved near Footer -->
+      <div class="hero-founder-callout" style="margin: 0 auto 40px auto;">
+        <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
+          <div class="founder-avatar-box" data-initial-index="0">
+            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
+          </div>
+          <div>
+            <div class="founder-meta-title">Tem um projeto em mente?</div>
+            <div class="founder-meta-name">Compartilhe com Hugo, CPTO</div>
+          </div>
+        </div>
+
+        <div class="founder-cred-group">
+          <a href="/langchain/" class="founder-cred-item" title="LangChain Certified Engineer">
+            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
+            <span class="founder-cred-sub">Certified <span class="founder-cred-arrow">↗</span></span>
+          </a>
+          <a href="/snowflake/" class="founder-cred-item" title="Snowflake AI Data Cloud Partner">
+            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
+            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
+          </a>
+          <a href="/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
+            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
+            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
+          </a>
+        </div>
+
+        <a href="#contactForm" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;">
+          Iniciar Conversa
+        </a>
+      </div>
+
       <div class="scoping-card">
         <h2 class="display-section" style="margin-bottom: 12px;">Fale Conosco</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
@@ -2751,6 +2864,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="footer-col-title">Navegação</div>
           <ul class="footer-nav">
             <li><a href="/bootcamp/">Agentic Bootcamp</a></li>
+            <li><a href="/portfolio/">Cases</a></li>
             <li><a href="/canvas/">The Agentic Pilot Canvas</a></li>
             <li><a href="/advisory/">Advisory</a></li>
             <li><a href="/mcp/">Enterprise MCP</a></li>

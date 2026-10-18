@@ -2013,6 +2013,65 @@
       color: var(--cyan-text);
     }
 
+    .editorial-byline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .editorial-byline strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .editorial-byline-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 0;
+      border: 1px solid var(--hairline-strong);
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .newsletter-author-anchor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .newsletter-author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      border: 1px solid var(--hairline-strong);
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .newsletter-author-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.25;
+    }
+
+    .newsletter-author-role {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.3;
+    }
+
     /* NEWSLETTER STRIP */
     .newsletter-strip {
       background: var(--surface-card);
@@ -2336,6 +2395,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
       <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
         <a href="/en/advisory/" class="nav-link">Advisory</a>
+        <a href="/en/portfolio/" class="nav-link">Cases</a>
         <a href="/blog/" class="nav-link">Blog</a>
       </div>
 
@@ -2377,37 +2437,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <a href="/en/bootcamp/" class="btn btn-primary">Explore Agentic Bootcamp</a>
         <a href="#contact" class="btn btn-outline">Contact Us</a>
       </div>
-
-
-      <!-- Founder Callout in Hero -->
-      <div class="hero-founder-callout">
-        <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
-          <div class="founder-avatar-box" data-initial-index="0">
-            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
-          </div>
-          <div>
-            <div class="founder-meta-title">Have a project in mind?</div>
-            <div class="founder-meta-name">Share it with Hugo, CPTO</div>
-          </div>
-        </div>
-
-        <div class="founder-cred-group">
-          <a href="/en/langchain/" class="founder-cred-item" title="LangChain Certified Engineer">
-            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
-            <span class="founder-cred-sub">Certified <span class="founder-cred-arrow">↗</span></span>
-          </a>
-          <a href="/en/snowflake/" class="founder-cred-item" title="Snowflake AI Data Cloud Partner">
-            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
-            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
-          </a>
-          <a href="/en/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
-            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
-            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
-          </a>
-        </div>
-
-        <a href="#contact" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;"><span>Start a Conversation</span></a>
-      </div>
     </div>
 
     <!-- CLIENT PORTFOLIO STRIP -->
@@ -2415,42 +2444,42 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="container">
         <div class="portfolio-label"><a href="/en/portfolio/" class="portfolio-label-link" style="color: inherit; text-decoration: none; border-bottom: 1px dotted var(--hairline-strong); padding-bottom: 2px; transition: color 0.15s ease;">Our Portfolio · View Production Cases ↗</a></div>
         <div class="portfolio-grid">
-          <div class="portfolio-item" title="Deloitte">
+          <a href="/en/portfolio/" class="portfolio-item" title="Deloitte" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;">
             <img src="/assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="Santander">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Santander" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;">
             <img src="/assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Insi">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Insi" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;">
             <img src="/assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="Softplan">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Softplan" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;">
             <img src="/assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Unipar">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Unipar" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;">
             <img src="/assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;">
-          </div>
-          <div class="portfolio-item" title="LWSA">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="LWSA" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;">
             <img src="/assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Turbi">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Turbi" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;">
             <img src="/assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;">
-          </div>
-          <div class="portfolio-item" title="Caju">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Caju" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;">
             <img src="/assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;">
-          </div>
-          <div class="portfolio-item" title="Cast Group">
+          </a>
+          <a href="/en/portfolio/" class="portfolio-item" title="Cast Group" style="text-decoration: none;">
             <img src="/assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;">
             <img src="/assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;">
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -2476,6 +2505,39 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
             Source: S&P Global Market Intelligence, 2025 ↗
           </a>
         </div>
+      </div>
+
+      <!-- FIELD DOCUMENTARY STRIP (OPTIONS 19, 08, 01) -->
+      <div class="field-proof-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 22px;">
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_19_hugo_briefing_arquitetura_sala_slide.jpg" alt="Executive agentic architecture briefing" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">01 · Architectural Alignment</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Mapping business rules and deterministic guardrails with leadership before writing code.</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_08_hugo_mentoria_mesa_tablet_horizontal.jpg" alt="Hands-on workbench mentoring during the Agentic Bootcamp" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">02 · Workbench Immersion</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Forward-deployed engineering side-by-side with your team designing workflows over real operations.</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
+          <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
+            <img src="/assets/images/field/opcao_01_over_the_shoulder_laptop_skill.jpg" alt="Over-the-shoulder view configuring SKILL.md and agent specs" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+          </div>
+          <figcaption style="padding: 2px 4px 4px;">
+            <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">03 · Code to Spec</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Direct agent instrumentation, <code>SKILL.md</code> specifications, and sandbox execution guards.</div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -2598,9 +2660,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">14 min read</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/post/the-poc-graveyard/">The PoC Graveyard: Why 90% of enterprise pilots collapse under dirty data</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>By <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
 
@@ -2615,9 +2681,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">16 min read</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/post/ontology-vs-database-schema/">Ontology versus Database Schema: Why tables alone cannot define permissible business transitions</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>By <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
 
@@ -2632,9 +2702,13 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               <span class="editorial-sep">·</span>
               <span class="editorial-read">20 min read</span>
             </div>
-            <h3 class="editorial-title">
+            <h3 class="editorial-title" style="margin-bottom: 18px;">
               <a href="/blog/post/bpo-replacement-matrix/">The BPO Replacement Matrix: Replacing per-seat SaaS taxes and operational liabilities</a>
             </h3>
+            <div class="editorial-byline">
+              <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo Nascimento" class="editorial-byline-avatar" loading="lazy">
+              <span>By <strong>Hugo Nascimento</strong> · CPTO</span>
+            </div>
           </div>
         </article>
       </div>
@@ -2646,8 +2720,15 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <p class="newsletter-sub">
             Real inference economics, failure post-mortems, and governance specs, backed by verifiable data.
           </p>
+          <div class="newsletter-author-anchor">
+            <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo Nascimento" class="newsletter-author-avatar" loading="lazy">
+            <div>
+              <div class="newsletter-author-name">Hugo Nascimento · Founder &amp; CPTO</div>
+              <div class="newsletter-author-role">Editor of [Agentes] x [a Gente] · 1,600+ subscribers</div>
+            </div>
+          </div>
         </div>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscription confirmed for hsnlabs technical teardowns.');">
+        <form class="newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const n=f.querySelector('#newsNameEn'); const inp=f.querySelector('#newsEmailEn'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:n.value, email:inp.value, type:'newsletter_editorial_en', _subject:'New Subscriber Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; n.value=''; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Subscribe'; }, 4000); });">
           <div class="newsletter-fields">
             <div class="newsletter-field">
               <label class="newsletter-label" for="newsNameEn">First name</label>
@@ -2672,6 +2753,36 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   <!-- CONTACT -->
   <section class="section-block" id="contact">
     <div class="container">
+      <!-- Founder Callout moved near Footer -->
+      <div class="hero-founder-callout" style="margin: 0 auto 40px auto;">
+        <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
+          <div class="founder-avatar-box" data-initial-index="0">
+            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
+          </div>
+          <div>
+            <div class="founder-meta-title">Have a project in mind?</div>
+            <div class="founder-meta-name">Share it with Hugo, CPTO</div>
+          </div>
+        </div>
+
+        <div class="founder-cred-group">
+          <a href="/en/langchain/" class="founder-cred-item" title="LangChain Certified Engineer">
+            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
+            <span class="founder-cred-sub">Certified <span class="founder-cred-arrow">↗</span></span>
+          </a>
+          <a href="/en/snowflake/" class="founder-cred-item" title="Snowflake AI Data Cloud Partner">
+            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
+            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
+          </a>
+          <a href="/en/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
+            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
+            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
+          </a>
+        </div>
+
+        <a href="#contactForm" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;"><span>Start a Conversation</span></a>
+      </div>
+
       <div class="scoping-card">
         <h2 class="display-section" style="margin-bottom: 12px;">Contact Us</h2>
         <p style="color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.6;">
@@ -2753,6 +2864,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="footer-col-title">Navigation</div>
           <ul class="footer-nav">
             <li><a href="/en/bootcamp/">Agentic Bootcamp</a></li>
+            <li><a href="/en/portfolio/">Cases</a></li>
             <li><a href="/en/canvas/">The Agentic Pilot Canvas</a></li>
             <li><a href="/en/advisory/">Advisory</a></li>
             <li><a href="/en/mcp/">Enterprise MCP</a></li>

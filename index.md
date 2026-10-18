@@ -40,29 +40,29 @@ O ciclo de vida de desenvolvimento agêntico, ou ADLC, exige governança orienta
 
 #### Componentes da Arquitetura Agêntica Enterprise da hsnlabs
 
-- Secure Model Integration and Access: Presidio Moderation, Redis Semantic Cache, LiteLLM Gateway
+- Integração e Acesso Seguro a Modelos: Moderação Presidio, Cache Semântico Redis, Gateway LiteLLM
 
-- End-to-End Observability: LangSmith Tracing, Latency and Token Usage Tracking
+- Observabilidade de Ponta a Ponta: Rastreamento LangSmith, Monitoramento de Latência e Uso de Tokens
 
-- Context Engineering: Document Loaders, LCEL Logic Chains, Kafka Action Streams
+- Engenharia de Contexto: Carregadores de Documentos, Cadeias Lógicas LCEL, Fluxos de Ação Kafka
 
-- State and Ontology System: LangGraph State Core, Dynamic Edges and Action Protocols
+- Sistema de Estado e Ontologia: Núcleo de Estado LangGraph, Arestas Dinâmicas e Protocolos de Ação
 
 - Serviços de Vetores e Dados Corporativos: Databricks Lakehouse, Snowflake, Qdrant, pgvector, Pinecone e Escalonamento de Workers
 
-- Security and Governance: NeMo Guardrails, Human in the Loop Checkpoints, Access Control
+- Segurança e Governança: NeMo Guardrails, Pontos de Verificação Human-in-the-Loop, Controle de Acesso
 
 - Ciclo de Vida de Agentes: Construção de Agentes, Orquestração StateGraph, Suítes de Avaliação com Braintrust e LangSmith
 
-- Operational Automation: Celery Beat, Event-Driven Kafka, LangServe REST Endpoints
+- Automação Operacional: Celery Beat, Kafka Orientado a Eventos, Endpoints REST LangServe
 
-- Development Environments: LangGraph Studio, VS Code, MCP Inspector
+- Ambientes de Desenvolvimento: LangGraph Studio, VS Code, MCP Inspector
 
-- Human and AI Applications: Open WebUI, CopilotKit, Streaming Artifacts
+- Aplicações Humanas e de IA: Open WebUI, CopilotKit, Artefatos em Streaming
 
-- Package Release and Deploy: Docker Compose, Helm Charts, Kubernetes Orchestration
+- Empacotamento, Release e Deploy: Docker Compose, Helm Charts, Orquestração Kubernetes
 
-- Enterprise Automation: Knowledge Hub, Multi-Agent Swarms, Neo4j Semantic Graphs
+- Automação Corporativa: Central de Conhecimento, Enxames Multiagentes, Grafos Semânticos Neo4j
 
 ## Para ler antes de decidir.
 

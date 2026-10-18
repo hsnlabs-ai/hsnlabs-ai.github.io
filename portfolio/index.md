@@ -14,7 +14,7 @@ updatedAt: "2026-10-17T18:26:26Z"
 
 ## HR Tech Enterprise: Da fragmentação de portais legados à resolução instantânea em WhatsApp e Teams
 
-Descubra como uma plataforma corporativa de RH substituiu o atendimento manual de N1 por orquestração agêntica sobre TOTVS e SAP em apenas 8 semanas.
+Descubra como uma plataforma corporativa de RH substituiu o atendimento manual de N1 por orquestração agêntica sobre TOTVS e SAP em apenas 2 meses.
 
 ## Temos orgulho de contar as histórias de sucesso dos nossos clientes
 
