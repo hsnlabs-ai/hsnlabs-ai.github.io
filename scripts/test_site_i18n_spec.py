@@ -243,7 +243,7 @@ def test_gate_s9_footer_consistency():
         assert page_footer == canonical_en, f"ERRO: Inconsistencia de rodape EN em {page.name}"
         assert "[Agentes] x [a Gente]" in m.group(0), f"ERRO: Newsletter ausente em {page}"
         assert "1,600+" in m.group(0) and "subscribers" in m.group(0), f"ERRO: Contagem de inscritos ausente em {page}"
-        assert len(re.findall(r'footer-social-icon', m.group(0))) == 7, f"ERRO: Icones sociais incompletos em {page}"
+        assert len(re.findall(r'footer-social-icon', m.group(0))) == 8, f"ERRO: Icones sociais incompletos em {page}"
         
     for page in pt_pages:
         assert page.exists(), f"ERRO: Pagina PT inexistente: {page}"
@@ -254,7 +254,7 @@ def test_gate_s9_footer_consistency():
         assert page_footer == canonical_pt, f"ERRO: Inconsistencia de rodape PT em {page.name}"
         assert "[Agentes] x [a Gente]" in m.group(0), f"ERRO: Newsletter ausente em {page}"
         assert "1.600+" in m.group(0) and "assinantes" in m.group(0), f"ERRO: Contagem de inscritos ausente em {page}"
-        assert len(re.findall(r'footer-social-icon', m.group(0))) == 7, f"ERRO: Icones sociais incompletos em {page}"
+        assert len(re.findall(r'footer-social-icon', m.group(0))) == 8, f"ERRO: Icones sociais incompletos em {page}"
         assert "Navegação" in m.group(0), f"ERRO: Titulo Navegacao sem acentuacao em {page}"
         assert "Laboratório" in m.group(0), f"ERRO: Laboratorio sem acentuacao em {page}"
         assert "Política de Privacidade" in m.group(0), f"ERRO: Politica sem acentuacao em {page}"
