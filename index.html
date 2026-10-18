@@ -2003,7 +2003,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
-      margin-bottom: 64px;
+      margin-bottom: 0;
     }
 
     .editorial-card {
@@ -2807,41 +2807,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
             </div>
           </div>
         </article>
-      </div>
-
-      <!-- NEWSLETTER CONVERSION STRIP -->
-      <div class="newsletter-strip">
-        <div class="newsletter-info">
-          <h3 class="newsletter-title">Receba as próximas análises por e-mail.</h3>
-          <p class="newsletter-sub">
-            Custos reais de inferência, autópsias de falhas e padrões de governança, com fonte e data.
-          </p>
-          <div class="newsletter-author-anchor">
-            <img src="/assets/images/author/pool/hugo_06.jpg" alt="Hugo Nascimento" class="newsletter-author-avatar" width=\"40\" height=\"40\" loading="lazy">
-            <div>
-              <div class="newsletter-author-name">Hugo Nascimento · Founder &amp; CPTO</div>
-              <div class="newsletter-author-role">Editor da newsletter [Agentes] x [a Gente] · 1.600+ inscritos</div>
-            </div>
-          </div>
-        </div>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const n=f.querySelector('#newsNamePt'); const inp=f.querySelector('#newsEmailPt'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({name:n.value, email:inp.value, type:'newsletter_editorial', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; n.value=''; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
-          <div class="newsletter-fields">
-            <div class="newsletter-field">
-              <label class="newsletter-label" for="newsNamePt">Primeiro nome</label>
-              <input type="text" id="newsNamePt" class="form-input newsletter-input" placeholder="Seu nome" required>
-            </div>
-            <div class="newsletter-field">
-              <label class="newsletter-label" for="newsEmailPt">E-mail corporativo</label>
-              <input type="email" id="newsEmailPt" class="form-input newsletter-input" placeholder="seu.email@empresa.com" required>
-            </div>
-            <div class="newsletter-action">
-              <button type="submit" class="btn btn-primary newsletter-btn">Assinar</button>
-            </div>
-          </div>
-          <div class="newsletter-footer-note">
-            Você cancela quando quiser. Acompanhe também no LinkedIn: <a href="https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/" target="_blank" rel="noopener">Agentes x a Gente ↗</a>
-          </div>
-        </form>
       </div>
     </div>
   </section>

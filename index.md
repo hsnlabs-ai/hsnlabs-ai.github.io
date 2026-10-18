@@ -74,10 +74,6 @@ O que custa, o que dá errado e o que funciona em arquiteturas agênticas, com d
 
 ### A Matriz de Substituição de BPO: eliminando taxas por assento de SaaS e passivos operacionais
 
-### Receba as próximas análises por e-mail.
-
-Custos reais de inferência, autópsias de falhas e padrões de governança, com fonte e data.
-
 ## Fale Conosco
 
 Converse com nossa equipe de arquitetura para validar a prontidão dos seus sistemas para agentes de produção.
