@@ -143,10 +143,15 @@
       var currentIdx = initialIdx;
 
       // Lock button styles to never wrap or shrink
+      var existingHref = btn ? btn.getAttribute('href') : '';
+      var targetHref = (existingHref && existingHref.charAt(0) === '#' && document.querySelector(existingHref))
+        ? existingHref
+        : contactBase;
+
       if (btn) {
         btn.style.whiteSpace = 'nowrap';
         btn.style.flexShrink = '0';
-        if (btn.tagName === 'A') btn.href = contactBase;
+        if (btn.tagName === 'A') btn.href = targetHref;
       }
 
       var transStyle = 'opacity ' + TRANSITION_DURATION_MS + 'ms ease-in-out';
@@ -169,8 +174,8 @@
           if (label) label.textContent = next.label;
           if (name) name.textContent = next.title;
           if (btn) {
-            btn.innerHTML = '<span>' + next.btn + '</span>';
-            btn.href = contactBase;
+            btn.textContent = next.btn;
+            btn.href = targetHref;
           }
 
           img.style.opacity = '1';

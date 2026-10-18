@@ -14,7 +14,7 @@ updatedAt: "2026-10-17T18:26:26Z"
 
 ## HR Tech Enterprise: From fragmented legacy portals to instant resolution on WhatsApp & Teams
 
-Discover how an enterprise workforce platform replaced manual Tier-1 support with autonomous agentic orchestration over TOTVS and SAP in just 8 weeks.
+Discover how an enterprise workforce platform replaced manual Tier-1 support with autonomous agentic orchestration over TOTVS and SAP in just 2 months.
 
 ## We proudly tell the success stories of our clients
 
