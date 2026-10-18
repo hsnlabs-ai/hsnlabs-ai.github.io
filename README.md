@@ -1,144 +1,35 @@
 # hsnlabs — Official Website Repository
 
-Official production repository for the **hsnlabs** corporate website.
+Official production repository for the **hsnlabs** (`https://hsnlabs.ai`) corporate website.
 
-hsnlabs is an AI architecture consulting boutique solving why AI agents fail in production. We handle the complete lifecycle: ontology design, infrastructure, orchestration, and continuous evaluation in production.
-
----
-
-## 1. System Architecture
-
-The website is engineered as a zero-dependency, high-performance static application hosted on GitHub Pages.
-
-### Page Structure
-* **Header:** Sticky blurred translucent navbar with official horizontal wordmark and direct navigation.
-* **Hero Section:**
-  * Interactive liquid basin emblem with 3-stage wave physics engine.
-  * Editorial display headline and value proposition.
-  * Primary action linking to the 5-Day Bootcamp and secondary action to Contact Us.
-  * Client Portfolio strip featuring nine normalized monochrome enterprise marks.
-* **Services Section ("Why Agents Fail"):**
-  * Bento grid with asymmetric layout:
-    * Three diagnostic cards:
-      * **Legacy and Fragmented Data:** Handling messy legacy ERPs, databases, and unstructured silos.
-      * **Static Ontology:** Overcoming brittle schemas and hardcoded prompts with dynamic business ontologies.
-      * **Governance & Compliance:** Enforcing deterministic guards and audit trails to guarantee transactional integrity.
-    * **Complex Enterprise ADLC Card (`.card-bento-wide`):**
-      * Desktop interactive viewport with zoom/pan engine and initial focus framing on primary modules.
-      * Mobile-optimized touch-safe static card linking to full-screen architecture, eliminating scroll-trapping.
-      * Semantic `.sr-only` specification tree of all 12 architecture components for AI crawlers and agents.
-      * Standalone full-resolution route at `/architecture.html`.
-* **Technical Scoping Section:**
-  * Executive engagement card with four qualification gates and direct email dispatch.
-* **Footer:**
-  * Clean institutional signature with navigation, engineering specifications, and copyright.
+**hsnlabs** is a Forward Deployed Engineering boutique solving why enterprise AI agents fail in production across the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation.
 
 ---
 
-## 2. Design System and Visual Tokens
+## 1. System & Routing Architecture
 
-Built on the ElevenLabs editorial print design system without artificial visual artifacts or generic AI aesthetics.
+The website is engineered as a zero-dependency, high-performance bilingual static application hosted on GitHub Pages with machine-readable Markdown twins (`.md`) for AI crawlers and agents.
 
-### Color Tokens
-* **Canvas Floor:** `#f5f5f5`
-* **Card Surface:** `#ffffff`
-* **Soft Canvas:** `#fafafa`
-* **Ink Text:** `#07090e`
-* **Running Body:** `#475569`
-* **Muted Labels:** `#64748b`
-* **Hairline Dividers:** `#e2e8f0`
-* **Brand Sky Blue:** `#52B4FD`
-* **Operational Emerald:** `#10B981`
+### Dual-Track Bilingual Routing
+* **Root Routes (`pt-BR`):** `/`, `/bootcamp/`, `/advisory/`, `/portfolio/`, `/canvas/`, `/mcp/`, `/langchain/`, `/snowflake/`, `/braintrust/`, `/privacy-policy/`, `/modern-slavery-statement/`.
+* **English Mirror (`/en/`):** `/en/`, `/en/bootcamp/`, `/en/advisory/`, `/en/portfolio/`, `/en/canvas/`, `/en/mcp/`, `/en/langchain/`, `/en/snowflake/`, `/en/braintrust/`, `/en/privacy-policy/`, `/en/modern-slavery-statement/`.
+* **Blog Reverse-Proxy (`/blog/` & `/blog/pt/`):** Hosted in the dedicated `hsnlabs-ai/blog` repository (`/Users/hugosoares/blog_hsn_labs`).
 
-### Typography Hierarchy
-* **Display Headings:** Cormorant Garamond at weight 300 with negative tracking.
-* **Body and UI:** Inter with positive tracking for airy editorial reading.
-
----
-
-## 3. Brand Identity and Logo Invariant
-
-The hsnlabs brand mark represents engineering rigor through paper geometry and dynamic water physics.
-
-### Strict Geometry Rule
-* The cyan square symbol must ALWAYS maintain sharp 90-degree corners with `border-radius: 0`.
-* Never apply rounded corners, squircles, or border-radius to the cyan square mark.
-* The white origami carp is positioned in the upper right quadrant at a fixed ascending angle.
+### Home Page Architecture
+1. **Header (`.header-nav`):** Sticky translucent navbar with horizontal lockup, navigation links (`Advisory`, `Cases`, `Blog`), GitHub link, `EN · PT` language switcher, and primary CTA (`Conhecer o Agentic Bootcamp`).
+2. **Hero Section (`.hero-section`):** Interactive 3-stage water motion origami carp emblem (`96x96`), headline (`Adoção de Engenharia Agêntica.`), value proposition, dual CTAs, and clickable 9-logo Client Portfolio strip (`Deloitte`, `Santander`, `Insi`, `Softplan`, `Unipar`, `LWSA`, `Turbi`, `Caju`, `Cast Group`) linking to `/portfolio/`.
+3. **Market Reality & Field Documentary Strip (`#market-reality`):** S&P Global 46% PoC abandonment callout paired with a 3-column original-color documentary strip (`01 · Alinhamento Arquitetural`, `02 · Imersão em Bancada`, `03 · Code to Spec`).
+4. **Services Section (`#services` — "Por Que Agentes Falham"):** 4-card Bento grid with interactive 12-component Enterprise Agentic Architecture blueprint viewport and localized `.sr-only` accessibility specification.
+5. **Editorial & Newsletter Section (`#editorial` — "Para ler antes de decidir."):** 3 Spoke essay cards with author bylines (`Por Hugo Nascimento · CPTO`) and the `[Agentes] x [a Gente]` newsletter conversion strip with FormSubmit Ajax integration.
+6. **Contact Section (`#contact`) & Founder Callout:** `.hero-founder-callout` (10s rotating photo/prompt + `LangChain Certified`, `Snowflake Partner`, `Braintrust Partner` credentials) positioned directly above the qualification scoping form.
+7. **Canonical Footer (`.site-footer`):** Managed via `components/footer_pt.html` and `components/footer_en.html`.
 
 ---
 
-## 4. Enterprise Portfolio Clients
+## 2. Automation & Verification Scripts
 
-The website displays nine verified enterprise client marks in normalized monochrome vector format:
-* Deloitte
-* Santander
-* Insi
-* Softplan
-* Unipar Carbocloro
-* LWSA
-* Turbi
-* Caju
-* Cast Group
-
----
-
-## 5. Repository File Tree
-
-```text
-├── assets/
-│   ├── brand/                 # Complete brand asset library
-│   │   ├── elements/          # Clean isolated origami carp assets
-│   │   ├── favicons/          # Web browser favicon bundle 16px to 512px
-│   │   ├── lockups/           # Horizontal and vertical lockups
-│   │   ├── motion/            # Rendered video, webm, and gif motion files
-│   │   ├── symbol/            # Official cyan square symbol in high resolution
-│   │   └── wordmark/          # Vector SVG wordmarks in black, white, and cyan
-│   ├── diagrams/              # Technical architecture blueprints and schematics
-│   │   ├── hsn_labs_agentic_architecture.png # 2880x1620 retina transparent blueprint
-│   │   └── hsn_labs_agentic_architecture.svg # Vector source
-│   └── portfolio/             # Client portfolio vector assets
-│       ├── png/               # High-resolution raster client marks
-│       └── svg/               # Normalized monochrome vector client marks
-├── 404.html                   # Custom 404 error page with telemetry
-├── architecture.html          # Standalone full-resolution vector architecture view
-├── bootcamp.html              # Dedicated 5-Day Bootcamp application page
-├── index.html                 # Production entrypoint
-├── modern-slavery-statement.html # Supply chain and labor ethics statement
-├── privacy-policy.html        # LGPD and GDPR privacy policy
-├── sitemap.xml                # Search engine and crawler XML index
-├── robots.txt                 # Crawler access rules
-├── CNAME                      # Custom domain configuration for hsnlabs.ai
-├── AGENTS.md                  # Operational directives for AI coding agents
-├── BRAND.md                   # Brand guidelines and application rules
-├── DESIGN.md                  # Token specification
-├── GEMINI.md                  # Technical constraints
-├── analytics.json             # Tag manager and measurement stream IDs
-└── README.md                  # Repository documentation
-```
-
----
-
-## 6. Local Development
-
-```bash
-# Start local HTTP server
-python3 -m http.server 8124
-
-# Open in browser
-open http://localhost:8124/index.html
-```
-
----
-
-## 7. Telemetry and Analytics
-
-* **Google Tag Manager Container:** `GTM-KPL6PVKC`
-* **Google Analytics 4 Measurement ID:** `G-GMK24ECXMF`
-* **Stream ID:** `15812853732`
-
----
-
-## 8. Multi-Repository Routing: Blog Architecture
-* The `/blog` route lives in an independent repository: `hsnlabs-ai/blog`, cloned locally at `/Users/hugosoares/blog_hsn_labs`.
-* In production, the `/blog` path is reverse-proxied and routed to the MkDocs blog deployment.
-* Local HTTP server on `site_hsn_labs` returns 404 for `/blog` because blog assets reside in the other repository. This is expected local behavior. Do not create local blog files in this repository.
+* `python3 scripts/test_site_i18n_spec.py` — Runs the 11 bilingual specification, orthography, zero-parentheses, asset resolution, and footer parity gates.
+* `python3 scripts/sync_footer.py` — Synchronizes canonical PT and EN footers across all 23 HTML pages.
+* `python3 scripts/sync_sitemap.py` — Generates `sitemap.xml` from `i18n/routes-map.json`.
+* `python3 scripts/setup_apollo_and_m2m.py` — Synchronizes Apollo tracking and generates `.md` M2M twin files for all routes.
+* `python3 scripts/update_og.py` — Regenerates `assets/brand/og-image.png` and `assets/brand/og-image-pt.png`.

@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -43,6 +43,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

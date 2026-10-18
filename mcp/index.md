@@ -3,7 +3,7 @@ title: "Servidores MCP Enterprise · hsnlabs"
 description: "Construímos servidores privados e seguros de Model Context Protocol dentro da sua infraestrutura corporativa. Conecte agentes autônomos aos seus ERPs e bancos de dados sob governança zero-trust."
 url: "https://hsnlabs.ai/mcp/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Servidores MCP Enterprise · hsnlabs
@@ -56,7 +56,7 @@ Instrumentação nativa em OpenTelemetry exportando traces estruturados de execu
 
 ## Protocolo de Implantação
 
-Um sprint previsível de cinco dias de engenharia Forward Deployed, do mapeamento legado à implantação verificada em produção.
+Um protocolo estruturado de engenharia Forward Deployed, do mapeamento legado à implantação verificada em produção.
 
 Revisão da topologia de rede, configuração de isolamento de VPC e provisionamento de credenciais de homologação.
 
@@ -87,6 +87,8 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

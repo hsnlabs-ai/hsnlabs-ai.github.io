@@ -1,91 +1,20 @@
 # Gemini Agent Directives — hsnlabs Official Website
 
-Operational directives for Gemini models maintaining, extending, or refactoring this repository.
+Operational directives for Gemini models maintaining, extending, or refactoring this repository. Follow `AGENTS.md` as the single source of truth.
 
 ---
 
-## 1. Mission and Core Positioning
+## 1. Core Architectural Invariants
 
-hsnlabs is a Forward Deployed Engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
-
-* Primary Language: The website must be 100% in English. All copy, labels, meta tags, and alt texts are strictly English.
-* Target Audience: Founders, C-levels such as CTO, CIO, CFO, and engineering directors in mid-to-large enterprises with high data volume, complex compliance, and margin exposure.
-* Aesthetic Standard: ElevenLabs editorial print-inspired aesthetic on an off-white canvas `#f5f5f5`. Rejects all AI slop: no pills with borders or glow dots, no loud slash headers, no generic neon purple gradients, no floating data ribbons, no abstract robotic illustrations.
-
----
-
-## 2. Structural Architecture of the Website
-
-The website follows a clean 4-section architecture:
-
-1. Header:
-   * Sticky blurred translucent navbar on off-white canvas.
-   * Left: Official hsnlabs horizontal lockup.
-   * Minimalist navbar: Intermediate navigation links strictly eliminated to maximize visual breathing room and conversion focus; navbar contains only the brand lockup on the left and primary Apply for Bootcamp button on the right.
-   * Primary action button linking to Bootcamp application.
-2. Hero Page:
-   * Brand mark centered above the primary headline: Official 3-stage water motion logo. Strict requirement: The cyan square mark must ALWAYS have sharp 90-degree corners with `border-radius: 0`. Never apply rounded corners to the mark.
-   * Primary headline: Two-tier split-scale hierarchy with commanding anchor line `Enterprise AI Agents` and subordinate differentiator clause `that don't fail in production`.
-   * Subtitle: Narrative explaining specialized architecture consulting versus theoretical management consulting slides, solving why AI agents fail in production.
-   * Dual actions: Primary button linking to Bootcamp application and secondary button linking to Contact Us.
-   * Client Portfolio Strip: Titled `Our Portfolio`, presenting nine normalized monochrome vector marks: Deloitte, Santander, Insi, Softplan, Unipar Carbocloro, LWSA, Turbi, Caju, Cast Group.
-3. Services Section ("Why Agents Fail"):
-   * Bento grid with asymmetric layout:
-     * Three top diagnostic cards:
-       1. Legacy and Fragmented Data.
-       2. Static Ontology.
-       3. Governance & Compliance.
-     * Card 4: Full-width spanning card (`.card-bento-wide` with `grid-column: 1 / -1 !important`):
-       * Title: Complex Enterprise ADLC.
-       * Narrative: The ADLC operates as a complex, non-deterministic layer over the deterministic enterprise stack, binding agents to software guards, state machines, and executable ontologies.
-       * Desktop Engine: Hardware-accelerated interactive pan and zoom viewport (`.blueprint-viewport`, `.blueprint-canvas`), initial focus framing on primary components (scale ~0.56), controls `[ + ]`, `[ − ]`, `[ FIT ]`, `[ ⛶ ]`, and drag-ghost prevention (`dragstart` event prevented, `-webkit-user-drag: none`). Seamless quadriculado drafting background.
-       * Mobile Optimization: Viewport is hidden on mobile (`@media (max-width: 768px)`) to completely prevent touch scroll-traps. Replaced by `.blueprint-mobile-card` with a clean static preview and full-width CTA linking to `/architecture.html`.
-       * Agent Accessibility: Structured `.sr-only` semantic tree listing all 12 components for screen readers, LLM web extractors, and search engine crawlers.
-       * Standalone Fullscreen View: Dedicated route `/architecture.html` rendering the vector blueprint.
-4. Contact Section:
-   * Direct technical scoping card with four qualification gates and direct email dispatch.
-5. Footer:
-   * Institutional signature with wordmark lockup, navigation links, and engineering specifications.
-   * Copyright line: `2026 hsnlabs. All rights reserved.`
-   * Prohibited in footer bottom: Do not add redundant location strings or repetitive descriptor suffixes.
-
----
-
-## 3. Design Tokens and Styling Rules
-
-* Color Palette:
-  * Canvas: `#f5f5f5`
-  * Card Surface: `#ffffff`
-  * Soft Surface: `#fafafa`
-  * Primary Ink: `#07090e`
-  * Running Body: `#475569`
-  * Muted Text: `#64748b`
-  * Hairline: `#e2e8f0`
-  * Brand Sky Blue: `#52B4FD`
-  * Accessible Cyan: `#0284c7`
-  * Operational Emerald: `#10B981`
-* Typography:
-  * Display: Cormorant Garamond weight 300 with negative tracking.
-  * Body: Inter regular and medium with slight positive tracking.
-  * Zero Monospace Rule: Monospace typefaces like JetBrains Mono are completely eliminated across all public surfaces to maintain an elegant editorial print aesthetic.
-* Logo & Component Geometry (Strict 90-Degree Invariant):
-  * Always keep `border-radius: 0` on the cyan square symbol, and on ALL interactive buttons, cards, boxes, badges, and form inputs.
-  * All cards and containers use the clean crumpled paper texture overlay (`assets/textures/paper_crumpled_clean.jpg`) via `mix-blend-mode: multiply` at opacity 0.50.
-  * Primary CTA buttons use Brand Sky Blue `#52B4FD` with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.65.
-  * Secondary CTA buttons use pure white paper with clean crumpled paper texture overlay via `mix-blend-mode: multiply` at opacity 0.50.
-  * Never alter the origami carp proportions or angle.
-
----
-
-## 4. Telemetry and Analytics
-
-Maintain official Google tags on all public pages:
-* Google Tag Manager: `GTM-KPL6PVKC`
-* Google Analytics 4: `G-GMK24ECXMF` with Stream ID `15812853732`
-
----
-
-## 5. Multi-Repository Routing Invariant: Blog Route
-* The `/blog` route lives in an independent repository: `hsnlabs-ai/blog`, stored locally at `/Users/hugosoares/blog_hsn_labs`.
-* In production, the `/blog` path is reverse-proxied and routed to the MkDocs blog deployment.
-* Local HTTP server on `site_hsn_labs` returns 404 for `/blog` because blog assets reside in the other repository. This is expected local behavior. Never create local blog files in this repository.
+* **Brand Casing:** Always write `hsnlabs` in lowercase as a single word.
+* **Founder Title:** Always refer to Hugo Nascimento as `Founder & CPTO` or `CPTO`. Never use "Arquiteto" or "Principal Architect".
+* **Bilingual Routing:** Root routes (`/`, `/bootcamp/`, `/advisory/`, `/portfolio/`, `/canvas/`, `/mcp/`, `/langchain/`, `/snowflake/`, `/braintrust/`, `/privacy-policy/`, `/modern-slavery-statement/`) are in Brazilian Portuguese (`pt-BR`). English routes live under `/en/`.
+* **Strict Portuguese Rules:**
+  * Zero parentheses `(` or `)` in any visible Portuguese text, title, or meta description.
+  * Mandatory standard Brazilian Portuguese diacritics across all PT routes.
+  * Never use "semanas" / "weeks" or "dias" / "days" for project or bootcamp durations; always use **months** (`"2 meses"` / `"2 months"`).
+* **Human Presence & Visual Rules:**
+  * `.hero-founder-callout` lives at the top of the final Contact/Application section (`#contact` / `#apply`) near the footer, preserving the 10s rotation (`assets/js/founder-rotation.js`) and the 3 credential lockups (`LangChain Certified`, `Snowflake Partner`, `Braintrust Partner`).
+  * Field documentary photos in `/assets/images/field/` (`opcao_19`, `opcao_08`, `opcao_01`) must remain in original color (never apply grayscale/B&W filters) and must never be inserted inside the `"Nosso Método"` (`#protocol`) cards of `/bootcamp/`.
+  * Preserve `/advisory/` without `.hero-founder-callout` and preserve `/portfolio/` CSS as-is.
+* **Validation Harness:** Run `python3 scripts/test_site_i18n_spec.py` before every commit to verify all 11 gates pass.

@@ -1,14 +1,14 @@
 ---
 title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
-description: "Framework aberto de arquitetura sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF."
+description: "Framework aberto sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologias sobre dados legados, determinismo e governança em produção."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # The Agentic Pilot Canvas v1.4 · hsnlabs
 
-> Framework aberto de arquitetura sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologia de dados legados, determinismo, testes de harness e governança no CPF.
+> Framework aberto sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologias sobre dados legados, determinismo e governança em produção.
 
 # The Agentic Pilot Canvas
 
@@ -133,6 +133,8 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

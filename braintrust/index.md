@@ -3,7 +3,7 @@ title: "Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs"
 description: "Eliminamos falhas probabilísticas em produção com suítes de avaliação contínua no Braintrust, travas de regressão em CI/CD e observabilidade de agentes."
 url: "https://hsnlabs.ai/braintrust/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs
@@ -71,6 +71,8 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

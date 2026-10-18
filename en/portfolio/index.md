@@ -3,7 +3,7 @@ title: "Cases · We proudly tell the success stories of our clients · hsnlabs"
 description: "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs."
 url: "https://hsnlabs.ai/en/portfolio/"
 locale: "en"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Cases · We proudly tell the success stories of our clients · hsnlabs
@@ -43,6 +43,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

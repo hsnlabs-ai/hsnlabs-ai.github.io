@@ -3,7 +3,7 @@ title: "Enterprise MCP Servers · hsnlabs"
 description: "We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance."
 url: "https://hsnlabs.ai/en/mcp/"
 locale: "en"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Enterprise MCP Servers · hsnlabs
@@ -56,7 +56,7 @@ Native OpenTelemetry instrumentation exporting structured execution traces. Logs
 
 ## Deployment Protocol
 
-A predictable five-day forward deployed engineering sprint from legacy discovery to verified production deployment.
+A structured forward deployed engineering protocol from legacy discovery to verified production deployment.
 
 Network topology review, VPC isolation setup, and staging credential provisioning.
 
@@ -87,6 +87,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

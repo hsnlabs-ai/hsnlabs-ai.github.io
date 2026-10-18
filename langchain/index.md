@@ -3,7 +3,7 @@ title: "LangChain & LangGraph · Em Produção desde 2022 · hsnlabs"
 description: "Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
 url: "https://hsnlabs.ai/langchain/"
 locale: "pt-BR"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # LangChain & LangGraph · Em Produção desde 2022 · hsnlabs
@@ -71,6 +71,8 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

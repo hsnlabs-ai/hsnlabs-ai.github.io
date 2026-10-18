@@ -3,7 +3,7 @@ title: "Braintrust Evals & CI/CD · Agent Architecture · hsnlabs"
 description: "Eliminate stochastic prompt failures in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability."
 url: "https://hsnlabs.ai/en/braintrust/"
 locale: "en"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Braintrust Evals & CI/CD · Agent Architecture · hsnlabs
@@ -71,6 +71,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 

@@ -3,7 +3,7 @@ title: "Privacy Policy · hsnlabs"
 description: "Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
 url: "https://hsnlabs.ai/en/privacy-policy/"
 locale: "en"
-updatedAt: "2026-10-17T18:26:26Z"
+updatedAt: "2026-10-18T12:28:14Z"
 ---
 
 # Privacy Policy · hsnlabs
@@ -123,6 +123,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
+
+- Cases
 
 - The Agentic Pilot Canvas
 
