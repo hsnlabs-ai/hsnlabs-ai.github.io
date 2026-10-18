@@ -14,9 +14,9 @@ hsnlabs is an enterprise AI transformation partner operationalizing autonomous a
 - Bootcamp Deployment Protocol (EN): https://hsnlabs.ai/en/bootcamp/
 We embed a senior Forward Deployed Engineer (FDE) inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Braintrust, and LangChain.
 
-## Enterprise Case Studies & Portfolio
-- Cases & Production Systems (PT-BR): https://hsnlabs.ai/portfolio/
-- Cases & Production Systems (EN): https://hsnlabs.ai/en/portfolio/
+## Enterprise Client Track Record
+- Client Deployments (PT-BR): https://hsnlabs.ai/
+- Client Deployments (EN): https://hsnlabs.ai/en/
 Audited enterprise deployments across HR Tech & Operations, Insurance & Claims, Finance & ERP (SAP/TOTVS), and Logistics & Supply Chain (2-month reference implementation cycles). Verified client portfolio includes Deloitte, Santander, Insi, Softplan, Unipar, LWSA, Turbi, Caju, and Cast Group.
 
 ## Strategic Advisory: The Disruption Gap

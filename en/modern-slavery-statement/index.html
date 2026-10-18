@@ -522,6 +522,12 @@
     }
 
     @media (max-width: 900px) {
+      input:not([type="checkbox"]):not([type="radio"]),
+      select,
+      textarea,
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
+      }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -550,18 +556,23 @@
       .header-github-link {
         display: none !important;
       }
+      .header-container,
+      .header-nav .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
       .header-actions {
-        gap: 10px !important;
+        gap: 8px !important;
       }
       .header-actions .btn,
       .header-container .btn {
         padding: 6px 10px !important;
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
       .brand-logo-img {
-        height: 28px !important;
+        height: 26px !important;
         width: auto !important;
       }
     }
@@ -904,6 +915,20 @@
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"69e90a89f9d8290015e5446a"})},
 document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}else{window.addEventListener("load",function(){setTimeout(initApollo,1500)})}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Modern Slavery Statement · hsnlabs",
+    "url": "https://hsnlabs.ai/en/modern-slavery-statement/",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "hsnlabs",
+      "url": "https://hsnlabs.ai/"
+    }
+  }
+  </script>
 </head>
 <body>
 

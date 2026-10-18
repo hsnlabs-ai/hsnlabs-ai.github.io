@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/">
   <meta property="og:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">
-  <meta property="og:description" content="Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.">
+  <meta property="og:description" content="Boutique de Forward Deployed Engineering para IA corporativa. Ontologias de negócio, orquestração em LangGraph e agentes determinísticos em produção.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -17,7 +17,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/">
   <meta name="twitter:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">
-  <meta name="twitter:description" content="Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.">
+  <meta name="twitter:description" content="Boutique de Forward Deployed Engineering para IA corporativa. Ontologias de negócio, orquestração em LangGraph e agentes determinísticos em produção.">
   <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/">
@@ -25,7 +25,7 @@
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/">
   <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/">
-  <meta name="description" content="Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.">
+  <meta name="description" content="Boutique de Forward Deployed Engineering para IA corporativa. Ontologias de negócio, orquestração em LangGraph e agentes determinísticos em produção.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
@@ -1049,6 +1049,12 @@
     }
 
     @media (max-width: 900px) {
+      input:not([type="checkbox"]):not([type="radio"]),
+      select,
+      textarea,
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
+      }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -1077,18 +1083,23 @@
       .header-github-link {
         display: none !important;
       }
+      .header-container,
+      .header-nav .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
       .header-actions {
-        gap: 10px !important;
+        gap: 8px !important;
       }
       .header-actions .btn,
       .header-container .btn {
         padding: 6px 10px !important;
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
       .brand-logo-img {
-        height: 28px !important;
+        height: 26px !important;
         width: auto !important;
       }
     }

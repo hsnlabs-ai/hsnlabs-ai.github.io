@@ -206,6 +206,12 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
     }
 
     @media (max-width: 900px) {
+      input:not([type="checkbox"]):not([type="radio"]),
+      select,
+      textarea,
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
+      }
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -234,18 +240,23 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
       .header-github-link {
         display: none !important;
       }
+      .header-container,
+      .header-nav .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
       .header-actions {
-        gap: 10px !important;
+        gap: 8px !important;
       }
       .header-actions .btn,
       .header-container .btn {
         padding: 6px 10px !important;
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         white-space: nowrap !important;
         flex-shrink: 0 !important;
       }
       .brand-logo-img {
-        height: 28px !important;
+        height: 26px !important;
         width: auto !important;
       }
     }

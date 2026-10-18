@@ -11,13 +11,10 @@ Official production repository for the **hsnlabs** (`https://hsnlabs.ai`) corpor
 The website is engineered as a zero-dependency, high-performance bilingual static application hosted on GitHub Pages with machine-readable Markdown twins (`.md`) for AI crawlers and agents.
 
 ### Dual-Track Bilingual Routing
-* **Root Routes (`pt-BR`):** `/`, `/bootcamp/`, `/advisory/`, `/portfolio/`, `/canvas/`, `/mcp/`, `/langchain/`, `/snowflake/`, `/braintrust/`, `/privacy-policy/`, `/modern-slavery-statement/`.
-* **English Mirror (`/en/`):** `/en/`, `/en/bootcamp/`, `/en/advisory/`, `/en/portfolio/`, `/en/canvas/`, `/en/mcp/`, `/en/langchain/`, `/en/snowflake/`, `/en/braintrust/`, `/en/privacy-policy/`, `/en/modern-slavery-statement/`.
 * **Blog Reverse-Proxy (`/blog/` & `/blog/pt/`):** Hosted in the dedicated `hsnlabs-ai/blog` repository (`/Users/hugosoares/blog_hsn_labs`).
 
 ### Home Page Architecture
 1. **Header (`.header-nav`):** Sticky translucent navbar with horizontal lockup, navigation links (`Advisory`, `Cases`, `Blog`), GitHub link, `EN · PT` language switcher, and primary CTA (`Conhecer o Agentic Bootcamp`).
-2. **Hero Section (`.hero-section`):** Interactive 3-stage water motion origami carp emblem (`96x96`), headline (`Adoção de Engenharia Agêntica.`), value proposition, dual CTAs, and clickable 9-logo Client Portfolio strip (`Deloitte`, `Santander`, `Insi`, `Softplan`, `Unipar`, `LWSA`, `Turbi`, `Caju`, `Cast Group`) linking to `/portfolio/`.
 3. **Market Reality & Field Documentary Strip (`#market-reality`):** S&P Global 46% PoC abandonment callout paired with a 3-column original-color documentary strip (`01 · Alinhamento Arquitetural`, `02 · Imersão em Bancada`, `03 · Code to Spec`).
 4. **Services Section (`#services` — "Por Que Agentes Falham"):** 4-card Bento grid with interactive 12-component Enterprise Agentic Architecture blueprint viewport and localized `.sr-only` accessibility specification.
 5. **Editorial & Newsletter Section (`#editorial` — "Para ler antes de decidir."):** 3 Spoke essay cards with author bylines (`Por Hugo Nascimento · CPTO`) and the `[Agentes] x [a Gente]` newsletter conversion strip with FormSubmit Ajax integration.

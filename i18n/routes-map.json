@@ -28,15 +28,6 @@
       "description_pt": "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
     },
     {
-      "id": "site_portfolio",
-      "en_path": "/en/portfolio/",
-      "pt_path": "/portfolio/",
-      "title_en": "Cases · We proudly tell the success stories of our clients · hsnlabs",
-      "title_pt": "Cases · Histórias de sucesso e sistemas em produção · hsnlabs",
-      "description_en": "Discover how leading enterprises build production-ready autonomous AI agents over legacy systems and complex operations with hsnlabs.",
-      "description_pt": "Descubra como grandes empresas constroem agentes autônomos de IA prontos para produção sobre sistemas legados e operações complexas com a hsnlabs."
-    },
-    {
       "id": "site_canvas",
       "en_path": "/en/canvas/",
       "pt_path": "/canvas/",

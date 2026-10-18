@@ -26,7 +26,7 @@ lines = [
     '                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">'
 ]
 
-def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_info=None):
+def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_info=None, pt_image_info=None):
     # English block
     lines.append('  <url>')
     lines.append(f'    <loc>{en_url}</loc>')
@@ -53,22 +53,36 @@ def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_in
     lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{pt_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="en" href="{en_url}" />')
     lines.append(f'    <xhtml:link rel="alternate" hreflang="pt-BR" href="{pt_url}" />')
+    if pt_image_info or image_info:
+        info = pt_image_info or image_info
+        lines.append('    <image:image>')
+        lines.append(f'      <image:loc>{info["loc"]}</image:loc>')
+        lines.append(f'      <image:title>{info["title"]}</image:title>')
+        lines.append(f'      <image:caption>{info["caption"]}</image:caption>')
+        lines.append('    </image:image>')
     lines.append('  </url>')
 
 # Site pages
 for page in routes.get("site_pages", []):
     en_url = f"https://hsnlabs.ai{page['en_path']}"
     pt_url = f"https://hsnlabs.ai{page['pt_path']}"
-    prio = "1.0" if page["en_path"] == "/" else "0.9"
-    freq = "weekly" if page["en_path"] == "/" else "monthly"
+    is_root = page["pt_path"] == "/"
+    prio = "1.0" if is_root else "0.9"
+    freq = "weekly" if is_root else "monthly"
     img = None
-    if page["pt_path"] == "/":
+    pt_img = None
+    if is_root:
         img = {
             "loc": "https://hsnlabs.ai/assets/brand/og-image.png",
             "title": "hsnlabs | Enterprise AI Architectures",
             "caption": "hsnlabs — Hybrid engineering, business ontologies, and deterministic agents."
         }
-    add_url_block(en_url, pt_url, priority=prio, changefreq=freq, image_info=img)
+        pt_img = {
+            "loc": "https://hsnlabs.ai/assets/brand/og-image-pt.png",
+            "title": "hsnlabs | Adoção de Engenharia Agêntica",
+            "caption": "hsnlabs — Engenharia híbrida, ontologias de negócio e agentes determinísticos em produção."
+        }
+    add_url_block(en_url, pt_url, priority=prio, changefreq=freq, image_info=img, pt_image_info=pt_img)
 
 # Blog posts (pilot translated + mapped)
 for post in routes.get("blog_posts", []):
