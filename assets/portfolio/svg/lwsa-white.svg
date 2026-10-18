@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="105.064" height="38" viewBox="0 0 105.064 38">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Retângulo_2" data-name="Retângulo 2" width="105.064" height="38" fill="none"/>
+      <rect id="Rect_2" data-name="Rect 2" width="105.064" height="38" fill="none"/>
     </clipPath>
   </defs>
   <g id="Grupo_857" data-name="Grupo 857" transform="translate(-140 -26)">
     <g id="Grupo_492" data-name="Grupo 492" transform="translate(140 26)">
-      <rect id="Retângulo_1" data-name="Retângulo 1" width="7.559" height="37.336" fill="#FFFFFF"/>
+      <rect id="Rect_1" data-name="Rect 1" width="7.559" height="37.336" fill="#FFFFFF"/>
       <g id="Grupo_2" data-name="Grupo 2">
         <g id="Grupo_1" data-name="Grupo 1" clip-path="url(#clip-path)">
           <path id="Caminho_1" data-name="Caminho 1" d="M340.338,86.5l6.384-2.452c.715,2.35,2.656,3.729,5.669,3.729,2.247,0,3.575-.919,3.575-2.452,0-4.7-14.352-2.452-14.352-11.7,0-5.108,4.188-8.223,10.726-8.223,5.363,0,9.245,2.2,10.368,5.925l-6.384,2.452a4,4,0,0,0-4.086-2.758c-2.043,0-3.167.817-3.167,2.2,0,4.341,14.4,1.736,14.4,11.645,0,5.414-4.444,8.734-11.339,8.734-5.976,0-10.266-2.452-11.8-7.1" transform="translate(-289.312 -55.602)" fill="#FFFFFF"/>
