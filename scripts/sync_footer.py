@@ -55,10 +55,24 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
 
     .footer-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.95fr) minmax(0, 1.18fr) minmax(0, 1.12fr) minmax(0, 1.95fr);
-      gap: 32px;
+      grid-template-columns: minmax(190px, 1.35fr) minmax(140px, 0.95fr) minmax(168px, 1.15fr) minmax(165px, 1.12fr) minmax(285px, 2.15fr);
+      gap: 24px;
       margin-bottom: 48px;
       align-items: start;
+    }
+
+    .footer-subscribe-linkedin {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .footer-li-header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .footer-col-title {
@@ -164,7 +178,36 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
       border-color: var(--hairline-strong);
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1140px) {
+      .footer-grid {
+        grid-template-columns: minmax(170px, 1.35fr) minmax(135px, 0.95fr) minmax(160px, 1.15fr) minmax(155px, 1.1fr);
+        gap: 32px 24px;
+      }
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline);
+      }
+      .footer-subscribe-linkedin {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+      .footer-bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .footer-bottom-sep {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -173,10 +216,39 @@ CANONICAL_FOOTER_CSS = """    /* FOOTER */
       .footer-col-subscribe {
         grid-column: 1 / -1;
       }
+      .footer-col-subscribe {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-subscribe-linkedin {
+        padding-top: 16px;
+        border-top: 1px solid var(--hairline);
+      }
       .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu,
+      .header-github-link {
+        display: none !important;
+      }
+      .header-actions {
+        gap: 10px !important;
+      }
+      .header-actions .btn,
+      .header-container .btn {
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      .brand-logo-img {
+        height: 28px !important;
+        width: auto !important;
       }
     }
 

@@ -605,10 +605,24 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.95fr) minmax(0, 1.18fr) minmax(0, 1.12fr) minmax(0, 1.95fr);
-      gap: 32px;
+      grid-template-columns: minmax(190px, 1.35fr) minmax(140px, 0.95fr) minmax(168px, 1.15fr) minmax(165px, 1.12fr) minmax(285px, 2.15fr);
+      gap: 24px;
       margin-bottom: 48px;
       align-items: start;
+    }
+
+    .footer-subscribe-linkedin {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .footer-li-header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .footer-col-title {
@@ -714,7 +728,36 @@
       border-color: var(--hairline-strong);
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1140px) {
+      .footer-grid {
+        grid-template-columns: minmax(170px, 1.35fr) minmax(135px, 0.95fr) minmax(160px, 1.15fr) minmax(155px, 1.1fr);
+        gap: 32px 24px;
+      }
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline);
+      }
+      .footer-subscribe-linkedin {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+      .footer-bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .footer-bottom-sep {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -723,10 +766,39 @@
       .footer-col-subscribe {
         grid-column: 1 / -1;
       }
+      .footer-col-subscribe {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-subscribe-linkedin {
+        padding-top: 16px;
+        border-top: 1px solid var(--hairline);
+      }
       .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu,
+      .header-github-link {
+        display: none !important;
+      }
+      .header-actions {
+        gap: 10px !important;
+      }
+      .header-actions .btn,
+      .header-container .btn {
+        padding: 6px 10px !important;
+        font-size: 0.75rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      .brand-logo-img {
+        height: 28px !important;
+        width: auto !important;
       }
     }
 
@@ -1570,7 +1642,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
         <div class="footer-col-office">
           <div class="footer-col-title">Office</div>
-          <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin: 0 0 12px 0;">
+          <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin: 0 0 12px 0; white-space: nowrap;">
             Rua Pais Leme, 215<br>
             Conjunto 1713<br>
             Pinheiros, São Paulo
@@ -1603,18 +1675,20 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
 
         <div class="footer-col-subscribe">
-          <div class="footer-col-title">Stay in Touch</div>
-          <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Architecture field notes &amp; playbooks sent to your corporate inbox.</p>
-          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Send'; }, 4000); });">
-            <div style="display: flex; gap: 8px;">
-              <input type="email" name="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
-              <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap;">Send</button>
-            </div>
-          </form>
+          <div class="footer-subscribe-email">
+            <div class="footer-col-title">Stay in Touch</div>
+            <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Architecture field notes &amp; playbooks sent to your corporate inbox.</p>
+            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Send'; }, 4000); });">
+              <div style="display: flex; gap: 8px;">
+                <input type="email" name="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+                <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap; flex-shrink: 0;">Send</button>
+              </div>
+            </form>
+          </div>
 
-          <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hairline);">
-            <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: nowrap;">
-              <div style="display: flex; gap: 10px; align-items: center; min-width: 0;">
+          <div class="footer-subscribe-linkedin">
+            <div class="footer-li-header">
+              <div style="display: flex; gap: 10px; align-items: center; min-width: 155px; flex: 1 1 auto;">
                 <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 36px; height: 36px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;" loading="lazy" decoding="async">
                 <div style="min-width: 0;">
                   <div style="font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
