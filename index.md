@@ -40,29 +40,29 @@ O ciclo de vida de desenvolvimento agêntico, ou ADLC, exige governança orienta
 
 #### Componentes da Arquitetura Agêntica Enterprise da hsnlabs
 
-- Integração e Acesso Seguro a Modelos: Moderação Presidio, Cache Semântico Redis, Gateway LiteLLM
+- Engenharia de Contexto: Carregadores de Documentos, Fragmentação Semântica, Cadeias Lógicas LCEL e Fluxos de Eventos Kafka
 
-- Observabilidade de Ponta a Ponta: Rastreamento LangSmith, Monitoramento de Latência e Uso de Tokens
+- Dados Prontos para Agentes: Databricks Lakehouse, Snowflake, Qdrant, pgvector e Compute Distribuído com Ray, Celery e Python
 
-- Engenharia de Contexto: Carregadores de Documentos, Cadeias Lógicas LCEL, Fluxos de Ação Kafka
+- Estado e Ontologia: Núcleo de Estado LangGraph, Estado Semântico, Cinético e Dinâmico, e Protocolo de Ação de Ferramentas com MCP
 
-- Sistema de Estado e Ontologia: Núcleo de Estado LangGraph, Arestas Dinâmicas e Protocolos de Ação
+- Segurança e Governança: NeMo Guardrails, Aprovação Humana, Pontos de Verificação de Estado e Controle de Acesso
 
-- Serviços de Vetores e Dados Corporativos: Databricks Lakehouse, Snowflake, Qdrant, pgvector, Pinecone e Escalonamento de Workers
+- Ciclo de Vida de Agentes: Especificação de Agentes, Orquestração LangGraph StateGraph e Suítes de Avaliação com Braintrust e LangSmith
 
-- Segurança e Governança: NeMo Guardrails, Pontos de Verificação Human-in-the-Loop, Controle de Acesso
+- Automação Operacional: Jobs Agendados Celery Beat, Fluxos de Eventos Apache Kafka e APIs de Serviço FastAPI
 
-- Ciclo de Vida de Agentes: Construção de Agentes, Orquestração StateGraph, Suítes de Avaliação com Braintrust e LangSmith
+- Observabilidade de Sistema: Telemetria de Rastreamento LangSmith, OpenTelemetry, Auditoria de Tokens e Catálogo de Modelos LiteLLM
 
-- Automação Operacional: Celery Beat, Kafka Orientado a Eventos, Endpoints REST LangServe
+- Acesso Seguro a Modelos: Mascaramento de PII Presidio, Cache Semântico Redis, Cotas de Orçamento e Roteamento Multimodelo
 
-- Ambientes de Desenvolvimento: LangGraph Studio, VS Code, MCP Inspector
+- Ambientes de Desenvolvimento: Visual Graph Studio com LangGraph Studio, VS Code e MCP Inspector
 
-- Aplicações Humanas e de IA: Open WebUI, CopilotKit, Artefatos em Streaming
+- Empacotamento e Deploy: Container Runtime com Docker Compose, Kubernetes e Helm Charts
 
-- Empacotamento, Release e Deploy: Docker Compose, Helm Charts, Orquestração Kubernetes
+- Aplicações de IA: Copilotos e Workspaces com CopilotKit, Open WebUI e Canvas Interativo
 
-- Automação Corporativa: Central de Conhecimento, Enxames Multiagentes, Grafos Semânticos Neo4j
+- Automação Corporativa: Enxames Multiagentes com Grafos de Conhecimento Neo4j, Deep Agents e Memória Compartilhada
 
 ## Para ler antes de decidir.
 

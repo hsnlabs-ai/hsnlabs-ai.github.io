@@ -3376,10 +3376,10 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         var vw = viewport.clientWidth;
         var vh = viewport.clientHeight;
 
-        // Focus framing: Full Architecture Components (x=355) through Box 5 Vector & Enterprise Data Services (x=2530)
-        var targetBoxWidth = 2200;
-        var targetBoxX = 355;
-        var targetBoxY = 115;
+        // Focus framing: 3-Phase Enterprise Agentic Architecture (x=425..2455, y=60..1305)
+        var targetBoxWidth = 2030;
+        var targetBoxX = 425;
+        var targetBoxY = 60;
 
         scale = (vw - 32) / targetBoxWidth;
         if (scale < 0.36) scale = 0.36;
@@ -3390,6 +3390,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
         updateTransform();
       }
+      var fitToViewport = initView;
 
       if (img.complete) {
         initView();

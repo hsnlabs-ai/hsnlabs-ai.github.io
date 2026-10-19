@@ -40,29 +40,29 @@ The Agentic Development Life Cycle, or ADLC, establishes spec-driven governance 
 
 #### hsnlabs Enterprise Agentic Architecture Components
 
-- Secure Model Integration and Access: Presidio Moderation, Redis Semantic Cache, LiteLLM Gateway
+- Context Engineering: Document Loaders, Semantic Chunking, LCEL Logic Chains, and Kafka Event Streams
 
-- End-to-End Observability: LangSmith Tracing, Latency and Token Usage Tracking
+- Agent-Ready Data: Databricks Lakehouse, Snowflake, Qdrant, pgvector, and Distributed Compute with Ray, Celery, and Python
 
-- Context Engineering: Document Loaders, LCEL Logic Chains, Kafka Action Streams
+- State and Ontology: LangGraph State Core, Semantic, Kinetic, and Dynamic State, and Tool Action Protocol with MCP
 
-- State and Ontology System: LangGraph State Core, Dynamic Edges and Action Protocols
+- Security and Governance: NeMo Guardrails, Human Approval, State Checkpoints, and Access Control
 
-- Vector and Enterprise Data Services: Databricks Lakehouse, Snowflake, Qdrant, pgvector, Pinecone and Worker Scaling
+- Agent Lifecycle: Agent Specification, LangGraph StateGraph Orchestration, and Braintrust and LangSmith Evaluation Suites
 
-- Security and Governance: NeMo Guardrails, Human in the Loop Checkpoints, Access Control
+- Operational Automation: Celery Beat Scheduled Jobs, Apache Kafka Event Streams, and FastAPI Service APIs
 
-- Agent Lifecycle: Agent Building, StateGraph Orchestration, Braintrust and LangSmith Evaluation Suites
+- System Observability: LangSmith Live Flight Recorder, OpenTelemetry, Token Audit, and LiteLLM Model Catalog
 
-- Operational Automation: Celery Beat, Event-Driven Kafka, LangServe REST Endpoints
+- Secure Model Access: Presidio PII Masking, Redis Semantic Cache, Budget Quotas, and Multi-Model Routing
 
-- Development Environments: LangGraph Studio, VS Code, MCP Inspector
+- Development Environments: Visual Graph Studio with LangGraph Studio, VS Code, and MCP Inspector
 
-- Human and AI Applications: Open WebUI, CopilotKit, Streaming Artifacts
+- Package and Deploy: Container Runtime with Docker Compose, Kubernetes, and Helm Charts
 
-- Package Release and Deploy: Docker Compose, Helm Charts, Kubernetes Orchestration
+- AI Applications: Copilots and Workspaces with CopilotKit, Open WebUI, and Interactive Canvas
 
-- Enterprise Automation: Knowledge Hub, Multi-Agent Swarms, Neo4j Semantic Graphs
+- Enterprise Automation: Multi-Agent Swarms with Neo4j Knowledge Graphs, Deep Agents, and Shared Memory
 
 ## Before you decide.
 
