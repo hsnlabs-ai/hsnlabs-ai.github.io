@@ -3,7 +3,7 @@ title: "LangChain & LangGraph · In Production Since 2022 · hsnlabs"
 description: "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
 url: "https://hsnlabs.ai/en/langchain/"
 locale: "en"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # LangChain & LangGraph · In Production Since 2022 · hsnlabs
@@ -72,22 +72,22 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Contact Us
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
-
-- Blog
-
-- Contact Us
 
 Architecture field notes & playbooks sent to your corporate inbox.

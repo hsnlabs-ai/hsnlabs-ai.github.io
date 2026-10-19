@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -12,7 +12,7 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Agentic Bootcamp
 
-We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Braintrust, and LangChain.
+We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Databricks, Braintrust, and LangChain.
 
 ## Our Method
 
@@ -44,23 +44,23 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Contact Us
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
-
-- Blog
-
-- Contact Us
 
 Architecture field notes & playbooks sent to your corporate inbox.
 

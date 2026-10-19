@@ -3,7 +3,7 @@ title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
 description: "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # The Agentic Pilot Canvas v1.4 · hsnlabs
@@ -12,144 +12,144 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # The Agentic Pilot Canvas
 
-## 1. Processo Alvo & Impacto
+## 1. Target Process & Impact
 
-1.1 O Processo Manual: Qual trabalho manual repetitivo mais consome o tempo da equipe no fluxo atual e qual o resultado ideal quando concluído?
+1.1 The Manual Process: Which repetitive manual workflow consumes the most team capacity today, and what is the ideal outcome when completed?
 
-Exemplos comparando o fluxo atual AS-IS com o desejado TO-BE: triagem de 500 currículos, digitação de faturas no ERP, enriquecer leads no CRM.
+Examples comparing AS-IS vs. TO-BE: screening 500 resumes, keying invoices into the ERP, or enriching leads in the CRM.
 
-1.2 Gargalo & Sintomas: Onde o fluxo trava e quais os sintomas visíveis dessa sobrecarga?
+1.2 Bottleneck & Symptoms: Where does the workflow stall, and what are the visible symptoms of this operational overload?
 
-Ex: Horas extras recorrentes no fechamento, erros manuais de digitação, analistas agindo como digitadores.
+Examples: Recurring month-end overtime, manual data-entry errors, senior analysts acting as human routers.
 
-## 2. Impacto não determinístico
+## 2. Non-Deterministic Impact
 
-2.1 Teste de Sanidade: Esse processo realmente exige a flexibilidade de um agente ou o risco não tolera margem de incerteza?
+2.1 Sanity Check: Does this workflow genuinely require agentic reasoning, or does the risk profile tolerate zero margin for uncertainty?
 
-Exemplos para avaliar se precisa de IA: Cálculos fiscais e folha exigem código determinístico; interpretar e-mails caóticos e conciliar dados exige IA.
+Examples: Tax and payroll calculations require deterministic code; parsing unstructured emails and reconciling messy documents require AI.
 
-2.2 Raio de Destruição: Se o agente falhar, qual o estrago interno financeiro ou emocional e o prejuízo externo para clientes e mercado?
+2.2 Blast Radius: If the agent fails, what is the internal financial or organizational damage and the external liability with customers?
 
-Exemplos de blast radius e impacto emocional: Ansiedade da equipe, sensação de desumanização, medo de queimar leads, multas e clientes VIP irritados.
+Examples: Team anxiety, perceived dehumanization, burned enterprise leads, regulatory fines, or escalated VIP accounts.
 
-## 3. Legados, conexão e dados
+## 3. Legacy Systems, Access & Data
 
-3.1 Onde os Dados Moram: Em quais sistemas, planilhas ou e-mails as informações desse processo estão guardadas hoje?
+3.1 Where Data Lives: Across which ERPs, spreadsheets, or inboxes is the ground-truth state of this workflow stored today?
 
-Exemplos: SAP S/4HANA no módulo MM, TOTVS, Salesforce, planilhas mestras no Drive ou contratos em PDF.
+Examples: SAP S/4HANA MM module, TOTVS, Salesforce, master spreadsheets in Drive, or PDF contracts.
 
-3.2 Dinâmica de Acesso: Como a equipe acessa esses dados no dia a dia e com que frequência eles são atualizados?
+3.2 Access Dynamics: How does the team query or mutate this data daily, and what is the synchronization cadence?
 
-Ex: Consulta diária via tela, APIs, ou exportação de CSV; isolamento em réplica read-only no staging D1.
+Examples: Daily UI lookups, REST APIs, or CSV exports; read-only replica isolation in Day-1 staging.
 
-3.3 Engenharia Reversa como Oportunidade: Quais regras ocultas em planilhas ou sistemas antigos podemos auditar para virar documentação viva?
+3.3 Reverse Engineering Opportunity: Which tacit rules buried in spreadsheets or legacy scripts can be audited into living specifications?
 
-Ex: Mapear 30 stored procedures legadas ou macros antigas do Excel para transformá-las em código tipado.
+Examples: Auditing 30 legacy stored procedures or Excel macros and compiling them into typed Python schemas.
 
-## 4. Ontologia Operacional
+## 4. Operational Ontology
 
-4.1 Objetos do Mundo Real: Quais são os itens centrais desse trabalho que o agente precisa reconhecer para entender a operação?
+4.1 Domain Entities: What are the core business objects the agent must recognize to reason over the operation?
 
-Ex. RH: Colaborador, Vaga, Avaliação. Finanças: Fatura, PedidoCompra, Fornecedor. Vendas: Lead, Oportunidade.
+Examples — HR: Employee, Requisition, Review. Finance: Invoice, PurchaseOrder, Vendor. Sales: Lead, Opportunity.
 
-4.2 Ações Tipadas & Invariantes: Quais as únicas ações que o agente pode executar e qual regra nunca pode ser violada?
+4.2 Typed Actions & Invariants: What are the strictly typed tools the agent may invoke, and which invariant must never be violated?
 
-Exemplos de ações tipadas: ClassificarDiscrepancia, NotificarGestor. Invariante: agente nunca roda SQL livre nem paga direto.
+Examples: FlagDiscrepancy, NotifyManager. Invariant: the agent never executes raw SQL or releases payments autonomously.
 
-## 5. Human in the loop
+## 5. Human in the Loop
 
-5.1 Limiares de Bloqueio: Em quais situações de valor, risco ou incerteza o agente é proibido de agir sozinho e deve pedir aprovação?
+5.1 Escalation Thresholds: Under which financial, risk, or confidence thresholds is the agent blocked from acting without human sign-off?
 
-Ex: Confiança do modelo < 95%; valores > R$ 500 em faturas; demissões/promoções em RH; clientes VIP com risco de cancelamento.
+Examples: Model confidence < 95%, invoice delta > $500, HR terminations/promotions, or VIP accounts at churn risk.
 
-5.2 Responsabilidade no CPF: Quem é a pessoa responsável por avaliar e bater o martelo formal nas exceções que o agente sinalizar?
+5.2 Named Human Sign-off: Which specific role reviews flagged exceptions and records the auditable decision?
 
-Ex: Card com 1 clique de aprovação no Teams/Slack. A máquina processa, mas o gestor assina a decisão no CPF.
+Examples: 1-click approval card in Teams or Slack. The state machine prepares the case; the manager signs off.
 
-## 6. Governança e Compliance
+## 6. Governance & Compliance
 
-6.1 Sigilo & LGPD: Quais dados confidenciais ou sensíveis das pessoas e da empresa não podem vazar de forma alguma?
+6.1 Privacy & Data Masking: Which PII, financial, or confidential records must be masked before model inference?
 
-Ex: CPF, salários, dados médicos ou bancários mascarados antes da inferência, com retenção zero para treino.
+Examples: Tax IDs, compensation, medical or banking records masked via Presidio with zero data retention.
 
-6.2 Tracing Imutável: Como a empresa vai auditar e comprovar o histórico de cada ação e raciocínio que o agente realizou?
+6.2 Immutable Tracing: How will the organization audit and reconstruct every tool call, prompt, and state transition?
 
-Ex: Trilha OpenTelemetry gravando hash, timestamp e prompt para reconstituir qualquer transação em auditorias.
+Examples: OpenTelemetry and LangSmith traces recording immutable hashes, timestamps, and payloads for compliance audits.
 
-## 7. Sabotadores
+## 7. Organizational Saboteurs
 
-7.1 Medos & Perda Política: Quem na organização pode sentir receio de perder espaço, equipe, relevância ou controle?
+7.1 Political Friction & Fears: Which stakeholders might fear losing headcount, operational control, or institutional relevance?
 
-Ex: Analistas com medo de demissão; gestores com receio de perder tamanho de time; TI com medo de Shadow IT.
+Examples: Analysts fearing replacement, middle managers protecting team size, or IT concerned with Shadow AI.
 
-7.2 Framing Anti-Sabotagem: Como reposicionar o projeto para transformar céticos em patrocinadores ativos da solução?
+7.2 Anti-Sabotage Framing: How do we position the deployment so internal skeptics become active sponsors?
 
-Ex: Vender o agente como estagiário digital de trabalho repetitivo e colocar a TI como guardiã da governança no comitê.
+Examples: Frame the agent as an operational triage copilot and position IT as the architecture governance owner.
 
 ## 8. Harness
 
-8.1 Runtime & Ferramentas: Quais ferramentas, telas e permissões o agente precisa ter para conseguir trabalhar?
+8.1 Runtime & Tooling: Which connectors, sandboxes, and scoped permissions does the agent need to execute safely?
 
-Ex: OCR de PDFs especializado, conector seguro de banco de dados, sandbox Docker isolada e integração Slack/Teams.
+Examples: Specialized PDF OCR, read-only database MCP server, isolated Docker sandbox, and Slack/Teams bot.
 
-8.2 Memória & Contexto: Onde e como o agente guardará a memória das conversas e o histórico das tarefas já feitas?
+8.2 Memory & State: How will the agent persist conversation state, episodic checkpoints, and domain rules?
 
-Ex: Gerenciamento de janela de contexto, histórico de transações e memória vetorial para consulta a manuais de regras.
+Examples: LangGraph state checkpointing in PostgreSQL, bounded context windows, and hybrid vector retrieval.
 
-8.3 Evals & Testes Contínuos: Quais testes práticos provarão que o agente está calibrado e sem regressões antes do deploy?
+8.3 Continuous Evals: Which golden datasets and regression gates will certify accuracy before every production release?
 
-Ex: Bateria automatizada com 200 casos reais desafiadores rodada a cada atualização de prompt ou modelo.
+Examples: Automated Braintrust suite with 200 adversarial historical cases executed on every CI/CD pull request.
 
-## 9. Ancoragem de valor e ROI
+## 9. Value Anchoring & ROI
 
-9.1 Diagnóstico do Dual Bleed: Quanto a empresa queima hoje na soma de salários/horas extras com licenças de softwares?
+9.1 Dual Bleed Baseline: What is the current monthly burn across manual labor hours, overtime, and legacy SaaS seats?
 
-Ex: 12 analistas x R$ 8.500/mês + R$ 15.000 em horas extras + R$ 14.000 em softwares satélites legados.
+Examples: 12 FTEs x $4,500/mo + $6,000 in overtime + $5,500 in redundant legacy ticketing licenses.
 
-9.2 Economia Líquida na DRE: Quais custos reais serão cortados imediatamente após descontar os custos de IA?
+9.2 Net P&L Savings: What auditable cost reduction hits the P&L after deducting cloud and token run-rate?
 
-Ex: Economia de R$ 98k/mês MENOS R$ 16k de infraestrutura = R$ 82k/mês líquido auditável pelo CFO.
+Examples: $42k/mo gross operational savings minus $6k/mo inference & infra = $36k/mo net CFO-verified savings.
 
-9.3 Prazo de Payback do Piloto: Em quantos meses o valor investido no projeto precisa se pagar para ser um sucesso financeiro?
+9.3 Pilot Payback Window: Within how many months must the initial engineering investment break even in production?
 
-Ex: Investimento inicial de R$ 120k amortizado em apenas 45 a 60 dias de operação produtiva.
+Examples: $30k pilot investment fully amortized within 45 to 60 days of production rollout.
 
-## 10. Do sucesso do piloto ao rollout
+## 10. From Pilot Success to Rollout
 
-10.1 Meta de Sucesso no Sandbox: Qual meta clara de resolução e acurácia definirá que o piloto deu certo no D5?
+10.1 Sandbox Acceptance Gate: Which deterministic accuracy and resolution threshold certifies pilot success at Day 5?
 
-Ex: 75% a 80% de resolução autônoma ponta a ponta com zero erro nas regras determinísticas.
+Examples: 75% to 80% autonomous end-to-end resolution with zero violations on deterministic guardrails.
 
-10.2 Aval Executivo dos Co-Autores: Quem são os líderes que precisam dar o aval final para considerar o teste validado?
+10.2 Executive Co-Author Sign-off: Which business, IT, and finance leaders jointly sign the production acceptance report?
 
-Ex: Parecer assinado conjuntamente pelo Head de Operações/RH, Arquiteto de TI e Controller.
+Examples: Joint sign-off by the VP of Operations, Enterprise Architect, and Financial Controller.
 
-10.3 Gatilho Contratual de Produção: Qual é o gatilho combinado para liberar a implantação definitiva para toda a empresa?
+10.3 Production Rollout Trigger: What pre-agreed milestone unlocks full-scale production deployment and rebate credit?
 
-Exemplos: Atingida a acurácia combinada no sandbox, o orçamento de rollout de R$ 120k é destravado automaticamente.
+Examples: Upon hitting the Day-5 eval gate in sandbox, the production rollout contract unlocks with 100% pilot rebate.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Contact Us
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
 
-- Blog
-
-- Fale Conosco
-
-Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
+Architecture field notes & playbooks sent to your corporate inbox.

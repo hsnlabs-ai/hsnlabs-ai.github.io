@@ -64,6 +64,15 @@
       "description_pt": "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis diretamente sobre a Snowflake AI Data Cloud com governança sem cópias."
     },
     {
+      "id": "site_databricks",
+      "en_path": "/en/databricks/",
+      "pt_path": "/databricks/",
+      "title_en": "Databricks Lakehouse · Agent Architecture · hsnlabs",
+      "title_pt": "Databricks Lakehouse · Arquitetura de Agentes · hsnlabs",
+      "description_en": "Operationalize deterministic LangGraph agents and executable business ontologies over the Databricks Lakehouse, Unity Catalog, and Mosaic AI.",
+      "description_pt": "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis sobre Databricks Lakehouse, Unity Catalog e Mosaic AI em produção."
+    },
+    {
       "id": "site_braintrust",
       "en_path": "/en/braintrust/",
       "pt_path": "/braintrust/",
@@ -101,6 +110,12 @@
     }
   ],
   "blog_posts": [
+    {
+      "slug_en": "databricks-lakehouse-unity-catalog-langgraph-agent-architecture",
+      "slug_pt": "arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph",
+      "title_en": "Databricks Lakehouse and LangGraph: Binding Unity Catalog and Mosaic AI to Operational State Machines",
+      "title_pt": "Databricks Lakehouse e LangGraph: Conectando Unity Catalog e Mosaic AI a Máquinas de Estado Operacionais"
+    },
     {
       "slug_en": "braintrust-evals-cicd-langgraph-agent-architecture",
       "slug_pt": "arquitetura-agentes-braintrust-evals-cicd-langgraph",

@@ -1137,14 +1137,14 @@
     /* END FOOTER */
     /* CANONICAL 3-COLUMN FOUNDER CALLOUT & MOBILE 3-COLUMN BENTO SPLIT (OPTION 1) */
     .hero-founder-callout {
-      max-width: 960px !important;
+      max-width: 1080px !important;
       width: 100% !important;
     }
     .founder-cred-group {
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 0 18px;
+      gap: 18px;
+      padding: 0 16px;
       border-left: 1px solid var(--hairline);
       border-right: 1px solid var(--hairline);
       flex-shrink: 0;
@@ -1182,7 +1182,7 @@
       }
       .founder-cred-group {
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 0 !important;
         padding: 0 !important;
         width: 100% !important;
@@ -1197,7 +1197,13 @@
         gap: 5px !important;
       }
       .founder-cred-item:not(:last-child) {
+        border-right: none !important;
+      }
+      .founder-cred-item:nth-child(odd) {
         border-right: 1px solid var(--hairline) !important;
+      }
+      .founder-cred-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--hairline) !important;
       }
       .founder-cred-item .founder-cred-logo {
         height: 13px !important;
@@ -1278,9 +1284,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="hero-ctas">
         <a href="/en/bootcamp/" class="btn btn-primary">Explore Agentic Bootcamp</a>
         <a href="#benefits" class="btn btn-outline">Explore the Benefits</a>
-      </div>
-
-        <a href="#contact" class="btn btn-outline founder-callout-btn" style="padding: 8px 18px; font-size: 0.84rem; white-space: nowrap; flex-shrink: 0;"><span>Start a Conversation</span></a>
       </div>
     </div>
   </section>
@@ -1487,6 +1490,10 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
             <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
             <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
           </a>
+          <a href="/en/databricks/" class="founder-cred-item" title="Databricks Lakehouse &amp; Mosaic AI Partner">
+            <img src="/assets/brand/databricks/databricks-lockup-color.svg" alt="Databricks" class="founder-cred-logo">
+            <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
+          </a>
           <a href="/en/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
             <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
             <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
@@ -1557,6 +1564,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <ul class="footer-nav">
             <li><a href="/en/langchain/">LangChain &amp; LangGraph</a></li>
             <li><a href="/en/snowflake/">Snowflake AI Data Cloud</a></li>
+            <li><a href="/en/databricks/">Databricks Lakehouse</a></li>
             <li><a href="/en/braintrust/">Braintrust Evals</a></li>
           </ul>
         </div>

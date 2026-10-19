@@ -3,7 +3,7 @@ title: "Política de Privacidade · hsnlabs"
 description: "Política de Privacidade da hsnlabs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade."
 url: "https://hsnlabs.ai/privacy-policy/"
 locale: "pt-BR"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # Política de Privacidade · hsnlabs
@@ -124,23 +124,23 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Fale Conosco
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
-
-- Blog
-
-- Fale Conosco
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 

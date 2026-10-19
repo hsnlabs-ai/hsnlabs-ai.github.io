@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | hsnlabs"
 description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
@@ -74,10 +74,6 @@ Real costs, failure modes, and verified production patterns in agentic architect
 
 ### The BPO Replacement Matrix: Replacing per-seat SaaS taxes and operational liabilities
 
-### Get our technical teardowns directly in your inbox.
-
-Real inference economics, failure post-mortems, and governance specs, backed by verifiable data.
-
 ## Contact Us
 
 Talk to our architecture team to see if your systems are ready for production deep agents.
@@ -88,23 +84,23 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Contact Us
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
-
-- Blog
-
-- Contact Us
 
 Architecture field notes & playbooks sent to your corporate inbox.
 

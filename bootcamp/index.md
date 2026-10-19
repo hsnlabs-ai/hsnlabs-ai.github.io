@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-18T12:28:14Z"
+updatedAt: "2026-10-19T12:31:39Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -12,7 +12,7 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Agentic Bootcamp
 
-Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Braintrust e LangChain.
+Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Databricks, Braintrust e LangChain.
 
 ## Nosso Método
 
@@ -44,23 +44,23 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp
 
-- Cases
-
-- The Agentic Pilot Canvas
-
 - Advisory
 
 - Enterprise MCP
+
+- The Agentic Pilot Canvas
+
+- Blog
+
+- Fale Conosco
 
 - LangChain & LangGraph
 
 - Snowflake AI Data Cloud
 
+- Databricks Lakehouse
+
 - Braintrust Evals
-
-- Blog
-
-- Fale Conosco
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
