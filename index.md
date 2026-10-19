@@ -40,29 +40,29 @@ O ciclo de vida de desenvolvimento agêntico, ou ADLC, exige governança orienta
 
 #### Componentes da Arquitetura Agêntica Enterprise da hsnlabs
 
-- Engenharia de Contexto: Carregadores de Documentos, Fragmentação Semântica, Cadeias Lógicas LCEL e Fluxos de Eventos Kafka
+- Engenharia de Contexto: Carregadores de Documentos, Fragmentação Semântica, Validadores Pydantic e Fluxos de Eventos Kafka
 
-- Dados Prontos para Agentes: Databricks Lakehouse, Snowflake, Qdrant, pgvector e Compute Distribuído com Ray, Celery e Python
+- Dados Prontos para Agentes: Databricks Unity Catalog, Snowflake Cortex, PostgreSQL pgvector e Compute Distribuído com Python, Celery e Kubernetes
 
 - Estado e Ontologia: Núcleo de Estado LangGraph, Estado Semântico, Cinético e Dinâmico, e Protocolo de Ação de Ferramentas com MCP
 
-- Segurança e Governança: NeMo Guardrails, Aprovação Humana, Pontos de Verificação de Estado e Controle de Acesso
+- Segurança e Governança: Deterministic Guardrails, Aprovação Humana, Pontos de Verificação de Estado e Controle de Acesso
 
 - Ciclo de Vida de Agentes: Especificação de Agentes, Orquestração LangGraph StateGraph e Suítes de Avaliação com Braintrust e LangSmith
 
-- Automação Operacional: Jobs Agendados Celery Beat, Fluxos de Eventos Apache Kafka e APIs de Serviço FastAPI
+- Automação Operacional: Jobs Agendados Apache Airflow e Celery Beat, Fluxos de Eventos Apache Kafka e APIs de Serviço FastAPI e LangGraph API
 
-- Observabilidade de Sistema: Telemetria de Rastreamento LangSmith, OpenTelemetry, Auditoria de Tokens e Catálogo de Modelos LiteLLM
+- Observabilidade de Sistema: Telemetria de Rastreamento LangSmith, Braintrust, OpenTelemetry, Auditoria de Tokens e Catálogo de Modelos LiteLLM
 
 - Acesso Seguro a Modelos: Mascaramento de PII Presidio, Cache Semântico Redis, Cotas de Orçamento e Roteamento Multimodelo
 
 - Ambientes de Desenvolvimento: Visual Graph Studio com LangGraph Studio, VS Code e MCP Inspector
 
-- Empacotamento e Deploy: Container Runtime com Docker Compose, Kubernetes e Helm Charts
+- Empacotamento e Deploy: Container Runtime com Docker Compose, Kubernetes e Serverless VPC
 
-- Aplicações de IA: Copilotos e Workspaces com CopilotKit, Open WebUI e Canvas Interativo
+- Aplicações de IA: Copilotos e Workspaces com Custom Web UI, Slack & Teams e Canvas Interativo
 
-- Automação Corporativa: Enxames Multiagentes com Grafos de Conhecimento Neo4j, Deep Agents e Memória Compartilhada
+- Automação Corporativa: Enxames Multiagentes com LangChain Deep Agents, Memória Compartilhada e MCP
 
 ## Para ler antes de decidir.
 

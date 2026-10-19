@@ -40,17 +40,17 @@ The Agentic Development Life Cycle, or ADLC, establishes spec-driven governance 
 
 #### hsnlabs Enterprise Agentic Architecture Components
 
-- Context Engineering: Document Loaders, Semantic Chunking, LCEL Logic Chains, and Kafka Event Streams
+- Context Engineering: Document Loaders, Semantic Chunking, Pydantic Validators, and Kafka Event Streams
 
-- Agent-Ready Data: Databricks Lakehouse, Snowflake, Qdrant, pgvector, and Distributed Compute with Ray, Celery, and Python
+- Agent-Ready Data: Databricks Unity Catalog, Snowflake Cortex, PostgreSQL pgvector, and Distributed Compute with Python, Celery, and Kubernetes
 
 - State and Ontology: LangGraph State Core, Semantic, Kinetic, and Dynamic State, and Tool Action Protocol with MCP
 
-- Security and Governance: NeMo Guardrails, Human Approval, State Checkpoints, and Access Control
+- Security and Governance: Deterministic Guardrails, Human Approval, State Checkpoints, and Access Control
 
 - Agent Lifecycle: Agent Specification, LangGraph StateGraph Orchestration, and Braintrust and LangSmith Evaluation Suites
 
-- Operational Automation: Celery Beat Scheduled Jobs, Apache Kafka Event Streams, and FastAPI Service APIs
+- Operational Automation: Apache Airflow and Celery Beat Scheduled Jobs, Apache Kafka Event Streams, and FastAPI and LangGraph APIs
 
 - System Observability: LangSmith Live Flight Recorder, OpenTelemetry, Token Audit, and LiteLLM Model Catalog
 
@@ -58,11 +58,11 @@ The Agentic Development Life Cycle, or ADLC, establishes spec-driven governance 
 
 - Development Environments: Visual Graph Studio with LangGraph Studio, VS Code, and MCP Inspector
 
-- Package and Deploy: Container Runtime with Docker Compose, Kubernetes, and Helm Charts
+- Package and Deploy: Container Runtime with Docker Compose, Kubernetes, and Serverless VPC
 
-- AI Applications: Copilots and Workspaces with CopilotKit, Open WebUI, and Interactive Canvas
+- AI Applications: Copilots and Workspaces with Custom Web UI, Slack & Teams, and Interactive Canvas
 
-- Enterprise Automation: Multi-Agent Swarms with Neo4j Knowledge Graphs, Deep Agents, and Shared Memory
+- Enterprise Automation: Multi-Agent Swarms with LangChain Deep Agents, Shared Memory, and MCP
 
 ## Before you decide.
 
