@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T12:31:39Z"
+updatedAt: "2026-10-19T13:02:11Z"
 ---
 
 # Agentic Bootcamp · hsnlabs

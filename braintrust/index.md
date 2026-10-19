@@ -3,7 +3,7 @@ title: "Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs"
 description: "Eliminamos falhas probabilísticas em produção com suítes de avaliação contínua no Braintrust, travas de regressão em CI/CD e observabilidade de agentes."
 url: "https://hsnlabs.ai/braintrust/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T12:31:39Z"
+updatedAt: "2026-10-19T13:02:11Z"
 ---
 
 # Braintrust Evals e CI/CD · Arquitetura de Agentes · hsnlabs

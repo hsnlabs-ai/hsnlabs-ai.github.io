@@ -44,8 +44,6 @@ PAGES = [
     ("en/braintrust/index.html", "en/braintrust/index.md", "https://hsnlabs.ai/en/braintrust/", "en"),
     ("playbooks/index.html", "playbooks/index.md", "https://hsnlabs.ai/playbooks/", "pt-BR"),
     ("en/playbooks/index.html", "en/playbooks/index.md", "https://hsnlabs.ai/en/playbooks/", "en"),
-    ("portfolio/index.html", "portfolio/index.md", "https://hsnlabs.ai/portfolio/", "pt-BR"),
-    ("en/portfolio/index.html", "en/portfolio/index.md", "https://hsnlabs.ai/en/portfolio/", "en"),
     ("privacy-policy/index.html", "privacy-policy/index.md", "https://hsnlabs.ai/privacy-policy/", "pt-BR"),
     ("en/privacy-policy/index.html", "en/privacy-policy/index.md", "https://hsnlabs.ai/en/privacy-policy/", "en"),
     ("modern-slavery-statement/index.html", "modern-slavery-statement/index.md", "https://hsnlabs.ai/modern-slavery-statement/", "pt-BR"),

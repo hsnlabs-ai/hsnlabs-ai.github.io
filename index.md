@@ -3,7 +3,7 @@ title: "Adoção de Engenharia Agêntica | hsnlabs"
 description: "Boutique de Forward Deployed Engineering para IA corporativa. Ontologias de negócio, orquestração em LangGraph e agentes determinísticos em produção."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T12:31:39Z"
+updatedAt: "2026-10-19T13:02:11Z"
 ---
 
 # Adoção de Engenharia Agêntica | hsnlabs
