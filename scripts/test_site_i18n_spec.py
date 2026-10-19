@@ -212,6 +212,7 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "en" / "langchain" / "index.html",
         SITE_DIR / "en" / "snowflake" / "index.html",
         SITE_DIR / "en" / "braintrust" / "index.html",
+        SITE_DIR / "en" / "canvas" / "index.html",
         SITE_DIR / "en" / "privacy-policy" / "index.html",
         SITE_DIR / "en" / "modern-slavery-statement" / "index.html",
         SITE_DIR / "404.html",
@@ -226,7 +227,6 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "snowflake" / "index.html",
         SITE_DIR / "braintrust" / "index.html",
         SITE_DIR / "canvas" / "index.html",
-        SITE_DIR / "en" / "canvas" / "index.html",
         SITE_DIR / "privacy-policy" / "index.html",
         SITE_DIR / "modern-slavery-statement" / "index.html",
     ]

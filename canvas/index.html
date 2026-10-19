@@ -643,6 +643,61 @@
       pointer-events: auto;
     }
 
+    
+    @media screen and (max-width: 900px) {
+      .canvas-viewport-wrapper {
+        overflow-x: hidden !important;
+      }
+      .canvas-sheet {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        padding: 16px !important;
+        transform: none !important;
+      }
+      .sheet-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      .sheet-header .header-right {
+        width: 100% !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+      }
+      .zoom-control-pill {
+        display: none !important;
+      }
+      .canvas-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+      }
+      .c-box,
+      .b-process, .b-deterministic, .b-legacy, .b-ontology,
+      .b-governance, .b-compliance, .b-saboteurs, .b-harness,
+      .b-tokenomics, .b-roi, .b-rollout {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+      }
+      .box-title-group h2 {
+        font-size: 13px !important;
+      }
+      .box-questions {
+        font-size: 12.5px !important;
+        line-height: 1.5 !important;
+      }
+      .q-hint {
+        font-size: 11.5px !important;
+        line-height: 1.45 !important;
+      }
+      .b-process .postit-area,
+      .b-ontology .postit-area {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+    }
+
     /* FOOTER */
     .site-footer {
       background: var(--canvas);
