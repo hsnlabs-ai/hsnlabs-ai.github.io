@@ -152,13 +152,13 @@ def build_pt_home():
     html = safe_replace(html, '<html lang="en">', '<html lang="pt-BR">')
     
     # 1. Title and Head Meta Tags
-    html = safe_replace(html, '<title>Agentic Engineering Adoption | hsnlabs</title>', '<title>Adoção de Engenharia Agêntica | hsnlabs</title>')
+    html = safe_replace(html, '<title>Agentic Engineering Adoption | hsnlabs</title>', '<title>Adoção de Engenharia Agentica | hsnlabs</title>')
     html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta property="og:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta property="og:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="hsnlabs &middot; Adoção de Engenharia Agentica">')
     html = safe_replace(html, '<meta property="og:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta property="og:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<meta name="twitter:url" content="https://hsnlabs.ai/">', '<meta name="twitter:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta name="twitter:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="hsnlabs &middot; Adoção de Engenharia Agêntica">')
+    html = safe_replace(html, '<meta name="twitter:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="hsnlabs &middot; Adoção de Engenharia Agentica">')
     html = safe_replace(html, '<meta name="twitter:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="twitter:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
@@ -175,7 +175,7 @@ def build_pt_home():
     html = safe_replace(
         html,
         '"description": "An engineering lab with over five years of shipping AI products and resilient agent architectures in production."',
-        '"description": "Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção."'
+        '"description": "Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção."'
     )
     
     # Nav Menu
@@ -194,7 +194,7 @@ def build_pt_home():
         Agentic Engineering <span style="color: var(--cyan-text);">Adoption.</span>
       </h1>''',
         '''      <h1 class="display-hero">
-        Adoção de <span style="color: var(--cyan-text);">Engenharia Agêntica.</span>
+        Adoção de <span style="color: var(--cyan-text);">Engenharia Agentica.</span>
       </h1>'''
     )
     html = safe_replace(
@@ -235,17 +235,17 @@ def build_pt_home():
     html = safe_replace(
         html,
         'The Agentic Development Life Cycle, or ADLC, establishes a rigorous spec-driven governance layer over the enterprise stack. We bind autonomous agents to code-level software guards, finite state machines, and executable business ontologies so workflows never fail in production.',
-        'O ciclo de vida de desenvolvimento agêntico, ou ADLC, estabelece governança orientada a especificações sobre a infraestrutura corporativa. Vinculamos agentes autônomos a guardas de código, máquinas de estado finitas e ontologias executáveis para garantir que fluxos críticos operem com determinismo em produção.'
+        'O ciclo de vida de desenvolvimento agentico, ou ADLC, estabelece governança orientada a especificações sobre a infraestrutura corporativa. Vinculamos agentes autônomos a guardas de código, máquinas de estado finitas e ontologias executáveis para garantir que fluxos críticos operem com determinismo em produção.'
     )
     
     # 4. Blueprint card controls & specs
     html = safe_replace(html, 'title="Zoom in" aria-label="Zoom in"', 'title="Aproximar zoom" aria-label="Aproximar zoom"')
     html = safe_replace(html, 'title="Zoom out" aria-label="Zoom out"', 'title="Afastar zoom" aria-label="Afastar zoom"')
     html = safe_replace(html, 'title="Toggle fullscreen" aria-label="Toggle fullscreen"', 'title="Alternar tela cheia" aria-label="Alternar tela cheia"')
-    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Diagram"', 'alt="Diagrama de Arquitetura Agêntica Enterprise da hsnlabs"')
-    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Preview"', 'alt="Prévia da Arquitetura Agêntica Enterprise da hsnlabs"')
+    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Diagram"', 'alt="Diagrama de Arquitetura Agentica Enterprise da hsnlabs"')
+    html = safe_replace(html, 'alt="hsnlabs Enterprise Agentic Architecture Preview"', 'alt="Prévia da Arquitetura Agentica Enterprise da hsnlabs"')
     html = safe_replace(html, '<span>Explore Fullscreen Architecture ↗</span>', '<span>Explorar Arquitetura em Tela Cheia ↗</span>')
-    html = safe_replace(html, '<h4>hsnlabs Enterprise Agentic Architecture Components</h4>', '<h4>Componentes da Arquitetura Agêntica Enterprise da hsnlabs</h4>')
+    html = safe_replace(html, '<h4>hsnlabs Enterprise Agentic Architecture Components</h4>', '<h4>Componentes da Arquitetura Agentica Enterprise da hsnlabs</h4>')
     
     # 5. Form & Contact Section
     html = safe_replace(html, 'placeholder="Your Name"', 'placeholder="Seu Nome"')

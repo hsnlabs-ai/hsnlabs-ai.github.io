@@ -66,7 +66,7 @@ Sem apresentações teóricas de slides, entregamos software funcional com códi
 
 Trabalhamos diretamente com CTOs, VPs de Engenharia e equipes de produto para auditar fluxos existentes, eliminar pontos de falha e colocar agentes em operação sobre sistemas corporativos legados.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 

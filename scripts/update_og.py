@@ -35,7 +35,7 @@ def extract_hero_data(html_path: Path, lang: str):
             accent = ""
     else:
         if lang == "pt":
-            lead, accent = "Adoção de", "Engenharia Agêntica."
+            lead, accent = "Adoção de", "Engenharia Agentica."
         else:
             lead, accent = "Agentic Engineering", "Adoption."
 

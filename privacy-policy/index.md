@@ -118,7 +118,7 @@ Requests regarding personal data processing or exercise of statutory rights shou
 
 This Policy is governed by and construed in accordance with the Laws of the Federative Republic of Brazil, specifically Law 13709 of 2018. The forum of the judicial district of São Paulo, State of São Paulo, Brazil, is elected to resolve disputes arising from this document.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 

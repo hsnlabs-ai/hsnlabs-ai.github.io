@@ -14,7 +14,7 @@ updatedAt: "2026-10-17T12:40:41Z"
 
 ## HR Tech Enterprise: Da fragmentação de portais legados à resolução instantânea em WhatsApp e Teams
 
-Descubra como uma plataforma corporativa de RH substituiu o atendimento manual de N1 por orquestração agêntica sobre TOTVS e SAP em apenas 8 semanas.
+Descubra como uma plataforma corporativa de RH substituiu o atendimento manual de N1 por orquestração agentica sobre TOTVS e SAP em apenas 8 semanas.
 
 ## Temos orgulho de contar as histórias de sucesso dos nossos clientes
 
@@ -38,7 +38,7 @@ Como uma instituição financeira implementou agentes baseados em Máquinas de E
 
 Substituição de ordens manuais de manutenção fabril por agentes que cruzam manuais técnicos, telemetria e ordens do SAP autonomamente.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 

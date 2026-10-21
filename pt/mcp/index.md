@@ -82,7 +82,7 @@ Um roadmap corporativo ativo implantando agentes autônomos em fluxos críticos 
 
 Converse diretamente com nossa equipe de Engenharia Forward Deployed para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 

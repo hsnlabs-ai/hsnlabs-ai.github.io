@@ -1,6 +1,6 @@
 ---
 title: "Conselho Executivo de IA & Advisory · hsnlabs"
-description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
+description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/pt/advisory/"
 locale: "pt-BR"
 updatedAt: "2026-10-17T12:40:41Z"
@@ -8,15 +8,15 @@ updatedAt: "2026-10-17T12:40:41Z"
 
 # Conselho Executivo de IA & Advisory · hsnlabs
 
-> Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento.
+> Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento.
 
-# Advisory de IA Agêntica Além da implementação técnica.
+# Advisory de IA Agentica Além da implementação técnica.
 
 Um assento executivo dedicado para founders e C-levels liderarem a transição de arquitetura, mitigação de risco operacional e blindagem de margem diante da disrupção por agentes autônomos.
 
 ## Hugo Nascimento.
 
-Empresário, consultor e diretor de tecnologia e produto atuando como CPTO, Hugo Nascimento é pioneiro na implementação de sistemas agênticos em produção para grandes contas e referência na aplicação dessas arquiteturas desde 2022.
+Empresário, consultor e diretor de tecnologia e produto atuando como CPTO, Hugo Nascimento é pioneiro na implementação de sistemas agenticos em produção para grandes contas e referência na aplicação dessas arquiteturas desde 2022.
 
 Engenheiro certificado pela LangChain, atua diretamente no conselho de empresas em crescimento e grandes operações para traduzir a disrupção da IA em decisões seguras de arquitetura, reestruturação operacional e blindagem de margem.
 
@@ -66,13 +66,13 @@ Estabelecemos limites operacionais estritos. Desenhamos protocolos de escalada, 
 
 ## Conte sobre a sua empresa
 
-Vou revisar pessoalmente cada aplicação. Busco founders e executivos de empresas com faturamento anual acima de R$ 10 milhões, dispostos a trabalhar por um ciclo de 6 meses na transição de arquitetura, governança e mitigação de risco com IA agêntica.
+Vou revisar pessoalmente cada aplicação. Busco founders e executivos de empresas com faturamento anual acima de R$ 10 milhões, dispostos a trabalhar por um ciclo de 6 meses na transição de arquitetura, governança e mitigação de risco com IA agentica.
 
 ### Aplicação Recebida
 
 Obrigado pelo envio. Hugo Nascimento revisará os dados da sua empresa pessoalmente e retornará pelo seu e-mail corporativo em até 48 horas.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 

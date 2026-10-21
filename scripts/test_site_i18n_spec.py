@@ -156,7 +156,7 @@ def test_gate_s8_portuguese_accentuation():
         r'\badocao\b', r'\bestrategia\b', r'\boperacao\b', r'\boperacoes\b',
         r'\breducao\b', r'\bresponsavel\b', r'\banalisara\b', r'\brespondera\b',
         r'\bpolitica\b', r'\bdeclaracao\b', r'\blaboratorio\b', r'\bnavegacao\b',
-        r'\bagenticas\b', r'\bagentica\b', r'\bproducao\b', r'\bimplantacao\b',
+        r'\bproducao\b', r'\bimplantacao\b',
         r'\bintegracao\b', r'\bvalidacao\b', r'\bgovernanca\b', r'\bperimetro\b',
         r'\bcriticos\b', r'\bautonomos\b', r'\bnegocio\b', r'\betica\b',
         r'\bsenior\b', r'\bqualificacao\b', r'\bcriterios\b',

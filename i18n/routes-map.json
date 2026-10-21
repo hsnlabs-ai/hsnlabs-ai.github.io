@@ -5,7 +5,7 @@
       "en_path": "/en/",
       "pt_path": "/",
       "title_en": "Agentic Engineering Adoption | hsnlabs",
-      "title_pt": "Adoção de Engenharia Agêntica | hsnlabs",
+      "title_pt": "Adoção de Engenharia Agentica | hsnlabs",
       "description_en": "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud, AI tokens, and tooling.",
       "description_pt": "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
     },
@@ -25,7 +25,7 @@
       "title_en": "Agentic AI Advisory · hsnlabs",
       "title_pt": "Conselho Executivo de IA & Advisory · hsnlabs",
       "description_en": "Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries.",
-      "description_pt": "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
+      "description_pt": "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento."
     },
     {
       "id": "site_canvas",
@@ -34,7 +34,7 @@
       "title_en": "The Agentic Pilot Canvas v1.4 · hsnlabs",
       "title_pt": "The Agentic Pilot Canvas v1.4 · hsnlabs",
       "description_en": "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance.",
-      "description_pt": "Framework aberto sob licença MIT para desenhar pilotos de IA agêntica enterprise: ontologias sobre dados legados, determinismo e governança em produção."
+      "description_pt": "Framework aberto sob licença MIT para desenhar pilotos de IA agentica enterprise: ontologias sobre dados legados, determinismo e governança em produção."
     },
     {
       "id": "site_mcp",
@@ -52,7 +52,7 @@
       "title_en": "LangChain & LangGraph · In Production Since 2022 · hsnlabs",
       "title_pt": "LangChain & LangGraph · Em Produção desde 2022 · hsnlabs",
       "description_en": "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.",
-      "description_pt": "Engenharia agêntica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
+      "description_pt": "Engenharia agentica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
     },
     {
       "id": "site_snowflake",
@@ -188,7 +188,7 @@
       "title_en": "Chatbot vs Agent: Why Replacing BPOs Requires Production Ontologies",
       "title_pt": "Chatbot vs Agente: Por Que Substituir BPOs Exige Ontologias em Producao",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "diferenca entre chatbot e agente de ia",
       "en_path": "/blog/post/chatbot-vs-agent/",
       "pt_path": "/blog/pt/post/chatbot-vs-agente/"
@@ -199,7 +199,7 @@
       "title_en": "Case Study: How Cleveland Clinic Scaled Patient Flow with Operational Agents",
       "title_pt": "Estudo de Caso: Como a Cleveland Clinic Escalou Fluxo de Pacientes",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "estudo de caso agentes ia saude operacao",
       "en_path": "/blog/post/cleveland-clinic-case-study-operational-agents/",
       "pt_path": "/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/"
@@ -243,7 +243,7 @@
       "title_en": "Why Big 4 Slide Decks Fail on Agent Projects",
       "title_pt": "Por Que Apresentacoes de Big 4 Falham em Projetos de Agentes",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "sprint arquitetura agentes enterprise",
       "en_path": "/blog/post/five-day-architecture-sprint/",
       "pt_path": "/blog/pt/post/sprint-arquitetura-cinco-dias/"
@@ -254,7 +254,7 @@
       "title_en": "How to Build an Enterprise Ontology from Scratch: Step by Step",
       "title_pt": "Como Construir uma Ontologia Enterprise do Zero: Passo a Passo",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "como construir ontologia de dados empresarial",
       "en_path": "/blog/post/how-to-build-an-enterprise-ontology-from-scratch/",
       "pt_path": "/blog/pt/post/como-construir-ontologia-enterprise-do-zero/"
@@ -265,7 +265,7 @@
       "title_en": "How to Build an Operational Business Ontology in Python and MCP",
       "title_pt": "Como Construir uma Ontologia Operacional de Negocios em Python e MCP",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "ontologia operacional python mcp modelo",
       "en_path": "/blog/post/how-to-build-operational-ontology-python-mcp/",
       "pt_path": "/blog/pt/post/como-construir-ontologia-operacional-python-mcp/"
@@ -298,7 +298,7 @@
       "title_en": "LATAM Airlines: Production Agents in a 3 Percent Margin Business",
       "title_pt": "LATAM Airlines: Agentes em Producao com Margem de 3 Por Cento",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "estudo caso latam airlines agentes automacao",
       "en_path": "/blog/post/latam-airlines-case-study/",
       "pt_path": "/blog/pt/post/estudo-caso-latam-airlines/"
@@ -309,7 +309,7 @@
       "title_en": "Legacy Core Systems Will Not Die: They Are the Execution Engine",
       "title_pt": "Sistemas Transacionais Legados Nao Vao Morrer: Eles Sao o Motor",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "integracao sistemas legados agentes ia mainframe",
       "en_path": "/blog/post/legacy-core-backing-engine/",
       "pt_path": "/blog/pt/post/sistemas-legados-motor-execucao/"
@@ -353,7 +353,7 @@
       "title_en": "Ontology vs. Knowledge Graph: Key Differences, Architecture, and Agent Reliability",
       "title_pt": "Ontologia vs Grafo de Conhecimento: Diferencas Chave e Arquitetura",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "diferenca ontologia e grafo de conhecimento",
       "en_path": "/blog/post/ontology-vs-knowledge-graph/",
       "pt_path": "/blog/pt/post/ontologia-vs-grafo-conhecimento/"
@@ -364,7 +364,7 @@
       "title_en": "The Architecture of Palantir AIP: Why Enterprise Agents Require an Operational Ontology",
       "title_pt": "A Arquitetura do Palantir AIP: Por Que Agentes Exigem Ontologia Operacional",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "arquitetura palantir aip ontologia analise",
       "en_path": "/blog/post/palantir-aip-bootcamp-operational-ontology/",
       "pt_path": "/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/"
@@ -397,7 +397,7 @@
       "title_en": "How We Protect Enterprise Databases from AI Agents",
       "title_pt": "Como Protegemos Bancos de Dados Enterprise de Agentes de IA",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "seguranca bancos de dados mcp isolamento perimetro",
       "en_path": "/blog/post/perimeter-isolation-mcp-data-contracts/",
       "pt_path": "/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/"
@@ -419,7 +419,7 @@
       "title_en": "The Operational Ontology: How Enterprises Connect LLMs to Proprietary State",
       "title_pt": "A Ontologia Operacional: Como Empresas Conectam LLMs aos Dados Proprietarios",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "ontologia operacional definicao arquitetura",
       "en_path": "/blog/post/the-operational-ontology/",
       "pt_path": "/blog/pt/post/a-ontologia-operacional/"
@@ -441,7 +441,7 @@
       "title_en": "Case Study: 42 Calls in a Loop at 2 AM",
       "title_pt": "Estudo de Caso: 42 Chamadas em Loop as 2 da Manha",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "loops infinitos agentes ia maquina estados finitos",
       "en_path": "/blog/post/unconstrained-agents-finite-state-machines/",
       "pt_path": "/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/"
@@ -485,7 +485,7 @@
       "title_en": "The Agentic Pilot Canvas v1.4: The Framework for Enterprise AI Pilots That Survive Production",
       "title_pt": "The Agentic Pilot Canvas v1.4: O Framework para Desenhar Pilotos de IA que Sobrevivem a Producao",
       "category_en": "Agentic Engineering",
-      "category_pt": "Engenharia Agêntica",
+      "category_pt": "Engenharia Agentica",
       "target_keyword_pt": "the agentic pilot canvas v1 4 framework ia",
       "en_path": "/blog/post/the-agentic-pilot-canvas-v1-4/",
       "pt_path": "/blog/pt/post/the-agentic-pilot-canvas-v1-4/"

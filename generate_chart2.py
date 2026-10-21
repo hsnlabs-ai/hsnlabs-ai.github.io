@@ -58,7 +58,7 @@ def create_economic_matrix():
     draw.text((c2_left + 20, c1_top + 15), "HIGH IC MODEL (1 OPERADOR + AGENTES)", font=f_col_title, fill="#00ff88")
 
     items_c2 = [
-        ("Composição da Folha", "1 Operador Sênior (High IC) + Stack Agêntico (MCP, LLMs, Scripts)"),
+        ("Composição da Folha", "1 Operador Sênior (High IC) + Stack Agentico (MCP, LLMs, Scripts)"),
         ("Custo Anual Consolidado", "R$ 600k a R$ 1.0M / ano (remuneração de topo + infra de IA)"),
         ("Imposto de Coordenação", "Quase zero: context switching mínimo, zero reuniões de passagem de bastão"),
         ("Tempo até 1º Release", "3 a 7 dias (da hipótese ao deploy funcional e instrumentado)"),

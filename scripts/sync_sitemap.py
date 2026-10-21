@@ -79,7 +79,7 @@ for page in routes.get("site_pages", []):
         }
         pt_img = {
             "loc": "https://hsnlabs.ai/assets/brand/og-image-pt.png",
-            "title": "hsnlabs | Adoção de Engenharia Agêntica",
+            "title": "hsnlabs | Adoção de Engenharia Agentica",
             "caption": "hsnlabs — Engenharia híbrida, ontologias de negócio e agentes determinísticos em produção."
         }
     add_url_block(en_url, pt_url, priority=prio, changefreq=freq, image_info=img, pt_image_info=pt_img)

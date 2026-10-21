@@ -63,7 +63,7 @@ def create_org_flattening_chart():
     hic_layers = [
         ("LIDERANÇA EXECUTIVA / FUNDADORES", "Problemas de negócio, alocação de capital e metas de receita", "#0f261c", 160, 360),
         ("HIGH ICs (OPERADORES DE ALTO IMPACTO)", "Propriedade end-to-end, julgamento crítico e execução autônoma", "#00ff88", 50, 470),
-        ("CAMADA AGÊNTICA & INFRAESTRUTURA", "Runtimes de IA, MCP, bancos legados, testes e automação", "#0c2d38", 120, 400)
+        ("CAMADA AGENTICA & INFRAESTRUTURA", "Runtimes de IA, MCP, bancos legados, testes e automação", "#0c2d38", 120, 400)
     ]
 
     h_y = b1_top + 80

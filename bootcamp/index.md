@@ -38,7 +38,7 @@ Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro
 
 Envie seus dados para solicitar uma chamada técnica. Analisamos seus sistemas e confirmamos os detalhes de qualificação em até 24 horas.
 
-Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agênticas resilientes em produção.
+Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
