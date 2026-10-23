@@ -36,7 +36,11 @@
   <!-- Google Fonts: Cormorant Garamond for display, Inter for UI and body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap">
+  </noscript>
 
   <style>
     :root {
@@ -59,7 +63,7 @@
       --primary: #07090e;
       --primary-active: #141722;
       --body: #475569;
-      --muted: #64748b;
+      --muted: #526071;
       --muted-soft: #94a3b8;
       --hairline: #e2e8f0;
       --hairline-strong: #cbd5e1;
@@ -2502,13 +2506,14 @@
       'ad_personalization': 'denied',
       'wait_for_update': 500
     });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMK24ECXMF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GMK24ECXMF');
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GMK24ECXMF';
+      s.async = true;
+      document.head.appendChild(s);
+    });
   </script>
 
   <!-- Schema.org Structured Data (2026 Knowledge Graph & AI Citation) -->
@@ -2575,7 +2580,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   <header class="header-nav">
     <div class="container header-container">
       <a href="/en/" class="brand-link">
-        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" class="brand-logo-img">
+        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" class="brand-logo-img" width="618" height="200" decoding="async">
       </a>
 
       <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
@@ -2605,7 +2610,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="hero-brand-symbol">
         <div class="brand-symbol-box" id="waterEmblemTrigger" title="Disturb the medium">
           <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
-          <img src="/assets/brand/elements/origami-carp-clean.png" alt="hsnlabs" class="symbol-carp">
+          <img src="/assets/brand/elements/origami-carp-clean.png" alt="hsnlabs" class="symbol-carp" width="212" height="212" decoding="async">
         </div>
       </div>
 
@@ -2629,40 +2634,40 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <div class="portfolio-label">Our Portfolio</div>
         <div class="portfolio-grid">
           <div class="portfolio-item" title="Deloitte">
-            <img src="/assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;">
-            <img src="/assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;">
+            <img src="/assets/portfolio/svg/deloitte-black.svg" class="logo-black" alt="Deloitte" style="height: 22px;" width="118" height="22" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/deloitte-color.svg" class="logo-color" alt="Deloitte" style="height: 22px;" width="118" height="22" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Santander">
-            <img src="/assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;">
-            <img src="/assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;">
+            <img src="/assets/portfolio/svg/santander-black.svg" class="logo-black" alt="Santander" style="height: 18px;" width="103" height="18" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/santander-color.svg" class="logo-color" alt="Santander" style="height: 18px;" width="103" height="18" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Insi">
-            <img src="/assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;">
-            <img src="/assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;">
+            <img src="/assets/portfolio/svg/insi-black.svg" class="logo-black" alt="Insi" style="height: 22px;" width="47" height="22" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/insi-color.svg" class="logo-color" alt="Insi" style="height: 22px;" width="47" height="22" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Softplan">
-            <img src="/assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;">
-            <img src="/assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;">
+            <img src="/assets/portfolio/svg/softplan-black.svg" class="logo-black" alt="Softplan" style="height: 18px;" width="91" height="18" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/softplan-color.svg" class="logo-color" alt="Softplan" style="height: 18px;" width="91" height="18" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Unipar">
-            <img src="/assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;">
-            <img src="/assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;">
+            <img src="/assets/portfolio/svg/unipar-black.svg" class="logo-black" alt="Unipar" style="height: 22px;" width="67" height="22" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/unipar-color.svg" class="logo-color" alt="Unipar" style="height: 22px;" width="67" height="22" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="LWSA">
-            <img src="/assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;">
-            <img src="/assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;">
+            <img src="/assets/portfolio/svg/lwsa-black.svg" class="logo-black" alt="LWSA" style="height: 18px;" width="50" height="18" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/lwsa-color.svg" class="logo-color" alt="LWSA" style="height: 18px;" width="50" height="18" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Turbi">
-            <img src="/assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;">
-            <img src="/assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;">
+            <img src="/assets/portfolio/svg/turbi-black.svg" class="logo-black" alt="Turbi" style="height: 18px;" width="60" height="18" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/turbi-color.svg" class="logo-color" alt="Turbi" style="height: 18px;" width="60" height="18" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Caju">
-            <img src="/assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;">
-            <img src="/assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;">
+            <img src="/assets/portfolio/svg/caju-black.svg" class="logo-black" alt="Caju" style="height: 20px;" width="49" height="20" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/caju-color.svg" class="logo-color" alt="Caju" style="height: 20px;" width="49" height="20" loading="lazy" decoding="async">
           </div>
           <div class="portfolio-item" title="Cast Group">
-            <img src="/assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;">
-            <img src="/assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;">
+            <img src="/assets/portfolio/svg/castgroup-black.svg" class="logo-black" alt="Cast Group" style="height: 20px;" width="79" height="20" loading="lazy" decoding="async">
+            <img src="/assets/portfolio/svg/castgroup-color.svg" class="logo-color" alt="Cast Group" style="height: 20px;" width="79" height="20" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -2695,31 +2700,31 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="field-proof-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 22px;">
         <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
           <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
-            <img src="/assets/images/field/opcao_19_hugo_briefing_arquitetura_sala_slide.jpg" alt="Executive agentic architecture briefing" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+            <img src="/assets/images/field/opcao_19_hugo_briefing_arquitetura_sala_slide.webp" alt="Executive agentic architecture briefing" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
           </div>
           <figcaption style="padding: 2px 4px 4px;">
             <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">01 · Architectural Alignment</div>
-            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Mapping business rules and deterministic guardrails with leadership before writing code.</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Mapping business rules and deterministic boundaries with leadership before touching code.</div>
           </figcaption>
         </figure>
 
         <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
           <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
-            <img src="/assets/images/field/opcao_08_hugo_mentoria_mesa_tablet_horizontal.jpg" alt="Hands-on workbench mentoring during the Agentic Bootcamp" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+            <img src="/assets/images/field/opcao_08_hugo_mentoria_mesa_tablet_horizontal.webp" alt="Hands-on workbench mentoring during the Agentic Bootcamp" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
           </div>
           <figcaption style="padding: 2px 4px 4px;">
             <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">02 · Workbench Immersion</div>
-            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Forward-deployed engineering side-by-side with your team designing workflows over real operations.</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">FDEs working alongside your team designing workflows and ontologies on live production systems.</div>
           </figcaption>
         </figure>
 
         <figure class="card" style="margin: 0; padding: 12px; text-align: left; display: flex; flex-direction: column; gap: 10px;">
           <div style="aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--hairline); background: #eae8e4;">
-            <img src="/assets/images/field/opcao_01_over_the_shoulder_laptop_skill.jpg" alt="Over-the-shoulder view configuring SKILL.md and agent specs" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
+            <img src="/assets/images/field/opcao_01_over_the_shoulder_laptop_skill.webp" alt="Over-the-shoulder view configuring SKILL.md and agent specs" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
           </div>
           <figcaption style="padding: 2px 4px 4px;">
             <div style="font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cyan-text); margin-bottom: 3px;">03 · Code to Spec</div>
-            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Direct agent instrumentation, <code>SKILL.md</code> specifications, and sandbox execution guards.</div>
+            <div style="font-size: 0.84rem; color: var(--body); line-height: 1.45;">Direct instrumentation of autonomous agents, <code>SKILL.md</code> specifications, and sandbox guards.</div>
           </figcaption>
         </figure>
       </div>
@@ -2778,7 +2783,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
             <div class="blueprint-canvas-wrap">
               <div class="blueprint-canvas" id="blueprintCanvas" draggable="false">
-                <img src="/assets/diagrams/hsn_labs_agentic_architecture.png" alt="hsnlabs Enterprise Agentic Architecture Diagram" class="blueprint-img" id="blueprintImg" width="2880" height="1620" draggable="false" loading="lazy" decoding="async">
+                <img src="/assets/diagrams/hsn_labs_agentic_architecture.webp" alt="hsnlabs Enterprise Agentic Architecture Diagram" class="blueprint-img" id="blueprintImg" width="2880" height="1620" draggable="false" loading="lazy" decoding="async">
               </div>
             </div>
           </div>
@@ -2786,7 +2791,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <!-- Mobile Optimized Card: Touch Safe Static Preview -->
           <div class="blueprint-mobile-card">
             <div class="blueprint-mobile-preview">
-              <img src="/assets/diagrams/hsn_labs_agentic_architecture.png" alt="hsnlabs Enterprise Agentic Architecture Preview" width="2880" height="1620" loading="lazy">
+              <img src="/assets/diagrams/hsn_labs_agentic_architecture.webp" alt="hsnlabs Enterprise Agentic Architecture Preview" width="2880" height="1620" loading="lazy" decoding="async">
             </div>
             <a href="/architecture.html" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center; text-align: center; padding: 12px 18px; font-weight: 700;">
               <span>Explore Fullscreen Architecture ↗</span>
@@ -2836,7 +2841,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <!-- Post 1: Spoke 1 (Why Agents Fail) -->
         <article class="editorial-card">
           <div class="editorial-card-media">
-            <img src="/assets/images/posts/the-poc-graveyard.webp" alt="The PoC Graveyard" decoding="async">
+            <img src="/assets/images/posts/the-poc-graveyard.webp" alt="The PoC Graveyard" width="1200" height="675" loading="lazy" decoding="async">
           </div>
           <div class="editorial-card-content">
             <div class="editorial-meta">
@@ -2853,7 +2858,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <!-- Post 2: Spoke 2 (Agentic Engineering) -->
         <article class="editorial-card">
           <div class="editorial-card-media">
-            <img src="/assets/images/posts/ontology-vs-database-schema.webp" alt="Ontology versus Database Schema" decoding="async">
+            <img src="/assets/images/posts/ontology-vs-database-schema.webp" alt="Ontology versus Database Schema" width="1200" height="675" loading="lazy" decoding="async">
           </div>
           <div class="editorial-card-content">
             <div class="editorial-meta">
@@ -2870,7 +2875,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <!-- Post 3: Spoke 3 (Future of Work) -->
         <article class="editorial-card">
           <div class="editorial-card-media">
-            <img src="/assets/images/posts/bpo-replacement-matrix.webp" alt="The BPO Replacement Matrix" decoding="async">
+            <img src="/assets/images/posts/bpo-replacement-matrix.webp" alt="The BPO Replacement Matrix" width="1200" height="675" loading="lazy" decoding="async">
           </div>
           <div class="editorial-card-content">
             <div class="editorial-meta">
@@ -2894,7 +2899,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="hero-founder-callout" style="margin: 0 auto 40px auto;">
         <div style="display: flex; align-items: center; gap: 14px; flex-shrink: 0;">
           <div class="founder-avatar-box" data-initial-index="0">
-            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img">
+            <img src="/assets/images/author/pool/hugo_01.jpg" alt="Hugo S. Nascimento" class="founder-avatar-img" width="400" height="400" loading="lazy" decoding="async">
           </div>
           <div>
             <div class="founder-meta-title">Have a project in mind?</div>
@@ -2904,19 +2909,19 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
         <div class="founder-cred-group">
           <a href="/en/langchain/" class="founder-cred-item" title="LangChain Certified Engineer">
-            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo">
+            <img src="/assets/brand/langchain/lc-lockup-black.svg" alt="LangChain" class="founder-cred-logo" width="162" height="30" loading="lazy" decoding="async">
             <span class="founder-cred-sub">Certified <span class="founder-cred-arrow">↗</span></span>
           </a>
           <a href="/en/snowflake/" class="founder-cred-item" title="Snowflake AI Data Cloud Partner">
-            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo">
+            <img src="/assets/brand/snowflake/snowflake-lockup-blue.svg" alt="Snowflake" class="founder-cred-logo" width="125" height="30" loading="lazy" decoding="async">
             <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
           </a>
           <a href="/en/databricks/" class="founder-cred-item" title="Databricks Lakehouse &amp; Mosaic AI Partner">
-            <img src="/assets/brand/databricks/databricks-lockup-color.svg" alt="Databricks" class="founder-cred-logo">
+            <img src="/assets/brand/databricks/databricks-lockup-color.svg" alt="Databricks" class="founder-cred-logo" width="189" height="30" loading="lazy" decoding="async">
             <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
           </a>
           <a href="/en/braintrust/" class="founder-cred-item" title="Braintrust AI Observability &amp; Evals Partner">
-            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo">
+            <img src="/assets/brand/braintrust/braintrust-lockup-blue.svg" alt="Braintrust" class="founder-cred-logo" width="192" height="30" loading="lazy" decoding="async">
             <span class="founder-cred-sub">Partner <span class="founder-cred-arrow">↗</span></span>
           </a>
         </div>
