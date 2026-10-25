@@ -83,7 +83,7 @@
     },
     {
       img: assetBase + 'hugo_08.jpg',
-      label: 'Quer trocar uma ideia sobre seu projeto?',
+      label: 'Quer trocar uma ideia?',
       title: 'Compartilhe com Hugo, CPTO',
       btn: 'Iniciar Conversa'
     },
