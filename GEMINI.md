@@ -13,6 +13,6 @@ Operational directives for Gemini models maintaining, extending, or refactoring 
   * Mandatory standard Brazilian Portuguese diacritics across all PT routes.
   * Never use "semanas" / "weeks" or "dias" / "days" for project or bootcamp durations; always use **months** (`"2 meses"` / `"2 months"`).
 * **Human Presence & Visual Rules:**
-  * `.hero-founder-callout` lives at the top of the final Contact/Application section (`#contact` / `#apply`) near the footer, preserving the 10s rotation (`assets/js/founder-rotation.js`) and the 3 credential lockups (`LangChain Certified`, `Snowflake Partner`, `Braintrust Partner`).
+  * `.hero-founder-callout` lives at the top of the final Contact/Application section (`#contact` / `#apply`) near the footer, preserving the 10s rotation (`assets/js/founder-rotation.js`) and the 3 credential lockups (`LangChain Certified`, `Snowflake Partner`, `Databricks Partner`).
   * Field documentary photos in `/assets/images/field/` (`opcao_19`, `opcao_08`, `opcao_01`) must remain in original color (never apply grayscale/B&W filters) and must never be inserted inside the `"Nosso Método"` (`#protocol`) cards of `/bootcamp/`.
 * **Validation Harness:** Run `python3 scripts/test_site_i18n_spec.py` before every commit to verify all 11 gates pass.

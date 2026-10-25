@@ -3,7 +3,7 @@ title: "Privacy Policy · hsnlabs"
 description: "Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
 url: "https://hsnlabs.ai/en/privacy-policy/"
 locale: "en"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Privacy Policy · hsnlabs
@@ -139,8 +139,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.
 

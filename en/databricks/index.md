@@ -3,7 +3,7 @@ title: "Databricks Lakehouse · Agent Architecture · hsnlabs"
 description: "Operationalize deterministic LangGraph agents and executable business ontologies over the Databricks Lakehouse, Unity Catalog, and Mosaic AI."
 url: "https://hsnlabs.ai/en/databricks/"
 locale: "en"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Databricks Lakehouse · Agent Architecture · hsnlabs
@@ -87,7 +87,5 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.

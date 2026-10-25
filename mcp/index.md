@@ -3,7 +3,7 @@ title: "Servidores MCP Enterprise · hsnlabs"
 description: "Construímos servidores privados e seguros de Model Context Protocol dentro da sua infraestrutura corporativa. Conecte agentes autônomos aos seus ERPs e bancos de dados sob governança zero-trust."
 url: "https://hsnlabs.ai/mcp/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Servidores MCP Enterprise · hsnlabs
@@ -103,8 +103,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 

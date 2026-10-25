@@ -3,7 +3,7 @@ title: "Política de Privacidade · hsnlabs"
 description: "Política de Privacidade da hsnlabs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade."
 url: "https://hsnlabs.ai/privacy-policy/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Política de Privacidade · hsnlabs
@@ -139,8 +139,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 

@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-25T10:50:21Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -59,8 +59,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.
 

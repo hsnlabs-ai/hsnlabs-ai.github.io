@@ -3,7 +3,7 @@ title: "Declaração de Conformidade e Ética · hsnlabs"
 description: "Declaração de Conformidade e Ética da hsnlabs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos."
 url: "https://hsnlabs.ai/modern-slavery-statement/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Declaração de Conformidade e Ética · hsnlabs
@@ -105,8 +105,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 

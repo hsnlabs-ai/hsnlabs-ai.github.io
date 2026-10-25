@@ -3,7 +3,7 @@ title: "LangChain & LangGraph · Em Produção desde 2022 · hsnlabs"
 description: "Engenharia agentica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
 url: "https://hsnlabs.ai/langchain/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # LangChain & LangGraph · Em Produção desde 2022 · hsnlabs
@@ -87,7 +87,5 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.

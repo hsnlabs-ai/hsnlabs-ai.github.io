@@ -3,7 +3,7 @@ title: "Adoção de Engenharia Agentica | hsnlabs"
 description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T11:13:48Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Adoção de Engenharia Agentica | hsnlabs
@@ -99,8 +99,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 

@@ -3,7 +3,7 @@ title: "Braintrust Evals & CI/CD · Agent Architecture · hsnlabs"
 description: "Eliminate stochastic prompt failures in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability."
 url: "https://hsnlabs.ai/en/braintrust/"
 locale: "en"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Braintrust Evals & CI/CD · Agent Architecture · hsnlabs
@@ -22,7 +22,7 @@ Why enterprise engineering leaders standardize continuous agent evaluation and C
 
 Every prompt edit, model swap, or tool schema change runs automatically against golden production datasets in Braintrust, blocking regressions before code reaches users.
 
-### Production trace conversion into golden datasets
+### Logs as Proprietary Asset
 
 Real-world edge cases and production anomalies captured via live telemetry are converted in one click into permanent regression test cases.
 
@@ -87,7 +87,5 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.

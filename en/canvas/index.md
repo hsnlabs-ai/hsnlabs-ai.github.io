@@ -3,7 +3,7 @@ title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
 description: "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # The Agentic Pilot Canvas v1.4 · hsnlabs
@@ -149,7 +149,5 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.

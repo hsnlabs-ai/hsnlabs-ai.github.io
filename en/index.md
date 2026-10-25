@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | hsnlabs"
 description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-25T11:13:48Z"
+updatedAt: "2026-10-25T12:20:05Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
@@ -99,8 +99,6 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 - Snowflake AI Data Cloud
 
 - Databricks Lakehouse
-
-- Braintrust Evals
 
 Architecture field notes & playbooks sent to your corporate inbox.
 
