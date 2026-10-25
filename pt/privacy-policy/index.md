@@ -124,7 +124,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Bootcamp de Agentes
 
-- The Agentic Canvas
+- The Agentic Canvas™
 
 - Advisory
 
