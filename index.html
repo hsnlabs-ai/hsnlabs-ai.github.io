@@ -1981,31 +1981,50 @@
     }
 
     .reality-stat-box {
-      flex: 0 0 320px;
+      flex: 0 0 380px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
+    .reality-stat-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .reality-stat-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
     .reality-stat-number {
-      font-size: clamp(3.75rem, 5.5vw, 5rem);
+      font-size: clamp(2.5rem, 3.2vw, 3rem);
       font-weight: 700;
       color: #0284c7;
-      line-height: 1;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .reality-stat-details {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
     .reality-stat-desc {
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       font-weight: 500;
       color: var(--ink);
-      line-height: 1.45;
-      margin-bottom: 12px;
+      line-height: 1.4;
+      margin: 0;
     }
 
     .reality-stat-source {
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       color: var(--muted);
       text-decoration: none;
       display: inline-flex;
@@ -2019,6 +2038,12 @@
     .reality-stat-source:hover {
       color: var(--ink);
       border-bottom-color: var(--ink);
+    }
+
+    .reality-stat-row-divider {
+      height: 1px;
+      background-color: var(--hairline);
+      width: 100%;
     }
 
     @media (max-width: 900px) {
@@ -2036,6 +2061,20 @@
       .reality-stat-box {
         flex: 1 1 auto;
         width: 100%;
+      }
+      .reality-stat-row {
+        grid-template-columns: 85px 1fr;
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .reality-stat-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .reality-stat-number {
+        font-size: 2.5rem;
       }
     }
 
@@ -2709,13 +2748,31 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
         <div class="reality-divider" aria-hidden="true"></div>
         <div class="reality-stat-box">
-          <div class="reality-stat-number">46%</div>
-          <div class="reality-stat-desc">
-            das provas de conceito de IA corporativa foram descartadas antes da produção em 2025.
+          <div class="reality-stat-grid">
+            <div class="reality-stat-row">
+              <div class="reality-stat-number">46%</div>
+              <div class="reality-stat-details">
+                <div class="reality-stat-desc">
+                  das provas de conceito com agentes de IA corporativa são descartadas antes da produção.
+                </div>
+                <a href="https://www.spglobal.com/marketintelligence/en/news-insights/research/ai-poc-abandonment-rate" target="_blank" rel="noopener" class="reality-stat-source">
+                  Fonte: S&P Global Market Intelligence, 2025 ↗
+                </a>
+              </div>
+            </div>
+            <div class="reality-stat-row-divider" aria-hidden="true"></div>
+            <div class="reality-stat-row">
+              <div class="reality-stat-number">83%</div>
+              <div class="reality-stat-details">
+                <div class="reality-stat-desc">
+                  dos líderes enfrentam estagnação técnica ao tentar levar fluxos agênticos para a rotina real.
+                </div>
+                <a href="https://lucidworks.com/ebooks/2025-ai-benchmark-survey" target="_blank" rel="noopener" class="reality-stat-source">
+                  Fonte: Lucidworks Benchmark de IA Generativa ↗
+                </a>
+              </div>
+            </div>
           </div>
-          <a href="https://www.spglobal.com/marketintelligence/en/news-insights/research/ai-poc-abandonment-rate" target="_blank" rel="noopener" class="reality-stat-source">
-            Fonte: S&P Global Market Intelligence, 2025 ↗
-          </a>
         </div>
       </div>
 

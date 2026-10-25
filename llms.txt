@@ -7,7 +7,7 @@
 - Overview (EN): https://hsnlabs.ai/en/
 hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp™ backed by US$ 5,000 in cloud, AI tokens, and tooling.
 - Escape the PoC Graveyard: https://hsnlabs.ai/#market-reality
-46% of corporate AI proofs of concept were scrapped before production in 2025 (S&P Global Market Intelligence). Connecting AI to legacy systems without architectural redesign only creates technical debt.
+46% of enterprise AI agent proofs of concept are abandoned before production (S&P Global Market Intelligence) and 83% of leaders face technical stagnation scaling agents (Lucidworks). Connecting AI to legacy systems without architectural redesign only creates technical debt.
 
 ## Entry Engagement: Agentic Bootcamp™
 - Bootcamp Deployment Protocol (PT-BR): https://hsnlabs.ai/bootcamp/
