@@ -1,18 +1,18 @@
 ---
 title: "Agentic Engineering Adoption | hsnlabs"
-description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling."
+description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-25T10:50:21Z"
+updatedAt: "2026-10-25T11:13:48Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
 
-> Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
+> We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
 
 # Agentic Engineering Adoption.
 
-Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
+We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
 
 ## How to escape the enterprise PoC graveyard.
 
