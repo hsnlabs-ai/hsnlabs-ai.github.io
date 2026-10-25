@@ -2,12 +2,1119 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecionando... | hsnlabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Agentic Pilot Canvas &middot; hsnlabs</title>
+  <meta name="description" content="Framework aberto sob licença MIT da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Hugo S. Nascimento, hsnlabs">
   <link rel="canonical" href="https://hsnlabs.ai/canvas/">
-  <meta http-equiv="refresh" content="0; url=/canvas/">
-  <script>window.location.replace("/canvas/" + window.location.search + window.location.hash);</script>
+  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/canvas/">
+  <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/canvas/">
+  <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/canvas/">
+
+  <!-- Open Graph / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/canvas/">
+  <meta property="og:title" content="The Agentic Pilot Canvas &middot; hsnlabs">
+  <meta property="og:description" content="Framework aberto sob licença MIT da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hsnlabs.ai/canvas/">
+  <meta name="twitter:title" content="The Agentic Pilot Canvas &middot; hsnlabs">
+  <meta name="twitter:description" content="Framework aberto sob licença MIT da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "The Agentic Pilot Canvas",
+    "description": "Framework aberto sob licença MIT da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees.",
+    "author": {
+      "@type": "Person",
+      "name": "Hugo S. Nascimento"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "hsnlabs",
+      "url": "https://hsnlabs.ai/"
+    },
+    "url": "https://hsnlabs.ai/canvas/"
+  }
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicons/favicon-16x16.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Typography Tokens */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Canonical Type Scale */
+      --text-xs: 0.75rem;
+      --text-sm: 0.85rem;
+      --text-base: 0.95rem;
+      --text-lg: 1.25rem;
+      --text-xl: 2rem;
+      --text-display: clamp(2.4rem, 5vw, 4.5rem);
+
+      /* Palette Tokens */
+      --canvas: #f5f5f5;
+      --canvas-soft: #fafafa;
+      --surface-card: #ffffff;
+      --surface-strong: #f0efed;
+      --ink: #07090e;
+      --primary: #07090e;
+      --primary-active: #141722;
+      --body: #475569;
+      --muted: #64748b;
+      --muted-soft: #94a3b8;
+      --hairline: #e2e8f0;
+      --hairline-strong: #cbd5e1;
+
+      --cyan: #52B4FD;
+      --cyan-text: #0284c7;
+      --cyan-subtle: rgba(82, 180, 253, 0.12);
+      --cyan-glow: rgba(82, 180, 253, 0.28);
+      --emerald: #10B981;
+
+      --gradient-cyan: rgba(82, 180, 253, 0.30);
+      --gradient-peach: rgba(244, 197, 168, 0.20);
+      --gradient-emerald: rgba(167, 229, 211, 0.25);
+      --gradient-lavender: rgba(200, 184, 224, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--body);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+      letter-spacing: 0.16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
+    }
+
+    .atmosphere-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+      height: 1300px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .orb-cyan {
+      width: 520px;
+      height: 520px;
+      background: var(--gradient-cyan);
+      top: -100px;
+      left: 10%;
+    }
+
+    .orb-peach {
+      width: 440px;
+      height: 440px;
+      background: var(--gradient-peach);
+      top: 60px;
+      right: -40px;
+    }
+
+    .orb-emerald {
+      width: 480px;
+      height: 480px;
+      background: var(--gradient-emerald);
+      top: 500px;
+      left: -60px;
+    }
+
+    .orb-lavender {
+      width: 420px;
+      height: 420px;
+      background: var(--gradient-lavender);
+      top: 750px;
+      right: 12%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(245, 245, 245, 0.9);
+      border-bottom: 1px solid var(--hairline);
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu { display: none !important; }
+    }
+
+    .nav-link {
+      font-size: 0.925rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover { color: var(--ink); }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lang-switch .lang-item {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+      line-height: 1;
+    }
+
+    .lang-switch a.lang-item:hover {
+      color: var(--ink);
+    }
+
+    .lang-switch .lang-item.active {
+      color: var(--ink);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    .lang-switch .lang-sep {
+      color: var(--hairline-strong);
+      font-size: 0.75rem;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-github-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .header-github-link:hover {
+      opacity: 0.7;
+    }
+    .header-github-link svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* BUTTONS: 90-DEGREE STRAIGHT CUTS + AUTHENTIC PAPER TEXTURE */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.925rem;
+      font-weight: 500;
+      border-radius: 0;
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      line-height: 1;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      gap: 8px;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .btn-primary {
+      background: var(--cyan);
+      color: #ffffff;
+      border: 1px solid #3fa5f3;
+      box-shadow: 0 2px 6px rgba(82, 180, 253, 0.35), 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-primary::before {
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+    }
+
+    .btn-primary:hover {
+      background: #42abfc;
+      box-shadow: 0 4px 14px rgba(82, 180, 253, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-outline::before {
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+    }
+
+    .btn-outline:hover {
+      background: #f8fafc;
+      border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+    /* =====================================================
+       SEÇÃO 1: HERO (PADRÃO CANÔNICO DO SITE)
+       ===================================================== */
+    .hero-bootcamp {
+      padding-top: 80px;
+      padding-bottom: 72px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--ink); }
+
+    .display-hero {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 4.25rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+    }
+
+    .hero-lead {
+      font-size: 1.15rem;
+      color: var(--body);
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+      line-height: 1.65;
+    }
+
+    /* =====================================================
+       SEÇÃO 2: DINÂMICA E METODOLOGIA (PADRÃO ADVISORY)
+       ===================================================== */
+    .section-block {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background: var(--canvas-soft);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .display-section {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 56px auto;
+      line-height: 1.6;
+    }
+
+    /* Cards estilo Advisory (.card + .post-it-badge) */
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 920px) {
+      .card-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 36px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .timeline-card::before,
+    .field-figure::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: cover;
+      background-position: center;
+      mix-blend-mode: multiply;
+      opacity: 0.50;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card > *,
+    .timeline-card > *,
+    .field-figure > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card:hover,
+    .timeline-card:hover,
+    .field-figure:hover {
+      transform: translateY(-2px);
+      border-color: var(--hairline-strong);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-it-badge {
+      width: 64px;
+      height: 64px;
+      margin: 0 0 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-sans);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--cyan);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 1px 0 0 rgba(255, 255, 255, 0.2),
+        0 4px 12px rgba(82, 180, 253, 0.45),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+      border-radius: 0;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(-2px);
+    }
+
+    .post-it-badge::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/textures/paper_crumpled_clean.jpg');
+      background-size: 400px;
+      background-position: center center;
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .post-it-badge .content {
+      position: relative;
+      z-index: 2;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    .card-body {
+      font-size: 0.95rem;
+      color: var(--body);
+      line-height: 1.6;
+    }
+
+    /* 4 Passos da Dinâmica (Timeline Grid do Bootcamp) */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      text-align: left;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .timeline-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      border-radius: 0;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .timeline-card strong {
+      font-size: 1.05rem;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .timeline-body {
+      font-size: 0.875rem;
+      color: var(--body);
+      line-height: 1.55;
+    }
+
+    /* =====================================================
+       SEÇÃO 3: SELETOR DE CASO DE USO (EXATAMENTE COMO OS CARDS 01 E 02 ENVIADOS)
+       ===================================================== */
+    .field-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 820px) {
+      .field-selector-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field-figure {
+      margin: 0;
+      padding: 14px;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .field-thumb-box {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border: 1px solid var(--hairline);
+      background: #ffffff;
+    }
+
+    .field-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .field-figure:hover .field-thumb-box img {
+      transform: scale(1.015);
+    }
+
+    .field-caption {
+      padding: 4px 6px 6px 6px;
+    }
+
+    .field-kicker {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cyan-text);
+      margin-bottom: 6px;
+    }
+
+    .field-desc {
+      font-size: 0.9rem;
+      color: var(--body);
+      line-height: 1.5;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--canvas);
+      border-top: 1px solid var(--hairline);
+      padding: 64px 0 36px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(190px, 1.35fr) minmax(140px, 0.95fr) minmax(168px, 1.15fr) minmax(165px, 1.12fr) minmax(285px, 2.15fr);
+      gap: 24px;
+      margin-bottom: 48px;
+      align-items: start;
+    }
+
+    .footer-subscribe-linkedin {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .footer-li-header {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-col-title {
+      font-size: 0.74rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--ink);
+      margin-bottom: 16px;
+      white-space: nowrap;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      line-height: 1.35;
+      transition: color 0.15s ease;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .footer-nav a:hover {
+      color: var(--ink);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--hairline);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: var(--font-sans);
+    }
+
+    .footer-bottom-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom-sep {
+      width: 1px;
+      height: 14px;
+      background: var(--hairline-strong);
+      flex-shrink: 0;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-family: var(--font-sans);
+      transition: color 0.15s ease;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--ink);
+    }
+
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: nowrap;
+    }
+
+    .footer-social-icon {
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 0;
+      border: 1px solid transparent;
+      transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      flex-shrink: 0;
+    }
+
+    .footer-social-icon:hover {
+      color: var(--ink);
+      background: var(--surface-card);
+      border-color: var(--hairline-strong);
+    }
+
+    @media (max-width: 1140px) {
+      .footer-grid {
+        grid-template-columns: minmax(170px, 1.35fr) minmax(135px, 0.95fr) minmax(160px, 1.15fr) minmax(155px, 1.1fr);
+        gap: 32px 24px;
+      }
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline);
+      }
+      .footer-subscribe-linkedin {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-col-brand,
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+      }
+      .footer-col-subscribe {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-github-link { display: none; }
+      .header-actions .btn { padding: 8px 16px; font-size: 0.85rem; }
+      .brand-logo-img { height: 42px; }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecionando para <a href="/canvas/">/canvas/</a>...</p>
+
+  <!-- ATMOSPHERIC BLOOMS -->
+  <div class="atmosphere-bg">
+    <div class="orb orb-cyan"></div>
+    <div class="orb orb-peach"></div>
+    <div class="orb orb-emerald"></div>
+    <div class="orb orb-lavender"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header-nav">
+    <div class="container header-container">
+      <a href="/" class="brand-link">
+        <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" class="brand-logo-img">
+      </a>
+
+      <div class="nav-menu" style="margin-left: auto; margin-right: 32px; display: flex; align-items: center; gap: 24px;">
+        <a href="/advisory/" class="nav-link">Advisory</a>
+        <a href="/blog/pt/" class="nav-link">Blog</a>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://github.com/hsnlabs-ai" class="header-github-link" target="_blank" rel="noopener" title="View GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <span>hsnlabs</span>
+        </a>
+        <div class="lang-switch">
+          <a href="/en/canvas/" class="lang-item">EN</a>
+          <span class="lang-sep">·</span>
+          <span class="lang-item active">PT</span>
+        </div>
+        <a href="/bootcamp/" class="btn btn-primary">Conhecer o Agentic Bootcamp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HERO -->
+  <section class="hero-bootcamp">
+    <div class="container">
+      <a href="/" class="back-link">← Voltar para Visão Geral</a>
+
+      <h1 class="display-hero">The Agentic Pilot Canvas</h1>
+
+      <p class="hero-lead">
+        O instrumento de arquitetura da hsnlabs sob licença MIT para desenhar viabilidade técnica, ontologias sobre dados legados, supervisão humana no CPF e retorno auditável na DRE antes de escrever a primeira linha de código.
+      </p>
+
+      <div style="display: flex; gap: 14px; justify-content: center; margin-top: 28px; flex-wrap: wrap;">
+        <a href="#seletor" class="btn btn-primary">Selecionar Caso de Uso</a>
+        <a href="#metodologia" class="btn btn-outline">Entender a Dinâmica</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. DINÂMICA E METODOLOGIA -->
+  <section class="section-block section-alt" id="metodologia">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Dinâmica e Metodologia</h2>
+      <p class="section-lead">
+        Projetos corporativos falham quando começam pela escolha do modelo de linguagem sem separar cálculo determinístico de inferência probabilística. O canvas estrutura dez blocos divididos em três zonas contíguas de decisão executiva.
+      </p>
+
+      <!-- As 3 Zonas em Cards Padrão Advisory (.card + .post-it-badge) -->
+      <div class="card-grid-3">
+        <div class="card">
+          <div class="post-it-badge"><div class="content">01</div></div>
+          <h3 class="card-title">Diagnóstico de Negócios</h3>
+          <p class="card-body">
+            O Bloco 1 ocupa um quarto do quadro para dissecar a dor real do processo ou a alçada do especialista titular. O Bloco 2 isola o que deve rodar em código puro do que exige IA, e o Bloco 3 antecipa resistências políticas internas.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="post-it-badge"><div class="content">02</div></div>
+          <h3 class="card-title">Ontologia e Governança</h3>
+          <p class="card-body">
+            O agente nunca executa consultas livres no banco bruto. Ele interage exclusivamente com a Ontologia Operacional por meio de objetos e ações tipadas, sob travas de bloqueio com assinatura humana no CPF e rastreabilidade OpenTelemetry.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="post-it-badge"><div class="content">03</div></div>
+          <h3 class="card-title">Ancoragem na DRE e Escala</h3>
+          <p class="card-body">
+            Substitui promessas vagas de ganho de tempo pela conta auditável de horas operacionais somadas a licenças legadas, firmando um contrato objetivo de desempenho no quinto dia para destravar a entrada em produção.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SELETOR DE CASO DE USO (EXATAMENTE NO PADRÃO DOS CARDS 01 E 02) -->
+  <section class="section-block" id="seletor">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Selecione o Caso de Uso</h2>
+      <p class="section-lead">
+        Clique em uma das duas versões abaixo para abrir o quadro interativo correspondente em tela cheia.
+      </p>
+
+      <div class="field-selector-grid">
+
+        <a href="/canvas/processos.html" class="field-figure">
+          <div class="field-thumb-box">
+            <img src="/assets/diagrams/canvas_processos_thumb.png" alt="The Agentic Pilot Canvas — Agentic Products" loading="lazy" decoding="async">
+          </div>
+          <div class="field-caption">
+            <div class="field-kicker">01 · AGENTIC PRODUCTS</div>
+            <div class="field-desc">Construção de produtos e sistemas agênticos integrados a ERPs e bancos legados para automatizar operações em escala com retorno direto na DRE.</div>
+          </div>
+        </a>
+
+        <a href="/canvas/especialista.html" class="field-figure">
+          <div class="field-thumb-box">
+            <img src="/assets/diagrams/canvas_especialista_thumb.png" alt="The Agentic Pilot Canvas — Agentic Employees" loading="lazy" decoding="async">
+          </div>
+          <div class="field-caption">
+            <div class="field-kicker">02 · AGENTIC EMPLOYEES</div>
+            <div class="field-desc">Alavancagem de profissionais e especialistas sêniores com agentes dedicados à sua função, repertório técnico e aprovação humana final.</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;" loading="lazy" decoding="async">
+          <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.6; max-width: 245px; margin: 0;">
+            Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
+          </p>
+        </div>
+
+        <div class="footer-col-office">
+          <div class="footer-col-title">Escritório</div>
+          <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin: 0 0 12px 0; white-space: nowrap;">
+            Rua Pais Leme, 215<br>
+            Conjunto 1713<br>
+            Pinheiros, São Paulo
+          </p>
+          <a href="mailto:hugo@hsnlabs.ai" style="font-size: 0.85rem; color: var(--ink); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--hairline-strong); padding-bottom: 2px; display: inline-block;">
+            hugo@hsnlabs.ai
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navegação</div>
+          <ul class="footer-nav">
+            <li><a href="/bootcamp/">Agentic Bootcamp</a></li>
+            <li><a href="/advisory/">Advisory</a></li>
+            <li><a href="/mcp/">Enterprise MCP</a></li>
+            <li><a href="/canvas/">The Agentic Pilot Canvas</a></li>
+            <li><a href="/blog/pt/">Blog</a></li>
+            <li><a href="/#contact">Fale Conosco</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Parceiros</div>
+          <ul class="footer-nav">
+            <li><a href="/langchain/">LangChain &amp; LangGraph</a></li>
+            <li><a href="/snowflake/">Snowflake AI Data Cloud</a></li>
+            <li><a href="/databricks/">Databricks Lakehouse</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col-subscribe">
+          <div class="footer-subscribe-email">
+            <div class="footer-col-title">Siga em Contato</div>
+            <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Notas de campo de arquitetura e playbooks no seu e-mail corporativo.</p>
+            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
+              <div style="display: flex; gap: 8px;">
+                <input type="email" name="email" placeholder="seu.email@empresa.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+                <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap; flex-shrink: 0;">Assinar</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer-subscribe-linkedin">
+            <div class="footer-li-header">
+              <div style="display: flex; gap: 10px; align-items: center; min-width: 155px; flex: 1 1 auto;">
+                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 36px; height: 36px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;" decoding="async">
+                <div style="min-width: 0;">
+                  <div style="font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
+                  <div style="font-size: 0.76rem; color: var(--muted); margin-top: 2px; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span><strong>1.600+</strong> assinantes</span>
+                  </div>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Assinar [Agentes] x [a Gente] no LinkedIn" style="background: #ffffff; border: 1px solid var(--hairline-strong); color: var(--ink); padding: 6px 11px; font-size: 0.78rem; font-weight: 500; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; white-space: nowrap; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink: 0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+            <div style="font-size: 0.76rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
+              Fora do hype, discutimos como a engenharia agentica multiplica e alavanca a capacidade laboral humana.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <div>2026 hsnlabs. Todos os direitos reservados.</div>
+          <span class="footer-bottom-sep" aria-hidden="true"></span>
+          <div class="footer-bottom-links">
+            <a href="/privacy-policy/">Política de Privacidade</a>
+            <a href="/modern-slavery-statement/">Declaração de Conformidade</a>
+          </div>
+        </div>
+        <div class="footer-social-row">
+          <a href="https://github.com/orgs/hsnlabs-ai/" target="_blank" rel="noopener" class="footer-social-icon" title="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+          <a href="https://x.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="X">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="YouTube">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@hsnlabs.ai" target="_blank" rel="noopener" class="footer-social-icon" title="TikTok">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+            </svg>
+          </a>
+          <a href="/blog/feed_rss_created.xml" target="_blank" rel="noopener" class="footer-social-icon" title="RSS Feed">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83z"/>
+            </svg>
+          </a>
+          <span style="width: 1px; height: 15px; background: var(--hairline-strong); margin: 0 3px; align-self: center; flex-shrink: 0;" aria-hidden="true"></span>
+          <a href="https://clutch.co/profile/hsnlabs" target="_blank" rel="noopener" class="footer-social-icon" title="hsnlabs on Clutch" style="width: auto; padding: 0 6px;">
+            <svg height="13" viewBox="0 0 80 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+              <path d="M21.2 0H24.9V22.4H21.2V0Z" fill="currentColor"/>
+              <path d="M35.9999 14.32C35.9999 18.08 33.4399 19.2 31.9199 19.2C29.4399 19.2 28.4799 17.36 28.4799 14.8V6.96002H24.7199V15.12C24.7199 19.76 27.3599 22.72 31.4399 22.72C33.1999 22.72 34.9599 22 35.9999 20.64V22.4H39.7599V6.96002H35.9999V14.32Z" fill="currentColor"/>
+              <path d="M47.4398 2.16003H43.6798V6.96003H40.8798V10.48H43.6798V16.64C43.6798 20.72 45.9998 22.64 49.5198 22.64C50.7198 22.64 51.8398 22.4 52.5598 22.08L51.9998 18.72C51.4398 18.96 50.7198 19.12 49.9998 19.12C48.3198 19.12 47.4398 18.16 47.4398 16.24V10.48H52.1598V6.96003H47.4398V2.16003Z" fill="currentColor"/>
+              <path d="M60.8799 15.84C60.8799 17.52 59.6799 18.8 57.9199 18.8C55.9999 18.8 54.6399 17.28 54.6399 14.64C54.6399 12 55.9999 10.48 57.9199 10.48C59.5999 10.48 60.7999 11.68 60.8799 13.28H64.5599C64.3999 9.44002 61.6799 6.72002 57.9199 6.72002C53.6799 6.72002 50.7999 9.92002 50.7999 14.64C50.7999 19.36 53.6799 22.56 57.9199 22.56C61.7599 22.56 64.4799 19.76 64.5599 15.84H60.8799Z" fill="currentColor"/>
+              <path d="M57.9199 17.04C59.2454 17.04 60.3199 15.9655 60.3199 14.64C60.3199 13.3145 59.2454 12.24 57.9199 12.24C56.5944 12.24 55.5199 13.3145 55.5199 14.64C55.5199 15.9655 56.5944 17.04 57.9199 17.04Z" fill="#FF3D2E"/>
+              <path d="M74.4799 6.64C72.5599 6.64 70.8799 7.44 69.8399 8.8V0H66.0799V22.4H69.8399V14.96C69.8399 11.2 72.3999 10.08 73.9199 10.08C76.3999 10.08 77.3599 11.92 77.3599 14.48V22.4H80.0001V14.16C80.0001 9.52 77.9999 6.64 74.4799 6.64Z" fill="currentColor"/>
+              <path d="M14.96 15.76C13.76 17.6 11.76 18.64 9.52 18.64C5.76 18.64 3.84 15.76 3.84 11.44C3.84 7.12 5.76 4.24 9.52 4.24C11.76 4.24 13.68 5.28 14.88 7.04L18.08 4.88C16.16 2.08 13.12 0.48 9.52 0.48C3.68 0.48 0 4.96 0 11.44C0 17.92 3.68 22.4 9.52 22.4C13.2 22.4 16.32 20.72 18.16 17.84L14.96 15.76Z" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

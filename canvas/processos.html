@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Agentic Pilot Canvas · Agentic Products | hsnlabs</title>
+  <meta name="description" content="The Agentic Pilot Canvas — Vertente Agentic Products: construção de produtos e sistemas agênticos integrados a ERPs e bancos legados com retorno na DRE.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hsnlabs.ai/canvas/processos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hsnlabs.ai/canvas/processos.html">
+  <meta property="og:title" content="The Agentic Pilot Canvas · Agentic Products | hsnlabs">
+  <meta property="og:description" content="Construção de produtos e sistemas agênticos integrados a ERPs e bancos legados para automatizar operações em escala com retorno direto na DRE.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">
+  <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-paper: 'Kalam', 'Caveat', cursive, sans-serif;
+      
+      --bg-page: #f1f5f9;
+      --bg-canvas: #ffffff;
+      --ink: #0f172a;
+      --body: #334155;
+      --muted: #64748b;
+      --border-outer: #0f172a;
+      --border-phase: #0f172a;                    /* Linha forte entre as Fases 1, 2 e 3 */
+      --border-internal: rgba(15, 23, 42, 0.10);  /* Linha suave interna dentro da mesma Fase */
+      --border-grid: #cbd5e1;
+      --border-subtle: #e2e8f0;
+
+      /* Escala Monocromática e Suave de Ciano da Marca (Do mais sutil ao mais profundo, muito pastel e arejado) */
+      --phase-biz-bg: rgba(82, 180, 253, 0.05);   /* Ciano Quase Branco / Luz: Negócios (Blocos 1, 2, 3) */
+      --phase-tech-bg: rgba(82, 180, 253, 0.11);  /* Ciano Suave Médio: Tecnologia & Governança (Blocos 4, 5, 6, 7, 8) */
+      --phase-fin-bg: rgba(82, 180, 253, 0.18);   /* Ciano Moderado Arejado: Financeiro & Rollout (Blocos 9 e 10) */
+
+      /* Post-its de Papel Real */
+      --paper-yellow: #fef9c3;
+      --paper-yellow-strip: #ca8a04;
+      --paper-blue: #e0f2fe;
+      --paper-blue-strip: #0284c7;
+      --paper-cyan: #dbeafe;
+      --paper-cyan-strip: #2563eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg-page);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* THE POSTER BOARD (TRADITIONAL BMC) */
+    .poster-board {
+      width: 100%;
+      max-width: 1420px;
+      background: var(--bg-canvas);
+      border: 2px solid var(--border-outer);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Minimalist Segmented Controls inside Board Header */
+    .board-header {
+      padding: 12px 18px;
+      border-bottom: 2px solid var(--border-outer);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .board-header h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .segmented-pill {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 2px;
+      border-radius: 4px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .seg-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+      line-height: 1.3;
+    }
+
+    .seg-btn:hover {
+      color: var(--ink);
+    }
+
+    .seg-btn.active {
+      background: #ffffff;
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    /*
+       GRID AGRUPADO EM 3 FASES CONTÍGUAS:
+       Coluna 1 (30%): Bloco 1 (Negócios - Azul)
+       Coluna 2 (20%): Bloco 2 e Bloco 3 (Negócios - Azul) -> ZONA AZUL CONTÍGUA
+       Coluna 3 (17%): Bloco 4 e Bloco 5 (Tecnologia & Dados - Amarelo)
+       Coluna 4 (17%): Bloco 6 (Ontologia Centro - Amarelo)
+       Coluna 5 (16%): Bloco 7 e Bloco 8 (Governança & Harness - Amarelo) -> ZONA AMARELA CONTÍGUA
+       Linha 3 (Base 100%): Bloco 9 e Bloco 10 (Financeiro & Rollout - Verde) -> ZONA VERDE CONTÍGUA
+    */
+    .bmc-grid-canvas {
+      display: grid;
+      grid-template-columns: 30% 20% 17% 17% 16%;
+      grid-template-rows: minmax(185px, auto) minmax(285px, auto) minmax(180px, auto);
+    }
+
+    .bmc-slot {
+      border-right: 1px solid var(--border-internal);
+      border-bottom: 1px solid var(--border-internal);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    /* Cores Pastel Agrupadas */
+    .zone-biz  { background-color: var(--phase-biz-bg); }
+    .zone-tech { background-color: var(--phase-tech-bg); }
+    .zone-fin  { background-color: var(--phase-fin-bg); }
+
+    /* Grid Layout Slots com Hierarquia de Linhas (Suaves dentro da Fase, Fortes entre Fases) */
+    /* FASE 1: NEGÓCIOS (Blocos 1, 2, 3) */
+    .slot-b1 {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      border-right: 1px solid var(--border-internal);
+      border-bottom: 2px solid var(--border-phase);
+    }
+    .slot-b2 {
+      grid-column: 2;
+      grid-row: 1;
+      border-right: 2px solid var(--border-phase);
+      border-bottom: 1px solid var(--border-internal);
+    }
+    .slot-b3 {
+      grid-column: 2;
+      grid-row: 2;
+      border-right: 2px solid var(--border-phase);
+      border-bottom: 2px solid var(--border-phase);
+    }
+
+    /* FASE 2: TECNOLOGIA & GOVERNANÇA (Blocos 4, 5, 6, 7, 8) */
+    .slot-b4 {
+      grid-column: 3;
+      grid-row: 1;
+      border-right: 1px solid var(--border-internal);
+      border-bottom: 1px solid var(--border-internal);
+    }
+    .slot-b5 {
+      grid-column: 3;
+      grid-row: 2;
+      border-right: 1px solid var(--border-internal);
+      border-bottom: 2px solid var(--border-phase);
+    }
+    .slot-b6 {
+      grid-column: 4;
+      grid-row: 1 / 3;
+      border-right: 1px solid var(--border-internal);
+      border-bottom: 2px solid var(--border-phase);
+    }
+    .slot-b7 {
+      grid-column: 5;
+      grid-row: 1;
+      border-right: none;
+      border-bottom: 1px solid var(--border-internal);
+    }
+    .slot-b8 {
+      grid-column: 5;
+      grid-row: 2;
+      border-right: none;
+      border-bottom: 2px solid var(--border-phase);
+    }
+
+    /* FASE 3: FINANCEIRO & ROLLOUT (Blocos 9 e 10) */
+    .slot-b9 {
+      grid-column: 1 / 3;
+      grid-row: 3;
+      border-bottom: none;
+      border-right: 1px solid var(--border-internal);
+    }
+    .slot-b10 {
+      grid-column: 3 / 6;
+      grid-row: 3;
+      border-bottom: none;
+      border-right: none;
+    }
+
+    /* Header de cada bloco */
+    .slot-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .slot-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .slot-b1 .slot-title {
+      font-size: 13.5px;
+    }
+
+    .slot-icon {
+      width: 15px;
+      height: 15px;
+      color: var(--ink);
+      opacity: 0.82;
+      flex-shrink: 0;
+    }
+
+    .slot-b1 .slot-icon {
+      width: 17px;
+      height: 17px;
+    }
+
+    /* Botão sutil de adicionar post-it (+) */
+    .add-postit-btn {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid rgba(15, 23, 42, 0.25);
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      padding: 0;
+    }
+
+    .add-postit-btn:hover {
+      background: var(--ink);
+      color: #ffffff;
+      border-color: var(--ink);
+    }
+
+    /* Perguntas Compactas em Fluxo de Texto Normal */
+    .slot-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+
+    .slot-b1 .slot-questions {
+      gap: 7px;
+    }
+
+    .q-line {
+      font-size: 11px;
+      line-height: 1.35;
+      color: var(--body);
+      display: block;
+    }
+
+    .slot-b1 .q-line {
+      font-size: 12px;
+    }
+
+    .q-line strong {
+      color: var(--ink);
+      font-weight: 700;
+      margin-right: 3px;
+    }
+
+    /* TIP TRIGGER: Ícone inline perfeitamente colado ao texto */
+    .tip-anchor {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
+    .tip-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.12);
+      color: var(--ink);
+      font-size: 9.5px;
+      font-weight: 700;
+      cursor: pointer;
+      user-select: none;
+      line-height: 1;
+      transition: all 0.15s ease;
+      vertical-align: baseline;
+    }
+
+    .tip-circle:hover,
+    .tip-anchor.active .tip-circle {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    /* TIP BUBBLE POPOVER */
+    .tip-bubble {
+      display: none;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 240px;
+      background: #0f172a;
+      color: #ffffff;
+      font-size: 11px;
+      line-height: 1.4;
+      padding: 7px 9px;
+      border-radius: 3px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.28);
+      z-index: 100;
+      pointer-events: none;
+      white-space: normal;
+    }
+
+    .tip-bubble.bubble-left {
+      left: auto;
+      right: 20px;
+    }
+
+    .tip-bubble.bubble-left::before {
+      left: auto;
+      right: -5px;
+      border-width: 5px 0 5px 5px;
+      border-color: transparent transparent transparent #0f172a;
+    }
+
+    .tip-bubble::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 5px 5px 5px 0;
+      border-style: solid;
+      border-color: transparent #0f172a transparent transparent;
+    }
+
+    .tip-bubble strong {
+      color: #38bdf8;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 2px;
+      font-family: var(--font-sans);
+    }
+
+    .tip-anchor:hover .tip-bubble,
+    .tip-anchor.active .tip-bubble {
+      display: block;
+    }
+
+    /* POST-IT WORK AREA */
+    .postit-zone {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      align-content: flex-start;
+      flex: 1;
+      min-height: 95px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(15, 23, 42, 0.10);
+    }
+
+    .postit-zone.zone-empty {
+      display: flex !important;
+      flex-direction: column;
+      align-items: stretch !important;
+      justify-content: stretch !important;
+    }
+
+    .slot-b1 .postit-zone {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding-top: 12px;
+      align-items: stretch;
+    }
+
+    .slot-b1 .empty-state-clickable {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+
+    /* POST-IT DE PAPEL REAL (Textura tátil, dobra sutil, sem faixa grossa escura no topo) */
+    .paper-postit {
+      width: 104px;
+      height: 104px;
+      aspect-ratio: 1 / 1;
+      padding: 9px 8px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      word-break: break-word;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 1px;
+      
+      /* Gradiente físico de folha de post-it com leve sombra de elevação na parte de baixo */
+      background-image: linear-gradient(160deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 45%, rgba(0,0,0,0.03) 100%);
+      box-shadow: 
+        0 1px 2px rgba(15, 23, 42, 0.08),
+        0 4px 9px rgba(15, 23, 42, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+
+      /* Sem borda escura pesada — apenas um vínculo sutil translúcido da mesma família */
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      border-top: 2px solid rgba(255, 255, 255, 0.55);
+      
+      font-family: var(--font-paper);
+      color: #1e293b;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .slot-b1 .paper-postit {
+      width: 100%;
+      height: 130px;
+      aspect-ratio: auto;
+      padding: 12px 11px;
+    }
+
+    .paper-postit:hover {
+      transform: scale(1.07) rotate(0deg) !important;
+      box-shadow: 
+        0 6px 14px rgba(15, 23, 42, 0.14),
+        0 12px 24px rgba(15, 23, 42, 0.10);
+      z-index: 50;
+    }
+
+    .paper-postit span.note-body {
+      display: block;
+      width: 100%;
+    }
+
+    .paper-postit strong.note-lead {
+      font-family: var(--font-paper);
+      font-weight: 700;
+      color: #0f172a;
+      margin-right: 3px;
+    }
+
+    .paper-postit.p-yellow { background-color: #fef9c3; }
+    .paper-postit.p-blue   { background-color: #e0f2fe; }
+    .paper-postit.p-cyan   { background-color: #dbeafe; }
+
+    /* EMPTY STATE CLICÁVEL COM ÍCONE '+' */
+    .empty-state-clickable {
+      width: 100%;
+      flex: 1;
+      min-height: 85px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      border: 1px dashed rgba(15, 23, 42, 0.22);
+      background: rgba(255, 255, 255, 0.45);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .empty-state-clickable:hover {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    .empty-state-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      transition: all 0.15s ease;
+    }
+
+    .empty-state-clickable:hover .empty-state-icon {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    /* Botões de Ação (Compartilhar / PDF) */
+    .action-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--body);
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.15s ease;
+      font-family: var(--font-sans);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      line-height: 1.3;
+    }
+
+    .action-btn:hover {
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Toast de Notificação */
+    #toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 9px 16px;
+      font-size: 11.5px;
+      font-weight: 500;
+      border-radius: 3px;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.22);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: all 0.2s ease;
+      z-index: 9999;
+    }
+
+    #toast-msg.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsividade Mobile e Tablet */
+    @media (max-width: 1024px) {
+      body { padding: 12px; }
+      .board-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .header-controls { width: 100%; flex-wrap: wrap; gap: 8px; }
+      .bmc-grid-canvas {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+      }
+      .bmc-slot,
+      .slot-b1, .slot-b2, .slot-b3, .slot-b4, .slot-b5,
+      .slot-b6, .slot-b7, .slot-b8, .slot-b9, .slot-b10 {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+        border-right: none !important;
+        border-bottom: 1.5px solid var(--border-phase) !important;
+      }
+      .slot-b10 { border-bottom: none !important; }
+      .tip-bubble, .tip-bubble.bubble-left {
+        left: auto !important;
+        right: 0 !important;
+        top: 22px !important;
+        transform: none !important;
+        width: 210px !important;
+      }
+      .tip-bubble::before { display: none !important; }
+    }
+
+    /* Print / PDF Styles (Preserva cores e estado atual, esconde botões) */
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .poster-board {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: 2px solid #0f172a !important;
+      }
+      .header-controls,
+      .add-postit-btn,
+      .tip-anchor,
+      #toast-msg {
+        display: none !important;
+      }
+      @page {
+        size: landscape;
+        margin: 6mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- THE BMC POSTER BOARD -->
+  <div class="poster-board">
+
+    <!-- Header com Seletores Minimalistas Embutidos -->
+    <div class="board-header">
+      <h1>The Agentic Pilot Canvas</h1>
+      <div class="header-controls">
+        <div class="segmented-pill">
+          <button class="seg-btn active" id="btn-proc" onclick="setVariant('process')">Agentic Products</button>
+          <button class="seg-btn" id="btn-spec" onclick="setVariant('specialist')">Agentic Employees</button>
+        </div>
+        <div class="segmented-pill">
+          <button class="seg-btn" id="btn-filled" onclick="toggleMode(true)">Preenchido</button>
+          <button class="seg-btn active" id="btn-empty" onclick="toggleMode(false)">Vazio</button>
+        </div>
+        <div class="segmented-pill">
+          <a href="/canvas/" class="action-btn" style="text-decoration:none;" title="Voltar para o Hub de Canvases">← Hub</a>
+          <button class="action-btn" onclick="shareCanvas()" title="Copiar link do estado atual">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            Compartilhar
+          </button>
+          <button class="action-btn" onclick="downloadPDF()" title="Baixar PDF no estado atual">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- O NOVO GRID AGRUPADO EM 3 ZONAS CONTÍGUAS -->
+    <div class="bmc-grid-canvas" id="canvas-grid-root"></div>
+
+  </div>
+
+  <div id="toast-msg">Link copiado para a área de transferência</div>
+
+  <script>
+    let currentVariant = 'process';
+    let isFilled = false;
+
+    /*
+       Nova Ordem Agrupada por Cor/Fase:
+       Fase 1 (Negócios - Azul):
+         - Bloco 1: 1. Processo Alvo & Impacto (Slot 1)
+         - Bloco 2: 2. Impacto não determinístico (Slot 2)
+         - Bloco 3: 3. Sabotadores & Resistência (Slot 3 - reposicionado para a zona azul!)
+       Fase 2 (Tecnologia, Dados & Governança - Amarelo):
+         - Bloco 4: 4. Legados, conexão e dados (Slot 4)
+         - Bloco 5: 5. Harness de Execução (Slot 5)
+         - Bloco 6: 6. Ontologia Operacional (Slot 6 - Centro)
+         - Bloco 7: 7. Human in the loop (Slot 7)
+         - Bloco 8: 8. Governança e Compliance (Slot 8)
+       Fase 3 (Financeiro & Rollout - Verde):
+         - Bloco 9: 9. Ancoragem de valor e ROI (Slot 9)
+         - Bloco 10: 10. Do sucesso do piloto ao rollout (Slot 10)
+    */
+
+    const DATA = {
+      process: {
+        desc: 'Caso: Processos Corporativos Gerais, DRE e Automação de Backoffice',
+        slots: [
+          // ZONA AZUL: NEGÓCIOS
+          {
+            slotClass: 'slot-b1 zone-biz',
+            title: '1. Produto & Processo Alvo',
+            questions: [
+              { label: '1.1 Processo Manual:', text: 'Qual rotina repetitiva consome a equipe e qual a entrega ideal?', tip: 'Triagem de 500 currículos, digitação no ERP, tickets manuais de folha.' },
+              { label: '1.2 Gargalo & Sintomas:', text: 'Onde o fluxo trava e quais os sinais visíveis de sobrecarga?', tip: 'Fila de 4 dias no DP, horas extras recorrentes e analistas agindo como digitadores.' },
+              { label: '1.3 Volume & Horas:', text: 'Quantas demandas mensais passam pelo fluxo e quanto tempo tomam?', tip: '1.800 chamados/mês consumindo 450 horas operacionais da equipe de atendimento.' },
+              { label: '1.4 Escopo do Piloto:', text: 'O que entra no D5 e o que fica fora deste primeiro ciclo?', tip: 'Entram dúvidas e simulação de férias/ponto; ficam fora rescisões litigiosas.' }
+            ],
+            postits: [
+              { tag: '1.1 AS-IS / TO-BE', rot: -1.2, text: 'Triagem de 1.800 tickets no Teams. Meta: resposta em segundos com simulação precisa.', color: 'p-yellow' },
+              { tag: '1.2 Gargalo', rot: 1.1, text: '6 analistas gastam 65% do dia copiando dados do TOTVS, gerando fila de 4 dias.', color: 'p-yellow' },
+              { tag: '1.3 Volume', rot: -0.8, text: '450 horas/mês da equipe gastas em dúvidas repetitivas de férias e 13º salário.', color: 'p-yellow' },
+              { tag: '1.4 Escopo D5', rot: 1.4, text: 'Foco estrito em consulta e simulação de férias; zero alteração direta no banco.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b2 zone-biz',
+            title: '2. Impacto não determinístico',
+            questions: [
+              { label: '2.1 Teste de Sanidade:', text: 'O que exige IA e o que deve rodar em código puro?', tip: 'Cálculo de folha e rescisão = código determinístico; interpretar dúvidas = IA.' },
+              { label: '2.2 Raio de Destruição:', text: 'Se o agente falhar, qual o risco interno e o dano externo?', tip: 'Desconfiança do colaborador e passivo trabalhista por cálculo incorreto.' }
+            ],
+            postits: [
+              { tag: '2.1 IA vs Código', rot: 1.3, text: 'Interpretar a dúvida usa IA. Cálculo de férias é 100% código determinístico.', color: 'p-yellow' },
+              { tag: '2.2 Blast Radius', rot: -1.2, text: 'Erro em regra de dissídio gera passivo sindical e quebra a confiança.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b3 zone-biz',
+            title: '3. Sabotadores & Resistência',
+            questions: [
+              { label: '3.1 Medos & Perda Política:', text: 'Quem teme perder espaço, controle ou equipe no projeto?', tip: 'Analistas com medo de demissão; gestores com receio de perder tamanho de time.' },
+              { label: '3.2 Framing Anti-Atrito:', text: 'Como reposicionar o projeto para engajar os céticos?', tip: 'Agente como estagiário digital de rotina; TI posicionada como guardiã no comitê.' }
+            ],
+            postits: [
+              { tag: '3.1 Receios', rot: -1.1, text: 'Analistas receosos de corte e gestores com medo de desumanização no atendimento.', color: 'p-yellow' },
+              { tag: '3.2 Framing', rot: 1.3, text: 'Copiloto de triagem que devolve tempo para acolhimento humano do RH.', color: 'p-yellow' }
+            ]
+          },
+
+          // ZONA 2: TECNOLOGIA, DADOS & GOVERNANÇA (CIANO MÉDIO)
+          {
+            slotClass: 'slot-b4 zone-tech',
+            title: '4. Legados, conexão e dados',
+            questions: [
+              { label: '4.1 Onde os Dados Moram:', text: 'Em quais sistemas ou pastas os dados residem hoje?', tip: 'TOTVS RM, SAP, Senior ou políticas em PDF no SharePoint.' },
+              { label: '4.2 Dinâmica de Acesso:', text: 'Como esses dados são lidos e com que frequência atualizam?', tip: 'Réplica read-only isolada no staging D1 atualizada diariamente.' },
+              { label: '4.3 Engenharia Reversa:', text: 'Quais regras em planilhas/bancos virarão código tipado?', tip: 'Mapear e tipar 12 stored procedures antigas de adicionais.' }
+            ],
+            postits: [
+              { tag: '4.1 Fontes', rot: -0.9, text: 'TOTVS RM e 15 PDFs de políticas de benefícios no SharePoint corporativo.', color: 'p-blue' },
+              { tag: '4.2 Acesso', rot: 1.2, text: 'Export diário para réplica PostgreSQL read-only dentro da VPC.', color: 'p-blue' },
+              { tag: '4.3 Regras', rot: -1.4, text: 'Tipar 12 stored procedures de adicionais e dissídios antigos.', color: 'p-blue' }
+            ]
+          },
+          {
+            slotClass: 'slot-b5 zone-tech',
+            title: '5. Harness de Execução',
+            questions: [
+              { label: '5.1 Runtime & Tools:', text: 'Quais ferramentas e conectores o agente precisa ter?', tip: 'Conector MCP para TOTVS, leitor de políticas e bot no Teams.' },
+              { label: '5.2 Memória & Contexto:', text: 'Onde guardar histórico de conversa e manuais de regras?', tip: 'Memória vetorial para regras e contexto isolado por sessão.' },
+              { label: '5.3 Bateria de Evals:', text: 'Quais testes contínuos provam ausência de regressão?', tip: '250 conversas reais testadas a cada ajuste de prompt.' }
+            ],
+            postits: [
+              { tag: '5.1 Tools', rot: 1.1, text: 'Conector MCP seguro para TOTVS, parser de regras e bot Teams.', color: 'p-blue' },
+              { tag: '5.2 Memória', rot: -1.3, text: 'Base vetorial de regras internas e sessão isolada por usuário.', color: 'p-blue' },
+              { tag: '5.3 Testes', rot: 0.7, text: 'Bateria com 250 conversas reais antes de qualquer deploy.', color: 'p-blue' }
+            ]
+          },
+          {
+            slotClass: 'slot-b6 zone-tech',
+            title: '6. Ontologia Operacional',
+            questions: [
+              { label: '6.1 Objetos do Domínio:', text: 'Quais entidades centrais o agente precisa reconhecer?', tip: 'Colaborador, SolicitacaoFerias, EspelhoPonto, Holerite.' },
+              { label: '6.2 Ações & Invariantes:', text: 'Quais as únicas ações tipadas permitidas ao agente?', tip: 'ConsultarSaldo, SimularFerias. Invariante: proibido rodar SQL livre.' }
+            ],
+            postits: [
+              { tag: '6.1 Objetos', rot: 1.2, text: 'Colaborador, SolicitacaoFerias, EspelhoPonto, Holerite, BeneficioPlano.', color: 'p-yellow' },
+              { tag: '6.2 Ações', rot: -1.1, text: 'ConsultarSaldo[id], SimularFerias[id]. Invariante: estritamente read-only.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b7 zone-tech',
+            title: '7. Human in the loop',
+            questions: [
+              { label: '7.1 Travas de Bloqueio:', text: 'Em quais situações de risco o agente para e pede aprovação?', tip: 'Afastamento médico, demissão ou confiança < 90% travam na hora.' },
+              { label: '7.2 Assinatura no CPF:', text: 'Quem é a pessoa que valida e assina a decisão final?', tip: 'BP de RH recebe card interativo no Teams e assina no CPF.' }
+            ],
+            postits: [
+              { tag: '7.1 Travas', rot: -1.3, text: 'Afastamento por INSS e rescisão travam a resposta automática.', color: 'p-yellow' },
+              { tag: '7.2 Assinatura', rot: 1.0, text: 'BP de RH valida a exceção e assina formalmente a decisão no CPF.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b8 zone-tech',
+            title: '8. Governança e Compliance',
+            questions: [
+              { label: '8.1 Sigilo & LGPD:', text: 'Quais dados sensíveis nunca podem ser expostos?', tip: 'Mascaramento de CPF, salário e dados médicos com retenção zero.' },
+              { label: '8.2 Tracing Imutável:', text: 'Como auditar cada decisão tomada pelo agente?', tip: 'Trilha OpenTelemetry com hash imutável e prompt de cada transação.' }
+            ],
+            postits: [
+              { tag: '8.1 Proteção', rot: 0.8, text: 'Mascaramento de salários e dados médicos; zero retenção em nuvem.', color: 'p-yellow' },
+              { tag: '8.2 Auditoria', rot: -1.2, text: 'Log OpenTelemetry imutável com rastreabilidade de ponta a ponta.', color: 'p-yellow' }
+            ]
+          },
+
+          // ZONA 3: FINANCEIRO & ROLLOUT (CIANO MODERADO)
+          {
+            slotClass: 'slot-b9 zone-fin',
+            title: '9. Ancoragem de valor e ROI',
+            questions: [
+              { label: '9.1 Dual Bleed:', text: 'Quanto a empresa queima em horas + licenças legadas?', tip: 'R$ 85k/mês em analistas + R$ 18k/mês em softwares satélites.' },
+              { label: '9.2 Impacto Líquido:', text: 'Qual o ganho líquido mensal descontando custos de IA?', tip: 'R$ 74k/mês líquidos auditáveis após custos de infraestrutura.' },
+              { label: '9.3 Prazo de Payback:', text: 'Em quantos meses o valor investido se paga na prática?', tip: 'Piloto de R$ 120k amortizado em 50 dias de operação produtiva.' }
+            ],
+            postits: [
+              { tag: '9.1 Dual Bleed', rot: -1.0, text: 'R$ 85k/mês em horas operacionais + R$ 18k/mês em software de tickets.', color: 'p-cyan' },
+              { tag: '9.2 DRE Líquida', rot: 1.2, text: 'R$ 74k/mês de economia comprovada na DRE já descontando infra de IA.', color: 'p-cyan' },
+              { tag: '9.3 Payback', rot: -0.7, text: 'Investimento inicial amortizado em 50 dias de uso corporativo.', color: 'p-cyan' }
+            ]
+          },
+          {
+            slotClass: 'slot-b10 zone-fin',
+            title: '10. Do sucesso do piloto ao rollout',
+            questions: [
+              { label: '10.1 Meta no Sandbox:', text: 'Qual acurácia define que o piloto funcionou no D5?', tip: '≥ 80% de resolução correta com zero alucinação determinística.' },
+              { label: '10.2 Aval dos Co-Autores:', text: 'Quem assina conjuntamente o aceite para ir à produção?', tip: 'VP de RH, Arquiteto de TI e Controller assinam parecer.' },
+              { label: '10.3 Gatilho Contratual:', text: 'Qual o compromisso automático ao atingir a meta no D5?', tip: 'Atingida a meta, destrava automaticamente o rollout corporativo.' }
+            ],
+            postits: [
+              { tag: '10.1 Meta D5', rot: 1.3, text: '≥ 80% de resolução correta no sandbox com zero erro em regras.', color: 'p-cyan' },
+              { tag: '10.2 Aval', rot: -1.1, text: 'Parecer assinado por VP de RH, Arquiteto de TI e DP.', color: 'p-cyan' },
+              { tag: '10.3 Rollout', rot: 0.9, text: 'Meta batida no D5 destrava liberação para os 4.000 funcionários.', color: 'p-cyan' }
+            ]
+          }
+        ]
+      },
+      specialist: {
+        desc: 'Caso: Especialista e Alçada, Força de Trabalho Híbrida e Alavancagem de High ICs',
+        slots: [
+          // ZONA AZUL: NEGÓCIOS
+          {
+            slotClass: 'slot-b1 zone-biz',
+            title: '1. Profissional Alvo & Atuação',
+            questions: [
+              { label: '1.1 Especialista Titular:', text: 'Qual sênior terá sua capacidade multiplicada pelo agente?', tip: 'Especialista Jurídico Sênior, Analista de FP&A ou BP de RH.' },
+              { label: '1.2 Alçada & JTBD:', text: 'Quais rotinas operacionais drenam seu tempo e o agente fará?', tip: 'Revisar 90 minutas/mês; agente entrega redline pré-analisado em 3 min.' },
+              { label: '1.3 Custo de Oportunidade:', text: 'Onde a fila trava na mão dele e o que deixa de ser entregue?', tip: '8 dias de fila para liberar contratos comerciais e atraso em M&A.' },
+              { label: '1.4 Limite da Alçada:', text: 'O que o agente prepara versus o que é exclusivo do titular?', tip: 'Agente prepara minuta e ressalvas; negociação e assinatura são do sênior.' }
+            ],
+            postits: [
+              { tag: '1.1 Titular (High IC)', rot: -1.3, text: 'Especialista Jurídico Sênior em Contratos B2B e Societário.', color: 'p-yellow' },
+              { tag: '1.2 Alçada Delegada', rot: 1.2, text: 'Leitura e redline preliminar de 90 contratos/mês segundo o playbook.', color: 'p-yellow' },
+              { tag: '1.3 Custo Oportunidade', rot: -1.0, text: '70% da semana lendo NDAs e compras, travando vendas em 8 dias.', color: 'p-yellow' },
+              { tag: '1.4 Limite Humano', rot: 1.4, text: 'Agente nunca envia minuta ao cliente; apenas prepara para o titular.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b2 zone-biz',
+            title: '2. Impacto não determinístico',
+            questions: [
+              { label: '2.1 Teste de Sanidade:', text: 'O que usa o repertório do especialista e o que é código?', tip: 'Sugerir redação usa IA calibrada; limites de alçada e multas são código.' },
+              { label: '2.2 Raio de Destruição:', text: 'Qual o risco de usurpação de função ou dano à assinatura?', tip: 'Risco de exercício ilegal (OAB) ou passivo por cláusula omitida.' }
+            ],
+            postits: [
+              { tag: '2.1 IA vs Código', rot: 1.1, text: 'Sugerir ressalvas usa IA; travas de valor e assinatura rodam em código.', color: 'p-yellow' },
+              { tag: '2.2 Risco de Função', rot: -1.3, text: 'Sem titular assinando, há usurpação de função (OAB) e passivo.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b3 zone-biz',
+            title: '3. Sabotadores & Resistência',
+            questions: [
+              { label: '3.1 Medos & Perda Política:', text: 'Qual o receio do especialista em ensinar o agente e ser trocado?', tip: 'Medo de substituição; receio da TI com agentes individuais.' },
+              { label: '3.2 Framing Anti-Atrito:', text: 'Como posicionar o agente como alavanca exclusiva do titular?', tip: 'Lastro humano: agente amplia o sênior para High IC sob TI.' }
+            ],
+            postits: [
+              { tag: '3.1 Receios', rot: -1.4, text: 'Receio do especialista de ensinar seu repertório e ser dispensado.', color: 'p-yellow' },
+              { tag: '3.2 Lastro Humano', rot: 1.2, text: 'Agente lastreado no titular, elevando-o a High IC com apoio da TI.', color: 'p-yellow' }
+            ]
+          },
+
+          // ZONA 2: TECNOLOGIA, DADOS & GOVERNANÇA (CIANO MÉDIO)
+          {
+            slotClass: 'slot-b4 zone-tech',
+            title: '4. Legados, conexão e dados',
+            questions: [
+              { label: '4.1 Onde os Dados Moram:', text: 'Onde está o histórico de casos já resolvidos pelo titular?', tip: 'CLM corporativo, SharePoint, 1.200 contratos e playbook pessoal.' },
+              { label: '4.2 Dinâmica de Acesso:', text: 'Como o especialista consulta e como o agente acessará?', tip: 'Leitura sob demanda na VPN com a credencial isolada do titular.' },
+              { label: '4.3 Captura de Conhecimento:', text: 'Quais critérios tácitos da cabeça do especialista vamos tipar?', tip: '45 regras práticas de aceite/veto em indenizações e foro.' }
+            ],
+            postits: [
+              { tag: '4.1 Acervo', rot: -0.9, text: 'CLM corporativo, 1.200 contratos em PDF e playbook do titular.', color: 'p-blue' },
+              { tag: '4.2 Acesso VPN', rot: 1.2, text: 'Conector isolado na VPN respeitando as permissões do titular.', color: 'p-blue' },
+              { tag: '4.3 Repertório', rot: -1.4, text: '45 regras tácitas do especialista sobre limite de indenização.', color: 'p-blue' }
+            ]
+          },
+          {
+            slotClass: 'slot-b5 zone-tech',
+            title: '5. Harness de Execução',
+            questions: [
+              { label: '5.1 Runtime & Tools:', text: 'Quais ferramentas o agente precisa para preparar o trabalho?', tip: 'Parser de DOCX/PDF longo, buscador semântico e redline.' },
+              { label: '5.2 Memória & Contexto:', text: 'Onde guardar os pareceres e o estilo decisório do titular?', tip: 'Base vetorial privada com histórico de revisões do sênior.' },
+              { label: '5.3 Bateria de Evals:', text: 'Quais casos históricos provam que o agente age como o titular?', tip: '50 contratos complexos já resolvidos pelo titular testados no CI.' }
+            ],
+            postits: [
+              { tag: '5.1 Ferramentas', rot: 0.9, text: 'Parser de DOCX/PDFs, buscador de precedentes e integração Word.', color: 'p-blue' },
+              { tag: '5.2 Memória', rot: -1.2, text: 'Índice vetorial privado com pareceres históricos e estilo de redação.', color: 'p-blue' },
+              { tag: '5.3 Testes', rot: 1.4, text: '50 contratos históricos testados para medir alinhamento com o titular.', color: 'p-blue' }
+            ]
+          },
+          {
+            slotClass: 'slot-b6 zone-tech',
+            title: '6. Ontologia Operacional',
+            questions: [
+              { label: '6.1 Objetos do Domínio:', text: 'Quais entidades da rotina do sênior o agente manipula?', tip: 'MinutaContratual, ClausulaRisco, ParecerTecnico, Precedente.' },
+              { label: '6.2 Ações & Invariantes:', text: 'Quais ações tipadas o agente executa na alçada do titular?', tip: 'ExtrairRiscos, GerarRedline. Invariante: nunca envia direto a terceiros.' }
+            ],
+            postits: [
+              { tag: '6.1 Objetos', rot: 1.2, text: 'MinutaContratual, ClausulaRisco, ParecerJuridico, Precedente.', color: 'p-yellow' },
+              { tag: '6.2 Ações', rot: -1.0, text: 'ExtrairRiscos[id], GerarRedline[id]. Invariante: zero envio externo.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b7 zone-tech',
+            title: '7. Human in the loop',
+            questions: [
+              { label: '7.1 Limiares de Bloqueio:', text: 'Quando o agente para a preparação e exige instrução direta?', tip: 'Contratos > R$ 500k, cessão de IP ou cláusula inédita sem histórico.' },
+              { label: '7.2 Chancela no CPF:', text: 'Como o titular revisa o rascunho e assina a entrega final?', tip: 'Especialista revisa o redline em 5 min e assina no próprio CPF/OAB.' }
+            ],
+            postits: [
+              { tag: '7.1 Travas Alçada', rot: -1.2, text: 'Contratos > R$ 500k e cláusula inédita exigem análise integral humana.', color: 'p-yellow' },
+              { tag: '7.2 Assinatura CPF', rot: 1.4, text: 'Advogado valida o documento pronto e assina formalmente no CPF/OAB.', color: 'p-yellow' }
+            ]
+          },
+          {
+            slotClass: 'slot-b8 zone-tech',
+            title: '8. Governança e Compliance',
+            questions: [
+              { label: '8.1 Sigilo & LGPD:', text: 'Como isolar os dados corporativos da esfera pessoal?', tip: 'Ruptura total entre contas corporativas e pessoais; zero treino.' },
+              { label: '8.2 Tracing Imutável:', text: 'Como auditar o que o agente preparou vs o que o sênior aprovou?', tip: 'Trilha OpenTelemetry vinculando rascunho, edição e assinatura.' }
+            ],
+            postits: [
+              { tag: '8.1 Isolamento', rot: 1.1, text: 'Agente opera restrito à VPN corporativa sem contato com conta pessoal.', color: 'p-yellow' },
+              { tag: '8.2 Tracing', rot: -1.3, text: 'Log OpenTelemetry imutável com versão do agente e aprovação do sênior.', color: 'p-yellow' }
+            ]
+          },
+
+          // ZONA 3: FINANCEIRO & ROLLOUT (CIANO MODERADO)
+          {
+            slotClass: 'slot-b9 zone-fin',
+            title: '9. Ancoragem de valor e ROI',
+            questions: [
+              { label: '9.1 Dual Bleed:', text: 'Quanto custa ter seniores em rotina + escritórios externos?', tip: '3 seniores (R$ 90k/mês) em triagem + R$ 45k/mês em bancas terceiras.' },
+              { label: '9.2 Impacto Líquido:', text: 'Qual a redução de gastos externos e ganho de capacidade?', tip: 'Corte de R$ 45k/mês de bancas e 3x mais vazão comercial.' },
+              { label: '9.3 Prazo de Payback:', text: 'Em quantos meses a economia e agilidade pagam o piloto?', tip: 'Amortizado em 60 dias pela redução direta de terceirizados.' }
+            ],
+            postits: [
+              { tag: '9.1 Dual Bleed', rot: -1.1, text: 'Seniores presos em rotinas mecânicas + R$ 45k/mês em escritórios externos.', color: 'p-cyan' },
+              { tag: '9.2 Ganho DRE', rot: 1.3, text: 'R$ 36k/mês líquidos após custos de IA + triplicação da vazão comercial.', color: 'p-cyan' },
+              { tag: '9.3 Payback', rot: -0.8, text: 'Investimento pago em 60 dias sem necessidade de novas contratações.', color: 'p-cyan' }
+            ]
+          },
+          {
+            slotClass: 'slot-b10 zone-fin',
+            title: '10. Do sucesso do piloto ao rollout',
+            questions: [
+              { label: '10.1 Meta no Sandbox:', text: 'Qual taxa de aproveitamento dos rascunhos valida o D5?', tip: '≥ 85% das minutas aprovadas pelo titular com ajustes mínimos.' },
+              { label: '10.2 Aval dos Co-Autores:', text: 'Quem valida que o agente respeita a técnica do sênior e a TI?', tip: 'Especialista Titular, Diretor Jurídico e Arquiteto de TI.' },
+              { label: '10.3 Gatilho de Produção:', text: 'Qual o compromisso para expandir o modelo para outros seniores?', tip: 'Sucesso no D5 libera criação de agentes para mais 12 seniores.' }
+            ],
+            postits: [
+              { tag: '10.1 Meta D5', rot: 1.1, text: '≥ 85% dos redlines aprovados pelo advogado titular com zero erro.', color: 'p-cyan' },
+              { tag: '10.2 Aval', rot: -1.3, text: 'Parecer assinado pelo Especialista Titular, Diretor da Área e TI.', color: 'p-cyan' },
+              { tag: '10.3 Escala', rot: 0.9, text: 'Destrava expansão de agentes para os outros 12 especialistas sêniores.', color: 'p-cyan' }
+            ]
+          }
+        ]
+      }
+    };
+
+    function calcPostitTypography(fullText, isLargeSlot) {
+      const len = fullText.length;
+      if (isLargeSlot) {
+        if (len <= 65) return { fontSize: '15px', lineHeight: '1.22' };
+        if (len <= 105) return { fontSize: '13.5px', lineHeight: '1.22' };
+        if (len <= 145) return { fontSize: '12px', lineHeight: '1.2' };
+        return { fontSize: '11px', lineHeight: '1.18' };
+      } else {
+        if (len <= 45) return { fontSize: '13px', lineHeight: '1.18' };
+        if (len <= 70) return { fontSize: '11.5px', lineHeight: '1.18' };
+        if (len <= 95) return { fontSize: '10.5px', lineHeight: '1.16' };
+        if (len <= 125) return { fontSize: '9.5px', lineHeight: '1.14' };
+        return { fontSize: '8.8px', lineHeight: '1.12' };
+      }
+    }
+
+    function autoFitAllPostits() {
+      document.querySelectorAll('.paper-postit').forEach(el => {
+        const bodySpan = el.querySelector('.note-body');
+        if (!bodySpan) return;
+        let size = parseFloat(el.style.fontSize) || 11.5;
+        const maxH = el.clientHeight - 16;
+        while ((bodySpan.offsetHeight > maxH || el.scrollHeight > el.clientHeight) && size > 7.5) {
+          size = Math.round((size - 0.3) * 10) / 10;
+          el.style.fontSize = size + 'px';
+        }
+      });
+    }
+
+    const SLOT_ICONS = [
+      // 1. Processo Alvo / Especialista Alvo
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>`,
+      // 2. Impacto Não Determinístico
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>`,
+      // 3. Sabotadores & Resistência
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>`,
+      // 4. Legados, Conexão e Dados
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`,
+      // 5. Harness de Execução
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`,
+      // 6. Ontologia Operacional
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9"></polygon></svg>`,
+      // 7. Human in the loop
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>`,
+      // 8. Governança e Compliance
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="1" ry="1"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`,
+      // 9. Ancoragem de Valor e ROI
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
+      // 10. Do Sucesso do Piloto ao Rollout
+      `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>`
+    ];
+
+    function renderBoard() {
+      const cur = DATA[currentVariant];
+
+      const container = document.getElementById('canvas-grid-root');
+      container.innerHTML = cur.slots.map((s, idx) => {
+        const isRightEdge = s.slotClass.includes('slot-b7') || s.slotClass.includes('slot-b8') || s.slotClass.includes('slot-b10');
+        const bubbleClass = isRightEdge ? 'tip-bubble bubble-left' : 'tip-bubble';
+        const isLargeSlot = s.slotClass.includes('slot-b1');
+        const iconSvg = SLOT_ICONS[idx] || '';
+
+        const qHtml = s.questions.map(q => {
+          const words = q.text.trim().split(' ');
+          const lastWord = words.pop();
+          const leadingText = words.join(' ');
+          return `<div class="q-line"><strong>${q.label}</strong> ${leadingText} <span style="white-space:nowrap;">${lastWord}<span class="tip-anchor"><span class="tip-circle" onclick="toggleBubble(event, this)">?</span><span class="${bubbleClass}"><strong>Exemplo Prático</strong>${q.tip}</span></span></span></div>`;
+        }).join('');
+
+        const postitsHtml = isFilled ? s.postits.map(p => {
+          const combinedText = `${p.tag}: ${p.text}`;
+          const typo = calcPostitTypography(combinedText, isLargeSlot);
+          return `
+            <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
+              <span class="note-body"><strong class="note-lead">${p.tag}:</strong> ${p.text}</span>
+            </div>
+          `;
+        }).join('') : `
+          <div class="empty-state-clickable" onclick="addMockNote(${idx})">
+            <span class="empty-state-icon">+</span>
+            <span>Preencher ao clicar</span>
+          </div>
+        `;
+
+        return `
+          <div class="bmc-slot ${s.slotClass}">
+            <div>
+              <div class="slot-header">
+                <div class="slot-title">${iconSvg}<span>${s.title}</span></div>
+                <button class="add-postit-btn" title="Adicionar Post-it" onclick="addMockNote(${idx})">+</button>
+              </div>
+              <div class="slot-questions">${qHtml}</div>
+            </div>
+            <div class="postit-zone ${isFilled ? 'zone-filled' : 'zone-empty'}">${postitsHtml}</div>
+          </div>
+        `;
+      }).join('');
+
+      requestAnimationFrame(() => {
+        autoFitAllPostits();
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(autoFitAllPostits);
+        }
+      });
+    }
+
+    function showToast(text) {
+      const t = document.getElementById('toast-msg');
+      if (!t) return;
+      t.innerText = text;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2600);
+    }
+
+    function updateUrlState() {
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('caso', currentVariant);
+        url.searchParams.set('estado', isFilled ? 'preenchido' : 'vazio');
+        window.history.replaceState({}, '', url.toString());
+      } catch (e) {}
+    }
+
+    function shareCanvas() {
+      updateUrlState();
+      const shareUrl = window.location.href;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          showToast('Link copiado no estado atual (' + (isFilled ? 'Preenchido' : 'Vazio') + ')');
+        }).catch(() => {
+          prompt('Copie o link do Canvas:', shareUrl);
+        });
+      } else {
+        prompt('Copie o link do Canvas:', shareUrl);
+      }
+    }
+
+    function downloadPDF() {
+      document.querySelectorAll('.tip-anchor').forEach(a => a.classList.remove('active'));
+      const caseSlug = currentVariant === 'process' ? 'Agentic-Products' : 'Agentic-Employees';
+      const stateSlug = isFilled ? 'Preenchido' : 'Vazio';
+      const origTitle = document.title;
+      document.title = `The-Agentic-Pilot-Canvas-${caseSlug}-${stateSlug}`;
+      window.print();
+      setTimeout(() => {
+        document.title = origTitle;
+      }, 600);
+    }
+
+    function toggleBubble(e, el) {
+      e.stopPropagation();
+      const anchor = el.closest('.tip-anchor');
+      document.querySelectorAll('.tip-anchor').forEach(a => {
+        if (a !== anchor) a.classList.remove('active');
+      });
+      if (anchor) anchor.classList.toggle('active');
+    }
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.tip-anchor').forEach(a => a.classList.remove('active'));
+    });
+
+    function addMockNote(slotIdx) {
+      if (!isFilled) {
+        toggleMode(true);
+      }
+    }
+
+    function setVariant(v) {
+      currentVariant = v;
+      document.getElementById('btn-proc').classList.toggle('active', v === 'process');
+      document.getElementById('btn-spec').classList.toggle('active', v === 'specialist');
+      updateUrlState();
+      renderBoard();
+    }
+
+    function toggleMode(filled) {
+      isFilled = filled;
+      document.getElementById('btn-filled').classList.toggle('active', filled);
+      document.getElementById('btn-empty').classList.toggle('active', !filled);
+      updateUrlState();
+      renderBoard();
+    }
+
+    // Ler estado da URL se compartilhado
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const casoParam = params.get('caso');
+      const estadoParam = params.get('estado');
+      if (casoParam === 'specialist' || casoParam === 'process') {
+        currentVariant = casoParam;
+        document.getElementById('btn-proc').classList.toggle('active', currentVariant === 'process');
+        document.getElementById('btn-spec').classList.toggle('active', currentVariant === 'specialist');
+      }
+      if (estadoParam === 'vazio' || estadoParam === 'preenchido') {
+        isFilled = (estadoParam === 'preenchido');
+        document.getElementById('btn-filled').classList.toggle('active', isFilled);
+        document.getElementById('btn-empty').classList.toggle('active', !isFilled);
+      }
+    } catch (e) {}
+
+    renderBoard();
+  </script>
+</body>
+</html>
