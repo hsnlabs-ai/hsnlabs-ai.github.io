@@ -3,7 +3,7 @@ title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
 description: "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
-updatedAt: "2026-10-25T12:20:05Z"
+updatedAt: "2026-10-25T12:30:59Z"
 ---
 
 # The Agentic Pilot Canvas v1.4 · hsnlabs
