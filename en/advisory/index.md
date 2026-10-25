@@ -3,7 +3,7 @@ title: "Agentic AI Advisory · hsnlabs"
 description: "Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries."
 url: "https://hsnlabs.ai/en/advisory/"
 locale: "en"
-updatedAt: "2026-10-25T12:30:59Z"
+updatedAt: "2026-10-25T18:48:40Z"
 ---
 
 # Agentic AI Advisory · hsnlabs

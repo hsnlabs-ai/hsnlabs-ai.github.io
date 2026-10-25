@@ -25,8 +25,8 @@ Audited enterprise deployments across HR Tech & Operations, Insurance & Claims, 
 Executive AI board and architectural advisory led by Hugo Nascimento (Founder & CPTO) for C-levels and founders facing autonomous disruption: operating model modernization, unit margin defense, progressive legacy migration, and deterministic governance.
 
 ## Open Architecture Frameworks
-- The Agentic Pilot Canvas v1.4 (PT-BR): https://hsnlabs.ai/canvas/
-- The Agentic Pilot Canvas v1.4 (EN): https://hsnlabs.ai/en/canvas/
+- The Agentic Canvas™ (PT-BR): https://hsnlabs.ai/canvas/
+- The Agentic Canvas™ (EN): https://hsnlabs.ai/en/canvas/
 Open MIT architecture framework for structuring and certifying enterprise agentic AI pilots across legacy data ontologies, deterministic guardrails, evaluation harnesses, and human-in-the-loop governance.
 
 ## Why Agents Fail & Core Failure Modes
@@ -152,7 +152,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -268,7 +268,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -340,7 +340,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -412,7 +412,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -518,7 +518,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -588,7 +588,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -704,7 +704,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -820,7 +820,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -920,7 +920,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1018,7 +1018,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1116,7 +1116,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1214,7 +1214,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1312,7 +1312,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1410,7 +1410,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1430,21 +1430,21 @@ Architecture field notes & playbooks sent to your corporate inbox.
 
 
 ---
-# SECTION: The Agentic Pilot Canvas (PT-BR) (canvas/index.md)
+# SECTION: The Agentic Canvas™ (PT-BR) (canvas/index.md)
 
 ---
-title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
+title: "The Agentic Canvas™ · hsnlabs"
 description: "Framework aberto sob licença MIT para desenhar pilotos de IA agentica enterprise: ontologias sobre dados legados, determinismo e governança em produção."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# The Agentic Pilot Canvas v1.4 · hsnlabs
+# The Agentic Canvas™ · hsnlabs
 
 > Framework aberto sob licença MIT para desenhar pilotos de IA agentica enterprise: ontologias sobre dados legados, determinismo e governança em produção.
 
-# The Agentic Pilot Canvas
+# The Agentic Canvas™
 
 ## 1. Processo Alvo & Impacto
 
@@ -1570,7 +1570,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 
@@ -1590,21 +1590,21 @@ Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
 
 ---
-# SECTION: The Agentic Pilot Canvas (EN) (en/canvas/index.md)
+# SECTION: The Agentic Canvas™ (EN) (en/canvas/index.md)
 
 ---
-title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
+title: "The Agentic Canvas™ · hsnlabs"
 description: "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# The Agentic Pilot Canvas v1.4 · hsnlabs
+# The Agentic Canvas™ · hsnlabs
 
 > Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance.
 
-# The Agentic Pilot Canvas
+# The Agentic Canvas™
 
 ## 1. Processo Alvo & Impacto
 
@@ -1730,7 +1730,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Cases
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas™
 
 - Advisory
 

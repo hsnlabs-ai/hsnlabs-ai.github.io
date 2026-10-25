@@ -25,9 +25,9 @@ Audited enterprise deployments across HR Tech & Operations, Insurance & Claims, 
 Executive AI board and architectural advisory led by Hugo Nascimento (Founder & CPTO) for C-levels and founders facing autonomous disruption: operating model modernization, unit margin defense, progressive legacy migration, and deterministic governance.
 
 ## Open Architecture Frameworks
-- The Agentic Pilot Canvas v1.4 (PT-BR): https://hsnlabs.ai/canvas/
-- The Agentic Pilot Canvas v1.4 (EN): https://hsnlabs.ai/en/canvas/
-Open MIT architecture framework for structuring and certifying enterprise agentic AI pilots across legacy data ontologies, deterministic guardrails, evaluation harnesses, and human-in-the-loop governance.
+- The Agentic Canvas™ (PT-BR): https://hsnlabs.ai/canvas/
+- The Agentic Canvas™ (EN): https://hsnlabs.ai/en/canvas/
+Architecture framework by hsnlabs for structuring and certifying enterprise agentic systems across two tracks — Agentic Products and Agentic Employees — covering legacy data ontologies, deterministic guardrails, evaluation harnesses, and human-in-the-loop governance.
 
 ## Why Agents Fail & Core Failure Modes
 - Why Agents Fail (PT-BR): https://hsnlabs.ai/#services
