@@ -14,7 +14,7 @@ The website is engineered as a zero-dependency, high-performance bilingual stati
 * **Blog Reverse-Proxy (`/blog/` & `/blog/pt/`):** Hosted in the dedicated `hsnlabs-ai/blog` repository (`/Users/hugosoares/blog_hsn_labs`).
 
 ### Home Page Architecture
-1. **Header (`.header-nav`):** Sticky translucent navbar with horizontal lockup, navigation links (`Advisory`, `Cases`, `Blog`), GitHub link, `EN · PT` language switcher, and primary CTA (`Conhecer o Agentic Bootcamp`).
+1. **Header (`.header-nav`):** Sticky translucent navbar with horizontal lockup, navigation links (`Advisory`, `Cases`, `Blog`), GitHub link, `EN · PT` language switcher, and primary CTA (`Conhecer o Agentic Bootcamp™`).
 3. **Market Reality & Field Documentary Strip (`#market-reality`):** S&P Global 46% PoC abandonment callout paired with a 3-column original-color documentary strip (`01 · Alinhamento Arquitetural`, `02 · Imersão em Bancada`, `03 · Code to Spec`).
 4. **Services Section (`#services` — "Por Que Agentes Falham"):** 4-card Bento grid with interactive 12-component Enterprise Agentic Architecture blueprint viewport and localized `.sr-only` accessibility specification.
 5. **Editorial & Newsletter Section (`#editorial` — "Para ler antes de decidir."):** 3 Spoke essay cards with author bylines (`Por Hugo Nascimento · CPTO`) and the `[Agentes] x [a Gente]` newsletter conversion strip with FormSubmit Ajax integration.

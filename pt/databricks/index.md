@@ -2,7 +2,7 @@
 title: "Redirecionando... | hsnlabs"
 url: "https://hsnlabs.ai/pt/databricks/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T18:48:53Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Redirecionando... | hsnlabs

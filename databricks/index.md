@@ -3,7 +3,7 @@ title: "Databricks Lakehouse · Arquitetura de Agentes · hsnlabs"
 description: "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis sobre Databricks Lakehouse, Unity Catalog e Mosaic AI em produção."
 url: "https://hsnlabs.ai/databricks/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Databricks Lakehouse · Arquitetura de Agentes · hsnlabs
@@ -70,7 +70,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

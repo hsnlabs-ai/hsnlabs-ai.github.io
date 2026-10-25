@@ -1,16 +1,16 @@
 ---
-title: "Agentic Bootcamp · hsnlabs"
+title: "Agentic Bootcamp™ · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
-# Agentic Bootcamp · hsnlabs
+# Agentic Bootcamp™ · hsnlabs
 
 > We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.
 
-# Agentic Bootcamp
+# Agentic Bootcamp™
 
 We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Databricks, Braintrust, and LangChain.
 
@@ -26,7 +26,7 @@ Delivery of technical feasibility, audited ROI metrics, and an agentic maturity 
 
 ## Qualification Criteria
 
-The Agentic Bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+The Agentic Bootcamp™ is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
 
 Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
 
@@ -34,7 +34,7 @@ Minimum annual revenue of 10M USD with pre-approved budget for the current fisca
 
 Staging credentials or read replicas ready before day one. No need for data lake access: we prepare only the surgical slice where the agent operates.
 
-## Agentic Bootcamp Application
+## Agentic Bootcamp™ Application
 
 Submit your information to request a technical intake call. We review your systems and confirm qualification details within 24 hours.
 
@@ -42,7 +42,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

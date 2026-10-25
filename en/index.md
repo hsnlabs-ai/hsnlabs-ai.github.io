@@ -1,22 +1,22 @@
 ---
 title: "Agentic Engineering Adoption | hsnlabs"
-description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling."
+description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
 
-> We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
+> We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling.
 
 # Agentic Engineering Adoption.
 
-We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud credits, AI tokens, and tooling.
+We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling.
 
 ## How to escape the enterprise PoC graveyard.
 
-Connecting AI to legacy systems without redesign only creates tomorrow's technical debt. In our Agentic Bootcamp, we validate the architecture on your systems and deliver the production business case before scaling.
+Connecting AI to legacy systems without redesign only creates tomorrow's technical debt. In our Agentic Bootcamp™, we validate the architecture on your systems and deliver the production business case before scaling.
 
 ## Why Agents Fail
 
@@ -82,7 +82,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

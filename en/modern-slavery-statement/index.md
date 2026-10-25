@@ -3,7 +3,7 @@ title: "Modern Slavery Statement · hsnlabs"
 description: "Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
 url: "https://hsnlabs.ai/en/modern-slavery-statement/"
 locale: "en"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Modern Slavery Statement · hsnlabs
@@ -88,7 +88,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

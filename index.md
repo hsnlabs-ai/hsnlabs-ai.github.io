@@ -1,22 +1,22 @@
 ---
 title: "Adoção de Engenharia Agentica | hsnlabs"
-description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
+description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Adoção de Engenharia Agentica | hsnlabs
 
-> Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
+> Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 # Adoção de Engenharia Agentica.
 
-Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
+Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 ## Como escapar do cemitério de PoCs.
 
-Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Agentic Bootcamp, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
+Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Agentic Bootcamp™, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
 
 ## Por que agentes falham
 
@@ -82,7 +82,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

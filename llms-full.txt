@@ -5,11 +5,11 @@
 ## Canonical Positioning & Value Proposition
 - Overview (PT-BR): https://hsnlabs.ai/
 - Overview (EN): https://hsnlabs.ai/en/
-hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp backed by US$ 5,000 in cloud, AI tokens, and tooling.
+hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp™ backed by US$ 5,000 in cloud, AI tokens, and tooling.
 - Escape the PoC Graveyard: https://hsnlabs.ai/#market-reality
 46% of corporate AI proofs of concept were scrapped before production in 2025 (S&P Global Market Intelligence). Connecting AI to legacy systems without architectural redesign only creates technical debt.
 
-## Entry Engagement: Agentic Bootcamp
+## Entry Engagement: Agentic Bootcamp™
 - Bootcamp Deployment Protocol (PT-BR): https://hsnlabs.ai/bootcamp/
 - Bootcamp Deployment Protocol (EN): https://hsnlabs.ai/en/bootcamp/
 We embed a senior Forward Deployed Engineer (FDE) inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Braintrust, and LangChain.
@@ -66,7 +66,7 @@ Private, zero-trust Model Context Protocol servers connecting deep agents to SAP
 
 ---
 title: "Adoção de Engenharia Agentica | hsnlabs"
-description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
+description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -74,15 +74,15 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Adoção de Engenharia Agentica | hsnlabs
 
-> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
+> Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 # Adoção de Engenharia Agentica.
 
-Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
+Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
 ## Como escapar do cemitério de PoCs.
 
-Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Agentic Bootcamp, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
+Conectar IA ao legado sem redesenho só cria o próximo passivo técnico. No nosso Agentic Bootcamp™, validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar.
 
 ## Por Que Agentes Falham
 
@@ -148,7 +148,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -178,7 +178,7 @@ Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. C
 
 ---
 title: "Agentic Engineering Adoption | hsnlabs"
-description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud, AI tokens, and tooling."
+description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -186,15 +186,15 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Agentic Engineering Adoption | hsnlabs
 
-> Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud, AI tokens, and tooling.
+> Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling.
 
 # Agentic Engineering Adoption.
 
-Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp backed by $5,000 in cloud, AI tokens, and tooling.
+Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling.
 
 ## How to escape the enterprise PoC graveyard.
 
-Connecting AI to legacy systems without redesign only creates tomorrow's technical debt. In our Agentic Bootcamp, we validate the architecture on your systems and deliver the production Business Case before scaling.
+Connecting AI to legacy systems without redesign only creates tomorrow's technical debt. In our Agentic Bootcamp™, we validate the architecture on your systems and deliver the production Business Case before scaling.
 
 ## Why Agents Fail
 
@@ -264,7 +264,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -290,21 +290,21 @@ We use cookies to analyze telemetry and evaluate system performance under LGPD a
 
 
 ---
-# SECTION: Agentic Bootcamp (PT-BR) (bootcamp/index.md)
+# SECTION: Agentic Bootcamp™ (PT-BR) (bootcamp/index.md)
 
 ---
-title: "Agentic Bootcamp · hsnlabs"
+title: "Agentic Bootcamp™ · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# Agentic Bootcamp · hsnlabs
+# Agentic Bootcamp™ · hsnlabs
 
 > Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
 
-# Agentic Bootcamp
+# Agentic Bootcamp™
 
 Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Braintrust e LangChain.
 
@@ -320,7 +320,7 @@ Entrega de viabilidade técnica, métricas auditadas de ROI e roadmap de implant
 
 ## Critérios de Qualificação
 
-O Agentic Bootcamp é um sprint intensivo de produção na sua operação. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
+O Agentic Bootcamp™ é um sprint intensivo de produção na sua operação. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
 Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 
@@ -328,7 +328,7 @@ Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano 
 
 Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraímos fatias cirúrgicas de dados onde a informação reside.
 
-## Inscrição no Agentic Bootcamp
+## Inscrição no Agentic Bootcamp™
 
 Envie seus dados para solicitar uma chamada técnica. Analisamos seus sistemas e confirmamos os detalhes de qualificação em até 24 horas.
 
@@ -336,7 +336,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -362,21 +362,21 @@ Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. C
 
 
 ---
-# SECTION: Agentic Bootcamp (EN) (en/bootcamp/index.md)
+# SECTION: Agentic Bootcamp™ (EN) (en/bootcamp/index.md)
 
 ---
-title: "Agentic Bootcamp · hsnlabs"
+title: "Agentic Bootcamp™ · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# Agentic Bootcamp · hsnlabs
+# Agentic Bootcamp™ · hsnlabs
 
 > We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.
 
-# Agentic Bootcamp
+# Agentic Bootcamp™
 
 We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Braintrust, and LangChain.
 
@@ -392,7 +392,7 @@ Delivery of technical feasibility, audited ROI metrics, and full rollout roadmap
 
 ## Qualification Criteria
 
-The Agentic Bootcamp is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+The Agentic Bootcamp™ is an intensive 12k USD production sprint. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
 
 Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
 
@@ -400,7 +400,7 @@ Minimum annual revenue of 10M USD with pre-approved budget for the current fisca
 
 Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.
 
-## Agentic Bootcamp Application
+## Agentic Bootcamp™ Application
 
 Submit your information to request a technical intake call. We review your systems and confirm qualification details within 24 hours.
 
@@ -408,7 +408,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -514,7 +514,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -584,7 +584,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -700,7 +700,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -816,7 +816,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -916,7 +916,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1014,7 +1014,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1112,7 +1112,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1210,7 +1210,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1308,7 +1308,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1406,7 +1406,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1566,7 +1566,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 
@@ -1726,7 +1726,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Cases
 

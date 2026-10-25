@@ -3,7 +3,7 @@ title: "The Agentic Canvas™ · hsnlabs"
 description: "Architecture framework by hsnlabs for designing and certifying enterprise agentic systems across two tracks: Agentic Products and Agentic Employees."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # The Agentic Canvas™ · hsnlabs
@@ -38,7 +38,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

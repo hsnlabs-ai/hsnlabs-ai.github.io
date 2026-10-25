@@ -1,16 +1,16 @@
 ---
-title: "Agentic Bootcamp · hsnlabs"
+title: "Agentic Bootcamp™ · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
-# Agentic Bootcamp · hsnlabs
+# Agentic Bootcamp™ · hsnlabs
 
 > Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
 
-# Agentic Bootcamp
+# Agentic Bootcamp™
 
 Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Databricks, Braintrust e LangChain.
 
@@ -26,7 +26,7 @@ Entrega de viabilidade técnica, métricas auditadas de retorno e roadmap de mat
 
 ## Critérios de Qualificação
 
-O Agentic Bootcamp é um sprint intensivo de produção na sua operação. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
+O Agentic Bootcamp™ é um sprint intensivo de produção na sua operação. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
 Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 
@@ -34,7 +34,7 @@ Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano 
 
 Credenciais de homologação ou réplicas de leitura no primeiro dia. Sem necessidade de acesso a Data Lakes, preparamos apenas a fatia cirúrgica onde o agente opera.
 
-## Inscrição no Agentic Bootcamp
+## Inscrição no Agentic Bootcamp™
 
 Envie seus dados para solicitar uma chamada técnica. Analisamos seus sistemas e confirmamos os detalhes de qualificação em até 24 horas.
 
@@ -42,7 +42,7 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

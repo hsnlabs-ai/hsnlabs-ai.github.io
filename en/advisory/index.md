@@ -3,7 +3,7 @@ title: "Agentic AI Advisory · hsnlabs"
 description: "Agentic AI advisory for C-levels facing autonomous disruption. Modernize operating models, defend unit margins, and deploy production guardrails and system boundaries."
 url: "https://hsnlabs.ai/en/advisory/"
 locale: "en"
-updatedAt: "2026-10-25T18:48:40Z"
+updatedAt: "2026-10-25T19:12:47Z"
 ---
 
 # Agentic AI Advisory · hsnlabs
@@ -42,7 +42,7 @@ An engineering lab with over five years of shipping AI products and resilient ag
 
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
-- Agentic Bootcamp
+- Agentic Bootcamp™
 
 - Advisory
 

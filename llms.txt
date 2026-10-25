@@ -5,11 +5,11 @@
 ## Canonical Positioning & Value Proposition
 - Overview (PT-BR): https://hsnlabs.ai/
 - Overview (EN): https://hsnlabs.ai/en/
-hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp backed by US$ 5,000 in cloud, AI tokens, and tooling.
+hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp™ backed by US$ 5,000 in cloud, AI tokens, and tooling.
 - Escape the PoC Graveyard: https://hsnlabs.ai/#market-reality
 46% of corporate AI proofs of concept were scrapped before production in 2025 (S&P Global Market Intelligence). Connecting AI to legacy systems without architectural redesign only creates technical debt.
 
-## Entry Engagement: Agentic Bootcamp
+## Entry Engagement: Agentic Bootcamp™
 - Bootcamp Deployment Protocol (PT-BR): https://hsnlabs.ai/bootcamp/
 - Bootcamp Deployment Protocol (EN): https://hsnlabs.ai/en/bootcamp/
 We embed a senior Forward Deployed Engineer (FDE) inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Databricks, Braintrust, and LangChain.
