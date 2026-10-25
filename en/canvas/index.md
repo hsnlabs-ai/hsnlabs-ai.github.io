@@ -1,16 +1,16 @@
 ---
-title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
+title: "The Agentic Canvas v1.4 · hsnlabs"
 description: "Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
 updatedAt: "2026-10-25T12:30:59Z"
 ---
 
-# The Agentic Pilot Canvas v1.4 · hsnlabs
+# The Agentic Canvas v1.4 · hsnlabs
 
 > Open MIT architecture framework for designing enterprise agentic AI pilots: legacy data ontologies, deterministic guards, eval harnesses, and governance.
 
-# The Agentic Pilot Canvas
+# The Agentic Canvas
 
 ## 1. Target Process & Impact
 
@@ -138,7 +138,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Enterprise MCP
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas
 
 - Blog
 

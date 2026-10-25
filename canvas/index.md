@@ -1,16 +1,16 @@
 ---
-title: "The Agentic Pilot Canvas v1.4 · hsnlabs"
+title: "The Agentic Canvas v1.4 · hsnlabs"
 description: "Framework aberto sob licença MIT para desenhar pilotos de IA agentica enterprise: ontologias sobre dados legados, determinismo e governança em produção."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T12:20:05Z"
+updatedAt: "2026-10-25T12:30:59Z"
 ---
 
-# The Agentic Pilot Canvas v1.4 · hsnlabs
+# The Agentic Canvas v1.4 · hsnlabs
 
 > Framework aberto sob licença MIT para desenhar pilotos de IA agentica enterprise: ontologias sobre dados legados, determinismo e governança em produção.
 
-# The Agentic Pilot Canvas
+# The Agentic Canvas
 
 ## 1. Processo Alvo & Impacto
 
@@ -138,7 +138,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Enterprise MCP
 
-- The Agentic Pilot Canvas
+- The Agentic Canvas
 
 - Blog
 
