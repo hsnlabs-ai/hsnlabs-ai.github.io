@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T10:50:21Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -18,11 +18,11 @@ We embed a senior FDE inside your operation. 100% credited toward production rol
 
 Database read replicas, ERP connections, and security isolation before writing code.
 
-Reverse engineering legacy code into formal specifications, known as Code to Spec, and mapping into executable business ontologies under a spec-driven architecture.
+Proprietary framework to understand legacy systems and generate formal specs, creating layers where the AI model is swappable.
 
 Deploying deep agents in a secure, isolated test environment, testing edge cases on LangGraph state graphs and sovereign runtimes.
 
-Delivery of technical feasibility, audited ROI metrics, and full rollout roadmap. Sprint fee is completely rebated against the production deployment contract.
+Delivery of technical feasibility, audited ROI metrics, and an agentic maturity roadmap by governance stages. Sprint fee is completely rebated against the production deployment contract.
 
 ## Qualification Criteria
 
@@ -32,7 +32,7 @@ Direct involvement from a C-level executive, such as the CIO, CTO, or CEO.
 
 Minimum annual revenue of 10M USD with pre-approved budget for the current fiscal year to develop and deploy the project upon verified validation.
 
-Staging credentials or read replicas ready before day one. No massive data lakes required: we extract surgical data slices where information lives.
+Staging credentials or read replicas ready before day one. No need for data lake access: we prepare only the surgical slice where the agent operates.
 
 ## Agentic Bootcamp Application
 

@@ -3,7 +3,7 @@ title: "Agentic Bootcamp · hsnlabs"
 description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-19T13:02:11Z"
+updatedAt: "2026-10-25T10:50:21Z"
 ---
 
 # Agentic Bootcamp · hsnlabs
@@ -18,11 +18,11 @@ Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento credi
 
 Réplicas de leitura de banco de dados, conexões ERP e isolamento de segurança antes de escrever qualquer código.
 
-Engenharia reversa de código legado para especificações formais, no modelo Code to Spec, e mapeamento em ontologias de negócio executáveis sob arquitetura spec-driven.
+Framework próprio para entender o legado e gerar spec formais, criando camadas onde o modelo de IA é peça trocável.
 
 Implantação de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.
 
-Entrega de viabilidade técnica, métricas auditadas de ROI e roadmap de implantação. Taxa do sprint totalmente reembolsada no contrato de produção.
+Entrega de viabilidade técnica, métricas auditadas de retorno e roadmap de maturidade agêntica por estágios de governança. Taxa do sprint totalmente reembolsada no contrato de produção.
 
 ## Critérios de Qualificação
 
@@ -32,7 +32,7 @@ Envolvimento direto de um executivo C-level, como CIO, CTO ou CEO.
 
 Receita anual mínima de 10 milhões de USD com orçamento pré-aprovado no ano fiscal vigente para desenvolver e implantar o projeto.
 
-Credenciais de homologação ou réplicas de leitura liberadas antes do primeiro dia. Zero necessidade de Data Lakes massivos: extraímos fatias cirúrgicas de dados onde a informação reside.
+Credenciais de homologação ou réplicas de leitura no primeiro dia. Sem necessidade de acesso a Data Lakes, preparamos apenas a fatia cirúrgica onde o agente opera.
 
 ## Inscrição no Agentic Bootcamp
 
