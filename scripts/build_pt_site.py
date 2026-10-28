@@ -297,8 +297,8 @@ def build_pt_bootcamp():
     html = html.replace('<link rel="canonical" href="https://hsnlabs.ai/bootcamp/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/bootcamp/">')
     
     html = html.replace(
-        'content="We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."',
-        'content="Alocamos Engenheiros Forward Deployed seniores junto a sua equipe para construir agentes de IA que operam em producao. Cem por cento creditado para o contrato de implantacao em contas qualificadas."'
+        'content="We embed senior engineering leadership with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."',
+        'content="Alocamos lideranca senior de engenharia junto a sua equipe para construir agentes de IA que operam em producao. Cem por cento creditado para o contrato de implantacao em contas qualificadas."'
     )
     
     hreflangs = '''  <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/bootcamp/">
@@ -321,8 +321,8 @@ def build_pt_bootcamp():
     html = html.replace('href="/" class="back-link"', 'href="/pt/" class="back-link"')
     html = html.replace('<h1 class="display-hero">Agentic Bootcamp</h1>', '<h1 class="display-hero">Bootcamp de Agentes</h1>')
     html = html.replace(
-        'We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts.',
-        'Alocamos um engenheiro senior FDE dentro da sua operacao. Cem por cento creditado para implantacao em contas qualificadas.'
+        'We embed senior engineering leadership inside your operation. 100% credited toward production rollout for qualified accounts.',
+        'Alocamos lideranca senior de engenharia dentro da sua operacao. Cem por cento creditado para implantacao em contas qualificadas.'
     )
     html = html.replace('>Request Call<', '>Solicitar Chamada<')
     html = html.replace('>Review Criteria<', '>Revisar Criterios<')
@@ -594,8 +594,8 @@ def build_pt_mcp():
     )
     html = html.replace('>Request Technical Scoping<', '>Solicitar Escopo Tecnico<')
     html = html.replace(
-        'Thank you. Our Forward Deployed Engineering team will review your system architecture and reply within 24 hours.',
-        'Obrigado. Nossa equipe de Engenharia Forward Deployed revisara a arquitetura do sistema e respondera em ate 24 horas.'
+        'Thank you. Our engineering team will review your system architecture and reply within 24 hours.',
+        'Obrigado. Nossa equipe de engenharia revisara a arquitetura do sistema e respondera em ate 24 horas.'
     )
     
     html = localize_common_pt_components(html)

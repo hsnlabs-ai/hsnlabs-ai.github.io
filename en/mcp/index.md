@@ -56,7 +56,7 @@ Native OpenTelemetry instrumentation exporting structured execution traces. Logs
 
 ## Deployment Protocol
 
-A structured forward deployed engineering protocol from legacy discovery to verified production deployment.
+A structured context engineering protocol from legacy discovery to verified production deployment.
 
 Network topology review, VPC isolation setup, and staging credential provisioning.
 
@@ -70,7 +70,7 @@ Security audit sign-off, telemetry dashboard verification, and engineering runbo
 
 ## Engagement Criteria
 
-The MCP Production Sprint is an intensive 12k USD forward deployed engineering deployment. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+The MCP Production Sprint is an intensive 12k USD enterprise engineering deployment. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
 
 Direct sponsorship from a C-level executive, such as the CTO, CIO, or CISO with architectural mandate.
 
@@ -80,7 +80,7 @@ An active enterprise roadmap deploying autonomous agents on core company workflo
 
 ## Scope Your MCP Sprint
 
-Talk directly with our Forward Deployed Engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
+Talk directly with our engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
 
 An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
 

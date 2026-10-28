@@ -1,6 +1,6 @@
 # hsnlabs
 
-> Forward Deployed Engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. A clean machine-readable Markdown version of every page is available by appending `index.md` to the directory path (e.g., `https://hsnlabs.ai/index.md`, `https://hsnlabs.ai/bootcamp/index.md`, `https://hsnlabs.ai/en/index.md`, `https://hsnlabs.ai/en/bootcamp/index.md`). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
+> Enterprise agentic engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. A clean machine-readable Markdown version of every page is available by appending `index.md` to the directory path (e.g., `https://hsnlabs.ai/index.md`, `https://hsnlabs.ai/bootcamp/index.md`, `https://hsnlabs.ai/en/index.md`, `https://hsnlabs.ai/en/bootcamp/index.md`). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
 
 ## Canonical Positioning & Value Proposition
 - Overview (PT-BR): https://hsnlabs.ai/
@@ -12,7 +12,7 @@ hsnlabs is an enterprise AI transformation partner operationalizing autonomous a
 ## Entry Engagement: Agentic Bootcamp™
 - Bootcamp Deployment Protocol (PT-BR): https://hsnlabs.ai/bootcamp/
 - Bootcamp Deployment Protocol (EN): https://hsnlabs.ai/en/bootcamp/
-We embed a senior Forward Deployed Engineer (FDE) inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Braintrust, and LangChain.
+We embed senior engineering leadership inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Braintrust, and LangChain.
 
 ## Enterprise Client Track Record
 - Client Deployments (PT-BR): https://hsnlabs.ai/
@@ -294,7 +294,7 @@ We use cookies to analyze telemetry and evaluate system performance under LGPD a
 
 ---
 title: "Agentic Bootcamp™ · hsnlabs"
-description: "Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
+description: "Alocamos liderança sênior de engenharia junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -302,11 +302,11 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Agentic Bootcamp™ · hsnlabs
 
-> Alocamos Engenheiros Forward Deployed seniores junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
+> Alocamos liderança sênior de engenharia junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas.
 
 # Agentic Bootcamp™
 
-Alocamos um engenheiro sênior FDE dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Braintrust e LangChain.
+Alocamos liderança sênior de engenharia dentro da sua operação. Cem por cento creditado para implantação em contas qualificadas, além de um pacote de 5.000 USD em créditos de Google Cloud, Snowflake, Braintrust e LangChain.
 
 ## Nosso Método
 
@@ -366,7 +366,7 @@ Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. C
 
 ---
 title: "Agentic Bootcamp™ · hsnlabs"
-description: "We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
+description: "We embed senior engineering leadership with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -374,11 +374,11 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Agentic Bootcamp™ · hsnlabs
 
-> We embed senior Forward Deployed Engineers with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.
+> We embed senior engineering leadership with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts.
 
 # Agentic Bootcamp™
 
-We embed a senior FDE inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Braintrust, and LangChain.
+We embed senior engineering leadership inside your operation. 100% credited toward production rollout for qualified accounts, plus a 5,000 USD ecosystem credits package across Google Cloud, Snowflake, Braintrust, and LangChain.
 
 ## Our Method
 
@@ -670,7 +670,7 @@ Instrumentação nativa em OpenTelemetry exportando traces estruturados de execu
 
 ## Protocolo de Implantação
 
-Um protocolo estruturado de engenharia Forward Deployed, do mapeamento legado à implantação verificada em produção.
+Um protocolo estruturado de engenharia de contexto, do mapeamento legado à implantação verificada em produção.
 
 Revisão da topologia de rede, configuração de isolamento de VPC e provisionamento de credenciais de homologação.
 
@@ -684,7 +684,7 @@ Homologação de auditoria de segurança, verificação de painéis de telemetri
 
 ## Critérios de Engajamento
 
-O Sprint de Produção MCP é uma implantação intensiva de engenharia Forward Deployed. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
+O Sprint de Produção MCP é uma implantação intensiva de engenharia corporativa. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
 Patrocínio direto de um executivo C-level, como CTO, CIO ou CISO com mandato arquitetural.
 
@@ -694,7 +694,7 @@ Um roadmap corporativo ativo implantando agentes autônomos em fluxos críticos 
 
 ## Escopo do Seu Sprint MCP
 
-Converse diretamente com nossa equipe de Engenharia Forward Deployed para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
+Converse diretamente com nossa equipe de engenharia para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
@@ -786,7 +786,7 @@ Native OpenTelemetry instrumentation exporting structured execution traces. Logs
 
 ## Deployment Protocol
 
-A structured forward deployed engineering protocol from legacy discovery to verified production deployment.
+A structured context engineering protocol from legacy discovery to verified production deployment.
 
 Network topology review, VPC isolation setup, and staging credential provisioning.
 
@@ -800,7 +800,7 @@ Security audit sign-off, telemetry dashboard verification, and engineering runbo
 
 ## Engagement Criteria
 
-The MCP Production Sprint is an intensive 12k USD forward deployed engineering deployment. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
+The MCP Production Sprint is an intensive 12k USD enterprise engineering deployment. Qualified enterprises unlock our Performance Rebate: the fee is 100% credited toward your full production contract upon rollout.
 
 Direct sponsorship from a C-level executive, such as the CTO, CIO, or CISO with architectural mandate.
 
@@ -810,7 +810,7 @@ An active enterprise roadmap deploying autonomous agents on core company workflo
 
 ## Scope Your MCP Sprint
 
-Talk directly with our Forward Deployed Engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
+Talk directly with our engineering team to review systems, evaluate perimeter constraints, and schedule deployment.
 
 An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
 

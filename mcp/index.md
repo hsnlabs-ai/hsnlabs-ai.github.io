@@ -56,7 +56,7 @@ Instrumentação nativa em OpenTelemetry exportando traces estruturados de execu
 
 ## Protocolo de Implantação
 
-Um protocolo estruturado de engenharia Forward Deployed, do mapeamento legado à implantação verificada em produção.
+Um protocolo estruturado de engenharia de contexto, do mapeamento legado à implantação verificada em produção.
 
 Revisão da topologia de rede, configuração de isolamento de VPC e provisionamento de credenciais de homologação.
 
@@ -70,7 +70,7 @@ Homologação de auditoria de segurança, verificação de painéis de telemetri
 
 ## Critérios de Engajamento
 
-O Sprint de Produção MCP é uma implantação intensiva de engenharia Forward Deployed. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
+O Sprint de Produção MCP é uma implantação intensiva de engenharia corporativa. Empresas qualificadas desbloqueiam nosso Reembolso por Desempenho: a taxa é cem por cento creditada para o contrato de produção.
 
 Patrocínio direto de um executivo C-level, como CTO, CIO ou CISO com mandato arquitetural.
 
@@ -80,7 +80,7 @@ Um roadmap corporativo ativo implantando agentes autônomos em fluxos críticos 
 
 ## Escopo do Seu Sprint MCP
 
-Converse diretamente com nossa equipe de Engenharia Forward Deployed para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
+Converse diretamente com nossa equipe de engenharia para revisar sistemas, avaliar restrições de perímetro e agendar a implantação.
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 

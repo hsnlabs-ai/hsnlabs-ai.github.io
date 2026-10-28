@@ -107,7 +107,7 @@ site_hsn_labs/
 * Headline Display:
   * EN: `Proprietary Frameworks that eliminate production failures`
   * PT: `Metodologias proprietarias para execucao sem falhas em producao`
-* Subtitulo: Contexto direto de Forward Deployed Engineering.
+* Subtitulo: Contexto direto de Engenharia Agêntica Corporativa.
 
 ### Secao 1: Agentic Adoption Canvas
 * Badge `.post-it-badge`: `01`

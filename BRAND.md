@@ -6,7 +6,8 @@ Operational standards for applying the hsnlabs brand across digital products, en
 
 ## 1. Brand Concept and Metaphor
 
-* **Core Positioning:** Forward Deployed Engineering boutique building resilient multi-agent architectures on business ontologies for mission-critical enterprise operations.
+* **Core Positioning:** Enterprise agentic engineering boutique building resilient multi-agent architectures on business ontologies for mission-critical enterprise operations and legacy modernization.
+* **Approved Descriptors:** `Adoção de Engenharia Agêntica`, `Enterprise Agentic Architecture`, `Arquitetura e Sistemas em Produção`.
 * **Symbol:** Pure geometric cyan square containing a white paper origami koi carp leaping toward the upper right corner.
 * **Origami Metaphor:**
   * Precise paper folds represent structural rigor and artisanal engineering versus stochastic drift.
@@ -64,3 +65,4 @@ All canonical files reside in `assets/brand/`:
 * Do not apply generic AI visual tropes such as neon gradients, purple ribbons, or floating spheres.
 * Do not alter the lowercase casing of the wordmark `hsnlabs`.
 * Do not combine the mark with third-party logos without maintaining the standard exclusion margin.
+* Never use `Forward Deployed Engineering` or `FDE` as a brand descriptor, headline, tagline, banner eyebrow, or public positioning. FDE is an internal delivery capability within specific technical sandbox sprints, never the public company category or executive bio descriptor.

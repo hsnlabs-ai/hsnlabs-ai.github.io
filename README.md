@@ -2,7 +2,7 @@
 
 Official production repository for the **hsnlabs** (`https://hsnlabs.ai`) corporate website.
 
-**hsnlabs** is a Forward Deployed Engineering boutique solving why enterprise AI agents fail in production across the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation.
+**hsnlabs** is an enterprise agentic engineering boutique solving why enterprise AI agents fail in production across the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation.
 
 ---
 
