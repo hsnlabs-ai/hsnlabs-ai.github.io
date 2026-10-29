@@ -2447,10 +2447,14 @@
     }
     /* CANONICAL 3-COLUMN FOUNDER CALLOUT & MOBILE 3-COLUMN BENTO SPLIT (OPTION 1) */
     .hero-founder-callout {
-      max-width: 820px !important;
+      max-width: 860px !important;
       width: 100% !important;
-      padding: 12px 18px !important;
-      gap: 12px !important;
+      padding: 13px 22px !important;
+      gap: 14px !important;
+    }
+    .hero-founder-callout > div:first-child {
+      width: 278px;
+      flex-shrink: 0;
     }
     .founder-cta-wrap {
       display: inline-flex;
@@ -2463,11 +2467,12 @@
       height: 44px !important;
     }
     .founder-meta-title {
-      font-size: 0.69rem !important;
+      font-size: 0.67rem !important;
+      letter-spacing: 0.055em !important;
       white-space: nowrap !important;
       overflow: hidden !important;
       text-overflow: ellipsis !important;
-      max-width: 240px !important;
+      max-width: 222px !important;
     }
     .founder-meta-name {
       font-size: 0.88rem !important;
@@ -2522,6 +2527,13 @@
         flex-direction: column !important;
         align-items: stretch !important;
         gap: 14px !important;
+      }
+      .hero-founder-callout > div:first-child {
+        width: 100% !important;
+      }
+      .founder-meta-title {
+        max-width: 100% !important;
+        white-space: normal !important;
       }
       .founder-cred-group {
         display: grid !important;
