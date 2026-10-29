@@ -2818,11 +2818,11 @@
       overflow: visible !important;
     }
     .bp-bento-34 {
-      position: absolute;
-      top: -26px;
+      position: absolute !important;
+      top: -12px;
       left: calc(50% + 40px);
-      width: calc(33.333% - 40px);
-      height: 102px;
+      width: calc(33.333% - 34px);
+      height: 94px;
       z-index: 25;
       pointer-events: none;
     }
@@ -2833,7 +2833,7 @@
       margin-top: 10px;
       position: relative;
     }
-    @media (max-width: 920px) {
+    @media (max-width: 1060px) {
       .bp-arrow-header,
       .bp-arrow-cta,
       .bp-bridge-12,
@@ -4252,7 +4252,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       z-index: 0 !important;
     }
     .reality-banner > *,
-    .card > *,
+    .card > *:not(.bp-bento-34),
     .editorial-card > *,
     .scoping-card > *,
     .origami-note > * {
