@@ -4233,10 +4233,33 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
 
   <script src="/assets/js/founder-rotation.js" defer></script>
   <!-- =========================================================================
-       HSNLABS LIGHTWEIGHT MOTION LAYER (ZERO CLS / SEO SAFE / 100% GPU COMPOSITED)
+       HSNLABS LIGHTWEIGHT MOTION LAYER (SAFARI GPU-SAFE / ZERO CLS / SEO SAFE)
        ========================================================================= -->
   <style id="hsnlabs-motion-pack">
-    
+    /* 0. SAFARI COMPOSITOR ISOLATION GUARD FOR ALL PAPER-TEXTURED CONTAINERS */
+    .reality-banner,
+    .card,
+    .editorial-card,
+    .scoping-card,
+    .origami-note {
+      isolation: isolate;
+    }
+    .reality-banner::before,
+    .card::before,
+    .editorial-card::before,
+    .scoping-card::before,
+    .origami-note::before {
+      z-index: 0 !important;
+    }
+    .reality-banner > *,
+    .card > *,
+    .editorial-card > *,
+    .scoping-card > *,
+    .origami-note > * {
+      position: relative;
+      z-index: 2;
+    }
+
     /* 1. BUTTON SPECULAR SWEEP & SUBTLE LIFT */
     .btn::after {
       content: '';
@@ -4281,7 +4304,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       transform: scale(1.62) !important;
     }
 
-    /* Below-the-fold bridge & bento dashed arrows only (Hero arrows remain 100% static) */
+    /* Below-the-fold bridge & bento dashed arrows only */
     .bp-bridge-12 path:first-child,
     .bp-bridge-23 path:first-child,
     .bp-bento-12 path:first-child,
@@ -4309,26 +4332,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       100% { clip-path: inset(0 0 0 0%); opacity: 1; }
     }
 
-    /* 3. REALITY BANNER: 100% GPU COMPOSITED STREAMING SHIMMER BARS + DIVIDER PULSE */
-    .reality-divider {
-      position: relative;
-      overflow: hidden;
-    }
-    .reality-divider::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 45%;
-      background: linear-gradient(to bottom, transparent, #ffffff, #0284c7, transparent);
-      will-change: transform;
-      animation: hsnDividerStream 2.4s ease-in-out infinite;
-    }
-    @keyframes hsnDividerStream {
-      0% { transform: translate3d(0, -110%, 0); }
-      100% { transform: translate3d(0, 240%, 0); }
-    }
+    /* 3. REALITY BANNER: SAFARI-SAFE STREAMING SHIMMER BARS (NO WILL-CHANGE ON MIX-BLEND SIBLINGS) */
     .hsn-stat-bar-track {
       width: 100%;
       height: 6px;
@@ -4345,9 +4349,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       background: #0284c7;
       transform-origin: left center;
       transform: scaleX(0);
-      will-change: transform;
       transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 0 10px rgba(82, 180, 253, 0.55);
     }
     .hsn-stat-bar-fill::before {
       content: '';
@@ -4355,28 +4357,25 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       inset: 0;
       width: 200%;
       background: linear-gradient(90deg, #0284c7 0%, #52B4FD 22%, #e0f2fe 25%, #52B4FD 28%, #0284c7 50%, #52B4FD 72%, #e0f2fe 75%, #52B4FD 78%, #0284c7 100%);
-      will-change: transform;
-      animation: hsnBarShimmerRight 1.6s linear infinite;
+      animation: hsnBarShimmerRight 1.8s linear infinite;
     }
     .hsn-stat-bar-fill::after {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
-      width: 12px;
+      width: 10px;
       height: 100%;
       background: #ffffff;
-      box-shadow: 0 0 8px #ffffff, 0 0 14px #52B4FD;
-      will-change: transform, opacity;
-      animation: hsnTipVibrate 0.7s ease-in-out infinite alternate;
+      animation: hsnTipVibrate 0.8s ease-in-out infinite alternate;
     }
     @keyframes hsnBarShimmerRight {
-      0% { transform: translate3d(-50%, 0, 0); }
-      100% { transform: translate3d(0%, 0, 0); }
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0%); }
     }
     @keyframes hsnTipVibrate {
-      0% { opacity: 0.45; transform: scaleX(0.8); }
-      100% { opacity: 1; transform: scaleX(1.4); }
+      0% { opacity: 0.45; }
+      100% { opacity: 1; }
     }
 
     /* 4. SEQUENTIAL CASCADE FOR 01-02-03 FIELD CARDS & 1-2-3-4 BENTO POST-ITS */
