@@ -315,7 +315,7 @@ def test_gate_s12_origami_hero_notes():
         assert 'stroke-dasharray="5 4"' in content, f"ERRO [{label}]: Padrao Exemplo 01 (dasharray 5 4) ausente"
         assert "bp-bridge-12" in content and "bp-bento-12" in content and "bp-bento-34" in content and "bp-arrow-cta" in content, f"ERRO [{label}]: Setas de ponte/CTA ausentes"
         assert content.count('class="bp-arrow-header"') == 2, f"ERRO [{label}]: esperado 2 bp-arrow-header (header + founder callout)"
-        assert content.count('class="bp-arrow-cta"') == 2, f"ERRO [{label}]: esperado 2 bp-arrow-cta (hero + contact submit)"
+        assert content.count('class="bp-arrow-cta"') == 1, f"ERRO [{label}]: esperado 1 bp-arrow-cta (contact submit)"
         assert 'stroke="#526071"' not in content, f"ERRO [{label}]: Seta cinza remanescente encontrada (todas devem ser #0284c7)"
     print("PASS: Gate S12 Notas Origami e Setas Exemplo 01 validadas em PT e EN")
 
