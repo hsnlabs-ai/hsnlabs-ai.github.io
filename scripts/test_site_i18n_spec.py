@@ -311,6 +311,7 @@ def test_gate_s12_origami_hero_notes():
         assert content.count('<div class="note-heading">Surface Agents</div>') == 1, f"ERRO [{label}]: esperado 1 titulo Surface Agents unificado no DOM"
         assert exp_left in content, f"ERRO [{label}]: descricao esquerda incorreta"
         assert exp_right in content, f"ERRO [{label}]: descricao direita incorreta"
+        assert ".note-heading {\n      font-family: var(--font-display);\n      font-size: 1.46rem;\n      font-weight: 500;\n      color: var(--cyan-text);" in content, f"ERRO [{label}]: .note-heading nao esta em var(--cyan-text)"
     print("PASS: Gate S12 Notas Origami Minimalistas validadas em PT e EN")
 
 if __name__ == "__main__":
