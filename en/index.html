@@ -4012,5 +4012,393 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
   </script>
 
   <script src="/assets/js/founder-rotation.js" defer></script>
+
+  <!-- =========================================================================
+       HSNLABS LIGHTWEIGHT MOTION LAYER (ZERO CLS / SEO SAFE / 100% GPU COMPOSITED)
+       ========================================================================= -->
+  <style id="hsnlabs-motion-pack">
+    /* 1. BUTTON SPECULAR SWEEP & SUBTLE LIFT */
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -115%;
+      width: 65%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.38), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      z-index: 3;
+    }
+    .btn:hover::after {
+      left: 145%;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(82, 180, 253, 0.46);
+    }
+    .btn-outline:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(7, 9, 14, 0.06);
+    }
+
+    /* 2. HERO ORIGAMI NOTES ASYNCHRONOUS FLOAT + LIVE CORNER FOLD + ARROWS */
+    .flank-note-left {
+      animation: hsnFloatLeft 5.4s ease-in-out infinite;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.25s ease;
+    }
+    .flank-note-right {
+      animation: hsnFloatRight 6.2s ease-in-out infinite;
+      animation-delay: -1.9s;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.25s ease;
+    }
+    @keyframes hsnFloatLeft {
+      0%, 100% { transform: rotate(-1.1deg) translateY(0px); }
+      50% { transform: rotate(-0.3deg) translateY(-6px); }
+    }
+    @keyframes hsnFloatRight {
+      0%, 100% { transform: rotate(1.1deg) translateY(0px); }
+      50% { transform: rotate(2.0deg) translateY(-6px); }
+    }
+    .origami-note:hover {
+      animation-play-state: paused !important;
+      transform: rotate(0deg) translateY(-6px) scale(1.04) !important;
+      border-color: var(--cyan) !important;
+      box-shadow: 0 16px 32px -8px rgba(2, 132, 199, 0.18) !important;
+    }
+    .origami-note::after {
+      transform-origin: top right;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+    }
+    .origami-note:hover::after {
+      transform: scale(1.62) !important;
+    }
+
+    /* All blueprint dashed arrows: continuous subtle dash flow */
+    .curved-arrow-left path:first-child,
+    .curved-arrow-right path:first-child,
+    .bp-arrow-header path:first-child,
+    .bp-arrow-cta path:first-child,
+    .bp-bridge-12 path:first-child,
+    .bp-bridge-23 path:first-child,
+    .bp-bento-12 path:first-child,
+    .bp-bento-23 path:first-child,
+    .bp-bento-34 path:first-child {
+      stroke-dasharray: 5 4;
+      animation: hsnDashFlow 14s linear infinite;
+    }
+    @keyframes hsnDashFlow {
+      to { stroke-dashoffset: -126; }
+    }
+
+    /* Progressive SVG arrow reveal via clip-path to preserve dashed stroke */
+    .arrow-drawing {
+      animation: hsnArrowRevealClip 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+    .bp-bento-34.arrow-drawing {
+      animation: hsnArrowRevealClipReverse 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+    @keyframes hsnArrowRevealClip {
+      0% { clip-path: inset(0 100% 0 0); opacity: 0.2; }
+      100% { clip-path: inset(0 0% 0 0); opacity: 1; }
+    }
+    @keyframes hsnArrowRevealClipReverse {
+      0% { clip-path: inset(0 0 0 100%); opacity: 0.2; }
+      100% { clip-path: inset(0 0 0 0%); opacity: 1; }
+    }
+
+    /* 3. INFINITE PORTFOLIO MARQUEE CAROUSEL */
+    .portfolio-strip {
+      overflow: hidden;
+    }
+    .portfolio-marquee-mask {
+      width: 100%;
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .portfolio-grid.is-marquee {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: flex-start !important;
+      width: max-content !important;
+      gap: 56px !important;
+      animation: hsnPortfolioScroll 28s linear infinite;
+      padding: 6px 0;
+    }
+    .portfolio-marquee-mask:hover .portfolio-grid.is-marquee {
+      animation-play-state: paused;
+    }
+    @keyframes hsnPortfolioScroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+    .portfolio-item:hover img.logo-black {
+      opacity: 0;
+      transform: scale(1.08);
+    }
+    .portfolio-item:hover img.logo-color {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    /* 4. REALITY BANNER: 100% GPU COMPOSITED STREAMING SHIMMER BARS + DIVIDER PULSE */
+    .reality-divider {
+      position: relative;
+      overflow: hidden;
+    }
+    .reality-divider::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 45%;
+      background: linear-gradient(to bottom, transparent, #ffffff, #0284c7, transparent);
+      will-change: transform;
+      animation: hsnDividerStream 2.4s ease-in-out infinite;
+    }
+    @keyframes hsnDividerStream {
+      0% { transform: translate3d(0, -110%, 0); }
+      100% { transform: translate3d(0, 240%, 0); }
+    }
+    .hsn-stat-bar-track {
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      overflow: hidden;
+      position: relative;
+      margin: 4px 0 2px 0;
+    }
+    .hsn-stat-bar-fill {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #0284c7;
+      transform-origin: left center;
+      transform: scaleX(0);
+      will-change: transform;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 10px rgba(82, 180, 253, 0.55);
+    }
+    .hsn-stat-bar-fill::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 200%;
+      background: linear-gradient(90deg, #0284c7 0%, #52B4FD 22%, #e0f2fe 25%, #52B4FD 28%, #0284c7 50%, #52B4FD 72%, #e0f2fe 75%, #52B4FD 78%, #0284c7 100%);
+      will-change: transform;
+      animation: hsnBarShimmerRight 1.6s linear infinite;
+    }
+    .hsn-stat-bar-fill::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 12px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 0 0 8px #ffffff, 0 0 14px #52B4FD;
+      will-change: transform, opacity;
+      animation: hsnTipVibrate 0.7s ease-in-out infinite alternate;
+    }
+    @keyframes hsnBarShimmerRight {
+      0% { transform: translate3d(-50%, 0, 0); }
+      100% { transform: translate3d(0%, 0, 0); }
+    }
+    @keyframes hsnTipVibrate {
+      0% { opacity: 0.45; transform: scaleX(0.8); }
+      100% { opacity: 1; transform: scaleX(1.4); }
+    }
+
+    /* 5. SEQUENTIAL CASCADE FOR 01-02-03 FIELD CARDS & 1-2-3-4 BENTO POST-ITS */
+    .card {
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+      box-shadow: 0 8px 22px rgba(2, 132, 199, 0.08), 0 16px 36px rgba(0, 0, 0, 0.05);
+    }
+    .post-it-badge {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .card:hover .post-it-badge {
+      transform: translateY(-6px) rotate(-3deg) scale(1.06);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.55),
+        0 10px 22px rgba(82, 180, 253, 0.58);
+    }
+    .field-proof-grid figure.card img {
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+    }
+    .field-proof-grid figure.card:hover img {
+      transform: scale(1.05);
+      filter: contrast(1.04) brightness(1.02);
+    }
+
+    .hsn-cascade-item {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    .hsn-cascade-item.is-visible {
+      animation: hsnCardReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .hsn-cascade-item.is-visible .post-it-badge {
+      opacity: 0;
+      animation: hsnPostItSlap 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      animation-delay: inherit;
+    }
+    @keyframes hsnCardReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes hsnPostItSlap {
+      0% { opacity: 0; transform: scale(0.55) rotate(-10deg) translateY(-14px); }
+      70% { opacity: 1; transform: scale(1.09) rotate(2.5deg) translateY(-4px); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg) translateY(-2px); }
+    }
+
+    /* Founder partner badges subtle lift */
+    .founder-cred-item {
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease !important;
+    }
+    .founder-cred-item:hover {
+      transform: translateY(-2px);
+      opacity: 1 !important;
+    }
+    .founder-cred-item:hover .founder-cred-arrow {
+      display: inline-block;
+      transform: translate(2px, -2px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script id="hsnlabs-motion-engine">
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Setup Portfolio Infinite Marquee (clones items once for seamless -50% loop)
+      const pGrid = document.querySelector('.portfolio-grid');
+      if (pGrid && !pGrid.classList.contains('is-marquee')) {
+        const mask = document.createElement('div');
+        mask.className = 'portfolio-marquee-mask';
+        pGrid.parentNode.insertBefore(mask, pGrid);
+        mask.appendChild(pGrid);
+        const items = Array.from(pGrid.children);
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          pGrid.appendChild(clone);
+        });
+        pGrid.classList.add('is-marquee');
+      }
+
+      // 2. Inject Shimmering Bars into 46% & 83% Reality Stat Rows
+      const statRows = document.querySelectorAll('.reality-stat-row');
+      statRows.forEach(row => {
+        const numEl = row.querySelector('.reality-stat-number');
+        const descEl = row.querySelector('.reality-stat-desc');
+        if (numEl && descEl) {
+          const rawVal = parseInt(numEl.textContent.trim(), 10) || 50;
+          numEl.dataset.target = rawVal;
+          const track = document.createElement('div');
+          track.className = 'hsn-stat-bar-track';
+          const fill = document.createElement('div');
+          fill.className = 'hsn-stat-bar-fill';
+          fill.dataset.scale = (rawVal / 100).toFixed(2);
+          track.appendChild(fill);
+          descEl.parentNode.insertBefore(track, descEl.nextSibling);
+        }
+      });
+
+      // 3. Helper to draw SVG arrows smoothly while keeping dashed pattern
+      function triggerArrowDraw(svgEl, delayMs) {
+        if (!svgEl) return;
+        svgEl.classList.remove('arrow-drawing');
+        setTimeout(() => {
+          void svgEl.offsetWidth;
+          svgEl.classList.add('arrow-drawing');
+          setTimeout(() => svgEl.classList.remove('arrow-drawing'), 950);
+        }, delayMs || 0);
+      }
+
+      ['.curved-arrow-left', '.curved-arrow-right', '.bp-arrow-cta', '.bp-arrow-header'].forEach((sel, idx) => {
+        document.querySelectorAll(sel).forEach(el => triggerArrowDraw(el, 120 + idx * 140));
+      });
+      setTimeout(() => {
+        const carpBox = document.getElementById('waterEmblemTrigger');
+        if (carpBox) carpBox.dispatchEvent(new Event('mouseenter'));
+      }, 450);
+
+      // 4. IntersectionObserver for Reality Stats (46% & 83%), Field Cards (01-03), Bento (1-4), and Editorial
+      function animateStatNumber(el, target, duration) {
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased) + '%';
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      const realityBanner = document.querySelector('.reality-banner');
+      if (realityBanner) {
+        const obsReality = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              realityBanner.querySelectorAll('.reality-stat-number').forEach((numEl, i) => {
+                const target = parseInt(numEl.dataset.target || '50', 10);
+                animateStatNumber(numEl, target, 1050 + i * 200);
+              });
+              realityBanner.querySelectorAll('.hsn-stat-bar-fill').forEach((fillEl) => {
+                fillEl.style.transform = 'scaleX(' + (fillEl.dataset.scale || '0.5') + ')';
+              });
+              obsReality.unobserve(realityBanner);
+            }
+          });
+        }, { threshold: 0.25 });
+        obsReality.observe(realityBanner);
+      }
+
+      // 5. Setup sequential cascade groups
+      function setupCascadeGroup(containerSelector, itemSelector, arrowSelectors) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
+        const items = Array.from(container.querySelectorAll(itemSelector));
+        items.forEach(item => item.classList.add('hsn-cascade-item'));
+
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              items.forEach((item, idx) => {
+                item.style.animationDelay = (idx * 0.22) + 's';
+                item.classList.add('is-visible');
+              });
+              (arrowSelectors || []).forEach((sel, aIdx) => {
+                container.querySelectorAll(sel).forEach(svg => {
+                  triggerArrowDraw(svg, 220 + aIdx * 240);
+                });
+              });
+              obs.unobserve(container);
+            }
+          });
+        }, { threshold: 0.18 });
+        obs.observe(container);
+      }
+
+      setupCascadeGroup('.field-proof-grid', 'figure.card', ['.bp-bridge-12', '.bp-bridge-23']);
+      setupCascadeGroup('.services-bento', ':scope > .card', ['.bp-bento-12', '.bp-bento-23', '.bp-bento-34']);
+      setupCascadeGroup('.editorial-grid', '.editorial-card', []);
+    });
+  </script>
+
 </body>
 </html>
