@@ -820,6 +820,148 @@
         padding-top: 0;
         border-top: none;
       }
+      .footer-bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .footer-bottom-sep {
+        display: none;
+      }
+    }
+
+    @media (max-width: 900px) {
+      input:not([type="checkbox"]):not([type="radio"]),
+      select,
+      textarea,
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-col-brand,
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+      }
+      .footer-col-subscribe {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-subscribe-linkedin {
+        padding-top: 16px;
+        border-top: 1px solid var(--hairline);
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu,
+      .header-github-link {
+        display: none !important;
+      }
+      .header-container,
+      .header-nav .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      .header-actions {
+        gap: 8px !important;
+      }
+      .header-actions .btn,
+      .header-container .btn {
+        padding: 6px 10px !important;
+        font-size: 0.72rem !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      .brand-logo-img {
+        height: 26px !important;
+        width: auto !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+      }
+      .header-github-link {
+        display: none !important;
+      }
+      .site-footer {
+        padding: 48px 0 32px 0;
+      }
+      .footer-grid {
+        grid-template-columns: 1.08fr 0.92fr !important;
+        gap: 26px 16px !important;
+        margin-bottom: 32px;
+      }
+      .footer-col-brand,
+      .footer-col-office,
+      .footer-col-subscribe {
+        grid-column: 1 / -1 !important;
+      }
+      .footer-nav a {
+        white-space: normal;
+        font-size: 0.82rem;
+        line-height: 1.35;
+      }
+      .footer-newsletter-form input[type="email"] {
+        font-size: 16px !important;
+      }
+      .footer-bottom-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .footer-bottom-sep {
+        display: none;
+      }
+      .footer-bottom-links {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .footer-social-row {
+        flex-wrap: nowrap;
+        gap: 3px;
+      }
+      .footer-social-icon {
+        width: 34px;
+        height: 34px;
+      }
+    }
+    @media (max-width: 355px) {
+      .footer-social-row {
+        flex-wrap: wrap;
+      }
+    }
+    /* END FOOTER */
+
+    @media (max-width: 1140px) {
+      .footer-grid {
+        grid-template-columns: minmax(170px, 1.35fr) minmax(135px, 0.95fr) minmax(160px, 1.15fr) minmax(155px, 1.1fr);
+        gap: 32px 24px;
+      }
+      .footer-col-subscribe {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        padding-top: 24px;
+        border-top: 1px solid var(--hairline);
+      }
+      .footer-subscribe-linkedin {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
     }
 
     @media (max-width: 900px) {
@@ -989,7 +1131,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col-brand">
-          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" style="height: 46px; width: auto; margin-bottom: 18px; display: block;" loading="lazy" decoding="async">
+          <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" width="142" height="46" style="height: 46px; width: auto; margin-bottom: 18px; display: block;" loading="lazy" decoding="async">
           <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.6; max-width: 245px; margin: 0;">
             Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
           </p>
@@ -1043,7 +1185,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="footer-subscribe-linkedin">
             <div class="footer-li-header">
               <div style="display: flex; gap: 10px; align-items: center; min-width: 155px; flex: 1 1 auto;">
-                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" style="width: 36px; height: 36px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;" decoding="async">
+                <img src="/assets/brand/newsletter/agentes-x-gente.png" alt="[Agentes] x [a Gente]" width="36" height="36" style="width: 36px; height: 36px; border: 1px solid var(--hairline-strong); flex-shrink: 0; display: block; border-radius: 0;" loading="lazy" decoding="async">
                 <div style="min-width: 0;">
                   <div style="font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
                   <div style="font-size: 0.76rem; color: var(--muted); margin-top: 2px; display: flex; align-items: center; gap: 4px; white-space: nowrap;">

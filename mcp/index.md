@@ -3,7 +3,7 @@ title: "Servidores MCP Enterprise · hsnlabs"
 description: "Construímos servidores privados e seguros de Model Context Protocol dentro da sua infraestrutura corporativa. Conecte agentes autônomos aos seus ERPs e bancos de dados sob governança zero-trust."
 url: "https://hsnlabs.ai/mcp/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T19:12:47Z"
+updatedAt: "2026-10-29T13:21:17Z"
 ---
 
 # Servidores MCP Enterprise · hsnlabs

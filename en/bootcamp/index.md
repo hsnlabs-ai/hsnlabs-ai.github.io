@@ -3,7 +3,7 @@ title: "Agentic Bootcamp™ · hsnlabs"
 description: "We embed senior engineering leadership with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-10-25T19:12:47Z"
+updatedAt: "2026-10-29T13:21:17Z"
 ---
 
 # Agentic Bootcamp™ · hsnlabs

@@ -1,63 +1,48 @@
 # hsnlabs
 
-> Enterprise agentic engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. A clean machine-readable Markdown version of every page is available by appending `index.md` to the directory path (e.g., `https://hsnlabs.ai/index.md`, `https://hsnlabs.ai/bootcamp/index.md`, `https://hsnlabs.ai/en/index.md`, `https://hsnlabs.ai/en/bootcamp/index.md`). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
+> Enterprise agentic engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. We structure and execute enterprise agentic roadmaps across both Headless Agents (back-office process automation, BPO replacement, and internal data workflows) and Surface Agents (front-office real-time voice and text interfaces for end customers). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
 
 ## Canonical Positioning & Value Proposition
-- Overview (PT-BR): https://hsnlabs.ai/
-- Overview (EN): https://hsnlabs.ai/en/
-hsnlabs is an enterprise AI transformation partner operationalizing autonomous agents over legacy systems, starting with the Agentic Bootcamp™ backed by US$ 5,000 in cloud, AI tokens, and tooling.
-- Escape the PoC Graveyard: https://hsnlabs.ai/#market-reality
-46% of enterprise AI agent proofs of concept are abandoned before production (S&P Global Market Intelligence) and 83% of leaders face technical stagnation scaling agents (Lucidworks). Connecting AI to legacy systems without architectural redesign only creates technical debt.
+- [Overview (PT-BR)](https://hsnlabs.ai/): Adoção de Engenharia Agentica. Implementamos Headless Agents para backoffice, dados e automação interna e Surface Agents para frontoffice em voz e texto com o cliente sobre sistemas legados.
+- [Overview (EN)](https://hsnlabs.ai/en/): Agentic Engineering Adoption. We implement Headless Agents for back-office data and internal automation and Surface Agents for front-office voice and text interfaces over legacy systems.
+- [Markdown Mirror (PT-BR)](https://hsnlabs.ai/index.md): Machine-readable Markdown overview in Brazilian Portuguese.
+- [Markdown Mirror (EN)](https://hsnlabs.ai/en/index.md): Machine-readable Markdown overview in English.
 
 ## Entry Engagement: Agentic Bootcamp™
-- Bootcamp Deployment Protocol (PT-BR): https://hsnlabs.ai/bootcamp/
-- Bootcamp Deployment Protocol (EN): https://hsnlabs.ai/en/bootcamp/
-We embed senior engineering leadership inside your operation to validate data access, map executable business ontologies (Code to Spec), deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case. Qualified enterprise accounts unlock 100% Performance Rebate credited toward the production rollout contract plus US$ 5,000 in ecosystem credits across Google Cloud, Snowflake, Databricks, Braintrust, and LangChain.
+- [Agentic Bootcamp™ (PT-BR)](https://hsnlabs.ai/bootcamp/): Validamos a arquitetura nos seus sistemas e entregamos o Business Case antes de escalar, com US$ 5.000 em créditos de nuvem, tokens de IA e ferramentas.
+- [Agentic Bootcamp™ (EN)](https://hsnlabs.ai/en/bootcamp/): We embed senior engineering leadership inside your operation to validate data access, map executable business ontologies, deploy a sandbox prototype on LangGraph, and deliver an audited production Business Case.
+- [Bootcamp Markdown Mirror (PT-BR)](https://hsnlabs.ai/bootcamp/index.md): Machine-readable specification of the Agentic Bootcamp in Portuguese.
+- [Bootcamp Markdown Mirror (EN)](https://hsnlabs.ai/en/bootcamp/index.md): Machine-readable specification of the Agentic Bootcamp in English.
 
-## Enterprise Client Track Record
-- Client Deployments (PT-BR): https://hsnlabs.ai/
-- Client Deployments (EN): https://hsnlabs.ai/en/
-Audited enterprise deployments across HR Tech & Operations, Insurance & Claims, Finance & ERP (SAP/TOTVS), and Logistics & Supply Chain (2-month reference implementation cycles). Verified client portfolio includes Deloitte, Santander, Insi, Softplan, Unipar, LWSA, Turbi, Caju, and Cast Group.
-
-## Strategic Advisory: The Disruption Gap
-- Agentic AI Advisory (PT-BR): https://hsnlabs.ai/advisory/
-- Agentic AI Advisory (EN): https://hsnlabs.ai/en/advisory/
-Executive AI board and architectural advisory led by Hugo Nascimento (Founder & CPTO) for C-levels and founders facing autonomous disruption: operating model modernization, unit margin defense, progressive legacy migration, and deterministic governance.
-
-## Open Architecture Frameworks
-- The Agentic Canvas™ (PT-BR): https://hsnlabs.ai/canvas/
-- The Agentic Canvas™ (EN): https://hsnlabs.ai/en/canvas/
-Architecture framework by hsnlabs for structuring and certifying enterprise agentic systems across two tracks — Agentic Products and Agentic Employees — covering legacy data ontologies, deterministic guardrails, evaluation harnesses, and human-in-the-loop governance.
-
-## Why Agents Fail & Core Failure Modes
-- Why Agents Fail (PT-BR): https://hsnlabs.ai/#services
-- Why Agents Fail (EN): https://hsnlabs.ai/en/#services
-1. Legacy and Fragmented Data: Domain-adapted pipelines and schema normalization over legacy ERPs.
-2. Static Ontology: Executable business ontologies replacing hardcoded schemas and brittle prompts.
-3. Governance & Compliance: Deterministic code-level guards and strict audit logs guaranteeing transactional integrity.
-4. Complex Enterprise ADLC: 12-component enterprise agentic architecture blueprint (`/architecture.html`).
+## Strategic Advisory & Open Architecture Frameworks
+- [Agentic AI Advisory (PT-BR)](https://hsnlabs.ai/advisory/): Executive AI board and architectural advisory led by Hugo Nascimento, Founder & CPTO.
+- [Agentic AI Advisory (EN)](https://hsnlabs.ai/en/advisory/): Operating model modernization, unit margin defense, progressive legacy migration, and deterministic governance.
+- [The Agentic Canvas™ (PT-BR)](https://hsnlabs.ai/canvas/): Framework de arquitetura para estruturar e certificar sistemas agênticos corporativos.
+- [The Agentic Canvas™ (EN)](https://hsnlabs.ai/en/canvas/): Architecture framework for structuring and certifying enterprise agentic systems across Agentic Products and Agentic Employees.
+- [Enterprise Agentic Architecture Blueprint](https://hsnlabs.ai/architecture.html): 12-component enterprise agentic architecture specification.
 
 ## Ecosystem & Platform Alliances
-- LangChain & LangGraph Architecture: https://hsnlabs.ai/langchain/ | https://hsnlabs.ai/en/langchain/
-Independent agentic engineering with LangChain and LangGraph in production since 2022, featuring stateful StateGraph orchestration, LangSmith evaluation suites, and sovereign VPC runtimes.
-- Snowflake AI Data Cloud Architecture: https://hsnlabs.ai/snowflake/ | https://hsnlabs.ai/en/snowflake/
-Operationalizing deterministic LangGraph state machines and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance and row-level security.
-- Databricks Lakehouse & Mosaic AI Architecture: https://hsnlabs.ai/databricks/ | https://hsnlabs.ai/en/databricks/
-Operationalizing deterministic LangGraph state machines and executable business ontologies over the Databricks Data Intelligence Platform, Delta Lake, Unity Catalog, and Mosaic AI.
-- Braintrust Evals & CI/CD: https://hsnlabs.ai/braintrust/ | https://hsnlabs.ai/en/braintrust/
-Eliminating stochastic prompt regressions in production with Braintrust continuous evaluation suites, CI/CD regression gates, and trace observability.
-- Enterprise MCP Servers: https://hsnlabs.ai/mcp/ | https://hsnlabs.ai/en/mcp/
-Private, zero-trust Model Context Protocol servers connecting deep agents to SAP, TOTVS, and relational databases inside your cloud perimeter.
+- [LangChain & LangGraph Architecture (PT-BR)](https://hsnlabs.ai/langchain/): Orquestração StateGraph, LangSmith evals e runtimes soberanos em VPC.
+- [LangChain & LangGraph Architecture (EN)](https://hsnlabs.ai/en/langchain/): Independent agentic engineering with LangChain and LangGraph in production since 2022.
+- [Snowflake AI Data Cloud Architecture (PT-BR)](https://hsnlabs.ai/snowflake/): Máquinas de estado determinísticas e ontologias executáveis sobre Snowflake AI Data Cloud.
+- [Snowflake AI Data Cloud Architecture (EN)](https://hsnlabs.ai/en/snowflake/): Operationalizing deterministic LangGraph state machines over the Snowflake AI Data Cloud.
+- [Databricks Lakehouse Architecture (PT-BR)](https://hsnlabs.ai/databricks/): Agentes autônomos sobre Databricks Data Intelligence Platform, Delta Lake e Unity Catalog.
+- [Databricks Lakehouse Architecture (EN)](https://hsnlabs.ai/en/databricks/): Operationalizing deterministic LangGraph state machines over Databricks and Mosaic AI.
+- [Braintrust Evals & CI/CD (PT-BR)](https://hsnlabs.ai/braintrust/): Suítes de avaliação contínua, gates de regressão em CI/CD e observabilidade de traces.
+- [Braintrust Evals & CI/CD (EN)](https://hsnlabs.ai/en/braintrust/): Eliminating stochastic prompt regressions in production with Braintrust continuous evaluation suites.
+- [Enterprise MCP Servers (PT-BR)](https://hsnlabs.ai/mcp/): Servidores Model Context Protocol privados conectando agentes a SAP, TOTVS e bancos relacionais.
+- [Enterprise MCP Servers (EN)](https://hsnlabs.ai/en/mcp/): Private, zero-trust Model Context Protocol servers inside your cloud perimeter.
 
 ## Knowledge Engine & Research
-- hsnlabs Blog (PT-BR): https://hsnlabs.ai/blog/pt/
-- hsnlabs Blog (EN): https://hsnlabs.ai/blog/
-- The PoC Graveyard: https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/ | https://hsnlabs.ai/blog/post/the-poc-graveyard/
-- Ontology vs Database Schema: https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/ | https://hsnlabs.ai/blog/post/ontology-vs-database-schema/
-- The BPO Replacement Matrix: https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/ | https://hsnlabs.ai/blog/post/bpo-replacement-matrix/
-- RSS Feed: https://hsnlabs.ai/blog/feed_rss_created.xml
+- [hsnlabs Blog (PT-BR)](https://hsnlabs.ai/blog/pt/): Ensaios técnicos sobre engenharia agêntica, ontologias e substituição de BPO.
+- [hsnlabs Blog (EN)](https://hsnlabs.ai/blog/): Technical essays on agentic engineering, ontologies, and BPO replacement.
+- [O Cemitério de PoCs (PT-BR)](https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/): Por que 90% dos pilotos corporativos colapsam ao tocar dados reais.
+- [The PoC Graveyard (EN)](https://hsnlabs.ai/blog/post/the-poc-graveyard/): Why 90% of enterprise pilots collapse when touching real data.
+- [Roadmaps de Features versus Maturidade Agêntica (PT-BR)](https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/): Como evoluir de copilotos restritos para sistemas multiagentes sobre o legado.
+- [A Matriz de Substituição de BPO (PT-BR)](https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/): Eliminando custos por licença de usuário em SaaS e passivos operacionais.
+- [The BPO Replacement Matrix (EN)](https://hsnlabs.ai/blog/post/bpo-replacement-matrix/): Eliminating per-seat SaaS licensing costs and operational liabilities.
+- [RSS Feed](https://hsnlabs.ai/blog/feed_rss_created.xml): Syndicated XML feed of all research posts.
 
 ## Contact & Channels
-- Contact Form: https://hsnlabs.ai/#contact | https://hsnlabs.ai/en/#contact
-- GitHub: https://github.com/hsnlabs-ai
-- LinkedIn Newsletter ([Agentes] x [a Gente]): https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/
+- [GitHub Organization](https://github.com/hsnlabs-ai): Open-source repositories and reference implementations.
+- [LinkedIn Newsletter ([Agentes] x [a Gente])](https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/): Notas executivas sobre engenharia agêntica e futuro do trabalho.

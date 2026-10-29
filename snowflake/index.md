@@ -3,7 +3,7 @@ title: "Snowflake AI Data Cloud · Arquitetura de Agentes · hsnlabs"
 description: "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis diretamente sobre a Snowflake AI Data Cloud com governança sem cópias."
 url: "https://hsnlabs.ai/snowflake/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T19:12:47Z"
+updatedAt: "2026-10-29T13:21:17Z"
 ---
 
 # Snowflake AI Data Cloud · Arquitetura de Agentes · hsnlabs

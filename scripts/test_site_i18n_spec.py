@@ -290,6 +290,29 @@ def test_gate_s11_section_parity():
     assert en_sections == pt_sections, f"ERRO: Descompasso de secoes entre EN e PT!\nEN: {en_sections}\nPT: {pt_sections}"
     print(f"PASS: Gate S11 Paridade de secoes validada com sucesso: {en_sections}")
 
+def test_gate_s12_origami_hero_notes():
+    print("--- Gate S12: Invariante de Notas Origami Minimalistas na Hero ---")
+    pt_content = (SITE_DIR / "index.html").read_text(encoding="utf-8")
+    en_content = (SITE_DIR / "en" / "index.html").read_text(encoding="utf-8")
+
+    for label, content, exp_left, exp_right in [
+        ("PT", pt_content, "Agentes de backoffice, dados e automação interna.", "Agentes de frontoffice em voz e texto com o cliente."),
+        ("EN", en_content, "Back-office agents for data and internal automation.", "Front-office voice and text agents for end customers."),
+    ]:
+        assert "hero-stage-flank" in content, f"ERRO [{label}]: hero-stage-flank ausente"
+        assert "hero-headline-stage" in content, f"ERRO [{label}]: hero-headline-stage ausente"
+        assert "hero-origami-pair" in content, f"ERRO [{label}]: hero-origami-pair ausente"
+        assert "curved-arrow-left" in content and "curved-arrow-right" in content, f"ERRO [{label}]: setas curvas ausentes"
+        assert "flank-note-left" in content and "flank-note-right" in content, f"ERRO [{label}]: notas laterais ausentes"
+        assert "mobile-arrows-bar" in content, f"ERRO [{label}]: setas mobile ausentes"
+        assert "note-pin-line" not in content, f"ERRO [{label}]: traco azul proibido presente"
+        assert "note-eyebrow" not in content, f"ERRO [{label}]: terceira variacao de fonte proibida presente"
+        assert content.count('<div class="note-heading">Headless Agents</div>') == 1, f"ERRO [{label}]: esperado 1 titulo Headless Agents unificado no DOM"
+        assert content.count('<div class="note-heading">Surface Agents</div>') == 1, f"ERRO [{label}]: esperado 1 titulo Surface Agents unificado no DOM"
+        assert exp_left in content, f"ERRO [{label}]: descricao esquerda incorreta"
+        assert exp_right in content, f"ERRO [{label}]: descricao direita incorreta"
+    print("PASS: Gate S12 Notas Origami Minimalistas validadas em PT e EN")
+
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
     test_gate_s1_structural_integrity()
@@ -303,4 +326,5 @@ if __name__ == "__main__":
     test_gate_s9_footer_consistency()
     test_gate_s10_language_leak_detection()
     test_gate_s11_section_parity()
-    print("=== TODAS AS 11 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")
+    test_gate_s12_origami_hero_notes()
+    print("=== TODAS AS 12 ASSERCOES DO SITE I18N PASSARAM COM SUCESSO ===")

@@ -3,7 +3,7 @@ title: "The Agentic Canvas™ · hsnlabs"
 description: "Framework de arquitetura da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-10-25T19:12:47Z"
+updatedAt: "2026-10-29T13:21:17Z"
 ---
 
 # The Agentic Canvas™ · hsnlabs

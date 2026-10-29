@@ -3,7 +3,7 @@ title: "Snowflake AI Data Cloud · Agent Architecture · hsnlabs"
 description: "Operationalize deterministic LangGraph agents and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance."
 url: "https://hsnlabs.ai/en/snowflake/"
 locale: "en"
-updatedAt: "2026-10-25T19:12:47Z"
+updatedAt: "2026-10-29T13:21:17Z"
 ---
 
 # Snowflake AI Data Cloud · Agent Architecture · hsnlabs
