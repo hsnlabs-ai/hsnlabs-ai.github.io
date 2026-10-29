@@ -3,7 +3,7 @@ title: "Agentic Bootcamp™ · hsnlabs"
 description: "Alocamos liderança sênior de engenharia junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-10-29T13:21:17Z"
+updatedAt: "2026-10-29T14:51:15Z"
 ---
 
 # Agentic Bootcamp™ · hsnlabs

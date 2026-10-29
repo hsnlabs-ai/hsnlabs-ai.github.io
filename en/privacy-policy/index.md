@@ -3,7 +3,7 @@ title: "Privacy Policy · hsnlabs"
 description: "Privacy Policy for hsnlabs. Learn how we handle, process, and safeguard enterprise data in compliance with LGPD and international privacy frameworks."
 url: "https://hsnlabs.ai/en/privacy-policy/"
 locale: "en"
-updatedAt: "2026-10-29T13:21:17Z"
+updatedAt: "2026-10-29T14:51:15Z"
 ---
 
 # Privacy Policy · hsnlabs

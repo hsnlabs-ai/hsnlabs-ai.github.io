@@ -3,7 +3,7 @@ title: "LangChain & LangGraph · In Production Since 2022 · hsnlabs"
 description: "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
 url: "https://hsnlabs.ai/en/langchain/"
 locale: "en"
-updatedAt: "2026-10-29T13:21:17Z"
+updatedAt: "2026-10-29T14:51:15Z"
 ---
 
 # LangChain & LangGraph · In Production Since 2022 · hsnlabs

@@ -312,7 +312,10 @@ def test_gate_s12_origami_hero_notes():
         assert exp_left in content, f"ERRO [{label}]: descricao esquerda incorreta"
         assert exp_right in content, f"ERRO [{label}]: descricao direita incorreta"
         assert ".note-heading {\n      font-family: var(--font-display);\n      font-size: 1.46rem;\n      font-weight: 500;\n      color: var(--cyan-text);" in content, f"ERRO [{label}]: .note-heading nao esta em var(--cyan-text)"
-    print("PASS: Gate S12 Notas Origami Minimalistas validadas em PT e EN")
+        assert 'stroke-dasharray="5 4"' in content, f"ERRO [{label}]: Padrao Exemplo 01 (dasharray 5 4) ausente"
+        assert "bp-bridge-12" in content and "bp-bento-12" in content and "bp-bento-34" in content and "bp-arrow-cta" in content, f"ERRO [{label}]: Setas de ponte/CTA ausentes"
+        assert 'stroke="#526071"' not in content, f"ERRO [{label}]: Seta cinza remanescente encontrada (todas devem ser #0284c7)"
+    print("PASS: Gate S12 Notas Origami e Setas Exemplo 01 validadas em PT e EN")
 
 if __name__ == "__main__":
     print("=== INICIANDO EXECUCAO DA SUITE SITE I18N ===")
