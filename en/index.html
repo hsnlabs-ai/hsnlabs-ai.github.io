@@ -4012,7 +4012,6 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
   </script>
 
   <script src="/assets/js/founder-rotation.js" defer></script>
-
   <!-- =========================================================================
        HSNLABS LIGHTWEIGHT MOTION LAYER (ZERO CLS / SEO SAFE / 100% GPU COMPOSITED)
        ========================================================================= -->
@@ -4043,27 +4042,13 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       box-shadow: 0 6px 16px rgba(7, 9, 14, 0.06);
     }
 
-    /* 2. HERO ORIGAMI NOTES ASYNCHRONOUS FLOAT + LIVE CORNER FOLD + ARROWS */
-    .flank-note-left {
-      animation: hsnFloatLeft 5.4s ease-in-out infinite;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.25s ease;
-    }
+    /* 2. HERO ORIGAMI NOTES: SUBTLE INTERACTION ON HOVER (NO HERO ARROW MOTION) */
+    .flank-note-left,
     .flank-note-right {
-      animation: hsnFloatRight 6.2s ease-in-out infinite;
-      animation-delay: -1.9s;
       transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.25s ease;
-    }
-    @keyframes hsnFloatLeft {
-      0%, 100% { transform: rotate(-1.1deg) translateY(0px); }
-      50% { transform: rotate(-0.3deg) translateY(-6px); }
-    }
-    @keyframes hsnFloatRight {
-      0%, 100% { transform: rotate(1.1deg) translateY(0px); }
-      50% { transform: rotate(2.0deg) translateY(-6px); }
     }
     .origami-note:hover {
-      animation-play-state: paused !important;
-      transform: rotate(0deg) translateY(-6px) scale(1.04) !important;
+      transform: rotate(0deg) translateY(-5px) scale(1.03) !important;
       border-color: var(--cyan) !important;
       box-shadow: 0 16px 32px -8px rgba(2, 132, 199, 0.18) !important;
     }
@@ -4075,11 +4060,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       transform: scale(1.62) !important;
     }
 
-    /* All blueprint dashed arrows: continuous subtle dash flow */
-    .curved-arrow-left path:first-child,
-    .curved-arrow-right path:first-child,
-    .bp-arrow-header path:first-child,
-    .bp-arrow-cta path:first-child,
+    /* Below-the-fold bridge & bento dashed arrows only (Hero arrows remain 100% static) */
     .bp-bridge-12 path:first-child,
     .bp-bridge-23 path:first-child,
     .bp-bento-12 path:first-child,
@@ -4092,7 +4073,6 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       to { stroke-dashoffset: -126; }
     }
 
-    /* Progressive SVG arrow reveal via clip-path to preserve dashed stroke */
     .arrow-drawing {
       animation: hsnArrowRevealClip 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
     }
@@ -4108,42 +4088,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       100% { clip-path: inset(0 0 0 0%); opacity: 1; }
     }
 
-    /* 3. INFINITE PORTFOLIO MARQUEE CAROUSEL */
-    .portfolio-strip {
-      overflow: hidden;
-    }
-    .portfolio-marquee-mask {
-      width: 100%;
-      overflow: hidden;
-      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    }
-    .portfolio-grid.is-marquee {
-      display: flex !important;
-      flex-wrap: nowrap !important;
-      justify-content: flex-start !important;
-      width: max-content !important;
-      gap: 56px !important;
-      animation: hsnPortfolioScroll 28s linear infinite;
-      padding: 6px 0;
-    }
-    .portfolio-marquee-mask:hover .portfolio-grid.is-marquee {
-      animation-play-state: paused;
-    }
-    @keyframes hsnPortfolioScroll {
-      0% { transform: translate3d(0, 0, 0); }
-      100% { transform: translate3d(-50%, 0, 0); }
-    }
-    .portfolio-item:hover img.logo-black {
-      opacity: 0;
-      transform: scale(1.08);
-    }
-    .portfolio-item:hover img.logo-color {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.08);
-    }
-
-    /* 4. REALITY BANNER: 100% GPU COMPOSITED STREAMING SHIMMER BARS + DIVIDER PULSE */
+    /* 3. REALITY BANNER: 100% GPU COMPOSITED STREAMING SHIMMER BARS + DIVIDER PULSE */
     .reality-divider {
       position: relative;
       overflow: hidden;
@@ -4213,7 +4158,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
       100% { opacity: 1; transform: scaleX(1.4); }
     }
 
-    /* 5. SEQUENTIAL CASCADE FOR 01-02-03 FIELD CARDS & 1-2-3-4 BENTO POST-ITS */
+    /* 4. SEQUENTIAL CASCADE FOR 01-02-03 FIELD CARDS & 1-2-3-4 BENTO POST-ITS */
     .card {
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
     }
@@ -4284,23 +4229,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
 
   <script id="hsnlabs-motion-engine">
     document.addEventListener('DOMContentLoaded', function() {
-      // 1. Setup Portfolio Infinite Marquee (clones items once for seamless -50% loop)
-      const pGrid = document.querySelector('.portfolio-grid');
-      if (pGrid && !pGrid.classList.contains('is-marquee')) {
-        const mask = document.createElement('div');
-        mask.className = 'portfolio-marquee-mask';
-        pGrid.parentNode.insertBefore(mask, pGrid);
-        mask.appendChild(pGrid);
-        const items = Array.from(pGrid.children);
-        items.forEach(item => {
-          const clone = item.cloneNode(true);
-          clone.setAttribute('aria-hidden', 'true');
-          pGrid.appendChild(clone);
-        });
-        pGrid.classList.add('is-marquee');
-      }
-
-      // 2. Inject Shimmering Bars into 46% & 83% Reality Stat Rows
+      // 1. Inject Shimmering Bars into 46% & 83% Reality Stat Rows
       const statRows = document.querySelectorAll('.reality-stat-row');
       statRows.forEach(row => {
         const numEl = row.querySelector('.reality-stat-number');
@@ -4318,7 +4247,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
         }
       });
 
-      // 3. Helper to draw SVG arrows smoothly while keeping dashed pattern
+      // 2. Helper to draw below-the-fold SVG arrows smoothly
       function triggerArrowDraw(svgEl, delayMs) {
         if (!svgEl) return;
         svgEl.classList.remove('arrow-drawing');
@@ -4329,15 +4258,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
         }, delayMs || 0);
       }
 
-      ['.curved-arrow-left', '.curved-arrow-right', '.bp-arrow-cta', '.bp-arrow-header'].forEach((sel, idx) => {
-        document.querySelectorAll(sel).forEach(el => triggerArrowDraw(el, 120 + idx * 140));
-      });
-      setTimeout(() => {
-        const carpBox = document.getElementById('waterEmblemTrigger');
-        if (carpBox) carpBox.dispatchEvent(new Event('mouseenter'));
-      }, 450);
-
-      // 4. IntersectionObserver for Reality Stats (46% & 83%), Field Cards (01-03), Bento (1-4), and Editorial
+      // 3. IntersectionObserver for Reality Stats (46% & 83%), Field Cards (01-03), Bento (1-4), and Editorial
       function animateStatNumber(el, target, duration) {
         const start = performance.now();
         function step(now) {
@@ -4368,7 +4289,7 @@ document.head.appendChild(o)}var apolloLoaded=!1;function triggerApollo(){if(!ap
         obsReality.observe(realityBanner);
       }
 
-      // 5. Setup sequential cascade groups
+      // 4. Setup sequential cascade groups
       function setupCascadeGroup(containerSelector, itemSelector, arrowSelectors) {
         const container = document.querySelector(containerSelector);
         if (!container) return;
