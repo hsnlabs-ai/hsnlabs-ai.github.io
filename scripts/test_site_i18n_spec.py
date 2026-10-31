@@ -9,6 +9,8 @@ PAGES = [
     {"id": "home", "pt": SITE_DIR / "index.html", "en": SITE_DIR / "en" / "index.html", "path_pt": "/", "path_en": "/en/"},
     {"id": "bootcamp", "pt": SITE_DIR / "bootcamp" / "index.html", "en": SITE_DIR / "en" / "bootcamp" / "index.html", "path_pt": "/bootcamp/", "path_en": "/en/bootcamp/"},
     {"id": "advisory", "pt": SITE_DIR / "advisory" / "index.html", "en": SITE_DIR / "en" / "advisory" / "index.html", "path_pt": "/advisory/", "path_en": "/en/advisory/"},
+    {"id": "produtos", "pt": SITE_DIR / "produtos" / "index.html", "en": SITE_DIR / "en" / "products" / "index.html", "path_pt": "/produtos/", "path_en": "/en/products/"},
+    {"id": "agents_swarm", "pt": SITE_DIR / "produtos" / "agents-swarm" / "index.html", "en": SITE_DIR / "en" / "products" / "agents-swarm" / "index.html", "path_pt": "/produtos/agents-swarm/", "path_en": "/en/products/agents-swarm/"},
     {"id": "mcp", "pt": SITE_DIR / "mcp" / "index.html", "en": SITE_DIR / "en" / "mcp" / "index.html", "path_pt": "/mcp/", "path_en": "/en/mcp/"},
     {"id": "langchain", "pt": SITE_DIR / "langchain" / "index.html", "en": SITE_DIR / "en" / "langchain" / "index.html", "path_pt": "/langchain/", "path_en": "/en/langchain/"},
     {"id": "snowflake", "pt": SITE_DIR / "snowflake" / "index.html", "en": SITE_DIR / "en" / "snowflake" / "index.html", "path_pt": "/snowflake/", "path_en": "/en/snowflake/"},
@@ -78,6 +80,8 @@ def test_gate_s4_language_isolation():
         nav_match = re.search(r'<div class="nav-menu"[^>]*>(.*?)</div>', pt_content, re.DOTALL)
         if nav_match:
             nav_html = nav_match.group(1)
+            if 'Produtos' in nav_html:
+                assert '/produtos/' in nav_html and '/en/products' not in nav_html, f"Link de Produtos em {item['pt']} nao usa rota PT"
             if 'Advisory' in nav_html:
                 assert '/advisory' in nav_html and '/en/advisory' not in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
             if 'Playbooks' in nav_html:
@@ -209,6 +213,8 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "en" / "index.html",
         SITE_DIR / "en" / "bootcamp" / "index.html",
         SITE_DIR / "en" / "advisory" / "index.html",
+        SITE_DIR / "en" / "products" / "index.html",
+        SITE_DIR / "en" / "products" / "agents-swarm" / "index.html",
         SITE_DIR / "en" / "mcp" / "index.html",
         SITE_DIR / "en" / "langchain" / "index.html",
         SITE_DIR / "en" / "snowflake" / "index.html",
@@ -224,6 +230,8 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "index.html",
         SITE_DIR / "bootcamp" / "index.html",
         SITE_DIR / "advisory" / "index.html",
+        SITE_DIR / "produtos" / "index.html",
+        SITE_DIR / "produtos" / "agents-swarm" / "index.html",
         SITE_DIR / "mcp" / "index.html",
         SITE_DIR / "langchain" / "index.html",
         SITE_DIR / "snowflake" / "index.html",

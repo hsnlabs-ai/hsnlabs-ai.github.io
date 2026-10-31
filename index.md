@@ -3,7 +3,7 @@ title: "Adoção de Engenharia Agentica | hsnlabs"
 description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-10-29T14:51:15Z"
+updatedAt: "2026-10-31T23:04:14Z"
 ---
 
 # Adoção de Engenharia Agentica | hsnlabs
@@ -72,11 +72,11 @@ O ciclo de vida de desenvolvimento agêntico, conhecido como ADLC, exige governa
 
 O que custa, o que dá errado e o que funciona em arquiteturas agenticas, com dados e código aberto.
 
-### O Cemitério de PoCs: por que 90% dos pilotos corporativos colapsam ao tocar dados reais
+### O Que É uma Ontologia para Agentes de IA? O Guia Definitivo para Engenharia Corporativa
 
-### Roadmaps de Features versus Maturidade Agêntica: como evoluir de copilotos restritos para enxames autônomos sobre o legado
+### A Arquitetura do Palantir AIP: Por Que Agentes Corporativos Falham sem uma Ontologia Operacional
 
-### A Matriz de Substituição de BPO: eliminando custos por licença de usuário em SaaS e passivos operacionais
+### O Fenômeno High IC: Produtividade e Equipes Enxutas
 
 ## Fale Conosco
 
@@ -87,6 +87,8 @@ Laboratório de engenharia com mais de cinco anos implementando produtos de IA e
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
+
+- Produtos
 
 - Advisory
 

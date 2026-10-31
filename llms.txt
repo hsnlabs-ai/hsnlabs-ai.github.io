@@ -21,6 +21,15 @@
 - [The Agentic Canvas™ (EN)](https://hsnlabs.ai/en/canvas/): Architecture framework for structuring and certifying enterprise agentic systems across Agentic Products and Agentic Employees.
 - [Enterprise Agentic Architecture Blueprint](https://hsnlabs.ai/architecture.html): 12-component enterprise agentic architecture specification.
 
+## Proprietary Products & Open Platforms
+- [Produtos e Plataformas Agênticas (PT-BR)](https://hsnlabs.ai/produtos/): Índice de produtos proprietários e plataformas abertas da hsnlabs.
+- [Agentic Products & Platforms (EN)](https://hsnlabs.ai/en/products/): Directory of proprietary products and open agentic platforms by hsnlabs.
+- [Agents Swarm (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/): Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes em produção.
+- [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of surface agents in production.
+- [Agents Swarm Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/index.md): Especificação técnica legível por máquina em português.
+- [Agents Swarm Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agents-swarm/index.md): Machine-readable technical specification in English.
+- [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/swarm2audit): Official open-source repository (MIT License).
+
 ## Ecosystem & Platform Alliances
 - [LangChain & LangGraph Architecture (PT-BR)](https://hsnlabs.ai/langchain/): Orquestração StateGraph, LangSmith evals e runtimes soberanos em VPC.
 - [LangChain & LangGraph Architecture (EN)](https://hsnlabs.ai/en/langchain/): Independent agentic engineering with LangChain and LangGraph in production since 2022.

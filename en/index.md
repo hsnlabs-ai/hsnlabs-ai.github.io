@@ -3,7 +3,7 @@ title: "Agentic Engineering Adoption | hsnlabs"
 description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-10-29T14:51:15Z"
+updatedAt: "2026-10-31T23:04:14Z"
 ---
 
 # Agentic Engineering Adoption | hsnlabs
@@ -72,11 +72,11 @@ The Agentic Development Life Cycle, or ADLC, establishes spec-driven governance 
 
 Real costs, failure modes, and verified production patterns in agentic architectures, backed by data.
 
-### The PoC Graveyard: Why 90% of enterprise pilots collapse under dirty data
+### What Is an Ontology for AI Agents? The Definitive Guide
 
-### Feature Roadmaps versus Agentic Maturity: Scaling from restricted copilots to autonomous swarms over legacy systems
+### The Architecture of Palantir AIP: Why Enterprise Agents Fail Without an Operational Ontology
 
-### The BPO Replacement Matrix: Replacing per-seat SaaS taxes and operational liabilities
+### The High IC Phenomenon: Why Team Size No Longer Measures Productivity
 
 ## Contact Us
 
@@ -87,6 +87,8 @@ An engineering lab with over five years of shipping AI products and resilient ag
 Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
+
+- Products
 
 - Advisory
 

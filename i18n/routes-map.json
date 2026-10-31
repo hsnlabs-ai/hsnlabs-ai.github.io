@@ -28,6 +28,24 @@
       "description_pt": "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agêntica em produção com Hugo Nascimento."
     },
     {
+      "id": "site_products",
+      "en_path": "/en/products/",
+      "pt_path": "/produtos/",
+      "title_en": "Agentic Products & Platforms · hsnlabs",
+      "title_pt": "Produtos e Plataformas Agênticas · hsnlabs",
+      "description_en": "Proprietary products and open agentic engineering platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production.",
+      "description_pt": "Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
+    },
+    {
+      "id": "site_products_agents_swarm",
+      "en_path": "/en/products/agents-swarm/",
+      "pt_path": "/produtos/agents-swarm/",
+      "title_en": "Agents Swarm · Agent Observability & Diagnosis · hsnlabs",
+      "title_pt": "Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs",
+      "description_en": "Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of conversational agents on WhatsApp and the Web.",
+      "description_pt": "Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes conversacionais no WhatsApp e na Web."
+    },
+    {
       "id": "site_canvas",
       "en_path": "/en/canvas/",
       "pt_path": "/canvas/",
