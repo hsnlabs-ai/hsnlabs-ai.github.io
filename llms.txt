@@ -28,7 +28,7 @@
 - [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of surface agents in production.
 - [Agents Swarm Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/index.md): Especificação técnica legível por máquina em português.
 - [Agents Swarm Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agents-swarm/index.md): Machine-readable technical specification in English.
-- [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/swarm2audit): Official open-source repository (MIT License).
+- [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/agents-swarm): Official open-source repository (MIT License).
 
 ## Ecosystem & Platform Alliances
 - [LangChain & LangGraph Architecture (PT-BR)](https://hsnlabs.ai/langchain/): Orquestração StateGraph, LangSmith evals e runtimes soberanos em VPC.

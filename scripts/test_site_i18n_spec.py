@@ -152,9 +152,17 @@ def test_gate_s7_metadata_localization():
             assert og_img and tw_img and og_img.group(1) == tw_img.group(1), f"ERRO: og:image != twitter:image em {file_path}"
 
             if lang_key == "pt":
-                assert og_img.group(1).endswith("og-image-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-image-pt.png"
+                if item["id"] == "agents_swarm":
+                    assert og_img.group(1).endswith("og-agents-swarm-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-agents-swarm-pt.png"
+                else:
+                    assert og_img.group(1).endswith("og-image-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-image-pt.png"
                 for bad in forbidden_en_meta:
                     assert bad not in desc.group(1), f"ERRO: Meta description em ingles em {file_path}: {desc.group(1)}"
+            else:
+                if item["id"] == "agents_swarm":
+                    assert og_img.group(1).endswith("og-agents-swarm.png"), f"ERRO: Pagina EN {file_path} nao aponta para og-agents-swarm.png"
+                else:
+                    assert og_img.group(1).endswith("og-image.png"), f"ERRO: Pagina EN {file_path} nao aponta para og-image.png"
     print("PASS: Gate S7 Metadados Open Graph, Twitter e Meta Description 100% sincronizados e localizados")
 
 def test_gate_s8_portuguese_accentuation():
