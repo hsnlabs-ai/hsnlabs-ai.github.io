@@ -55,3 +55,10 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
 Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa Política de Privacidade.
+
+## Agent Analyzer
+
+Mapeador topológico em caixa-preta via sonda única para WhatsApp e LangGraph.
+- **URL:** https://hsnlabs.ai/produtos/agent-analyzer/
+- **GitHub:** https://github.com/hsnlabs-ai/agent-analyzer
+- **Licença:** MIT

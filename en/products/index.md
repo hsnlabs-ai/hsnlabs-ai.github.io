@@ -55,3 +55,10 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 Architecture field notes & playbooks sent to your corporate inbox.
 
 We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our Privacy Policy.
+
+## Agent Analyzer
+
+Single-probe black-box conversational agent topology mapper for WhatsApp and LangGraph.
+- **URL:** https://hsnlabs.ai/en/products/agent-analyzer/
+- **GitHub:** https://github.com/hsnlabs-ai/agent-analyzer
+- **License:** MIT
