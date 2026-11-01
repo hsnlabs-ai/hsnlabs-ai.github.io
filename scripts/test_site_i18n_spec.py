@@ -26,9 +26,12 @@ def test_gate_s1_structural_integrity():
     for item in PAGES:
         assert item["en"].exists(), f"ERRO: Pagina EN ausente: {item['en']}"
         assert item["pt"].exists(), f"ERRO: Pagina PT ausente: {item['pt']}"
+        en_content = item["en"].read_text(encoding="utf-8")
         pt_content = item["pt"].read_text(encoding="utf-8")
         assert len(pt_content) > 500, f"ERRO: Pagina PT truncada: {item['pt']}"
         assert '<html lang="pt-BR">' in pt_content, f"ERRO: Atributo lang incorreto em {item['pt']}"
+        assert 'href=\\"' not in pt_content and 'src=\\"' not in pt_content, f"ERRO: Atributos com aspas escapadas em {item['pt']}"
+        assert 'href=\\"' not in en_content and 'src=\\"' not in en_content, f"ERRO: Atributos com aspas escapadas em {item['en']}"
     print(f"PASS: Gate S1 Integridade Estrutural validada nas {len(PAGES)} rotas PT")
 
 def test_gate_s2_zero_parentheses():
