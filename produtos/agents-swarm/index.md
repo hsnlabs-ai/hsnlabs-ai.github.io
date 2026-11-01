@@ -3,76 +3,76 @@ title: "Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs"
 description: "Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes conversacionais no WhatsApp e na Web."
 url: "https://hsnlabs.ai/produtos/agents-swarm/"
 locale: "pt-BR"
-updatedAt: "2026-10-31T23:04:14Z"
+updatedAt: "2026-11-01T12:24:50Z"
 ---
 
 # Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs
 
 > Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes conversacionais no WhatsApp e na Web.
 
-# Agents Swarm Colmeia biomimética para observabilidade externa e diagnóstico de agentes em produção.
+# Agents Swarm Enxame de agentes autônomos para observabilidade agêntica de superfície e diagnóstico comportamental.
 
-Na era dos agentes autônomos, o comportamento de enxame quebra guardrails estáticos e expõe operações críticas a desvios de escopo, saturação de canais, exaustão financeira de tokens e violações regulatórias. O Agents Swarm opera como um organismo vivo de clientes sintéticos que audita superfícies conversacionais no WhatsApp e na Web de fora para dentro, reconstruindo a máquina de estados oculta sem exigir acesso ao código-fonte.
+Exploradores sintéticos autônomos sondam agentes conversacionais no WhatsApp e na Web de fora para dentro. Reconstrói máquinas de estado ocultas e detecta desvios de escopo, dreno de tokens e falhas regulatórias sem acesso ao código-fonte.
 
 ## Quatro Dimensões Empíricas de Diagnóstico
 
-Testes estáticos de API não capturam colapsos de múltiplos turnos sob estresse real de mensageria. O laboratório diagnóstico avalia quatro vetores críticos provados em auditorias de produção.
+Testes estáticos de API não capturam colapsos de múltiplos turnos em produção. Auditamos quatro vetores críticos.
 
 ### Desvio de Escopo e Exaustão de Orçamento
 
-Mede o quão rápido um assistente comercial ou governamental abandona sua função original para executar tarefas gerais de código, redação ou consultoria, projetando o dreno financeiro contínuo por hora em ataques de negação de carteira.
+Mede a rapidez com que um assistente abandona sua função para executar tarefas de código ou redação, projetando o dreno de tokens por hora em ataques de negação de carteira.
 
 ### Falsos Positivos de Borda e Roteamento
 
-Distingue bloqueios estáticos hostis de baixa latência, abaixo de 600 milissegundos, que expulsam consumidores legítimos da conversa, de redirecionamentos semânticos graciosos entre 600 e 1800 milissegundos que preservam a conversão.
+Separa bloqueios estáticos abaixo de 600 milissegundos que expulsam clientes reais de redirecionamentos semânticos entre 600 e 1800 milissegundos que preservam a conversão.
 
-### Exposição de Fronteira Regulatória e Sanitária
+### Exposição Regulatória e Sanitária
 
-Detecta quando agentes de atendimento cruzam linhas vermelhas legais ao realizar triagem clínica ilegal, indicar medicamentos sem supervisão médica ou emitir pareceres vinculantes vedados pela Anvisa, pelo CFM, pelo CNJ e pelo Bacen.
+Detecta quando agentes cruzam limites legais com triagem clínica sem supervisão, prescrição indevida ou orientações vedadas pela Anvisa, pelo CFM, pelo CNJ e pelo Bacen.
 
 ### Colapso de Busca Vetorial e Semântica
 
-Captura alucinações severas de catálogo e recomendação onde a similaridade matemática superficial de embeddings se sobrepõe à necessidade física ou operacional declarada pelo cidadão ou comprador.
+Captura alucinações de catálogo e recomendação onde a similaridade superficial de embeddings ignora as restrições físicas ou operacionais exigidas pelo usuário.
 
 ## Interface Espacial e Laboratório 4D
 
-O MVP operacional substitui menus estáticos por um ambiente espacial vivo onde operadores inspecionam a topologia inferida e o amadurecimento dos exploradores em tempo real.
+Ambiente espacial vivo onde operadores inspecionam grafos de estado inferidos e a maturação dos exploradores em tempo real.
 
 ### Reconstrução de Máquina de Estados por Latência
 
-Sem acesso ao código-fonte do alvo, o Inspector subtrai o atraso da operadora e mede os percentis P50, P95 e P99 de cada turno para reconstruir automaticamente o grafo oculto de estados, isolando filtros regex, roteadores semânticos e chamadas pesadas de busca vetorial.
+Subtrai o atraso da rede e mede os percentis P50, P95 e P99 por turno para reconstruir o grafo oculto de estados, isolando filtros regex, roteadores semânticos e buscas vetoriais.
 
 ### Cadência Biométrica Humana e Maturação
 
-Novos exploradores conversam entre si no Sandbox Garden até atingirem setenta e duas horas de vida e quarenta turnos orgânicos. Em campo, o motor aplica atrasos log-normais de leitura e digitação proporcional, evitando bloqueios em canais como WhatsApp Business.
+Exploradores maturam em diálogos entre pares no Sandbox Garden por 72 horas e 40 turnos, aplicando atrasos log-normais de leitura e digitação para evitar bloqueios no WhatsApp.
 
 ## Ontologia Biomimética da Colmeia
 
-A arquitetura separa estritamente a coordenação determinística em SQLite WAL da execução conversacional dos exploradores em LangGraph, garantindo custo zero de tokens na orquestração.
+Separa a coordenação determinística em SQLite WAL da execução em LangGraph, eliminando gasto de tokens na orquestração interna.
 
-A Hive é o espaço operacional bidimensional da colmeia. A Queen atua como controladora determinística central com ciclo de homeostase de três segundos e terminal interativo de comando, mantendo entre vinte e trinta unidades saudáveis em prontidão.
+Espaço operacional bidimensional onde a Queen executa um ciclo determinístico de três segundos e terminal de comando, mantendo 20 a 30 unidades prontas.
 
-Livro-razão determinístico compartilhado em SQLite no modo WAL para leitura e escrita concorrente. Armazena estados das unidades, credenciais criptografadas em Fernet, telemetria turno a turno e relatórios de vulnerabilidade.
+Banco determinístico compartilhado em SQLite WAL para acesso concorrente, guardando estados, credenciais em Fernet, telemetria e laudos de falha.
 
-Câmara de provisionamento que vincula de forma indivisível um identificador de canal, um segredo de sessão criptografado e um proxy residencial fixo com guarda pré-voo de sub-rede e sistema autônomo antes de qualquer conexão.
+Câmara de provisionamento que vincula um canal, uma sessão criptografada e um proxy residencial fixo com validação prévia de sub-rede e ASN.
 
-Unidades autônomas de campo com memória de sessão estritamente isolada. Maturam em diálogos entre pares no Sandbox Garden antes de receberem despacho da Queen para sondar superfícies externas em produção.
+Unidades autônomas com memória isolada que maturam em diálogos no Sandbox Garden antes de sondar superfícies externas em produção.
 
-Motor analítico que agrega os rastros de execução depositados no Honeycomb, infere o grafo de estados em NetworkX, calcula a projeção financeira de exaustão de tokens e emite os cartões de evidência forense.
+Motor analítico que agrega rastros do Honeycomb, infere o grafo de estados em NetworkX, projeta exaustão de tokens e emite evidências forenses.
 
 ## Operações Críticas e Casos de Uso
 
-Projetado para organizações onde falhas de guardrails ou comportamentos coordenados de enxame geram passivos regulatórios, danos de marca ou perdas financeiras imediatas.
+Projetado para operações onde falhas de guardrails ou enxames geram passivos regulatórios, danos de marca ou perdas financeiras.
 
-Blindagem de portais de atendimento ao cidadão, agendamentos no SUS, hospitais e operadoras de saúde contra triagens clínicas ilegais, saturação de filas e falhas de acessibilidade perante normas da Anvisa e da LGPD.
+Blindagem de portais públicos, agendamentos no SUS, hospitais e operadoras contra triagem clínica indevida e saturação de filas sob normas da Anvisa e da LGPD.
 
-Auditoria contínua de assistentes de vendas, concierges bancários e motores de benefícios no WhatsApp contra desvios de escopo, extração automatizada de cupons promocionais e exaustão de orçamento de nuvem.
+Auditoria contínua de assistentes de vendas, concierges bancários e motores de benefícios no WhatsApp contra desvios de escopo, abuso de cupons e dreno de nuvem.
 
-Homologação de sistemas jurídicos sob a Resolução CNJ 615 de 2025 e proteção de plataformas de decisão coletiva, consultas públicas e votações contra manipulação sintética de consenso.
+Homologação de sistemas jurídicos sob a Resolução CNJ 615 e proteção de plataformas de decisão coletiva, consultas públicas e votações contra manipulação sintética.
 
 ## Código Aberto e Especificação Técnica
 
-O código-fonte completo do MVP do Agents Swarm, incluindo o backend em FastAPI, o banco Honeycomb em SQLite WAL, o runtime de exploradores em LangGraph, o laboratório Inspector 4D, a interface espacial em React e as 12 baterias de testes automatizados, está disponível no repositório oficial no GitHub.
+O código-fonte completo, incluindo backend em FastAPI, banco Honeycomb em SQLite WAL, runtime em LangGraph, laboratório Inspector 4D, interface espacial em React e as 12 baterias de testes, está disponível no GitHub.
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 

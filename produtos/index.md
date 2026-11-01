@@ -3,7 +3,7 @@ title: "Produtos e Plataformas Agênticas · hsnlabs"
 description: "Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
 url: "https://hsnlabs.ai/produtos/"
 locale: "pt-BR"
-updatedAt: "2026-10-31T23:04:14Z"
+updatedAt: "2026-11-01T12:24:50Z"
 ---
 
 # Produtos e Plataformas Agênticas · hsnlabs
@@ -20,11 +20,11 @@ Observabilidade externa e diagnóstico comportamental para agentes conversaciona
 
 ### Agents Swarm
 
-Colmeia biomimética de clientes sintéticos autônomos para auditoria externa e reconstrução de máquinas de estado em produção. Identifica desvios de escopo, exaustão financeira de tokens, falsos positivos hostis, riscos sanitários perante a Anvisa e o CNJ, e colapsos de busca vetorial no WhatsApp Business e na Web sem exigir acesso ao código-fonte.
+Exploradores sintéticos autônomos para observabilidade externa e reconstrução de máquinas de estado em produção. Detecta desvios de escopo, dreno de tokens, falsos positivos, riscos regulatórios e colapso vetorial no WhatsApp e na Web sem acesso ao código-fonte.
 
-- • Orquestração Determinística: Controladora Queen com ciclo de homeostase de três segundos e banco de estado Honeycomb em SQLite WAL.
+- • Orquestração Determinística: Controladora Queen com ciclo de três segundos e banco de estado Honeycomb em SQLite WAL.
 
-- • Inferência Topológica por Latência: Reconstrução da máquina de estados alvo medindo os percentis P50, P95 e P99 turno a turno.
+- • Inferência Topológica por Latência: Reconstrução da máquina de estados medindo os percentis P50, P95 e P99 por turno.
 
 - • Cadência Biométrica Humana: Exploradores sintéticos em LangGraph com tempo de leitura log-normal e presença orgânica.
 

@@ -3,7 +3,7 @@ title: "Agentic Products & Platforms · hsnlabs"
 description: "Proprietary products and open agentic engineering platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production."
 url: "https://hsnlabs.ai/en/products/"
 locale: "en"
-updatedAt: "2026-10-31T23:04:14Z"
+updatedAt: "2026-11-01T12:24:50Z"
 ---
 
 # Agentic Products & Platforms · hsnlabs
@@ -20,11 +20,11 @@ External observability and behavioral diagnosis for conversational agents and mi
 
 ### Agents Swarm
 
-Biomimetic hive of autonomous synthetic consumers for non-destructive external auditing and black-box state machine reconstruction in production. Detects scope drift, financial token drain, hostile guardrail false positives, healthcare and judicial compliance breaches, and vector search collapse across WhatsApp Business and Web surfaces without source-code access.
+Autonomous synthetic scouts for external observability and black-box state machine reconstruction in production. Detects scope drift, token drain, guardrail false positives, compliance breaches, and vector collapse on WhatsApp and the Web without source-code access.
 
-- • Deterministic Orchestration: Queen controller with a three-second homeostasis loop and shared Honeycomb SQLite WAL state ledger.
+- • Deterministic Orchestration: Queen controller with a 3s homeostasis loop and shared SQLite WAL Honeycomb ledger.
 
-- • Latency State-Machine Inference: Topological graph reconstruction measuring net P50, P95, and P99 latency turn by turn.
+- • Latency State-Machine Inference: Topological graph reconstruction measuring net P50, P95, and P99 turn latency.
 
 - • Biometric Human Cadence: Autonomous LangGraph field scouts with log-normal reading delays and organic typing presence.
 
