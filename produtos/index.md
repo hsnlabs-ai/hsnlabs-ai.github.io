@@ -3,7 +3,7 @@ title: "Produtos e Plataformas Agênticas · hsnlabs"
 description: "Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
 url: "https://hsnlabs.ai/produtos/"
 locale: "pt-BR"
-updatedAt: "2026-11-01T12:24:50Z"
+updatedAt: "2026-11-01T18:40:00Z"
 ---
 
 # Produtos e Plataformas Agênticas · hsnlabs
