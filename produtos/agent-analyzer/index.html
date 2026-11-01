@@ -1528,8 +1528,8 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
     </div>
   </header>
   <!-- HERO -->
-  <section class="hero-section" id="hero">
-    <div class="container">
+  <section class="hero-section" id="hero" style="padding-bottom: 50px;">
+    <div class="container" style="max-width: 920px;">
       <div class="hero-brand-symbol">
         <div class="brand-symbol-box" id="waterEmblemTrigger" title="Perturbar o meio">
           <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
@@ -1543,16 +1543,12 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       </h1>
 
       <p class="hero-subtitle">
-        Engenharia reversa de máquinas de estado LangGraph StateGraph a partir da superfície usando apenas uma sessão de WhatsApp. Mapeia guardrails estáticos, roteadores condicionais, paralelismo subaditivo e persistência de checkpointer sem acesso ao código-fonte.
+        Engenharia reversa de máquinas de estado LangGraph StateGraph a partir da superfície usando apenas uma sessão de WhatsApp. O sistema extrai guardrails estáticos, roteadores condicionais, paralelismo subaditivo e persistência de checkpointer sem acesso ao código-fonte.
       </p>
 
       <div class="hero-actions">
         <a href="https://github.com/hsnlabs-ai/agent-analyzer" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;" data-cta="agent-analyzer-github" data-surface="agent-analyzer-hero">Acessar Repositório no GitHub</a>
         <a href="#protocolo" class="btn btn-outline" style="padding: 14px 32px; font-size: 1rem;">Explorar Protocolo de Ondas</a>
-      </div>
-
-      <div class="product-hero-frame">
-        <img src="/assets/images/products/agent-analyzer/banner.png" alt="Mapeador Topológico e Blueprint Studio Agent Analyzer" width="1600" height="900" decoding="async">
       </div>
     </div>
   </section>
@@ -1562,7 +1558,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
     <div class="container" style="text-align: center;">
       <h2 class="display-section">Protocolo Sequencial de Seis Ondas</h2>
       <p class="section-lead">
-        Mapeamento de superfície progressivo e não-destrutivo desde o estado inicial até a auditoria de persistência de checkpointer.
+        Mapeamento de superfície progressivo e não-destrutivo desde a calibração inicial até a auditoria de persistência de memória.
       </p>
 
       <div class="grid-2-col" style="text-align: left;">
@@ -1570,7 +1566,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W0</div></div>
           <h3 class="card-title">W0 · Linha de Base Caixa-Preta</h3>
           <p class="card-body">
-            Inicializa o grafo de referência com um único nó opaco de início ao fim e calibra a latência base do canal.
+            Estabelece a topologia inicial com um único nó opaco de início ao fim. O sistema executa testes prévios de ping no canal WebSocket para calibrar a oscilação da conexão antes de iniciar a inferência.
           </p>
         </div>
 
@@ -1578,7 +1574,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W1</div></div>
           <h3 class="card-title">W1 · Guardrails de Borda e Roteamento</h3>
           <p class="card-body">
-            Isola latência líquida abaixo de 600 milissegundos para filtros estáticos de regex e diferencia pivôs de roteadores semânticos entre 600 e 1800 milissegundos.
+            Mede a latência líquida de inferência abaixo de 600 milissegundos para isolar bloqueios estáticos de palavras-chave. Tempos entre 600 e 1800 milissegundos identificam pivôs semânticos de roteadores de entrada.
           </p>
         </div>
 
@@ -1586,7 +1582,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W2</div></div>
           <h3 class="card-title">W2 · Descoberta de Ferramentas de Leitura</h3>
           <p class="card-body">
-            Executa sondas somente leitura em catálogo, consulta de preços, verificação de estoque e checagem de horários sem efeitos colaterais.
+            Dispara sondas somente leitura em catálogo de produtos, faixas de preços, saldo de estoque e verificação de agenda. Permite identificar integrações externas de API sem causar alterações no banco do alvo.
           </p>
         </div>
 
@@ -1594,7 +1590,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W3</div></div>
           <h3 class="card-title">W3 · Dry-Run de Escrita e Portão Humano</h3>
           <p class="card-body">
-            Sonda ações mutativas como criação de pedidos e estornos validando limites de interrupção e transbordo obrigatório para operador humano.
+            Sonda intenções mutativas como criação de reservas e estornos financeiros. O analisador valida se o assistente possui travas de confirmação obrigatória e transbordo prévio para operadores humanos.
           </p>
         </div>
 
@@ -1602,7 +1598,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W4</div></div>
           <h3 class="card-title">W4 · Paralelismo Subaditivo Concorrente</h3>
           <p class="card-body">
-            Aplica a prova matemática de subaditividade com razão inferior ou igual a 0.72 comprovando execução concorrente versus rotas condicionais seriais.
+            Avalia turnos com múltiplas intenções simultâneas. Quando a razão de latência entre a consulta combinada e a soma das consultas individuais fica abaixo de 0.72, o sistema comprova execução concorrente em LangGraph.
           </p>
         </div>
 
@@ -1610,84 +1606,92 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="post-it-badge"><div class="content">W5</div></div>
           <h3 class="card-title">W5 · Memória de Checkpointer Canário</h3>
           <p class="card-body">
-            Injeta tokens canários após interrupções de assunto para auditar retenção de contexto de sessão em SqliteSaver ou PostgresSaver.
+            Injeta identificadores canários exclusivos seguidos de desvios bruscos de assunto. O teste avalia a retenção exata do contexto para determinar a presença de armazenamento durável em SQLite ou PostgreSQL.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BLUEPRINT STUDIO E ARTEFATOS -->
-  <section class="section-block" id="estudio">
+  <!-- DECOMPOSIÇÃO DE LATÊNCIA E REPLAY EM DOIS PASSES -->
+  <section class="section-block" id="metodologia">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Blueprint Studio e Exportadores</h2>
+      <h2 class="display-section">Decomposição de Latência e Validação</h2>
       <p class="section-lead">
-        Ambiente visual interativo em React 19 com scrubber de time-travel e geração de código LangGraph em funções puras.
+        Fundamentação matemática para separar atrasos de transporte, regras estáticas e raciocínio de modelos.
       </p>
 
-      <div class="product-frame-grid">
-        <div class="product-frame-card">
-          <div class="product-meta-kicker">Câmara 01 · Blueprint Studio</div>
-          <h3 class="card-title" style="font-size: 1.45rem;">Topologia Visual LangGraph StateGraph</h3>
-          <p class="card-body">
-            Visualização em tela cheia dos nós descobertos, telemetria de latência líquida, estimativa de modelo e selos de validação evoluindo de hipótese para verificado.
+      <div class="grid-2-col" style="text-align: left;">
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Cálculo da Latência Líquida</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            A latência bruta observada no canal inclui a ida e volta das mensagens pelo WhatsApp. O analisador subtrai duas vezes o tempo de ping aferido no servidor de mensagens para isolar com exatidão o tempo de processamento do agente alvo.
           </p>
-          <img src="/assets/images/products/agent-analyzer/blueprint_studio.png" alt="Topologia LangGraph Blueprint Studio" width="1400" height="850" loading="lazy" decoding="async">
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Filtros Estáticos:</strong> Inferência líquida abaixo de 600 milissegundos caracterizando checagens de regex na borda.</li>
+            <li><strong>• Roteadores Semânticos:</strong> Inferência entre 600 e 1800 milissegundos identificando modelos rápidos de classificação.</li>
+            <li><strong>• Ferramentas Externas:</strong> Inferência entre 1800 e 3200 milissegundos revelando chamadas de banco e APIs.</li>
+            <li><strong>• Raciocínio Profundo:</strong> Inferência acima de 3200 milissegundos apontando síntese avançada de respostas.</li>
+          </ul>
         </div>
 
-        <div class="product-frame-card">
-          <div class="product-meta-kicker">Câmara 02 · Quatro Exportadores</div>
-          <h3 class="card-title" style="font-size: 1.45rem;">Código Compilável e Relatórios Forenses</h3>
-          <p class="card-body">
-            Geração determinística instantânea de esqueleto Python compilável em LangGraph, fluxogramas Mermaid, esquema JSON de topologia e dossiê forense completo em Markdown.
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Replay Sequencial em Dois Passes</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            Para eliminar falsos positivos sem depender de enxames complexos com múltiplos números, o analisador adota um protocolo em duas etapas com uma única sessão de mensagens.
           </p>
-          <img src="/assets/images/products/agent-analyzer/exporters_suite.png" alt="Exportadores Determinísticos e Artefatos" width="1400" height="850" loading="lazy" decoding="async">
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Passo Um:</strong> Execução exploratória inicial de sondas mapeando nós e atribuindo selo provisório de hipótese.</li>
+            <li><strong>• Quebra de Contexto:</strong> Envio de comando de reinicialização de sessão para garantir ponto de partida limpo.</li>
+            <li><strong>• Passo Dois:</strong> Reexecução controlada das mesmas trilhas para confirmar a determinística de cada transição.</li>
+            <li><strong>• Certificação:</strong> Elevação do nó ao nível verificado apenas quando a confirmação em dois passos é atingida.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ARQUITETURA TÉCNICA -->
+  <!-- ARQUITETURA TÉCNICA E BANCO -->
   <section class="section-block section-alt" id="arquitetura">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Arquitetura Técnica de Sonda Única</h2>
+      <h2 class="display-section">Arquitetura de Sonda e Persistência</h2>
       <p class="section-lead">
-        Elimina complexidade de múltiplos bots através de persistência assimétrica em SQLite WAL de cinco tabelas e transporte calibrado no WAHA.
+        Armazenamento relacional em SQLite WAL e controle biométrico de envio para proteção operacional total.
       </p>
 
       <div class="timeline-grid">
         <div class="timeline-card">
-          <strong>01 • Protocolo de Replay em Dois Passes</strong>
+          <strong>01 • Sonda Unitária no WhatsApp</strong>
           <p class="timeline-body">
-            Sondagem sequencial com um único número, reset de fronteira de contexto e replay de verificação para validar transições de grafo.
+            Opera com apenas um número de telefone conectado ao container WAHA na porta 3001, dispensando a gestão onerosa de frotas de chips e mitigando riscos de bloqueio.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>02 • Decomposição de Latência Líquida</strong>
+          <strong>02 • Cadência Humana Anti-Ban</strong>
           <p class="timeline-body">
-            Subtrai a calibração de ping WebSocket calculada subtraindo o dobro do ping de rede do tempo de resposta total para isolar regras estáticas e roteadores.
+            Aplica pausas de leitura e digitação com distribuição log-normal, mantendo um piso mínimo de dois segundos entre turnos para simular o comportamento de um usuário real.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>03 • Persistência SQLite WAL em Cinco Tabelas</strong>
+          <strong>03 • Persistência Transacional em Cinco Tabelas</strong>
           <p class="timeline-body">
-            Armazenamento transacional em data/analyzer.sqlite3 registrando target_scans, probe_turns, topology_nodes, topology_edges e analyzer_settings.
+            Armazena todo o histórico em banco SQLite no modo WAL, dividindo registros entre sessões de varredura, turnos cronológicos, nós mapeados, arestas direcionadas e parâmetros de conexão.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>04 • Conexão Não-Destrutiva ao WAHA</strong>
+          <strong>04 • Simulação Local sem Custo</strong>
           <p class="timeline-body">
-            Reutiliza conexões persistentes via cliente assíncrono, impõe jitter biométrico com piso mínimo de dois segundos e elimina fallbacks silenciosos em modo ao vivo.
+            Inclui um assistente simulado em memória que permite testar as seis ondas e gerar artefatos em segundos, sem necessidade de credenciais de nuvem ou aparelhos físicos.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>05 • Exportadores Puros Pós-W5</strong>
+          <strong>05 • Quatro Exportadores Puros Pós-W5</strong>
           <p class="timeline-body">
-            Síntese determinística que gera esqueleto LangGraph Python executável, fluxogramas Mermaid, esquema JSON de telemetria e relatório Markdown.
+            Converte o grafo inferido em esqueleto Python para LangGraph, diagrama Mermaid para documentação, esquema JSON para pipelines e relatório técnico em Markdown.
           </p>
         </div>
       </div>
@@ -1697,30 +1701,30 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   <!-- CASOS DE USO CRÍTICOS -->
   <section class="section-block" id="casos-de-uso">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Casos de Uso em Ambientes de Produção</h2>
+      <h2 class="display-section">Casos de Uso em Produção</h2>
       <p class="section-lead">
-        Desenvolvido para times de segurança, arquitetos de IA e equipes de red-team auditando agentes externos sem acesso ao repositório de código.
+        Desenvolvido para engenharia reversa e conformidade arquitetural em sistemas conversacionais corporativos.
       </p>
 
       <div class="criteria-grid">
         <div class="criteria-card">
           <strong>01 • Inteligência Competitiva e Benchmarking</strong>
           <p>
-            Mapeamento da arquitetura conversacional de concorrentes no WhatsApp para descobrir ferramentas internas, estratégias de roteamento, tiers de modelo e limites de latência.
+            Mapeamento da topologia conversacional de concorrentes no WhatsApp para identificar ferramentas integradas, estratégias de roteamento, tiers de modelo e limites de latência.
           </p>
         </div>
 
         <div class="criteria-card">
-          <strong>02 • Auditorias de Segurança e Fronteiras Humanas</strong>
+          <strong>02 • Auditoria de Portões Humanos</strong>
           <p>
-            Verificação de operações de alto risco garantindo que interrupções humanas aconteçam antes da mutação de dados em produção.
+            Verificação prática em operações críticas como concessão de limites, alterações cadastrais e estornos, garantindo que o assistente respeite travas antes de persistir dados.
           </p>
         </div>
 
         <div class="criteria-card">
           <strong>03 • Modernização de Chatbots Legados</strong>
           <p>
-            Extração de fluxos conversacionais legados não documentados com exportação direta para código Python StateGraph compilável e pronto para evolução.
+            Extração estruturada de assistentes legados sem documentação técnica com exportação direta para código Python StateGraph moderno e tipado em LangGraph.
           </p>
         </div>
       </div>
@@ -1733,7 +1737,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="scoping-card" style="text-align: center;">
         <h2 class="display-section" style="margin-bottom: 12px;">Código Aberto e Especificação Técnica</h2>
         <p style="color: var(--muted); max-width: 600px; margin: 0 auto 28px auto; line-height: 1.6;">
-          Todo o código, incluindo o servidor FastAPI, armazenamento transacional em SQLite WAL de cinco tabelas, executor do protocolo de seis ondas, Blueprint Studio em React 19 e os quatro exportadores determinísticos, está disponível sob a licença MIT no GitHub.
+          Todo o código, incluindo o servidor em FastAPI, banco SQLite WAL em cinco tabelas, executor do protocolo de seis ondas, estúdio em React 19 e os quatro exportadores determinísticos, está disponível sob a licença MIT no GitHub.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
