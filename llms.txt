@@ -24,8 +24,10 @@
 ## Proprietary Products & Open Platforms
 - [Produtos e Plataformas Agênticas (PT-BR)](https://hsnlabs.ai/produtos/): Índice de produtos proprietários e plataformas abertas da hsnlabs.
 - [Agentic Products & Platforms (EN)](https://hsnlabs.ai/en/products/): Directory of proprietary products and open agentic platforms by hsnlabs.
-- [Agents Swarm (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/): Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes em produção.
-- [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of surface agents in production.
+- [Agents Swarm (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/): Colmeia biomimética de clientes sintéticos (v1.6.3) com embeddings locais 384D (<10ms), baterias Garak, classificador Bertimbau PT-BR, 50 FinePersonas brasileiras, LongBench/WildJailbreak e Swarm Self-Healing.
+- [Agents Swarm Protocol & Honeycomb Stigmergy (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/protocolo/): Especificação do protocolo HACP v1.0.0 de estigmergia híbrida, estado compartilhado em SQLite WAL e auto-cura determinística.
+- [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers (v1.6.3) featuring local 384D embeddings (<10ms), Garak red-teaming, Bertimbau PT-BR toxicity classification, 50 Brazilian FinePersonas, LongBench/WildJailbreak stress payloads, and Swarm Self-Healing.
+- [Agents Swarm Protocol & Honeycomb Stigmergy (EN)](https://hsnlabs.ai/en/products/agents-swarm/protocol/): Technical specification of the HACP v1.0.0 hybrid stigmergy protocol, SQLite WAL shared state, and deterministic self-healing.
 - [Agents Swarm Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/index.md): Especificação técnica legível por máquina em português.
 - [Agents Swarm Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agents-swarm/index.md): Machine-readable technical specification in English.
 - [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/agents-swarm): Official open-source repository (MIT License).

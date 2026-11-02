@@ -1,22 +1,22 @@
 ---
 title: "Agents Swarm · Agent Observability & Diagnosis · hsnlabs"
-description: "Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of conversational agents on WhatsApp and the Web."
+description: "Biomimetic hive of synthetic consumers for external observability, simulation-based vulnerability diagnosis, and pre-production dataset refinement on WhatsApp and the Web."
 url: "https://hsnlabs.ai/en/products/agents-swarm/"
 locale: "en"
-updatedAt: "2026-11-01T12:32:18Z"
+updatedAt: "2026-11-02T12:00:00Z"
 ---
 
 # Agents Swarm · Agent Observability & Diagnosis · hsnlabs
 
-> Biomimetic hive of synthetic consumers for external observability, black-box state machine reconstruction, and behavioral diagnosis of conversational agents on WhatsApp and the Web.
+> Biomimetic hive of synthetic consumers for external observability, simulation-based vulnerability diagnosis, and pre-production dataset refinement on WhatsApp and the Web.
 
-# Agents Swarm Autonomous Agents Swarm for surface agentic-observability and behavioral diagnosis.
+# Agents Swarm Autonomous Agents Swarm for surface agentic-observability, behavioral diagnosis, and pre-production dataset refinement.
 
-Autonomous synthetic scouts probe conversational agents on WhatsApp and the Web from the outside in. Reconstructs hidden state machines and detects scope drift, token drain, and regulatory breaches without source-code access.
+Autonomous synthetic scouts probe conversational agents on WhatsApp and the Web from the outside in. Uncovers edge vulnerabilities across simulated high-stress scenarios to update datasets before bugs hit production, while inferring behavioral graphs and hidden transitions without source-code access.
 
 ## Four Empirical Diagnostic Dimensions
 
-Static API tests miss multi-turn failures under live messaging stress. We audit four critical production vectors.
+Static API tests miss multi-turn failures under live messaging stress. By simulating real-world usage beforehand, teams catch edge cases early to feed evaluation datasets and audit four critical production vectors.
 
 ### Scope Drift & Denial of Wallet
 
@@ -38,39 +38,39 @@ Catches catalog and recommendation hallucinations where shallow embedding simila
 
 A live spatial workspace where operators inspect inferred state graphs and scout maturation in real time.
 
-### Latency State-Machine Reconstruction
+### Graph Inference
 
-Subtracts carrier jitter and measures net P50, P95, and P99 turn latency with 2/2 cross-Scout consensus to reconstruct the hidden state graph, isolating conditional routers and parallel tool calls.
+Maps conversational topology and decision branches across successive turns, inferring parallel routes, conditional handlers, and tool invocations without source-code access.
 
-### Five-Front Probing & Biometric Cadence
+### Customer Simulation
 
-Scouts mature in the Sandbox Garden and execute five-front conversational probing, applying log-normal reading, thinking, and typing delays to avoid WhatsApp bans.
+Synthetic scouts engage the target system with realistic reading, thinking, and typing delays to test extreme behaviors without triggering artificial blocks.
 
-### Spatial Observability & Queen Orchestration
+### Colony Orchestration
 
-Integrated cross-section view of the hive with the Queen's Chamber, 1:1:1 Incubator, 4D Inspector, and Probing Garden operating in real time with zero LLM token waste on internal coordination.
+Integrated workspace linking the control chamber, test environments, and operational map to coordinate dozens of concurrent scouts without internal token overhead.
 
-### Per-Scout Telemetry & Stigmergic Handoff
+### Scout Telemetry
 
-Live inspection of the isolated LangGraph session, Fernet AES-128-CBC + HMAC-SHA256 encryption, residential proxy affinity, and work-stealing handoffs between pioneer and verifier Scouts.
+Real-time state tracking per agent with cryptographic credential isolation, turn logs, and stigmergic task delegation across the fleet.
 
 ## Biomimetic Hive Ontology
 
 Decouples deterministic SQLite WAL coordination from LangGraph scout execution, eliminating LLM token waste on internal orchestration.
 
-Two-dimensional workspace where the deterministic Queen runs a three-second homeostasis loop and command terminal, keeping 20 to 30 healthy scouts ready.
+Two-dimensional workspace where the deterministic Queen runs a three-second homeostasis loop with Swarm Self-Healing, keeping 20 to 30 healthy scouts ready.
 
-Shared SQLite WAL ledger for concurrent access, storing unit lifecycle states, Fernet-encrypted credentials, turn telemetry, and vulnerability reports.
+Shared SQLite WAL ledger for concurrent access, storing unit lifecycle states, Fernet-encrypted credentials, turn telemetry, PT-BR toxicity scores (Bertimbau), and vulnerability reports.
 
-Provisioning chamber binding one channel identity, one encrypted session secret, and one sticky residential proxy with pre-flight subnet and ASN guards.
+Provisioning chamber binding one channel identity, one encrypted session secret, one of 50 Brazilian demographic profiles (FinePersonas), and one sticky residential proxy with ASN guards.
 
-Autonomous field units with isolated session memory that mature in the Sandbox Garden before probing external production surfaces.
+Autonomous field units with isolated memory that mature in the Sandbox Garden and fire adversarial probes (Garak, PT-BR WildJailbreak, and 4k–32k LongBench contexts) in production.
 
-Analytical engine that aggregates Honeycomb traces, infers the NetworkX state graph, projects hourly token drain, and compiles forensic evidence.
+Analytical engine that clusters intents with local 384D embeddings (<10ms), infers the NetworkX state graph, detects semantic vector collapse, and compiles forensic evidence.
 
 ## Mission-Critical Operations & Use Cases
 
-Built for operations where guardrail failures or swarm behaviors create regulatory liability, brand damage, or financial loss.
+Built for operations where guardrail failures create regulatory liability, brand damage, or financial loss. Continuous simulation accelerates vulnerability discovery in controlled environments, enabling dataset updates before end users face failures.
 
 Shielding citizen portals, public healthcare scheduling, hospitals, and insurers against unauthorized clinical triage and queue saturation under health and privacy laws.
 
@@ -80,7 +80,7 @@ Certifying legal automation under judicial mandates and protecting collective de
 
 ## Open Source & Technical Specification
 
-Full source code, including the FastAPI backend, SQLite WAL Honeycomb ledger, LangGraph scout runtime, 4D Inspector lab, React spatial UI, and 12 end-to-end test suites, is available on GitHub.
+Full source code (v1.6.3), including the FastAPI backend, SQLite WAL Honeycomb ledger, local 384D embedding engine, Garak & Bertimbau PT-BR security suites, standalone honeycomb-protocol and swarm-self-healing packages, React spatial UI, and 50 automated test suites, is available on GitHub.
 
 An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
 

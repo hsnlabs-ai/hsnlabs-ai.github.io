@@ -1,22 +1,22 @@
 ---
 title: "Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs"
-description: "Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes conversacionais no WhatsApp e na Web."
+description: "Colmeia biomimética de clientes sintéticos para observabilidade externa, diagnóstico de brechas em simulações e atualização de datasets antes da produção."
 url: "https://hsnlabs.ai/produtos/agents-swarm/"
 locale: "pt-BR"
-updatedAt: "2026-11-01T12:32:18Z"
+updatedAt: "2026-11-02T12:00:00Z"
 ---
 
 # Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs
 
-> Colmeia biomimética de clientes sintéticos para observabilidade externa, reconstrução de máquinas de estado em caixa-preta e diagnóstico de agentes conversacionais no WhatsApp e na Web.
+> Colmeia biomimética de clientes sintéticos para observabilidade externa, diagnóstico de brechas em simulações e atualização de datasets antes da produção.
 
 # Agents Swarm Enxame de agentes autônomos para observabilidade agêntica de superfície e diagnóstico comportamental.
 
-Exploradores sintéticos autônomos sondam agentes conversacionais no WhatsApp e na Web de fora para dentro. Reconstrói máquinas de estado ocultas e detecta desvios de escopo, dreno de tokens e falhas regulatórias sem acesso ao código-fonte.
+Exploradores sintéticos autônomos sondam agentes conversacionais no WhatsApp e na Web de fora para dentro. O sistema expõe brechas em cenários simulados de alto estresse, permitindo atualizar datasets e refinar modelos antes que os erros atinjam os usuários finais, além de inferir grafos comportamentais e transições ocultas sem acesso ao código-fonte.
 
 ## Quatro Dimensões Empíricas de Diagnóstico
 
-Testes estáticos de API não capturam colapsos de múltiplos turnos em produção. Auditamos quatro vetores críticos.
+Testes estáticos de API não capturam colapsos de múltiplos turnos em produção. Ao simular situações reais de uso antecipadamente, aceleramos a identificação de pontos cegos para alimentar seus datasets de treino e auditamos quatro vetores críticos.
 
 ### Desvio de Escopo e Exaustão de Orçamento
 
@@ -38,39 +38,39 @@ Captura alucinações de catálogo e recomendação onde a similaridade superfic
 
 Ambiente espacial vivo onde operadores inspecionam grafos de estado inferidos e a maturação dos exploradores em tempo real.
 
-### Reconstrução de Máquina de Estados por Latência
+### Inferência de Grafos
 
-Subtrai o atraso da rede e mede os percentis P50, P95 e P99 por turno com consenso cruzado 2/2 entre Scouts para reconstruir o grafo oculto de estados, isolando roteadores condicionais e chamadas paralelas de ferramentas.
+Mapeia a topologia e as transições do agente a partir de interações reais, inferindo ramificações paralelas, roteadores condicionais e chamadas de ferramentas sem depender de acesso ao código.
 
-### Sondagem em Cinco Frentes e Cadência Biométrica
+### Simulação de Clientes
 
-Exploradores maturam no Sandbox Garden e executam sondagem em cinco frentes conversacionais, aplicando atrasos log-normais de leitura, raciocínio e digitação para evitar bloqueios no WhatsApp.
+Exploradores sintéticos interagem com o sistema alvo aplicando atrasos realistas de leitura, raciocínio e digitação para testar comportamentos extremos sem disparar bloqueios artificiais.
 
-### Observabilidade Espacial e Orquestração da Queen
+### Orquestração da Colmeia
 
-Visão integrada em corte da colmeia com a Câmara da Rainha, Incubadora 1:1:1, Inspector 4D e o Jardim de Sondagem operando em tempo real sem consumo de tokens na coordenação interna.
+Visão integrada com a câmara de controle, ambientes de teste e mapa operacional para monitorar dezenas de exploradores simultâneos sem consumir tokens na coordenação interna.
 
-### Telemetria Individual da Scout e Handoff Estigmérgico
+### Telemetria de Agentes
 
-Inspeção ao vivo da sessão isolada em LangGraph, criptografia Fernet AES-128-CBC com HMAC-SHA256, afinidade de proxy residencial e fila de handoff entre Scouts pioneiras e verificadoras.
+Acompanhamento em tempo real do estado de cada agente, com isolamento criptográfico de credenciais, histórico de diálogos e delegação coordenada de tarefas no campo.
 
 ## Ontologia Biomimética da Colmeia
 
 Separa a coordenação determinística em SQLite WAL da execução em LangGraph, eliminando gasto de tokens na orquestração interna.
 
-Espaço operacional bidimensional onde a Queen executa um ciclo determinístico de três segundos e terminal de comando, mantendo 20 a 30 unidades prontas.
+Espaço operacional bidimensional onde a Queen executa um ciclo determinístico de três segundos com motor de auto-cura Swarm Self-Healing, mantendo 20 a 30 unidades prontas.
 
-Banco determinístico compartilhado em SQLite WAL para acesso concorrente, guardando estados, credenciais em Fernet, telemetria e laudos de falha.
+Banco determinístico compartilhado em SQLite WAL para acesso concorrente, guardando estados, credenciais em Fernet, telemetria, escores de toxicidade via Bertimbau e laudos de falha.
 
-Câmara de provisionamento que vincula um canal, uma sessão criptografada e um proxy residencial fixo com validação prévia de sub-rede e ASN.
+Câmara de provisionamento que vincula um canal, uma sessão criptografada, um perfil dentre 50 personas brasileiras do FinePersonas e um proxy residencial fixo com validação de ASN.
 
-Unidades autônomas com memória isolada que maturam em diálogos no Sandbox Garden antes de sondar superfícies externas em produção.
+Unidades autônomas com memória isolada que maturam no Sandbox Garden e disparam sondas adversariais Garak, WildJailbreak e contextos LongBench de 4k a 32k tokens em produção.
 
-Motor analítico que agrega rastros do Honeycomb, infere o grafo de estados em NetworkX, projeta exaustão de tokens e emite evidências forenses.
+Motor analítico que agrupa intenções com embeddings locais de 384 dimensões abaixo de 10 milissegundos, infere o grafo de estados em NetworkX, detecta colapso semântico e emite evidências forenses.
 
 ## Operações Críticas e Casos de Uso
 
-Projetado para operações onde falhas de guardrails ou enxames geram passivos regulatórios, danos de marca ou perdas financeiras.
+Projetado para operações onde falhas de guardrails geram passivos regulatórios, danos de marca ou perdas financeiras. A simulação contínua antecipa a descoberta de brechas técnicas e operacionais, viabilizando correções estruturais nos datasets antes da exposição pública do agente.
 
 Blindagem de portais públicos, agendamentos no SUS, hospitais e operadoras contra triagem clínica indevida e saturação de filas sob normas da Anvisa e da LGPD.
 
@@ -80,7 +80,7 @@ Homologação de sistemas jurídicos sob a Resolução CNJ 615 e proteção de p
 
 ## Código Aberto e Especificação Técnica
 
-O código-fonte completo, incluindo backend em FastAPI, banco Honeycomb em SQLite WAL, runtime em LangGraph, laboratório Inspector 4D, interface espacial em React e as 12 baterias de testes, está disponível no GitHub.
+O código-fonte completo na versão 1.6.3, incluindo backend em FastAPI, banco Honeycomb em SQLite WAL, motor de embeddings locais de 384 dimensões, baterias Garak e Bertimbau, pacotes standalone honeycomb-protocol e swarm-self-healing, interface espacial em React e as 50 baterias de testes automatizados, está disponível no GitHub.
 
 Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
 
