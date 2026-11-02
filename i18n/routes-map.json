@@ -125,6 +125,15 @@
       "title_pt": "Hugo S. Nascimento — Arquitetura de Agentes Enterprise",
       "description_en": "Essays and field notes on enterprise AI architectures and business ontologies.",
       "description_pt": "Ensaios e notas de campo sobre arquiteturas de agentes enterprise e ontologias."
+    },
+    {
+      "id": "site_products_swarm_self_healing",
+      "en_path": "/en/products/swarm-self-healing/",
+      "pt_path": "/produtos/swarm-self-healing/",
+      "title_en": "Swarm Self-Healing · Autonomous Swarm Homeostasis & Failover · hsnlabs",
+      "title_pt": "Swarm Self-Healing · Homeostase e Failover para Enxames · hsnlabs",
+      "description_en": "Pure-Python resilience, thermal governance, and resource protection runtime for autonomous AI swarms with sub-5s hot standby failover, 3-tier proxy affinity guard, and sliding-window circuit breakers.",
+      "description_pt": "Runtime Python de homeostase determinística, failover a quente em menos de 5 segundos, governança térmica com histerese, afinidade de rede em 3 camadas e circuit breaker para enxames de agentes."
     }
   ],
   "blog_posts": [

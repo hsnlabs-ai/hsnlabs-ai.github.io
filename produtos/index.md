@@ -77,3 +77,12 @@ Protocolo aberto de coordenação estigmérgica para enxames autônomos de longa
 - **Página do Produto:** [https://hsnlabs.ai/produtos/honeycomb-protocol/](https://hsnlabs.ai/produtos/honeycomb-protocol/)
 - **Whitepaper Técnico:** [https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/)
 - **Repositório GitHub:** [https://github.com/hsnlabs-ai/honeycomb-protocol](https://github.com/hsnlabs-ai/honeycomb-protocol)
+
+---
+
+## 5. Swarm Self-Healing (SSH)
+- **Status:** Runtime & Especificação Aberta · SSH-SPEC-0001 · v0.1.0 (MIT)
+- **Subtítulo:** Homeostase Determinística, Failover a Quente em < 5s e Guarda de Afinidade de Rede em 3 Níveis
+- **URL:** https://hsnlabs.ai/produtos/swarm-self-healing/
+- **Repositório:** https://github.com/hsnlabs-ai/swarm-self-healing
+- **Resumo:** Runtime Python puro para resiliência, governança térmica e proteção de recursos em enxames autônomos de IA: promoção priorizada de hot standby em menos de 5s, histerese térmica limitada em `[0.0, 1.0]` (`0.35..0.78`), guarda de afinidade de proxy em 3 níveis com tolerância DHCP `/24` + ASN e circuit breaker em janela deslizante (5 falhas/600s).

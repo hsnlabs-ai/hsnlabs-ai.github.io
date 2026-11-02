@@ -29,6 +29,11 @@
 - [Agents Swarm Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/index.md): Especificação técnica legível por máquina em português.
 - [Agents Swarm Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agents-swarm/index.md): Machine-readable technical specification in English.
 - [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/agents-swarm): Official open-source repository (MIT License).
+- [Swarm Self-Healing (PT-BR)](https://hsnlabs.ai/produtos/swarm-self-healing/): Runtime Python puro para homeostase determinística de enxames, failover hot-standby em menos de 5 segundos, histerese térmica limitada em [0.0, 1.0], guarda de afinidade de proxy em 3 níveis e circuit breaker contra tempestades de provisionamento.
+- [Swarm Self-Healing (EN)](https://hsnlabs.ai/en/products/swarm-self-healing/): Pure-Python resilience runtime for deterministic swarm homeostasis, sub-5-second hot standby failover, bounded [0.0, 1.0] thermal hysteresis, 3-tier proxy affinity verification, and sliding-window resource circuit breaking.
+- [Swarm Self-Healing Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/swarm-self-healing/index.md): Especificação técnica legível por máquina em português.
+- [Swarm Self-Healing Markdown Mirror (EN)](https://hsnlabs.ai/en/products/swarm-self-healing/index.md): Machine-readable technical specification in English.
+- [Swarm Self-Healing GitHub Repository](https://github.com/hsnlabs-ai/swarm-self-healing): Official open-source repository (MIT License).
 
 ## Ecosystem & Platform Alliances
 - [LangChain & LangGraph Architecture (PT-BR)](https://hsnlabs.ai/langchain/): Orquestração StateGraph, LangSmith evals e runtimes soberanos em VPC.

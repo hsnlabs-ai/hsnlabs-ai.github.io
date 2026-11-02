@@ -77,3 +77,12 @@ Open stigmergic coordination protocol (`HACP-RFC-0001`) for long-horizon autonom
 - **Product Page:** [https://hsnlabs.ai/en/products/honeycomb-protocol/](https://hsnlabs.ai/en/products/honeycomb-protocol/)
 - **Technical Whitepaper:** [https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/)
 - **GitHub Repository:** [https://github.com/hsnlabs-ai/honeycomb-protocol](https://github.com/hsnlabs-ai/honeycomb-protocol)
+
+---
+
+## 5. Swarm Self-Healing (SSH)
+- **Status:** Open Runtime & Specification · SSH-SPEC-0001 · v0.1.0 (MIT)
+- **Subtitle:** Deterministic Homeostasis, Sub-5s Hot Failover & 3-Tier Network Affinity Guard
+- **URL:** https://hsnlabs.ai/en/products/swarm-self-healing/
+- **Repository:** https://github.com/hsnlabs-ai/swarm-self-healing
+- **Summary:** Pure-Python resilience, thermal governance, and resource protection runtime for autonomous AI swarms: priority-ordered sub-5s hot standby promotion, bounded `[0.0, 1.0]` thermal hysteresis (`0.35..0.78`), 3-tier proxy affinity guard with `/24` + ASN DHCP tolerance, and a 5-failure/600s sliding-window circuit breaker.
