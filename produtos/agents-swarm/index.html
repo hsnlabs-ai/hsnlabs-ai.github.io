@@ -882,6 +882,8 @@
     .product-hero-frame video {
       width: 100%;
       height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -907,6 +909,9 @@
     .product-frame-card video {
       width: 100%;
       height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      margin-top: auto;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -1556,7 +1561,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       </div>
 
       <div class="product-hero-frame">
-        <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/mission_control.png" width="1600" height="1000" aria-label="Tour interativo da Queen's Chamber, Sandbox Garden e LangGraph Studio Blueprint no Agents Swarm">
+        <video autoplay loop muted playsinline preload="auto" poster="/assets/images/products/agents-swarm/mission_control.png" width="1600" height="1000" aria-label="Tour interativo da Queen's Chamber, Sandbox Garden e LangGraph Studio Blueprint no Agents Swarm">
           <source src="/assets/images/products/agents-swarm/agents_swarm_tour.mp4" type="video/mp4">
           <img src="/assets/images/products/agents-swarm/mission_control.png" alt="Spatial Hive e Terminal Soberano da Queen no Agents Swarm" width="1600" height="1000" decoding="async">
         </video>
@@ -1623,7 +1628,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <p class="card-body">
             Subtrai o atraso da rede e mede os percentis P50, P95 e P99 por turno com consenso cruzado 2/2 entre Scouts para reconstruir o grafo oculto de estados, isolando roteadores condicionais e chamadas paralelas de ferramentas.
           </p>
-          <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/inspector_4d.png" width="1600" height="1000" aria-label="LangGraph Studio Blueprint reconstruindo grafo de estados em caixa-preta">
+          <video autoplay loop muted playsinline preload="metadata" poster="/assets/images/products/agents-swarm/inspector_4d.png" width="1600" height="1000" aria-label="LangGraph Studio Blueprint reconstruindo grafo de estados em caixa-preta">
             <source src="/assets/images/products/agents-swarm/langgraph_blueprint.mp4" type="video/mp4">
             <img src="/assets/images/products/agents-swarm/inspector_4d.png" alt="LangGraph Studio Blueprint reconstruindo grafo de estados" width="1600" height="1000" loading="lazy" decoding="async">
           </video>

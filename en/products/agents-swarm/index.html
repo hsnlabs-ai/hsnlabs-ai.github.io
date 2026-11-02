@@ -882,6 +882,8 @@
     .product-hero-frame video {
       width: 100%;
       height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -907,6 +909,9 @@
     .product-frame-card video {
       width: 100%;
       height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      margin-top: auto;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -1556,7 +1561,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       </div>
 
       <div class="product-hero-frame">
-        <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/mission_control.png" width="1600" height="1000" aria-label="Interactive tour of the Queen's Chamber, Sandbox Garden, and LangGraph Studio Blueprint in Agents Swarm">
+        <video autoplay loop muted playsinline preload="auto" poster="/assets/images/products/agents-swarm/mission_control.png" width="1600" height="1000" aria-label="Interactive tour of the Queen's Chamber, Sandbox Garden, and LangGraph Studio Blueprint in Agents Swarm">
           <source src="/assets/images/products/agents-swarm/agents_swarm_tour.mp4" type="video/mp4">
           <img src="/assets/images/products/agents-swarm/mission_control.png" alt="Spatial Hive and Queen Sovereign Terminal in Agents Swarm" width="1600" height="1000" decoding="async">
         </video>
@@ -1623,7 +1628,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <p class="card-body">
             Subtracts carrier jitter and measures net P50, P95, and P99 turn latency with 2/2 cross-Scout consensus to reconstruct the hidden state graph, isolating conditional routers and parallel tool calls.
           </p>
-          <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/inspector_4d.png" width="1600" height="1000" aria-label="LangGraph Studio Blueprint reconstructing target state graph in black-box mode">
+          <video autoplay loop muted playsinline preload="metadata" poster="/assets/images/products/agents-swarm/inspector_4d.png" width="1600" height="1000" aria-label="LangGraph Studio Blueprint reconstructing target state graph in black-box mode">
             <source src="/assets/images/products/agents-swarm/langgraph_blueprint.mp4" type="video/mp4">
             <img src="/assets/images/products/agents-swarm/inspector_4d.png" alt="LangGraph Studio Blueprint reconstructing target state graph" width="1600" height="1000" loading="lazy" decoding="async">
           </video>
