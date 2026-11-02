@@ -861,7 +861,9 @@
       max-width: 100%;
     }
     .product-hero-frame img,
+    .product-hero-frame video,
     .product-frame-card img,
+    .product-frame-card video,
     .product-catalog-card img {
       max-width: 100%;
       width: 100%;
@@ -876,7 +878,8 @@
       box-shadow: 0 18px 40px -15px rgba(7, 9, 14, 0.08);
     }
 
-    .product-hero-frame img {
+    .product-hero-frame img,
+    .product-hero-frame video {
       width: 100%;
       height: auto;
       display: block;
@@ -900,7 +903,8 @@
       gap: 16px;
     }
 
-    .product-frame-card img {
+    .product-frame-card img,
+    .product-frame-card video {
       width: 100%;
       height: auto;
       display: block;
@@ -1552,7 +1556,10 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       </div>
 
       <div class="product-hero-frame">
-        <img src="/assets/images/products/agents-swarm/mission_control.png" alt="Spatial Hive and Queen Sovereign Terminal in Agents Swarm" width="1540" height="960" decoding="async">
+        <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/mission_control.png" width="1600" height="1000" aria-label="Interactive tour of the Queen's Chamber, Sandbox Garden, and LangGraph Studio Blueprint in Agents Swarm">
+          <source src="/assets/images/products/agents-swarm/agents_swarm_tour.mp4" type="video/mp4">
+          <img src="/assets/images/products/agents-swarm/mission_control.png" alt="Spatial Hive and Queen Sovereign Terminal in Agents Swarm" width="1600" height="1000" decoding="async">
+        </video>
       </div>
     </div>
   </section>
@@ -1611,21 +1618,42 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
       <div class="product-frame-grid">
         <div class="product-frame-card">
-          <div class="product-meta-kicker">Chamber 01 · Inspector Lab 4D</div>
+          <div class="product-meta-kicker">Chamber 01 · LangGraph Studio Blueprint</div>
           <h3 class="card-title" style="font-size: 1.45rem;">Latency State-Machine Reconstruction</h3>
           <p class="card-body">
-            Subtracts carrier jitter and measures net P50, P95, and P99 turn latency to reconstruct the hidden state graph, isolating regex filters, semantic routers, and vector calls.
+            Subtracts carrier jitter and measures net P50, P95, and P99 turn latency with 2/2 cross-Scout consensus to reconstruct the hidden state graph, isolating conditional routers and parallel tool calls.
           </p>
-          <img src="/assets/images/products/agents-swarm/inspector_4d.png" alt="Inspector Lab 4D reconstructing target state graph" width="1120" height="900" loading="lazy" decoding="async">
+          <video autoplay loop muted playsinline poster="/assets/images/products/agents-swarm/inspector_4d.png" width="1600" height="1000" aria-label="LangGraph Studio Blueprint reconstructing target state graph in black-box mode">
+            <source src="/assets/images/products/agents-swarm/langgraph_blueprint.mp4" type="video/mp4">
+            <img src="/assets/images/products/agents-swarm/inspector_4d.png" alt="LangGraph Studio Blueprint reconstructing target state graph" width="1600" height="1000" loading="lazy" decoding="async">
+          </video>
         </div>
 
         <div class="product-frame-card">
           <div class="product-meta-kicker">Chamber 02 · Sandbox &amp; External Gardens</div>
-          <h3 class="card-title" style="font-size: 1.45rem;">Biometric Human Cadence &amp; Maturation</h3>
+          <h3 class="card-title" style="font-size: 1.45rem;">Five-Front Probing &amp; Biometric Cadence</h3>
           <p class="card-body">
-            Scouts mature through peer-to-peer dialogues in the Sandbox Garden for 72 hours and 40 turns, applying log-normal reading delays and typing presence to avoid WhatsApp bans.
+            Scouts mature in the Sandbox Garden and execute five-front conversational probing, applying log-normal reading, thinking, and typing delays to avoid WhatsApp bans.
           </p>
-          <img src="/assets/images/products/agents-swarm/sandbox_gardens.png" alt="Maturation Gardens and Biometric Probing" width="1540" height="960" loading="lazy" decoding="async">
+          <img src="/assets/images/products/agents-swarm/sandbox_gardens.png" alt="Maturation Gardens and Five-Front Biometric Probing" width="1600" height="1000" loading="lazy" decoding="async">
+        </div>
+
+        <div class="product-frame-card">
+          <div class="product-meta-kicker">Chamber 03 · 2D Spatial Hive Map</div>
+          <h3 class="card-title" style="font-size: 1.45rem;">Spatial Observability &amp; Queen Orchestration</h3>
+          <p class="card-body">
+            Integrated cross-section view of the hive with the Queen's Chamber, 1:1:1 Incubator, 4D Inspector, and Probing Garden operating in real time with zero LLM token waste on internal coordination.
+          </p>
+          <img src="/assets/images/products/agents-swarm/hive_map.png" alt="2D Spatial Hive Map in Agents Swarm" width="1600" height="1000" loading="lazy" decoding="async">
+        </div>
+
+        <div class="product-frame-card">
+          <div class="product-meta-kicker">Chamber 04 · 1:1:1 Triad &amp; Fernet Vault</div>
+          <h3 class="card-title" style="font-size: 1.45rem;">Per-Scout Telemetry &amp; Stigmergic Handoff</h3>
+          <p class="card-body">
+            Live inspection of the isolated LangGraph session, Fernet AES-128-CBC + HMAC-SHA256 encryption, residential proxy affinity, and work-stealing handoffs between pioneer and verifier Scouts.
+          </p>
+          <img src="/assets/images/products/agents-swarm/scout_profile_modal.png" alt="Individual Scout Profile with 1:1:1 Triad and Fernet Vault" width="1600" height="1000" loading="lazy" decoding="async">
         </div>
       </div>
     </div>

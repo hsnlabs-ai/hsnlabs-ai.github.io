@@ -40,11 +40,19 @@ A live spatial workspace where operators inspect inferred state graphs and scout
 
 ### Latency State-Machine Reconstruction
 
-Subtracts carrier jitter and measures net P50, P95, and P99 turn latency to reconstruct the hidden state graph, isolating regex filters, semantic routers, and vector calls.
+Subtracts carrier jitter and measures net P50, P95, and P99 turn latency with 2/2 cross-Scout consensus to reconstruct the hidden state graph, isolating conditional routers and parallel tool calls.
 
-### Biometric Human Cadence & Maturation
+### Five-Front Probing & Biometric Cadence
 
-Scouts mature through peer-to-peer dialogues in the Sandbox Garden for 72 hours and 40 turns, applying log-normal reading delays and typing presence to avoid WhatsApp bans.
+Scouts mature in the Sandbox Garden and execute five-front conversational probing, applying log-normal reading, thinking, and typing delays to avoid WhatsApp bans.
+
+### Spatial Observability & Queen Orchestration
+
+Integrated cross-section view of the hive with the Queen's Chamber, 1:1:1 Incubator, 4D Inspector, and Probing Garden operating in real time with zero LLM token waste on internal coordination.
+
+### Per-Scout Telemetry & Stigmergic Handoff
+
+Live inspection of the isolated LangGraph session, Fernet AES-128-CBC + HMAC-SHA256 encryption, residential proxy affinity, and work-stealing handoffs between pioneer and verifier Scouts.
 
 ## Biomimetic Hive Ontology
 

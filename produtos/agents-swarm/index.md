@@ -40,11 +40,19 @@ Ambiente espacial vivo onde operadores inspecionam grafos de estado inferidos e 
 
 ### Reconstrução de Máquina de Estados por Latência
 
-Subtrai o atraso da rede e mede os percentis P50, P95 e P99 por turno para reconstruir o grafo oculto de estados, isolando filtros regex, roteadores semânticos e buscas vetoriais.
+Subtrai o atraso da rede e mede os percentis P50, P95 e P99 por turno com consenso cruzado 2/2 entre Scouts para reconstruir o grafo oculto de estados, isolando roteadores condicionais e chamadas paralelas de ferramentas.
 
-### Cadência Biométrica Humana e Maturação
+### Sondagem em Cinco Frentes e Cadência Biométrica
 
-Exploradores maturam em diálogos entre pares no Sandbox Garden por 72 horas e 40 turnos, aplicando atrasos log-normais de leitura e digitação para evitar bloqueios no WhatsApp.
+Exploradores maturam no Sandbox Garden e executam sondagem em cinco frentes conversacionais, aplicando atrasos log-normais de leitura, raciocínio e digitação para evitar bloqueios no WhatsApp.
+
+### Observabilidade Espacial e Orquestração da Queen
+
+Visão integrada em corte da colmeia com a Câmara da Rainha, Incubadora 1:1:1, Inspector 4D e o Jardim de Sondagem operando em tempo real sem consumo de tokens na coordenação interna.
+
+### Telemetria Individual da Scout e Handoff Estigmérgico
+
+Inspeção ao vivo da sessão isolada em LangGraph, criptografia Fernet AES-128-CBC com HMAC-SHA256, afinidade de proxy residencial e fila de handoff entre Scouts pioneiras e verificadoras.
 
 ## Ontologia Biomimética da Colmeia
 
