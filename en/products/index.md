@@ -86,3 +86,12 @@ Open stigmergic coordination protocol (`HACP-RFC-0001`) for long-horizon autonom
 - **Runtime:** Python 3.11+ · SQLite WAL & Redis Lua (`MIT License`)
 - **Product Page:** [/en/products/stigmergy-mesh/](/en/products/stigmergy-mesh/)
 - **Repository:** [https://github.com/hsnlabs-ai/stigmergy-mesh](https://github.com/hsnlabs-ai/stigmergy-mesh)
+
+---
+
+## Swarm Self-Healing (SSH) — Version 0.1.0
+
+- **Status:** Open Runtime & Specification · SSH-SPEC-0001 · v0.1.0 (MIT)
+- **Subtitle:** Deterministic Homeostasis, Sub-5s Hot Failover, and 3-Tier Network Affinity Guard
+- **Product Page:** [https://hsnlabs.ai/en/products/swarm-self-healing/](https://hsnlabs.ai/en/products/swarm-self-healing/)
+- **Repository:** [https://github.com/hsnlabs-ai/swarm-self-healing](https://github.com/hsnlabs-ai/swarm-self-healing)

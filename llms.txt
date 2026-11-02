@@ -62,3 +62,13 @@
 ## Contact & Channels
 - [GitHub Organization](https://github.com/hsnlabs-ai): Open-source repositories and reference implementations.
 - [LinkedIn Newsletter ([Agentes] x [a Gente])](https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/): Notas executivas sobre engenharia agêntica e futuro do trabalho.
+- [Agent Analyzer (PT-BR)](https://hsnlabs.ai/produtos/agent-analyzer/): Mapeador topológico em caixa-preta via sonda única para WhatsApp e LangGraph.
+- [Agent Analyzer (EN)](https://hsnlabs.ai/en/products/agent-analyzer/): Single-probe black-box topological mapper for WhatsApp and LangGraph agents.
+- [Agent Analyzer GitHub Repository](https://github.com/hsnlabs-ai/agent-analyzer): Official open-source repository (MIT License).
+- [Honeycomb Protocol (PT-BR)](https://hsnlabs.ai/produtos/honeycomb-protocol/): Protocolo aberto de coordenação estigmérgica (HACP-RFC-0001) e idempotência atômica pré-inferência em SQLite WAL.
+- [Honeycomb Protocol (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/): Open stigmergic coordination protocol (HACP-RFC-0001) and SQLite WAL pre-inference atomic idempotency.
+- [Honeycomb Protocol Whitepaper (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/): Technical launch whitepaper.
+- [Honeycomb Protocol GitHub Repository](https://github.com/hsnlabs-ai/honeycomb-protocol): Official open-source repository (MIT License).
+- [Stigmergy Mesh (PT-BR)](https://hsnlabs.ai/produtos/stigmergy-mesh/): Coordenação indireta biomimética por decaimento contínuo de feromônios e memória imunológica coletiva anti-Sybil.
+- [Stigmergy Mesh (EN)](https://hsnlabs.ai/en/products/stigmergy-mesh/): Zero-daemon biomimetic indirect coordination and collective anti-Sybil immune memory over SQLite WAL and Redis Lua.
+- [Stigmergy Mesh GitHub Repository](https://github.com/hsnlabs-ai/stigmergy-mesh): Official open-source repository (MIT License).

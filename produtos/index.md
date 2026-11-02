@@ -86,3 +86,12 @@ Protocolo aberto de coordenação estigmérgica para enxames autônomos de longa
 - **Ambiente:** Python 3.11+ · SQLite WAL e Redis Lua · Licença MIT
 - **Página do Produto:** [/produtos/stigmergy-mesh/](/produtos/stigmergy-mesh/)
 - **Repositório:** [https://github.com/hsnlabs-ai/stigmergy-mesh](https://github.com/hsnlabs-ai/stigmergy-mesh)
+
+---
+
+## Swarm Self-Healing (SSH) — Versão 0.1.0
+
+- **Status:** Runtime & Especificação Aberta · SSH-SPEC-0001 · v0.1.0 (MIT)
+- **Subtítulo:** Homeostase Determinística, Failover a Quente em < 5s e Guarda de Afinidade de Rede em 3 Níveis
+- **Página do Produto:** [https://hsnlabs.ai/produtos/swarm-self-healing/](https://hsnlabs.ai/produtos/swarm-self-healing/)
+- **Repositório:** [https://github.com/hsnlabs-ai/swarm-self-healing](https://github.com/hsnlabs-ai/swarm-self-healing)
