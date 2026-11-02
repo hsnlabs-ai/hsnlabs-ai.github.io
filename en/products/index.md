@@ -62,3 +62,18 @@ Single-probe black-box conversational agent topology mapper for WhatsApp and Lan
 - **URL:** https://hsnlabs.ai/en/products/agent-analyzer/
 - **GitHub:** https://github.com/hsnlabs-ai/agent-analyzer
 - **License:** MIT
+
+---
+
+### [Honeycomb Protocol](https://hsnlabs.ai/en/products/honeycomb-protocol/)
+*Open Platform · MIT License*
+
+Open stigmergic coordination protocol (`HACP-RFC-0001`) for long-horizon autonomous agent swarms. Replaces quadratic natural language agent chatter with strongly-typed causal graph envelopes, dynamic capability handshakes, and pre-inference atomic idempotency locks on SQLite WAL.
+
+* **Dynamic Capability Handshake:** Mutual verification flow advertising active capabilities and issuing scoped lease tokens (`hcgrant1`).
+* **Pre-Inference Atomic Idempotency:** Deterministic SHA-256 scope locking in SQLite WAL plus two-phase transport and semantic graph verification.
+* **Multi-Day Resume & Formal Teardown:** Signed continuation tokens (`hcrt1`) for multi-day pauses and mandatory queue deallocation on session teardown.
+
+- **Product Page:** [https://hsnlabs.ai/en/products/honeycomb-protocol/](https://hsnlabs.ai/en/products/honeycomb-protocol/)
+- **Technical Whitepaper:** [https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/)
+- **GitHub Repository:** [https://github.com/hsnlabs-ai/honeycomb-protocol](https://github.com/hsnlabs-ai/honeycomb-protocol)

@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Honeycomb Protocol &middot; Stigmergic Agent Coordination Protocol &middot; hsnlabs</title>
+  <title>Honeycomb Protocol &middot; Stigmergic Agent Coordination &amp; Atomic Idempotency &middot; hsnlabs</title>
 
   <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/en/products/honeycomb-protocol/">
-  <meta property="og:title" content="Honeycomb Protocol &middot; Stigmergic Agent Coordination Protocol &middot; hsnlabs">
-  <meta property="og:description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency.">
-  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-agents-swarm-pt.png">
+  <meta property="og:title" content="Honeycomb Protocol &middot; Stigmergic Agent Coordination &amp; Atomic Idempotency &middot; hsnlabs">
+  <meta property="og:description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency by hsnlabs.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-honeycomb-protocol.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/en/products/honeycomb-protocol/">
-  <meta name="twitter:title" content="Honeycomb Protocol &middot; Stigmergic Agent Coordination Protocol &middot; hsnlabs">
-  <meta name="twitter:description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency.">
-  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-agents-swarm-pt.png">
+  <meta name="twitter:title" content="Honeycomb Protocol &middot; Stigmergic Agent Coordination &amp; Atomic Idempotency &middot; hsnlabs">
+  <meta name="twitter:description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency by hsnlabs.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-honeycomb-protocol.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/en/products/honeycomb-protocol/">
   <link rel="alternate" type="text/markdown" href="https://hsnlabs.ai/en/products/honeycomb-protocol/index.md">
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/honeycomb-protocol/">
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/honeycomb-protocol/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/honeycomb-protocol/">
-  <meta name="description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency.">
+  <meta name="description" content="Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency by hsnlabs.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon-bee.ico">
@@ -39,10 +39,10 @@
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Protocolo Honeycomb",
+    "name": "Honeycomb Protocol",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Cross-platform",
-    "description": "Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency.",
+    "description": "Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency by hsnlabs.",
     "author": {
       "@type": "Organization",
       "name": "hsnlabs",
@@ -861,9 +861,7 @@
       max-width: 100%;
     }
     .product-hero-frame img,
-    .product-hero-frame video,
     .product-frame-card img,
-    .product-frame-card video,
     .product-catalog-card img {
       max-width: 100%;
       width: 100%;
@@ -878,12 +876,9 @@
       box-shadow: 0 18px 40px -15px rgba(7, 9, 14, 0.08);
     }
 
-    .product-hero-frame img,
-    .product-hero-frame video {
+    .product-hero-frame img {
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -891,27 +886,33 @@
     .product-frame-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px 32px;
+      gap: 28px;
       margin-top: 40px;
       text-align: left;
     }
 
     .product-frame-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
-    .product-frame-card img,
-    .product-frame-card video {
+    .product-frame-card img {
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      margin-top: auto;
       display: block;
       border: 1px solid var(--hairline);
-      box-shadow: 0 4px 16px -4px rgba(7, 9, 14, 0.05);
+    }
+
+    .product-meta-kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cyan-text);
     }
 
     .product-catalog-card {
@@ -1492,6 +1493,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 </head>
 <body>
 
+
   <div class="atmosphere-bg">
     <div class="orb orb-cyan"></div>
     <div class="orb orb-peach"></div>
@@ -1532,233 +1534,206 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="hero-brand-symbol">
         <div class="brand-symbol-box" id="waterEmblemTrigger" title="Disturb the medium">
           <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
-          <img src="/assets/brand/elements/origami-bee-clean.png" alt="Honeycomb Protocol" class="symbol-carp" width="66" height="66" decoding="async">
+          <img src="/assets/brand/elements/origami-honeycomb-clean.png" alt="Honeycomb Protocol" class="symbol-carp" width="66" height="66" decoding="async">
         </div>
       </div>
 
-      <div class="product-meta-kicker" style="margin-bottom: 12px;">HACP-RFC-0001 &middot; v1.0.0 &middot; Open MIT Specification</div>
       <h1 class="display-hero">
         <span class="hero-title-lead">Honeycomb Protocol</span>
-        <span class="hero-title-sub">Stigmergic coordination for long-horizon autonomous agent swarms.</span>
+        <span class="hero-title-sub">Stigmergic coordination &amp; atomic idempotency for autonomous agent swarms.</span>
       </h1>
 
       <p class="hero-subtitle">
-        The Honeycomb Agent Coordination Protocol operates at the semantic decentralized coordination layer—replacing noisy, quadratic point-to-point natural language agent chatter with durable, strongly-typed graph traces and pre-inference atomic idempotency locks on SQLite WAL.
+        An open decentralized coordination protocol (HACP-RFC-0001) that replaces quadratic point-to-point natural language agent chatter with durable, strongly-typed graph pheromones, dynamic capability handshakes, and pre-inference atomic idempotency locks on SQLite WAL.
       </p>
 
-      <div class="hero-actions" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-        <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-primary" style="padding: 14px 30px; font-size: 1rem;">Read Launch Whitepaper</a>
-        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 14px 30px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-hero">Access GitHub Repository</a>
-        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol/blob/main/docs/SPECIFICATION.md" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 14px 26px; font-size: 1rem;">RFC-0001 Specification</a>
+      <div class="hero-actions">
+        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-hero">View Repository on GitHub</a>
+        <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-outline" style="padding: 14px 32px; font-size: 1rem;">Read Technical Whitepaper</a>
+        <a href="#pillars" class="btn btn-outline" style="padding: 14px 32px; font-size: 1rem;">Explore Protocol Pillars</a>
       </div>
     </div>
   </section>
 
-  <!-- 1. FOUR INDUSTRY BOTTLENECKS -->
-  <section class="section-block section-alt" id="bottlenecks">
-    <div class="container" style="text-align: center;">
-      <h2 class="display-section">Four Critical Bottlenecks Solved by Stigmergy</h2>
-      <p class="section-lead">
-        Honeycomb does not compete with low-level transports or vertical tool-binding protocols like MCP. It operates at the semantic decentralized coordination layer to resolve four structural failure modes:
-      </p>
-
-      <div class="grid-2-col" style="text-align: left;">
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">01</div></div>
-          <h3 class="card-title">Destructive Concurrency</h3>
-          <p class="card-body">
-            Prevents multiple autonomous workers from probing the same target system branch simultaneously due to missing state synchronization—eliminating rate-limit bans and corrupted sessions.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">02</div></div>
-          <h3 class="card-title">Massive Inference Token Waste</h3>
-          <p class="card-body">
-            Eliminates quadratic O(N² &middot; T) token burn caused by unstructured natural language group-chat transcripts exchanged between orchestrators and worker agents.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">03</div></div>
-          <h3 class="card-title">Operational Amnesia</h3>
-          <p class="card-body">
-            Preserves causal execution state across intermittent multi-day or multi-week missions interrupted by API quota exhaustion, proxy rotation, or network drops.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">04</div></div>
-          <h3 class="card-title">Zombie Channels &amp; Locked Resources</h3>
-          <p class="card-body">
-            Enforces formal session teardown handshakes so completed or aborted dialogues immediately drain and destroy temporary subscriber queues and locks.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. THE FOUR ARCHITECTURAL PILLARS -->
-  <section class="section-block" id="pillars">
+  <!-- FOUR ARCHITECTURAL PILLARS -->
+  <section class="section-block section-alt" id="pillars">
     <div class="container" style="text-align: center;">
       <h2 class="display-section">The Four Architectural Pillars</h2>
       <p class="section-lead">
-        Formalized in HACP-RFC-0001 and implemented in lightweight Python over SQLite WAL and Pydantic v2.
+        Engineered under HACP-RFC-0001 to eliminate destructive race conditions, quadratic token burn, operational amnesia, and zombie subscriber channels in long-horizon swarms.
       </p>
 
       <div class="grid-2-col" style="text-align: left;">
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pillar I &middot; Tactical Reflex Bus</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Dynamic Capability Handshake</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="8" y="16" width="68" height="54" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.25"/>
-              <text x="42" y="40" text-anchor="middle" fill="#171615" font-family="monospace" font-size="9" font-weight="bold">SCOUT</text>
-              <text x="42" y="54" text-anchor="middle" fill="#666460" font-family="monospace" font-size="7">capabilities</text>
-              <rect x="164" y="16" width="68" height="54" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.5"/>
-              <text x="198" y="40" text-anchor="middle" fill="#006847" font-family="monospace" font-size="9" font-weight="bold">LEDGER</text>
-              <text x="198" y="54" text-anchor="middle" fill="#666460" font-family="monospace" font-size="7">hcgrant1</text>
-              <path d="M80 32H158" stroke="#D97706" stroke-width="1.5"/>
-              <polygon points="158,32 152,28 152,36" fill="#D97706"/>
-              <text x="120" y="26" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">SESSION_INIT</text>
-              <path d="M160 56H82" stroke="#007A53" stroke-width="1.5"/>
-              <polygon points="82,56 88,52 88,60" fill="#007A53"/>
-              <text x="120" y="70" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">HANDSHAKE_ACK</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P1</div></div>
+          <h3 class="card-title">P1 · Dynamic Capability Handshake</h3>
           <p class="card-body">
-            Establishes mutual verification before task execution. Agents advertise active capabilities via <code>HONEYCOMB_SESSION_INIT</code> and receive scoped authorizations (<code>hcgrant1</code>) via <code>HONEYCOMB_HANDSHAKE_ACK</code>, eliminating rigid roles.
+            Establishes mutual verification before task execution. Agents advertise active capabilities via HONEYCOMB_SESSION_INIT and receive scoped lease authorizations with bounded TTL via HONEYCOMB_HANDSHAKE_ACK—eliminating rigid, hardcoded agent roles.
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pillar II &middot; Data Contract</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Strict Envelope, Open Graph Primitives</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="10" y="8" width="220" height="70" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.22"/>
-              <rect x="18" y="16" width="96" height="54" rx="4" fill="#F2F0ED" stroke="#D97706" stroke-width="1.2"/>
-              <text x="66" y="34" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="8" font-weight="bold">STRICT HEADER</text>
-              <text x="66" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">correlation_id</text>
-              <text x="66" y="59" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">scope_hash</text>
-              <rect x="122" y="16" width="100" height="54" rx="4" fill="#FFFFFF" stroke="#007A53" stroke-width="1.2"/>
-              <text x="172" y="34" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">GRAPH PAYLOAD</text>
-              <text x="172" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">node_id &middot; edges</text>
-              <text x="172" y="59" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">properties dict</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P2</div></div>
+          <h3 class="card-title">P2 · Strict Envelope, Open Graph Primitives</h3>
           <p class="card-body">
-            Strict separation between causal control metadata (<code>correlation_id</code>, <code>target_scope_hash</code>, <code>ttl_seconds</code>) and universal graph primitives (<code>node_id</code>, <code>edges</code>, <code>confidence_score</code>) with an open <code>properties</code> dictionary.
+            Enforces strict Pydantic v2 separation between causal routing headers (correlation_id, target_scope_hash, ttl_seconds) and universal graph primitives (node_id, typed edges, confidence_score) paired with an open properties dictionary for raw target telemetry.
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pillar III &middot; Governance</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Pre-Inference Idempotency &amp; Double-ACK</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="12" y="16" width="94" height="54" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.4"/>
-              <text x="59" y="35" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">SQLite WAL Lock</text>
-              <text x="59" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">BEGIN IMMEDIATE</text>
-              <text x="59" y="60" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">CLAIMED / SKIP</text>
-              <path d="M110 43H132" stroke="#171615" stroke-width="1.4"/>
-              <rect x="134" y="16" width="94" height="54" rx="6" fill="#FAF9F7" stroke="#D97706" stroke-width="1.4"/>
-              <text x="181" y="35" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="8" font-weight="bold">DOUBLE_ACK</text>
-              <text x="181" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">1. Transport OK</text>
-              <text x="181" y="60" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">2. Graph Valid</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P3</div></div>
+          <h3 class="card-title">P3 · Pre-Inference Idempotency &amp; Double-ACK</h3>
           <p class="card-body">
-            Blocks duplicate work before LLM inference via atomic SHA-256 <code>target_scope_hash</code> claims in <code>honeycomb_idempotency_keys</code>, and commits discoveries only after two-phase <code>HONEYCOMB_DOUBLE_ACK</code> verification.
+            Blocks duplicate work before any LLM call by claiming deterministic SHA-256 target_scope_hash locks in the SQLite WAL honeycomb_idempotency_keys ledger, committing discoveries only after two-phase HONEYCOMB_DOUBLE_ACK verification (transport + semantic graph).
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pillar IV &middot; Lifecycle</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Signed Resume Tokens &amp; Formal Teardown</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="12" y="18" width="102" height="50" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.25"/>
-              <text x="63" y="39" text-anchor="middle" fill="#171615" font-family="monospace" font-size="8" font-weight="bold">PAUSE &amp; RESUME</text>
-              <text x="63" y="53" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">signed hcrt1</text>
-              <path d="M118 43H134" stroke="#007A53" stroke-width="1.4"/>
-              <rect x="136" y="18" width="92" height="50" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.4"/>
-              <text x="182" y="39" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">TEARDOWN</text>
-              <text x="182" y="53" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">Queues Drained</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P4</div></div>
+          <h3 class="card-title">P4 · Multi-Day Resume &amp; Formal Teardown</h3>
           <p class="card-body">
-            Asynchronous sessions survive multi-day pauses via integrity-signed <code>hcrt1</code> tokens, while mandatory <code>HONEYCOMB_SESSION_TEARDOWN</code> events destroy temporary queues and free compute resources.
+            Operates via asynchronous logical sessions backed by integrity-signed continuation tokens (hcrt1) that survive multi-day quota freezes, while requiring explicit HONEYCOMB_SESSION_TEARDOWN handshakes to drain queues and prevent zombie channels.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. TECHNICAL DIFFERENTIATION & PROOFS -->
-  <section class="section-block section-alt" id="comparison">
+  <!-- MATHEMATICAL COMPLEXITY & ARCHITECTURAL DIFFERENTIATION -->
+  <section class="section-block" id="methodology">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Technical Differentiation &amp; Empirical Proof</h2>
+      <h2 class="display-section">Linear Token Scaling &amp; Architectural Differentiation</h2>
       <p class="section-lead">
-        While MCP connects a single model to tools and AutoGen relies on group chat, Honeycomb coordinates autonomous swarms through deterministic stigmergy.
+        Formal mathematical guarantees of stigmergic graph coordination compared against conversational group-chat meshes and vertical tool-binding protocols.
+      </p>
+
+      <div class="grid-2-col" style="text-align: left;">
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Linear O(N &middot; T) Complexity &amp; Total Ordering</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            In conversational multi-agent frameworks, every peer message is appended to a shared natural language transcript, driving O(N² &middot; T) token growth. Honeycomb replaces peer-to-peer dialogue with O(1) stigmergic graph mutations and atomic pre-inference locks.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Linear Token Complexity:</strong> Reduces coordination overhead from quadratic O(N² &middot; T) transcript replay to strictly linear O(N &middot; T) typed envelope commits.</li>
+            <li><strong>• 79.4% Empirical Token Reduction:</strong> Validated reduction from 89,420 to 18,410 coordination tokens across 15 waves with 3 concurrent WhatsApp Scouts.</li>
+            <li><strong>• SQLite WAL Total Ordering:</strong> BEGIN IMMEDIATE serialization guarantees exactly one worker claims a target_scope_hash before LLM inference begins.</li>
+            <li><strong>• Sub-Millisecond Short-Circuit:</strong> Colliding exploration intents abort in 0.4ms at the SQLite WAL gate with zero wasted model calls.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Differentiation Against Existing Standards</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            Honeycomb does not compete with low-level RPC transports or single-agent tool protocols. It occupies the semantic decentralized coordination layer for multi-agent swarms.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Versus Model Context Protocol (MCP):</strong> MCP standardizes vertical single-agent-to-tool bindings; Honeycomb standardizes horizontal multi-agent state synchronization.</li>
+            <li><strong>• Versus AutoGen GroupChat:</strong> Replaces verbose natural language routing debates with deterministic Pydantic v2 HoneycombEnvelope graph primitives.</li>
+            <li><strong>• Versus Standalone LangGraph:</strong> Adds cross-process pre-inference SQLite WAL scope locks so independent worker processes never collide on external targets.</li>
+            <li><strong>• Zero-Docker Local Execution:</strong> Runs entirely on Python asyncio and embedded SQLite WAL without requiring external Redis clusters or message brokers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSISTENCE & LIFECYCLE ENGINEERING -->
+  <section class="section-block section-alt" id="architecture">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Persistence &amp; Lifecycle Engineering</h2>
+      <p class="section-lead">
+        Reference implementation modules engineered for sub-10ms local reflex routing, transactional auditability, and multi-day fault tolerance.
       </p>
 
       <div class="timeline-grid">
         <div class="timeline-card">
-          <strong>01 • Versus MCP</strong>
+          <strong>01 • SQLite WAL Idempotency Ledger</strong>
           <p class="timeline-body">
-            Model Context Protocol standardizes vertical single-agent-to-tool bindings. Honeycomb standardizes horizontal multi-agent state synchronization and scope locking.
+            Dedicated honeycomb_idempotency_keys table indexed by SHA-256 target_scope_hash primary keys, tracking claiming agent ID, lock status (CLAIMED / COMPLETED), and TTL expiration.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>02 • Versus AutoGen</strong>
+          <strong>02 • Sub-10ms Tactical ReflexBus</strong>
           <p class="timeline-body">
-            Replaces quadratic O(N² &middot; T) natural language transcripts with compact graph envelopes, cutting coordination token consumption by 78.4% to 91.2%.
+            Asynchronous in-memory event bus routing session handshakes, capability leases, and stigmergic digital pheromones with sub-10ms dispatch latency.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>03 • Versus Standalone LangGraph</strong>
+          <strong>03 • Two-Phase HONEYCOMB_DOUBLE_ACK</strong>
           <p class="timeline-body">
-            Adds cross-worker pre-inference SQLite WAL atomic idempotency locks so concurrent agents never collide on the same external target branch.
+            Commits state transitions only after verifying both physical bus transport delivery and semantic graph consistency (node/edge schema and confidence bounds).
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>04 • Mathematical Guarantee</strong>
+          <strong>04 • Signed Multi-Day ResumeTokens</strong>
           <p class="timeline-body">
-            SQLite WAL BEGIN IMMEDIATE serialization induces a strict total ordering on target_scope_hash claims, aborting colliding intents in &lt;0.4ms with zero LLM token burn.
+            Mints deterministic, integrity-checked hcrt1 continuation tokens when missions pause for API quota exhaustion, enabling exact causal resumption days later.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>05 • Empirical Case Study</strong>
+          <strong>05 • Zero-Zombie Formal Teardown</strong>
           <p class="timeline-body">
-            Across 15 autonomous waves with 3 concurrent WhatsApp Scouts, the hive mapped all 5 stages of an enterprise retail surface in 22 minutes with 0.0% race collisions.
+            Enforces explicit HONEYCOMB_SESSION_TEARDOWN handshakes that purge subscriber queues and release active scope claims, guaranteeing 0.0% orphaned channels.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. WHITEPAPER & GITHUB CTA -->
-  <section class="section-block" id="open-source">
+  <!-- PRODUCTION USE CASES -->
+  <section class="section-block" id="use-cases">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Production Engineering Use Cases</h2>
+      <p class="section-lead">
+        Open coordination infrastructure for engineering teams operating autonomous agent swarms across rate-limited surfaces and enterprise workflows.
+      </p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <strong>01 • Autonomous Red-Teaming &amp; Auditing Swarms</strong>
+          <p>
+            Coordinate multiple synthetic probes mapping authentication flows, payment rails, and policy guardrails on WhatsApp and Web surfaces with zero duplicate branch collisions.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>02 • Long-Horizon Multi-Day Workflows</strong>
+          <p>
+            Execute distributed exploration and research campaigns that seamlessly hibernate across API quota resets, maintenance windows, and network drops via signed ResumeTokens.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>03 • Inference Cost &amp; Quota Governance</strong>
+          <p>
+            Eliminate redundant frontier LLM calls before they happen using sub-millisecond SQLite WAL scope locks and compact O(N &middot; T) graph primitive envelopes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE & WHITEPAPER CTA -->
+  <section class="section-block section-alt" id="open-source">
     <div class="container">
       <div class="scoping-card" style="text-align: center;">
-        <h2 class="display-section" style="margin-bottom: 12px;">Read the Whitepaper &amp; Access the Reference Code</h2>
-        <p style="color: var(--muted); max-width: 640px; margin: 0 auto 28px auto; line-height: 1.6;">
-          The full technical launch whitepaper, formal HACP-RFC-0001 specification, automated pytest verification suite, and lightweight Python reference library on SQLite WAL are available under the MIT License.
+        <h2 class="display-section" style="margin-bottom: 12px;">Open Source, RFC-0001 Specification &amp; Whitepaper</h2>
+        <p style="color: var(--muted); max-width: 620px; margin: 0 auto 28px auto; line-height: 1.6;">
+          The complete Python reference library—including Pydantic v2 HoneycombEnvelope contracts, SQLite WAL atomic idempotency gate, tactical ReflexBus, pytest verification suite, and technical whitepaper—is available under the MIT License on GitHub.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-primary" style="padding: 15px 36px; font-size: 1rem;">
+          <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 15px 40px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-footer-cta">
+            View Repository on GitHub
+          </a>
+          <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-outline" style="padding: 15px 32px; font-size: 1rem;">
             Read Full Whitepaper
           </a>
-          <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 15px 36px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-footer-cta">
-            GitHub &middot; hsnlabs-ai/honeycomb-protocol
-          </a>
-          <a href="/en/products/" class="btn btn-outline" style="padding: 15px 28px; font-size: 1rem;">
+          <a href="/en/products/" class="btn btn-outline" style="padding: 15px 32px; font-size: 1rem;">
             Back to Products
           </a>
         </div>
@@ -1771,12 +1746,12 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         <div class="footer-col-brand">
           <img src="/assets/brand/lockups/hsnlabs-lockup-horizontal-light.png" alt="hsnlabs" width="142" height="46" style="height: 46px; width: auto; margin-bottom: 18px; display: block;" loading="lazy" decoding="async">
           <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.6; max-width: 245px; margin: 0;">
-            An engineering lab with over five years of shipping AI products and resilient agent architectures in production.
+            Laboratório de engenharia com mais de cinco anos implementando produtos de IA e arquiteturas agenticas resilientes em produção.
           </p>
         </div>
 
         <div class="footer-col-office">
-          <div class="footer-col-title">Office</div>
+          <div class="footer-col-title">Escritório</div>
           <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin: 0 0 12px 0; white-space: nowrap;">
             Rua Pais Leme, 215<br>
             Conjunto 1713<br>
@@ -1788,35 +1763,35 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
 
         <div>
-          <div class="footer-col-title">Navigation</div>
+          <div class="footer-col-title">Navegação</div>
           <ul class="footer-nav">
-            <li><a href="/en/bootcamp/">Agentic Bootcamp™</a></li>
-            <li><a href="/en/products/">Products</a></li>
-            <li><a href="/en/advisory/">Advisory</a></li>
-            <li><a href="/en/mcp/">Enterprise MCP</a></li>
-            <li><a href="/en/canvas/">The Agentic Canvas™</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/en/#contact">Contact Us</a></li>
+            <li><a href="/bootcamp/">Agentic Bootcamp™</a></li>
+            <li><a href="/produtos/">Produtos</a></li>
+            <li><a href="/advisory/">Advisory</a></li>
+            <li><a href="/mcp/">Enterprise MCP</a></li>
+            <li><a href="/canvas/">The Agentic Canvas™</a></li>
+            <li><a href="/blog/pt/">Blog</a></li>
+            <li><a href="/#contact">Fale Conosco</a></li>
           </ul>
         </div>
 
         <div>
-          <div class="footer-col-title">Partners</div>
+          <div class="footer-col-title">Parceiros</div>
           <ul class="footer-nav">
-            <li><a href="/en/langchain/">LangChain &amp; LangGraph</a></li>
-            <li><a href="/en/snowflake/">Snowflake AI Data Cloud</a></li>
-            <li><a href="/en/databricks/">Databricks Lakehouse</a></li>
+            <li><a href="/langchain/">LangChain &amp; LangGraph</a></li>
+            <li><a href="/snowflake/">Snowflake AI Data Cloud</a></li>
+            <li><a href="/databricks/">Databricks Lakehouse</a></li>
           </ul>
         </div>
 
         <div class="footer-col-subscribe">
           <div class="footer-subscribe-email">
-            <div class="footer-col-title">Stay in Touch</div>
-            <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Architecture field notes &amp; playbooks sent to your corporate inbox.</p>
-            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Joining...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Subscribed'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Send'; }, 4000); });">
+            <div class="footer-col-title">Siga em Contato</div>
+            <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Notas de campo de arquitetura e playbooks no seu e-mail corporativo.</p>
+            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
               <div style="display: flex; gap: 8px;">
-                <input type="email" name="email" placeholder="name@company.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
-                <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap; flex-shrink: 0;">Send</button>
+                <input type="email" name="email" placeholder="seu.email@empresa.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
+                <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap; flex-shrink: 0;">Assinar</button>
               </div>
             </form>
           </div>
@@ -1829,17 +1804,17 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
                   <div style="font-size: 0.85rem; font-weight: 600; color: var(--ink); line-height: 1.2; white-space: nowrap;">[Agentes] x [a Gente]</div>
                   <div style="font-size: 0.76rem; color: var(--muted); margin-top: 2px; display: flex; align-items: center; gap: 4px; white-space: nowrap;">
                     <svg width="11" height="11" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink:0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                    <span><strong>1,600+</strong> subscribers</span>
+                    <span><strong>1.600+</strong> assinantes</span>
                   </div>
                 </div>
               </div>
-              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Subscribe to [Agentes] x [a Gente] on LinkedIn" style="background: #ffffff; border: 1px solid var(--hairline-strong); color: var(--ink); padding: 6px 11px; font-size: 0.78rem; font-weight: 500; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; white-space: nowrap; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
+              <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7397999984089935872" target="_blank" rel="noopener" aria-label="Assinar [Agentes] x [a Gente] no LinkedIn" style="background: #ffffff; border: 1px solid var(--hairline-strong); color: var(--ink); padding: 6px 11px; font-size: 0.78rem; font-weight: 500; border-radius: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; white-space: nowrap; transition: all 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.03);">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#0A66C2" style="flex-shrink: 0;" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                 <span>LinkedIn</span>
               </a>
             </div>
             <div style="font-size: 0.76rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
-              Beyond the hype: how agentic engineering multiplies and leverages human labor capacity.
+              Fora do hype, discutimos como a engenharia agentica multiplica e alavanca a capacidade laboral humana.
             </div>
           </div>
         </div>
@@ -1847,11 +1822,11 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
       <div class="footer-bottom">
         <div class="footer-bottom-left">
-          <div>2026 hsnlabs. All rights reserved.</div>
+          <div>2026 hsnlabs. Todos os direitos reservados.</div>
           <span class="footer-bottom-sep" aria-hidden="true"></span>
           <div class="footer-bottom-links">
-            <a href="/en/privacy-policy/">Privacy Policy</a>
-            <a href="/en/modern-slavery-statement/">Modern Slavery Statement</a>
+            <a href="/privacy-policy/">Política de Privacidade</a>
+            <a href="/modern-slavery-statement/">Declaração de Conformidade</a>
           </div>
         </div>
         <div class="footer-social-row">
@@ -1995,20 +1970,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         trigger(240);
       });
 
-      // Ensure all product motion videos play continuously in seamless loop
-      document.querySelectorAll('.product-hero-frame video, .product-frame-card video').forEach((v) => {
-        v.muted = true;
-        v.loop = true;
-        v.playsInline = true;
-        const startLoop = () => v.play().catch(() => {});
-        if (v.readyState >= 2) startLoop();
-        else v.addEventListener('loadeddata', startLoop, { once: true });
-        v.addEventListener('ended', () => {
-          v.currentTime = 0;
-          startLoop();
-        });
-      });
-
       // Contact Form Handler
       const cForm = document.getElementById('mcpContactForm');
       const cSuccess = document.getElementById('formSuccess');
@@ -2045,14 +2006,14 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   </script>
 
   <!-- COOKIE CONSENT BANNER -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
-    <div class="cookie-title">Cookie & Privacy Consent</div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimento de privacidade e cookies">
+    <div class="cookie-title">Consentimento de Privacidade e Cookies</div>
     <p class="cookie-text">
-      We use cookies to analyze telemetry and evaluate system performance under LGPD and GDPR standards. Read our <a href="/en/privacy-policy/">Privacy Policy</a>.
+      Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. Consulte nossa <a href="/privacy-policy/">Política de Privacidade</a>.
     </p>
     <div class="cookie-actions">
-      <button type="button" class="btn btn-primary" onclick="acceptCookies()" style="padding: 6px 16px; font-size: 0.8rem;">Accept All</button>
-      <button type="button" class="btn btn-outline" onclick="declineCookies()" style="padding: 6px 16px; font-size: 0.8rem;">Decline</button>
+      <button type="button" class="btn btn-primary cookie-btn-accept" onclick="acceptCookies()">Aceitar Todos</button>
+      <button type="button" class="btn btn-outline cookie-btn-decline" onclick="declineCookies()">Recusar</button>
     </div>
   </div>
 

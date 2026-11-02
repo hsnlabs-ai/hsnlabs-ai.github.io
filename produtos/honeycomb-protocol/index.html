@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Protocolo Honeycomb &middot; Coordenação Estigmérgica de Agentes &middot; hsnlabs</title>
+  <title>Protocolo Honeycomb &middot; Coordenação Estigmérgica e Idempotência Atômica &middot; hsnlabs</title>
 
   <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/produtos/honeycomb-protocol/">
-  <meta property="og:title" content="Protocolo Honeycomb &middot; Coordenação Estigmérgica de Agentes &middot; hsnlabs">
-  <meta property="og:description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL.">
-  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-agents-swarm-pt.png">
+  <meta property="og:title" content="Protocolo Honeycomb &middot; Coordenação Estigmérgica e Idempotência Atômica &middot; hsnlabs">
+  <meta property="og:description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL pela hsnlabs.">
+  <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-honeycomb-protocol.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/produtos/honeycomb-protocol/">
-  <meta name="twitter:title" content="Protocolo Honeycomb &middot; Coordenação Estigmérgica de Agentes &middot; hsnlabs">
-  <meta name="twitter:description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL.">
-  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-agents-swarm-pt.png">
+  <meta name="twitter:title" content="Protocolo Honeycomb &middot; Coordenação Estigmérgica e Idempotência Atômica &middot; hsnlabs">
+  <meta name="twitter:description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL pela hsnlabs.">
+  <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-honeycomb-protocol.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/produtos/honeycomb-protocol/">
   <link rel="alternate" type="text/markdown" href="https://hsnlabs.ai/produtos/honeycomb-protocol/index.md">
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/honeycomb-protocol/">
   <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/honeycomb-protocol/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/honeycomb-protocol/">
-  <meta name="description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL.">
+  <meta name="description" content="Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL pela hsnlabs.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon-bee.ico">
@@ -42,7 +42,7 @@
     "name": "Protocolo Honeycomb",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Cross-platform",
-    "description": "Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL.",
+    "description": "Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL pela hsnlabs.",
     "author": {
       "@type": "Organization",
       "name": "hsnlabs",
@@ -861,9 +861,7 @@
       max-width: 100%;
     }
     .product-hero-frame img,
-    .product-hero-frame video,
     .product-frame-card img,
-    .product-frame-card video,
     .product-catalog-card img {
       max-width: 100%;
       width: 100%;
@@ -878,12 +876,9 @@
       box-shadow: 0 18px 40px -15px rgba(7, 9, 14, 0.08);
     }
 
-    .product-hero-frame img,
-    .product-hero-frame video {
+    .product-hero-frame img {
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
       display: block;
       border: 1px solid var(--hairline);
     }
@@ -891,27 +886,33 @@
     .product-frame-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px 32px;
+      gap: 28px;
       margin-top: 40px;
       text-align: left;
     }
 
     .product-frame-card {
+      background: var(--surface-card);
+      border: 1px solid var(--hairline-strong);
+      padding: 24px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
-    .product-frame-card img,
-    .product-frame-card video {
+    .product-frame-card img {
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      margin-top: auto;
       display: block;
       border: 1px solid var(--hairline);
-      box-shadow: 0 4px 16px -4px rgba(7, 9, 14, 0.05);
+    }
+
+    .product-meta-kicker {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cyan-text);
     }
 
     .product-catalog-card {
@@ -1492,6 +1493,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 </head>
 <body>
 
+
   <div class="atmosphere-bg">
     <div class="orb orb-cyan"></div>
     <div class="orb orb-peach"></div>
@@ -1532,233 +1534,206 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       <div class="hero-brand-symbol">
         <div class="brand-symbol-box" id="waterEmblemTrigger" title="Perturbar o meio">
           <canvas id="waterEmblemCanvas" class="symbol-canvas" width="96" height="96"></canvas>
-          <img src="/assets/brand/elements/origami-bee-clean.png" alt="Protocolo Honeycomb" class="symbol-carp" width="66" height="66" decoding="async">
+          <img src="/assets/brand/elements/origami-honeycomb-clean.png" alt="Protocolo Honeycomb" class="symbol-carp" width="66" height="66" decoding="async">
         </div>
       </div>
 
-      <div class="product-meta-kicker" style="margin-bottom: 12px;">HACP-RFC-0001 &middot; v1.0.0 &middot; Especificação Aberta MIT</div>
       <h1 class="display-hero">
         <span class="hero-title-lead">Protocolo Honeycomb</span>
-        <span class="hero-title-sub">Coordenação estigmérgica para enxames autônomos de longa duração.</span>
+        <span class="hero-title-sub">Coordenação estigmérgica e idempotência atômica para enxames autônomos.</span>
       </h1>
 
       <p class="hero-subtitle">
-        O Honeycomb Agent Coordination Protocol atua na camada semântica de coordenação descentralizada, substituindo trocas ruidosas de mensagens ponto a ponto em linguagem natural por marcas duráveis em grafo e bloqueio atômico de idempotência pré-inferência sobre SQLite WAL.
+        Protocolo aberto de coordenação descentralizada que substitui trocas quadráticas de mensagens em linguagem natural por marcas duráveis em grafo tipado, aperto de mão dinâmico por capacidades e bloqueio atômico pré-inferência em SQLite WAL.
       </p>
 
-      <div class="hero-actions" style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-        <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-primary" style="padding: 14px 30px; font-size: 1rem;">Ler Whitepaper Técnico</a>
-        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 14px 30px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-hero-pt">Acessar Repositório no GitHub</a>
-        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol/blob/main/docs/SPECIFICATION.md" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 14px 26px; font-size: 1rem;">Especificação RFC-0001</a>
+      <div class="hero-actions">
+        <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-hero">Acessar Repositório no GitHub</a>
+        <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-outline" style="padding: 14px 32px; font-size: 1rem;">Ler Whitepaper Técnico</a>
+        <a href="#pilares" class="btn btn-outline" style="padding: 14px 32px; font-size: 1rem;">Explorar Pilares do Protocolo</a>
       </div>
     </div>
   </section>
 
-  <!-- 1. QUATRO GARGALOS CRÍTICOS -->
-  <section class="section-block section-alt" id="gargalos">
-    <div class="container" style="text-align: center;">
-      <h2 class="display-section">Quatro Gargalos Críticos da Indústria Resolvidos pela Estigmergia</h2>
-      <p class="section-lead">
-        O protocolo não compete com transportes de baixo nível nem com protocolos de conexão direta a ferramentas como o MCP. Ele opera na camada semântica de coordenação descentralizada para eliminar quatro falhas estruturais:
-      </p>
-
-      <div class="grid-2-col" style="text-align: left;">
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">01</div></div>
-          <h3 class="card-title">Concorrência Destrutiva entre Agentes</h3>
-          <p class="card-body">
-            Impede que múltiplos agentes explorem simultaneamente as mesmas ramificações de um sistema por falta de sincronia de estado, evitando bloqueios anti-bot e corrupção de sessões ativas.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">02</div></div>
-          <h3 class="card-title">Desperdício Maciço de Tokens de Inferência</h3>
-          <p class="card-body">
-            Elimina o crescimento quadrático de consumo causado por trocas excessivas de mensagens em linguagem natural desestruturada entre supervisores e agentes trabalhadores.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">03</div></div>
-          <h3 class="card-title">Amnésia Operacional em Missões Longas</h3>
-          <p class="card-body">
-            Preserva o contexto causal em missões intermitentes de dias ou semanas que sofrem quedas de conexão, rotação de proxy ou esgotamento de cotas de modelos.
-          </p>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="post-it-badge"><div class="content">04</div></div>
-          <h3 class="card-title">Canais Zumbis e Recursos Travados</h3>
-          <p class="card-body">
-            Exige um encerramento formal de diálogo entre as partes para destruir filas temporárias em memória e desalocar recursos computacionais imediatamente após cada missão.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. OS QUATRO PILARES ARQUITETURAIS -->
-  <section class="section-block" id="pilares">
+  <!-- QUATRO PILARES ARQUITETURAIS -->
+  <section class="section-block section-alt" id="pilares">
     <div class="container" style="text-align: center;">
       <h2 class="display-section">Os Quatro Pilares Arquiteturais do Protocolo</h2>
       <p class="section-lead">
-        Especificação consolidada sobre contratos tipados em Pydantic v2, barramento tático em memória abaixo de 10 milissegundos e persistência transacional em SQLite WAL.
+        Especificação HACP-RFC-0001 desenhada para eliminar concorrência destrutiva, dreno quadrático de tokens, amnésia operacional e canais zumbis em enxames de longa duração.
       </p>
 
       <div class="grid-2-col" style="text-align: left;">
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pilar I &middot; Barramento Tático</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Aperto de Mão Dinâmico</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="8" y="16" width="68" height="54" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.25"/>
-              <text x="42" y="40" text-anchor="middle" fill="#171615" font-family="monospace" font-size="9" font-weight="bold">SCOUT</text>
-              <text x="42" y="54" text-anchor="middle" fill="#666460" font-family="monospace" font-size="7">capacidades</text>
-              <rect x="164" y="16" width="68" height="54" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.5"/>
-              <text x="198" y="40" text-anchor="middle" fill="#006847" font-family="monospace" font-size="9" font-weight="bold">LEDGER</text>
-              <text x="198" y="54" text-anchor="middle" fill="#666460" font-family="monospace" font-size="7">hcgrant1</text>
-              <path d="M80 32H158" stroke="#D97706" stroke-width="1.5"/>
-              <polygon points="158,32 152,28 152,36" fill="#D97706"/>
-              <text x="120" y="26" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">SESSION_INIT</text>
-              <path d="M160 56H82" stroke="#007A53" stroke-width="1.5"/>
-              <polygon points="82,56 88,52 88,60" fill="#007A53"/>
-              <text x="120" y="70" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">HANDSHAKE_ACK</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P1</div></div>
+          <h3 class="card-title">P1 · Aperto de Mão Dinâmico</h3>
           <p class="card-body">
-            Estabelece um fluxo de verificação mútua antes do início das tarefas. Os agentes anunciam capacidades ativas via <code>HONEYCOMB_SESSION_INIT</code> e recebem autorizações com escopo delimitado via <code>HONEYCOMB_HANDSHAKE_ACK</code>, eliminando dependência de papéis fixos e rígidos.
+            Estabelece verificação mútua antes do início das tarefas. Os agentes anunciam capacidades ativas via HONEYCOMB_SESSION_INIT e recebem concessões de escopo delimitado com tempo de vida estrito via HONEYCOMB_HANDSHAKE_ACK, eliminando papéis rígidos.
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pilar II &middot; Contrato de Dados</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Envelope Estrito com Primitivas Abertas</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="10" y="8" width="220" height="70" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.22"/>
-              <rect x="18" y="16" width="96" height="54" rx="4" fill="#F2F0ED" stroke="#D97706" stroke-width="1.2"/>
-              <text x="66" y="34" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="8" font-weight="bold">HEADER ESTRITO</text>
-              <text x="66" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">correlation_id</text>
-              <text x="66" y="59" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">scope_hash</text>
-              <rect x="122" y="16" width="100" height="54" rx="4" fill="#FFFFFF" stroke="#007A53" stroke-width="1.2"/>
-              <text x="172" y="34" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">GRAFO ABERTO</text>
-              <text x="172" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">node_id &middot; edges</text>
-              <text x="172" y="59" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">properties dict</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P2</div></div>
+          <h3 class="card-title">P2 · Envelope Estrito com Grafo Aberto</h3>
           <p class="card-body">
-            Define um contrato de dados com separação estrita entre metadados de controle causal e carga útil. A carga útil estrutura descobertas através de primitivas universais de grafos com nós, arestas e confiança, mantendo o campo aberto <code>properties</code> para superfícies ainda desconhecidas.
+            Separa metadados causais de controle no cabeçalho HoneycombEnvelope e estrutura a carga útil HoneycombPayload com primitivas universais de grafo para nós, arestas tipadas, escore de confiança e dicionário aberto de propriedades brutas.
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pilar III &middot; Governança</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Governança e Idempotência Atômica</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="12" y="16" width="94" height="54" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.4"/>
-              <text x="59" y="35" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">SQLite WAL Lock</text>
-              <text x="59" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">BEGIN IMMEDIATE</text>
-              <text x="59" y="60" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">CLAIMED / SKIP</text>
-              <path d="M110 43H132" stroke="#171615" stroke-width="1.4"/>
-              <rect x="134" y="16" width="94" height="54" rx="6" fill="#FAF9F7" stroke="#D97706" stroke-width="1.4"/>
-              <text x="181" y="35" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="8" font-weight="bold">DOUBLE_ACK</text>
-              <text x="181" y="48" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">1. Transporte OK</text>
-              <text x="181" y="60" text-anchor="middle" fill="#006847" font-family="monospace" font-size="7">2. Grafo Válido</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P3</div></div>
+          <h3 class="card-title">P3 · Idempotência Atômica e Duplo ACK</h3>
           <p class="card-body">
-            Bloqueia retrabalhos antes de qualquer processamento de inferência calculando assinaturas únicas <code>target_scope_hash</code> na tabela <code>honeycomb_idempotency_keys</code> e validando entregas em dois tempos via <code>HONEYCOMB_DOUBLE_ACK</code>: transporte físico e consistência semântica no grafo.
+            Bloqueia retrabalhos antes de qualquer chamada ao modelo calculando assinaturas SHA-256 por escopo na tabela SQLite WAL honeycomb_idempotency_keys e exigindo confirmação em dois tempos de transporte físico e consistência semântica no grafo.
           </p>
         </div>
 
-        <div class="card">
-          <div class="product-meta-kicker" style="margin-bottom: 8px;">Pilar IV &middot; Ciclo de Vida</div>
-          <h3 class="card-title" style="font-size: 1.35rem;">Ciclo de Vida e Encerramento Formal</h3>
-          <div style="background: #FAF9F7; border: 1px solid #E5E2DC; border-radius: 8px; padding: 12px; margin: 12px 0;">
-            <svg viewBox="0 0 240 86" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
-              <rect x="12" y="18" width="102" height="50" rx="6" fill="#FAF9F7" stroke="#171615" stroke-opacity="0.25"/>
-              <text x="63" y="39" text-anchor="middle" fill="#171615" font-family="monospace" font-size="8" font-weight="bold">PAUSA E RETOMADA</text>
-              <text x="63" y="53" text-anchor="middle" fill="#D97706" font-family="monospace" font-size="7">hcrt1 assinado</text>
-              <path d="M118 43H134" stroke="#007A53" stroke-width="1.4"/>
-              <rect x="136" y="18" width="92" height="50" rx="6" fill="#FAF9F7" stroke="#007A53" stroke-width="1.4"/>
-              <text x="182" y="39" text-anchor="middle" fill="#006847" font-family="monospace" font-size="8" font-weight="bold">TEARDOWN</text>
-              <text x="182" y="53" text-anchor="middle" fill="#494744" font-family="monospace" font-size="7">Filas Drenadas</text>
-            </svg>
-          </div>
+        <div class="card" style="text-align: center;">
+          <div class="post-it-badge"><div class="content">P4</div></div>
+          <h3 class="card-title">P4 · Retomada Multi-Dia e Encerramento Formal</h3>
           <p class="card-body">
-            Opera por meio de sessões lógicas assíncronas identificadas por tokens de retomada assinados <code>hcrt1</code>, permitindo pausas prolongadas de dias. Toda conclusão exige despedida explícita via <code>HONEYCOMB_SESSION_TEARDOWN</code> para destruir filas temporárias e desalocar recursos.
+            Opera por sessões lógicas assíncronas identificadas por tokens de retomada assinados que toleram pausas de vários dias. Toda conclusão exige despedida explícita via HONEYCOMB_SESSION_TEARDOWN para destruir filas temporárias e liberar recursos.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. DIFERENCIAÇÃO E PROVA EMPÍRICA -->
-  <section class="section-block section-alt" id="comparativo">
+  <!-- PROVA MATEMÁTICA E DIFERENCIAÇÃO ARQUITETURAL -->
+  <section class="section-block" id="fundamentos">
     <div class="container" style="text-align: center;">
-      <h2 class="display-section">Diferenciação Técnica e Prova Operacional</h2>
+      <h2 class="display-section">Complexidade Linear e Diferenciação Técnica</h2>
       <p class="section-lead">
-        Enquanto o MCP conecta um único agente a ferramentas e o AutoGen depende de conversas em grupo, o Honeycomb coordena enxames por estigmergia determinística.
+        Fundamentação formal da estigmergia aplicada à coordenação de enxames autônomos frente às abordagens conversacionais e de conexão vertical.
+      </p>
+
+      <div class="grid-2-col" style="text-align: left;">
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Prova Matemática de Escala e Ordem Total</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            Em malhas conversacionais tradicionais, o custo de coordenação cresce de forma quadrática conforme novos agentes leem o histórico completo da conversa. O Protocolo Honeycomb substitui o diálogo ponto a ponto por leitura e escrita estigmérgica em tempo constante no grafo compartilhado.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Escala Linear de Tokens:</strong> Redução da complexidade assintótica de mensagens quadráticas para custo linear estrito por agente ativo e turno executado.</li>
+            <li><strong>• Economia Empírica de 79,4%:</strong> Redução comprovada de 89.420 para 18.410 tokens em missões de quinze ondas com três sondas concorrentes.</li>
+            <li><strong>• Ordem Total em SQLite WAL:</strong> Serialização via transação imediata que garante que apenas o primeiro agente receba permissão de inferência sobre um escopo.</li>
+            <li><strong>• Curto-Circuito Sub-Milissegundo:</strong> Intenções duplicadas são abortadas em 0,4 milissegundo antes de acionar a API do modelo de linguagem.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title" style="font-size: 1.4rem;">Diferenciação Contra Soluções do Mercado</h3>
+          <p class="card-body" style="margin-bottom: 14px;">
+            O Protocolo Honeycomb não compete com transportes de baixo nível nem com protocolos verticais de ferramentas. Ele atua especificamente na camada semântica de sincronia horizontal entre agentes autônomos.
+          </p>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.9rem; color: var(--body);">
+            <li><strong>• Contra Model Context Protocol:</strong> Enquanto o MCP conecta um único agente às suas ferramentas, o Honeycomb sincroniza múltiplos agentes explorando o mesmo sistema.</li>
+            <li><strong>• Contra Malhas Conversacionais AutoGen:</strong> Substitui debates verbosos em linguagem natural por envelopes de grafo compactos e determinísticos em Pydantic v2.</li>
+            <li><strong>• Contra Grafos Isolados LangGraph:</strong> Adiciona travas atômicas compartilhadas entre processos independentes para evitar colisões externas de sondagem.</li>
+            <li><strong>• Execução Local Zero-Docker:</strong> Opera integralmente sobre Python assíncrono e SQLite WAL sem exigir clusters Redis ou brokers pesados de mensageria.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARQUITETURA DE PERSISTÊNCIA E CICLO DE VIDA -->
+  <section class="section-block section-alt" id="arquitetura">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Engenharia de Persistência e Ciclo de Vida</h2>
+      <p class="section-lead">
+        Módulos de referência projetados para operação local ultrarrápida, auditabilidade determinística e tolerância a falhas prolongadas.
       </p>
 
       <div class="timeline-grid">
         <div class="timeline-card">
-          <strong>01 • Contra MCP</strong>
+          <strong>01 • Ledger de Idempotência WAL</strong>
           <p class="timeline-body">
-            O Model Context Protocol padroniza a integração vertical entre um modelo e suas ferramentas. O Honeycomb padroniza a coordenação horizontal entre múltiplos agentes autônomos sobre o mesmo alvo.
+            Tabela relacional honeycomb_idempotency_keys indexada por chave primária SHA-256 do escopo, registrando o agente proprietário, status da trava e tempo de expiração.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>02 • Contra AutoGen</strong>
+          <strong>02 • Barramento Tático ReflexBus</strong>
           <p class="timeline-body">
-            Substitui o histórico conversacional quadrático em linguagem natural por envelopes compactos de grafo, reduzindo o consumo de tokens de coordenação entre 78 e 91 por cento.
+            Roteamento assíncrono em memória com latência inferior a dez milissegundos para eventos de ciclo de vida, concessão de escopo e propagação de feromônios digitais.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>03 • Contra LangGraph Puro</strong>
+          <strong>03 • Validação HONEYCOMB_DOUBLE_ACK</strong>
           <p class="timeline-body">
-            Adiciona travas atômicas pré-inferência entre múltiplos processos e trabalhadores independentes, impedindo que duas sondas executem o mesmo nó simultaneamente.
+            Confirmação em duas fases que atesta primeiro a entrega física no barramento e em seguida a integridade semântica do nó e das arestas persistidas no grafo.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>04 • Prova Matemática</strong>
+          <strong>04 • Tokens de Retomada Assinados</strong>
           <p class="timeline-body">
-            A serialização via BEGIN IMMEDIATE no SQLite WAL estabelece ordem total estrita sobre cada assinatura de escopo, abortando intenções colidentes em menos de 0,4 milissegundo sem custo de LLM.
+            Serialização criptográfica do cursor de execução quando uma missão entra em pausa por limite de cota, permitindo retomar dias depois do ponto exato de parada.
           </p>
         </div>
 
         <div class="timeline-card">
-          <strong>05 • Caso Empírico</strong>
+          <strong>05 • Encerramento Zero Zumbis</strong>
           <p class="timeline-body">
-            Em auditoria de superfície corporativa com três sondas simultâneas no WhatsApp ao longo de 15 ondas, convergiu todos os 5 estágios em 22 minutos com zero colisão de corrida.
+            Despedida formal obrigatória que purga filas de assinantes em memória e libera travas pendentes, mantendo zero canais órfãos após o término da sessão.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. CHAMADA PARA WHITEPAPER E CÓDIGO ABERTO -->
-  <section class="section-block" id="codigo-aberto">
+  <!-- CASOS DE USO EM PRODUÇÃO -->
+  <section class="section-block" id="casos-de-uso">
+    <div class="container" style="text-align: center;">
+      <h2 class="display-section">Casos de Uso em Produção</h2>
+      <p class="section-lead">
+        Infraestrutura aberta para equipes de engenharia que operam enxames de agentes sobre superfícies críticas e APIs com restrição de cota.
+      </p>
+
+      <div class="criteria-grid">
+        <div class="criteria-card">
+          <strong>01 • Enxames de Auditoria e Observabilidade</strong>
+          <p>
+            Coordenação de múltiplas sondas sintéticas explorando simultaneamente fluxos de autenticação, Pix, segunda via e guardrails no WhatsApp sem repetir caminhos já mapeados.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>02 • Missões Autônomas de Longa Duração</strong>
+          <p>
+            Execução de varreduras distribuídas que atravessam janelas de manutenção, rotações de sessão e limites diários de API retomando o estado causal sem perda de progresso.
+          </p>
+        </div>
+
+        <div class="criteria-card">
+          <strong>03 • Governança de Custos de Inferência</strong>
+          <p>
+            Eliminação imediata de chamadas redundantes a modelos de fronteira por meio de travas atômicas pré-inferência e substituição de históricos verbosos por primitivas de grafo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAMADA PARA CÓDIGO ABERTO E WHITEPAPER -->
+  <section class="section-block section-alt" id="codigo-aberto">
     <div class="container">
       <div class="scoping-card" style="text-align: center;">
-        <h2 class="display-section" style="margin-bottom: 12px;">Whitepaper de Lançamento e Código de Referência</h2>
-        <p style="color: var(--muted); max-width: 640px; margin: 0 auto 28px auto; line-height: 1.6;">
-          O artigo técnico completo em inglês, a especificação formal HACP-RFC-0001, a suíte de testes automatizados em pytest e a biblioteca de referência em Python sobre SQLite WAL estão publicados sob licença permissiva MIT na organização hsnlabs.
+        <h2 class="display-section" style="margin-bottom: 12px;">Código Aberto, Especificação RFC-0001 e Whitepaper</h2>
+        <p style="color: var(--muted); max-width: 620px; margin: 0 auto 28px auto; line-height: 1.6;">
+          A biblioteca de referência em Python com contratos Pydantic v2, motor de idempotência em SQLite WAL, barramento tático ReflexBus, suíte de testes automatizados e o whitepaper técnico estão disponíveis sob a licença MIT no GitHub.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-primary" style="padding: 15px 36px; font-size: 1rem;">
+          <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 15px 40px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-footer-cta">
+            Acessar Repositório no GitHub
+          </a>
+          <a href="/en/products/honeycomb-protocol/whitepaper/" class="btn btn-outline" style="padding: 15px 32px; font-size: 1rem;">
             Ler Whitepaper Completo
           </a>
-          <a href="https://github.com/hsnlabs-ai/honeycomb-protocol" target="_blank" rel="noopener" class="btn btn-outline" style="padding: 15px 36px; font-size: 1rem;" data-cta="honeycomb-github" data-surface="honeycomb-footer-cta-pt">
-            Repositório no GitHub
-          </a>
-          <a href="/produtos/" class="btn btn-outline" style="padding: 15px 28px; font-size: 1rem;">
+          <a href="/produtos/" class="btn btn-outline" style="padding: 15px 32px; font-size: 1rem;">
             Voltar aos Produtos
           </a>
         </div>
@@ -1993,20 +1968,6 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
 
       container.addEventListener('click', () => {
         trigger(240);
-      });
-
-      // Ensure all product motion videos play continuously in seamless loop
-      document.querySelectorAll('.product-hero-frame video, .product-frame-card video').forEach((v) => {
-        v.muted = true;
-        v.loop = true;
-        v.playsInline = true;
-        const startLoop = () => v.play().catch(() => {});
-        if (v.readyState >= 2) startLoop();
-        else v.addEventListener('loadeddata', startLoop, { once: true });
-        v.addEventListener('ended', () => {
-          v.currentTime = 0;
-          startLoop();
-        });
       });
 
       // Contact Form Handler

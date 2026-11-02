@@ -1,24 +1,16 @@
----
-title: "Protocolo Honeycomb (HACP v1.0.0) · Coordenação Estigmérgica de Agentes · hsnlabs"
-description: "Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA: aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica pré-inferência em SQLite WAL."
-url: "https://hsnlabs.ai/produtos/honeycomb-protocol/"
-locale: "pt-BR"
-updatedAt: "2026-11-02T16:40:00Z"
----
+# Protocolo Honeycomb · Coordenação Estigmérgica e Idempotência Atômica · hsnlabs
 
-# Protocolo Honeycomb (HACP v1.0.0)
+**HACP-RFC-0001 · v1.0.0 · Plataforma Aberta · Licença MIT**
 
-> Protocolo aberto de coordenação estigmérgica para enxames autônomos de longa duração pela **hsnlabs**.
+O **Protocolo Honeycomb** atua na camada semântica de coordenação descentralizada, substituindo trocas ruidosas de mensagens ponto a ponto em linguagem natural por marcas duráveis em grafo e bloqueio atômico de idempotência pré-inferência sobre SQLite WAL.
 
-- **Página Oficial (PT-BR):** https://hsnlabs.ai/produtos/honeycomb-protocol/
-- **Página Oficial (EN):** https://hsnlabs.ai/en/products/honeycomb-protocol/
-- **Whitepaper Técnico (EN):** https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/
-- **Repositório GitHub (MIT):** https://github.com/hsnlabs-ai/honeycomb-protocol
-- **Especificação Formal (`HACP-RFC-0001`):** https://github.com/hsnlabs-ai/honeycomb-protocol/blob/main/docs/SPECIFICATION.md
+- **Repositório GitHub**: https://github.com/hsnlabs-ai/honeycomb-protocol
+- **Especificação Formal**: https://github.com/hsnlabs-ai/honeycomb-protocol/blob/main/docs/SPECIFICATION.md
+- **Whitepaper Técnico**: https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/
 
 ## Os Quatro Pilares Arquiteturais
 
-1. **Aperto de Mão Dinâmico (`HoneycombHandshake`):** Verificação mútua (`HONEYCOMB_SESSION_INIT` / `HONEYCOMB_HANDSHAKE_ACK`) com concessão de escopo delimitado (`hcgrant1.<digest>`).
-2. **Envelope Estrito com Primitivas Abertas (`HoneycombEnvelope`):** Separação estrita entre metadados causais e carga útil em grafo (`node_id`, `edges`, `confidence_score`) com campo aberto `properties`.
-3. **Governança e Idempotência Atômica (`HoneycombIdempotencyGuard`):** Bloqueio pré-inferência em SQLite WAL (`honeycomb_idempotency_keys`) por `target_scope_hash` e confirmação em dois tempos (`HONEYCOMB_DOUBLE_ACK`).
-4. **Ciclo de Vida e Encerramento Formal:** Sessões assíncronas retomáveis por tokens assinados (`hcrt1`) e destruição automática de filas em `HONEYCOMB_SESSION_TEARDOWN`.
+1. **P1 · Aperto de Mão Dinâmico**: Anúncio de capacidades ativas via `HONEYCOMB_SESSION_INIT` e concessão de escopo delimitado via `HONEYCOMB_HANDSHAKE_ACK`.
+2. **P2 · Envelope Estrito com Primitivas Abertas**: Contrato Pydantic v2 `HoneycombEnvelope` e `HoneycombPayload` com nós, arestas, confiança e dicionário `properties`.
+3. **P3 · Governança e Idempotência Atômica**: Bloqueio atômico por `target_scope_hash` na tabela `honeycomb_idempotency_keys` em SQLite WAL e validação em dois tempos via `HONEYCOMB_DOUBLE_ACK`.
+4. **P4 · Ciclo de Vida e Encerramento Formal**: Tokens assinados `hcrt1` para retomada após pausas de múltiplos dias e encerramento explícito via `HONEYCOMB_SESSION_TEARDOWN`.

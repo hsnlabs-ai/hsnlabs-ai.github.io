@@ -62,3 +62,18 @@ Mapeador topológico em caixa-preta via sonda única para WhatsApp e LangGraph.
 - **URL:** https://hsnlabs.ai/produtos/agent-analyzer/
 - **GitHub:** https://github.com/hsnlabs-ai/agent-analyzer
 - **Licença:** MIT
+
+---
+
+### [Protocolo Honeycomb](https://hsnlabs.ai/produtos/honeycomb-protocol/)
+*Plataforma Aberta · Licença MIT*
+
+Protocolo aberto de coordenação estigmérgica para enxames autônomos de longa duração. Substitui trocas quadráticas de mensagens em linguagem natural por envelopes de grafo tipados, aperto de mão dinâmico por capacidades e idempotência atômica pré-inferência em SQLite WAL.
+
+* **Aperto de Mão Dinâmico:** Verificação mútua antes do início das tarefas com anúncio de capacidades ativas e concessão de escopo delimitado.
+* **Idempotência Atômica Pré-Inferência:** Trava SHA-256 por escopo em SQLite WAL e validação em dois tempos de transporte e consistência semântica.
+* **Retomada e Encerramento Formal:** Tokens assinados para pausas de múltiplos dias e desalocação obrigatória de filas temporárias ao encerrar sessões.
+
+- **Página do Produto:** [https://hsnlabs.ai/produtos/honeycomb-protocol/](https://hsnlabs.ai/produtos/honeycomb-protocol/)
+- **Whitepaper Técnico:** [https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/)
+- **Repositório GitHub:** [https://github.com/hsnlabs-ai/honeycomb-protocol](https://github.com/hsnlabs-ai/honeycomb-protocol)
