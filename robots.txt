@@ -8,6 +8,7 @@ User-agent: *
 Disallow: /private/
 Disallow: /admin/
 Disallow: /assets/private/
+Disallow: /components/
 Allow: /
 
 # OpenAI Crawlers (ChatGPT, SearchGPT, Model Training)

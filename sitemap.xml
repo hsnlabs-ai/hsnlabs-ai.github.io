@@ -7,7 +7,7 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://hsnlabs.ai/en/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/" />
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/" />
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/bootcamp/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/bootcamp/" />
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/bootcamp/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/bootcamp/" />
@@ -53,7 +53,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/advisory/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/advisory/" />
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/advisory/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/advisory/" />
@@ -71,7 +71,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/products/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/" />
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/produtos/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/" />
@@ -89,7 +89,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/products/agents-swarm/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/" />
@@ -98,34 +98,16 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/produtos/agents-swarm/</loc>
-    <lastmod>2026-11-01T17:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agents-swarm/" />
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agents-swarm/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/produtos/agents-swarm/protocolo/</loc>
-    <lastmod>2026-11-01T17:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agents-swarm/protocol/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/en/products/agents-swarm/protocol/</loc>
-    <lastmod>2026-11-01T17:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agents-swarm/protocol/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
-  </url>
-  <url>
     <loc>https://hsnlabs.ai/en/canvas/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/canvas/" />
@@ -134,7 +116,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/canvas/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/canvas/" />
@@ -143,7 +125,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/mcp/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/mcp/" />
@@ -152,7 +134,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/mcp/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/mcp/" />
@@ -161,7 +143,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/langchain/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/langchain/" />
@@ -170,7 +152,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/langchain/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/langchain/" />
@@ -179,7 +161,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/snowflake/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/snowflake/" />
@@ -188,7 +170,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/snowflake/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/snowflake/" />
@@ -197,7 +179,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/databricks/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/databricks/" />
@@ -206,7 +188,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/databricks/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/databricks/" />
@@ -215,7 +197,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/braintrust/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/braintrust/" />
@@ -224,7 +206,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/braintrust/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/braintrust/" />
@@ -233,7 +215,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/privacy-policy/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/privacy-policy/" />
@@ -242,7 +224,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/privacy-policy/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/privacy-policy/" />
@@ -251,7 +233,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/modern-slavery-statement/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/modern-slavery-statement/" />
@@ -260,7 +242,7 @@
   </url>
   <url>
     <loc>https://hsnlabs.ai/modern-slavery-statement/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/modern-slavery-statement/" />
@@ -268,744 +250,99 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/modern-slavery-statement/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/blog/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <loc>https://hsnlabs.ai/en/products/swarm-self-healing/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/swarm-self-healing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/swarm-self-healing/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/swarm-self-healing/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/blog/pt/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <loc>https://hsnlabs.ai/produtos/swarm-self-healing/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/swarm-self-healing/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/swarm-self-healing/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/swarm-self-healing/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/blog/post/databricks-lakehouse-unity-catalog-langgraph-agent-architecture/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <loc>https://hsnlabs.ai/en/products/agents-swarm/protocol/</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/databricks-lakehouse-unity-catalog-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/databricks-lakehouse-unity-catalog-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-databricks-lakehouse-unity-catalog-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/braintrust-evals-cicd-langgraph-agent-architecture/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-braintrust-evals-cicd-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/braintrust-evals-cicd-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-braintrust-evals-cicd-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-braintrust-evals-cicd-langgraph/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-braintrust-evals-cicd-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/braintrust-evals-cicd-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-braintrust-evals-cicd-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/snowflake-ai-data-cloud-langgraph-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arquitetura-agentes-snowflake-ai-data-cloud-langgraph/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/autonomous-negotiations-collections-contracts/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/negociacoes-autonomas-cobranca-contratos/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/autonomous-negotiations-collections-contracts/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/negociacoes-autonomas-cobranca-contratos/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/negociacoes-autonomas-cobranca-contratos/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/negociacoes-autonomas-cobranca-contratos/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/autonomous-negotiations-collections-contracts/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/negociacoes-autonomas-cobranca-contratos/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/balance-sheet-guard-bpo-extinction/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/guarda-do-balanco-extincao-bpo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/balance-sheet-guard-bpo-extinction/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/guarda-do-balanco-extincao-bpo/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/guarda-do-balanco-extincao-bpo/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/guarda-do-balanco-extincao-bpo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/balance-sheet-guard-bpo-extinction/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/guarda-do-balanco-extincao-bpo/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/bpo-replacement-matrix/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/bpo-replacement-matrix/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/bpo-replacement-matrix/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/matriz-substituicao-bpo/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/c-suite-margin-protection-playbook/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/playbook-c-suite-protecao-margem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/c-suite-margin-protection-playbook/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/playbook-c-suite-protecao-margem/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/playbook-c-suite-protecao-margem/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/playbook-c-suite-protecao-margem/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/c-suite-margin-protection-playbook/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/playbook-c-suite-protecao-margem/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/chatbot-vs-agent/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/chatbot-vs-agente/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/chatbot-vs-agent/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/chatbot-vs-agente/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/chatbot-vs-agente/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/chatbot-vs-agente/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/chatbot-vs-agent/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/chatbot-vs-agente/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/cleveland-clinic-case-study-operational-agents/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/cleveland-clinic-case-study-operational-agents/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/cleveland-clinic-case-study-operational-agents/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-cleveland-clinic-agentes-operacionais/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/collapse-of-legacy-rpa/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/colapso-rpa-legado/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/collapse-of-legacy-rpa/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/colapso-rpa-legado/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/colapso-rpa-legado/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/colapso-rpa-legado/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/collapse-of-legacy-rpa/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/colapso-rpa-legado/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/cost-legacy-it/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/custo-ia-ilimitada-ti-legada/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/cost-legacy-it/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/custo-ia-ilimitada-ti-legada/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/custo-ia-ilimitada-ti-legada/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/custo-ia-ilimitada-ti-legada/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/cost-legacy-it/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/custo-ia-ilimitada-ti-legada/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/death-of-tier-1-erp-helpdesk/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/morte-suporte-nivel-1-erp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/death-of-tier-1-erp-helpdesk/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/morte-suporte-nivel-1-erp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/morte-suporte-nivel-1-erp/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/morte-suporte-nivel-1-erp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/death-of-tier-1-erp-helpdesk/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/morte-suporte-nivel-1-erp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/five-day-architecture-sprint/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/five-day-architecture-sprint/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/five-day-architecture-sprint/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/how-to-build-an-enterprise-ontology-from-scratch/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-enterprise-do-zero/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/how-to-build-an-enterprise-ontology-from-scratch/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-enterprise-do-zero/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-enterprise-do-zero/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-enterprise-do-zero/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/how-to-build-an-enterprise-ontology-from-scratch/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-enterprise-do-zero/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/how-to-build-operational-ontology-python-mcp/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-operacional-python-mcp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/how-to-build-operational-ontology-python-mcp/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-operacional-python-mcp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-operacional-python-mcp/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-operacional-python-mcp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/how-to-build-operational-ontology-python-mcp/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/como-construir-ontologia-operacional-python-mcp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/integration-drift/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/deriva-de-integracao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/integration-drift/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/deriva-de-integracao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/deriva-de-integracao/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/deriva-de-integracao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/integration-drift/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/deriva-de-integracao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/kafka-metamorfose-ia-futuro-do-trabalho/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/kafka-metamorfose-ia-futuro-do-trabalho/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/kafka-metamorfose-ia-futuro-do-trabalho/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/latam-airlines-case-study/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-latam-airlines/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/latam-airlines-case-study/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-latam-airlines/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/estudo-caso-latam-airlines/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-latam-airlines/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/latam-airlines-case-study/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/estudo-caso-latam-airlines/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/legacy-core-backing-engine/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/sistemas-legados-motor-execucao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/legacy-core-backing-engine/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/sistemas-legados-motor-execucao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/sistemas-legados-motor-execucao/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/sistemas-legados-motor-execucao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/legacy-core-backing-engine/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/sistemas-legados-motor-execucao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/llm-as-judge-fallacy/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/falacia-llm-como-juiz/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/llm-as-judge-fallacy/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/falacia-llm-como-juiz/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/falacia-llm-como-juiz/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/falacia-llm-como-juiz/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/llm-as-judge-fallacy/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/falacia-llm-como-juiz/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/manifesto/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/manifesto/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/manifesto/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/manifesto/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/manifesto/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/manifesto/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/manifesto/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/manifesto/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/ontology-vs-database-schema/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/ontology-vs-database-schema/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/ontology-vs-database-schema/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-schema-banco-dados/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/ontology-vs-knowledge-graph/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-grafo-conhecimento/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/ontology-vs-knowledge-graph/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-grafo-conhecimento/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/ontologia-vs-grafo-conhecimento/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-grafo-conhecimento/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/ontology-vs-knowledge-graph/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/ontologia-vs-grafo-conhecimento/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/palantir-aip-bootcamp-operational-ontology/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-aip-bootcamp-operational-ontology/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-aip-bootcamp-operational-ontology/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/palantir-aip-bootcamp-ontologia-operacional/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/palantir-pricing-tco-and-open-alternatives/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-pricing-tco-and-open-alternatives/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-pricing-tco-and-open-alternatives/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/preco-palantir-tco-alternativas-abertas/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/palantir-vs-databricks-agent-architecture/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-vs-databricks-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/palantir-vs-databricks-agent-architecture/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/palantir-vs-databricks-arquitetura-agentes/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/perimeter-isolation-mcp-data-contracts/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/perimeter-isolation-mcp-data-contracts/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/perimeter-isolation-mcp-data-contracts/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/isolamento-perimetro-mcp-contratos-dados/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/protocol-arbitrage-claims-underwriting/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arbitragem-protocolo-sinistros-subscricao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/protocol-arbitrage-claims-underwriting/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arbitragem-protocolo-sinistros-subscricao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/arbitragem-protocolo-sinistros-subscricao/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/arbitragem-protocolo-sinistros-subscricao/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/protocol-arbitrage-claims-underwriting/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/arbitragem-protocolo-sinistros-subscricao/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/the-operational-ontology/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/a-ontologia-operacional/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-operational-ontology/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/a-ontologia-operacional/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/a-ontologia-operacional/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/a-ontologia-operacional/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-operational-ontology/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/a-ontologia-operacional/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/the-poc-graveyard/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-poc-graveyard/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-poc-graveyard/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/unconstrained-agents-finite-state-machines/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/unconstrained-agents-finite-state-machines/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/unconstrained-agents-finite-state-machines/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/agentes-ilimitados-maquinas-estados-finitos/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/what-is-an-ontology-for-ai-agents/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/o-que-e-uma-ontologia-para-agentes-ia/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/what-is-an-ontology-for-ai-agents/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/o-que-e-uma-ontologia-para-agentes-ia/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/o-que-e-uma-ontologia-para-agentes-ia/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/o-que-e-uma-ontologia-para-agentes-ia/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/what-is-an-ontology-for-ai-agents/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/o-que-e-uma-ontologia-para-agentes-ia/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/why-rag-breaks-on-erp/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/por-que-rag-falha-em-erp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/why-rag-breaks-on-erp/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/por-que-rag-falha-em-erp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/por-que-rag-falha-em-erp/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/por-que-rag-falha-em-erp/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/why-rag-breaks-on-erp/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/por-que-rag-falha-em-erp/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/buy-versus-build-b2b-enterprise-crm/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/buy-versus-build-b2b-enterprise-crm/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/buy-versus-build-b2b-enterprise-crm/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/comprar-ou-construir-crm-vendas-b2b/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-agentic-pilot-canvas-v1-4/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/the-agentic-pilot-canvas-v1-4/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/post/the-high-ic-phenomenon/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/o-fenomeno-high-ic/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-high-ic-phenomenon/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/o-fenomeno-high-ic/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/blog/pt/post/o-fenomeno-high-ic/</loc>
-    <lastmod>2026-11-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/blog/pt/post/o-fenomeno-high-ic/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/blog/post/the-high-ic-phenomenon/" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/blog/pt/post/o-fenomeno-high-ic/" />
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/produtos/honeycomb-protocol/</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agents-swarm/protocol/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/produtos/agents-swarm/protocolo/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agents-swarm/protocol/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agents-swarm/protocolo/" />
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/products/honeycomb-protocol/</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Product: Stigmergy Mesh (PT-BR & EN) -->
-  <url>
-    <loc>https://hsnlabs.ai/produtos/stigmergy-mesh/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/stigmergy-mesh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/stigmergy-mesh/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/stigmergy-mesh/"/>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/honeycomb-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/honeycomb-protocol/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/honeycomb-protocol/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/produtos/honeycomb-protocol/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/honeycomb-protocol/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/honeycomb-protocol/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/honeycomb-protocol/" />
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/products/stigmergy-mesh/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/stigmergy-mesh/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/stigmergy-mesh/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/stigmergy-mesh/"/>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/stigmergy-mesh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/stigmergy-mesh/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/stigmergy-mesh/" />
   </url>
-  <!-- Product: Agent Analyzer (PT-BR & EN) -->
   <url>
-    <loc>https://hsnlabs.ai/produtos/agent-analyzer/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agent-analyzer/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agent-analyzer/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/agent-analyzer/"/>
-    <changefreq>weekly</changefreq>
+    <loc>https://hsnlabs.ai/produtos/stigmergy-mesh/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/stigmergy-mesh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/stigmergy-mesh/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/stigmergy-mesh/" />
   </url>
   <url>
     <loc>https://hsnlabs.ai/en/products/agent-analyzer/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agent-analyzer/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agent-analyzer/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/agent-analyzer/"/>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <!-- Product: Swarm Self-Healing (PT-BR & EN) -->
-  <url>
-    <loc>https://hsnlabs.ai/produtos/swarm-self-healing/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/swarm-self-healing/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/swarm-self-healing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/swarm-self-healing/"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agent-analyzer/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agent-analyzer/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agent-analyzer/" />
   </url>
   <url>
-    <loc>https://hsnlabs.ai/en/products/swarm-self-healing/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/swarm-self-healing/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/swarm-self-healing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/en/products/swarm-self-healing/"/>
-    <changefreq>weekly</changefreq>
+    <loc>https://hsnlabs.ai/produtos/agent-analyzer/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/agent-analyzer/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/agent-analyzer/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/agent-analyzer/" />
+  </url>
+  <url>
+    <loc>https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

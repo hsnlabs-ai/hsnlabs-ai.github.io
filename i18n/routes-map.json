@@ -134,6 +134,42 @@
       "title_pt": "Swarm Self-Healing · Homeostase e Failover para Enxames · hsnlabs",
       "description_en": "Pure-Python resilience, thermal governance, and resource protection runtime for autonomous AI swarms with sub-5s hot standby failover, 3-tier proxy affinity guard, and sliding-window circuit breakers.",
       "description_pt": "Runtime Python de homeostase determinística, failover a quente em menos de 5 segundos, governança térmica com histerese, afinidade de rede em 3 camadas e circuit breaker para enxames de agentes."
+    },
+    {
+      "id": "site_products_agents_swarm_protocol",
+      "en_path": "/en/products/agents-swarm/protocol/",
+      "pt_path": "/produtos/agents-swarm/protocolo/",
+      "title_en": "Agents Swarm Protocol · hsnlabs",
+      "title_pt": "Protocolo Agents Swarm · hsnlabs",
+      "description_en": "Technical protocol specification for Agents Swarm external observability and state machine reconstruction.",
+      "description_pt": "Especificação técnica do protocolo Agents Swarm para observabilidade externa e reconstrução de máquinas de estado."
+    },
+    {
+      "id": "site_products_honeycomb_protocol",
+      "en_path": "/en/products/honeycomb-protocol/",
+      "pt_path": "/produtos/honeycomb-protocol/",
+      "title_en": "Honeycomb Protocol · hsnlabs",
+      "title_pt": "Honeycomb Protocol · hsnlabs",
+      "description_en": "Deterministic coordination protocol for autonomous multi-agent swarms.",
+      "description_pt": "Protocolo de coordenação determinística para enxames de múltiplos agentes autônomos."
+    },
+    {
+      "id": "site_products_stigmergy_mesh",
+      "en_path": "/en/products/stigmergy-mesh/",
+      "pt_path": "/produtos/stigmergy-mesh/",
+      "title_en": "Stigmergy Mesh · hsnlabs",
+      "title_pt": "Stigmergy Mesh · hsnlabs",
+      "description_en": "Decentralized stigmergic state coordination mesh for enterprise agent swarms.",
+      "description_pt": "Malha de coordenação estigmérgica descentralizada para enxames de agentes corporativos."
+    },
+    {
+      "id": "site_products_agent_analyzer",
+      "en_path": "/en/products/agent-analyzer/",
+      "pt_path": "/produtos/agent-analyzer/",
+      "title_en": "Agent Analyzer · hsnlabs",
+      "title_pt": "Agent Analyzer · hsnlabs",
+      "description_en": "Static and dynamic diagnostic analyzer for enterprise AI agent architectures.",
+      "description_pt": "Analisador de diagnóstico estático e dinâmico para arquiteturas de agentes de IA corporativos."
     }
   ],
   "blog_posts": [

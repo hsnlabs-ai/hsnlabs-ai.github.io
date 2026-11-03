@@ -14,6 +14,53 @@ if not ROUTES_FILE.exists():
 with open(ROUTES_FILE, "r", encoding="utf-8") as f:
     routes = json.load(f)
 
+# Ensure all 5 product pages and protocol subpages are present in site_pages
+existing_ids = {p["id"] for p in routes.get("site_pages", [])}
+extra_product_pages = [
+    {
+        "id": "site_products_agents_swarm_protocol",
+        "en_path": "/en/products/agents-swarm/protocol/",
+        "pt_path": "/produtos/agents-swarm/protocolo/",
+        "title_en": "Agents Swarm Protocol · hsnlabs",
+        "title_pt": "Protocolo Agents Swarm · hsnlabs",
+        "description_en": "Technical protocol specification for Agents Swarm external observability and state machine reconstruction.",
+        "description_pt": "Especificação técnica do protocolo Agents Swarm para observabilidade externa e reconstrução de máquinas de estado."
+    },
+    {
+        "id": "site_products_honeycomb_protocol",
+        "en_path": "/en/products/honeycomb-protocol/",
+        "pt_path": "/produtos/honeycomb-protocol/",
+        "title_en": "Honeycomb Protocol · hsnlabs",
+        "title_pt": "Honeycomb Protocol · hsnlabs",
+        "description_en": "Deterministic coordination protocol for autonomous multi-agent swarms.",
+        "description_pt": "Protocolo de coordenação determinística para enxames de múltiplos agentes autônomos."
+    },
+    {
+        "id": "site_products_stigmergy_mesh",
+        "en_path": "/en/products/stigmergy-mesh/",
+        "pt_path": "/produtos/stigmergy-mesh/",
+        "title_en": "Stigmergy Mesh · hsnlabs",
+        "title_pt": "Stigmergy Mesh · hsnlabs",
+        "description_en": "Decentralized stigmergic state coordination mesh for enterprise agent swarms.",
+        "description_pt": "Malha de coordenação estigmérgica descentralizada para enxames de agentes corporativos."
+    },
+    {
+        "id": "site_products_agent_analyzer",
+        "en_path": "/en/products/agent-analyzer/",
+        "pt_path": "/produtos/agent-analyzer/",
+        "title_en": "Agent Analyzer · hsnlabs",
+        "title_pt": "Agent Analyzer · hsnlabs",
+        "description_en": "Static and dynamic diagnostic analyzer for enterprise AI agent architectures.",
+        "description_pt": "Analisador de diagnóstico estático e dinâmico para arquiteturas de agentes de IA corporativos."
+    }
+]
+for ep in extra_product_pages:
+    if ep["id"] not in existing_ids:
+        routes["site_pages"].append(ep)
+
+with open(ROUTES_FILE, "w", encoding="utf-8") as f:
+    json.dump(routes, f, ensure_ascii=False, indent=2)
+
 today = datetime.now().strftime("%Y-%m-%d")
 
 lines = [
@@ -62,8 +109,10 @@ def add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly", image_in
         lines.append('    </image:image>')
     lines.append('  </url>')
 
-# Site pages
+# Institutional & Product pages only (Blog posts live in https://hsnlabs.ai/blog/sitemap.xml)
 for page in routes.get("site_pages", []):
+    if page["id"] == "blog_home":
+        continue
     en_url = f"https://hsnlabs.ai{page['en_path']}"
     pt_url = f"https://hsnlabs.ai{page['pt_path']}"
     is_root = page["pt_path"] == "/"
@@ -84,11 +133,13 @@ for page in routes.get("site_pages", []):
         }
     add_url_block(en_url, pt_url, priority=prio, changefreq=freq, image_info=img, pt_image_info=pt_img)
 
-# Blog posts (pilot translated + mapped)
-for post in routes.get("blog_posts", []):
-    en_url = f"https://hsnlabs.ai/blog/post/{post['slug_en']}/"
-    pt_url = f"https://hsnlabs.ai/blog/pt/post/{post['slug_pt']}/"
-    add_url_block(en_url, pt_url, priority="0.8", changefreq="monthly")
+# Standalone EN whitepaper
+lines.append('  <url>')
+lines.append('    <loc>https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/</loc>')
+lines.append(f'    <lastmod>{today}</lastmod>')
+lines.append('    <changefreq>monthly</changefreq>')
+lines.append('    <priority>0.8</priority>')
+lines.append('  </url>')
 
 lines.append('</urlset>')
 
@@ -101,4 +152,4 @@ ET.fromstring(xml_content)
 assert "(" not in xml_content and ")" not in xml_content, "ERRO: Parenteses encontrados no sitemap.xml!"
 
 SITEMAP_FILE.write_text(xml_content, encoding="utf-8")
-print(f"Sitemap atualizado com sucesso em {SITEMAP_FILE}. Total URLs sincronizadas.")
+print(f"Sitemap atualizado com sucesso em {SITEMAP_FILE}. Total URLs institucionais e produtos sincronizadas.")
