@@ -3,7 +3,7 @@ title: "Conselho Executivo de IA & Advisory · hsnlabs"
 description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/advisory/"
 locale: "pt-BR"
-updatedAt: "2026-10-31T23:04:14Z"
+updatedAt: "2026-11-03T21:11:40Z"
 ---
 
 # Conselho Executivo de IA & Advisory · hsnlabs

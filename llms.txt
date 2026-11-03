@@ -24,6 +24,8 @@
 ## Proprietary Products & Open Platforms
 - [Produtos e Plataformas Agênticas (PT-BR)](https://hsnlabs.ai/produtos/): Índice de produtos proprietários e plataformas abertas da hsnlabs.
 - [Agentic Products & Platforms (EN)](https://hsnlabs.ai/en/products/): Directory of proprietary products and open agentic platforms by hsnlabs.
+- [Products Catalog Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/index.md): Índice legível por máquina de todos os produtos da hsnlabs em português.
+- [Products Catalog Markdown Mirror (EN)](https://hsnlabs.ai/en/products/index.md): Machine-readable directory of all hsnlabs products in English.
 - [Agents Swarm (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/): Colmeia biomimética de clientes sintéticos (v1.6.3) com embeddings locais 384D (<10ms), baterias Garak, classificador Bertimbau PT-BR, 50 FinePersonas brasileiras, LongBench/WildJailbreak e Swarm Self-Healing.
 - [Agents Swarm Protocol & Honeycomb Stigmergy (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/protocolo/): Especificação do protocolo HACP v1.0.0 de estigmergia híbrida, estado compartilhado em SQLite WAL e auto-cura determinística.
 - [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers (v1.6.3) featuring local 384D embeddings (<10ms), Garak red-teaming, Bertimbau PT-BR toxicity classification, 50 Brazilian FinePersonas, LongBench/WildJailbreak stress payloads, and Swarm Self-Healing.
@@ -31,6 +33,22 @@
 - [Agents Swarm Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/index.md): Especificação técnica legível por máquina em português.
 - [Agents Swarm Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agents-swarm/index.md): Machine-readable technical specification in English.
 - [Agents Swarm GitHub Repository](https://github.com/hsnlabs-ai/agents-swarm): Official open-source repository (MIT License).
+- [Agent Analyzer (PT-BR)](https://hsnlabs.ai/produtos/agent-analyzer/): Mapeador topológico em caixa-preta via sonda única para WhatsApp e LangGraph.
+- [Agent Analyzer (EN)](https://hsnlabs.ai/en/products/agent-analyzer/): Single-probe black-box topological mapper for WhatsApp and LangGraph agents.
+- [Agent Analyzer Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/agent-analyzer/index.md): Especificação técnica legível por máquina em português.
+- [Agent Analyzer Markdown Mirror (EN)](https://hsnlabs.ai/en/products/agent-analyzer/index.md): Machine-readable technical specification in English.
+- [Agent Analyzer GitHub Repository](https://github.com/hsnlabs-ai/agent-analyzer): Official open-source repository (MIT License).
+- [Honeycomb Protocol (PT-BR)](https://hsnlabs.ai/produtos/honeycomb-protocol/): Protocolo aberto de coordenação estigmérgica (HACP-RFC-0001) e idempotência atômica pré-inferência em SQLite WAL.
+- [Honeycomb Protocol (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/): Open stigmergic coordination protocol (HACP-RFC-0001) and SQLite WAL pre-inference atomic idempotency.
+- [Honeycomb Protocol Whitepaper (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/): Technical launch whitepaper.
+- [Honeycomb Protocol Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/honeycomb-protocol/index.md): Especificação técnica legível por máquina em português.
+- [Honeycomb Protocol Markdown Mirror (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/index.md): Machine-readable technical specification in English.
+- [Honeycomb Protocol GitHub Repository](https://github.com/hsnlabs-ai/honeycomb-protocol): Official open-source repository (MIT License).
+- [Stigmergy Mesh (PT-BR)](https://hsnlabs.ai/produtos/stigmergy-mesh/): Coordenação indireta biomimética por decaimento contínuo de feromônios e memória imunológica coletiva anti-Sybil.
+- [Stigmergy Mesh (EN)](https://hsnlabs.ai/en/products/stigmergy-mesh/): Zero-daemon biomimetic indirect coordination and collective anti-Sybil immune memory over SQLite WAL and Redis Lua.
+- [Stigmergy Mesh Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/stigmergy-mesh/index.md): Especificação técnica legível por máquina em português.
+- [Stigmergy Mesh Markdown Mirror (EN)](https://hsnlabs.ai/en/products/stigmergy-mesh/index.md): Machine-readable technical specification in English.
+- [Stigmergy Mesh GitHub Repository](https://github.com/hsnlabs-ai/stigmergy-mesh): Official open-source repository (MIT License).
 - [Swarm Self-Healing (PT-BR)](https://hsnlabs.ai/produtos/swarm-self-healing/): Runtime Python puro para homeostase determinística de enxames, failover hot-standby em menos de 5 segundos, histerese térmica limitada em [0.0, 1.0], guarda de afinidade de proxy em 3 níveis e circuit breaker contra tempestades de provisionamento.
 - [Swarm Self-Healing (EN)](https://hsnlabs.ai/en/products/swarm-self-healing/): Pure-Python resilience runtime for deterministic swarm homeostasis, sub-5-second hot standby failover, bounded [0.0, 1.0] thermal hysteresis, 3-tier proxy affinity verification, and sliding-window resource circuit breaking.
 - [Swarm Self-Healing Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/swarm-self-healing/index.md): Especificação técnica legível por máquina em português.
@@ -62,13 +80,3 @@
 ## Contact & Channels
 - [GitHub Organization](https://github.com/hsnlabs-ai): Open-source repositories and reference implementations.
 - [LinkedIn Newsletter ([Agentes] x [a Gente])](https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/): Notas executivas sobre engenharia agêntica e futuro do trabalho.
-- [Agent Analyzer (PT-BR)](https://hsnlabs.ai/produtos/agent-analyzer/): Mapeador topológico em caixa-preta via sonda única para WhatsApp e LangGraph.
-- [Agent Analyzer (EN)](https://hsnlabs.ai/en/products/agent-analyzer/): Single-probe black-box topological mapper for WhatsApp and LangGraph agents.
-- [Agent Analyzer GitHub Repository](https://github.com/hsnlabs-ai/agent-analyzer): Official open-source repository (MIT License).
-- [Honeycomb Protocol (PT-BR)](https://hsnlabs.ai/produtos/honeycomb-protocol/): Protocolo aberto de coordenação estigmérgica (HACP-RFC-0001) e idempotência atômica pré-inferência em SQLite WAL.
-- [Honeycomb Protocol (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/): Open stigmergic coordination protocol (HACP-RFC-0001) and SQLite WAL pre-inference atomic idempotency.
-- [Honeycomb Protocol Whitepaper (EN)](https://hsnlabs.ai/en/products/honeycomb-protocol/whitepaper/): Technical launch whitepaper.
-- [Honeycomb Protocol GitHub Repository](https://github.com/hsnlabs-ai/honeycomb-protocol): Official open-source repository (MIT License).
-- [Stigmergy Mesh (PT-BR)](https://hsnlabs.ai/produtos/stigmergy-mesh/): Coordenação indireta biomimética por decaimento contínuo de feromônios e memória imunológica coletiva anti-Sybil.
-- [Stigmergy Mesh (EN)](https://hsnlabs.ai/en/products/stigmergy-mesh/): Zero-daemon biomimetic indirect coordination and collective anti-Sybil immune memory over SQLite WAL and Redis Lua.
-- [Stigmergy Mesh GitHub Repository](https://github.com/hsnlabs-ai/stigmergy-mesh): Official open-source repository (MIT License).

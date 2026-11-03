@@ -52,6 +52,15 @@ extra_product_pages = [
         "title_pt": "Agent Analyzer · hsnlabs",
         "description_en": "Static and dynamic diagnostic analyzer for enterprise AI agent architectures.",
         "description_pt": "Analisador de diagnóstico estático e dinâmico para arquiteturas de agentes de IA corporativos."
+    },
+    {
+        "id": "site_products_swarm_self_healing",
+        "en_path": "/en/products/swarm-self-healing/",
+        "pt_path": "/produtos/swarm-self-healing/",
+        "title_en": "Swarm Self-Healing · hsnlabs",
+        "title_pt": "Swarm Self-Healing · hsnlabs",
+        "description_en": "Deterministic homeostasis, discrete thermal hysteresis, and sub-5s hot failover for AI swarms.",
+        "description_pt": "Homeostase determinística, histerese térmica discreta e failover a quente em menos de 5 segundos para enxames de IA."
     }
 ]
 for ep in extra_product_pages:

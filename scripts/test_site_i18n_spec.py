@@ -11,6 +11,10 @@ PAGES = [
     {"id": "advisory", "pt": SITE_DIR / "advisory" / "index.html", "en": SITE_DIR / "en" / "advisory" / "index.html", "path_pt": "/advisory/", "path_en": "/en/advisory/"},
     {"id": "produtos", "pt": SITE_DIR / "produtos" / "index.html", "en": SITE_DIR / "en" / "products" / "index.html", "path_pt": "/produtos/", "path_en": "/en/products/"},
     {"id": "agents_swarm", "pt": SITE_DIR / "produtos" / "agents-swarm" / "index.html", "en": SITE_DIR / "en" / "products" / "agents-swarm" / "index.html", "path_pt": "/produtos/agents-swarm/", "path_en": "/en/products/agents-swarm/"},
+    {"id": "agent_analyzer", "pt": SITE_DIR / "produtos" / "agent-analyzer" / "index.html", "en": SITE_DIR / "en" / "products" / "agent-analyzer" / "index.html", "path_pt": "/produtos/agent-analyzer/", "path_en": "/en/products/agent-analyzer/"},
+    {"id": "honeycomb_protocol", "pt": SITE_DIR / "produtos" / "honeycomb-protocol" / "index.html", "en": SITE_DIR / "en" / "products" / "honeycomb-protocol" / "index.html", "path_pt": "/produtos/honeycomb-protocol/", "path_en": "/en/products/honeycomb-protocol/"},
+    {"id": "stigmergy_mesh", "pt": SITE_DIR / "produtos" / "stigmergy-mesh" / "index.html", "en": SITE_DIR / "en" / "products" / "stigmergy-mesh" / "index.html", "path_pt": "/produtos/stigmergy-mesh/", "path_en": "/en/products/stigmergy-mesh/"},
+    {"id": "swarm_self_healing", "pt": SITE_DIR / "produtos" / "swarm-self-healing" / "index.html", "en": SITE_DIR / "en" / "products" / "swarm-self-healing" / "index.html", "path_pt": "/produtos/swarm-self-healing/", "path_en": "/en/products/swarm-self-healing/"},
     {"id": "mcp", "pt": SITE_DIR / "mcp" / "index.html", "en": SITE_DIR / "en" / "mcp" / "index.html", "path_pt": "/mcp/", "path_en": "/en/mcp/"},
     {"id": "langchain", "pt": SITE_DIR / "langchain" / "index.html", "en": SITE_DIR / "en" / "langchain" / "index.html", "path_pt": "/langchain/", "path_en": "/en/langchain/"},
     {"id": "snowflake", "pt": SITE_DIR / "snowflake" / "index.html", "en": SITE_DIR / "en" / "snowflake" / "index.html", "path_pt": "/snowflake/", "path_en": "/en/snowflake/"},
@@ -151,18 +155,30 @@ def test_gate_s7_metadata_localization():
             assert tw_url and tw_url.group(1) == expected_url, f"ERRO: twitter:url incorreto em {file_path}: {tw_url.group(1) if tw_url else None} != {expected_url}"
             assert og_img and tw_img and og_img.group(1) == tw_img.group(1), f"ERRO: og:image != twitter:image em {file_path}"
 
+            expected_og_pt = {
+                "produtos": "og-products-pt.png",
+                "agents_swarm": "og-agents-swarm-pt.png",
+                "agent_analyzer": "og-agent-analyzer-pt.png",
+                "honeycomb_protocol": "og-honeycomb-protocol-pt.png",
+                "stigmergy_mesh": "og-stigmergy-mesh-pt.png",
+                "swarm_self_healing": "og-swarm-self-healing-pt.png",
+            }.get(item["id"], "og-image-pt.png")
+
+            expected_og_en = {
+                "produtos": "og-products.png",
+                "agents_swarm": "og-agents-swarm.png",
+                "agent_analyzer": "og-agent-analyzer.png",
+                "honeycomb_protocol": "og-honeycomb-protocol.png",
+                "stigmergy_mesh": "og-stigmergy-mesh.png",
+                "swarm_self_healing": "og-swarm-self-healing.png",
+            }.get(item["id"], "og-image.png")
+
             if lang_key == "pt":
-                if item["id"] == "agents_swarm":
-                    assert og_img.group(1).endswith("og-agents-swarm-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-agents-swarm-pt.png"
-                else:
-                    assert og_img.group(1).endswith("og-image-pt.png"), f"ERRO: Pagina PT {file_path} nao aponta para og-image-pt.png"
+                assert og_img.group(1).endswith(expected_og_pt), f"ERRO: Pagina PT {file_path} nao aponta para {expected_og_pt} (atual: {og_img.group(1)})"
                 for bad in forbidden_en_meta:
                     assert bad not in desc.group(1), f"ERRO: Meta description em ingles em {file_path}: {desc.group(1)}"
             else:
-                if item["id"] == "agents_swarm":
-                    assert og_img.group(1).endswith("og-agents-swarm.png"), f"ERRO: Pagina EN {file_path} nao aponta para og-agents-swarm.png"
-                else:
-                    assert og_img.group(1).endswith("og-image.png"), f"ERRO: Pagina EN {file_path} nao aponta para og-image.png"
+                assert og_img.group(1).endswith(expected_og_en), f"ERRO: Pagina EN {file_path} nao aponta para {expected_og_en} (atual: {og_img.group(1)})"
     print("PASS: Gate S7 Metadados Open Graph, Twitter e Meta Description 100% sincronizados e localizados")
 
 def test_gate_s8_portuguese_accentuation():
@@ -226,6 +242,10 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "en" / "advisory" / "index.html",
         SITE_DIR / "en" / "products" / "index.html",
         SITE_DIR / "en" / "products" / "agents-swarm" / "index.html",
+        SITE_DIR / "en" / "products" / "agent-analyzer" / "index.html",
+        SITE_DIR / "en" / "products" / "honeycomb-protocol" / "index.html",
+        SITE_DIR / "en" / "products" / "stigmergy-mesh" / "index.html",
+        SITE_DIR / "en" / "products" / "swarm-self-healing" / "index.html",
         SITE_DIR / "en" / "mcp" / "index.html",
         SITE_DIR / "en" / "langchain" / "index.html",
         SITE_DIR / "en" / "snowflake" / "index.html",
@@ -243,6 +263,10 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "advisory" / "index.html",
         SITE_DIR / "produtos" / "index.html",
         SITE_DIR / "produtos" / "agents-swarm" / "index.html",
+        SITE_DIR / "produtos" / "agent-analyzer" / "index.html",
+        SITE_DIR / "produtos" / "honeycomb-protocol" / "index.html",
+        SITE_DIR / "produtos" / "stigmergy-mesh" / "index.html",
+        SITE_DIR / "produtos" / "swarm-self-healing" / "index.html",
         SITE_DIR / "mcp" / "index.html",
         SITE_DIR / "langchain" / "index.html",
         SITE_DIR / "snowflake" / "index.html",

@@ -3,7 +3,7 @@ title: "Databricks Lakehouse · Arquitetura de Agentes · hsnlabs"
 description: "Operacionalizamos agentes determinísticos em LangGraph e ontologias executáveis sobre Databricks Lakehouse, Unity Catalog e Mosaic AI em produção."
 url: "https://hsnlabs.ai/databricks/"
 locale: "pt-BR"
-updatedAt: "2026-10-31T23:04:14Z"
+updatedAt: "2026-11-03T21:11:40Z"
 ---
 
 # Databricks Lakehouse · Arquitetura de Agentes · hsnlabs
