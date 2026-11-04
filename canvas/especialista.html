@@ -543,6 +543,13 @@
       border-radius: 2px;
     }
 
+    .note-text-val:empty::before {
+      content: attr(data-placeholder);
+      color: #94a3b8;
+      font-style: italic;
+      pointer-events: none;
+    }
+
     .slot-b1 .paper-postit {
       width: 100%;
       height: 130px;
@@ -697,6 +704,203 @@
       .tip-bubble::before { display: none !important; }
     }
 
+    /* Blur de fundo quando o modal de captura está ativo */
+    body.modal-open .poster-board {
+      filter: blur(6px);
+      pointer-events: none;
+      user-select: none;
+      transition: filter 0.25s ease;
+    }
+
+    /* Modal de Captura de Email */
+    .email-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+
+    .email-modal-overlay.active {
+      display: flex;
+    }
+
+    .email-modal-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.22), 0 0 1px 1px rgba(15, 23, 42, 0.05);
+      width: 100%;
+      max-width: 490px;
+      padding: 34px 32px 28px;
+      position: relative;
+      text-align: center;
+      font-family: var(--font-sans);
+      box-sizing: border-box;
+      animation: modalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      0% { transform: scale(0.96) translateY(8px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 28px;
+      height: 28px;
+      line-height: 24px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #64748b;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+      padding: 0;
+    }
+
+    .modal-close-btn:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+
+    .modal-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0284c7;
+      background: rgba(82, 180, 253, 0.14);
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: #07090e;
+      margin-bottom: 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .modal-subtitle {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #475569;
+      margin-bottom: 22px;
+    }
+
+    .modal-input-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .modal-input-group input[type="email"] {
+      flex: 1;
+      min-width: 0;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: #07090e;
+      border-radius: 2px;
+      outline: none;
+      font-family: var(--font-sans);
+      transition: border-color 0.15s ease;
+      box-sizing: border-box;
+    }
+
+    .modal-input-group input[type="email"]:focus {
+      border-color: #0284c7;
+      box-shadow: 0 0 0 2px rgba(82, 180, 253, 0.25);
+    }
+
+    .modal-input-group button[type="submit"] {
+      background: #07090e;
+      color: #ffffff;
+      border: 1px solid #07090e;
+      padding: 10px 16px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      border-radius: 2px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+      transition: all 0.15s ease;
+    }
+
+    .modal-input-group button[type="submit"]:hover {
+      background: #1e293b;
+    }
+
+    .modal-input-group button[type="submit"]:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .modal-feedback {
+      font-size: 0.82rem;
+      min-height: 20px;
+      margin-top: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .modal-feedback.success {
+      color: #059669;
+      font-weight: 500;
+    }
+
+    .modal-feedback.error {
+      color: #dc2626;
+      font-weight: 500;
+    }
+
+    .modal-footer-skip {
+      margin-top: 12px;
+    }
+
+    .btn-skip {
+      background: transparent;
+      border: none;
+      font-size: 0.78rem;
+      color: #64748b;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      padding: 4px;
+      transition: color 0.15s ease;
+      font-family: var(--font-sans);
+    }
+
+    .btn-skip:hover {
+      color: #0f172a;
+    }
+
     /* Print / PDF Styles (Preserva cores e estado atual, esconde botões) */
     @media print {
       * {
@@ -718,8 +922,12 @@
       .add-postit-btn,
       .del-postit-btn,
       .tip-anchor,
+      .email-modal-overlay,
       #toast-msg {
         display: none !important;
+      }
+      body.modal-open .poster-board {
+        filter: none !important;
       }
       @page {
         size: landscape;
@@ -729,6 +937,46 @@
   </style>
 </head>
 <body>
+
+  <!-- MODAL DE CAPTURA DE EMAIL COM BLUR NO FUNDO -->
+  <div id="email-gate-modal" class="email-modal-overlay">
+    <div class="email-modal-card">
+      <button class="modal-close-btn" onclick="closeEmailModal()" title="Fechar modal">&times;</button>
+      
+      <div class="modal-badge">The Agentic Canvas™</div>
+      <h2 class="modal-title">Receba o guia de preenchimento</h2>
+      <p class="modal-subtitle">
+        Deixe seu e-mail corporativo para receber um tutorial prático de como preencher cada bloco do canvas e guiar seu time corporativo.
+      </p>
+
+      <form class="modal-form" id="canvas-email-form" onsubmit="handleEmailSubmit(event)">
+        <div class="modal-input-group">
+          <input 
+            type="email" 
+            id="canvas-lead-email" 
+            name="email" 
+            placeholder="seu.email@empresa.com" 
+            required 
+            autocomplete="email"
+          >
+          <button type="submit" id="btn-submit-lead">
+            <span>Receber Tutorial</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+        <div id="modal-feedback" class="modal-feedback"></div>
+      </form>
+
+      <div class="modal-footer-skip">
+        <button type="button" class="btn-skip" onclick="closeEmailModal()">
+          Continuar no Canvas interativo &rarr;
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- THE BMC POSTER BOARD -->
   <div class="poster-board">
@@ -1204,7 +1452,7 @@
             <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
               <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
               <span class="note-body" contenteditable="true" spellcheck="false" onblur="saveNoteText(${idx}, ${pIdx}, this)" oninput="handleNoteTyping(this)">
-                <strong class="note-lead">${p.tag}:</strong> <span class="note-text-val">${p.text}</span>
+                <strong class="note-lead">${p.tag}:</strong> <span class="note-text-val" data-placeholder="Escreva aqui...">${p.text}</span>
               </span>
             </div>
           `;
@@ -1304,30 +1552,35 @@
     });
 
     function addMockNote(slotIdx) {
-      const cur = DATA[currentVariant];
-      const slotDef = cur.slots[slotIdx];
       const activeNotes = stateNotes[currentVariant];
       const currentList = activeNotes[slotIdx];
       const count = currentList.length;
+      const rotValues = [-1.2, 1.1, -0.9, 1.3];
+      const rot = rotValues[count % rotValues.length];
+      const prefix = `${slotIdx + 1}.${count + 1}`;
 
-      let newNote;
-      if (slotDef.postits && count < slotDef.postits.length) {
-        newNote = { ...slotDef.postits[count] };
-      } else {
-        const rotValues = [-1.2, 1.1, -0.9, 1.3];
-        const rot = rotValues[count % rotValues.length];
-        const prefix = `${slotIdx + 1}.${count + 1}`;
-        newNote = {
-          tag: `${prefix} Novo Item`,
-          text: 'Clique para editar a anotação.',
-          color: getSlotDefaultColor(slotIdx),
-          rot: rot
-        };
-      }
+      const newNote = {
+        tag: prefix,
+        text: '',
+        color: getSlotDefaultColor(slotIdx),
+        rot: rot
+      };
 
       currentList.push(newNote);
       syncPillState();
       renderBoard();
+
+      requestAnimationFrame(() => {
+        const slots = document.querySelectorAll('.bmc-slot');
+        if (slots[slotIdx]) {
+          const notes = slots[slotIdx].querySelectorAll('.paper-postit');
+          const last = notes[notes.length - 1];
+          if (last) {
+            const valSpan = last.querySelector('.note-text-val');
+            if (valSpan) valSpan.focus();
+          }
+        }
+      });
     }
 
     function removeNote(e, slotIdx, noteIdx) {
@@ -1389,6 +1642,81 @@
       renderBoard();
     }
 
+    // Modal de Captura de Email
+    function openEmailModal() {
+      const dismissed = sessionStorage.getItem('canvas_lead_modal_dismissed');
+      if (!dismissed) {
+        document.body.classList.add('modal-open');
+        const modal = document.getElementById('email-gate-modal');
+        if (modal) modal.classList.add('active');
+      }
+    }
+
+    function closeEmailModal() {
+      document.body.classList.remove('modal-open');
+      const modal = document.getElementById('email-gate-modal');
+      if (modal) modal.classList.remove('active');
+      try {
+        sessionStorage.setItem('canvas_lead_modal_dismissed', 'true');
+      } catch (e) {}
+    }
+
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('canvas-lead-email');
+      const btn = document.getElementById('btn-submit-lead');
+      const feedback = document.getElementById('modal-feedback');
+      const email = input ? input.value.trim() : '';
+
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.innerText = 'Enviando...';
+      feedback.className = 'modal-feedback';
+      feedback.innerText = '';
+
+      const canvasTitle = currentVariant === 'process' ? 'Agentic Products' : 'Agentic Employees';
+
+      try {
+        const stored = JSON.parse(localStorage.getItem('hsnlabs_canvas_leads') || '[]');
+        stored.push({ email, canvas: canvasTitle, date: new Date().toISOString() });
+        localStorage.setItem('hsnlabs_canvas_leads', JSON.stringify(stored));
+      } catch (err) {}
+
+      let done = false;
+      const finalizeSubmission = () => {
+        if (done) return;
+        done = true;
+        feedback.className = 'modal-feedback success';
+        feedback.innerText = 'Pronto. Tutorial enviado para sua caixa de entrada.';
+        btn.innerText = 'Enviado';
+        setTimeout(() => {
+          closeEmailModal();
+        }, 1200);
+      };
+
+      fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          type: 'canvas_tutorial_lead',
+          canvas: canvasTitle,
+          _subject: 'Novo Lead Tutorial The Agentic Canvas',
+          _captcha: 'false'
+        })
+      })
+      .then(() => finalizeSubmission())
+      .catch(() => finalizeSubmission());
+
+      setTimeout(() => {
+        finalizeSubmission();
+      }, 2500);
+    }
+
     // Inicializa botões no DOM
     document.getElementById('btn-proc').classList.toggle('active', currentVariant === 'process');
     document.getElementById('btn-spec').classList.toggle('active', currentVariant === 'specialist');
@@ -1396,6 +1724,7 @@
     document.getElementById('btn-empty').classList.toggle('active', !isFilled);
 
     renderBoard();
+    openEmailModal();
   </script>
 </body>
 </html>
