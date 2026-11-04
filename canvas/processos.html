@@ -499,6 +499,50 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
+    .del-postit-btn {
+      position: absolute;
+      top: 3px;
+      right: 4px;
+      width: 15px;
+      height: 15px;
+      line-height: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      z-index: 10;
+      transition: all 0.15s ease;
+    }
+
+    .paper-postit:hover .del-postit-btn {
+      display: flex;
+    }
+
+    .del-postit-btn:hover {
+      background: #fee2e2;
+      color: #dc2626;
+      border-color: #f87171;
+    }
+
+    .paper-postit span.note-body {
+      display: block;
+      width: 100%;
+      outline: none;
+    }
+
+    .paper-postit span.note-body:focus {
+      outline: 1px dashed rgba(15, 23, 42, 0.25);
+      outline-offset: 1px;
+      border-radius: 2px;
+    }
+
     .slot-b1 .paper-postit {
       width: 100%;
       height: 130px;
@@ -672,6 +716,7 @@
       }
       .header-controls,
       .add-postit-btn,
+      .del-postit-btn,
       .tip-anchor,
       #toast-msg {
         display: none !important;
@@ -737,9 +782,6 @@
   <div id="toast-msg">Link copiado para a área de transferência</div>
 
   <script>
-    let currentVariant = 'process';
-    let isFilled = false;
-
     /*
        Nova Ordem Agrupada por Cor/Fase:
        Fase 1 (Negócios - Azul):
@@ -1096,8 +1138,47 @@
       `<svg class="slot-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>`
     ];
 
+    function getVariantDefaultNotes(v) {
+      return DATA[v].slots.map(s => s.postits.map(p => ({ ...p })));
+    }
+
+    function getEmptyNotes() {
+      return Array.from({ length: 10 }, () => []);
+    }
+
+    function getSlotDefaultColor(slotIdx) {
+      if (slotIdx <= 2) return 'p-yellow';
+      if (slotIdx === 3 || slotIdx === 4) return 'p-blue';
+      if (slotIdx <= 7) return 'p-yellow';
+      return 'p-cyan';
+    }
+
+    // Inicialização do estado via URL
+    let currentVariant = 'process';
+    let isFilled = false;
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const casoParam = params.get('caso');
+      const estadoParam = params.get('estado');
+      if (casoParam === 'specialist' || casoParam === 'process') {
+        currentVariant = casoParam;
+      }
+      if (estadoParam === 'preenchido') {
+        isFilled = true;
+      } else if (estadoParam === 'vazio') {
+        isFilled = false;
+      }
+    } catch (e) {}
+
+    const stateNotes = {
+      process: isFilled ? getVariantDefaultNotes('process') : getEmptyNotes(),
+      specialist: isFilled ? getVariantDefaultNotes('specialist') : getEmptyNotes()
+    };
+
     function renderBoard() {
       const cur = DATA[currentVariant];
+      const activeNotes = stateNotes[currentVariant];
 
       const container = document.getElementById('canvas-grid-root');
       container.innerHTML = cur.slots.map((s, idx) => {
@@ -1113,12 +1194,18 @@
           return `<div class="q-line"><strong>${q.label}</strong> ${leadingText} <span style="white-space:nowrap;">${lastWord}<span class="tip-anchor"><span class="tip-circle" onclick="toggleBubble(event, this)">?</span><span class="${bubbleClass}"><strong>Exemplo Prático</strong>${q.tip}</span></span></span></div>`;
         }).join('');
 
-        const postitsHtml = isFilled ? s.postits.map(p => {
+        const notes = activeNotes[idx] || [];
+        const hasNotes = notes.length > 0;
+
+        const postitsHtml = hasNotes ? notes.map((p, pIdx) => {
           const combinedText = `${p.tag}: ${p.text}`;
           const typo = calcPostitTypography(combinedText, isLargeSlot);
           return `
             <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
-              <span class="note-body"><strong class="note-lead">${p.tag}:</strong> ${p.text}</span>
+              <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
+              <span class="note-body" contenteditable="true" spellcheck="false" onblur="saveNoteText(${idx}, ${pIdx}, this)" oninput="handleNoteTyping(this)">
+                <strong class="note-lead">${p.tag}:</strong> <span class="note-text-val">${p.text}</span>
+              </span>
             </div>
           `;
         }).join('') : `
@@ -1137,7 +1224,7 @@
               </div>
               <div class="slot-questions">${qHtml}</div>
             </div>
-            <div class="postit-zone ${isFilled ? 'zone-filled' : 'zone-empty'}">${postitsHtml}</div>
+            <div class="postit-zone ${hasNotes ? 'zone-filled' : 'zone-empty'}">${postitsHtml}</div>
           </div>
         `;
       }).join('');
@@ -1165,6 +1252,16 @@
         url.searchParams.set('estado', isFilled ? 'preenchido' : 'vazio');
         window.history.replaceState({}, '', url.toString());
       } catch (e) {}
+    }
+
+    function syncPillState() {
+      const activeNotes = stateNotes[currentVariant];
+      const totalNotes = activeNotes.reduce((acc, list) => acc + list.length, 0);
+      const isAllEmpty = totalNotes === 0;
+      isFilled = !isAllEmpty;
+      document.getElementById('btn-filled').classList.toggle('active', isFilled);
+      document.getElementById('btn-empty').classList.toggle('active', isAllEmpty);
+      updateUrlState();
     }
 
     function shareCanvas() {
@@ -1207,8 +1304,64 @@
     });
 
     function addMockNote(slotIdx) {
-      if (!isFilled) {
-        toggleMode(true);
+      const cur = DATA[currentVariant];
+      const slotDef = cur.slots[slotIdx];
+      const activeNotes = stateNotes[currentVariant];
+      const currentList = activeNotes[slotIdx];
+      const count = currentList.length;
+
+      let newNote;
+      if (slotDef.postits && count < slotDef.postits.length) {
+        newNote = { ...slotDef.postits[count] };
+      } else {
+        const rotValues = [-1.2, 1.1, -0.9, 1.3];
+        const rot = rotValues[count % rotValues.length];
+        const prefix = `${slotIdx + 1}.${count + 1}`;
+        newNote = {
+          tag: `${prefix} Novo Item`,
+          text: 'Clique para editar a anotação.',
+          color: getSlotDefaultColor(slotIdx),
+          rot: rot
+        };
+      }
+
+      currentList.push(newNote);
+      syncPillState();
+      renderBoard();
+    }
+
+    function removeNote(e, slotIdx, noteIdx) {
+      e.stopPropagation();
+      const activeNotes = stateNotes[currentVariant];
+      if (activeNotes[slotIdx]) {
+        activeNotes[slotIdx].splice(noteIdx, 1);
+        syncPillState();
+        renderBoard();
+      }
+    }
+
+    function saveNoteText(slotIdx, noteIdx, el) {
+      const activeNotes = stateNotes[currentVariant];
+      if (activeNotes[slotIdx] && activeNotes[slotIdx][noteIdx]) {
+        const leadEl = el.querySelector('.note-lead');
+        const textEl = el.querySelector('.note-text-val');
+        if (leadEl && textEl) {
+          activeNotes[slotIdx][noteIdx].tag = leadEl.innerText.replace(/:$/, '').trim();
+          activeNotes[slotIdx][noteIdx].text = textEl.innerText.trim();
+        } else {
+          activeNotes[slotIdx][noteIdx].text = el.innerText.trim();
+        }
+      }
+    }
+
+    function handleNoteTyping(el) {
+      const postit = el.closest('.paper-postit');
+      if (!postit) return;
+      let size = parseFloat(postit.style.fontSize) || 11.5;
+      const maxH = postit.clientHeight - 16;
+      while ((el.offsetHeight > maxH || postit.scrollHeight > postit.clientHeight) && size > 7.5) {
+        size = Math.round((size - 0.3) * 10) / 10;
+        postit.style.fontSize = size + 'px';
       }
     }
 
@@ -1216,34 +1369,31 @@
       currentVariant = v;
       document.getElementById('btn-proc').classList.toggle('active', v === 'process');
       document.getElementById('btn-spec').classList.toggle('active', v === 'specialist');
+      if (isFilled && stateNotes[v].every(list => list.length === 0)) {
+        stateNotes[v] = getVariantDefaultNotes(v);
+      }
       updateUrlState();
       renderBoard();
     }
 
     function toggleMode(filled) {
       isFilled = filled;
+      if (filled) {
+        stateNotes[currentVariant] = getVariantDefaultNotes(currentVariant);
+      } else {
+        stateNotes[currentVariant] = getEmptyNotes();
+      }
       document.getElementById('btn-filled').classList.toggle('active', filled);
       document.getElementById('btn-empty').classList.toggle('active', !filled);
       updateUrlState();
       renderBoard();
     }
 
-    // Ler estado da URL se compartilhado
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const casoParam = params.get('caso');
-      const estadoParam = params.get('estado');
-      if (casoParam === 'specialist' || casoParam === 'process') {
-        currentVariant = casoParam;
-        document.getElementById('btn-proc').classList.toggle('active', currentVariant === 'process');
-        document.getElementById('btn-spec').classList.toggle('active', currentVariant === 'specialist');
-      }
-      if (estadoParam === 'vazio' || estadoParam === 'preenchido') {
-        isFilled = (estadoParam === 'preenchido');
-        document.getElementById('btn-filled').classList.toggle('active', isFilled);
-        document.getElementById('btn-empty').classList.toggle('active', !isFilled);
-      }
-    } catch (e) {}
+    // Inicializa botões no DOM
+    document.getElementById('btn-proc').classList.toggle('active', currentVariant === 'process');
+    document.getElementById('btn-spec').classList.toggle('active', currentVariant === 'specialist');
+    document.getElementById('btn-filled').classList.toggle('active', isFilled);
+    document.getElementById('btn-empty').classList.toggle('active', !isFilled);
 
     renderBoard();
   </script>
