@@ -603,6 +603,53 @@
       padding: 12px;
     }
 
+    /* CARD QUADRADO PERMANENTE DE ADIÇÃO NA FILA DE NOTAS */
+    .add-note-tile {
+      width: 104px;
+      height: 104px;
+      aspect-ratio: 1 / 1;
+      padding: 8px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border: 1.5px dashed rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.45);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      color: var(--muted);
+      user-select: none;
+    }
+
+    .slot-b1 .add-note-tile {
+      width: 108px;
+      height: 108px;
+      aspect-ratio: 1 / 1;
+    }
+
+    .add-note-tile:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: var(--ink);
+      color: var(--ink);
+      transform: scale(1.04);
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+    }
+
+    .add-tile-icon {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .add-tile-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
     .empty-state-clickable:hover {
       background: rgba(255, 255, 255, 0.85);
       border-color: var(--ink);
@@ -921,6 +968,8 @@
       .header-controls,
       .add-postit-btn,
       .del-postit-btn,
+      .add-note-tile,
+      .empty-state-clickable,
       .tip-anchor,
       .email-modal-overlay,
       #toast-msg {
@@ -1438,18 +1487,24 @@
         const notes = activeNotes[idx] || [];
         const hasNotes = notes.length > 0;
 
-        const postitsHtml = hasNotes ? notes.map((p, pIdx) => {
+        const postitsHtml = hasNotes ? (notes.map((p, pIdx) => {
           const combinedText = `${p.tag}: ${p.text}`;
-          const typo = calcPostitTypography(combinedText, isLargeSlot);
+          const typo = calcPostitTypography(combinedText);
           return `
             <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
               <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
-              <span class="note-body" contenteditable="true" spellcheck="false" onblur="saveNoteText(${idx}, ${pIdx}, this)" oninput="handleNoteTyping(this)">
-                <strong class="note-lead">${p.tag}:</strong> <span class="note-text-val" data-placeholder="Escreva aqui...">${p.text}</span>
+              <span class="note-body">
+                <strong class="note-lead" contenteditable="false">${p.tag}:</strong>
+                <span class="note-text-val" contenteditable="true" spellcheck="false" data-placeholder="Escreva aqui..." oninput="handleNoteTyping(this, ${idx}, ${pIdx})" onblur="saveNoteText(${idx}, ${pIdx}, this)">${p.text}</span>
               </span>
             </div>
           `;
-        }).join('') : `
+        }).join('') + `
+          <div class="add-note-tile" onclick="addMockNote(${idx})" title="Adicionar mais um post-it">
+            <span class="add-tile-icon">+</span>
+            <span class="add-tile-label">Adicionar</span>
+          </div>
+        `) : `
           <div class="empty-state-clickable" onclick="addMockNote(${idx})">
             <span class="empty-state-icon">+</span>
             <span>Preencher ao clicar</span>
@@ -1544,16 +1599,36 @@
       document.querySelectorAll('.tip-anchor').forEach(a => a.classList.remove('active'));
     });
 
+    function getNextNoteTag(slotIdx) {
+      const activeNotes = stateNotes[currentVariant];
+      const currentList = activeNotes[slotIdx] || [];
+      let maxNum = 0;
+      currentList.forEach(p => {
+        const parts = (p.tag || '').split('.');
+        if (parts.length >= 2) {
+          const num = parseInt(parts[1], 10);
+          if (!isNaN(num) && num > maxNum) maxNum = num;
+        }
+      });
+      return `${slotIdx + 1}.${maxNum + 1}`;
+    }
+
+    function saveNotesToStorage() {
+      try {
+        localStorage.setItem('hsnlabs_canvas_notes_' + currentVariant, JSON.stringify(stateNotes[currentVariant]));
+      } catch (e) {}
+    }
+
     function addMockNote(slotIdx) {
       const activeNotes = stateNotes[currentVariant];
       const currentList = activeNotes[slotIdx];
       const count = currentList.length;
       const rotValues = [-1.2, 1.1, -0.9, 1.3];
       const rot = rotValues[count % rotValues.length];
-      const prefix = `${slotIdx + 1}.${count + 1}`;
+      const tag = getNextNoteTag(slotIdx);
 
       const newNote = {
-        tag: prefix,
+        tag: tag,
         text: '',
         color: getSlotDefaultColor(slotIdx),
         rot: rot
@@ -1561,6 +1636,7 @@
 
       currentList.push(newNote);
       syncPillState();
+      saveNotesToStorage();
       renderBoard();
 
       requestAnimationFrame(() => {
@@ -1570,7 +1646,17 @@
           const last = notes[notes.length - 1];
           if (last) {
             const valSpan = last.querySelector('.note-text-val');
-            if (valSpan) valSpan.focus();
+            if (valSpan) {
+              valSpan.focus();
+              try {
+                const range = document.createRange();
+                const sel = window.getSelection();
+                range.selectNodeContents(valSpan);
+                range.collapse(false);
+                sel.removeAllRanges();
+                sel.addRange(range);
+              } catch (e) {}
+            }
           }
         }
       });
@@ -1582,6 +1668,7 @@
       if (activeNotes[slotIdx]) {
         activeNotes[slotIdx].splice(noteIdx, 1);
         syncPillState();
+        saveNotesToStorage();
         renderBoard();
       }
     }
@@ -1589,18 +1676,17 @@
     function saveNoteText(slotIdx, noteIdx, el) {
       const activeNotes = stateNotes[currentVariant];
       if (activeNotes[slotIdx] && activeNotes[slotIdx][noteIdx]) {
-        const leadEl = el.querySelector('.note-lead');
-        const textEl = el.querySelector('.note-text-val');
-        if (leadEl && textEl) {
-          activeNotes[slotIdx][noteIdx].tag = leadEl.innerText.replace(/:$/, '').trim();
-          activeNotes[slotIdx][noteIdx].text = textEl.innerText.trim();
-        } else {
-          activeNotes[slotIdx][noteIdx].text = el.innerText.trim();
-        }
+        activeNotes[slotIdx][noteIdx].text = el.innerText.trim();
+        saveNotesToStorage();
       }
     }
 
-    function handleNoteTyping(el) {
+    function handleNoteTyping(el, slotIdx, noteIdx) {
+      const activeNotes = stateNotes[currentVariant];
+      if (activeNotes[slotIdx] && activeNotes[slotIdx][noteIdx]) {
+        activeNotes[slotIdx][noteIdx].text = el.innerText.trim();
+        saveNotesToStorage();
+      }
       const postit = el.closest('.paper-postit');
       if (!postit) return;
       let size = parseFloat(postit.style.fontSize) || 11.5;
