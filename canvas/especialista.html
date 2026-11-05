@@ -1486,25 +1486,29 @@
 
         const notes = activeNotes[idx] || [];
         const hasNotes = notes.length > 0;
+        const maxNotesForSlot = (s.questions.length >= 3) ? 6 : 4;
+        const canAddMore = notes.length < maxNotesForSlot;
 
-        const postitsHtml = hasNotes ? (notes.map((p, pIdx) => {
-          const combinedText = `${p.tag}: ${p.text}`;
-          const typo = calcPostitTypography(combinedText);
-          return `
-            <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
-              <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
-              <span class="note-body">
-                <strong class="note-lead" contenteditable="false">${p.tag}:</strong>
-                <span class="note-text-val" contenteditable="true" spellcheck="false" data-placeholder="Escreva aqui..." oninput="handleNoteTyping(this, ${idx}, ${pIdx})" onblur="saveNoteText(${idx}, ${pIdx}, this)">${p.text}</span>
-              </span>
-            </div>
-          `;
-        }).join('') + `
+        const addTileHtml = canAddMore ? `
           <div class="add-note-tile" onclick="addMockNote(${idx})" title="Adicionar mais um post-it">
             <span class="add-tile-icon">+</span>
             <span class="add-tile-label">Adicionar</span>
           </div>
-        `) : `
+        ` : '';
+
+        const postitsHtml = hasNotes ? (notes.map((p, pIdx) => {
+          const combinedText = `${p.tag ? p.tag + ': ' : ''}${p.text}`;
+          const typo = calcPostitTypography(combinedText);
+          const leadHtml = p.tag ? `<strong class="note-lead" contenteditable="false">${p.tag}:</strong> ` : '';
+          return `
+            <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
+              <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
+              <span class="note-body">
+                ${leadHtml}<span class="note-text-val" contenteditable="true" spellcheck="false" data-placeholder="Escreva sua anotação..." oninput="handleNoteTyping(this, ${idx}, ${pIdx})" onblur="saveNoteText(${idx}, ${pIdx}, this)">${p.text}</span>
+              </span>
+            </div>
+          `;
+        }).join('') + addTileHtml) : `
           <div class="empty-state-clickable" onclick="addMockNote(${idx})">
             <span class="empty-state-icon">+</span>
             <span>Preencher ao clicar</span>
@@ -1620,15 +1624,23 @@
     }
 
     function addMockNote(slotIdx) {
+      const cur = DATA[currentVariant];
+      const slotDef = cur.slots[slotIdx];
+      const maxNotes = (slotDef.questions.length >= 3) ? 6 : 4;
       const activeNotes = stateNotes[currentVariant];
       const currentList = activeNotes[slotIdx];
+
+      if (currentList.length >= maxNotes) {
+        showToast('Limite de notas atingido para este bloco.');
+        return;
+      }
+
       const count = currentList.length;
       const rotValues = [-1.2, 1.1, -0.9, 1.3];
       const rot = rotValues[count % rotValues.length];
-      const tag = getNextNoteTag(slotIdx);
 
       const newNote = {
-        tag: tag,
+        tag: '',
         text: '',
         color: getSlotDefaultColor(slotIdx),
         rot: rot
