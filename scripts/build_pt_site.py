@@ -152,13 +152,13 @@ def build_pt_home():
     html = safe_replace(html, '<html lang="en">', '<html lang="pt-BR">')
     
     # 1. Title and Head Meta Tags
-    html = safe_replace(html, '<title>Agentic Engineering Adoption | hsnlabs</title>', '<title>Adoção de Engenharia Agentica | hsnlabs</title>')
+    html = safe_replace(html, '<title>Agentic AI Adoption | hsnlabs</title>', '<title>Adoção de Agentic AI | hsnlabs</title>')
     html = safe_replace(html, '<meta property="og:url" content="https://hsnlabs.ai/">', '<meta property="og:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta property="og:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta property="og:title" content="hsnlabs &middot; Adoção de Engenharia Agentica">')
+    html = safe_replace(html, '<meta property="og:title" content="hsnlabs &middot; Agentic AI Adoption">', '<meta property="og:title" content="hsnlabs &middot; Adoção de Agentic AI">')
     html = safe_replace(html, '<meta property="og:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta property="og:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<meta name="twitter:url" content="https://hsnlabs.ai/">', '<meta name="twitter:url" content="https://hsnlabs.ai/pt/">')
-    html = safe_replace(html, '<meta name="twitter:title" content="hsnlabs &middot; Agentic Engineering Adoption">', '<meta name="twitter:title" content="hsnlabs &middot; Adoção de Engenharia Agentica">')
+    html = safe_replace(html, '<meta name="twitter:title" content="hsnlabs &middot; Agentic AI Adoption">', '<meta name="twitter:title" content="hsnlabs &middot; Adoção de Agentic AI">')
     html = safe_replace(html, '<meta name="twitter:description" content="hsnlabs is your enterprise AI transformation partner, operationalizing autonomous agents over legacy systems to give forward-thinking organizations the foundation to win the next decade.">', '<meta name="twitter:description" content="A hsnlabs é o seu parceiro de transformação em IA corporativa, operacionalizando agentes autônomos sobre sistemas legados para dar a organizações visionárias a base para vencer a próxima década.">')
     html = safe_replace(html, '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image.png">', '<meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-image-pt.png">')
     html = safe_replace(html, '<link rel="canonical" href="https://hsnlabs.ai/">', '<link rel="canonical" href="https://hsnlabs.ai/pt/">')
@@ -191,10 +191,10 @@ def build_pt_home():
     html = safe_replace(
         html,
         '''      <h1 class="display-hero">
-        Agentic Engineering <span style="color: var(--cyan-text);">Adoption.</span>
+        Agentic AI <span style="color: var(--cyan-text);">Adoption.</span>
       </h1>''',
         '''      <h1 class="display-hero">
-        Adoção de <span style="color: var(--cyan-text);">Engenharia Agentica.</span>
+        Adoção de <span style="color: var(--cyan-text);">Agentic AI.</span>
       </h1>'''
     )
     html = safe_replace(

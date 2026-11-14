@@ -1,18 +1,18 @@
 ---
 title: "Agentic Products & Platforms · hsnlabs"
-description: "Proprietary products and open agentic engineering platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production."
+description: "Proprietary products and open Agentic AI platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production."
 url: "https://hsnlabs.ai/en/products/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Agentic Products & Platforms · hsnlabs
 
-> Proprietary products and open agentic engineering platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production.
+> Proprietary products and open Agentic AI platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production.
 
 # Agentic Products & Platforms Proprietary systems and open infrastructure for production observability and governance.
 
-We build agentic engineering products forged in real operational trenches. Our platforms diagnose behavioral vulnerabilities, reconstruct black-box state machines, and shield critical surfaces against swarm saturation and regulatory hallucinations.
+We build Agentic AI products forged in real operational trenches. Our platforms diagnose behavioral vulnerabilities, reconstruct black-box state machines, and shield critical surfaces against swarm saturation and regulatory hallucinations.
 
 ## Featured Products
 

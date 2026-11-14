@@ -3,7 +3,7 @@ title: "Agent Analyzer · Mapeador Topológico e Engenharia Reversa LangGraph ·
 description: "Mapeador topológico em caixa-preta via sonda única para reconstrução de máquinas de estado LangGraph StateGraph no WhatsApp pela hsnlabs."
 url: "https://hsnlabs.ai/produtos/agent-analyzer/"
 locale: "pt-BR"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Agent Analyzer · Mapeador Topológico e Engenharia Reversa LangGraph · hsnlabs

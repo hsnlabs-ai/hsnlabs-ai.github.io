@@ -65,9 +65,9 @@ def extract_hero_data(html_path: Path, lang: str):
             accent = ""
     else:
         if lang == "pt":
-            lead, accent = "Adoção de", "Engenharia Agentica."
+            lead, accent = "Adoção de", "Agentic AI."
         else:
-            lead, accent = "Agentic Engineering", "Adoption."
+            lead, accent = "Agentic AI", "Adoption."
 
     return {
         "lang": "pt-BR" if lang == "pt" else "en",
@@ -228,18 +228,6 @@ def build_og_template(data: dict) -> str:
 
 def render_card(html_source: Path, lang: str, output_path: Path):
     data = extract_hero_data(html_source, lang)
-    master_path = ROOT_DIR / "assets" / "brand" / f"og-master-{lang}.png"
-    default_lead = "Adoção de" if lang == "pt" else "Agentic Engineering"
-    default_accent = "Engenharia Agentica." if lang == "pt" else "Adoption."
-    if master_path.exists() and data["lead"] == default_lead and data["accent"] == default_accent:
-        from PIL import Image
-        img = Image.open(master_path)
-        if img.size != (1200, 630):
-            img = img.resize((1200, 630), Image.Resampling.LANCZOS)
-        img.save(output_path, format="PNG", optimize=True)
-        print(f"Successfully synced master {output_path} ({output_path.stat().st_size} bytes)")
-        return
-
     html = build_og_template(data)
     temp_html = TEMP_DIR / f"hsn_og_{lang}.html"
     temp_html.write_text(html, encoding="utf-8")

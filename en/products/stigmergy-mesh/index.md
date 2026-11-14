@@ -3,7 +3,7 @@ title: "Stigmergy Mesh · Biomimetic Pheromone Routing & Collective Immune Memor
 description: "Zero-daemon Python library by hsnlabs for multi-agent indirect coordination, continuous lazy exponential pheromone decay, ACO Boltzmann routing, K-Origin Anti-Sybil quorum circuit breaking, and structural antigen fingerprinting over SQLite WAL and Redis Lua."
 url: "https://hsnlabs.ai/en/products/stigmergy-mesh/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Stigmergy Mesh · Biomimetic Pheromone Routing & Collective Immune Memory · hsnlabs

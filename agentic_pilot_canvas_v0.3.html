@@ -912,7 +912,9 @@
     const area = document.getElementById(targetAreaId);
     const postit = document.createElement('div');
     postit.className = 'postit ' + selectedColor;
-    postit.innerHTML = '<span>' + text.replace(/\n/g, '<br>') + '</span>';
+    const span = document.createElement('span');
+    span.innerText = text;
+    postit.appendChild(span);
     area.appendChild(postit);
     closeModal();
   }

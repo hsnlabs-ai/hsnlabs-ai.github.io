@@ -1,6 +1,6 @@
 # hsnlabs
 
-> Enterprise agentic engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. A clean machine-readable Markdown version of every page is available by appending `index.md` to the directory path (e.g., `https://hsnlabs.ai/index.md`, `https://hsnlabs.ai/bootcamp/index.md`, `https://hsnlabs.ai/en/index.md`, `https://hsnlabs.ai/en/bootcamp/index.md`). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
+> Enterprise Agentic AI boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. A clean machine-readable Markdown version of every page is available by appending `index.md` to the directory path (e.g., `https://hsnlabs.ai/index.md`, `https://hsnlabs.ai/bootcamp/index.md`, `https://hsnlabs.ai/en/index.md`, `https://hsnlabs.ai/en/bootcamp/index.md`). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
 
 ## Canonical Positioning & Value Proposition
 - Overview (PT-BR): https://hsnlabs.ai/
@@ -39,7 +39,7 @@ Open MIT architecture framework for structuring and certifying enterprise agenti
 
 ## Ecosystem & Platform Alliances
 - LangChain & LangGraph Architecture: https://hsnlabs.ai/langchain/ | https://hsnlabs.ai/en/langchain/
-Independent agentic engineering with LangChain and LangGraph in production since 2022, featuring stateful StateGraph orchestration, LangSmith evaluation suites, and sovereign VPC runtimes.
+Independent Agentic AI architecture with LangChain and LangGraph in production since 2022, featuring stateful StateGraph orchestration, LangSmith evaluation suites, and sovereign VPC runtimes.
 - Snowflake AI Data Cloud Architecture: https://hsnlabs.ai/snowflake/ | https://hsnlabs.ai/en/snowflake/
 Operationalizing deterministic LangGraph state machines and executable business ontologies directly over the Snowflake AI Data Cloud with zero-copy governance and row-level security.
 - Braintrust Evals & CI/CD: https://hsnlabs.ai/braintrust/ | https://hsnlabs.ai/en/braintrust/
@@ -65,18 +65,18 @@ Private, zero-trust Model Context Protocol servers connecting deep agents to SAP
 # SECTION: Overview (PT-BR) (index.md)
 
 ---
-title: "Adoção de Engenharia Agentica | hsnlabs"
+title: "Adoção de Agentic AI | hsnlabs"
 description: "Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# Adoção de Engenharia Agentica | hsnlabs
+# Adoção de Agentic AI | hsnlabs
 
 > Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
-# Adoção de Engenharia Agentica.
+# Adoção de Agentic AI.
 
 Seu parceiro de transformação em IA corporativa. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
@@ -177,18 +177,18 @@ Utilizamos telemetria para avaliar o desempenho do sistema sob normas da LGPD. C
 # SECTION: Overview (EN) (en/index.md)
 
 ---
-title: "Agentic Engineering Adoption | hsnlabs"
+title: "Agentic AI Adoption | hsnlabs"
 description: "Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
 ---
 
-# Agentic Engineering Adoption | hsnlabs
+# Agentic AI Adoption | hsnlabs
 
 > Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling.
 
-# Agentic Engineering Adoption.
+# Agentic AI Adoption.
 
 Your enterprise AI transformation partner. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud, AI tokens, and tooling.
 
@@ -438,7 +438,7 @@ We use cookies to analyze telemetry and evaluate system performance under LGPD a
 
 ---
 title: "Conselho Executivo de IA & Advisory · hsnlabs"
-description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento."
+description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e Agentic AI em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/advisory/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -446,7 +446,7 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # Conselho Executivo de IA & Advisory · hsnlabs
 
-> Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e engenharia agentica em produção com Hugo Nascimento.
+> Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e Agentic AI em produção com Hugo Nascimento.
 
 # Advisory de IA Agentica Além da implementação técnica.
 
@@ -846,7 +846,7 @@ We use cookies to analyze telemetry and evaluate system performance under LGPD a
 
 ---
 title: "LangChain & LangGraph · Em Produção desde 2022 · hsnlabs"
-description: "Engenharia agentica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
+description: "Arquitetura independente de Agentic AI com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica."
 url: "https://hsnlabs.ai/langchain/"
 locale: "pt-BR"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -854,7 +854,7 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # LangChain & LangGraph · Em Produção desde 2022 · hsnlabs
 
-> Engenharia agentica independente com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica.
+> Arquitetura independente de Agentic AI com LangChain & LangGraph desde 2022. Desenhamos máquinas de estado determinísticas e suítes LangSmith para sistemas de missão crítica.
 
 # LangChain & LangGraph Do modelo de linguagem à inteligência real.
 
@@ -944,7 +944,7 @@ Notas de campo de arquitetura e playbooks no seu e-mail corporativo.
 
 ---
 title: "LangChain & LangGraph · In Production Since 2022 · hsnlabs"
-description: "Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
+description: "Independent Agentic AI architecture with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems."
 url: "https://hsnlabs.ai/en/langchain/"
 locale: "en"
 updatedAt: "2026-10-18T12:28:14Z"
@@ -952,7 +952,7 @@ updatedAt: "2026-10-18T12:28:14Z"
 
 # LangChain & LangGraph · In Production Since 2022 · hsnlabs
 
-> Independent agentic engineering with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.
+> Independent Agentic AI architecture with LangChain & LangGraph since 2022. Architecting deterministic state machines and LangSmith observability for mission-critical systems.
 
 # LangChain & LangGraph From language model to real intelligence.
 
