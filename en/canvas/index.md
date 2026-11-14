@@ -1,26 +1,26 @@
 ---
 title: "The Agentic Canvas™ · hsnlabs"
-description: "Architecture framework by hsnlabs for designing and certifying enterprise agentic systems across two tracks: Agentic Products and Agentic Employees."
+description: "Solution design board by hsnlabs to structure business problems, human governance, and financial return before coding or piloting AI agents."
 url: "https://hsnlabs.ai/en/canvas/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T12:39:39Z"
 ---
 
 # The Agentic Canvas™ · hsnlabs
 
-> Architecture framework by hsnlabs for designing and certifying enterprise agentic systems across two tracks: Agentic Products and Agentic Employees.
+> Solution design board by hsnlabs to structure business problems, human governance, and financial return before coding or piloting AI agents.
 
-# The Agentic Canvas™
+# The Agentic Canvas™ Solution design and business validation before the first line of code.
 
-The architecture instrument by hsnlabs to design technical feasibility, operational ontologies over legacy data, human-in-the-loop sign-off, and auditable P&L return before writing the first line of code.
+Nearly half of enterprise agent PoCs die before reaching production because teams start with model selection rather than operational design. The Agentic Canvas structures scope, deterministic rules, human sign-off, and auditable P&L return so your pilot is built to survive.
 
 ## Select Your Use Case
 
-Click on either track below to open the corresponding interactive canvas in full screen.
+Choose between automating enterprise processes or leveraging senior specialists. Fill it out from scratch with your leadership to avoid ownerless PoCs without measurable return.
 
-## Dynamics & Methodology
+## Why Design Before Coding
 
-Enterprise AI pilots fail when they start with model selection without separating deterministic rules from probabilistic inference. The canvas structures ten blocks across three contiguous zones of executive decision-making.
+Enterprise AI pilots fail when they start with model selection without separating deterministic rules from probabilistic inference. This upfront design keeps your PoC from becoming technical debt and sets the stage for the Agentic Bootcamp.
 
 ### Business Diagnostics
 

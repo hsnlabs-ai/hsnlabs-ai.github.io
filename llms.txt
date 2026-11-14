@@ -17,8 +17,8 @@
 ## Strategic Advisory & Open Architecture Frameworks
 - [Agentic AI Advisory (PT-BR)](https://hsnlabs.ai/advisory/): Executive AI board and architectural advisory led by Hugo Nascimento, Founder & CPTO.
 - [Agentic AI Advisory (EN)](https://hsnlabs.ai/en/advisory/): Operating model modernization, unit margin defense, progressive legacy migration, and deterministic governance.
-- [The Agentic Canvas™ (PT-BR)](https://hsnlabs.ai/canvas/): Framework de arquitetura para estruturar e certificar sistemas agênticos corporativos.
-- [The Agentic Canvas™ (EN)](https://hsnlabs.ai/en/canvas/): Architecture framework for structuring and certifying enterprise agentic systems across Agentic Products and Agentic Employees.
+- [The Agentic Canvas™ (PT-BR)](https://hsnlabs.ai/canvas/): Quadro de design de solução e validação de negócio antes do código para sistemas agênticos corporativos.
+- [The Agentic Canvas™ (EN)](https://hsnlabs.ai/en/canvas/): Solution design board for business validation, governance, and P&L alignment before coding AI agents.
 - [Enterprise Agentic Architecture Blueprint](https://hsnlabs.ai/architecture.html): 12-component enterprise agentic architecture specification.
 
 ## Proprietary Products & Open Platforms

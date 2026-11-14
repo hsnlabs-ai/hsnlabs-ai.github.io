@@ -1,26 +1,26 @@
 ---
 title: "The Agentic Canvas™ · hsnlabs"
-description: "Framework de arquitetura da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees."
+description: "Quadro de design de solução da hsnlabs para estruturar problemas de negócio, governança humana e retorno financeiro antes de codar ou pilotar agentes de IA."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T12:39:39Z"
 ---
 
 # The Agentic Canvas™ · hsnlabs
 
-> Framework de arquitetura da hsnlabs para desenhar e homologar sistemas agênticos corporativos em duas vertentes: Agentic Products e Agentic Employees.
+> Quadro de design de solução da hsnlabs para estruturar problemas de negócio, governança humana e retorno financeiro antes de codar ou pilotar agentes de IA.
 
-# The Agentic Canvas™
+# The Agentic Canvas™ Design de solução e validação de negócio antes da primeira linha de código.
 
-O instrumento de arquitetura da hsnlabs para desenhar viabilidade técnica, ontologias sobre dados legados, supervisão humana no CPF e retorno auditável na DRE antes de escrever a primeira linha de código.
+Quase metade das PoCs de agentes morre antes de chegar em produção porque começa pelo modelo de IA e não pelo problema operacional. O The Agentic Canvas estrutura escopo, regras determinísticas, governança no CPF e retorno auditável na DRE para que sua prova de conceito nasça viável.
 
 ## Selecione o Caso de Uso
 
-Clique em uma das duas versões abaixo para abrir o quadro interativo correspondente em tela cheia.
+Escolha entre automatizar processos corporativos ou alavancar especialistas sêniores. Preencha vazio com sua liderança para evitar PoCs sem dono ou retorno.
 
-## Dinâmica e Metodologia
+## Por Que Desenhar Antes de Codar
 
-Projetos corporativos falham quando começam pela escolha do modelo de linguagem sem separar cálculo determinístico de inferência probabilística. O canvas estrutura dez blocos divididos em três zonas contíguas de decisão executiva.
+Projetos agênticos falham quando começam pelo modelo de linguagem sem separar cálculo determinístico de inferência probabilística. Este desenho prévio evita que sua PoC vire mais um passivo técnico e prepara o terreno para o Agentic Bootcamp.
 
 ### Diagnóstico de Negócios
 

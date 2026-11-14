@@ -3,7 +3,7 @@ title: "Agentic Bootcamp™ · hsnlabs"
 description: "We embed senior engineering leadership with your team to build AI agents that survive production. 100% credited toward production rollout for qualified accounts."
 url: "https://hsnlabs.ai/en/bootcamp/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T12:39:39Z"
 ---
 
 # Agentic Bootcamp™ · hsnlabs
@@ -18,7 +18,7 @@ We embed senior engineering leadership inside your operation. 100% credited towa
 
 Database read replicas, ERP connections, and security isolation before writing code.
 
-Proprietary framework to understand legacy systems and generate formal specs, creating layers where the AI model is swappable.
+We apply The Agentic Canvas to map legacy workflows and produce formal specs before writing code.
 
 Deploying deep agents in a secure, isolated test environment, testing edge cases on LangGraph state graphs and sovereign runtimes.
 

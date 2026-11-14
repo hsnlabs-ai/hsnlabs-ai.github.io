@@ -3,7 +3,7 @@ title: "Agentic Bootcamp™ · hsnlabs"
 description: "Alocamos liderança sênior de engenharia junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T12:39:39Z"
 ---
 
 # Agentic Bootcamp™ · hsnlabs
@@ -18,7 +18,7 @@ Alocamos liderança sênior de engenharia dentro da sua operação. Cem por cent
 
 Réplicas de leitura de banco de dados, conexões ERP e isolamento de segurança antes de escrever qualquer código.
 
-Framework próprio para entender o legado e gerar spec formais, criando camadas onde o modelo de IA é peça trocável.
+Aplicamos o The Agentic Canvas para mapear o legado e gerar especificações formais antes de escrever código.
 
 Implantação de deep agents em ambiente de teste isolado e seguro, validando casos de borda com grafos de estado LangGraph e runtimes soberanos.
 
