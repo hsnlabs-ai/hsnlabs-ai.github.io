@@ -3,7 +3,7 @@ title: "Política de Privacidade · hsnlabs"
 description: "Política de Privacidade da hsnlabs. Saiba como tratamos, processamos e protegemos dados corporativos em conformidade com a LGPD e padrões internacionais de privacidade."
 url: "https://hsnlabs.ai/privacy-policy/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Política de Privacidade · hsnlabs
@@ -124,7 +124,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

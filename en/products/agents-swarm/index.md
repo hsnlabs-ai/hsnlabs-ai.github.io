@@ -3,7 +3,7 @@ title: "Agents Swarm · Agent Observability & Diagnosis · hsnlabs"
 description: "Biomimetic hive of synthetic consumers for external observability, simulation-based vulnerability diagnosis, and pre-production dataset refinement on WhatsApp and the Web."
 url: "https://hsnlabs.ai/en/products/agents-swarm/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Agents Swarm · Agent Observability & Diagnosis · hsnlabs
@@ -88,7 +88,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Products
+- Portfolio
 
 - Advisory
 

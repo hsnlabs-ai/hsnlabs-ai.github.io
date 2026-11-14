@@ -3,7 +3,7 @@ title: "The Agentic Canvas™ · hsnlabs"
 description: "Quadro de design de solução da hsnlabs para estruturar problemas de negócio, governança humana e retorno financeiro antes de codar ou pilotar agentes de IA."
 url: "https://hsnlabs.ai/canvas/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:39:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # The Agentic Canvas™ · hsnlabs
@@ -40,7 +40,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

@@ -28,13 +28,13 @@
       "description_pt": "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e Agentic AI em produção com Hugo Nascimento."
     },
     {
-      "id": "site_products",
-      "en_path": "/en/products/",
-      "pt_path": "/produtos/",
-      "title_en": "Agentic Products & Platforms · hsnlabs",
-      "title_pt": "Produtos e Plataformas Agênticas · hsnlabs",
-      "description_en": "Proprietary products and open Agentic AI platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production.",
-      "description_pt": "Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
+      "id": "site_portfolio",
+      "en_path": "/en/portfolio/",
+      "pt_path": "/portfolio/",
+      "title_en": "Portfolio · hsnlabs",
+      "title_pt": "Portfólio · hsnlabs",
+      "description_en": "hsnlabs production portfolio. Explore our enterprise platform Eva People alongside open-source systems Agents Swarm, Agent Analyzer, Honeycomb Protocol, Stigmergy Mesh, and Swarm Self-Healing.",
+      "description_pt": "Portfólio de projetos em produção da hsnlabs. Conheça a plataforma corporativa Eva People e os sistemas abertos Agents Swarm, Agent Analyzer, Protocolo Honeycomb, Stigmergy Mesh e Swarm Self-Healing."
     },
     {
       "id": "site_products_agents_swarm",

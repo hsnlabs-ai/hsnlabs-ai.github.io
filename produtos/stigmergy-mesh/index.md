@@ -3,7 +3,7 @@ title: "Stigmergy Mesh · Coordenação Estigmérgica Biomimética e Memória Im
 description: "Biblioteca Python sem processos em segundo plano para coordenação indireta de múltiplos agentes, decaimento exponencial contínuo de feromônios, roteamento probabilístico de Boltzmann, quórum imunológico anti-Sybil e impressão digital estrutural de antígenos sobre SQLite WAL e Redis Lua pela hsnlabs."
 url: "https://hsnlabs.ai/produtos/stigmergy-mesh/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Stigmergy Mesh · Coordenação Estigmérgica Biomimética e Memória Imunológica · hsnlabs
@@ -96,7 +96,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

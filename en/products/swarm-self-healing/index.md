@@ -3,7 +3,7 @@ title: "Swarm Self-Healing · Deterministic Homeostasis & Failover for AI Swarms
 description: "Deterministic homeostasis, sub-5s hot failover, preventive heat cooldown, 3-tier proxy affinity, and resource circuit breakers for autonomous AI swarms by hsnlabs."
 url: "https://hsnlabs.ai/en/products/swarm-self-healing/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Swarm Self-Healing · Deterministic Homeostasis & Failover for AI Swarms · hsnlabs
@@ -78,7 +78,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Products
+- Portfolio
 
 - Advisory
 

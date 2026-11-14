@@ -1,22 +1,28 @@
 ---
-title: "Agentic Products & Platforms · hsnlabs"
-description: "Proprietary products and open Agentic AI platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production."
-url: "https://hsnlabs.ai/en/products/"
+title: "Portfolio · Systems in Production · hsnlabs"
+description: "hsnlabs production portfolio. Explore our enterprise platform Eva People alongside open-source systems Agents Swarm, Agent Analyzer, Honeycomb Protocol, Stigmergy Mesh, and Swarm Self-Healing."
+url: "https://hsnlabs.ai/en/portfolio/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
-# Agentic Products & Platforms · hsnlabs
+# Portfolio · Systems in Production · hsnlabs
 
-> Proprietary products and open Agentic AI platforms by hsnlabs. Explore Agents Swarm for external observability and behavioral diagnosis of surface agents in production.
+> hsnlabs production portfolio. Explore our enterprise platform Eva People alongside open-source systems Agents Swarm, Agent Analyzer, Honeycomb Protocol, Stigmergy Mesh, and Swarm Self-Healing.
 
-# Agentic Products & Platforms Proprietary systems and open infrastructure for production observability and governance.
+# Portfolio
 
-We build Agentic AI products forged in real operational trenches. Our platforms diagnose behavioral vulnerabilities, reconstruct black-box state machines, and shield critical surfaces against swarm saturation and regulatory hallucinations.
+Proprietary enterprise platform and open-source systems in production by hsnlabs.
 
-## Featured Products
+## Eva People
 
-External observability and behavioral diagnosis for conversational agents and mission-critical platforms.
+Enterprise platform built by hsnlabs for HR and internal operations, serving over 100,000 employees across 20 active enterprise accounts such as LWSA, Softplan, Unipar, and Cast Group on WhatsApp, Slack, and Microsoft Teams, run today by a lean operation assisted by internal agents.
+
+- • Proven Production Scale: Over 100,000 employees served, 20 active enterprise accounts, and 70% faster operational response times.
+
+- • Architecture & Integrations: Hexagonal core backed by BullJS and Redis queues, MongoDB Atlas, Auth0, and connectors for TOTVS, Senior, SAP, and Gupy.
+
+- • Agent-Assisted Operations: Operated daily by 1 person supported by internal triage and support agents with human approval gates and 70%+ operating margin.
 
 ### Agents Swarm
 
@@ -74,7 +80,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Products
+- Portfolio
 
 - Advisory
 

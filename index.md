@@ -3,7 +3,7 @@ title: "Adoção de Agentic AI | hsnlabs"
 description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:39:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Adoção de Agentic AI | hsnlabs
@@ -88,7 +88,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

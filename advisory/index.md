@@ -3,7 +3,7 @@ title: "Conselho Executivo de IA & Advisory · hsnlabs"
 description: "Conselho executivo de IA e advisory para C-levels e founders enfrentando a disrupção autônoma. Transição de arquitetura, defesa de margem e Agentic AI em produção com Hugo Nascimento."
 url: "https://hsnlabs.ai/advisory/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Conselho Executivo de IA & Advisory · hsnlabs
@@ -78,7 +78,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

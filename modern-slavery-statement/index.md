@@ -3,7 +3,7 @@ title: "Declaração de Conformidade e Ética · hsnlabs"
 description: "Declaração de Conformidade e Ética da hsnlabs nos termos da Seção 54 do UK Modern Slavery Act 2015 e dos padrões internacionais de integridade na cadeia de suprimentos."
 url: "https://hsnlabs.ai/modern-slavery-statement/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Declaração de Conformidade e Ética · hsnlabs
@@ -90,7 +90,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

@@ -1,22 +1,28 @@
 ---
-title: "Produtos e Plataformas Agênticas · hsnlabs"
-description: "Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
-url: "https://hsnlabs.ai/produtos/"
+title: "Portfólio · Projetos em Produção · hsnlabs"
+description: "Portfólio de projetos em produção da hsnlabs. Conheça a plataforma corporativa Eva People e os sistemas abertos Agents Swarm, Agent Analyzer, Protocolo Honeycomb, Stigmergy Mesh e Swarm Self-Healing."
+url: "https://hsnlabs.ai/portfolio/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
-# Produtos e Plataformas Agênticas · hsnlabs
+# Portfólio · Projetos em Produção · hsnlabs
 
-> Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.
+> Portfólio de projetos em produção da hsnlabs. Conheça a plataforma corporativa Eva People e os sistemas abertos Agents Swarm, Agent Analyzer, Protocolo Honeycomb, Stigmergy Mesh e Swarm Self-Healing.
 
-# Produtos e Plataformas Agênticas Sistemas proprietários e infraestrutura aberta para observabilidade e governança em produção.
+# Portfólio
 
-Desenvolvemos produtos de Agentic AI nascidos em trincheiras reais de operação. Nossas ferramentas diagnosticam vulnerabilidades comportamentais, reconstroem máquinas de estado em caixa-preta e protegem superfícies críticas contra saturação de enxames e alucinações regulatórias.
+Plataforma corporativa e projetos abertos em produção pela hsnlabs.
 
-## Produtos em Destaque
+## Eva People
 
-Observabilidade externa e diagnóstico comportamental para agentes conversacionais e plataformas críticas.
+Plataforma corporativa da hsnlabs para RH e operações internas que já atendeu mais de 100 mil colaboradores em 20 clientes enterprise como LWSA, Softplan, Unipar e Cast Group pelo WhatsApp, Slack e Microsoft Teams, mantida hoje por uma operação enxuta assistida por agentes internos.
+
+- • Escala Comprovada: Mais de 100 mil colaboradores atendidos, 20 contas ativas e redução de 70% no tempo de resposta operacional.
+
+- • Arquitetura e Integrações: Núcleo hexagonal com filas em BullJS e Redis, MongoDB Atlas, Auth0 e conectores para TOTVS, Sênior, SAP e Gupy.
+
+- • Operação Assistida por Agentes: Base mantida por 1 pessoa apoiada por agentes internos de suporte e triagem com revisão humana e margem acima de 70%.
 
 ### Agents Swarm
 
@@ -74,7 +80,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

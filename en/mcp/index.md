@@ -3,7 +3,7 @@ title: "Enterprise MCP Servers · hsnlabs"
 description: "We build private, secure Model Context Protocol servers inside your enterprise infrastructure. Connect autonomous agents to core ERPs and databases under zero-trust governance."
 url: "https://hsnlabs.ai/en/mcp/"
 locale: "en"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Enterprise MCP Servers · hsnlabs
@@ -88,7 +88,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Products
+- Portfolio
 
 - Advisory
 

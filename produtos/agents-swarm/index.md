@@ -3,7 +3,7 @@ title: "Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs"
 description: "Colmeia biomimética de clientes sintéticos para observabilidade externa, diagnóstico de brechas em simulações e atualização de datasets antes da produção."
 url: "https://hsnlabs.ai/produtos/agents-swarm/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:27:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Agents Swarm · Observabilidade e Diagnóstico de Agentes · hsnlabs
@@ -88,7 +88,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

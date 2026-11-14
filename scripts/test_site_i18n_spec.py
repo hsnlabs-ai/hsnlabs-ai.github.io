@@ -9,7 +9,7 @@ PAGES = [
     {"id": "home", "pt": SITE_DIR / "index.html", "en": SITE_DIR / "en" / "index.html", "path_pt": "/", "path_en": "/en/"},
     {"id": "bootcamp", "pt": SITE_DIR / "bootcamp" / "index.html", "en": SITE_DIR / "en" / "bootcamp" / "index.html", "path_pt": "/bootcamp/", "path_en": "/en/bootcamp/"},
     {"id": "advisory", "pt": SITE_DIR / "advisory" / "index.html", "en": SITE_DIR / "en" / "advisory" / "index.html", "path_pt": "/advisory/", "path_en": "/en/advisory/"},
-    {"id": "produtos", "pt": SITE_DIR / "produtos" / "index.html", "en": SITE_DIR / "en" / "products" / "index.html", "path_pt": "/produtos/", "path_en": "/en/products/"},
+    {"id": "portfolio", "pt": SITE_DIR / "portfolio" / "index.html", "en": SITE_DIR / "en" / "portfolio" / "index.html", "path_pt": "/portfolio/", "path_en": "/en/portfolio/"},
     {"id": "agents_swarm", "pt": SITE_DIR / "produtos" / "agents-swarm" / "index.html", "en": SITE_DIR / "en" / "products" / "agents-swarm" / "index.html", "path_pt": "/produtos/agents-swarm/", "path_en": "/en/products/agents-swarm/"},
     {"id": "agent_analyzer", "pt": SITE_DIR / "produtos" / "agent-analyzer" / "index.html", "en": SITE_DIR / "en" / "products" / "agent-analyzer" / "index.html", "path_pt": "/produtos/agent-analyzer/", "path_en": "/en/products/agent-analyzer/"},
     {"id": "honeycomb_protocol", "pt": SITE_DIR / "produtos" / "honeycomb-protocol" / "index.html", "en": SITE_DIR / "en" / "products" / "honeycomb-protocol" / "index.html", "path_pt": "/produtos/honeycomb-protocol/", "path_en": "/en/products/honeycomb-protocol/"},
@@ -87,8 +87,8 @@ def test_gate_s4_language_isolation():
         nav_match = re.search(r'<div class="nav-menu"[^>]*>(.*?)</div>', pt_content, re.DOTALL)
         if nav_match:
             nav_html = nav_match.group(1)
-            if 'Produtos' in nav_html:
-                assert '/produtos/' in nav_html and '/en/products' not in nav_html, f"Link de Produtos em {item['pt']} nao usa rota PT"
+            if 'Portfólio' in nav_html:
+                assert '/portfolio/' in nav_html and '/en/portfolio' not in nav_html, f"Link de Portfolio em {item['pt']} nao usa rota PT"
             if 'Advisory' in nav_html:
                 assert '/advisory' in nav_html and '/en/advisory' not in nav_html, f"Link de Advisory em {item['pt']} nao usa rota PT"
             if 'Playbooks' in nav_html:
@@ -156,7 +156,7 @@ def test_gate_s7_metadata_localization():
             assert og_img and tw_img and og_img.group(1) == tw_img.group(1), f"ERRO: og:image != twitter:image em {file_path}"
 
             expected_og_pt = {
-                "produtos": "og-products-pt.png",
+                
                 "agents_swarm": "og-agents-swarm-pt.png",
                 "agent_analyzer": "og-agent-analyzer-pt.png",
                 "honeycomb_protocol": "og-honeycomb-protocol-pt.png",
@@ -165,7 +165,7 @@ def test_gate_s7_metadata_localization():
             }.get(item["id"], "og-image-pt.png")
 
             expected_og_en = {
-                "produtos": "og-products.png",
+                
                 "agents_swarm": "og-agents-swarm.png",
                 "agent_analyzer": "og-agent-analyzer.png",
                 "honeycomb_protocol": "og-honeycomb-protocol.png",
@@ -240,7 +240,7 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "en" / "index.html",
         SITE_DIR / "en" / "bootcamp" / "index.html",
         SITE_DIR / "en" / "advisory" / "index.html",
-        SITE_DIR / "en" / "products" / "index.html",
+        SITE_DIR / "en" / "portfolio" / "index.html",
         SITE_DIR / "en" / "products" / "agents-swarm" / "index.html",
         SITE_DIR / "en" / "products" / "agent-analyzer" / "index.html",
         SITE_DIR / "en" / "products" / "honeycomb-protocol" / "index.html",
@@ -261,7 +261,7 @@ def test_gate_s9_footer_consistency():
         SITE_DIR / "index.html",
         SITE_DIR / "bootcamp" / "index.html",
         SITE_DIR / "advisory" / "index.html",
-        SITE_DIR / "produtos" / "index.html",
+        SITE_DIR / "portfolio" / "index.html",
         SITE_DIR / "produtos" / "agents-swarm" / "index.html",
         SITE_DIR / "produtos" / "agent-analyzer" / "index.html",
         SITE_DIR / "produtos" / "honeycomb-protocol" / "index.html",

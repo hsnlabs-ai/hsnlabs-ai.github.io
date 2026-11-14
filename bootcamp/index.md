@@ -3,7 +3,7 @@ title: "Agentic Bootcamp™ · hsnlabs"
 description: "Alocamos liderança sênior de engenharia junto à sua equipe para construir agentes de IA que operam em produção. Cem por cento creditado para o contrato de implantação em contas qualificadas."
 url: "https://hsnlabs.ai/bootcamp/"
 locale: "pt-BR"
-updatedAt: "2026-11-14T12:39:39Z"
+updatedAt: "2026-11-14T13:04:38Z"
 ---
 
 # Agentic Bootcamp™ · hsnlabs
@@ -44,7 +44,7 @@ Rua Pais Leme, 215 Conjunto 1713 Pinheiros, São Paulo
 
 - Agentic Bootcamp™
 
-- Produtos
+- Portfólio
 
 - Advisory
 

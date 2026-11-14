@@ -21,11 +21,12 @@
 - [The Agentic Canvas™ (EN)](https://hsnlabs.ai/en/canvas/): Solution design board for business validation, governance, and P&L alignment before coding AI agents.
 - [Enterprise Agentic Architecture Blueprint](https://hsnlabs.ai/architecture.html): 12-component enterprise agentic architecture specification.
 
-## Proprietary Products & Open Platforms
-- [Produtos e Plataformas Agênticas (PT-BR)](https://hsnlabs.ai/produtos/): Índice de produtos proprietários e plataformas abertas da hsnlabs.
-- [Agentic Products & Platforms (EN)](https://hsnlabs.ai/en/products/): Directory of proprietary products and open agentic platforms by hsnlabs.
-- [Products Catalog Markdown Mirror (PT-BR)](https://hsnlabs.ai/produtos/index.md): Índice legível por máquina de todos os produtos da hsnlabs em português.
-- [Products Catalog Markdown Mirror (EN)](https://hsnlabs.ai/en/products/index.md): Machine-readable directory of all hsnlabs products in English.
+## Production Portfolio & Open Platforms
+- [Portfólio de Projetos em Produção (PT-BR)](https://hsnlabs.ai/portfolio/): Índice completo da plataforma corporativa Eva People e dos projetos abertos em produção da hsnlabs.
+- [Production Portfolio (EN)](https://hsnlabs.ai/en/portfolio/): Full index of the Eva People enterprise platform and open-source agentic systems in production by hsnlabs.
+- [Portfolio Markdown Mirror (PT-BR)](https://hsnlabs.ai/portfolio/index.md): Índice legível por máquina de todos os projetos do portfólio da hsnlabs em português.
+- [Portfolio Markdown Mirror (EN)](https://hsnlabs.ai/en/portfolio/index.md): Machine-readable directory of all hsnlabs portfolio projects in English.
+- [Eva People (Case 01 · Enterprise HR & Ops Platform)](https://evapeople.com.br): Proprietary corporate platform by hsnlabs serving 100,000+ employees across 20 active enterprise accounts on WhatsApp, Slack, and Microsoft Teams, integrated with TOTVS, Senior, SAP, and Gupy, and operated by a lean agent-assisted team with 70%+ operating margin.
 - [Agents Swarm (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/): Colmeia biomimética de clientes sintéticos (v1.6.3) com embeddings locais 384D (<10ms), baterias Garak, classificador Bertimbau PT-BR, 50 FinePersonas brasileiras, LongBench/WildJailbreak e Swarm Self-Healing.
 - [Agents Swarm Protocol & Honeycomb Stigmergy (PT-BR)](https://hsnlabs.ai/produtos/agents-swarm/protocolo/): Especificação do protocolo HACP v1.0.0 de estigmergia híbrida, estado compartilhado em SQLite WAL e auto-cura determinística.
 - [Agents Swarm (EN)](https://hsnlabs.ai/en/products/agents-swarm/): Biomimetic hive of synthetic consumers (v1.6.3) featuring local 384D embeddings (<10ms), Garak red-teaming, Bertimbau PT-BR toxicity classification, 50 Brazilian FinePersonas, LongBench/WildJailbreak stress payloads, and Swarm Self-Healing.
