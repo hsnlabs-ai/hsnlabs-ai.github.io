@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hsnlabs.ai/produtos/">
   <meta property="og:title" content="Produtos e Plataformas Agênticas &middot; hsnlabs">
-  <meta property="og:description" content="Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
+  <meta property="og:description" content="Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
   <meta property="og:image" content="https://hsnlabs.ai/assets/brand/og-products-pt.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://hsnlabs.ai/produtos/">
   <meta name="twitter:title" content="Produtos e Plataformas Agênticas &middot; hsnlabs">
-  <meta name="twitter:description" content="Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
+  <meta name="twitter:description" content="Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
   <meta name="twitter:image" content="https://hsnlabs.ai/assets/brand/og-products-pt.png">
 
   <link rel="canonical" href="https://hsnlabs.ai/produtos/">
@@ -26,7 +26,7 @@
   <link rel="alternate" hreflang="en" href="https://hsnlabs.ai/en/products/">
   <link rel="alternate" hreflang="pt-BR" href="https://hsnlabs.ai/produtos/">
   <link rel="alternate" hreflang="x-default" href="https://hsnlabs.ai/produtos/">
-  <meta name="description" content="Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
+  <meta name="description" content="Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/assets/brand/favicons/favicon.ico">
@@ -42,7 +42,7 @@
     "name": "Produtos e Plataformas Agênticas hsnlabs",
     "applicationCategory": "SecurityApplication",
     "operatingSystem": "Cross-platform",
-    "description": "Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.",
+    "description": "Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.",
     "author": {
       "@type": "Organization",
       "name": "hsnlabs",
@@ -1509,7 +1509,7 @@
 
   </style>
   <!-- Apollo Website Visitor Tracking -->
-  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+  <script>function initApollo(){if(localStorage.getItem('hsn_cookie_consent')!=='accepted')return;var n=Math.random().toString(36).substring(7),o=document.createElement("script");
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"69e90a89f9d8290015e5446a"})},
 document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}else{window.addEventListener("load",function(){setTimeout(initApollo,1500)})}</script>
@@ -1566,7 +1566,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
       </h1>
 
       <p class="hero-subtitle">
-        Desenvolvemos produtos de engenharia agêntica nascidos em trincheiras reais de operação. Nossas ferramentas diagnosticam vulnerabilidades comportamentais, reconstroem máquinas de estado em caixa-preta e protegem superfícies críticas contra saturação de enxames e alucinações regulatórias.
+        Desenvolvemos produtos de Agentic AI nascidos em trincheiras reais de operação. Nossas ferramentas diagnosticam vulnerabilidades comportamentais, reconstroem máquinas de estado em caixa-preta e protegem superfícies críticas contra saturação de enxames e alucinações regulatórias.
       </p>
 
       <div class="hero-actions">
@@ -1771,7 +1771,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
           <div class="footer-subscribe-email">
             <div class="footer-col-title">Siga em Contato</div>
             <p style="font-size: 0.82rem; color: var(--muted); margin: 0 0 10px 0; line-height: 1.45;">Notas de campo de arquitetura e playbooks no seu e-mail corporativo.</p>
-            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).finally(function() { b.innerText='Inscrito'; inp.value=''; setTimeout(function() { b.disabled=false; b.innerText='Assinar'; }, 4000); });">
+            <form class="footer-newsletter-form" onsubmit="event.preventDefault(); const f=this; const b=f.querySelector('button'); const inp=f.querySelector('input'); b.disabled=true; b.innerText='Enviando...'; fetch('https://formsubmit.co/ajax/35dfb0126e4a367c94779f22869251db', {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify({email:inp.value, type:'newsletter', _subject:'Novo Assinante Newsletter hsnlabs', _captcha:'false'})}).then(function(res){if(res.ok){b.innerText='Inscrito';inp.value='';}else{b.innerText='Erro. Tente de novo';}}).catch(function(){b.innerText='Erro de conexao';}).finally(function(){setTimeout(function(){b.disabled=false;b.innerText='Assinar';},4000);});">
               <div style="display: flex; gap: 8px;">
                 <input type="email" name="email" placeholder="seu.email@empresa.com" required style="background: var(--surface-card); border: 1px solid var(--hairline-strong); padding: 9px 12px; font-size: 0.84rem; color: var(--ink); border-radius: 0; outline: none; flex: 1; min-width: 0; font-family: 'Inter', sans-serif;">
                 <button type="submit" class="btn btn-primary" style="padding: 9px 18px; font-size: 0.84rem; border-radius: 0; cursor: pointer; white-space: nowrap; flex-shrink: 0;">Assinar</button>
@@ -1797,7 +1797,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
               </a>
             </div>
             <div style="font-size: 0.76rem; color: var(--muted); margin-top: 8px; line-height: 1.4;">
-              Fora do hype, discutimos como a engenharia agentica multiplica e alavanca a capacidade laboral humana.
+              Fora do hype, discutimos como Agentic AI multiplica e alavanca a capacidade laboral humana.
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ title: "Agent Analyzer · Topological Mapper & LangGraph Reverse Engineering · 
 description: "Single-probe black-box conversational agent topology mapper for WhatsApp and LangGraph StateGraph reconstruction by hsnlabs."
 url: "https://hsnlabs.ai/en/products/agent-analyzer/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Agent Analyzer · Topological Mapper & LangGraph Reverse Engineering · hsnlabs

@@ -1,16 +1,16 @@
 ---
-title: "Adoção de Engenharia Agentica | hsnlabs"
+title: "Adoção de Agentic AI | hsnlabs"
 description: "Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas."
 url: "https://hsnlabs.ai/"
 locale: "pt-BR"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
-# Adoção de Engenharia Agentica | hsnlabs
+# Adoção de Agentic AI | hsnlabs
 
 > Estruturamos e executamos o seu roadmap de produtos agênticos. Implementamos agentes autônomos sobre sistemas legados, começando pelo nosso Agentic Bootcamp™ com cerca de US$ 5.000 em nuvem, tokens de IA e ferramentas.
 
-# Adoção de Engenharia Agentica.
+# Adoção de Agentic AI.
 
 Headless Agents: Agentes de backoffice, dados e automação interna.
 

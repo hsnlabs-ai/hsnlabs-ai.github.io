@@ -1504,7 +1504,7 @@
              <div class="paper-postit ${p.color}" style="transform: rotate(${p.rot}deg); font-size: ${typo.fontSize}; line-height: ${typo.lineHeight};">
               <button class="del-postit-btn" title="Remover post-it" onclick="removeNote(event, ${idx}, ${pIdx})">&times;</button>
               <span class="note-body">
-                ${leadHtml}<span class="note-text-val" contenteditable="true" spellcheck="false" data-placeholder="Escreva sua anotação..." oninput="handleNoteTyping(this, ${idx}, ${pIdx})" onblur="saveNoteText(${idx}, ${pIdx}, this)">${p.text}</span>
+                ${leadHtml}<span class="note-text-val" contenteditable="true" spellcheck="false" data-placeholder="Escreva sua anotação..." oninput="handleNoteTyping(this, ${idx}, ${pIdx})" onblur="saveNoteText(${idx}, ${pIdx}, this)">${(p.text||'').replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</span>
               </span>
             </div>
           `;

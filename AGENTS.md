@@ -6,9 +6,9 @@ Operational directives for AI coding agents maintaining, extending, or refactori
 
 ## 1. Mission and Core Positioning
 
-hsnlabs is an enterprise agentic engineering boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
+hsnlabs is an enterprise Agentic AI boutique building custom, resilient multi-agent architectures on executable business ontologies for mission-critical enterprise operations.
 
-* **Core Positioning:** `Adoção de Engenharia Agentica` (`Agentic Engineering Adoption` in EN). We structure and execute enterprise agentic roadmaps across both **Headless Agents** (backoffice, data, BPO replacement, and internal workflows) and **Surface Agents** (frontoffice real-time voice and text interfaces with end customers) over legacy systems.
+* **Core Positioning:** `Adoção de Agentic AI` (`Agentic AI Adoption` in EN). We structure and execute enterprise agentic roadmaps across both **Headless Agents** (backoffice, data, BPO replacement, and internal workflows) and **Surface Agents** (frontoffice real-time voice and text interfaces with end customers) over legacy systems.
 * **Language Architecture (Root PT-BR Default & `/en/` Secondary):**
   * Primary Brazilian Portuguese (`pt-BR`) lives at root routes: `/`, `/bootcamp/`, `/advisory/`, `/playbooks/`, `/mcp/`, `/langchain/`, `/snowflake/`, `/databricks/`, `/braintrust/`, `/canvas/`, `/privacy-policy/`, `/modern-slavery-statement/`.
   * Secondary English (`en`) mirror lives under `/en/`: `/en/`, `/en/bootcamp/`, `/en/advisory/`, `/en/playbooks/`, `/en/mcp/`, `/en/langchain/`, `/en/snowflake/`, `/en/databricks/`, `/en/braintrust/`, `/en/canvas/`, `/en/privacy-policy/`, `/en/modern-slavery-statement/`.
@@ -40,7 +40,7 @@ The home page (`index.html` and `en/index.html`) follows a 6-part editorial arch
 2. **Hero Section (`.hero-section`):**
    * **Brand Emblem (`.brand-symbol-box`):** Centered `96x96px` cyan square (`#52B4FD`, strict `border-radius: 0`) with interactive WebGL/2D water ripple canvas (`#waterEmblemCanvas`) and white origami carp (`/assets/brand/elements/origami-carp-clean.png`).
    * **Single-DOM Headline & Origami Paper Notes Stage (`.hero-stage-flank` > `.hero-headline-stage`):**
-     * Display Headline (`h1.display-hero`): `Adoção de <span style="color: var(--cyan-text);">Engenharia Agentica.</span>` (`Agentic Engineering <span style="color: var(--cyan-text);">Adoption.</span>` in EN). Never nest `<div>` or `<p>` inside `<h1>` so M2M Markdown extraction (`scripts/setup_apollo_and_m2m.py`) preserves the `#` heading.
+     * Display Headline (`h1.display-hero`): `Adoção de <span style="color: var(--cyan-text);">Agentic AI.</span>` (`Agentic AI <span style="color: var(--cyan-text);">Adoption.</span>` in EN). Never nest `<div>` or `<p>` inside `<h1>` so M2M Markdown extraction (`scripts/setup_apollo_and_m2m.py`) preserves the `#` heading.
      * Unified Origami Paper Pair (`.hero-origami-pair`): Single set of DOM nodes for `.flank-note-left` (**`Headless Agents`** — *"Agentes de backoffice, dados e automação interna."*) and `.flank-note-right` (**`Surface Agents`** — *"Agentes de frontoffice em voz e texto com o cliente."*). Each `.origami-note` features the multiplied crumpled paper texture, a 45-degree folded top-right corner (`::after`), zero top pin-lines, and strictly two typographic levels: `.note-heading` in `Cormorant Garamond` colored `var(--cyan-text)` (`#0284c7`) and `.note-text` in smaller `Inter` with `<span class="sr-only">` label prefixes.
      * Symmetrical Blue Curved Arrows: On desktop (`> 1120px`), `.curved-arrow-left` and `.curved-arrow-right` (`stroke="#0284c7"`, `stroke-dasharray="5 4"`) arc out from the left and right edges of `.hero-headline-stage` down into the flanking origami notes. On tablet/mobile (`<= 1120px`), `.hero-origami-pair` transitions via CSS to a centered 2-column grid (`max-width: 460px`) beneath `.mobile-arrows-bar`.
    * **Hero Tagline (`.hero-tagline`):** Two concise sentences introducing the `Agentic Bootcamp™` inline link (`class="inline-bootcamp-link"`) and US$ 5,000 ecosystem credits package.
@@ -61,7 +61,7 @@ The home page (`index.html` and `en/index.html`) follows a 6-part editorial arch
      * Interactive Architecture Blueprint Viewport (`.blueprint-viewport` on desktop, `.blueprint-mobile-card` on `<= 768px`, plus `.sr-only` 12-component semantic ordered list).
 
 5. **Editorial Insights Section (`#editorial` — "Para ler antes de decidir."):**
-   * Three Spoke essay cards (`Falhas Reais` / `Why Agents Fail`, `Engenharia Agentica` / `Agentic Engineering`, `Futuro do Trabalho` / `Future of Work`) linking to `/blog/pt/post/...` and `/blog/post/...`.
+   * Three Spoke essay cards (`Falhas Reais` / `Why Agents Fail`, `Agentic AI`, `Futuro do Trabalho` / `Future of Work`) linking to `/blog/pt/post/...` and `/blog/post/...`.
 
 6. **Contact Section (`#contact`) & Founder Callout:**
    * **Founder Callout (`.hero-founder-callout`):** Positioned at the top of `#contact` (`max-width: 860px !important`). Left identity column is locked to `width: 278px; flex-shrink: 0;` on desktop (`> 920px`) so the 10-second synchronized rotation (`assets/js/founder-rotation.js`, up to 30 uppercase chars `'PRECISA DE AJUDA PARA COMEÇAR?'`) never causes horizontal layout jumps or clips the CTA button. Center column (`.founder-cred-group`) displays localized `LangChain` (`Certificado ↗`), `Snowflake` (`Parceiro ↗`), and `Databricks` (`Parceiro ↗`) badges. Right column (`.founder-cta-wrap`) pairs `.bp-arrow-header` with `Iniciar Conversa` / `Start a Conversation` (`23px` right inner padding).

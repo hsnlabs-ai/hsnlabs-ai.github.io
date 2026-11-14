@@ -6,8 +6,8 @@ Operational standards for applying the hsnlabs brand across digital products, en
 
 ## 1. Brand Concept and Metaphor
 
-* **Core Positioning:** Enterprise agentic engineering boutique driving `Adoção de Engenharia Agentica` (`Agentic Engineering Adoption`), building resilient multi-agent architectures on executable business ontologies across both **Headless Agents** (backoffice, data, BPO replacement, and internal automation) and **Surface Agents** (frontoffice real-time voice and text customer interfaces).
-* **Approved Descriptors:** `Adoção de Engenharia Agentica`, `Enterprise Agentic Architecture`, `Sistemas em Produção`.
+* **Core Positioning:** Enterprise Agentic AI boutique driving `Adoção de Agentic AI` (`Agentic AI Adoption`), building resilient multi-agent architectures on executable business ontologies across both **Headless Agents** (backoffice, data, BPO replacement, and internal automation) and **Surface Agents** (frontoffice real-time voice and text customer interfaces).
+* **Approved Descriptors:** `Adoção de Agentic AI`, `Enterprise Agentic Architecture`, `Sistemas em Produção`.
 * **Symbol:** Pure geometric cyan square containing a white paper origami koi carp leaping toward the upper right corner.
 * **Origami & Tactile Paper Metaphor:**
   * Precise paper folds represent structural rigor and artisanal engineering versus stochastic drift.
@@ -37,7 +37,7 @@ Operational standards for applying the hsnlabs brand across digital products, en
 
 * **Obsidian Black (`#07090E`):** Primary ink for typography and high-contrast elements.
 * **Brand Sky Blue (`#52B4FD`):** Primary corporate identifier, `.btn-primary` fill, `.post-it-badge` fill, and background of the origami carp basin.
-* **Accessible Cyan (`#0284c7`):** High-contrast accent text (`Engenharia Agentica.`, `Headless Agents`, `Surface Agents`) and unified color for all Example 01 dashed arrows on light surfaces (meeting WCAG AA requirements).
+* **Accessible Cyan (`#0284c7`):** High-contrast accent text (`Agentic AI.`, `Headless Agents`, `Surface Agents`) and unified color for all Example 01 dashed arrows on light surfaces (meeting WCAG AA requirements).
 * **Muted Slate (`#526071`):** Calibrated secondary and label text color guaranteeing 5.7:1 WCAG AA contrast on `#f5f5f5` and `#fafafa`.
 * **Canvas Floor (`#F5F5F5`):** Clean off-white surface for editorial print presentation.
 * **Card Surface (`#FFFFFF`):** Pure white elevated surface for cards, post-it notes, and interactive modules.

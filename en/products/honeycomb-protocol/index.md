@@ -3,7 +3,7 @@ title: "Honeycomb Protocol · Stigmergic Agent Coordination & Atomic Idempotency
 description: "Open stigmergic coordination protocol for long-horizon autonomous AI swarms featuring dynamic capability handshakes, typed graph envelopes, and SQLite WAL pre-inference atomic idempotency by hsnlabs."
 url: "https://hsnlabs.ai/en/products/honeycomb-protocol/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Honeycomb Protocol · Stigmergic Agent Coordination & Atomic Idempotency · hsnlabs

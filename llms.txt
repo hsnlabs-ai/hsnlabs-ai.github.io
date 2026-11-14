@@ -1,10 +1,10 @@
 # hsnlabs
 
-> Enterprise agentic engineering boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. We structure and execute enterprise agentic roadmaps across both Headless Agents (back-office process automation, BPO replacement, and internal data workflows) and Surface Agents (front-office real-time voice and text interfaces for end customers). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
+> Enterprise Agentic AI boutique solving why enterprise AI agents fail in production. We handle the complete Agentic Development Life Cycle (ADLC): executable business ontologies, zero-trust infrastructure, stateful orchestration, and continuous evaluation in production. We structure and execute enterprise agentic roadmaps across both Headless Agents (back-office process automation, BPO replacement, and internal data workflows) and Surface Agents (front-office real-time voice and text interfaces for end customers). The primary site at root (`/`) is in Brazilian Portuguese (`pt-BR`), with the full English mirror under `/en/`.
 
 ## Canonical Positioning & Value Proposition
-- [Overview (PT-BR)](https://hsnlabs.ai/): Adoção de Engenharia Agentica. Implementamos Headless Agents para backoffice, dados e automação interna e Surface Agents para frontoffice em voz e texto com o cliente sobre sistemas legados.
-- [Overview (EN)](https://hsnlabs.ai/en/): Agentic Engineering Adoption. We implement Headless Agents for back-office data and internal automation and Surface Agents for front-office voice and text interfaces over legacy systems.
+- [Overview (PT-BR)](https://hsnlabs.ai/): Adoção de Agentic AI. Implementamos Headless Agents para backoffice, dados e automação interna e Surface Agents para frontoffice em voz e texto com o cliente sobre sistemas legados.
+- [Overview (EN)](https://hsnlabs.ai/en/): Agentic AI Adoption. We implement Headless Agents for back-office data and internal automation and Surface Agents for front-office voice and text interfaces over legacy systems.
 - [Markdown Mirror (PT-BR)](https://hsnlabs.ai/index.md): Machine-readable Markdown overview in Brazilian Portuguese.
 - [Markdown Mirror (EN)](https://hsnlabs.ai/en/index.md): Machine-readable Markdown overview in English.
 
@@ -57,7 +57,7 @@
 
 ## Ecosystem & Platform Alliances
 - [LangChain & LangGraph Architecture (PT-BR)](https://hsnlabs.ai/langchain/): Orquestração StateGraph, LangSmith evals e runtimes soberanos em VPC.
-- [LangChain & LangGraph Architecture (EN)](https://hsnlabs.ai/en/langchain/): Independent agentic engineering with LangChain and LangGraph in production since 2022.
+- [LangChain & LangGraph Architecture (EN)](https://hsnlabs.ai/en/langchain/): Independent Agentic AI architecture with LangChain and LangGraph in production since 2022.
 - [Snowflake AI Data Cloud Architecture (PT-BR)](https://hsnlabs.ai/snowflake/): Máquinas de estado determinísticas e ontologias executáveis sobre Snowflake AI Data Cloud.
 - [Snowflake AI Data Cloud Architecture (EN)](https://hsnlabs.ai/en/snowflake/): Operationalizing deterministic LangGraph state machines over the Snowflake AI Data Cloud.
 - [Databricks Lakehouse Architecture (PT-BR)](https://hsnlabs.ai/databricks/): Agentes autônomos sobre Databricks Data Intelligence Platform, Delta Lake e Unity Catalog.
@@ -68,8 +68,8 @@
 - [Enterprise MCP Servers (EN)](https://hsnlabs.ai/en/mcp/): Private, zero-trust Model Context Protocol servers inside your cloud perimeter.
 
 ## Knowledge Engine & Research
-- [hsnlabs Blog (PT-BR)](https://hsnlabs.ai/blog/pt/): Ensaios técnicos sobre engenharia agêntica, ontologias e substituição de BPO.
-- [hsnlabs Blog (EN)](https://hsnlabs.ai/blog/): Technical essays on agentic engineering, ontologies, and BPO replacement.
+- [hsnlabs Blog (PT-BR)](https://hsnlabs.ai/blog/pt/): Ensaios técnicos sobre Agentic AI, ontologias e substituição de BPO.
+- [hsnlabs Blog (EN)](https://hsnlabs.ai/blog/): Technical essays on Agentic AI, ontologies, and BPO replacement.
 - [O Cemitério de PoCs (PT-BR)](https://hsnlabs.ai/blog/pt/post/cemiterio-de-pocs/): Por que 90% dos pilotos corporativos colapsam ao tocar dados reais.
 - [The PoC Graveyard (EN)](https://hsnlabs.ai/blog/post/the-poc-graveyard/): Why 90% of enterprise pilots collapse when touching real data.
 - [Roadmaps de Features versus Maturidade Agêntica (PT-BR)](https://hsnlabs.ai/blog/pt/post/sprint-arquitetura-cinco-dias/): Como evoluir de copilotos restritos para sistemas multiagentes sobre o legado.
@@ -79,4 +79,4 @@
 
 ## Contact & Channels
 - [GitHub Organization](https://github.com/hsnlabs-ai): Open-source repositories and reference implementations.
-- [LinkedIn Newsletter ([Agentes] x [a Gente])](https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/): Notas executivas sobre engenharia agêntica e futuro do trabalho.
+- [LinkedIn Newsletter ([Agentes] x [a Gente])](https://www.linkedin.com/newsletters/agentes-x-gente-7397999984089935872/): Notas executivas sobre Agentic AI e futuro do trabalho.

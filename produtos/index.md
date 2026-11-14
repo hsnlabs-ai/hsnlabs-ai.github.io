@@ -1,18 +1,18 @@
 ---
 title: "Produtos e Plataformas Agênticas · hsnlabs"
-description: "Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
+description: "Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção."
 url: "https://hsnlabs.ai/produtos/"
 locale: "pt-BR"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Produtos e Plataformas Agênticas · hsnlabs
 
-> Produtos proprietários e plataformas abertas de engenharia agêntica da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.
+> Produtos proprietários e plataformas abertas de Agentic AI da hsnlabs. Conheça o Agents Swarm para observabilidade externa e diagnóstico comportamental de agentes em produção.
 
 # Produtos e Plataformas Agênticas Sistemas proprietários e infraestrutura aberta para observabilidade e governança em produção.
 
-Desenvolvemos produtos de engenharia agêntica nascidos em trincheiras reais de operação. Nossas ferramentas diagnosticam vulnerabilidades comportamentais, reconstroem máquinas de estado em caixa-preta e protegem superfícies críticas contra saturação de enxames e alucinações regulatórias.
+Desenvolvemos produtos de Agentic AI nascidos em trincheiras reais de operação. Nossas ferramentas diagnosticam vulnerabilidades comportamentais, reconstroem máquinas de estado em caixa-preta e protegem superfícies críticas contra saturação de enxames e alucinações regulatórias.
 
 ## Produtos em Destaque
 

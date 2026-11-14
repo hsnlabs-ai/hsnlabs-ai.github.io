@@ -3,7 +3,7 @@ title: "Modern Slavery Statement · hsnlabs"
 description: "Modern Slavery Statement for hsnlabs pursuant to Section 54 of the UK Modern Slavery Act 2015 and international ethical supply chain standards."
 url: "https://hsnlabs.ai/en/modern-slavery-statement/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Modern Slavery Statement · hsnlabs

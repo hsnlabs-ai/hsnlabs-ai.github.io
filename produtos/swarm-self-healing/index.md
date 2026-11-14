@@ -3,7 +3,7 @@ title: "Swarm Self-Healing · Homeostase e Failover para Enxames · hsnlabs"
 description: "Runtime Python de homeostase determinística, failover a quente em menos de 5 segundos, governança térmica com histerese, afinidade de rede em 3 camadas e circuit breaker para enxames de agentes."
 url: "https://hsnlabs.ai/produtos/swarm-self-healing/"
 locale: "pt-BR"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Swarm Self-Healing · Homeostase e Failover para Enxames · hsnlabs

@@ -1,16 +1,16 @@
 ---
-title: "Agentic Engineering Adoption | hsnlabs"
+title: "Agentic AI Adoption | hsnlabs"
 description: "We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling."
 url: "https://hsnlabs.ai/en/"
 locale: "en"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
-# Agentic Engineering Adoption | hsnlabs
+# Agentic AI Adoption | hsnlabs
 
 > We structure and execute your agentic product roadmap. We implement autonomous agents over legacy systems, starting with our Agentic Bootcamp™ backed by $5,000 in cloud credits, AI tokens, and tooling.
 
-# Agentic Engineering Adoption.
+# Agentic AI Adoption.
 
 Headless Agents: Back-office agents for data and internal automation.
 

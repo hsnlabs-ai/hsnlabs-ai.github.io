@@ -309,7 +309,7 @@ def test_gate_s9_footer_consistency():
 def test_gate_s10_language_leak_detection():
     print("--- Gate S10: Detector de Vazamento de Idioma (Language Leak) ---")
     en_leaks_forbidden = [
-        "Agentic Engineering Adoption",
+        "Agentic AI Adoption",
         "Operational transition to enterprise agents without disrupting legacy systems",
         "Why Agents Fail",
         "Most enterprise AI agents break when exposed to messy company data",

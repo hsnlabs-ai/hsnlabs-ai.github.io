@@ -3,7 +3,7 @@ title: "Protocolo Honeycomb · Coordenação Estigmérgica e Idempotência Atôm
 description: "Protocolo aberto de coordenação estigmérgica para enxames autônomos de IA com aperto de mão dinâmico, envelopes em grafo tipados e idempotência atômica em SQLite WAL pela hsnlabs."
 url: "https://hsnlabs.ai/produtos/honeycomb-protocol/"
 locale: "pt-BR"
-updatedAt: "2026-11-03T21:11:40Z"
+updatedAt: "2026-11-14T12:27:39Z"
 ---
 
 # Protocolo Honeycomb · Coordenação Estigmérgica e Idempotência Atômica · hsnlabs
