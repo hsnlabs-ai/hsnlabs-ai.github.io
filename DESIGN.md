@@ -121,13 +121,7 @@ typography:
 
 rounded:
   none: 0px
-  xs: 4px
-  sm: 6px
-  md: 8px
-  lg: 12px
-  xl: 16px
-  xxl: 24px
-    full: 9999px
+  active: 0px
 
 spacing:
   xxs: 4px
@@ -150,18 +144,18 @@ components:
     backgroundColor: "{colors.primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.button}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.none}"
     padding: 10px 20px
     height: 40px
   button-primary-active:
     backgroundColor: "{colors.primary-active}"
     textColor: "{colors.on-primary}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.none}"
   button-outline:
     backgroundColor: transparent
     textColor: "{colors.ink}"
     typography: "{typography.button}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.none}"
     padding: 9px 19px
     height: 40px
   button-tertiary-text:
@@ -176,19 +170,19 @@ components:
   gradient-orb-card:
     backgroundColor: "{colors.canvas-soft}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.xxl}"
+    rounded: "{rounded.none}"
     padding: 32px
   feature-card:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.ink}"
     typography: "{typography.title-md}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 24px
   product-card-stack:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.ink}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 0
   voice-row:
     backgroundColor: transparent
@@ -197,33 +191,27 @@ components:
     padding: 12px 0
   voice-icon-circular:
     backgroundColor: "{colors.surface-strong}"
-    rounded: "{rounded.full}"
+    rounded: "{rounded.none}"
     size: 32px
   pricing-tier-card:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.ink}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 32px
   pricing-tier-featured:
     backgroundColor: "{colors.surface-dark}"
     textColor: "{colors.on-dark}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 32px
   text-input:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.ink}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.md}"
+    rounded: "{rounded.none}"
     padding: 12px 16px
     height: 44px
-  badge-rect:
-    backgroundColor: "{colors.surface-strong}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption-uppercase}"
-    rounded: "{rounded.md}"
-    padding: 4px 10px
   cta-band:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
@@ -233,12 +221,12 @@ components:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.body}"
     typography: "{typography.body-md}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 32px
   audio-waveform-card:
     backgroundColor: "{colors.surface-card}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
+    rounded: "{rounded.none}"
     padding: 24px
   footer:
     backgroundColor: "{colors.canvas}"
@@ -265,14 +253,15 @@ CTAs use the official brand Sky Blue (`#52B4FD`) for the primary action with aut
 - Display runs Cormorant Garamond at weight 300 — editorial print voice.
 - Body runs Inter at 400 with subtle letter-spacing (+0.15-0.18px).
 - Atmospheric gradient blooms used as atmospheric background brand decoration only.
-- Strict 90-degree paper-cut geometry (`border-radius: 0` for CTAs, cards, badges, and boxes) matching the brand water square.
+- Strict 90-degree paper-cut geometry (`border-radius: 0` for CTAs, cards, inputs, and containers) matching the brand water square.
+- Zero pills, zero category badges, and zero eyebrow/kicker labels above headlines, cards, or banners. Every component starts directly with its editorial title.
 - Unified subtle crumpled paper texture overlay across all boxes and cards.
 - 96px section rhythm.
 
 ## Colors
 
 ### Brand & Accent
-- **Ink Primary** (`{colors.primary}` — #292524): The primary action color — warm near-black pill. Used scarcely.
+- **Ink Primary** (`{colors.primary}` — #292524): High-contrast dark ink button fill, sharp 90-degree corners (`border-radius: 0`). Used scarcely.
 - **Ink Primary Active** (`{colors.primary-active}` — #0c0a09): Press state.
 
 ### Surface
@@ -377,17 +366,11 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 ### Border Radius Scale
 
+All UI components across the hsnlabs ecosystem strictly enforce `0px` (`border-radius: 0`). Rounded corners, pills (`9999px`), and circular or pill-shaped badges are strictly prohibited as AI slop.
+
 | Token | Value | Use |
 |---|---|---|
-| `{rounded.none}` | 0px | Reserved |
-| `{rounded.xs}` | 4px | Inline tags |
-| `{rounded.sm}` | 6px | Compact rows |
-| `{rounded.md}` | 8px | Form inputs |
-| `{rounded.lg}` | 12px | Compact cards |
-| `{rounded.xl}` | 16px | Feature cards, pricing tiers |
-| `{rounded.xxl}` | 24px | Gradient orb cards (extra-soft) |
-| `{rounded.md}` | 9999px | All CTA buttons, badges |
-| `{rounded.full}` | 9999px | Voice icon circles, avatars |
+| `{rounded.none}` | 0px | All buttons, cards, inputs, thumbnails, and containers |
 
 ## Components
 
@@ -397,11 +380,11 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 ### Buttons
 
-**`button-primary`** — Near-black ink button. Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}` (15px / 500), padding 10px × 20px, height 40px, rounded `{rounded.md}`.
+**`button-primary`** — Near-black ink button. Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}` (15px / 500), padding 10px × 20px, height 40px, sharp 90-degree corners (`{rounded.none}`).
 
 **`button-primary-active`** — Press state. Background `{colors.primary-active}`.
 
-**`button-outline`** — Transparent pill with 1px ink border. Background transparent, text `{colors.ink}`, 1px `{colors.hairline-strong}` border.
+**`button-outline`** — Transparent sharp-cut button with 1px ink border. Background transparent, text `{colors.ink}`, 1px `{colors.hairline-strong}` border, strict 90-degree corners (`border-radius: 0`).
 
 **`button-tertiary-text`** — Inline ink text link.
 
@@ -409,35 +392,35 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 **`hero-band`** — Background `{colors.canvas}`, full-width display headline in `{typography.display-mega}` (64px / 300 / -1.92px), subhead in `{typography.body-md}`, two CTAs, and an atmospheric gradient orb behind the centered headline.
 
-**`gradient-orb-card`** — A large card with a soft radial-gradient orb behind centered display copy. Background `{colors.canvas-soft}`, rounded `{rounded.xxl}` (24px), padding 32px. Each variant uses one of the five gradient tokens (`gradient-mint`, `gradient-peach`, `gradient-lavender`, `gradient-sky`, `gradient-rose`).
+**`gradient-orb-card`** — A large card with a soft radial-gradient orb behind centered display copy. Background `{colors.canvas-soft}`, `{rounded.none}` (0px), padding 32px. Each variant uses one of the five gradient tokens (`gradient-mint`, `gradient-peach`, `gradient-lavender`, `gradient-sky`, `gradient-rose`).
 
-**`audio-waveform-card`** — A waveform visualization card. Background `{colors.surface-card}`, rounded `{rounded.xl}`, padding 24px. Holds a play button + waveform glyph + voice metadata.
+**`audio-waveform-card`** — A waveform visualization card. Background `{colors.surface-card}`, `{rounded.none}` (0px), padding 24px. Holds a play button + waveform glyph + voice metadata.
 
 ### Cards
 
-**`feature-card`** — 2-up or 3-up grids. Background `{colors.surface-card}`, text `{colors.ink}`, rounded `{rounded.xl}`, padding 24px, 1px hairline border.
+**`feature-card`** — 2-up or 3-up grids. Background `{colors.surface-card}`, text `{colors.ink}`, `{rounded.none}` (0px), padding 24px, 1px hairline border.
 
-**`product-card-stack`** — Stacked product preview cards. Background `{colors.surface-card}`, rounded `{rounded.xl}`, no padding (children fill the card edge-to-edge).
+**`product-card-stack`** — Stacked product preview cards. Background `{colors.surface-card}`, `{rounded.none}` (0px), no padding (children fill the card edge-to-edge).
 
-**`testimonial-card`** — Quote card. Background `{colors.surface-card}`, text `{colors.body}`, rounded `{rounded.xl}`, padding 32px.
+**`testimonial-card`** — Quote card. Background `{colors.surface-card}`, text `{colors.body}`, `{rounded.none}` (0px), padding 32px.
 
 ### Voice Library
 
-**`voice-row`** — Horizontal row in voice list. Background transparent, 1px hairline divider. Layout: 32px circular voice icon (`{component.voice-icon-circular}`) left, voice name + accent stack, optional preview button right.
+**`voice-row`** — Horizontal row in voice list. Background transparent, 1px hairline divider. Layout: 32px square voice icon (`{component.voice-icon-circular}`) left, voice name + accent stack, optional preview button right.
 
-**`voice-icon-circular`** — Background `{colors.surface-strong}`, rounded `{rounded.full}`, 32px diameter. Holds initials or voice glyph.
+**`voice-icon-circular`** — Background `{colors.surface-strong}`, `{rounded.none}` (0px), 32px square. Holds initials or voice glyph.
 
 ### Pricing
 
-**`pricing-tier-card`** — Background `{colors.surface-card}`, rounded `{rounded.xl}`, padding 32px, 1px hairline border.
+**`pricing-tier-card`** — Background `{colors.surface-card}`, `{rounded.none}` (0px), padding 32px, 1px hairline border.
 
-**`pricing-tier-featured`** — Featured tier inverts. Background `{colors.surface-dark}`, text `{colors.on-dark}`. Same shape, dark inversion.
+**`pricing-tier-featured`** — Featured tier inverts. Background `{colors.surface-dark}`, text `{colors.on-dark}`. Same sharp 90-degree geometry, dark inversion.
 
-### Forms & Tags
+### Forms & Banners
 
-**`text-input`** — Background `{colors.surface-card}`, text `{colors.ink}`, rounded `{rounded.md}` (8px), padding 12px × 16px, height 44px, 1px `{colors.hairline-strong}` border. On focus, border thickens to 2px ink.
+**`text-input`** — Background `{colors.surface-card}`, text `{colors.ink}`, `{rounded.none}` (0px), padding 12px × 16px, height 44px, 1px `{colors.hairline-strong}` border. On focus, border thickens to 2px ink.
 
-**`badge-rect`** — Background `{colors.surface-strong}`, text `{colors.ink}`, type `{typography.caption-uppercase}`, rounded `{rounded.md}`, padding 4px × 10px.
+**`inline-canvas-banner`** — Editorial conversion card embedded inside selected blog articles. Background `{colors.surface-card}` with subtle crumpled paper texture, `{rounded.none}` (0px), `border-top: 3px solid #52B4FD`, zero eyebrow kickers, zero pills, and strictly a single primary CTA button linking to `/canvas/` or `/en/canvas/`.
 
 ### CTA / Footer
 
@@ -460,7 +443,9 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 
 ### Don't
 - Don't round the corners of any element — the hsnlabs square mark and all UI components must maintain sharp 90-degree corners (`border-radius: 0`).
-- Don't use rounded corners or pill buttons (`border-radius: 8px` or `9999px`).
+- Don't use pill shapes, pill buttons, rounded tags, or status chips (`border-radius: 9999px`, `4px`, `8px`, `12px`, `24px`) anywhere on the site, blog, or interactive tools. Pills are strictly banned as AI slop.
+- Don't add uppercase eyebrow labels, category kickers, or floating tags above headlines, section titles, cards, or banners (e.g., `01 · FERRAMENTA INTERATIVA`, `NEW`, `FEATURED`). Let every editorial headline stand cleanly on its own.
+- Don't put multiple competing CTAs inside inline article banners or cards; keep a single primary conversion action.
 - Don't bold display copy. Display sits at weight 300 — bolding shifts the brand voice from editorial to consumer-marketing.
 - Don't use gradient orbs as button fills, text colors, or component backgrounds. They are pure atmosphere.
 - Don't drop body Inter to weight 300 to match display serif — body stays at 400/500 for legibility.
@@ -477,7 +462,7 @@ The system uses **hairline + soft drop**. Cards float above the off-white canvas
 | Wide | > 1280px | Content caps at 1200px. |
 
 ### Touch Targets
-- Primary pill at 40px height — at WCAG AA, padded for AAA.
+- Primary button at 40px height — at WCAG AA, padded for AAA.
 - Voice icon circles 32px — padded row creates effective 48px tap zone.
 
 ### Collapsing Strategy
