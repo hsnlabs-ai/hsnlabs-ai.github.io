@@ -1566,6 +1566,41 @@
       font-weight: 600;
       color: var(--cyan-text);
     }
+    .portfolio-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .portfolio-cards-stack .product-catalog-card {
+      margin: 0 !important;
+      width: 100%;
+    }
+    .project-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      background: var(--surface-card);
+      border: 1px solid var(--hairline-strong);
+      border-radius: 0;
+      padding: 9px 18px;
+      font-family: var(--font-sans);
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--body);
+      cursor: pointer;
+      transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    }
+    .project-filter-btn:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+    .project-filter-btn.active {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: var(--ink);
+      font-weight: 600;
+    }
     .eva-logo-strip {
       display: flex;
       align-items: center;
@@ -1634,20 +1669,20 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </p>
       </div>
 
-      <nav class="project-index-bar" aria-label="Project index">
-        <a href="#eva-people" class="project-index-link"><span class="project-index-num">01</span><span>Eva People</span></a>
-        <a href="#agents-swarm" class="project-index-link"><span class="project-index-num">02</span><span>Agents Swarm</span></a>
-        <a href="#agent-analyzer" class="project-index-link"><span class="project-index-num">03</span><span>Agent Analyzer</span></a>
-        <a href="#honeycomb-protocol" class="project-index-link"><span class="project-index-num">04</span><span>Honeycomb Protocol</span></a>
-        <a href="#stigmergy-mesh" class="project-index-link"><span class="project-index-num">05</span><span>Stigmergy Mesh</span></a>
-        <a href="#swarm-self-healing" class="project-index-link"><span class="project-index-num">06</span><span>Swarm Self-Healing</span></a>
-      </nav>
+            <div class="project-index-bar" role="tablist" aria-label="Filter projects by market category">
+        <button type="button" class="project-filter-btn active" onclick="filterPortfolio('all', this)">All</button>
+        <button type="button" class="project-filter-btn" onclick="filterPortfolio('saas-b2b', this)">B2B SaaS</button>
+        <button type="button" class="project-filter-btn" onclick="filterPortfolio('cybersecurity', this)">Cybersecurity</button>
+        <button type="button" class="project-filter-btn" onclick="filterPortfolio('ai-infra', this)">AI Infrastructure</button>
+      </div>
+
+      <div class="portfolio-cards-stack">
 
       <!-- PROJECT 01: EVA PEOPLE -->
-      <div class="product-catalog-card" id="eva-people">
+      <div class="product-catalog-card" id="eva-people" data-cat="saas-b2b">
         <div>
           <div class="eva-logo-strip">
-            <div class="product-meta-kicker" style="margin-bottom: 0;">01 · Proprietary Product · In Production</div>
+            <div class="product-meta-kicker" style="margin-bottom: 0;">01 · B2B SaaS · In Production</div>
             <img src="/assets/images/portfolio/eva-logo.png" alt="Eva People Logo" class="eva-wordmark-badge" style="width: auto !important; height: 22px !important;">
           </div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
@@ -1673,9 +1708,9 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
-      <div class="product-catalog-card" id="agents-swarm" style="margin-top: 40px;">
+      <div class="product-catalog-card" id="agents-swarm" data-cat="cybersecurity" >
         <div>
-          <div class="product-meta-kicker" style="margin-bottom: 10px;">02 · Open Platform · MIT License</div>
+          <div class="product-meta-kicker" style="margin-bottom: 10px;">02 · Cybersecurity · MIT License</div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
             <img src="/assets/brand/symbol/symbol-bee-square-clean.png" alt="Agents Swarm" width="44" height="44" style="width: 44px; height: 44px; display: block; box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);">
             <h3 class="card-title" style="font-size: 2.1rem; margin-bottom: 0;">Agents Swarm</h3>
@@ -1699,9 +1734,9 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
-      <div class="product-catalog-card" id="agent-analyzer" style="margin-top: 40px;">
+      <div class="product-catalog-card" id="agent-analyzer" data-cat="cybersecurity" >
         <div>
-          <div class="product-meta-kicker" style="margin-bottom: 10px;">03 · Open Platform · MIT License</div>
+          <div class="product-meta-kicker" style="margin-bottom: 10px;">03 · Cybersecurity · MIT License</div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
             <img src="/assets/brand/symbol/symbol-analyzer-square-clean.png" alt="Agent Analyzer" width="44" height="44" style="width: 44px; height: 44px; display: block; box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);">
             <h3 class="card-title" style="font-size: 2.1rem; margin-bottom: 0; white-space: nowrap;">Agent Analyzer</h3>
@@ -1725,9 +1760,9 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
-      <div class="product-catalog-card" id="honeycomb-protocol" style="margin-top: 40px;">
+      <div class="product-catalog-card" id="honeycomb-protocol" data-cat="ai-infra" >
         <div>
-          <div class="product-meta-kicker" style="margin-bottom: 10px;">04 · Open Platform · MIT License</div>
+          <div class="product-meta-kicker" style="margin-bottom: 10px;">04 · AI Infrastructure · MIT License</div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
             <img src="/assets/brand/symbol/symbol-honeycomb-square-clean.png" alt="Honeycomb Protocol" width="44" height="44" style="width: 44px; height: 44px; display: block; box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);">
             <h3 class="card-title" style="font-size: 2.1rem; margin-bottom: 0; white-space: nowrap;">Honeycomb Protocol</h3>
@@ -1751,9 +1786,9 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
-      <div class="product-catalog-card" id="stigmergy-mesh" style="margin-top: 40px;">
+      <div class="product-catalog-card" id="stigmergy-mesh" data-cat="cybersecurity" >
         <div>
-          <div class="product-meta-kicker" style="margin-bottom: 10px;">05 · Open Platform · MIT License</div>
+          <div class="product-meta-kicker" style="margin-bottom: 10px;">05 · Cybersecurity · MIT License</div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
             <img src="/assets/brand/symbol/symbol-stigmergy-square-clean.png" alt="Stigmergy Mesh" width="44" height="44" style="width: 44px; height: 44px; display: block; box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);">
             <h3 class="card-title" style="font-size: 2.1rem; margin-bottom: 0; white-space: nowrap;">Stigmergy Mesh</h3>
@@ -1777,9 +1812,9 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
-      <div class="product-catalog-card" id="swarm-self-healing" style="margin-top: 40px;">
+      <div class="product-catalog-card" id="swarm-self-healing" data-cat="ai-infra" >
         <div>
-          <div class="product-meta-kicker" style="margin-bottom: 10px;">06 · Open Runtime &amp; Spec · SSH-SPEC-0001 · MIT License</div>
+          <div class="product-meta-kicker" style="margin-bottom: 10px;">06 · AI Infrastructure · MIT License</div>
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
             <img src="/assets/brand/symbol/symbol-self-healing-square-clean.png" alt="Swarm Self-Healing" width="44" height="44" style="width: 44px; height: 44px; display: block; box-shadow: 0 2px 8px rgba(82, 180, 253, 0.35);">
             <h3 class="card-title" style="font-size: 2.1rem; margin-bottom: 0; white-space: nowrap;">Swarm Self-Healing</h3>
@@ -1803,6 +1838,7 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
         </div>
       </div>
 
+      </div>
     </div>
   </section>
 
@@ -2119,5 +2155,21 @@ document.head.appendChild(o)}if(document.readyState==="complete"){initApollo()}e
   </script>
 
   <script src="/assets/js/founder-rotation.js" defer></script>
+
+  <script>
+    function filterPortfolio(cat, btn) {
+      document.querySelectorAll('.project-filter-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (btn) btn.classList.add('active');
+      document.querySelectorAll('.portfolio-cards-stack .product-catalog-card').forEach(function(card) {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>

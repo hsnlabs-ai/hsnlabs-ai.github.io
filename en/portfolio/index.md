@@ -3,7 +3,7 @@ title: "Portfolio · Systems in Production · hsnlabs"
 description: "hsnlabs production portfolio. Explore our enterprise platform Eva People alongside open-source systems Agents Swarm, Agent Analyzer, Honeycomb Protocol, Stigmergy Mesh, and Swarm Self-Healing."
 url: "https://hsnlabs.ai/en/portfolio/"
 locale: "en"
-updatedAt: "2026-11-14T13:04:38Z"
+updatedAt: "2026-11-14T13:14:19Z"
 ---
 
 # Portfolio · Systems in Production · hsnlabs
