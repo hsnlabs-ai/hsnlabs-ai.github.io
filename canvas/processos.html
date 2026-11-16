@@ -53,7 +53,7 @@
       color: var(--ink);
       font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
-      padding: 24px;
+      padding: 12px 18px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,7 +63,7 @@
     /* THE POSTER BOARD (TRADITIONAL BMC) */
     .poster-board {
       width: 100%;
-      max-width: 1420px;
+      max-width: 1580px;
       background: var(--bg-canvas);
       border: 2px solid var(--border-outer);
       box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
@@ -73,13 +73,13 @@
 
     /* Minimalist Segmented Controls inside Board Header */
     .board-header {
-      padding: 12px 18px;
+      padding: 9px 16px;
       border-bottom: 2px solid var(--border-outer);
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: #ffffff;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
@@ -91,7 +91,7 @@
     }
 
     .board-header h1 {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
       letter-spacing: -0.02em;
       text-transform: uppercase;
@@ -165,13 +165,13 @@
     .bmc-grid-canvas {
       display: grid;
       grid-template-columns: 30% 20% 17% 17% 16%;
-      grid-template-rows: minmax(185px, auto) minmax(285px, auto) minmax(180px, auto);
+      grid-template-rows: auto auto auto;
     }
 
     .bmc-slot {
       border-right: 1px solid var(--border-internal);
       border-bottom: 1px solid var(--border-internal);
-      padding: 14px;
+      padding: 10px 11px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -255,22 +255,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     .slot-title {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       color: var(--ink);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .slot-b1 .slot-title {
-      font-size: 13.5px;
+      font-size: 12.5px;
     }
 
     .slot-icon {
@@ -314,23 +314,23 @@
     .slot-questions {
       display: flex;
       flex-direction: column;
-      gap: 5px;
-      margin-bottom: 12px;
+      gap: 3px;
+      margin-bottom: 7px;
     }
 
     .slot-b1 .slot-questions {
-      gap: 7px;
+      gap: 4px;
     }
 
     .q-line {
-      font-size: 11px;
-      line-height: 1.35;
+      font-size: 10.5px;
+      line-height: 1.28;
       color: var(--body);
       display: block;
     }
 
     .slot-b1 .q-line {
-      font-size: 12px;
+      font-size: 11.2px;
     }
 
     .q-line strong {
@@ -434,13 +434,13 @@
     .postit-zone {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
+      gap: 7px;
+      align-items: flex-start;
       justify-content: center;
       align-content: flex-start;
       flex: 1;
-      min-height: 95px;
-      padding-top: 10px;
+      min-height: 76px;
+      padding-top: 7px;
       border-top: 1px dashed rgba(15, 23, 42, 0.10);
     }
 
@@ -454,10 +454,11 @@
     .slot-b1 .postit-zone {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      padding-top: 10px;
+      gap: 8px;
+      padding-top: 8px;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      align-content: flex-start;
     }
 
     .slot-b1 .empty-state-clickable {
@@ -466,10 +467,10 @@
 
     /* POST-IT DE PAPEL REAL (Textura tátil, dobra sutil, sem faixa grossa escura no topo) */
     .paper-postit {
-      width: 104px;
-      height: 104px;
+      width: 86px;
+      height: 86px;
       aspect-ratio: 1 / 1;
-      padding: 9px 8px;
+      padding: 6px 6px;
       box-sizing: border-box;
       position: relative;
       cursor: pointer;
@@ -551,10 +552,10 @@
     }
 
     .slot-b1 .paper-postit {
-      width: 108px;
-      height: 108px;
+      width: 96px;
+      height: 96px;
       aspect-ratio: 1 / 1;
-      padding: 9px 8px;
+      padding: 7px 6px;
     }
 
     .paper-postit:hover {
@@ -605,16 +606,16 @@
 
     /* CARD QUADRADO PERMANENTE DE ADIÇÃO NA FILA DE NOTAS */
     .add-note-tile {
-      width: 104px;
-      height: 104px;
+      width: 86px;
+      height: 86px;
       aspect-ratio: 1 / 1;
-      padding: 8px;
+      padding: 6px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 4px;
+      gap: 3px;
       border: 1.5px dashed rgba(15, 23, 42, 0.25);
       background: rgba(255, 255, 255, 0.45);
       border-radius: 2px;
@@ -625,8 +626,8 @@
     }
 
     .slot-b1 .add-note-tile {
-      width: 108px;
-      height: 108px;
+      width: 96px;
+      height: 96px;
       aspect-ratio: 1 / 1;
     }
 
@@ -723,9 +724,32 @@
       transform: translateY(0);
     }
 
-    /* Responsividade Mobile e Tablet */
-    @media (max-width: 1024px) {
+    /* Minimalist Zoom Control */
+    .zoom-pill {
+      display: inline-flex;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 2px;
+      border-radius: 4px;
+      border: 1px solid var(--border-subtle);
+      gap: 2px;
+    }
+
+    .zoom-val {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ink);
+      min-width: 38px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      user-select: none;
+    }
+
+    /* Responsividade Mobile */
+    @media (max-width: 768px) {
       body { padding: 12px; }
+      .poster-board { zoom: 1 !important; }
+      .zoom-pill { display: none; }
       .board-header { flex-direction: column; align-items: flex-start; gap: 10px; }
       .header-controls { width: 100%; flex-wrap: wrap; gap: 8px; }
       .bmc-grid-canvas {
@@ -962,6 +986,7 @@
       .poster-board {
         max-width: 100% !important;
         width: 100% !important;
+        zoom: 1 !important;
         box-shadow: none !important;
         border: 2px solid #0f172a !important;
       }
@@ -1044,6 +1069,11 @@
         <div class="segmented-pill">
           <button class="seg-btn" id="btn-filled" onclick="toggleMode(true)">Preenchido</button>
           <button class="seg-btn active" id="btn-empty" onclick="toggleMode(false)">Vazio</button>
+        </div>
+        <div class="zoom-pill" aria-label="Controle de escala">
+          <button class="seg-btn" onclick="stepZoom(-0.05)" title="Reduzir escala">−</button>
+          <span class="zoom-val" id="zoom-val-label">100%</span>
+          <button class="seg-btn" onclick="stepZoom(0.05)" title="Aumentar escala">+</button>
         </div>
         <div class="segmented-pill">
           <a href="/canvas/" class="action-btn" style="text-decoration:none;" title="Voltar para o Hub de Canvases">← Hub</a>
@@ -1388,24 +1418,61 @@
 
     function calcPostitTypography(fullText) {
       const len = fullText.length;
-      if (len <= 45) return { fontSize: '13px', lineHeight: '1.18' };
-      if (len <= 70) return { fontSize: '11.5px', lineHeight: '1.18' };
-      if (len <= 95) return { fontSize: '10.5px', lineHeight: '1.16' };
-      if (len <= 125) return { fontSize: '9.5px', lineHeight: '1.14' };
-      return { fontSize: '8.8px', lineHeight: '1.12' };
+      if (len <= 45) return { fontSize: '11.5px', lineHeight: '1.16' };
+      if (len <= 70) return { fontSize: '10.2px', lineHeight: '1.15' };
+      if (len <= 95) return { fontSize: '9.2px', lineHeight: '1.14' };
+      if (len <= 125) return { fontSize: '8.4px', lineHeight: '1.12' };
+      return { fontSize: '7.8px', lineHeight: '1.10' };
     }
 
     function autoFitAllPostits() {
       document.querySelectorAll('.paper-postit').forEach(el => {
         const bodySpan = el.querySelector('.note-body');
         if (!bodySpan) return;
-        let size = parseFloat(el.style.fontSize) || 11.5;
-        const maxH = el.clientHeight - 16;
-        while ((bodySpan.offsetHeight > maxH || el.scrollHeight > el.clientHeight) && size > 7.5) {
+        let size = parseFloat(el.style.fontSize) || 10.2;
+        const maxH = el.clientHeight - 12;
+        while ((bodySpan.offsetHeight > maxH || el.scrollHeight > el.clientHeight) && size > 6.8) {
           size = Math.round((size - 0.3) * 10) / 10;
           el.style.fontSize = size + 'px';
         }
       });
+    }
+
+    let currentZoom = 1;
+    let userSetZoom = false;
+
+    function applyBoardZoom(z) {
+      const board = document.querySelector('.poster-board');
+      const label = document.getElementById('zoom-val-label');
+      currentZoom = Math.min(1.2, Math.max(0.6, Math.round(z * 100) / 100));
+      if (board && window.innerWidth > 768) {
+        board.style.zoom = String(currentZoom);
+      }
+      if (label) {
+        label.textContent = Math.round(currentZoom * 100) + '%';
+      }
+    }
+
+    function stepZoom(delta) {
+      userSetZoom = true;
+      applyBoardZoom(currentZoom + delta);
+    }
+
+    function fitBoardToViewport() {
+      if (userSetZoom || window.innerWidth <= 768) return;
+      const board = document.querySelector('.poster-board');
+      if (!board) return;
+      board.style.zoom = '1';
+      const availH = window.innerHeight - 24;
+      const availW = window.innerWidth - 36;
+      const naturalH = board.offsetHeight;
+      const naturalW = board.offsetWidth;
+      if (naturalH > availH || naturalW > availW) {
+        const ratio = Math.min(1, availH / naturalH, availW / naturalW);
+        applyBoardZoom(Math.max(0.65, ratio));
+      } else {
+        applyBoardZoom(1);
+      }
     }
 
     const SLOT_ICONS = [
@@ -1534,11 +1601,19 @@
 
       requestAnimationFrame(() => {
         autoFitAllPostits();
+        fitBoardToViewport();
         if (document.fonts && document.fonts.ready) {
-          document.fonts.ready.then(autoFitAllPostits);
+          document.fonts.ready.then(() => {
+            autoFitAllPostits();
+            fitBoardToViewport();
+          });
         }
       });
     }
+
+    window.addEventListener('resize', () => {
+      if (!userSetZoom) fitBoardToViewport();
+    });
 
     function showToast(text) {
       const t = document.getElementById('toast-msg');
